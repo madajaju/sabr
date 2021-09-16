@@ -1,0 +1,20 @@
+{
+  "name": "sabr",
+  "version": "0.0.1",
+  "description": "UML Architecture by coding and simulating the system architecture.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "startTest": "node test.js",
+    "test": "node ./node_modules/mocha/bin/mocha test/**/*.test.js"
+  },
+  "keywords": [],
+  "author": "Darren W Pulsipher - darren@pulsipher.org",
+  "license": "ISC",
+  "dependencies": {
+    "ailtire": "latest",
+    "3d-force-graph": "^1.66.7",
+    "aframe": "^1.0.4",
+    "three": "latest",
+  }
+}
