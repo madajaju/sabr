@@ -19,6 +19,10 @@
     "commander": "^4.1.0",
     "ejs": "^3.0.1",
     "express": "^4.17.1",
-    "mocha": "^7.0.0"
+    "mocha": "^7.0.0",
+    "pulsar-flex": "^1.0.1-beta.4",
+    "three": "^0.132.2",
+    "three-bmfont-text": "^3.0.1",
+    "three-mesh-ui": "^5.2.1"
   }
 }

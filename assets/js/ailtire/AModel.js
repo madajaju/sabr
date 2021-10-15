@@ -67,7 +67,18 @@ export default class AModel {
         let opacity = node.opacity || 1;
 
         let geometry = new THREE.BoxGeometry(w, h, d);
-        const material = new THREE.MeshPhongMaterial({color: color, transparent: true, opacity: opacity});
+        const material = new THREE.MeshPhongMaterial({
+            color: color,
+            transparent: true,
+            opacity: opacity,
+            depthTest: true,
+            depthWrite: true,
+            flatShading: true,
+            vertexColors: true,
+            reflectivity: 1,
+            refractionRatio: 1,
+            side: THREE.DoubleSide
+        });
         const retval = new THREE.Mesh(geometry, material);
         retval.aid = node.id;
         // Find the Model Element and show it here.
@@ -92,7 +103,7 @@ export default class AModel {
                 retval.applyMatrix4(new THREE.Matrix4().makeRotationZ(node.rotate.z));
             }
         }
-        let label = AText.view3D({text: node.name, color: "#ffffff", width: w, size: 15 * (w / 100)});
+        let label = AText.view3D({text: node.name, color: "#ffffff", width: w, size: 20 * (w / 100)});
         // label.applyMatrix4(new THREE.Matrix4().makeScale(w/100, w/100, w/100));
         label.position.set(0, (h / 2) - 20, (d / 2) + 1);
         retval.add(label)
@@ -695,7 +706,7 @@ export default class AModel {
         if (w2ui[modelName]) {
             return w2ui[modelName];
         }
-
+        if(!results.columns) { results.columns = []};
         let size = `${100 / Object.keys(results.columns).length + 1}%`;
         let cols = [{field: 'state', size: size, resizeable: true, text: 'State', sortable: true}];
         for (let i in results.columns) {
@@ -1005,7 +1016,11 @@ export default class AModel {
         AModel.viewDeep3D(result, 'new');
         let records = [];
         AModel.viewDetail({name: result.name}, result);
-        AModel.viewList({name: result.name}, result);
+        if(!result.name) {
+            AModel.viewList({name: result.name});
+        } else {
+            AModel.viewList(result);
+        }
         AModel.viewEdit({name: result.name}, result);
     }
 }

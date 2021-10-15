@@ -42,8 +42,8 @@ export default class AActor {
         llegObj.position.set(-11, -58, 0);
         group.add(llegObj);
 
-        let label = AText.view3D({text:node.name.replace(/\s/g, '\n'), color:"#ffffff", width: 50, size: 12});
-        label.position.set(0,-30,7);
+        let label = AText.view3D({text: node.name.replace(/\s/g, '\n'), color: "#ffffff", width: 50, size: 20});
+        label.position.set(0, -30, 10);
         group.add(label);
 
         group.position.set(node.x, node.y, node.z);
@@ -63,6 +63,50 @@ export default class AActor {
         node.expandLink = `actor/get?id=${node.id}`;
 
         return group;
+    }
+
+    static viewList3D(objs) {
+        let data = {nodes: {}, links: []};
+
+        window.graph.clearObjects();
+        for (let aname in objs) {
+            let actor = objs[aname];
+
+            let node = {
+                id: actor.shortname,
+                name: actor.name.replace(/\s/g, '\n'),
+                view: AActor.view3D,
+            };
+
+            data.nodes[actor.shortname] = node;
+            let i = 0;
+
+            for (let j in actor.usecases) {
+                let uc = actor.usecases[j];
+                let node = {
+                    id: j,
+                    name: uc.name.replace(/\s/g, '\n'),
+                    view: AUsecase.view3D,
+                    bbox: {
+                        x: {min: -200, max: 200},
+                        y: {min: -200, max: 200},
+                        z: {min: -200, max: 200},
+                    }
+                }
+                data.nodes[j] = node;
+                i++;
+                data.links.push({source: actor.shortname, target: j, value: 0.1});
+                for (let k in uc.scenarios) {
+                    if (data.nodes.hasOwnProperty(k)) {
+                        data.links.push({source: j, target: k, value: 0.1});
+                    }
+                }
+            }
+        }
+
+        window.graph.setData(data.nodes, data.links);
+        window.graph.showLinks();
+
     }
 
     static viewDeep3D(obj) {
@@ -106,7 +150,7 @@ export default class AActor {
         records.push({recid: i++, name: 'shortname', value: result.shortname, detail: result.shortname});
         records.push({recid: i++, name: 'description', value: result.description, detail: result.description});
         let ucdetails = getDetails(result.usecases);
-        if(result.usecases) {
+        if (result.usecases) {
             records.push({
                 recid: i++,
                 name: 'usecases',
@@ -115,7 +159,7 @@ export default class AActor {
             });
         }
         let sdetails = getDetails(result.scenarios);
-        if(result.scenarios) {
+        if (result.scenarios) {
             records.push({
                 recid: i++,
                 name: 'scenarios',
@@ -127,12 +171,18 @@ export default class AActor {
         w2ui['objlist'].refresh();
     }
 }
-
 function showGraph(actor, mode) {
     let data = {nodes: {}, links: []};
 
     window.graph.clearObjects();
-    let node = {id: actor.shortname, name: actor.name.replace(/\s/g,'\n'), view: AActor.view3D, fx: 0, fy: 0, fz: 0};
+    let node = {
+        id: actor.shortname,
+        name: actor.name.replace(/\s/g, '\n'),
+        view: AActor.view3D,
+        fx: 0,
+        fy: 0,
+        fz: 0
+    };
 
     data.nodes[actor.shortname] = node;
     let i = 0;

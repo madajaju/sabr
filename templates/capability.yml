@@ -1,0 +1,47 @@
+bundles:
+  mySabr1:
+    streams:
+      input:
+        streamA:
+        streamB:
+      output:
+        streamC:
+        streamD:
+    aimodels:
+      model1:
+      model2:
+  mySabr2:
+    streams:
+      input:
+        streamC:
+        streamD:
+      output:
+        streamE:
+    aimodels:
+      model1:
+      model2:
+  mySabr3:
+    streams:
+      input:
+        streamE:
+      output:
+        streamF:
+        streamG:
+    aimodels:
+      model1:
+      model2:
+  mySabr4:
+    streams:
+      input:
+        streamG:
+        streamA:
+      output:
+        streamH:
+    aimodels:
+      model1:
+      model2:
+policies:
+  historical:
+  summary:
+  realtime:
+

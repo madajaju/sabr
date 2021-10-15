@@ -1,0 +1,10 @@
+policies:
+  realtime:
+  historical:
+  summary:
+inputs:
+  StreamA:
+  StreamB:
+outputs:
+  StreamC:
+  StreamD:

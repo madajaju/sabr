@@ -14,13 +14,19 @@ export default class APackage {
         } else if (type === 'Sourced') {
             color = "green";
         }
-        let shape = node.cube || {x: 75, y: 50, z: 20};
-        let textSize = node.textSize || 15;
+        let nameArray = node.name.split(/\s/);
+        let width = 0;
+        for(let i in nameArray) {
+            width = Math.max(width, nameArray[i].length);
+        }
+        let textSize = node.textSize || 30;
+        let shape = node.cube || {x: width*(textSize*0.6), y: textSize*nameArray.length, z: 20};
         let opacity = node.opacity || 1;
         let geometry = new THREE.BoxGeometry(shape.x, shape.y, shape.z);
         const material = new THREE.MeshPhongMaterial({color: color, opacity: opacity, transparent:true});
         const box = new THREE.Mesh(geometry, material);
-        let label = AText.view3D({text:node.name.replace(/\s/g, '\n'), color:"#ffffff", width: shape.x , size: textSize * (shape.x/150) });
+
+        let label = AText.view3D({text:node.name.replace(/\s/g, '\n'), color:"#ffffff", width: shape.x , size: textSize });
         label.position.set(0,0,shape.z/2 + 4);
         box.add(label);
         box.position.set(node.x, node.y, node.z);
@@ -42,6 +48,36 @@ export default class APackage {
 
     }
 
+    static viewSubPackage3D(pkg, mode) {
+        let data = { nodes:{}, links: [] };
+        for(let pname in pkg.subpackages) {
+            let spkg = pkg.subpackages[pname];
+            let node = {
+                id: pname,
+                name: spkg.name,
+                // cube: { x: 300, y: 50, z: 10 },
+                textSize: 10,
+                color: spkg.color,
+                view: APackage.view3D,
+            }
+            data.nodes[pname] = node;
+            for(let i in spkg.depends) {
+                data.links.push({source: pname, target: spkg.depends[i], color: 'rgba(255,255,0,1)', value: 1.0, width: 3});
+            }
+        }
+        if (mode === 'add') {
+            window.graph.addData(data.nodes, data.links);
+        } else {
+            window.graph.setData(data.nodes, data.links);
+        }
+        window.graph.graph.cameraPosition(
+            {x: 0, y: 0, z: 1000}, // new position
+            {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
+            3000  // ms transition duration.
+        );
+        window.graph.showLinks();
+    }
+
     static viewDeep3D(pkg, mode) {
         const theta = 3.14 / 2; // 90 degrees
         let data = {nodes: {}, links: []};
@@ -56,6 +92,10 @@ export default class APackage {
         if (pnum > inum) {
             xfactor = Math.round(Math.sqrt(pnum) + 0.5);
             zfactor = Math.round((pnum / xfactor) + 0.5);
+        }
+        if(cnum > pnum) {
+            xfactor = Math.round(Math.sqrt(cnum) + 0.5);
+            zfactor = Math.round((cnum / xfactor) + 0.5);
         }
         let yfactoru = Math.round((unum / xfactor) + 0.5);
         let yfactorc = Math.round((cnum / xfactor) + 0.5);
@@ -79,6 +119,7 @@ export default class APackage {
             id: pkg.shortname,
             name: pkg.name,
             cube: package3d,
+            textSize: 30,
             view: APackage.view3D,
             opacity: 0.5,
             color: pkg.color
@@ -163,13 +204,17 @@ export default class APackage {
                 id: pname,
                 name: spkg.name,
                 rotate: {x: theta},
-                textSize: 30,
+                textSize: 15,
                 rbox: { parent: pkg.shortname, x: bbox.x, z: bbox.z,
                     y: {min: bbox.y.min - 70, max: bbox.y.min - 70}},
-                color: pkg.color,
+                color: spkg.color,
                 view: APackage.view3D,
             }
             data.nodes[pname] = node;
+
+            for(let i in spkg.depends) {
+                data.links.push({source: pname, target: spkg.depends[i], color: 'rgba(255,255,0,1)', value: 1.0, width: 3});
+            }
         }
 
         for (let pname in pkg.depends) {
@@ -254,6 +299,7 @@ function showGraph(pkg, mode) {
 }
 
 function handler3DView(node, type) {
+    let opacity = node.opacity || 1.0;
     let color = "magenta";
     if (type === 'Selected') {
         color = "yellow";
@@ -265,7 +311,18 @@ function handler3DView(node, type) {
     const theta = 3.14 / 2;
     let geometry = new THREE.ConeGeometry(20, 40);
     geometry.applyMatrix4(new THREE.Matrix4().makeRotationX(theta));
-    const material = new THREE.MeshPhongMaterial({color: color, opacity: 1});
+    const material = new THREE.MeshPhongMaterial({
+        color: color,
+        transparent: true,
+        opacity: opacity,
+        depthTest: true,
+        depthWrite: true,
+        flatShading: true,
+        vertexColors: true,
+        reflectivity: 1,
+        refractionRatio: 1,
+        side: THREE.DoubleSide
+    });
     const box = new THREE.Mesh(geometry, material);
     let geo2 = new THREE.CylinderGeometry(5, 5, 30);
     geo2.applyMatrix4(new THREE.Matrix4().makeRotationX(theta));

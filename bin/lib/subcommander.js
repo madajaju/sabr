@@ -241,6 +241,7 @@ const findAction = (args, localBin) => {
         let tempString = `#!/user/bin/env node
 const bent = require('bent');
 const program = require('commander');
+const fs = require('fs');
 const YAML = require('yamljs');
 global.ailtire = { config: require('${__dirname.replace(/\\/g, '\\\\')}/../../.ailtire.js') };
 program.command('${action.friendlyName} [options]', '${action.description}')`;
@@ -258,6 +259,8 @@ params += 'mode=json';
         for (key in action.inputs) {
             if (action.inputs[key].type.toUpperCase() === 'YAML') {
                 tempString += `if(program['${key}']) { args['${key}'] = YAML.load(program['${key}']); }\n`;
+            } else if(action.inputs[key].type.toUpperCase() === 'FILE') {
+                tempString += `if(program['${key}']) { args['${key}'] = fs.readFileSync(program['${key}']); }\n`;
             } else {
                 tempString += `if(program['${key}']) { args['${key}'] = program['${key}']; }\n`;
             }

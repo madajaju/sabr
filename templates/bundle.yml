@@ -1,0 +1,11 @@
+streams:
+  input:
+    streamA:
+    streamB:
+  output:
+    streamC:
+    streamD:
+aimodels:
+  model1:
+  model2:
+

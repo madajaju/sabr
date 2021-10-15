@@ -2,22 +2,25 @@
 <html>
 
 <head>
-    <title><%= global.ailtire.config.prefix</title>
+    <title>Sentient Agent Bundle Resources</title>
     <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.1/less.min.js"></script>
     <link rel="stylesheet/less" type="text/css" href="styles/importer.less"/>
 
     <script src="js/jquery.js"></script>
     <script src="js/w2ui.js"></script>
     <link rel="stylesheet" href="styles/w2ui.css"/>
-    <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
+    <!--   <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>-->
+    <script src="js/aframe.js"></script>
     <script src="js/three.js"></script>
     <script src="js/3d-force-graph.js"></script>
     <script src="js/d3-octree.js"></script>
     <script src="js/d3-force-3d.js"></script>
     <script src="js/Graph3D.js"></script>
+    <script src="js/three-mesh-ui.js"></script>
     <script src="js/socket.io.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-base64@3.6.1/base64.min.js"></script>
     <script src="//unpkg.com/three-spritetext"></script>
-
+    <script src="js/displacement-shader.js"></script>
 </head>
 <script type="text/javascript">
     document.write("<base href='" + window.location + "' />");
@@ -46,8 +49,9 @@
 
 <div id="main" style="position: absolute; width: 100%; height: 100%; overflow: hidden;"></div>
 <script type="module">
-    import {APackage, AScenario, AUsecase, AActor, AModel, AStack, AEnvironment} from './js/ailtire/index.js';
 
+    import {APackage, AScenario, AUsecase, AActor, AModel, AStack, AEnvironment} from './js/ailtire/index.js';
+    import {SChannel} from './js/sabr/index.js';
     let pkgview = new APackage({});
     let scenarioview = new AScenario({});
     let usecaseview = new AUsecase({});
@@ -56,7 +60,7 @@
     let stackview = new AStack({});
     let envview = new AEnvironment({});
 
-// common colors to use based on status
+    // common colors to use based on status
     const scolor = {
         started: "#aaffff",
         create: "#aaffff",
@@ -80,6 +84,7 @@
         model: modelview.handle,
         stack: stackview.handle,
         environment: envview.handle,
+        channel: SChannel.handle,
     }
     // currentView is set to null first.
     let currentView = null;
@@ -119,11 +124,18 @@
                 let ucList = [];
                 for (let uname in results) {
                     let uc = results[uname];
-                    let ucItem = {id: uname, text: uc.name, img: 'icon-folder', nodes: [],
+                    let ucItem = {
+                        id: uname, text: uc.name, img: 'icon-folder', nodes: [],
                         link: `usecase/get?id=${uname}`,
                         view: 'usecase'
                     };
                     let snum = 0;
+                    for (let sucname in uc.extended) {
+                        let suc = uc.extended[sucname];
+                        let node = addUseCaseListNode(suc, uname);
+                        ucItem.nodes.push(node);
+                        snum += node.count + 1;
+                    }
                     for (let sname in uc.scenarios) {
                         snum++;
                         let scenario = uc.scenarios[sname];
@@ -143,6 +155,36 @@
         });
     }
 
+    function addUseCaseListNode(usecase, parent) {
+        let uname = usecase.name.replace(/\s/g, '');
+        let ucItem = {
+            id: `${parent}.${uname}`, text: usecase.name, img: 'icon-folder', nodes: [],
+            link: `usecase/get?id=${uname}`,
+            view: 'usecase'
+        };
+        for (let sucname in usecase.extended) {
+            let suc = usecase.extended[sucname];
+            let node = addUseCaseListNode(suc);
+            ucItem.nodes.push(node);
+            // count the new use case added and all of the sub usecases and scenarios
+            snum += node.count + 1;
+        }
+        let snum = 0;
+        for (let sname in usecase.scenarios) {
+            snum++;
+            let scenario = usecase.scenarios[sname];
+            ucItem.nodes.push({
+                id: uname + sname,
+                text: sname,
+                img: 'icon-page',
+                link: `scenario/get?id=${uname}.${sname}`,
+                view: 'scenario'
+            });
+        }
+        ucItem.count = snum;
+        return ucItem;
+    }
+
     function getDeploymentNodes(deployments) {
         let sitems = [];
         for (let ename in deployments.environments) {
@@ -155,8 +197,8 @@
                 link: `environment/get?id=${ename}`,
                 nodes: []
             };
-            if(env.stacks) {
-                for(let sname in env.stacks) {
+            if (env.stacks) {
+                for (let sname in env.stacks) {
                     let stack = env.stacks[sname];
                     let citem = {
                         parent: ename,
@@ -174,6 +216,7 @@
         }
         return sitems;
     }
+
     function getPackageNodes(pkg) {
         let sitems = [];
         for (let pname in pkg.subpackages) {
@@ -192,7 +235,7 @@
             }
             sitems.push(spkgi);
         }
-        for(let cname in pkg.classes) {
+        for (let cname in pkg.classes) {
             let cls = pkg.classes[cname];
             let citem = {
                 id: cls.name,
@@ -216,6 +259,7 @@
             }
         });
     }
+
     function showDeploymentList(panel, parent) {
         $.ajax({
             url: 'deployment/list',
@@ -304,9 +348,9 @@
             data.nodes[rec.id] = {
                 id: rec.id,
                 name: rec.name.name,
-                group: rec.className,
+                group: rec.type,
                 level: rec.package,
-                view: rec.className + '3D'
+                view: rec.type + '3D'
             }
             // Now add the nodes of the associations
             // Go through the cols and get the associations
@@ -383,13 +427,13 @@
                 columns: [
                     {
                         field: 'name',
-                        caption: 'Name',
+                        label: 'Name',
                         size: '100px',
                         style: 'background-color: #efefef; border-bottom: 1px solid white; padding-right: 5px;',
                         attr: "align=right"
                     },
                     {
-                        field: 'value', caption: 'Value', size: '100%', render: function (record) {
+                        field: 'value', label: 'Value', size: '100%', render: function (record) {
                             return '<div>' + record.value + '</div>';
                         }
                     }
@@ -399,13 +443,13 @@
 
         let records = [];
         let size = `${100 / Object.keys(result.columns).length + 1}%`;
-        let cols = [{field: 'state', size: size, resizeable: true, caption: 'State', sortable: true}];
+        let cols = [{field: 'state', size: size, resizeable: true, label: 'State', sortable: true}];
         for (let i in result.columns) {
             cols.push({
-                field: result.columns[i].name,
+                field: result.columns[i].name.toLowerCase(),
                 size: size,
                 resizeable: true,
-                caption: result.columns[i].name,
+                label: result.columns[i].name,
                 sortable: true
             });
         }
@@ -459,6 +503,7 @@
                 }
             }
             w2ui['objdetail'].add(drecords);
+            w2ui['objlist'].select(event.recid);
             window.graph.selectNodeByID(event.recid);
         }
         w2ui['objlist'].refresh();
@@ -478,13 +523,13 @@
                 columns: [
                     {
                         field: 'name',
-                        caption: 'Name',
+                        text: 'Name',
                         size: '100px',
                         style: 'background-color: #efefef; border-bottom: 1px solid white; padding-right: 5px;',
                         attr: "align=right"
                     },
                     {
-                        field: 'value', caption: 'Value', size: '100%', render: function (record) {
+                        field: 'value', text: 'Value', size: '100%', render: function (record) {
                             return '<div>' + record.value + '</div>';
                         }
                     }
@@ -494,8 +539,8 @@
 
         let records = [];
         let cols = [
-            {field: 'name', size: "20%", resizeable: true, caption: "Name", sortable: true},
-            {field: 'value', size: "80%", resizeable: true, caption: "Value", sortable: true},
+            {field: 'name', size: "20%", resizeable: true, text: "Name", sortable: true},
+            {field: 'value', size: "80%", resizeable: true, text: "Value", sortable: true},
         ];
         let rec = result.record;
         let i = 0;
@@ -661,7 +706,7 @@
     }
 
     function showObjectList() {
-        $('#objlist').w2grid( {name: 'objlist'});
+        $('#objlist').w2grid({name: 'objlist'});
         w2ui['objlist'].onClick = function (event) {
             w2ui['objdetail'].clear();
             let record = this.get(event.recid);
@@ -683,28 +728,29 @@
             columns: [
                 {
                     field: 'name',
-                    caption: 'Name',
+                    text: 'Name',
                     size: '100px',
                     style: 'background-color: #efefef; border-bottom: 1px solid white; padding-right: 5px;',
                     attr: "align=right"
                 },
                 {
-                    field: 'value', caption: 'Value', size: '100%', render: function (record) {
+                    field: 'value', text: 'Value', size: '100%', render: function (record) {
                         return '<div>' + record.value + '</div>';
                     }
                 }
             ]
         });
     }
+
     function showEventList() {
         $('#eventlist').w2grid({
             name: 'eventlist',
             show: {header: false, columnHeaders: true},
             columns: [
-                {field: 'object', caption: 'Object', size: '33%', attr: "align=right", sortable: true},
-                {field: 'count', caption: 'Count', size: '33%', attr: "align=right", sortable: true},
+                {field: 'object', text: 'Object', size: '33%', attr: "align=right", sortable: true},
+                {field: 'count', text: 'Count', size: '33%', attr: "align=right", sortable: true},
                 {
-                    field: 'events', caption: 'Event', size: '33%', render: function (record) {
+                    field: 'events', text: 'Event', size: '33%', render: function (record) {
                         let retval = "";
 
                         for (let i in record.events) {
@@ -784,7 +830,7 @@
                     content: 'Details',
                     overflow: 'hidden',
                     resizable: true,
-                    style: 'border: 1px solid #aaaaff'
+                    style: 'border: 1px solid #aaaaff',
                 },
                 {
                     type: 'preview',
@@ -800,7 +846,7 @@
                             {type: 'radio', id: 'Dim-3', group: '1', text: '3D', checked: true},
                             {type: 'break'},
                             {
-                                type: 'menu-radio', id: 'dago', caption: 'DAG: Select', img: 'icon-folder',
+                                type: 'menu-radio', id: 'dago', title: 'DAG: Select', img: 'icon-folder',
                                 text: function (item) {
                                     let text = item.selected;
                                     let el = this.get('dago:' + item.selected);
@@ -866,7 +912,7 @@
                     currentView = event.object.link;
                     $.ajax({
                         url: event.object.link,
-                        success: processList
+                        success: AModel.objectList
                     });
                 }
             }
@@ -879,14 +925,58 @@
                 {id: 'packages', text: 'Packages', group: true, expanded: true, nodes: []},
                 {id: 'usecases', text: 'Use Cases', group: true, expanded: true, nodes: []},
                 {id: 'deployments', text: 'Deployment', group: true, expanded: true, nodes: []},
+                {id: 'pulsar', text: 'Pulsar Topics', group: true, expanded: true, nodes: []},
             ],
+            onExpand: (event) => {
+                if (event.object.id === 'packages') {
+                    $.ajax({
+                        url: 'package/list',
+                        success: APackage.viewSubPackage3D,
+                        error: function (req, text, err) {
+                            console.log(text);
+                        }
+                    })
+                } else if (event.object.id === 'actors') {
+                    $.ajax({
+                        url: 'actor/list',
+                        success: AActor.viewList3D,
+                        error: function (req, text, err) {
+                            console.log(text);
+                        }
+                    })
+                } else if (event.object.id === 'usecases') {
+                    $.ajax({
+                        url: 'usecase/list',
+                        success: AUsecase.viewList3D,
+                        error: function (req, text, err) {
+                            console.log(text);
+                        }
+                    })
+                } else if (event.object.id === 'pulsar') {
+                    SChannel.getAll({fn: (channels) => {
+                            SChannel.showAllGraph(channels, "new");
+                        }});
+                }
+            },
+            onCollapse: (event) => {
+                if (event.object.id === 'packages') {
+                    $.ajax({
+                        url: 'package/list',
+                        success: APackage.viewDeep3D,
+                        error: function (req, text, err) {
+                            console.log(text);
+                        }
+                    })
+                }
+            },
             onClick: function (event) {
+                // Show the top level Architecture
                 if (event.object.link) {
                     // Get the information from the link and load it in the mainpage and the preview
                     $.ajax({
                         url: event.object.link,
-                        success: handlers[event.object.view],
-                        error: function(req, text, err) {
+                        success: (result) => { handlers[event.object.view](result, event.object.id)},
+                        error: function (req, text, err) {
                             console.log(text);
                         }
                     });
@@ -898,11 +988,11 @@
     $(function () {
         // initialization
         $('#main').w2layout(config.layout);
-        w2ui.layout.content('left', $().w2sidebar(config.sidebar));
-        w2ui.layout.content('right', $().w2sidebar(config.rightbar));
-        w2ui.layout.content('main', `<div style="position: relative; height: 200px;"> <div id="objlist" style="position: absolute; left: 0px; width: 49.9%; height: 200px;">Object List Select item to see</div> <div id="objdetail" style="position: absolute; right: 0px; width: 49.9%; height: 200px;">Select Object to view details</div> </div>`);
-        w2ui.layout.content('preview', `<div className="modelGraph" id="DrawingArea" style="position: absolute; left: 0px;">3D Graph view</div>`);
-        w2ui.layout.content('bottom', `<div id="scenariolist" style="position: absolute; left: 0px; width: 49.9%; height: 200px;"></div>Scenario List Select Use Case and Then a Scenario<div id="eventlist" style="position: absolute; right: 0px; width: 49.9%; height: 200px;">Events in the System</div>`);
+        w2ui.layout.html('left', $().w2sidebar(config.sidebar));
+        w2ui.layout.html('right', $().w2sidebar(config.rightbar));
+        w2ui.layout.html('main', `<div style="position: relative; height: 200px;"> <div id="objlist" style="position: absolute; left: 0px; width: 49.9%; height: 200px;">Object List Select item to see</div> <div id="objdetail" style="position: absolute; right: 0px; width: 49.9%; height: 200px;">Select Object to view details</div> </div>`);
+        w2ui.layout.html('preview', `<div className="modelGraph" id="DrawingArea" style="position: absolute; left: 0px;">3D Graph view</div>`);
+        w2ui.layout.html('bottom', `<div id="scenariolist" style="position: absolute; left: 0px; width: 49.9%; height: 200px;"></div>Scenario List Select Use Case and Then a Scenario<div id="eventlist" style="position: absolute; right: 0px; width: 49.9%; height: 200px;">Events in the System</div>`);
         w2ui.layout.on("resize", (event) => {
             if (!previewWindow) {
                 for (let i in w2ui.layout.panels) {
@@ -929,6 +1019,8 @@
         showUseCaseList('sidebar', 'usecases');
         showPackageList('sidebar', 'packages');
         showDeploymentList('sidebar', 'deployments');
+        SChannel.showList('sidebar', 'pulsar');
+
         let width = $('#modelGraph').width();
         let height = $('#modelGraph').height();
         let graph = new Graph3D("DrawingArea", {nodes: {}, links: []}, {
@@ -936,7 +1028,7 @@
             width: width,
             height: height,
             selectCallback: (id) => {
-                if(w2ui['objlist']) {
+                if (w2ui['objlist']) {
                     w2ui['objlist'].selectNone();
                     w2ui['objlist'].select(id);
                     w2ui['objdetail'].clear();
@@ -960,7 +1052,7 @@
         window.graph = graph;
 
         let socket = io(window.location.origin,
-            { path: window.location.pathname + 'socket.io' }
+            {path: window.location.pathname + 'socket.io'}
         );
         socket.onAny((event, msg) => {
             showEvent(event);

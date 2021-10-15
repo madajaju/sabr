@@ -1,0 +1,49 @@
+@startuml
+
+class Approach {
+    name : string
+    description: string
+}
+class Reference {
+    name: string
+    url: string
+    publishDate: date
+    description: string
+    authors: string
+}
+class TestSuite {
+    name: string
+    description: string
+    goal: string
+}
+class TestCase {
+    name: string
+    parameters: string
+    procedure: string
+}
+class TestRun {
+    runDate: Date
+    startTime: date
+    endTime: date
+    notes: string
+}
+class Metric {
+    name: string
+    units: string
+    description: string
+}
+class StatValue {
+    average: number
+    max: number
+    min: number
+    mean: number
+    size: number
+}
+Approach "n" --> "n" TestSuite
+Approach "1" -> "n" Reference
+TestSuite "1" -> "n" TestCase
+TestCase "1" -> "n" TestRun
+TestRun "1" -> "n" Metric
+Metric "1" -> "n" StatValue
+
+@enduml
