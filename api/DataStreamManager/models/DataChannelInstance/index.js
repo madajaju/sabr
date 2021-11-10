@@ -32,6 +32,11 @@ class DataChannelInstance {
                 description: 'This is the instance of the transformation Service for the channel.',
                 type: 'ServiceInstance',
                 cardinality: 'n'
+            },
+            bundle: {
+                description: 'This is the sabr instance',
+                type: 'SABundleInstance',
+                cardinality: 1
             }
         },
         statenet: {
@@ -78,10 +83,10 @@ class DataChannelInstance {
             },
         },
         view: {
-            color: "#bb77ff",
+            color: "#00ffff",
             object2d: (options) => {
                 // rectangle
-                let material = {color: "#bb77ff", border: "#000000"};
+                let material = {color: "#00ffff", border: "#000000"};
                 if (options) {
                     material = options;
                 }
@@ -90,7 +95,7 @@ class DataChannelInstance {
             object3d: (options) => {
 
                 let materials = {
-                    '': `color:#bb77ff; transparent:true; opacity:0.90;`,
+                    '': `color:#00ffff; transparent:true; opacity:0.90;`,
                     'Selected': `color:#ffff00; transparent:true; opacity:0.90;`,
                     'Targeted': `color:#00ff00; transparent:true; opacity:0.90;`,
                     'Sourced': `color:#ff0000; transparent:true; opacity:0.90;`

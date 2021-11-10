@@ -90,6 +90,60 @@ module.exports = {
                     },
                 }
             },
+        },
+        mySabr5: {
+            inputs: {
+                StreamA: {},
+            },
+            outputs: {
+                StreamC: {},
+            },
+            transforms: {
+                transform4: {
+                    inputs: ['StreamA'],
+                    outputs: [],
+                    fn: (data, props) => {
+                        console.log("Data:", data.message, "Props:", props);
+                        return {data:{message:`${data.message}5`}, properties: props};
+                    },
+                }
+            },
+        },
+        mySabr6: {
+            inputs: {
+                StreamC: {},
+            },
+            outputs: {
+                StreamD: {},
+            },
+            transforms: {
+                transform4: {
+                    inputs: ['StreamC'],
+                    outputs: [],
+                    fn: (data, props) => {
+                        console.log("Data:", data.message, "Props:", props);
+                        return {data:{message:`${data.message}6`}, properties: props};
+                    },
+                }
+            },
+        },
+        mySabr7: {
+            inputs: {
+                StreamB: {},
+            },
+            outputs: {
+                StreamE: {},
+            },
+            transforms: {
+                transform4: {
+                    inputs: ['StreamB'],
+                    outputs: [],
+                    fn: (data, props) => {
+                        console.log("Data:", data.message, "Props:", props);
+                        return {data:{message:`${data.message}7`}, properties: props};
+                    },
+                }
+            },
         }
     },
     policies: {

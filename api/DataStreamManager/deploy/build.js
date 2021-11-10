@@ -1,21 +1,11 @@
 
 module.exports = {
-    web: {
+    pulsar: {
         dir: '..',
-        cmd: 'node web/server.js',
-        file: 'web/Dockerfile',
-        tag: '_dsm_web',
+        cmd: 'bin/pulsar standalone',
+        file: 'pulsar/Dockerfile',
+        tag: 'sabr_pulsar:standalone',
         env: {
-
         }
     },
-    gateway: {
-        dir: '..',
-        cmd: 'node gateway/server.js',
-        file: 'gateway/Dockerfile',
-        tag: '_dsm_gw',
-        env: {
-
-        }
-    }
 }

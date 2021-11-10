@@ -9,7 +9,8 @@ module.exports = {
     description: 'Manage Application is the description',
     method: 'data/govern',
     actors: {
-        'Actor': 'uses'
+        'DevOpsEngineer': 'uses',
+        'SoftwareDeveloper': 'uses'
     },
 };
 

@@ -21,7 +21,7 @@ module.exports = {
         // Pass the policies to the stream so appropriate channels are created.
         // Create a SABundleInstance with all of the StreamInstances attached.
         let numi = obj.instances.length;
-        let instance = new SABundleInstance({name:obj.name + numi, parent: obj});
+        let instance = new SABundleInstance({name:obj.name + '-' + numi, parent: obj});
         obj.addToInstances(instance);
         instance.deploy(inputs);
         return instance;

@@ -28,6 +28,9 @@ server.listen({
     urlPrefix: urlPrefix,
     listenPort: port,
     pulsarHost: pulsarHost,
+    routes: {
+        'deploy': 'deploy/show',
+    },
     post: async (config) => {
         console.log("Starting SABR: ", sabrName);
         // Create the ServiceInstance object to handle everything.

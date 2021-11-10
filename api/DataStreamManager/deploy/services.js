@@ -1,85 +1,30 @@
 module.exports = {
     services: {
-        web: {
-            image: "aml_web",
+        pulsar: {
+            image: "sabr_pulsar:local",
             interface: {
-                web: {path:'/web', port: 3000 },
+                pulsar: {path:'/pulsar', port: 6650 },
+                pulsaradmin: {path:'/pulsar-admin', port: 8081 },
             },
             networks: {
-                children: {},
-                siblings: {}
             }
         },
-        deviceagent: {
-            type: "stack",
-            image: "cpl_da",
-            interface: {
-                da: {path:"/da", port:3000}
-            },
-            volumes: {
-                docker: { source: "/var/run/docker.sock", target: "/var/run/docker.sock" }
-            },
-            environment: {
-                EDGEMERE_TELEMETRY_NETWORK: "_telemetry_family",
-            },
-            networks: {
-                children: {},
-                parent: {},
-            }
-        },
-        devicemanager: {
-            type: "stack",
-            image: "cpl_dm",
-            interface: {
-                da: {path:"/dm", port:3000}
-            },
-            volumes: {
-                docker: { source: "/var/run/docker.sock", target: "/var/run/docker.sock" }
-            },
-            environment: {
-                EDGEMERE_TELEMETRY_NETWORK: "_telemetry_family",
-            },
-            networks: {
-                children: {},
-                parent: {},
-            }
-        },
-        telemetry: {
-            type: "stack",
-            image: "cpl_tc",
-            interface: {
-                da: {path:"/dm", port:3000}
-            },
-            volumes: {
-                docker: { source: "/var/run/docker.sock", target: "/var/run/docker.sock" }
-            },
-            environment: {
-                EDGEMERE_TELEMETRY_NETWORK: "_telemetry_family",
-            },
-            networks: {
-                children: {},
-                parent: {},
-                telemetry: {}
-            }
-        }
     },
     policies: {
-
     },
     interface: {
         ports: {
-            80: 3000,
-            443: 3000,
+            6650: 6650,
+            8081: 8080,
         }
     },
     data: {
-
     },
     networks: {
-        telemetry: {
+        pulsar: {
             driver: "overlay",
             attachable: true,
-            name: "_telemetry_family"
+            name: "pulsar"
         }
     }
 }

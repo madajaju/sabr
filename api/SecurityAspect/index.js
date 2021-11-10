@@ -1,6 +1,6 @@
 module.exports = {
-    shortname: 's',
-    name: 'SecurityAspect',
+    shortname: 'sa',
+    name: 'Security Aspect',
     description: 'SecurityAspect is a package that contains...',
     color: 'pink'
 };

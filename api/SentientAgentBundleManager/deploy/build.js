@@ -6,7 +6,6 @@ module.exports = {
         file: 'web/Dockerfile',
         tag: '_sabm_web',
         env: {
-
         }
     },
     gateway: {

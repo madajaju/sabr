@@ -7,7 +7,7 @@
 module.exports = {
     name: 'Develop Capability',
     description: 'Develop Capability is the description',
-    method: 'data/govern',
+    method: 'capability/list',
     actors: {
         'Software Developer': 'uses'
     },

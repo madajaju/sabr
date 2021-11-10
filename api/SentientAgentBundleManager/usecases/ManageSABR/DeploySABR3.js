@@ -1,9 +1,9 @@
 module.exports = {
     name: 'Deploy SABR three',
     description: 'Deploy SABR is the description',
-    method: "data/create",
+    method: "sabundle/create",
     actors: {
-        'Actor': 'uses',
+        'DevOpsEngineer': 'uses',
     },
     steps: [
         { action: 'sabundle create', parameters: {name:'mySABR3', file:'./templates/bundle3.js'}},

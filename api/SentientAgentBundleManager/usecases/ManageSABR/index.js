@@ -7,9 +7,9 @@
 module.exports = {
     name: 'Manage SABR',
     description: 'Manage SABR is the description',
-    method: 'data/govern',
+    method: 'bundle/list',
     actors: {
-        'Actor': 'uses'
+        'DevOpsEngineer': 'uses'
     },
     // Shows dependency
     // includes: ["UseCase Name"],

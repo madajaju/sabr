@@ -29,6 +29,12 @@ module.exports = {
         try {
             const get = bent(url, 'GET', 'json', 200);
             const response = await get('', {});
+            for(let i in response.publishers) {
+                let producer = response.publishers[i];
+                if(global.producers.hasOwnProperty(producer.producerName)) {
+                    producer.sabr = global.producers[producer.producerName];
+                }
+            }
             env.res.json(response);
             env.res.end();
             return response;

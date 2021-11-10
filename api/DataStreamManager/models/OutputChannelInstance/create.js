@@ -3,7 +3,7 @@ const {Producer, logLevel } = require('pulsar-flex');
 
 module.exports = {
     friendlyName: 'create',
-    description: 'Create a Input Channel Instance',
+    description: 'Create a Output Channel Instance',
     static: true, // True is for Class methods. False is for object based.
     inputs: {
     },

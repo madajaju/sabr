@@ -32,10 +32,10 @@ class Capability {
             }
         },
         view: {
-            color: "#00ffaa",
+            color: "#00aaff",
             object2d: (options) => {
                 // Triangle
-                let material = {color: "#00ffaa", border: "#000000"};
+                let material = {color: "#00aaff", border: "#000000"};
                 if (options) {
                     material = options;
                 }
@@ -44,7 +44,7 @@ class Capability {
             object3d: (options) => {
 
                 let materials = {
-                    '': `color:#00ffaa; transparent:true, opacity:0.90;`,
+                    '': `color:#00aaff; transparent:true, opacity:0.90;`,
                     'Selected': `color:#ffff00; transparent:true, opacity:0.90;`,
                     'Targeted': `color:#00ff00; transparent:true, opacity:0.90;`,
                     'Sourced': `color:#ff0000; transparent:true, opacity:0.90;`

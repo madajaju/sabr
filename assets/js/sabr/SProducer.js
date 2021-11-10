@@ -9,7 +9,7 @@ export default class SProducer {
         _instances[this.id] = this;
     }
     static view3D(node, type) {
-        let color = node.color || "purple";
+        let color = node.color || "blue";
         if (type === 'Selected') {
             color = "yellow";
         } else if (type === 'Targeted') {
@@ -19,14 +19,14 @@ export default class SProducer {
         }
         const theta = 3.14 / 2;
         const group = new THREE.Group();
-        const cone = new THREE.ConeGeometry(15, 30, 64);
+        const cone = new THREE.ConeGeometry(5, 10, 32);
         const material = new THREE.MeshLambertMaterial({color: color, opacity: 1});
         const coneObj = new THREE.Mesh(cone, material);
-        coneObj.applyMatrix4(new THREE.Matrix4().makeRotationZ(theta*2));
+        coneObj.applyMatrix4(new THREE.Matrix4().makeRotationZ(-theta));
         group.add(coneObj);
-        let label = AText.view3D({text: node.name.replace(/\-/g, '\n'), color: "#ffffff", width: 20, size: 15});
-        label.position.set(0, -5, 20)
-        group.add(label);
+        // let label = AText.view3D({text: node.name.replace(/\-/g, '\n'), color: "#ffffff", width: 20, size: 15});
+        // label.position.set(0, -5, 20)
+        // group.add(label);
 
         group.position.set(node.x, node.y, node.z);
         if (node.rotate) {

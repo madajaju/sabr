@@ -3,5 +3,5 @@ module.exports = {
     name: 'Learning Corpus',
     description: 'Learning Corpus is a package that contains the AI Models used to transform data from raw sensor' +
         'data to valuable actionable data.',
-    color: '#ffaa77'
+    color: '#00aaff'
 };

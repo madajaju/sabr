@@ -23,6 +23,7 @@ module.exports = {
         for(let i in parent.channels) {
             let channel = parent.channels[i];
             let instance = new OutputChannelInstance({name: channel.name});
+            instance.bundle = obj.bundle;
             channel.addToInstances(instance);
             obj.addToChannels(instance);
             instance.deploy();

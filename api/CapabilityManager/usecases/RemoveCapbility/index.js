@@ -9,7 +9,7 @@ module.exports = {
     description: 'Remove Capbility is the description',
     method: 'data/govern',
     actors: {
-        'Software Developer': 'uses'
+        'DevOpsEngineer': 'uses'
     },
     extends: [ 'Manage Capabilities' ],
 };

@@ -3,7 +3,7 @@ module.exports = {
     description: 'Build Capability is the description',
     method: "data/create",
     actors: {
-        'Actor': 'uses',
+        'DevOpsEngineer': 'uses',
     },
     steps: [
         { action: 'capability/create', parameters: {name:'myCapabilityB1', file:'./templates/capability.yml'}},

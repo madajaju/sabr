@@ -85,10 +85,10 @@ class SABundle {
             }
         },
         view: {
-            color: "#ffffaa",
+            color: "#00aaff",
             object2d: (options) => {
                 // rectangle
-                let material = {color: "#ffffaa", border: "#000000"};
+                let material = {color: "#00aaff", border: "#000000"};
                 if (options) {
                     material = options;
                 }
@@ -106,10 +106,10 @@ class SABundle {
                 for (let i in materials) {
                     retval += `<a-entity id="SABundle3D${i}">` +
                             `<a-box height="10" width="10" depth="10" position="0 0 0" rotation="0 0 0" material="color:#00aaff;" ></a-box>` +
-                            `<a-cylinder height="15" radius="1" position="-10 2 0" rotation="0 0 90" material="color:#bb77ff;" ></a-cylinder>` +
-                            `<a-cylinder height="15" radius="1" position="-10 -2 0" rotation="0 0 90" material="color:#bb77ff;" ></a-cylinder>` +
-                            `<a-cylinder height="15" radius="1.5" position="13 0 0" rotation="0 0 90" material="color:#bb77ff;" ></a-cylinder>` +
-                            `<a-cone height="15" radius-bottom="4" radius-top="0" position="10 0 0" rotation="0 0 -90" material="color:#ffbb88;" ></a-cone>` +
+                            `<a-cylinder height="15" radius="1" position="-10 2 0" rotation="0 0 90" material="color:#00aaff;" ></a-cylinder>` +
+                            `<a-cylinder height="15" radius="1" position="-10 -2 0" rotation="0 0 90" material="color:#00aaff;" ></a-cylinder>` +
+                            `<a-cylinder height="15" radius="1.5" position="13 0 0" rotation="0 0 90" material="color:#00aaff;" ></a-cylinder>` +
+                            `<a-cone height="15" radius-bottom="4" radius-top="0" position="10 0 0" rotation="0 0 -90" material="color:#00aaff;" ></a-cone>` +
                             `<a-box height="5" width="25" depth="15" position="-5 -7 0" rotation="0 0 0" material="${materials[i]}" ></a-box>` +
                             `<a-dodecahedron radius="4" position="15 -7 0" material="color:#ffaaaa;" ></a-dodecahedron>` +
                         `</a-entity>`;

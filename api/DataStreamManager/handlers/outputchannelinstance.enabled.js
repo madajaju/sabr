@@ -8,7 +8,12 @@ module.exports = {
                 if(data.obj) {
                     return {channel: data.obj.name};
                 } else if(data._attributes) {
-                    // Other side do not propagate
+                    // Sabrs are reporting their producer information.
+                    // store the producer's connection to the sabr.
+                    if(!global.hasOwnProperty('producers')) {
+                        global.producers = {};
+                    }
+                    global.producers[data._attributes.producerName] = data;
                     return {channel: null};
                 }
             }

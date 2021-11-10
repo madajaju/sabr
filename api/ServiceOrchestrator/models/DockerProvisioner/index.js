@@ -5,19 +5,12 @@ class DockerProvisioner {
         description: 'Description ' +
             'long description',
         attributes: {
-            attr1: {
+            name: {
                 type: 'string',
-                description: 'description' +
-                    ' long description'
+                description: 'Name of the docker provisioner',
             }
         },
         associations: {
-            assoc1: {
-                type: 'ModelName',
-                cardinality: 1,
-                composition: false,
-                owner: false,
-            },
         },
         /*
         statenet: {

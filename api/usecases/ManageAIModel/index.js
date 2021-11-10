@@ -7,9 +7,9 @@
 module.exports = {
     name: 'Manage AI Model',
     description: 'Manage AI Model is the description',
-    method: 'data/govern',
+    method: 'aimodel/list',
     actors: {
-        'Actor': 'uses'
+        'AIDeveloper': 'uses'
     },
 };
 

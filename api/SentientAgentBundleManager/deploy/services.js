@@ -12,56 +12,22 @@ module.exports = {
         },
         pulsar: {
             type: "stack",
-            image: "cpl_da",
+            image: "sabr_pulsar",
             interface: {
-                da: {path:"/da", port:3000}
+                pulsar: {path:"/pulsar", port:3000}
             },
             volumes: {
                 docker: { source: "/var/run/docker.sock", target: "/var/run/docker.sock" }
             },
             environment: {
-                EDGEMERE_TELEMETRY_NETWORK: "_telemetry_family",
+                SABR_PULSAR_NETWORK: "pulsar_net",
             },
             networks: {
+                pulsar_net: {},
                 children: {},
                 parent: {},
             }
         },
-        devicemanager: {
-            type: "stack",
-            image: "cpl_dm",
-            interface: {
-                da: {path:"/dm", port:3000}
-            },
-            volumes: {
-                docker: { source: "/var/run/docker.sock", target: "/var/run/docker.sock" }
-            },
-            environment: {
-                EDGEMERE_TELEMETRY_NETWORK: "_telemetry_family",
-            },
-            networks: {
-                children: {},
-                parent: {},
-            }
-        },
-        telemetry: {
-            type: "stack",
-            image: "cpl_tc",
-            interface: {
-                da: {path:"/dm", port:3000}
-            },
-            volumes: {
-                docker: { source: "/var/run/docker.sock", target: "/var/run/docker.sock" }
-            },
-            environment: {
-                EDGEMERE_TELEMETRY_NETWORK: "_telemetry_family",
-            },
-            networks: {
-                children: {},
-                parent: {},
-                telemetry: {}
-            }
-        }
     },
     policies: {
 
@@ -70,16 +36,17 @@ module.exports = {
         ports: {
             80: 3000,
             443: 3000,
+            8081: 8081
         }
     },
     data: {
 
     },
     networks: {
-        telemetry: {
+        pulsar_net: {
             driver: "overlay",
             attachable: true,
-            name: "_telemetry_family"
+            name: "pulsar_net"
         }
     }
 }

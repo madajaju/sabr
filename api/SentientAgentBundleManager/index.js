@@ -3,6 +3,6 @@ module.exports = {
     name: 'Sentient Agent Bundle Manager',
     description: 'Sentient Agent Bundle Manager is a package that contains the definition to manage data streams,' +
         'data transformation, and the deployment of those bundles.',
-    color: '#ffffaa',
+    color: '#00aaff',
     depends: [ "Data Stream Manager", "Security Aspect", "Application Manager", "Learning Corpus" ]
 };

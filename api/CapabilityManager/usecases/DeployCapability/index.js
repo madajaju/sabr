@@ -9,7 +9,7 @@ module.exports = {
     description: 'Deploy Capability is the description',
     method: 'data/govern',
     actors: {
-        'Actor': 'uses'
+        'DevOpsEngineer': 'uses'
     },
     extends: [ 'Manage Capabilities' ],
     // Shows dependency

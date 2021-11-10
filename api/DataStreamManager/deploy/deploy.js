@@ -2,22 +2,28 @@
 module.exports = {
     name: '_dsm',
     contexts: {
+        local: {
+            type: 'swarm',
+            tag: 'sabr_pulsar:local',
+            design: 'services-local.js',
+            env: {}
+        },
         dev: {
             type: 'swarm',
-            tag: '_dsm_dev',
-            file: 'docker-compose.yml',
+            tag: 'sabr_pulsar:dev',
+            design: 'services.js',
             env: {}
         },
         test: {
             type: 'swarm',
-            tag: '_dsm_test',
-            file: 'docker-compose.yml',
+            tag: 'sabr_pulsar:test',
+            design: 'services.js',
             env: {}
         },
         prod: {
             type: 'swarm',
-            tag: '_dsm_prod',
-            file: 'docker-compose.yml',
+            tag: 'sabr_pulsar:prod',
+            design: 'services.js',
             env: {}
         }
     }

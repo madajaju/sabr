@@ -7,9 +7,9 @@
 module.exports = {
     name: 'Find Enemy Combatant',
     description: 'Find Enemy Combatant is the description',
-    method: 'data/govern',
+    method: 'capability/list',
     actors: {
-        'Actor': 'uses'
+        'TacticalOperator': 'uses'
     },
 };
 

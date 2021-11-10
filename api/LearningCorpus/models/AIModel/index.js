@@ -12,10 +12,10 @@ class AIModel {
         associations: {
         },
         view: {
-            color: "#ffbb88",
+            color: "#00aaff",
             object2d: (options) => {
                 // rectangle
-                let material = {color: "#ffbb88", border: "#000000"};
+                let material = {color: "#00aaff", border: "#000000"};
                 if (options) {
                     material = options;
                 }
@@ -24,7 +24,7 @@ class AIModel {
             object3d: (options) => {
 
                 let materials = {
-                    '': `color:#ffbb88; transparent:true; opacity:0.90;`,
+                    '': `color:#00aaff; transparent:true; opacity:0.90;`,
                     'Selected': `color:#ffff00; transparent:true; opacity:0.90;`,
                     'Targeted': `color:#00ff00; transparent:true; opacity:0.90;`,
                     'Sourced': `color:#ff0000; transparent:true; opacity:0.90;`

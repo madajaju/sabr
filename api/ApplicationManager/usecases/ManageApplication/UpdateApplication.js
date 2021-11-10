@@ -3,11 +3,10 @@ module.exports = {
     description: 'Update Application is the description',
     method: "data/create",
     actors: {
-        'Actor': 'uses',
+        'DevOpsEngineer': 'uses',
     },
     steps: [
-        { action: 'data/list', parameters: {name:'hello', file:'./templates/world.yml'}},
-        { action: 'data/list', parameters: {name:'hello', file:'./templates/world.yml'}},
+        { action: 'application/update', parameters: {name:'hello', file:'./templates/world.yml'}},
     ]
 };
 

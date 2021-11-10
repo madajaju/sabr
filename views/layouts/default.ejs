@@ -51,7 +51,7 @@
 <script type="module">
 
     import {APackage, AScenario, AUsecase, AActor, AModel, AStack, AEnvironment} from './js/ailtire/index.js';
-    import {SChannel} from './js/sabr/index.js';
+    import {SChannel, SStream} from './js/sabr/index.js';
     let pkgview = new APackage({});
     let scenarioview = new AScenario({});
     let usecaseview = new AUsecase({});
@@ -953,9 +953,7 @@
                         }
                     })
                 } else if (event.object.id === 'pulsar') {
-                    SChannel.getAll({fn: (channels) => {
-                            SChannel.showAllGraph(channels, "new");
-                        }});
+                    SStream.getAll({fn: (streams) => { SStream.showAllGraph(streams, "new"); }});
                 }
             },
             onCollapse: (event) => {
@@ -1019,7 +1017,7 @@
         showUseCaseList('sidebar', 'usecases');
         showPackageList('sidebar', 'packages');
         showDeploymentList('sidebar', 'deployments');
-        SChannel.showList('sidebar', 'pulsar');
+        SStream.showList('sidebar', 'pulsar');
 
         let width = $('#modelGraph').width();
         let height = $('#modelGraph').height();

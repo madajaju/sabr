@@ -7,9 +7,9 @@
 module.exports = {
     name: 'Manage Capabilities',
     description: 'Manage Capabilities is the description',
-    method: 'data/govern',
+    method: 'application/list',
     actors: {
-        'Actor': 'uses'
+        'SoftwareDeveloper': 'uses'
     },
 };
 
