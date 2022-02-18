@@ -27,7 +27,7 @@ module.exports = {
         }
         catch(e){
             console.error("Topics could not be found:", e);
-            throw new Error("Topics Failed:"+ e.message);
+            // throw new Error("Topics Failed:"+ e.message);
         }
     }
 };

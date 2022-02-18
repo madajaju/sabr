@@ -32,6 +32,7 @@ server.listen({
         'deploy': 'deploy/show',
     },
     post: async (config) => {
+        console.log("Config:", config);
         console.log("Starting SABR: ", sabrName);
         // Create the ServiceInstance object to handle everything.
         if (provisionURL) {

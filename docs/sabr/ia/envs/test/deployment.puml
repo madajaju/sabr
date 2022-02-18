@@ -1,0 +1,59 @@
+@startuml
+
+left to right direction
+
+
+boundary appname__family #red
+
+
+entity appname__ia_family #black
+
+
+
+
+package "_ia" #pink {
+    queue childrennet #black [
+            <b><color:white>children</color></b>
+    ]
+    
+    childrennet -[#black]- appname__ia_family
+    
+    queue siblingnet #blue [
+            <b><color:white>sibling</color></b>
+    ]
+    
+    queue parentnet #red [
+            <b><color:white>parent</color></b>
+    ]
+    
+    parentnet -[#red]- appname__family
+    
+
+node "child" as childService
+node "frontend" as frontendService
+node "gw" as gwService
+
+
+        artifact "child_image:latest" as child_imagelatestimage
+    
+        artifact "_ia_web" as _ia_webimage
+    
+        artifact "_ia_gw" as _ia_gwimage
+    
+}
+
+childService -[#black]- childrennet
+
+childService -[#red]- parentnet
+
+frontendService -[#blue]- siblingnet
+
+gwService -[#black]- childrennet
+
+gwService -[#blue]- siblingnet
+childService .... child_imagelatestimage
+frontendService .... _ia_webimage
+gwService .... _ia_gwimage
+
+
+@enduml

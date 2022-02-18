@@ -1,0 +1,23 @@
+@startuml
+
+
+
+package "Common Physical Layer" #lightgray {
+
+    interface "Common Physical Layer" as i {
+    
+    }
+}
+
+CLI ()-- i
+REST ()-- i
+Web ()-- i
+
+package "Common Physical Layer" #lightgray {
+
+
+}
+
+
+
+@enduml

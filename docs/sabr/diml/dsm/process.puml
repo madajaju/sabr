@@ -1,0 +1,128 @@
+@startuml
+left to right direction
+
+
+state "diml" as diml #ffcc88 {
+state "dsm" as dimldsm #ffcc88 {
+}
+}
+
+
+state dimldsm #ffcc88 {
+    state "Custom Function" as dsmfunction {
+    }
+}
+
+        state "diml" as diml #ffcc88 {
+state "dsm" as dimldsm #ffcc88 {
+state "channel" as dimldsmchannel #ffcc88 {
+state "deployed" as dimldsmchanneldeployed #ffcc88 {
+}
+}
+}
+}
+
+
+        state "diml" as diml #ffcc88 {
+state "dsm" as dimldsm #ffcc88 {
+state "stream" as dimldsmstream #ffcc88 {
+state "deployed" as dimldsmstreamdeployed #ffcc88 {
+}
+}
+}
+}
+
+
+
+
+        state "diml" as diml #ffcc88 {
+state "dsm" as dimldsm #ffcc88 {
+state "InputChannelInstance" as dimldsminputchannelinstance #ffcc88 {
+state "enabled" as dimldsminputchannelinstanceenabled #ffcc88 {
+}
+}
+}
+}
+
+        
+    state "diml" as diml #ffcc88 {
+state "dsm" as dimldsm #ffcc88 {
+state "channel" as dimldsmchannel #ffcc88 {
+state "deployed" as dimldsmchanneldeployed #ffcc88 {
+}
+}
+}
+}
+
+    dimldsminputchannelinstanceenabled ---> dimldsmchanneldeployed
+  
+
+        state "diml" as diml #ffcc88 {
+state "dsm" as dimldsm #ffcc88 {
+state "InputStreamInstance" as dimldsminputstreaminstance #ffcc88 {
+state "enabled" as dimldsminputstreaminstanceenabled #ffcc88 {
+}
+}
+}
+}
+
+        
+    state "diml" as diml #ffcc88 {
+state "dsm" as dimldsm #ffcc88 {
+state "stream" as dimldsmstream #ffcc88 {
+state "deployed" as dimldsmstreamdeployed #ffcc88 {
+}
+}
+}
+}
+
+    dimldsminputstreaminstanceenabled ---> dimldsmstreamdeployed
+  
+
+        state "diml" as diml #ffcc88 {
+state "dsm" as dimldsm #ffcc88 {
+state "OutputChannelInstance" as dimldsmoutputchannelinstance #ffcc88 {
+state "enabled" as dimldsmoutputchannelinstanceenabled #ffcc88 {
+}
+}
+}
+}
+
+        
+    
+    dimldsmoutputchannelinstanceenabled ---> dimldsmchanneldeployed
+  
+
+        state "diml" as diml #ffcc88 {
+state "dsm" as dimldsm #ffcc88 {
+state "OutputStreamInstance" as dimldsmoutputstreaminstance #ffcc88 {
+state "enabled" as dimldsmoutputstreaminstanceenabled #ffcc88 {
+}
+}
+}
+}
+
+        
+    
+    dimldsmoutputstreaminstanceenabled ---> dimldsmstreamdeployed
+  
+
+
+    
+    
+        
+       
+    
+    
+        
+       
+    
+    
+        
+       
+    
+    
+        
+       
+
+@enduml

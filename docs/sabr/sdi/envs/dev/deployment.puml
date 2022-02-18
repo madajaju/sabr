@@ -1,0 +1,59 @@
+@startuml
+
+left to right direction
+
+
+boundary appname__family #red
+
+
+entity appname__sdi_family #black
+
+
+
+
+package "_sdi" #lightyellow {
+    queue childrennet #black [
+            <b><color:white>children</color></b>
+    ]
+    
+    childrennet -[#black]- appname__sdi_family
+    
+    queue siblingnet #blue [
+            <b><color:white>sibling</color></b>
+    ]
+    
+    queue parentnet #red [
+            <b><color:white>parent</color></b>
+    ]
+    
+    parentnet -[#red]- appname__family
+    
+
+node "child" as childService
+node "frontend" as frontendService
+node "gw" as gwService
+
+
+        artifact "child_image:latest" as child_imagelatestimage
+    
+        artifact "_sdi_web" as _sdi_webimage
+    
+        artifact "_sdi_gw" as _sdi_gwimage
+    
+}
+
+childService -[#black]- childrennet
+
+childService -[#red]- parentnet
+
+frontendService -[#blue]- siblingnet
+
+gwService -[#black]- childrennet
+
+gwService -[#blue]- siblingnet
+childService .... child_imagelatestimage
+frontendService .... _sdi_webimage
+gwService .... _sdi_gwimage
+
+
+@enduml

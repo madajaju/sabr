@@ -1,0 +1,91 @@
+@startuml
+
+left to right direction
+
+
+boundary parent #black
+
+
+entity children #blue
+
+
+
+
+package "sabr" #bbaaff {
+    queue parentnet #black [
+            <b><color:white>parent</color></b>
+    ]
+    
+    parentnet -[#black]- parent
+    
+    queue childrennet #blue [
+            <b><color:white>children</color></b>
+    ]
+    
+    childrennet -[#blue]- children
+    
+    queue siblingsnet #red [
+            <b><color:white>siblings</color></b>
+    ]
+    
+
+node "admin" as adminService
+node "am" as amService
+node "cm" as cmService
+node "dsm" as dsmService
+node "sa" as saService
+node "lc" as lcService
+node "sabm" as sabmService
+node "so" as soService
+node "doc" as docService
+
+
+        artifact "sabr_admin" as sabr_adminimage
+    
+        artifact "am" as amimage
+    
+        artifact "cm" as cmimage
+    
+        artifact "dsm" as dsmimage
+    
+        artifact "sa" as saimage
+    
+        artifact "lc" as lcimage
+    
+        artifact "sabm" as sabmimage
+    
+        artifact "so" as soimage
+    
+        artifact "sabr_doc" as sabr_docimage
+    
+}
+
+adminService -[#red]- siblingsnet
+
+amService -[#blue]- childrennet
+
+cmService -[#blue]- childrennet
+
+dsmService -[#blue]- childrennet
+
+saService -[#blue]- childrennet
+
+lcService -[#blue]- childrennet
+
+sabmService -[#blue]- childrennet
+
+soService -[#blue]- childrennet
+
+docService -[#red]- siblingsnet
+adminService .... sabr_adminimage
+amService .... amimage
+cmService .... cmimage
+dsmService .... dsmimage
+saService .... saimage
+lcService .... lcimage
+sabmService .... sabmimage
+soService .... soimage
+docService .... sabr_docimage
+
+
+@enduml

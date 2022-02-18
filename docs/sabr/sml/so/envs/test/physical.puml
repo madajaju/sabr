@@ -1,0 +1,46 @@
+@startuml
+  interface CLI
+  interface Web
+  interface WebSocket
+package "Service Orchestrator" #aaffaa {
+  component express as REST
+  component socket.io as socket
+  folder bin #ffffff {
+    component " sabr sml so" as binName
+  }
+  binName --> REST
+
+  folder deploy #ffffff {
+      file "node server.js\ndocker-compose.yml" as _so_container
+      REST --> _so_container
+
+  
+    file "web" as web_container
+    REST --> web_container
+    socket ---> web_container
+  
+    file "gateway" as gateway_container
+    REST --> gateway_container
+    socket ---> gateway_container
+  
+  }
+  folder images #ffffff {
+    collections "_so" as _soimage
+    artifact "ailtire:swarm" as ailtireswarm
+    _soimage <|-- ailtireswarm
+    _so_container --> _soimage
+
+  
+      artifact _so_web
+      web_container --> _so_web
+    
+      artifact _so_gw
+      gateway_container --> _so_gw
+    
+  }
+}
+CLI " sabr sml so" -- binName
+Web "/sabr/sml/so" - REST
+WebSocket ".sabr.sml.so" -- socket
+
+@enduml

@@ -1,0 +1,67 @@
+@startuml
+left to right direction
+
+
+
+state "TacticalOperator" as TacticalOperator {
+    state "Find Enemy Combatant" as TacticalOperatorFindEnemyCombatant {
+    }
+}
+state "sabr" as sabr #bbaaff {
+state "capability" as sabrcapability #bbaaff {
+state "list" as sabrcapabilitylist #bbaaff {
+}
+}
+}
+
+TacticalOperatorFindEnemyCombatant --> sabrcapabilitylist
+
+
+ 
+state "AIDeveloper" as AIDeveloper {
+    state "Manage AI Model" as AIDeveloperManageAIModel {
+    }
+}
+state "sabr" as sabr #bbaaff {
+state "aimodel" as sabraimodel #bbaaff {
+state "list" as sabraimodellist #bbaaff {
+}
+}
+}
+
+AIDeveloperManageAIModel --> sabraimodellist
+
+
+ 
+state "SoftwareDeveloper" as SoftwareDeveloper {
+    state "Manage Capabilities" as SoftwareDeveloperManageCapabilities {
+    }
+}
+state "sabr" as sabr #bbaaff {
+state "application" as sabrapplication #bbaaff {
+state "list" as sabrapplicationlist #bbaaff {
+}
+}
+}
+
+SoftwareDeveloperManageCapabilities --> sabrapplicationlist
+
+
+ 
+state "DevOpsEngineer" as DevOpsEngineer {
+    state "Manage Capbilities" as DevOpsEngineerManageCapbilities {
+    }
+}
+state "sabr" as sabr #bbaaff {
+state "capability" as sabrcapability #bbaaff {
+state "list" as sabrcapabilitylist #bbaaff {
+}
+}
+}
+
+DevOpsEngineerManageCapbilities --> sabrcapabilitylist
+
+
+ 
+
+@enduml

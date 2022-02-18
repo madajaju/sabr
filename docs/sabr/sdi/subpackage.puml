@@ -1,0 +1,29 @@
+@startuml
+
+
+package "Common Physical Layer" #lightgray {
+
+}
+
+
+package "Software Defined Infrastructure" #lightyellow {
+
+    interface "Software Defined Infrastructure" as i {
+    
+    }
+}
+
+CLI ()-- i
+REST ()-- i
+Web ()-- i
+
+package "Software Defined Infrastructure" #lightyellow {
+
+
+}
+
+
+    "Software Defined Infrastructure" --> "Common Physical Layer"
+
+
+@enduml

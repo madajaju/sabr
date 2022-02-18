@@ -1,0 +1,38 @@
+@startuml
+
+actor "DevOpsEngineer"
+
+
+entity EventBus
+
+box Capability Manager #00aaff
+    boundary cm #white
+end box
+
+
+box Capability Manager #00aaff
+            participant capability
+    end box
+
+
+"DevOpsEngineer" -> cm: Release Capability
+
+    cm -> "capability": create (name: myCapabilityT1,file: ./templates/capability.yml)
+
+    "capability" --/ EventBus: capability.create
+
+    cm -> "capability": build (name: myCapabilityT1)
+
+    "capability" --/ EventBus: capability.build
+
+    cm -> "capability": test (name: myCapabilityT1)
+
+    "capability" --/ EventBus: capability.test
+
+    cm -> "capability": release (name: myCapabilityT1)
+
+    "capability" --/ EventBus: capability.release
+
+
+
+@enduml

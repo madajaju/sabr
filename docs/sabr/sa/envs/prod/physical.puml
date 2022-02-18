@@ -1,0 +1,46 @@
+@startuml
+  interface CLI
+  interface Web
+  interface WebSocket
+package "Security Aspect" #pink {
+  component express as REST
+  component socket.io as socket
+  folder bin #ffffff {
+    component " sabr sa" as binName
+  }
+  binName --> REST
+
+  folder deploy #ffffff {
+      file "node server.js\ndocker-compose.yml" as _s_container
+      REST --> _s_container
+
+  
+    file "web" as web_container
+    REST --> web_container
+    socket ---> web_container
+  
+    file "gateway" as gateway_container
+    REST --> gateway_container
+    socket ---> gateway_container
+  
+  }
+  folder images #ffffff {
+    collections "_s" as _simage
+    artifact "ailtire:swarm" as ailtireswarm
+    _simage <|-- ailtireswarm
+    _s_container --> _simage
+
+  
+      artifact _s_web
+      web_container --> _s_web
+    
+      artifact _s_gw
+      gateway_container --> _s_gw
+    
+  }
+}
+CLI " sabr sa" -- binName
+Web "/sabr/sa" - REST
+WebSocket ".sabr.sa" -- socket
+
+@enduml

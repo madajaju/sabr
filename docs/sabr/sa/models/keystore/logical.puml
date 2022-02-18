@@ -1,0 +1,18 @@
+@startuml
+
+class "KeyStore" as Model {
+ string name
+
+ 
+}
+
+rectangle "SecurityKey" as SecurityKey #lightblue {
+}
+
+Model o--> "n" SecurityKey : keys
+
+
+
+
+
+@enduml

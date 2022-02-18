@@ -1,4 +1,4 @@
-import {AText, APackage, AModel, AAction} from "./index.js";
+import {AText, APackage, AModel, AAction, AObject} from "./index.js";
 
 const scolor = {
     started: "#00ffff",
@@ -33,15 +33,19 @@ export default class AScenario {
         let geometry = new THREE.BoxGeometry(75, 30, 10);
         const material = new THREE.MeshLambertMaterial({color: color, opacity: 1});
         const box = new THREE.Mesh(geometry, material);
-
-        let label = AText.view3D({text:node.name.replace(/\s/g, '\n'), color:"#ffffff", width: 50, size: 12});
+        let name = node.name;
+        if(!name) {
+            name = node.id;
+        }
+        let label = AText.view3D({text:name.replace(/\s/g, '\n'), color:"#ffffff", width: 50, size: 12});
         label.position.set(0,0,7);
         box.add(label)
 
         box.position.set(node.x, node.y, node.z);
         box.aid = node.id;
         node.box = 100;
-        node.expandLink =  `scenario/get?id=${node.id}`;
+        node.expandLink = `scenario/get?id=${node.id}`;
+        node.expandView = AScenario.viewDeep3D;
         return box;
     }
     static viewStep3D(node, type) {
@@ -62,20 +66,29 @@ export default class AScenario {
 
         box.position.set(node.x, node.y, node.z);
         box.aid = node.id;
-        node.box = 75;
-        node.expandLink =  `scenario/get?id=${node.id}`;
+        node.box = 75
+        node.expandLink = `scenario/get?id=${node.id}`;
         return box;
     }
     static viewDeep3D(scenario, mode) {
         let data = {nodes: {}, links: []};
-        data.nodes[scenario.id] = {id: scenario.id, name: scenario.name, view:AScenario.view3D};
+        window.graph.clearObjects();
+        data.nodes[scenario.id] = {id: scenario.id, name: scenario.name,
+            view:AScenario.view3D,
+            expandView: AScenario.viewDeep3D,
+            expandLink: `scenario/get?id=${scenario.id}`
+        };
         let rbox = {};
         let luid = scenario.id;
         for(let i in scenario.steps) {
             let step = scenario.steps[i];
             let uid = `${scenario.id}-${i}`;
             rbox = {parent:luid, x:{min:0,max: 0}, z:{min:0,max:0}, y: {min:-30, max: -30}};
-            data.nodes[uid] = {id: uid, name: step.action.name, view:AScenario.viewStep3D, rbox: rbox, box:10};
+            data.nodes[uid] = {id: uid, name: step.action.name,
+                view:AScenario.viewStep3D,
+                expandView: AScenario.viewDeep3D,
+                expandLink: `scenario/get?id=${scenario.id}`,
+                rbox: rbox, box:10};
             // Add the action for the step.
             let action = step.action;
             if(!data.nodes.hasOwnProperty(action.name)) {
@@ -101,6 +114,8 @@ export default class AScenario {
                         name: pkg.name,
                         color: pkg.color,
                         view: APackage.view3D,
+                        expandView: APackage.viewDeep3D,
+                        expandLink: `package/get?id=${pkg.shortname}`,
                         rbox: {
                             parent: scenario.id,
                             x: {min: -300, max: 300},
@@ -119,6 +134,8 @@ export default class AScenario {
                 if(!data.nodes.hasOwnProperty(cls)) {
                     data.nodes[cls] = {
                         id: cls, name: cls, view: AModel.view3D,
+                        expandView: AModel.viewDeep3D,
+                        expandLink: `model/get?id=${cls}`,
                         rbox: {
                             parent: scenario.id,
                             x: {min: -300, max: 300},
@@ -234,6 +251,11 @@ export default class AScenario {
         } else if (event.includes('step.failed')) {
             w2ui['scenariolist'].set(scenario.currentstep, {"w2ui": {"style": "background-color: #ffbbbb"}});
             window.graph.setNode(scenario.id + '-' + scenario.currentstep, {color:scolor['failed']});
+        } else {
+            let parent = window.graph.getSelectedNode();
+            // Because the event is not a scenario it is an object event.
+            let object = scenario;
+            AObject.addObject(object, parent.id);
         }
         w2ui['scenariolist'].refresh();
     }

@@ -1,0 +1,294 @@
+@startuml
+
+class "DataStreamInstance" as Model {
+ string name
+ string direction
+
+ deploy()
+ 
+}
+
+rectangle "DataStream" as DataStream #lightblue {
+}
+
+Model o--> "1" DataStream : parent
+
+
+rectangle "SABundleInstance" as SABundleInstance #lightblue {
+}
+
+Model o--> "1" SABundleInstance : bundle
+
+
+rectangle "DataChannelInstance" as DataChannelInstance #lightblue {
+}
+
+Model *--> "n" DataChannelInstance : channels
+
+
+rectangle "DataChannelInstance" as DataChannelInstance #lightblue {
+}
+
+Model o--> "n" DataChannelInstance : policies
+
+
+rectangle "DataTransformInstance" as DataTransformInstance #lightblue {
+}
+
+Model o--> "n" DataTransformInstance : transforms
+
+
+
+
+    rectangle "DataChannelInstance" as DataChannelInstance #lightgreen {
+    }
+    
+        DataChannelInstance   o--> "1" Model : "stream"
+    
+    rectangle "DataStream" as DataStream #lightgreen {
+    }
+    
+        DataStream   *--> "n" Model : "instances"
+    
+    rectangle "DataChannelInstance" as DataChannelInstance #lightgreen {
+    }
+    
+        DataChannelInstance   o--> "1" Model : "stream"
+    
+    rectangle "DataStream" as DataStream #lightgreen {
+    }
+    
+        DataStream   *--> "n" Model : "instances"
+    
+    rectangle "DataChannelInstance" as DataChannelInstance #lightgreen {
+    }
+    
+        DataChannelInstance   o--> "1" Model : "stream"
+    
+    rectangle "DataStream" as DataStream #lightgreen {
+    }
+    
+        DataStream   *--> "n" Model : "instances"
+    
+    rectangle "DataChannelInstance" as DataChannelInstance #lightgreen {
+    }
+    
+        DataChannelInstance   o--> "1" Model : "stream"
+    
+    rectangle "DataStream" as DataStream #lightgreen {
+    }
+    
+        DataStream   *--> "n" Model : "instances"
+    
+    rectangle "DataChannelInstance" as DataChannelInstance #lightgreen {
+    }
+    
+        DataChannelInstance   o--> "1" Model : "stream"
+    
+    rectangle "DataStream" as DataStream #lightgreen {
+    }
+    
+        DataStream   *--> "n" Model : "instances"
+    
+    rectangle "DataChannelInstance" as DataChannelInstance #lightgreen {
+    }
+    
+        DataChannelInstance   o--> "1" Model : "stream"
+    
+    rectangle "DataStream" as DataStream #lightgreen {
+    }
+    
+        DataStream   *--> "n" Model : "instances"
+    
+    rectangle "InputChannelInstance" as InputChannelInstance #lightgreen {
+    }
+    
+        InputChannelInstance   o--> "1" Model : "stream"
+    
+    rectangle "OutputChannelInstance" as OutputChannelInstance #lightgreen {
+    }
+    
+        OutputChannelInstance   o--> "1" Model : "stream"
+    
+    rectangle "DataChannelInstance" as DataChannelInstance #lightgreen {
+    }
+    
+        DataChannelInstance   o--> "1" Model : "stream"
+    
+    rectangle "DataStream" as DataStream #lightgreen {
+    }
+    
+        DataStream   *--> "n" Model : "instances"
+    
+    rectangle "InputChannelInstance" as InputChannelInstance #lightgreen {
+    }
+    
+        InputChannelInstance   o--> "1" Model : "stream"
+    
+    rectangle "OutputChannelInstance" as OutputChannelInstance #lightgreen {
+    }
+    
+        OutputChannelInstance   o--> "1" Model : "stream"
+    
+    rectangle "DataChannelInstance" as DataChannelInstance #lightgreen {
+    }
+    
+        DataChannelInstance   o--> "1" Model : "stream"
+    
+    rectangle "DataStream" as DataStream #lightgreen {
+    }
+    
+        DataStream   *--> "n" Model : "instances"
+    
+    rectangle "InputChannelInstance" as InputChannelInstance #lightgreen {
+    }
+    
+        InputChannelInstance   o--> "1" Model : "stream"
+    
+    rectangle "OutputChannelInstance" as OutputChannelInstance #lightgreen {
+    }
+    
+        OutputChannelInstance   o--> "1" Model : "stream"
+    
+    rectangle "DataChannelInstance" as DataChannelInstance #lightgreen {
+    }
+    
+        DataChannelInstance   o--> "1" Model : "stream"
+    
+    rectangle "DataStream" as DataStream #lightgreen {
+    }
+    
+        DataStream   *--> "n" Model : "instances"
+    
+    rectangle "InputChannelInstance" as InputChannelInstance #lightgreen {
+    }
+    
+        InputChannelInstance   o--> "1" Model : "stream"
+    
+    rectangle "OutputChannelInstance" as OutputChannelInstance #lightgreen {
+    }
+    
+        OutputChannelInstance   o--> "1" Model : "stream"
+    
+    rectangle "DataChannelInstance" as DataChannelInstance #lightgreen {
+    }
+    
+        DataChannelInstance   o--> "1" Model : "stream"
+    
+    rectangle "DataStream" as DataStream #lightgreen {
+    }
+    
+        DataStream   *--> "n" Model : "instances"
+    
+    rectangle "InputChannelInstance" as InputChannelInstance #lightgreen {
+    }
+    
+        InputChannelInstance   o--> "1" Model : "stream"
+    
+    rectangle "OutputChannelInstance" as OutputChannelInstance #lightgreen {
+    }
+    
+        OutputChannelInstance   o--> "1" Model : "stream"
+    
+    rectangle "DataChannelInstance" as DataChannelInstance #lightgreen {
+    }
+    
+        DataChannelInstance   o--> "1" Model : "stream"
+    
+    rectangle "DataStream" as DataStream #lightgreen {
+    }
+    
+        DataStream   *--> "n" Model : "instances"
+    
+    rectangle "InputChannelInstance" as InputChannelInstance #lightgreen {
+    }
+    
+        InputChannelInstance   o--> "1" Model : "stream"
+    
+    rectangle "OutputChannelInstance" as OutputChannelInstance #lightgreen {
+    }
+    
+        OutputChannelInstance   o--> "1" Model : "stream"
+    
+    rectangle "DataChannelInstance" as DataChannelInstance #lightgreen {
+    }
+    
+        DataChannelInstance   o--> "1" Model : "stream"
+    
+    rectangle "DataStream" as DataStream #lightgreen {
+    }
+    
+        DataStream   *--> "n" Model : "instances"
+    
+    rectangle "InputChannelInstance" as InputChannelInstance #lightgreen {
+    }
+    
+        InputChannelInstance   o--> "1" Model : "stream"
+    
+    rectangle "OutputChannelInstance" as OutputChannelInstance #lightgreen {
+    }
+    
+        OutputChannelInstance   o--> "1" Model : "stream"
+    
+    rectangle "DataChannelInstance" as DataChannelInstance #lightgreen {
+    }
+    
+        DataChannelInstance   o--> "1" Model : "stream"
+    
+    rectangle "DataStream" as DataStream #lightgreen {
+    }
+    
+        DataStream   *--> "n" Model : "instances"
+    
+    rectangle "InputChannelInstance" as InputChannelInstance #lightgreen {
+    }
+    
+        InputChannelInstance   o--> "1" Model : "stream"
+    
+    rectangle "OutputChannelInstance" as OutputChannelInstance #lightgreen {
+    }
+    
+        OutputChannelInstance   o--> "1" Model : "stream"
+    
+    rectangle "DataChannelInstance" as DataChannelInstance #lightgreen {
+    }
+    
+        DataChannelInstance   o--> "1" Model : "stream"
+    
+    rectangle "DataStream" as DataStream #lightgreen {
+    }
+    
+        DataStream   *--> "n" Model : "instances"
+    
+    rectangle "InputChannelInstance" as InputChannelInstance #lightgreen {
+    }
+    
+        InputChannelInstance   o--> "1" Model : "stream"
+    
+    rectangle "OutputChannelInstance" as OutputChannelInstance #lightgreen {
+    }
+    
+        OutputChannelInstance   o--> "1" Model : "stream"
+    
+    rectangle "DataChannelInstance" as DataChannelInstance #lightgreen {
+    }
+    
+        DataChannelInstance   o--> "1" Model : "stream"
+    
+    rectangle "DataStream" as DataStream #lightgreen {
+    }
+    
+        DataStream   *--> "n" Model : "instances"
+    
+    rectangle "InputChannelInstance" as InputChannelInstance #lightgreen {
+    }
+    
+        InputChannelInstance   o--> "1" Model : "stream"
+    
+    rectangle "OutputChannelInstance" as OutputChannelInstance #lightgreen {
+    }
+    
+        OutputChannelInstance   o--> "1" Model : "stream"
+    
+
+@enduml

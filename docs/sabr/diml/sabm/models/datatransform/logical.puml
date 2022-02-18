@@ -1,0 +1,400 @@
+@startuml
+
+class "DataTransform" as Model {
+ string name
+ json fn
+
+ 
+}
+
+rectangle "DataStream" as DataStream #lightblue {
+}
+
+Model o--> "n" DataStream : inputs
+
+
+rectangle "DataStream" as DataStream #lightblue {
+}
+
+Model o--> "n" DataStream : outputs
+
+
+
+
+    rectangle "DataStream" as DataStream #lightgreen {
+    }
+    
+        DataStream   o--> "n" Model : "transforms"
+    
+    rectangle "InputChannelInstance" as InputChannelInstance #lightgreen {
+    }
+    
+        InputChannelInstance   o--> "n" Model : "transforms"
+    
+    rectangle "StreamPolicy" as StreamPolicy #lightgreen {
+    }
+    
+        StreamPolicy   o--> "1" Model : "post"
+    
+    rectangle "StreamPolicy" as StreamPolicy #lightgreen {
+    }
+    
+        StreamPolicy   o--> "1" Model : "pre"
+    
+    rectangle "SABundle" as SABundle #lightgreen {
+    }
+    
+        SABundle   o--> "n" Model : "transforms"
+    
+    rectangle "DataStream" as DataStream #lightgreen {
+    }
+    
+        DataStream   o--> "n" Model : "transforms"
+    
+    rectangle "InputChannelInstance" as InputChannelInstance #lightgreen {
+    }
+    
+        InputChannelInstance   o--> "n" Model : "transforms"
+    
+    rectangle "StreamPolicy" as StreamPolicy #lightgreen {
+    }
+    
+        StreamPolicy   o--> "1" Model : "post"
+    
+    rectangle "StreamPolicy" as StreamPolicy #lightgreen {
+    }
+    
+        StreamPolicy   o--> "1" Model : "pre"
+    
+    rectangle "SABundle" as SABundle #lightgreen {
+    }
+    
+        SABundle   o--> "n" Model : "transforms"
+    
+    rectangle "DataStream" as DataStream #lightgreen {
+    }
+    
+        DataStream   o--> "n" Model : "transforms"
+    
+    rectangle "InputChannelInstance" as InputChannelInstance #lightgreen {
+    }
+    
+        InputChannelInstance   o--> "n" Model : "transforms"
+    
+    rectangle "StreamPolicy" as StreamPolicy #lightgreen {
+    }
+    
+        StreamPolicy   o--> "1" Model : "post"
+    
+    rectangle "StreamPolicy" as StreamPolicy #lightgreen {
+    }
+    
+        StreamPolicy   o--> "1" Model : "pre"
+    
+    rectangle "SABundle" as SABundle #lightgreen {
+    }
+    
+        SABundle   o--> "n" Model : "transforms"
+    
+    rectangle "DataStream" as DataStream #lightgreen {
+    }
+    
+        DataStream   o--> "n" Model : "transforms"
+    
+    rectangle "InputChannelInstance" as InputChannelInstance #lightgreen {
+    }
+    
+        InputChannelInstance   o--> "n" Model : "transforms"
+    
+    rectangle "StreamPolicy" as StreamPolicy #lightgreen {
+    }
+    
+        StreamPolicy   o--> "1" Model : "post"
+    
+    rectangle "StreamPolicy" as StreamPolicy #lightgreen {
+    }
+    
+        StreamPolicy   o--> "1" Model : "pre"
+    
+    rectangle "SABundle" as SABundle #lightgreen {
+    }
+    
+        SABundle   o--> "n" Model : "transforms"
+    
+    rectangle "DataStream" as DataStream #lightgreen {
+    }
+    
+        DataStream   o--> "n" Model : "transforms"
+    
+    rectangle "InputChannelInstance" as InputChannelInstance #lightgreen {
+    }
+    
+        InputChannelInstance   o--> "n" Model : "transforms"
+    
+    rectangle "StreamPolicy" as StreamPolicy #lightgreen {
+    }
+    
+        StreamPolicy   o--> "1" Model : "post"
+    
+    rectangle "StreamPolicy" as StreamPolicy #lightgreen {
+    }
+    
+        StreamPolicy   o--> "1" Model : "pre"
+    
+    rectangle "SABundle" as SABundle #lightgreen {
+    }
+    
+        SABundle   o--> "n" Model : "transforms"
+    
+    rectangle "DataStream" as DataStream #lightgreen {
+    }
+    
+        DataStream   o--> "n" Model : "transforms"
+    
+    rectangle "InputChannelInstance" as InputChannelInstance #lightgreen {
+    }
+    
+        InputChannelInstance   o--> "n" Model : "transforms"
+    
+    rectangle "StreamPolicy" as StreamPolicy #lightgreen {
+    }
+    
+        StreamPolicy   o--> "1" Model : "post"
+    
+    rectangle "StreamPolicy" as StreamPolicy #lightgreen {
+    }
+    
+        StreamPolicy   o--> "1" Model : "pre"
+    
+    rectangle "SABundle" as SABundle #lightgreen {
+    }
+    
+        SABundle   o--> "n" Model : "transforms"
+    
+    rectangle "DataStream" as DataStream #lightgreen {
+    }
+    
+        DataStream   o--> "n" Model : "transforms"
+    
+    rectangle "InputChannelInstance" as InputChannelInstance #lightgreen {
+    }
+    
+        InputChannelInstance   o--> "n" Model : "transforms"
+    
+    rectangle "StreamPolicy" as StreamPolicy #lightgreen {
+    }
+    
+        StreamPolicy   o--> "1" Model : "post"
+    
+    rectangle "StreamPolicy" as StreamPolicy #lightgreen {
+    }
+    
+        StreamPolicy   o--> "1" Model : "pre"
+    
+    rectangle "SABundle" as SABundle #lightgreen {
+    }
+    
+        SABundle   o--> "n" Model : "transforms"
+    
+    rectangle "DataStream" as DataStream #lightgreen {
+    }
+    
+        DataStream   o--> "n" Model : "transforms"
+    
+    rectangle "InputChannelInstance" as InputChannelInstance #lightgreen {
+    }
+    
+        InputChannelInstance   o--> "n" Model : "transforms"
+    
+    rectangle "StreamPolicy" as StreamPolicy #lightgreen {
+    }
+    
+        StreamPolicy   o--> "1" Model : "post"
+    
+    rectangle "StreamPolicy" as StreamPolicy #lightgreen {
+    }
+    
+        StreamPolicy   o--> "1" Model : "pre"
+    
+    rectangle "SABundle" as SABundle #lightgreen {
+    }
+    
+        SABundle   o--> "n" Model : "transforms"
+    
+    rectangle "DataStream" as DataStream #lightgreen {
+    }
+    
+        DataStream   o--> "n" Model : "transforms"
+    
+    rectangle "InputChannelInstance" as InputChannelInstance #lightgreen {
+    }
+    
+        InputChannelInstance   o--> "n" Model : "transforms"
+    
+    rectangle "StreamPolicy" as StreamPolicy #lightgreen {
+    }
+    
+        StreamPolicy   o--> "1" Model : "post"
+    
+    rectangle "StreamPolicy" as StreamPolicy #lightgreen {
+    }
+    
+        StreamPolicy   o--> "1" Model : "pre"
+    
+    rectangle "SABundle" as SABundle #lightgreen {
+    }
+    
+        SABundle   o--> "n" Model : "transforms"
+    
+    rectangle "DataStream" as DataStream #lightgreen {
+    }
+    
+        DataStream   o--> "n" Model : "transforms"
+    
+    rectangle "InputChannelInstance" as InputChannelInstance #lightgreen {
+    }
+    
+        InputChannelInstance   o--> "n" Model : "transforms"
+    
+    rectangle "StreamPolicy" as StreamPolicy #lightgreen {
+    }
+    
+        StreamPolicy   o--> "1" Model : "post"
+    
+    rectangle "StreamPolicy" as StreamPolicy #lightgreen {
+    }
+    
+        StreamPolicy   o--> "1" Model : "pre"
+    
+    rectangle "SABundle" as SABundle #lightgreen {
+    }
+    
+        SABundle   o--> "n" Model : "transforms"
+    
+    rectangle "DataStream" as DataStream #lightgreen {
+    }
+    
+        DataStream   o--> "n" Model : "transforms"
+    
+    rectangle "InputChannelInstance" as InputChannelInstance #lightgreen {
+    }
+    
+        InputChannelInstance   o--> "n" Model : "transforms"
+    
+    rectangle "StreamPolicy" as StreamPolicy #lightgreen {
+    }
+    
+        StreamPolicy   o--> "1" Model : "post"
+    
+    rectangle "StreamPolicy" as StreamPolicy #lightgreen {
+    }
+    
+        StreamPolicy   o--> "1" Model : "pre"
+    
+    rectangle "SABundle" as SABundle #lightgreen {
+    }
+    
+        SABundle   o--> "n" Model : "transforms"
+    
+    rectangle "DataStream" as DataStream #lightgreen {
+    }
+    
+        DataStream   o--> "n" Model : "transforms"
+    
+    rectangle "InputChannelInstance" as InputChannelInstance #lightgreen {
+    }
+    
+        InputChannelInstance   o--> "n" Model : "transforms"
+    
+    rectangle "StreamPolicy" as StreamPolicy #lightgreen {
+    }
+    
+        StreamPolicy   o--> "1" Model : "post"
+    
+    rectangle "StreamPolicy" as StreamPolicy #lightgreen {
+    }
+    
+        StreamPolicy   o--> "1" Model : "pre"
+    
+    rectangle "SABundle" as SABundle #lightgreen {
+    }
+    
+        SABundle   o--> "n" Model : "transforms"
+    
+    rectangle "DataStream" as DataStream #lightgreen {
+    }
+    
+        DataStream   o--> "n" Model : "transforms"
+    
+    rectangle "InputChannelInstance" as InputChannelInstance #lightgreen {
+    }
+    
+        InputChannelInstance   o--> "n" Model : "transforms"
+    
+    rectangle "StreamPolicy" as StreamPolicy #lightgreen {
+    }
+    
+        StreamPolicy   o--> "1" Model : "post"
+    
+    rectangle "StreamPolicy" as StreamPolicy #lightgreen {
+    }
+    
+        StreamPolicy   o--> "1" Model : "pre"
+    
+    rectangle "SABundle" as SABundle #lightgreen {
+    }
+    
+        SABundle   o--> "n" Model : "transforms"
+    
+    rectangle "DataStream" as DataStream #lightgreen {
+    }
+    
+        DataStream   o--> "n" Model : "transforms"
+    
+    rectangle "InputChannelInstance" as InputChannelInstance #lightgreen {
+    }
+    
+        InputChannelInstance   o--> "n" Model : "transforms"
+    
+    rectangle "StreamPolicy" as StreamPolicy #lightgreen {
+    }
+    
+        StreamPolicy   o--> "1" Model : "post"
+    
+    rectangle "StreamPolicy" as StreamPolicy #lightgreen {
+    }
+    
+        StreamPolicy   o--> "1" Model : "pre"
+    
+    rectangle "SABundle" as SABundle #lightgreen {
+    }
+    
+        SABundle   o--> "n" Model : "transforms"
+    
+    rectangle "DataStream" as DataStream #lightgreen {
+    }
+    
+        DataStream   o--> "n" Model : "transforms"
+    
+    rectangle "InputChannelInstance" as InputChannelInstance #lightgreen {
+    }
+    
+        InputChannelInstance   o--> "n" Model : "transforms"
+    
+    rectangle "StreamPolicy" as StreamPolicy #lightgreen {
+    }
+    
+        StreamPolicy   o--> "1" Model : "post"
+    
+    rectangle "StreamPolicy" as StreamPolicy #lightgreen {
+    }
+    
+        StreamPolicy   o--> "1" Model : "pre"
+    
+    rectangle "SABundle" as SABundle #lightgreen {
+    }
+    
+        SABundle   o--> "n" Model : "transforms"
+    
+
+@enduml

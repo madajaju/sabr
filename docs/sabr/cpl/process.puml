@@ -1,0 +1,18 @@
+@startuml
+left to right direction
+
+
+state "cpl" as cpl #lightgray {
+}
+
+
+state cpl #lightgray {
+    state "Custom Function" as cplfunction {
+    }
+}
+
+
+
+
+
+@enduml

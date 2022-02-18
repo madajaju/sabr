@@ -1,0 +1,133 @@
+@startuml
+left to right direction
+
+
+
+state "DevOpsEngineer" as DevOpsEngineer {
+    state "Deploy Capability" as DevOpsEngineerDeployCapability {
+    }
+}
+state "sabr" as sabr #00aaff {
+state "aml" as sabraml #00aaff {
+state "cm" as sabramlcm #00aaff {
+state "data" as sabramlcmdata #00aaff {
+state "govern" as sabramlcmdatagovern #00aaff {
+}
+}
+}
+}
+}
+
+DevOpsEngineerDeployCapability --> sabramlcmdatagovern
+
+
+    state "DevOpsEngineer" as DevOpsEngineer {
+        state "Deploy Capability" as DevOpsEngineerDeployCapability {
+            state "Deploy Capability Release" as DevOpsEngineerDeployCapabilityDeployCapabilityRelease {
+            }
+        }
+    }
+    
+    DevOpsEngineerDeployCapabilityDeployCapabilityRelease --> Null
+    
+ 
+ 
+state "Software Developer" as SoftwareDeveloper {
+    state "Develop Capability" as SoftwareDeveloperDevelopCapability {
+    }
+}
+state "sabr" as sabr #00aaff {
+state "aml" as sabraml #00aaff {
+state "cm" as sabramlcm #00aaff {
+state "capability" as sabramlcmcapability #00aaff {
+state "list" as sabramlcmcapabilitylist #00aaff {
+}
+}
+}
+}
+}
+
+SoftwareDeveloperDevelopCapability --> sabramlcmcapabilitylist
+
+
+    state "DevOpsEngineer" as DevOpsEngineer {
+        state "Develop Capability" as DevOpsEngineerDevelopCapability {
+            state "Build Capability" as DevOpsEngineerDevelopCapabilityBuildCapability {
+            }
+        }
+    }
+    
+    DevOpsEngineerDevelopCapabilityBuildCapability --> Null
+    
+ 
+    state "DevOpsEngineer" as DevOpsEngineer {
+        state "Develop Capability" as DevOpsEngineerDevelopCapability {
+            state "Create Capability" as DevOpsEngineerDevelopCapabilityCreateCapability {
+            }
+        }
+    }
+    
+    DevOpsEngineerDevelopCapabilityCreateCapability --> Null
+    
+ 
+    state "DevOpsEngineer" as DevOpsEngineer {
+        state "Develop Capability" as DevOpsEngineerDevelopCapability {
+            state "Release Capability" as DevOpsEngineerDevelopCapabilityReleaseCapability {
+            }
+        }
+    }
+    
+    DevOpsEngineerDevelopCapabilityReleaseCapability --> Null
+    
+ 
+    state "DevOpsEngineer" as DevOpsEngineer {
+        state "Develop Capability" as DevOpsEngineerDevelopCapability {
+            state "Test Capability" as DevOpsEngineerDevelopCapabilityTestCapability {
+            }
+        }
+    }
+    
+    DevOpsEngineerDevelopCapabilityTestCapability --> Null
+    
+ 
+ 
+state "DevOpsEngineer" as DevOpsEngineer {
+    state "Remove Capbility" as DevOpsEngineerRemoveCapbility {
+    }
+}
+state "sabr" as sabr #00aaff {
+state "aml" as sabraml #00aaff {
+state "cm" as sabramlcm #00aaff {
+state "data" as sabramlcmdata #00aaff {
+state "govern" as sabramlcmdatagovern #00aaff {
+}
+}
+}
+}
+}
+
+DevOpsEngineerRemoveCapbility --> sabramlcmdatagovern
+
+
+ 
+state "DevOpsEngineer" as DevOpsEngineer {
+    state "Update Capbility" as DevOpsEngineerUpdateCapbility {
+    }
+}
+state "sabr" as sabr #00aaff {
+state "aml" as sabraml #00aaff {
+state "cm" as sabramlcm #00aaff {
+state "data" as sabramlcmdata #00aaff {
+state "govern" as sabramlcmdatagovern #00aaff {
+}
+}
+}
+}
+}
+
+DevOpsEngineerUpdateCapbility --> sabramlcmdatagovern
+
+
+ 
+
+@enduml

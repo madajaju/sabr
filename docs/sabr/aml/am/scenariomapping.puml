@@ -1,0 +1,73 @@
+@startuml
+left to right direction
+
+
+
+state "DevOpsEngineer" as DevOpsEngineer {
+    state "Manage Application" as DevOpsEngineerManageApplication {
+    }
+}
+state "sabr" as sabr #00aaff {
+state "aml" as sabraml #00aaff {
+state "am" as sabramlam #00aaff {
+state "data" as sabramlamdata #00aaff {
+state "govern" as sabramlamdatagovern #00aaff {
+}
+}
+}
+}
+}
+
+DevOpsEngineerManageApplication --> sabramlamdatagovern
+
+state "SoftwareDeveloper" as SoftwareDeveloper {
+    state "Manage Application" as SoftwareDeveloperManageApplication {
+    }
+}
+state "sabr" as sabr #00aaff {
+state "aml" as sabraml #00aaff {
+state "am" as sabramlam #00aaff {
+state "data" as sabramlamdata #00aaff {
+state "govern" as sabramlamdatagovern #00aaff {
+}
+}
+}
+}
+}
+
+SoftwareDeveloperManageApplication --> sabramlamdatagovern
+
+
+    state "SoftwareDeveloper" as SoftwareDeveloper {
+        state "Manage Application" as SoftwareDeveloperManageApplication {
+            state "Create Application" as SoftwareDeveloperManageApplicationCreateApplication {
+            }
+        }
+    }
+    
+    SoftwareDeveloperManageApplicationCreateApplication --> Null
+    
+ 
+    state "DevOpsEngineer" as DevOpsEngineer {
+        state "Manage Application" as DevOpsEngineerManageApplication {
+            state "Destroy Application" as DevOpsEngineerManageApplicationDestroyApplication {
+            }
+        }
+    }
+    
+    DevOpsEngineerManageApplicationDestroyApplication --> Null
+    
+ 
+    state "DevOpsEngineer" as DevOpsEngineer {
+        state "Manage Application" as DevOpsEngineerManageApplication {
+            state "Update Application" as DevOpsEngineerManageApplicationUpdateApplication {
+            }
+        }
+    }
+    
+    DevOpsEngineerManageApplicationUpdateApplication --> Null
+    
+ 
+ 
+
+@enduml

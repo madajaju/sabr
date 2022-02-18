@@ -1,0 +1,52 @@
+@startuml
+left to right direction
+
+
+
+
+state "sentient agent bundle resources" #bbaaff {
+    state "Custom Function" as sabrfunction {
+    }
+}
+
+        state "aimodel" as aimodel #bbaaff {
+state "list" as aimodellist #bbaaff {
+}
+}
+
+
+        state "application" as application #bbaaff {
+state "list" as applicationlist #bbaaff {
+}
+}
+
+
+        state "capability" as capability #bbaaff {
+state "list" as capabilitylist #bbaaff {
+}
+}
+
+
+        state "pulsar" as pulsar #bbaaff {
+state "streams" as pulsarstreams #bbaaff {
+}
+}
+
+
+        state "pulsar" as pulsar #bbaaff {
+state "topic" as pulsartopic #bbaaff {
+}
+}
+
+
+        state "pulsar" as pulsar #bbaaff {
+state "topics" as pulsartopics #bbaaff {
+}
+}
+
+
+
+
+
+
+@enduml

@@ -43,6 +43,7 @@ export default class APackage {
         }
         box.aid = node.id;
         box.expandLink = `package/get?id=${node.id}`;
+        box.expandView= APackage.viewDeep3D;
         node.box = 150;
         return box;
 
@@ -59,6 +60,8 @@ export default class APackage {
                 textSize: 10,
                 color: spkg.color,
                 view: APackage.view3D,
+                expandView: APackage.viewDeep3D,
+                expandLink: `package/get?id=${pname}`
             }
             data.nodes[pname] = node;
             for(let i in spkg.depends) {
@@ -107,9 +110,9 @@ export default class APackage {
         let package3d = {x: xfactor * 150 + 50, y: yfactor * 150 + 50, z: zfactor * 150 + 50};
         let bbox = {
             parent: pkg.shortname,
-            x: {min: -package3d.x / 2 + 50, max: package3d.x / 2 - 50},
-            y: {min: -package3d.y / 2 + 50, max: package3d.y / 2 - 50},
-            z: {min: -package3d.z / 2 + 50, max: package3d.z / 2 - 50}
+            x: {min: (-package3d.x / 2) + 30, max: (package3d.x / 2) - 30},
+            y: {min: (-package3d.y / 2) + 30, max: (package3d.y / 2) - 30},
+            z: {min: (-package3d.z / 2) + 30, max: (package3d.z / 2) - 30}
         }
         // package3d.x = package3d.x / 2;
         // package3d.y = package3d.y / 2;
@@ -120,7 +123,12 @@ export default class APackage {
             name: pkg.name,
             cube: package3d,
             textSize: 30,
+            fx: 0,
+            fy: 0,
+            fz: 0,
             view: APackage.view3D,
+            expandView: APackage.viewDeep3D,
+            expandLink: `package/get?id=${pkg.shortname}`,
             opacity: 0.5,
             color: pkg.color
         };
@@ -134,7 +142,7 @@ export default class APackage {
                 rbox: { parent: pkg.shortname,
                     x: bbox.x,
                     z: bbox.z,
-                    y: {min: bbox.y.max + 95, max: bbox.y.max + 95}
+                    y: {min: bbox.y.max + 50, max: bbox.y.max + 50}
                 },
                 view: interface3DView
             };
@@ -146,7 +154,7 @@ export default class APackage {
                 id: hname,
                 name: handler.name,
                 rbox: { parent: pkg.shortname, y: bbox.y, z: bbox.z,
-                    x: {min: bbox.x.max + 80, max: bbox.x.max + 80}
+                    x: {min: bbox.x.max + 50, max: bbox.x.max + 50}
                 },
                 view: handler3DView
             };
@@ -170,9 +178,11 @@ export default class APackage {
             let node = {
                 id: uname, name: uc.name,
                 rbox: { parent: pkg.shortname, x: bbox.x, y: bbox.y,
-                    z: {min: bbox.z.max + 60, max: bbox.z.max + 60}
+                    z: {min: bbox.z.max + 50, max: bbox.z.max + 50}
                 },
-                view: AUsecase.view3D
+                view: AUsecase.view3D,
+                expandView: AUsecase.viewDeep3D,
+                expandLink: `usecase/get?id=${uname}`,
             }
             data.nodes[uname] = node;
             if (uc.method) {
@@ -190,10 +200,12 @@ export default class APackage {
             let cls = pkg.classes[cname];
             let node = {id: cname, name: cls.name,
                 rbox: { parent: pkg.shortname, x: bbox.x, y: bbox.y,
-                    z: {min: bbox.z.min - 70, max: bbox.z.min - 70}
+                    z: {min: bbox.z.min - 50, max: bbox.z.min - 50}
                 },
                 rotate: {y: 2*theta},
-                view: AModel.view3D
+                view: AModel.view3D,
+                expandView: AModel.viewDeep3D,
+                expandLink: `model/get?id=${cname}`,
             }
             data.nodes[cname] = node;
         }
@@ -206,9 +218,11 @@ export default class APackage {
                 rotate: {x: theta},
                 textSize: 15,
                 rbox: { parent: pkg.shortname, x: bbox.x, z: bbox.z,
-                    y: {min: bbox.y.min - 70, max: bbox.y.min - 70}},
+                    y: {min: bbox.y.min - 50, max: bbox.y.min - 50}},
                 color: spkg.color,
                 view: APackage.view3D,
+                expandView: APackage.viewDeep3D,
+                expandLink: `package/get?id=${pname}`,
             }
             data.nodes[pname] = node;
 
@@ -223,12 +237,14 @@ export default class APackage {
                 id: pname,
                 name: spkg.name,
                 rbox: { parent: pkg.shortname, y: bbox.y, z: bbox.z,
-                    x: {min: bbox.x.min - 100, max: bbox.x.min - 100}
+                    x: {min: bbox.x.min - 80, max: bbox.x.min - 80}
                 },
                 textSize: 30,
                 color: spkg.color,
                 rotate: {y: -theta},
-                view: APackage.view3D
+                view: APackage.view3D,
+                expandView: APackage.viewDeep3D,
+                expandLink: `package/get?id=${pname}`
             }
             data.nodes[pname] = node;
             data.links.push({source: pkg.shortname, target: pname, value: 0.1, color: 'rgba(255,255,255,1)', width: 5});
@@ -244,6 +260,69 @@ export default class APackage {
             3000  // ms transition duration.
         );
         window.graph.showLinks();
+
+        window.graph.toolbar.setToolBar( [
+            { type: 'button',  id: 'classes',  text: 'Classes', img: 'w2ui-icon-search',
+                callback: (event) => {
+                    window.graph.graph.cameraPosition(
+                        {x: 0, y: -0, z: -1000}, // new position
+                        {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
+                        1000
+                    );
+                    setTimeout(() => { window.graph.graph.zoomToFit(1000)},500);
+                }
+            },
+            { type: 'button',  id: 'subpackage',  text: 'Sub Packages', img: 'w2ui-icon-search',
+                callback: (event) => {
+                    window.graph.graph.cameraPosition(
+                        {x: 0, y: -1000, z: 0}, // new position
+                        {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
+                        1000
+                    );
+                    setTimeout(() => { window.graph.graph.zoomToFit(1000)},500);
+                }
+            },
+            { type: 'button',  id: 'interface',  text: 'Interface', img: 'w2ui-icon-search',
+                callback: (event) => {
+                    window.graph.graph.cameraPosition(
+                        {x: 0, y: 1000, z: 0}, // new position
+                        {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
+                        1000
+                    );
+                    setTimeout(() => { window.graph.graph.zoomToFit(1000)},500);
+                }
+            },
+            { type: 'button',  id: 'handlers',  text: 'Handlers', img: 'w2ui-icon-search',
+                callback: (event) => {
+                    window.graph.graph.cameraPosition(
+                        {x: 1000, y: 0, z: 0}, // new position
+                        {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
+                        1000
+                    );
+                    setTimeout(() => { window.graph.graph.zoomToFit(1000)},500);
+                }
+            },
+            { type: 'button',  id: 'usecases',  text: 'UseCases', img: 'w2ui-icon-search',
+                callback: (event) => {
+                    window.graph.graph.cameraPosition(
+                        {x: 0, y: 0, z: 1000}, // new position
+                        {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
+                        1000
+                    );
+                    setTimeout(() => { window.graph.graph.zoomToFit(1000)},500);
+                }
+            },
+            { type: 'button',  id: 'dependents',  text: 'Dependents', img: 'w2ui-icon-search',
+                callback: (event) => {
+                    window.graph.graph.cameraPosition(
+                        {x: -1000, y: 0, z: 0}, // new position
+                        {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
+                        1000
+                    );
+                    setTimeout(() => { window.graph.graph.zoomToFit(1000)},500);
+                }
+            },
+        ]);
     }
 
     handle(result) {

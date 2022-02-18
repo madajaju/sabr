@@ -1,0 +1,18 @@
+@startuml
+left to right direction
+
+
+state "sdi" as sdi #lightyellow {
+}
+
+
+state sdi #lightyellow {
+    state "Custom Function" as sdifunction {
+    }
+}
+
+
+
+
+
+@enduml

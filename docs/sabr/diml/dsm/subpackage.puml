@@ -1,0 +1,37 @@
+@startuml
+
+
+package "Application Manager" #00aaff {
+
+}
+
+package "Data Stream Manager" #ffcc88 {
+
+}
+
+package "Sentient Agent Bundle Manager" #ffcc88 {
+
+}
+
+
+package "Data Stream Manager" #ffcc88 {
+
+    interface "Data Stream Manager" as i {
+            /sabr/diml/dsm/channel/deployed()
+            /sabr/diml/dsm/stream/deployed()
+    
+    }
+}
+
+CLI ()-- i
+REST ()-- i
+Web ()-- i
+
+package "Data Stream Manager" #ffcc88 {
+
+
+}
+
+
+
+@enduml

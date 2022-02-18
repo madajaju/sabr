@@ -1,0 +1,24 @@
+@startuml
+
+
+usecase "Remove Capbility" as RemoveCapbility #yellow
+
+Actor "DevOps Engineer" as DevOpsEngineer
+
+DevOpsEngineer --> RemoveCapbility
+
+
+
+
+
+usecase "0" as 0 #lightyellow
+
+RemoveCapbility <-- 0 : extends
+
+
+
+
+
+
+
+@enduml

@@ -1,0 +1,46 @@
+@startuml
+  interface CLI
+  interface Web
+  interface WebSocket
+package "Sentient Agent Bundle Manager" #ffcc88 {
+  component express as REST
+  component socket.io as socket
+  folder bin #ffffff {
+    component " sabr diml sabm" as binName
+  }
+  binName --> REST
+
+  folder deploy #ffffff {
+      file "node server.js\ndocker-compose.yml" as _sabm_container
+      REST --> _sabm_container
+
+  
+    file "web" as web_container
+    REST --> web_container
+    socket ---> web_container
+  
+    file "gateway" as gateway_container
+    REST --> gateway_container
+    socket ---> gateway_container
+  
+  }
+  folder images #ffffff {
+    collections "_sabm" as _sabmimage
+    artifact "ailtire:swarm" as ailtireswarm
+    _sabmimage <|-- ailtireswarm
+    _sabm_container --> _sabmimage
+
+  
+      artifact _sabm_web
+      web_container --> _sabm_web
+    
+      artifact _sabm_gw
+      gateway_container --> _sabm_gw
+    
+  }
+}
+CLI " sabr diml sabm" -- binName
+Web "/sabr/diml/sabm" - REST
+WebSocket ".sabr.diml.sabm" -- socket
+
+@enduml

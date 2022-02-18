@@ -1,4 +1,4 @@
-import { AText, AStack, AService } from './index.js';
+import {AText, AStack, AService, APackage, AActor, AInterface} from './index.js';
 
 export default class AEnvironment {
     constructor(config) {
@@ -14,42 +14,53 @@ export default class AEnvironment {
         } else if (type === 'Sourced') {
             color = "green";
         }
-        let geo = new THREE.SphereGeometry(20, 16, 12);
+        let geo = new THREE.BoxGeometry(100, 50, 20);
         const material = new THREE.MeshPhongMaterial({color: color, opacity: 1});
-        const item1 = new THREE.Mesh(geo, material);
-        let geo2 = new THREE.CylinderGeometry(5, 5, 30);
-        const material2 = new THREE.MeshPhongMaterial({color: color, opacity: 1});
-        const item2 = new THREE.Mesh(geo2, material2);
-        item2.position.set(0, -30, 0);
-        const group = new THREE.Group();
-        group.add(item1);
-        group.add(item2);
-        group.position.set(node.x, node.y, node.z);
+        const retval = new THREE.Mesh(geo, material);
+        retval.position.set(node.x, node.y, node.z);
         let name = node.name;
         name.replace('/','');
         let label = AText.view3D({text:name.replace(/\//g, '\n'), color:"#ffffff", width: 50, size: 16});
-        label.applyMatrix4(new THREE.Matrix4().makeRotationX(-3.14/2));
-        label.position.set(0,20+1,-20);
-        group.add(label)
-        group.aid = node.id;
+        label.position.set(0,0,11);
+        retval.add(label)
+        retval.aid = node.id;
         if (node.rotate) {
             if (node.rotate.x) {
-                group.applyMatrix4(new THREE.Matrix4().makeRotationX(node.rotate.x));
+                retval.applyMatrix4(new THREE.Matrix4().makeRotationX(node.rotate.x));
             }
             if (node.rotate.y) {
-                group.applyMatrix4(new THREE.Matrix4().makeRotationY(node.rotate.y));
+                retval.applyMatrix4(new THREE.Matrix4().makeRotationY(node.rotate.y));
             }
             if (node.rotate.z) {
-                group.applyMatrix4(new THREE.Matrix4().makeRotationZ(node.rotate.z));
+                retval.applyMatrix4(new THREE.Matrix4().makeRotationZ(node.rotate.z));
             }
         }
-        group.aid = node.id;
-        node.box = 40;
-        // node.expandLink = `actor/get?id=${node.id}`;
+        node.box = 50;
+        node.expandLink = `environment/get?id=${node.id}`;
+        node.expandView = AEnvironment.viewDeep3D;
 
-        return group;
+        return retval;
     }
+    static viewList3D(objs) {
+        let data = {nodes: {}, links: []};
 
+        window.graph.clearObjects();
+        const theta = 3.14 / 2;
+        for (let ename in objs) {
+            let env = objs[ename];
+            env.id = ename;
+            data.nodes[env.id] = {
+                id: env.id,
+                name: env.id,
+                view: AEnvironment.view3D,
+                expandView: AEnvironment.viewDeep3D,
+                expandLink: `environment/get?id=${env.id}`
+            };
+        }
+
+        window.graph.setData(data.nodes, data.links);
+        window.graph.showLinks();
+    }
     static viewDeep3D(obj, mode ) {
         let data = {nodes:{}, links: []};
         console.log(obj);
@@ -59,8 +70,9 @@ export default class AEnvironment {
                 id: sname,
                 name: sname,
                 view: AStack.view3D,
+                expandView: AStack.viewDeep3D,
+                expandLink: `deployment/get?id=${sname}`,
                 group: "deployment",
-                expandLink: "deployment/get?id=${sname}"
             }
         }
         for(let sname in obj.stacks) {
@@ -76,7 +88,9 @@ export default class AEnvironment {
                     data.nodes[extendedName] = {
                         id: extendedName,
                         name: srname,
-                        view: AService.view3D
+                        view: AService.view3D,
+                        expandView: AService.viewDeep3D,
+                        expandLink: `service/get?id=${extendedName}`,
                     }
                 }
                 data.links.push({target: extendedName, source: sname, value: 30});

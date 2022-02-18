@@ -44,8 +44,8 @@ export default class ANetwork {
         }
         group.aid = node.id;
         node.box = 50;
-        // node.expandLink = `actor/get?id=${node.id}`;
-
+        node.expandLink = `actor/get?id=${node.id}`;
+        node.expandView = ANetwork.viewDeep3D;
         return group;
     }
 

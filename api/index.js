@@ -2,8 +2,9 @@
 module.exports = {
     name: 'Sentient Agent Bundle Resources',
     shortname: 'sabr',
-    description: 'Description needs to be written',
-    color: '#7700ff',
+    description: 'SABR is a system architecture that enables data transformation through deployment and managment AI' +
+        ' algorightms in the data center, cloud and at the semi-connected edge.',
+    color: '#bbaaff',
     routes: {
     },
     listenPort: 8080

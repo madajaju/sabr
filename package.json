@@ -5,19 +5,21 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
+    "build": "ailtire app build --env local --repo madajaju",
+    "install": "ailtire app install --env local --repo madajaju",
     "test": "npm run lint && npm run custom-tests && echo 'Done.'",
     "doc": "ailtire app docs",
     "lint": "eslint . --max-warnings=0 --report-unused-disable-directives && echo '✔  Your .js files look good.'",
     "custom-tests": "mocha ./test/**/*.test.js",
-    "design": "java -jar docs/plantuml.jar -tpng -nbthread auto -checkmetadata -duration docs/*.puml docs/**/*.puml",
+    "design": "java -jar docs/plantuml.jar -tsvg -nbthread auto -checkmetadata -duration docs/*.puml docs/**/*.puml",
     "build-doc": "npm run design && node ./deploy/build-doc --keep"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "ailtire": "^0.2.20",
+    "ailtire": "latest",
     "csv-parse": "^4.16.3",
-    "pulsar-flex": "^1.0.1-beta.4"
+    "pulsar-flex": "^1.0.1-beta.9"
   }
 }

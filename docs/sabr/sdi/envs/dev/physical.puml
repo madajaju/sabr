@@ -1,0 +1,46 @@
+@startuml
+  interface CLI
+  interface Web
+  interface WebSocket
+package "Software Defined Infrastructure" #lightyellow {
+  component express as REST
+  component socket.io as socket
+  folder bin #ffffff {
+    component " sabr sdi" as binName
+  }
+  binName --> REST
+
+  folder deploy #ffffff {
+      file "node server.js\ndocker-compose.yml" as _sdi_container
+      REST --> _sdi_container
+
+  
+    file "web" as web_container
+    REST --> web_container
+    socket ---> web_container
+  
+    file "gateway" as gateway_container
+    REST --> gateway_container
+    socket ---> gateway_container
+  
+  }
+  folder images #ffffff {
+    collections "_sdi" as _sdiimage
+    artifact "ailtire:swarm" as ailtireswarm
+    _sdiimage <|-- ailtireswarm
+    _sdi_container --> _sdiimage
+
+  
+      artifact _sdi_web
+      web_container --> _sdi_web
+    
+      artifact _sdi_gw
+      gateway_container --> _sdi_gw
+    
+  }
+}
+CLI " sabr sdi" -- binName
+Web "/sabr/sdi" - REST
+WebSocket ".sabr.sdi" -- socket
+
+@enduml

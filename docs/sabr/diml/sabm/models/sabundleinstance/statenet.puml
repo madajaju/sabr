@@ -1,0 +1,55 @@
+@startuml
+
+
+
+state SABundleInstance #ffcc88 {
+
+    state Init #ffcc88 {
+    }
+
+    state Created #ffcc88 {
+    }
+
+    state Deploying #ffcc88 {
+    }
+
+    state Running #ffcc88 {
+    }
+
+    state Enabled #ffcc88 {
+    }
+
+    state Disabled #ffcc88 {
+    }
+
+}
+
+
+Init --> Created : create
+
+Created --> Deploying : deploy
+
+Created --> Deploying : deploying
+
+Deploying --> Enabled : deployed
+
+Deploying --> Running : running
+
+Running --> Enabled : enable
+
+Running --> Disabled : disable
+
+Enabled --> Disabled : disable
+
+Disabled --> Enabled : enable
+
+
+
+ 
+ Created -[#black]--> Null
+ 
+ 
+ Enabled -[#black]--> Null
+ 
+
+@enduml

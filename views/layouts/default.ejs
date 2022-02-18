@@ -50,7 +50,7 @@
 <div id="main" style="position: absolute; width: 100%; height: 100%; overflow: hidden;"></div>
 <script type="module">
 
-    import {APackage, AScenario, AUsecase, AActor, AModel, AStack, AEnvironment} from './js/ailtire/index.js';
+    import {APackage, AScenario, AUsecase, AActor, AModel, AStack, AEnvironment,AObject,A3DGraph} from './js/ailtire/index.js';
     import {SChannel, SStream} from './js/sabr/index.js';
     let pkgview = new APackage({});
     let scenarioview = new AScenario({});
@@ -608,103 +608,6 @@
             success: processObjectShow
         });
     }
-
-    function addObject(obj) {
-        // Add the object to the list
-        let ritem = {recid: obj._attributes.id};
-        let columns = w2ui['objlist'].columns;
-        for (let i in obj.definition.attributes) {
-            if (obj._attributes.hasOwnProperty(i)) {
-                ritem[i] = obj._attributes[i];
-                ritem[i + 'detail'] = obj._attributes[i];
-            }
-        }
-        for (let i in obj.definition.associations) {
-            if (obj._associations.hasOwnProperty(i)) {
-                let assocValue = obj._associations[i];
-                let assoc = obj.definition.associations[i];
-                if (assoc.cardinality === 1) {
-                    ritem[i] = assocValue._attributes.name;
-                    ritem[i + 'detail'] = `<span onclick="expandObject('${assocValue.type}?id=${assocValue._attributes.id}');">${assocValue._attributes.name}</spana>`;
-                } else {
-                    ritem[i] = assocValue.length;
-                    let values = [];
-                    for (let j in assocValue) {
-                        let aValue = assocValue[j];
-                        values.push(`<span onclick="expandObject('${aValue.type}?id=${aValue._attributes.id}');">${aValue._attributes.name}</spana>`);
-                    }
-                    ritem[i + 'detail'] = values.join('|');
-                }
-            }
-        }
-        w2ui['objlist'].add([ritem]);
-        // Add the object to the graph
-        let data = {nodes: {}, links: []};
-        data.nodes[obj._attributes.id] = {
-            id: obj._attributes.id,
-            name: obj._attributes.name,
-            group: obj.definition.name,
-            level: obj.definition.package.shortname,
-            view: obj.definition.name + '3D'
-        }
-        // Now add the nodes of the associations
-        // Go through the cols and get the associations
-        for (let i in obj.definition.associations) {
-            if (obj._associations.hasOwnProperty(i)) {
-                let aobj = obj._associations[i];
-                let assoc = obj.definition.associations[i];
-                if (assoc.cardinality === 1) {
-                    data.nodes[aobj._attributes.id] = {
-                        id: aobj._attributes.id,
-                        name: aobj._attributes.name,
-                        group: aobj.definition.name,
-                        level: aobj.definition.package.shortname,
-                        view: aobj.definition.name + '3D'
-                    };
-                    if (assoc.owner || assoc.composite) {
-                        data.links.push({
-                            source: obj._attributes.id,
-                            target: aobj._attributes.id,
-                            value: 0.1
-                        });
-                    } else {
-                        data.links.push({
-                            target: obj._attributes.id,
-                            source: aobj._attributes.id,
-                            value: 0.1
-                        });
-                    }
-                } else {
-                    let values = [];
-                    for (let j in aobj) {
-                        let aaobj = aobj[j];
-                        data.nodes[aaobj._attributes.id] = {
-                            id: aaobj._attributes.id,
-                            name: aaobj._attributes.name,
-                            group: aaobj.definition.name,
-                            level: aaobj.definition.package.shortname,
-                            view: aaobj.definition.name + '3D'
-                        };
-                        if (assoc.owner || assoc.composite) {
-                            data.links.push({
-                                source: obj._attributes.id,
-                                target: aaobj._attributes.id,
-                                value: 5
-                            });
-                        } else {
-                            data.links.push({
-                                target: obj._attributes.id,
-                                source: aaobj._attributes.id,
-                                value: 5
-                            });
-                        }
-                    }
-                }
-            }
-        }
-        window.graph.addData(data.nodes, data.links);
-    }
-
     function showObjectList() {
         $('#objlist').w2grid({name: 'objlist'});
         w2ui['objlist'].onClick = function (event) {
@@ -841,10 +744,6 @@
                     style: 'border: 1px solid #aaaaff',
                     toolbar: {
                         items: [
-                            {type: 'radio', id: 'Dim-1', group: '1', text: '1D', checked: false},
-                            {type: 'radio', id: 'Dim-2', group: '1', text: '2D', checked: false},
-                            {type: 'radio', id: 'Dim-3', group: '1', text: '3D', checked: true},
-                            {type: 'break'},
                             {
                                 type: 'menu-radio', id: 'dago', title: 'DAG: Select', img: 'icon-folder',
                                 text: function (item) {
@@ -867,31 +766,32 @@
                                     {text: 'Radial Out', icon: 'icon-page', id: 'radialout'},
                                     {text: 'Radial In', icon: 'icon-page', id: 'radialin'},
                                     {text: 'Null', id: 'null', icon: 'icon-page'}
-                                ]
+                                ],
+                                callback: (event) => {
+                                    let [item, selected] = event.target.split(':');
+                                    if (selected) {
+                                        window.graph.graph.dagMode(selected);
+                                    }
+                                }
                             },
                             {type: 'break'},
+                            { type: 'button',  id: 'fitAll',  text: 'Fit To Screen', img: 'w2ui-icon-reload',
+                                callback: (event) => {
+                                    window.graph.graph.zoomToFit(1000);
+                                    window.graph.graph.cameraPosition(
+                                        {x: 0, y: 0, z: 1000}, // new position
+                                        {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
+                                        1000
+                                    );
+                                }
+                            },
                         ],
                         onClick: function (event) {
                             let [item, selected] = event.target.split(':');
-                            if (item === 'dago') {
-                                if (selected) {
-                                    window.graph.graph.dagMode(selected);
+                            for(let i in this.items) {
+                                if(item === this.items[i].id) {
+                                   this.items[i].callback(event);
                                 }
-                            } else if (event.target.includes('Dim-')) {
-                                let [item, selected] = event.target.split('-');
-                                window.graph.graph.numDimensions(selected);
-                            } else if (event.target === 'expand') {
-                                w2ui['layout'].toggle('right');
-                                w2ui['layout'].toggle('left');
-                                w2ui['layout'].toggle('bottom');
-                                w2ui['layout'].toggle('main')
-                                w2ui['layout'].sizeTo('preview', "100%");
-                            } else if (event.target === 'normal') {
-                                w2ui['layout'].toggle('right');
-                                w2ui['layout'].toggle('left');
-                                w2ui['layout'].toggle('bottom');
-                                w2ui['layout'].toggle('main');
-                                w2ui['layout'].sizeTo('preview', "80%");
                             }
                         }
                     }
@@ -929,6 +829,7 @@
             ],
             onExpand: (event) => {
                 if (event.object.id === 'packages') {
+                    window.graph.toolbar.setToolBar();
                     $.ajax({
                         url: 'package/list',
                         success: APackage.viewSubPackage3D,
@@ -937,6 +838,7 @@
                         }
                     })
                 } else if (event.object.id === 'actors') {
+                    window.graph.toolbar.setToolBar();
                     $.ajax({
                         url: 'actor/list',
                         success: AActor.viewList3D,
@@ -945,6 +847,7 @@
                         }
                     })
                 } else if (event.object.id === 'usecases') {
+                    window.graph.toolbar.setToolBar();
                     $.ajax({
                         url: 'usecase/list',
                         success: AUsecase.viewList3D,
@@ -953,11 +856,22 @@
                         }
                     })
                 } else if (event.object.id === 'pulsar') {
+                    window.graph.toolbar.setToolBar();
                     SStream.getAll({fn: (streams) => { SStream.showAllGraph(streams, "new"); }});
+                } else if (event.object.id === 'deployments') {
+                    window.graph.toolbar.setToolBar();
+                    $.ajax({
+                        url: 'environment/list',
+                        success: (results) => { AEnvironment.viewList3D(results.environments); },
+                        error: function(req, text,err) {
+                            console.log(text);
+                        }
+                    })
                 }
             },
             onCollapse: (event) => {
                 if (event.object.id === 'packages') {
+                    window.graph.toolbar.setToolBar();
                     $.ajax({
                         url: 'package/list',
                         success: APackage.viewDeep3D,
@@ -971,6 +885,7 @@
                 // Show the top level Architecture
                 if (event.object.link) {
                     // Get the information from the link and load it in the mainpage and the preview
+                    currentView = event.object.link;
                     $.ajax({
                         url: event.object.link,
                         success: (result) => { handlers[event.object.view](result, event.object.id)},
@@ -1012,6 +927,7 @@
         });
         showObjectList();
         showEventList();
+        let graphPanel = new A3DGraph({toolbar: w2ui['layout_preview_toolbar']});
         showModelList('rightbar', 'classes');
         showActorList('sidebar', 'actors');
         showUseCaseList('sidebar', 'usecases');
@@ -1047,6 +963,7 @@
                 expandObjectOnGraph(link);
             }
         });
+        graph.toolbar = graphPanel;
         window.graph = graph;
 
         let socket = io(window.location.origin,
@@ -1063,18 +980,24 @@
             if (currentView) {
                 let [model, view] = currentView.split('/');
                 model = model.toLowerCase();
-                if (event.includes(model)) {
+                let obj = msg;
+                if(msg.obj) {
+                    obj = msg.obj;
+                }
+                if (currentView.includes('scenario')) {
+                    scenarioview.handleEvent(event, obj);
+                } else if (event.includes(model)) {
                     // Add the node to the list and to the graph.
-                    if (msg.obj) {
-                        addObject(msg.obj);
+                    if (obj) {
+                        AObject.addObject(obj);
                     }
                 }
             }
-            if (event.includes('scenario.') || event.includes('step.')) {
-                scenarioview.handleEvent(event, msg.obj);
-            }
         });
     });
+    function viewingToolbar(toolbar) {
+
+    }
 </script>
 </body>
 </html>

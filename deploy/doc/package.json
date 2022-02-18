@@ -12,9 +12,6 @@
   "author": "Darren W Pulsipher - darren@pulsipher.org",
   "license": "ISC",
   "dependencies": {
-    "ailtire": "latest",
-    "3d-force-graph": "^1.66.7",
-    "aframe": "^1.0.4",
-    "three": "latest",
+    "ailtire": "latest"
   }
 }

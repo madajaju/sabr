@@ -1,0 +1,45 @@
+@startuml
+
+
+
+state CapabilityInstance #00aaff {
+
+    state Init #00aaff {
+    }
+
+    state Created #00aaff {
+    }
+
+    state Deploying #00aaff {
+    }
+
+    state Deployed #00aaff {
+    }
+
+    state Disabled #00aaff {
+    }
+
+    state Destroyed #00aaff {
+    }
+
+}
+
+
+Init --> Created : create
+
+Created --> Deploying : deploy
+
+Created --> Destroyed : destroy
+
+Deploying --> Deployed : deployed
+
+Deployed --> Disabled : disable
+
+Disabled --> Deployed : enable
+
+Disabled --> Destroyed : destroy
+
+
+
+
+@enduml

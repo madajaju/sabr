@@ -61,6 +61,7 @@ export default class AActor {
         group.aid = node.id;
         node.box = 100;
         node.expandLink = `actor/get?id=${node.id}`;
+        node.expandView = AActor.viewDeep3D;
 
         return group;
     }
@@ -76,6 +77,8 @@ export default class AActor {
                 id: actor.shortname,
                 name: actor.name.replace(/\s/g, '\n'),
                 view: AActor.view3D,
+                expandView: AActor.viewDeep3D,
+                expandLink: `actor/get?id=${actor.shortname}`
             };
 
             data.nodes[actor.shortname] = node;
@@ -87,6 +90,8 @@ export default class AActor {
                     id: j,
                     name: uc.name.replace(/\s/g, '\n'),
                     view: AUsecase.view3D,
+                    expandView: AUsecase.viewDeep3D,
+                    expandLink: `usecase/get?id=${j}`,
                     bbox: {
                         x: {min: -200, max: 200},
                         y: {min: -200, max: 200},
@@ -109,8 +114,59 @@ export default class AActor {
 
     }
 
-    static viewDeep3D(obj) {
+    static viewDeep3D(actor,mode) {
+        let data = {nodes: {}, links: []};
 
+        window.graph.clearObjects();
+        let node = {
+            id: actor.shortname,
+            name: actor.name.replace(/\s/g, '\n'),
+            view: AActor.view3D,
+            expandView: AActor.viewDeep3D,
+            expandLink: `actor/get?id=${actor.shortname}`,
+            fx: 0,
+            fy: 0,
+            fz: 0
+        };
+
+        data.nodes[actor.shortname] = node;
+        let i = 0;
+        for (let j in actor.scenarios) {
+            let scenario = actor.scenarios[j];
+            let node = {
+                id: scenario.uid,
+                name: scenario.name.replace(/\s/g, '\n'),
+                view: AScenario.view3D,
+                expandView: AScenario.viewDeep3D,
+                expandLink: `scenario/get?id=${scenario.uid}`,
+            };
+            data.nodes[node.id] = node;
+            i++;
+        }
+        i = 0;
+        for (let j in actor.usecases) {
+            let uc = actor.usecases[j];
+            let node = {
+                id: j, name: uc.name.replace(/\s/g, '\n'),
+                view: AUsecase.view3D,
+                expandView: AUsecase.viewDeep3D,
+                expandLink: `usecase/get?id=${j}`,
+            }
+            data.nodes[j] = node;
+            i++;
+            data.links.push({source: actor.shortname, target: j, value: 0.1});
+            for (let k in uc.scenarios) {
+                if (data.nodes.hasOwnProperty(k)) {
+                    data.links.push({source: j, target: k, value: 0.1});
+                }
+            }
+        }
+        if (mode === 'add') {
+            window.graph.addData(data.nodes, data.links);
+        } else {
+            window.graph.setData(data.nodes, data.links);
+        }
+        window.graph.showLinks();
     }
 
     handle(result) {
@@ -171,51 +227,9 @@ export default class AActor {
         w2ui['objlist'].refresh();
     }
 }
+
 function showGraph(actor, mode) {
-    let data = {nodes: {}, links: []};
-
-    window.graph.clearObjects();
-    let node = {
-        id: actor.shortname,
-        name: actor.name.replace(/\s/g, '\n'),
-        view: AActor.view3D,
-        fx: 0,
-        fy: 0,
-        fz: 0
-    };
-
-    data.nodes[actor.shortname] = node;
-    let i = 0;
-    for (let j in actor.scenarios) {
-        let scenario = actor.scenarios[j];
-        let node = {
-            id: j,
-            name: scenario.name.replace(/\s/g, '\n'),
-            view: AScenario.view3D,
-        };
-        data.nodes[j] = node;
-        i++;
-    }
-    i = 0;
-    for (let j in actor.usecases) {
-        let uc = actor.usecases[j];
-        let node = {id: j, name: uc.name.replace(/\s/g, '\n'), view: AUsecase.view3D}
-        data.nodes[j] = node;
-        i++;
-        data.links.push({source: actor.shortname, target: j, value: 0.1});
-        for (let k in uc.scenarios) {
-            if (data.nodes.hasOwnProperty(k)) {
-                data.links.push({source: j, target: k, value: 0.1});
-            }
-        }
-    }
-
-    if (mode === 'add') {
-        window.graph.addData(data.nodes, data.links);
-    } else {
-        window.graph.setData(data.nodes, data.links);
-    }
-    window.graph.showLinks();
+    AActor.viewDeep3D(actor, mode);
 }
 
 function getDetails(objs) {

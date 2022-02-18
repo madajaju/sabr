@@ -1,0 +1,10 @@
+@startuml
+
+left to right direction
+
+
+Actor "System Admin" as SystemAdmin
+
+
+
+@enduml

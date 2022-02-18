@@ -52,7 +52,8 @@ export default class AAction {
         }
         group.aid = node.id;
         node.box = h;
-        // node.expandLink = `actor/get?id=${node.id}`;
+        node.expandLink = `action/get?id=${node.id}`;
+        node.expandView = AAction.viewDeep3D;
 
         return group;
     }

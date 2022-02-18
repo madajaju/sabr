@@ -1,0 +1,61 @@
+@startuml
+
+
+package "Software Defined Infrastructure" #lightyellow {
+
+}
+
+package "Service Management Layer" #lightgreen {
+
+}
+
+package "Security Aspect" #pink {
+
+}
+
+package "Identity Aspect" #pink {
+
+}
+
+
+package "Distributed Information Management Layer" #ffcc88 {
+
+    interface "Distributed Information Management Layer" as i {
+    
+    }
+}
+
+CLI ()-- i
+REST ()-- i
+Web ()-- i
+
+package "Distributed Information Management Layer" #ffcc88 {
+
+
+rectangle "Data Stream Manager" #white {
+}
+
+rectangle "Sentient Agent Bundle Manager" #white {
+}
+
+    "Sentient Agent Bundle Manager" --> "Data Stream Manager"
+    
+    "Sentient Agent Bundle Manager" --> "Security Aspect"
+    
+    "Sentient Agent Bundle Manager" --> "Application Manager"
+    
+    "Sentient Agent Bundle Manager" --> "Learning Corpus"
+    
+}
+
+
+    "Distributed Information Management Layer" --> "Software Defined Infrastructure"
+
+    "Distributed Information Management Layer" --> "Service Management Layer"
+
+    "Distributed Information Management Layer" --> "Security Aspect"
+
+    "Distributed Information Management Layer" --> "Identity Aspect"
+
+
+@enduml

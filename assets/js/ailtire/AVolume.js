@@ -6,7 +6,7 @@ export default class AVolume {
     }
 
     static view3D(node, type) {
-        let color = node.color || "#00aaaa";
+        let color = node.color || "#bb8844";
         if (type === 'Selected') {
             color = "yellow";
         } else if (type === 'Targeted') {
@@ -41,7 +41,8 @@ export default class AVolume {
         }
         obj.aid = node.id;
         node.box = 120;
-        // node.expandLink = `actor/get?id=${node.id}`;
+        node.expandLink = `actor/get?id=${node.id}`;
+        node.expandView = AVolume.viewDeep3D;
 
         return obj;
     }

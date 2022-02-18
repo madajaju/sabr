@@ -1,0 +1,20 @@
+@startuml
+
+
+usecase "Manage Capbilities" as ManageCapbilities #yellow
+
+Actor "DevOps Engineer" as DevOpsEngineer
+
+DevOpsEngineer --> ManageCapbilities
+
+
+
+
+
+
+
+
+
+
+
+@enduml

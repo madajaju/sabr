@@ -1,0 +1,23 @@
+@startuml
+
+
+
+package "Learning Corpus" #00aaff {
+
+    interface "Learning Corpus" as i {
+    
+    }
+}
+
+CLI ()-- i
+REST ()-- i
+Web ()-- i
+
+package "Learning Corpus" #00aaff {
+
+
+}
+
+
+
+@enduml

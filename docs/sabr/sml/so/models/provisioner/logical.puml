@@ -1,0 +1,19 @@
+@startuml
+
+class "Provisioner" as Model {
+ string name
+ json config
+
+ 
+}
+
+rectangle "ServiceInstance" as ServiceInstance #lightblue {
+}
+
+Model o--> "n" ServiceInstance : services
+
+
+
+
+
+@enduml

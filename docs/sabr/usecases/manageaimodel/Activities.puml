@@ -1,0 +1,20 @@
+@startuml
+
+
+usecase "Manage AI Model" as ManageAIModel #yellow
+
+Actor "AI Developer" as AIDeveloper
+
+AIDeveloper --> ManageAIModel
+
+
+
+
+
+
+
+
+
+
+
+@enduml

@@ -1,0 +1,46 @@
+@startuml
+  interface CLI
+  interface Web
+  interface WebSocket
+package "Capability Manager" #00aaff {
+  component express as REST
+  component socket.io as socket
+  folder bin #ffffff {
+    component " sabr aml cm" as binName
+  }
+  binName --> REST
+
+  folder deploy #ffffff {
+      file "node server.js\ndocker-compose.yml" as _cm_container
+      REST --> _cm_container
+
+  
+    file "web" as web_container
+    REST --> web_container
+    socket ---> web_container
+  
+    file "gateway" as gateway_container
+    REST --> gateway_container
+    socket ---> gateway_container
+  
+  }
+  folder images #ffffff {
+    collections "_cm" as _cmimage
+    artifact "ailtire:swarm" as ailtireswarm
+    _cmimage <|-- ailtireswarm
+    _cm_container --> _cmimage
+
+  
+      artifact _cm_web
+      web_container --> _cm_web
+    
+      artifact _cm_gw
+      gateway_container --> _cm_gw
+    
+  }
+}
+CLI " sabr aml cm" -- binName
+Web "/sabr/aml/cm" - REST
+WebSocket ".sabr.aml.cm" -- socket
+
+@enduml

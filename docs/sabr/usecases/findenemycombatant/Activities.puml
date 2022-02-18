@@ -1,0 +1,20 @@
+@startuml
+
+
+usecase "Find Enemy Combatant" as FindEnemyCombatant #yellow
+
+Actor "Tactical Operator" as TacticalOperator
+
+TacticalOperator --> FindEnemyCombatant
+
+
+
+
+
+
+
+
+
+
+
+@enduml

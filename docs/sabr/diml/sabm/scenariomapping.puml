@@ -1,0 +1,76 @@
+@startuml
+left to right direction
+
+
+
+state "DevOpsEngineer" as DevOpsEngineer {
+    state "Manage SABR" as DevOpsEngineerManageSABR {
+    }
+}
+state "sabr" as sabr #ffcc88 {
+state "diml" as sabrdiml #ffcc88 {
+state "sabm" as sabrdimlsabm #ffcc88 {
+state "bundle" as sabrdimlsabmbundle #ffcc88 {
+state "list" as sabrdimlsabmbundlelist #ffcc88 {
+}
+}
+}
+}
+}
+
+DevOpsEngineerManageSABR --> sabrdimlsabmbundlelist
+
+
+    state "SoftwareEngineer" as SoftwareEngineer {
+        state "Manage SABR" as SoftwareEngineerManageSABR {
+            state "Create SABR" as SoftwareEngineerManageSABRCreateSABR {
+            }
+        }
+    }
+    
+    SoftwareEngineerManageSABRCreateSABR --> Null
+    
+ 
+    state "DevOpsEngineer" as DevOpsEngineer {
+        state "Manage SABR" as DevOpsEngineerManageSABR {
+            state "Deploy SABR" as DevOpsEngineerManageSABRDeploySABR {
+            }
+        }
+    }
+    
+    DevOpsEngineerManageSABRDeploySABR --> Null
+    
+ 
+    state "DevOpsEngineer" as DevOpsEngineer {
+        state "Manage SABR" as DevOpsEngineerManageSABR {
+            state "Deploy SABR two" as DevOpsEngineerManageSABRDeploySABR2 {
+            }
+        }
+    }
+    
+    DevOpsEngineerManageSABRDeploySABR2 --> Null
+    
+ 
+    state "DevOpsEngineer" as DevOpsEngineer {
+        state "Manage SABR" as DevOpsEngineerManageSABR {
+            state "Deploy SABR three" as DevOpsEngineerManageSABRDeploySABR3 {
+            }
+        }
+    }
+    
+    DevOpsEngineerManageSABRDeploySABR3 --> Null
+    
+ 
+    state "DevOpsEngineer" as DevOpsEngineer {
+        state "Manage SABR" as DevOpsEngineerManageSABR {
+            state "Deploy SABR four" as DevOpsEngineerManageSABRDeploySABR4 {
+            }
+        }
+    }
+    
+    DevOpsEngineerManageSABRDeploySABR4 --> Null
+    
+ 
+ 
+
+@enduml

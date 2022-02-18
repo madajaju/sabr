@@ -30,6 +30,7 @@ export default class AUsecase {
         retval.aid = node.id;
         node.box = 100;
         node.expandLink = `usecase/get?id=${node.id}`;
+        node.expandView = AUsecase.viewDeep3D;
         return retval;
     }
 
@@ -37,11 +38,19 @@ export default class AUsecase {
         let data = {nodes: {}, links: []};
         const theta = 3.14 / 2;
 
-        data.nodes[usecase.id] = {id: usecase.id, name: usecase.name, fx: 0, fy: 0, fz: 0, view: AUsecase.view3D};
+        data.nodes[usecase.id] = {id: usecase.id, name: usecase.name, fx: 0, fy: 0, fz: 0,
+            view: AUsecase.view3D,
+            expandView: AUsecase.viewDeep3D,
+            expandLink: `usecase/get?id=${usecase.id}`
+        };
         let bbox = {z: {max: -100, min: -1000}};
         for (let j in usecase.scenarios) {
             let scenario = usecase.scenarios[j];
-            data.nodes[j] = {id: j, name: scenario.name, view: AScenario.view3D};
+            data.nodes[j] = {id: j, name: scenario.name,
+                view: AScenario.view3D,
+                expandView: AScenario.viewDeep3D,
+                expandLink: `scenario/get?id=${j}`
+            };
             for (let actor in scenario.actors) {
                 let aname = actor.replace(/\s/g, '').toLowerCase();
                 data.links.push({source: aname, target: j, value: 0.3, width: 2});
@@ -51,26 +60,41 @@ export default class AUsecase {
 
         for (let j in usecase.extended) {
             let suc = usecase.extended[j];
-            data.nodes[j] = {id: j, name: suc.name, view: AUsecase.view3D, color: 'gray'};
+            data.nodes[j] = {id: j, name: suc.name, view: AUsecase.view3D,
+                expandView: AUsecase.viewDeep3D,
+                expandLink: `scenario/get?id=${j}`,
+                color: 'gray'};
             data.links.push({target: usecase.id, source: j, value: 0.1, width: 3, color: 'gray'});
         }
 
         for (let j in usecase.extends) {
             let sucname = usecase.extends[j];
             let sucid = sucname.replace(/\s/g, '');
-            data.nodes[sucid] = {id: sucid, name: sucname, view: AUsecase.view3D, color: 'gray'};
+            data.nodes[sucid] = {id: sucid, name: sucname,
+                view: AUsecase.view3D,
+                expandView: AUsecase.viewDeep3D,
+                expandLink: `scenario/get?id=${sucid}`,
+                color: 'gray'};
             data.links.push({source: usecase.id, target: sucid, value: 0.1, width: 3, color: 'gray'});
         }
 
         for (let j in usecase.includes) {
             let sucname = usecase.includes[j];
             let sucid = sucname.replace(/\s/g, '');
-            data.node[sucid] = {id: sucid, name: sucname, view: AUsecase.view3D, color: 'gray'};
+            data.node[sucid] = {id: sucid, name: sucname,
+                view: AUsecase.view3D,
+                expandView: AUsecase.viewDeep3D,
+                expandLink: `scenario/get?id=${sucid}`,
+                color: 'gray'};
             data.links.push({source: usecase.id, target: sucid, value: 0.1, width: 3, color: 'gray'});
         }
         for (let j in usecase.included) {
             let suc = usecase.included[j];
-            data.nodes[j] = {id: j, name: suc.name, view: AUsecase.view3D, color: 'gray'};
+            data.nodes[j] = {id: j, name: suc.name,
+                view: AUsecase.view3D,
+                expandView: AUsecase.viewDeep3D,
+                expandLink: `scenario/get?id=${j}`,
+                color: 'gray'};
             data.links.push({source: usecase.id, target: j, value: 0.1, width: 3, color: 'gray'});
         }
 
@@ -85,6 +109,7 @@ export default class AUsecase {
             window.graph.setData(data.nodes, data.links);
         }
         window.graph.showLinks();
+        window.graph.toolbar.setToolBar([]);
     }
 
     static viewList3D(objs) {
@@ -101,43 +126,67 @@ export default class AUsecase {
                 id: usecase.id,
                 name: usecase.name,
                 view: AUsecase.view3D,
+                expandView: AUsecase.viewDeep3D,
+                expandLink: `scenario/get?id=${usecase.id}`
             };
             data.nodes[pkgname] = {
                 id: pkgname,
                 cube: { x: 300, y: 300, z: 300 },
                 opacity: 0.5,
                 name: usecase.package,
-                view: APackage.view3D
+                view: APackage.view3D,
+                expandView: APackage.viewDeep3D,
+                expandLink: `package/get?id=${pkgname}`
             }
 
             for (let j in usecase.extended) {
                 let suc = usecase.extended[j];
-                data.nodes[j] = {id: j, name: suc.name, view: AUsecase.view3D, color: 'gray'};
+                data.nodes[j] = {id: j, name: suc.name,
+                    view: AUsecase.view3D,
+                    expandView: AUsecase.viewDeep3D,
+                    expandLink: `usecase/get?id=${j}`,
+                    color: 'gray'};
                 data.links.push({target: usecase.id, source: j, value: 0.1, width: 3, color: 'gray'});
             }
 
             for (let j in usecase.extends) {
                 let sucname = usecase.extends[j];
                 let sucid = sucname.replace(/\s/g, '');
-                data.nodes[sucid] = {id: sucid, name: sucname, view: AUsecase.view3D, color: 'gray'};
+                data.nodes[sucid] = {id: sucid, name: sucname,
+                    view: AUsecase.view3D,
+                    expandView: AUsecase.viewDeep3D,
+                    expandLink: `usecase/get?id=${sucid}`,
+                    color: 'gray'};
                 data.links.push({source: usecase.id, target: sucid, value: 0.1, width: 3, color: 'gray'});
             }
 
             for (let j in usecase.includes) {
                 let sucname = usecase.includes[j];
                 let sucid = sucname.replace(/\s/g, '');
-                data.node[sucid] = {id: sucid, name: sucname, view: AUsecase.view3D, color: 'gray'};
+                data.node[sucid] = {id: sucid, name: sucname,
+                    view: AUsecase.view3D,
+                    expandView: AUsecase.viewDeep3D,
+                    expandLink: `usecase/get?id=${sucid}`,
+                    color: 'gray'};
                 data.links.push({source: usecase.id, target: sucid, value: 0.1, width: 3, color: 'gray'});
             }
             for (let j in usecase.included) {
                 let suc = usecase.included[j];
-                data.nodes[j] = {id: j, name: suc.name, view: AUsecase.view3D, color: 'gray'};
+                data.nodes[j] = {id: j, name: suc.name,
+                    view: AUsecase.view3D,
+                    expandView: AUsecase.viewDeep3D,
+                    expandLink: `usecase/get?id=${j}`,
+                    color: 'gray'};
                 data.links.push({source: usecase.id, target: j, value: 0.1, width: 3, color: 'gray'});
             }
 
             for (let actor in usecase.actors) {
                 let aname = actor.replace(/\s/g, '').toLowerCase();
-                data.nodes[aname] = {id: aname, name: actor, view: AActor.view3D};
+                data.nodes[aname] = {id: aname, name: actor,
+                    view: AActor.view3D,
+                    expandView: AActor.viewDeep3D,
+                    expandLink: `actor/get?id=${aname}`,
+                };
                 data.links.push({source: aname, target: usecase.id, value: 0.1, width: 3, color: 'gray'});
             }
             data.nodes[pkgname+usecase.method] = {

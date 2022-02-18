@@ -1,0 +1,18 @@
+@startuml
+left to right direction
+
+
+state "aml" as aml #00aaff {
+}
+
+
+state aml #00aaff {
+    state "Custom Function" as amlfunction {
+    }
+}
+
+
+
+
+
+@enduml

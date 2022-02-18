@@ -1,0 +1,59 @@
+@startuml
+
+left to right direction
+
+
+boundary appname__family #red
+
+
+entity appname__diml_family #black
+
+
+
+
+package "_diml" #ffcc88 {
+    queue childrennet #black [
+            <b><color:white>children</color></b>
+    ]
+    
+    childrennet -[#black]- appname__diml_family
+    
+    queue siblingnet #blue [
+            <b><color:white>sibling</color></b>
+    ]
+    
+    queue parentnet #red [
+            <b><color:white>parent</color></b>
+    ]
+    
+    parentnet -[#red]- appname__family
+    
+
+node "child" as childService
+node "frontend" as frontendService
+node "gw" as gwService
+
+
+        artifact "child_image:latest" as child_imagelatestimage
+    
+        artifact "_diml_web" as _diml_webimage
+    
+        artifact "_diml_gw" as _diml_gwimage
+    
+}
+
+childService -[#black]- childrennet
+
+childService -[#red]- parentnet
+
+frontendService -[#blue]- siblingnet
+
+gwService -[#black]- childrennet
+
+gwService -[#blue]- siblingnet
+childService .... child_imagelatestimage
+frontendService .... _diml_webimage
+gwService .... _diml_gwimage
+
+
+@enduml

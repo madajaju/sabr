@@ -1,0 +1,15 @@
+@startuml
+
+left to right direction
+Actor "DevOpsEngineer" as DevOpsEngineer
+Actor "SoftwareDeveloper" as SoftwareDeveloper
+
+
+rectangle "Application Manager" #00aaff {
+usecase "ManageApplication" as ManageApplication
+    DevOpsEngineer --> ManageApplication
+    SoftwareDeveloper --> ManageApplication
+    }
+
+
+@enduml

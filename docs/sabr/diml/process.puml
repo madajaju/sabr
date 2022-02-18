@@ -1,0 +1,18 @@
+@startuml
+left to right direction
+
+
+state "diml" as diml #ffcc88 {
+}
+
+
+state diml #ffcc88 {
+    state "Custom Function" as dimlfunction {
+    }
+}
+
+
+
+
+
+@enduml

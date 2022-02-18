@@ -1,0 +1,28 @@
+@startuml
+
+
+usecase "Deploy Capability" as DeployCapability #yellow
+
+Actor "DevOps Engineer" as DevOpsEngineer
+
+DevOpsEngineer --> DeployCapability
+
+
+
+usecase "DeployCapabilityRelease" as DeployCapabilityRelease #lightgrey
+
+DeployCapability --> DeployCapabilityRelease
+
+
+
+usecase "0" as 0 #lightyellow
+
+DeployCapability <-- 0 : extends
+
+
+
+
+
+
+
+@enduml

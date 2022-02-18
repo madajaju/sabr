@@ -1,0 +1,13 @@
+@startuml
+
+
+
+state Capability #00aaff {
+
+}
+
+
+
+
+
+@enduml

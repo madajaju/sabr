@@ -130,8 +130,8 @@ export default class AState {
         }
         group.aid = node.id;
         node.box = Math.sqrt(width*width + depth*depth + height*height); //
-        // node.expandLink = `actor/get?id=${node.id}`;
-
+        node.expandLink = `state/get?id=${node.id}`;
+        node.expandView = AState.viewDeep3D;
         return group;
     }
 

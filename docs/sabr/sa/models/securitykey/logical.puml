@@ -1,0 +1,88 @@
+@startuml
+
+class "SecurityKey" as Model {
+ string name
+ string value
+
+ 
+}
+
+
+
+    rectangle "KeyStore" as KeyStore #lightgreen {
+    }
+    
+        KeyStore   o--> "n" Model : "keys"
+    
+    rectangle "KeyStore" as KeyStore #lightgreen {
+    }
+    
+        KeyStore   o--> "n" Model : "keys"
+    
+    rectangle "KeyStore" as KeyStore #lightgreen {
+    }
+    
+        KeyStore   o--> "n" Model : "keys"
+    
+    rectangle "KeyStore" as KeyStore #lightgreen {
+    }
+    
+        KeyStore   o--> "n" Model : "keys"
+    
+    rectangle "KeyStore" as KeyStore #lightgreen {
+    }
+    
+        KeyStore   o--> "n" Model : "keys"
+    
+    rectangle "KeyStore" as KeyStore #lightgreen {
+    }
+    
+        KeyStore   o--> "n" Model : "keys"
+    
+    rectangle "KeyStore" as KeyStore #lightgreen {
+    }
+    
+        KeyStore   o--> "n" Model : "keys"
+    
+    rectangle "KeyStore" as KeyStore #lightgreen {
+    }
+    
+        KeyStore   o--> "n" Model : "keys"
+    
+    rectangle "KeyStore" as KeyStore #lightgreen {
+    }
+    
+        KeyStore   o--> "n" Model : "keys"
+    
+    rectangle "KeyStore" as KeyStore #lightgreen {
+    }
+    
+        KeyStore   o--> "n" Model : "keys"
+    
+    rectangle "KeyStore" as KeyStore #lightgreen {
+    }
+    
+        KeyStore   o--> "n" Model : "keys"
+    
+    rectangle "KeyStore" as KeyStore #lightgreen {
+    }
+    
+        KeyStore   o--> "n" Model : "keys"
+    
+    rectangle "KeyStore" as KeyStore #lightgreen {
+    }
+    
+        KeyStore   o--> "n" Model : "keys"
+    
+    rectangle "KeyStore" as KeyStore #lightgreen {
+    }
+    
+        KeyStore   o--> "n" Model : "keys"
+    
+    rectangle "KeyStore" as KeyStore #lightgreen {
+    }
+    
+        KeyStore   o--> "n" Model : "keys"
+    
+
+@enduml

@@ -1,0 +1,28 @@
+@startuml
+
+
+package "Application Manager" #00aaff {
+
+}
+
+
+package "Service Orchestrator" #aaffaa {
+
+    interface "Service Orchestrator" as i {
+            /sabr/sml/so/service/ready()
+    
+    }
+}
+
+CLI ()-- i
+REST ()-- i
+Web ()-- i
+
+package "Service Orchestrator" #aaffaa {
+
+
+}
+
+
+
+@enduml

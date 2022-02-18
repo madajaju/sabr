@@ -1,0 +1,49 @@
+@startuml
+
+left to right direction
+
+
+boundary parent #blue
+
+
+entity pulsar #black
+
+entity children #red
+
+
+
+
+package "_dsm" #ffcc88 {
+    queue pulsarnet #black [
+            <b><color:white>pulsar</color></b>
+    ]
+    
+    pulsarnet -[#black]- pulsar
+    
+    queue parentnet #blue [
+            <b><color:white>parent</color></b>
+    ]
+    
+    parentnet -[#blue]- parent
+    
+    queue childrennet #red [
+            <b><color:white>children</color></b>
+    ]
+    
+    childrennet -[#red]- children
+    
+    queue siblingsnet #orange [
+            <b><color:white>siblings</color></b>
+    ]
+    
+
+node "pulsar" as pulsarService
+
+
+        artifact "sabr_pulsar:local" as sabr_pulsarlocalimage
+    
+}
+pulsarService .... sabr_pulsarlocalimage
+
+
+@enduml

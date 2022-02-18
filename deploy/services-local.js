@@ -18,20 +18,10 @@ module.exports = {
             },
             interface: {
                 pulsar: { path: '/pulsar', port: 6650, protocol:"http"},
-                pulsaradmin: { path: '/pulsaradm', port: 8081, protocol:"http"},
+                // pulsaradmin: { path: '/pulsaradm', port: 8081, protocol:"http"},
             },
             policies: { },
             environment: { },
-        },
-        sabr: {
-            type: "service",
-            image: "sabr",
-            volumes: {
-                docker: { source: "/var/run/docker.sock", target: "/var/run/docker.sock" }
-            },
-            interface: {
-                sabm: {path:'/sabr', port: 3000 },
-            }
         },
     },
     policies: {

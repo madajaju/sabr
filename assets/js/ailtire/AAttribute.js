@@ -39,7 +39,8 @@ export default class AAttribute {
         }
         group.aid = node.id;
         node.box = 50;
-        // node.expandLink = `actor/get?id=${node.id}`;
+        node.expandLink = `attribute/get?id=${node.id}`;
+        node.expandView = AAttribute.viewDeep3D;
 
         return group;
     }

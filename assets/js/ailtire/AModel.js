@@ -113,6 +113,7 @@ export default class AModel {
             node.box = null;
         }
         node.expandLink = `model/get?id=${node.id}`;
+        node.expandView = AModel.viewDeep3D;
         return retval;
     }
 
@@ -149,7 +150,9 @@ export default class AModel {
             opacity: 0.5,
             fx: 0, fy: 0, fz: 0,
             box: "None",
-            view: AModel.view3D
+            view: AModel.view3D,
+            expandView: AModel.viewDeep3D,
+            expandLink:`model/get?id=${cls.id}`
         };
 
         let prevID = cls.id;
@@ -167,6 +170,8 @@ export default class AModel {
             if (!data.nodes.hasOwnProperty(clsid)) {
                 data.nodes[clsid] = {
                     id: clsid, name: clsid, view: AModel.view3D,
+                    expandView: AModel.viewDeep3D,
+                    expandLink:`model/get?id=${clsid}`,
                     rbox: {
                         parent: cls.id,
                         x: {min: bbox.x.min - 200, max: bbox.x.min - 200},
@@ -305,6 +310,77 @@ export default class AModel {
             3000  // ms transition duration.
         );
         window.graph.showLinks();
+
+        window.graph.toolbar.setToolBar( [
+            { type: 'button',  id: 'states',  text: 'States', img: 'w2ui-icon-search',
+                callback: (event) => {
+                    window.graph.graph.cameraPosition(
+                        {x: 0, y: 0, z: 1000}, // new position
+                        {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
+                        1000
+                    );
+                    setTimeout( () => {
+                        window.graph.graph.cameraPosition(
+                            {x: 0, y: -1000, z: 0}, // new position
+                            {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
+                            1000
+                        );
+                    }, 500);
+                    setTimeout(() => { window.graph.graph.zoomToFit(1000)},1500);
+                }
+            },
+            { type: 'button',  id: 'attributes',  text: 'Attributes', img: 'w2ui-icon-search',
+                callback: (event) => {
+                    window.graph.graph.cameraPosition(
+                        {x: 0, y: 0, z: 1000}, // new position
+                        {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
+                        1000
+                    );
+                    setTimeout( () => {
+                        window.graph.graph.cameraPosition(
+                            {x: 0, y: 1000, z: 0}, // new position
+                            {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
+                            1000
+                        );
+                    }, 500);
+                    setTimeout(() => { window.graph.graph.zoomToFit(1000)},1500);
+                }
+            },
+            { type: 'button',  id: 'methods',  text: 'Method', img: 'w2ui-icon-search',
+                callback: (event) => {
+                    window.graph.graph.cameraPosition(
+                        {x: 0, y: 0, z: 1000}, // new position
+                        {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
+                        1000
+                    );
+                    setTimeout( () => {
+                        window.graph.graph.cameraPosition(
+                            {x: 1000, y: 0, z: 0}, // new position
+                            {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
+                            1000
+                        );
+                    }, 500);
+                    setTimeout(() => { window.graph.graph.zoomToFit(1000)},1500);
+                }
+            },
+            { type: 'button',  id: 'associations',  text: 'Associations', img: 'w2ui-icon-search',
+                callback: (event) => {
+                    window.graph.graph.cameraPosition(
+                        {x: 0, y: 0, z: 1000}, // new position
+                        {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
+                        1000
+                    );
+                    setTimeout( () => {
+                        window.graph.graph.cameraPosition(
+                            {x: -1000, y: 0, z: 0}, // new position
+                            {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
+                            1000
+                        );
+                    }, 500);
+                    setTimeout(() => { window.graph.graph.zoomToFit(1000)},1500);
+                }
+            },
+        ]);
     }
 
     static objectList(result) {

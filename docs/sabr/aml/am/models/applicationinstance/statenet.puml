@@ -1,0 +1,46 @@
+@startuml
+
+
+
+state ApplicationInstance #00aaff {
+
+    state Init #00aaff {
+    }
+
+    state Initializing #00aaff {
+    }
+
+    state Running #00aaff {
+    }
+
+    state Stopping #00aaff {
+    }
+
+    state Stopped #00aaff {
+    }
+
+    state Exit #00aaff {
+    }
+
+    state Failed #00aaff {
+    }
+
+}
+
+
+Init --> Initializing : create
+
+Initializing --> Running : provisoned
+
+Running --> Stopping : kill
+
+Stopping --> Stopped : stopped
+
+Stopped --> Exit : exit
+
+Stopped --> Failed : failed
+
+
+
+
+@enduml

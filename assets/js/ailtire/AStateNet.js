@@ -15,7 +15,6 @@ export default class AAction {
             color = "green";
         }
 
-
         const theta = 3.14 / 2;
         const group = new THREE.Group();
         const material = new THREE.MeshLambertMaterial({color: color, opacity: 1});
@@ -50,8 +49,8 @@ export default class AAction {
         }
         group.aid = node.id;
         node.box = 1;
-        // node.expandLink = `actor/get?id=${node.id}`;
-
+        node.expandLink = `statenet/get?id=${node.id}`;
+        node.expandView = AStateNet.viewDeep3D;
         return group;
     }
 

@@ -1,0 +1,52 @@
+@startuml
+
+
+package "Application Manager" #00aaff {
+    
+        class ServiceInstance {
+        }
+    }
+
+
+package "Service Orchestrator" #aaffaa {
+
+    interface "Service Orchestrator" as i {
+            /sabr/sml/so/service/ready()
+    
+    }
+}
+
+CLI ()-- i
+REST ()-- i
+Web ()-- i
+
+package "Service Orchestrator" #aaffaa {
+        class "DockerProvisioner" {
+                 string name
+                             deploy()
+            }
+    
+    
+    class "ProcessProvisioner" {
+                 string name
+                 json config
+                             deploy()
+            }
+                ProcessProvisioner o--> "n" ServiceInstance : services
+            
+    
+        Provisioner <|-- ProcessProvisioner
+    
+    class "Provisioner" {
+                 string name
+                 json config
+                    }
+                Provisioner o--> "n" ServiceInstance : services
+            
+    
+
+}
+
+
+
+@enduml

@@ -1,0 +1,56 @@
+@startuml
+
+
+package "Data Stream Manager" #ffcc88 {
+
+}
+
+package "Security Aspect" #pink {
+
+}
+
+package "Application Manager" #00aaff {
+
+}
+
+package "Learning Corpus" #00aaff {
+
+}
+
+package "Sentient Agent Bundle Manager" #ffcc88 {
+
+}
+
+
+package "Sentient Agent Bundle Manager" #ffcc88 {
+
+    interface "Sentient Agent Bundle Manager" as i {
+            /sabr/diml/sabm/connect()
+            /sabr/diml/sabm/bundle/createanddeploy()
+            /sabr/diml/sabm/bundle/deploy()
+            /sabr/diml/sabm/bundle/list()
+            /sabr/diml/sabm/sabundle/create()
+    
+    }
+}
+
+CLI ()-- i
+REST ()-- i
+Web ()-- i
+
+package "Sentient Agent Bundle Manager" #ffcc88 {
+
+
+}
+
+
+    "Sentient Agent Bundle Manager" --> "Data Stream Manager"
+
+    "Sentient Agent Bundle Manager" --> "Security Aspect"
+
+    "Sentient Agent Bundle Manager" --> "Application Manager"
+
+    "Sentient Agent Bundle Manager" --> "Learning Corpus"
+
+
+@enduml

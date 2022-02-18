@@ -1,0 +1,40 @@
+@startuml
+
+
+package "Service Orchestrator" #aaffaa {
+
+}
+
+package "Application Manager" #00aaff {
+
+}
+
+
+package "Application Manager" #00aaff {
+
+    interface "Application Manager" as i {
+            /sabr/aml/am/data/create()
+            /sabr/aml/am/data/govern()
+            /sabr/aml/am/service/deployed()
+            /sabr/aml/am/service/kill()
+            /sabr/aml/am/service/provision()
+            /sabr/aml/am/service/stderr()
+            /sabr/aml/am/service/stdout()
+    
+    }
+}
+
+CLI ()-- i
+REST ()-- i
+Web ()-- i
+
+package "Application Manager" #00aaff {
+
+
+}
+
+
+    "Application Manager" --> "Service Orchestrator"
+
+
+@enduml

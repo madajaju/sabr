@@ -1,0 +1,40 @@
+@startuml
+
+
+
+state DataStream #ffcc88 {
+
+    state Init #ffcc88 {
+    }
+
+    state Created #ffcc88 {
+    }
+
+    state Disabled #ffcc88 {
+    }
+
+    state Enabled #ffcc88 {
+    }
+
+    state Destroyed #ffcc88 {
+    }
+
+}
+
+
+Init --> Created : deploy
+
+Created --> Disabled : disable
+
+Created --> Destroyed : destroy
+
+Disabled --> Enabled : enable
+
+Disabled --> Destroyed : destroy
+
+Enabled --> Disabled : disbale
+
+
+
+
+@enduml

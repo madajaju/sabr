@@ -1,0 +1,39 @@
+@startuml
+  interface CLI
+  interface Web
+  interface WebSocket
+package "Data Stream Manager" #ffcc88 {
+  component express as REST
+  component socket.io as socket
+  folder bin #ffffff {
+    component " sabr diml dsm" as binName
+  }
+  binName --> REST
+
+  folder deploy #ffffff {
+      file "node server.js\n" as _dsm_container
+      REST --> _dsm_container
+
+  
+    file "pulsar" as pulsar_container
+    REST --> pulsar_container
+    socket ---> pulsar_container
+  
+  }
+  folder images #ffffff {
+    collections "_dsm" as _dsmimage
+    artifact "ailtire:swarm" as ailtireswarm
+    _dsmimage <|-- ailtireswarm
+    _dsm_container --> _dsmimage
+
+  
+      artifact sabr_pulsar:standalone
+      pulsar_container --> sabr_pulsar:standalone
+    
+  }
+}
+CLI " sabr diml dsm" -- binName
+Web "/sabr/diml/dsm" - REST
+WebSocket ".sabr.diml.dsm" -- socket
+
+@enduml
