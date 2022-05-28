@@ -1,8 +1,7 @@
 ---
 layout: default title: Sentient Agent Bundle Resources Overview
----
-
 {# topPackage.name.toLowerCase()-project}
+---
 
 # Introduction
 
