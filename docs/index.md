@@ -358,26 +358,26 @@ of a centralized organizational structure of the actors of the system.
 The Data Model for the  Sentient Agent Bundle Resources shows how the different objects and classes of object interact and their
 structure.
 
-* [Application Management Layer](package--sabr-aml) - <
-  %- topPackage.subpackages[name].description 
+* [Application Management Layer](package--sabr-aml) -
+Application Management Layer is responsible for the management of applications and workflows andthe development, test, deployment and updates of those applications and workloads
   
-* [Common Physical Layer](package--sabr-cpl) - <
-  %- topPackage.subpackages[name].description 
+* [Common Physical Layer](package--sabr-cpl) -
+Common Physical Layer gives a common way of managing the underlying physical infrastructure
   
-* [Distributed Information Management Layer](package--sabr-diml) - <
-  %- topPackage.subpackages[name].description 
+* [Distributed Information Management Layer](package--sabr-diml) -
+Distributed Information Management Layer is a package that contains data management plane of the architecture.
   
-* [Identity Aspect](package--sabr-ia) - <
-  %- topPackage.subpackages[name].description 
+* [Identity Aspect](package--sabr-ia) -
+Identity Aspect is a package that contains management of identity of physical machines, people, data, applications, and workflows.
   
-* [Security Aspect](package--sabr-sa) - <
-  %- topPackage.subpackages[name].description 
+* [Security Aspect](package--sabr-sa) -
+SecurityAspect is a package that contains all security tools and frameworks for the system.
   
-* [Service Management Layer](package--sabr-sml) - <
-  %- topPackage.subpackages[name].description 
+* [Service Management Layer](package--sabr-sml) -
+Service Management Layer is a subsystem that manages services, stacks, environments, and multi-clouds.
   
-* [Software Defined Infrastructure](package--sabr-sdi) - <
-  %- topPackage.subpackages[name].description 
+* [Software Defined Infrastructure](package--sabr-sdi) -
+Software Defined Infrastructure(SDI) contains the abstractions for private and public clouds. The SDI layer is a common standard interface for all cloud resources both virutal, container, and bare metal.
   
 
 ![Logical Diagram](./subpackage.png)
