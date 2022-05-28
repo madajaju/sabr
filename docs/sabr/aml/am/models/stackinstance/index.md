@@ -9,7 +9,7 @@ parent: classes
 
 The StackInstance is the execution of the Stack. This allows for control of the stack during execution.
 
-![Logical Diagram](./logical.svg)
+![Logical Diagram](./logical.png)
 
 ## Attributes
 
@@ -83,7 +83,7 @@ The StackInstance is the execution of the Stack. This allows for control of the 
 
 
 ## State Net
-![State Net Diagram](./statenet.svg)
+![State Net Diagram](./statenet.png)
 
 | Name | Description | Events |
 | --- | --- | --- |

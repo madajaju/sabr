@@ -31,10 +31,10 @@ package "Application Management Layer" #00aaff {
     _aml_container --> _amlimage
 
   
-      artifact _aml_web
+      artifact "_aml_web" as _aml_web
       web_container --> _aml_web
     
-      artifact _aml_gw
+      artifact "_aml_gw" as _aml_gw
       gateway_container --> _aml_gw
     
   }

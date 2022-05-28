@@ -31,10 +31,10 @@ package "Capability Manager" #00aaff {
     _cm_container --> _cmimage
 
   
-      artifact _cm_web
+      artifact "_cm_web" as _cm_web
       web_container --> _cm_web
     
-      artifact _cm_gw
+      artifact "_cm_gw" as _cm_gw
       gateway_container --> _cm_gw
     
   }

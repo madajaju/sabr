@@ -9,7 +9,7 @@ parent: classes
 
 A Data stream defines where I am getting data from or pushing data.
 
-![Logical Diagram](./logical.svg)
+![Logical Diagram](./logical.png)
 
 ## Attributes
 
@@ -221,7 +221,7 @@ A Data stream defines where I am getting data from or pushing data.
 
 
 ## State Net
-![State Net Diagram](./statenet.svg)
+![State Net Diagram](./statenet.png)
 
 | Name | Description | Events |
 | --- | --- | --- |

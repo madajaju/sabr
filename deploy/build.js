@@ -1,9 +1,9 @@
 
 module.exports = {
-    web: {
+    serviceA: {
         dir: '..',
         file: 'web/Dockerfile',
-        tag: 'sabr_admin',
+        tag: 'sabr_web',
         env: {
         }
     },

@@ -32,8 +32,8 @@ DevOpsEngineerDeployCapability --> sabramlcmdatagovern
     
  
  
-state "Software Developer" as SoftwareDeveloper {
-    state "Develop Capability" as SoftwareDeveloperDevelopCapability {
+state "Application Developer" as ApplicationDeveloper {
+    state "Develop Capability" as ApplicationDeveloperDevelopCapability {
     }
 }
 state "sabr" as sabr #00aaff {
@@ -47,7 +47,7 @@ state "list" as sabramlcmcapabilitylist #00aaff {
 }
 }
 
-SoftwareDeveloperDevelopCapability --> sabramlcmcapabilitylist
+ApplicationDeveloperDevelopCapability --> sabramlcmcapabilitylist
 
 
     state "DevOpsEngineer" as DevOpsEngineer {

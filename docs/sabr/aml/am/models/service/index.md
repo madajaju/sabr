@@ -9,7 +9,7 @@ parent: classes
 
 A Service is an orchestratable element that represents a container or vm running against a resource. The actual execution of the service is tracked by the ServiceInstance. A stack is made up of multiple services.
 
-![Logical Diagram](./logical.svg)
+![Logical Diagram](./logical.png)
 
 ## Attributes
 

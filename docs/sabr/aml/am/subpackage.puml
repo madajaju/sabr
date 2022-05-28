@@ -13,6 +13,10 @@ package "Application Manager" #00aaff {
 package "Application Manager" #00aaff {
 
     interface "Application Manager" as i {
+            ^serviceinstance.deployed
+            ^serviceinstance.killed
+    
+            /sabr/aml/am/application/list()
             /sabr/aml/am/data/create()
             /sabr/aml/am/data/govern()
             /sabr/aml/am/service/deployed()
@@ -24,9 +28,15 @@ package "Application Manager" #00aaff {
     }
 }
 
-CLI ()-- i
-REST ()-- i
-Web ()-- i
+circle REST
+circle Web
+circle CLI
+circle WebSocket
+
+i -down- Web
+i -down- CLI
+i -down- REST
+WebSocket -left- i: events >
 
 package "Application Manager" #00aaff {
 
@@ -34,7 +44,7 @@ package "Application Manager" #00aaff {
 }
 
 
-    "Application Manager" --> "Service Orchestrator"
+    "Service Orchestrator" <-- "Application Manager"
 
 
 @enduml

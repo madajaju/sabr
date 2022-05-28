@@ -5,7 +5,74 @@ export default class AActor {
         this.config = config;
         console.log("AUsecase:", config);
     }
+    static showList(panel, parent) {
+        $.ajax({
+            url: 'actor/list',
+            success: function (results) {
+                let actorNodes = [];
+                for (let aname in results) {
+                    let actor = results[aname];
+                    let actorItem = {
+                        id: actor.shortname,
+                        text: actor.name,
+                        img: 'icon-folder',
+                        link: `actor/get?id=${actor.shortname}`,
+                        nodes: [],
+                        view: 'actor'
+                    };
+                    let ucnum = 0;
+                    for (let ucname in actor.usecases) {
+                        ucnum++;
+                        let ucase = actor.usecases[ucname];
+                        let ucItem = {
+                            id: actor.shortname + ucname,
+                            text: ucase.name,
+                            img: 'icon-folder',
+                            link: `usecase/get?id=${ucname}`,
+                            nodes: [],
+                            view: 'usecase'
+                        };
+                        let snum = 0;
+                        for (let sname in ucase.scenarios) {
+                            let scenario = ucase.scenarios[sname]
+                            if (actor.scenarios && actor.scenarios.hasOwnProperty(sname)) {
+                                snum++;
+                                let sItem = {
+                                    id: actor.shortname + ucname + sname,
+                                    text: sname,
+                                    img: 'icon-page',
+                                    link: `scenario/get?id=${ucname}.${sname}`,
+                                    method: `${scenario.method}`,
+                                    view: 'scenario'
+                                };
+                                actor.scenarios[sname].used = true;
+                                ucItem.nodes.push(sItem);
+                            }
+                        }
+                        ucItem.count = snum;
+                        actorItem.nodes.push(ucItem);
 
+                    }
+                    for (let sname in actor.scenarios) {
+                        ucnum++;
+                        let scenario = actor.scenarios[sname];
+                        if (!scenario.used) {
+                            let sItem = {
+                                id: actor.shortname + sname,
+                                text: sname,
+                                img: 'icon-page',
+                                method: `${scenario.method}`
+                            };
+                            actorItem.nodes.push(sItem);
+                        }
+                    }
+                    actorItem.count = ucnum;
+                    actorNodes.push(actorItem);
+                }
+                w2ui[panel].add(parent, actorNodes);
+            }
+        });
+    }
     static view3D(node, type) {
         let color = node.color || "lightgray";
         if (type === 'Selected') {

@@ -3,6 +3,25 @@ left to right direction
 
 
 
+state "ApplicationDeveloper" as ApplicationDeveloper {
+    state "Integrate Learning" as ApplicationDeveloperIntegrateLearning {
+    }
+}
+state "sabr" as sabr #00aaff {
+state "aml" as sabraml #00aaff {
+state "am" as sabramlam #00aaff {
+state "application" as sabramlamapplication #00aaff {
+state "list" as sabramlamapplicationlist #00aaff {
+}
+}
+}
+}
+}
+
+ApplicationDeveloperIntegrateLearning --> sabramlamapplicationlist
+
+
+ 
 state "DevOpsEngineer" as DevOpsEngineer {
     state "Manage Application" as DevOpsEngineerManageApplication {
     }
@@ -10,42 +29,42 @@ state "DevOpsEngineer" as DevOpsEngineer {
 state "sabr" as sabr #00aaff {
 state "aml" as sabraml #00aaff {
 state "am" as sabramlam #00aaff {
-state "data" as sabramlamdata #00aaff {
-state "govern" as sabramlamdatagovern #00aaff {
+state "application" as sabramlamapplication #00aaff {
+state "list" as sabramlamapplicationlist #00aaff {
 }
 }
 }
 }
 }
 
-DevOpsEngineerManageApplication --> sabramlamdatagovern
+DevOpsEngineerManageApplication --> sabramlamapplicationlist
 
-state "SoftwareDeveloper" as SoftwareDeveloper {
-    state "Manage Application" as SoftwareDeveloperManageApplication {
+state "ApplicationDeveloper" as ApplicationDeveloper {
+    state "Manage Application" as ApplicationDeveloperManageApplication {
     }
 }
 state "sabr" as sabr #00aaff {
 state "aml" as sabraml #00aaff {
 state "am" as sabramlam #00aaff {
-state "data" as sabramlamdata #00aaff {
-state "govern" as sabramlamdatagovern #00aaff {
+state "application" as sabramlamapplication #00aaff {
+state "list" as sabramlamapplicationlist #00aaff {
 }
 }
 }
 }
 }
 
-SoftwareDeveloperManageApplication --> sabramlamdatagovern
+ApplicationDeveloperManageApplication --> sabramlamapplicationlist
 
 
-    state "SoftwareDeveloper" as SoftwareDeveloper {
-        state "Manage Application" as SoftwareDeveloperManageApplication {
-            state "Create Application" as SoftwareDeveloperManageApplicationCreateApplication {
+    state "ApplicationDeveloper" as ApplicationDeveloper {
+        state "Manage Application" as ApplicationDeveloperManageApplication {
+            state "Create Application" as ApplicationDeveloperManageApplicationCreateApplication {
             }
         }
     }
     
-    SoftwareDeveloperManageApplicationCreateApplication --> Null
+    ApplicationDeveloperManageApplicationCreateApplication --> Null
     
  
     state "DevOpsEngineer" as DevOpsEngineer {

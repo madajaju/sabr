@@ -3,9 +3,9 @@
 
 usecase "Develop Capability" as DevelopCapability #yellow
 
-Actor "Software Developer" as SoftwareDeveloper
+Actor "Application Developer" as ApplicationDeveloper
 
-SoftwareDeveloper --> DevelopCapability
+ApplicationDeveloper --> DevelopCapability
 
 
 

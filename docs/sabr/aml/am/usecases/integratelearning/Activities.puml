@@ -1,0 +1,24 @@
+@startuml
+
+
+usecase "Integrate Learning" as IntegrateLearning #yellow
+
+Actor "Application Developer" as ApplicationDeveloper
+
+ApplicationDeveloper --> IntegrateLearning
+
+
+
+
+
+usecase "0" as 0 #lightyellow
+
+IntegrateLearning <-- 0 : extends
+
+
+
+
+
+
+
+@enduml

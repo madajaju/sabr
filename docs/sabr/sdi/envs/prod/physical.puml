@@ -31,10 +31,10 @@ package "Software Defined Infrastructure" #lightyellow {
     _sdi_container --> _sdiimage
 
   
-      artifact _sdi_web
+      artifact "_sdi_web" as _sdi_web
       web_container --> _sdi_web
     
-      artifact _sdi_gw
+      artifact "_sdi_gw" as _sdi_gw
       gateway_container --> _sdi_gw
     
   }

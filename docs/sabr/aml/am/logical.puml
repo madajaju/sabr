@@ -29,6 +29,7 @@ package "Application Manager" #00aaff {
 package "Application Manager" #00aaff {
 
     interface "Application Manager" as i {
+            /sabr/aml/am/application/list()
             /sabr/aml/am/data/create()
             /sabr/aml/am/data/govern()
             /sabr/aml/am/service/deployed()

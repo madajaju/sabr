@@ -4,11 +4,15 @@ export default class AObject {
     constructor(config) {
         this.config = config;
     }
+    static showList() {
 
+    }
+    static expandObject(link) {
+        expandObjectOnGraph(link);
+    }
     static addObject(obj, creator) {
         // Add the object to the list
         let ritem = {recid: obj._attributes.id};
-        let columns = w2ui['objlist'].columns;
         for (let i in obj.definition.attributes) {
             if (obj._attributes.hasOwnProperty(i)) {
                 ritem[i] = obj._attributes[i];
@@ -74,7 +78,6 @@ export default class AObject {
                         });
                     }
                 } else {
-                    let values = [];
                     for (let j in aobj) {
                         let aaobj = aobj[j];
                         data.nodes[aaobj._attributes.id] = {
@@ -177,3 +180,9 @@ export default class AObject {
     }
 }
 
+function expandObjectOnGraph(link) {
+    $.ajax({
+        url: link,
+        success: A3DGraph.addObjectToGraph
+    });
+}

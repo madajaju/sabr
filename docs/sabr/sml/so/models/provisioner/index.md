@@ -9,7 +9,7 @@ parent: classes
 
 Abstract Provisioner Class
 
-![Logical Diagram](./logical.svg)
+![Logical Diagram](./logical.png)
 
 ## Attributes
 

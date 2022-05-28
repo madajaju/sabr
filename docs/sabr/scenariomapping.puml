@@ -3,23 +3,8 @@ left to right direction
 
 
 
-state "TacticalOperator" as TacticalOperator {
-    state "Find Enemy Combatant" as TacticalOperatorFindEnemyCombatant {
-    }
-}
-state "sabr" as sabr #bbaaff {
-state "capability" as sabrcapability #bbaaff {
-state "list" as sabrcapabilitylist #bbaaff {
-}
-}
-}
-
-TacticalOperatorFindEnemyCombatant --> sabrcapabilitylist
-
-
- 
-state "AIDeveloper" as AIDeveloper {
-    state "Manage AI Model" as AIDeveloperManageAIModel {
+state "DataEngineer" as DataEngineer {
+    state "Manage AI Model" as DataEngineerManageAIModel {
     }
 }
 state "sabr" as sabr #bbaaff {
@@ -29,27 +14,38 @@ state "list" as sabraimodellist #bbaaff {
 }
 }
 
-AIDeveloperManageAIModel --> sabraimodellist
+DataEngineerManageAIModel --> sabraimodellist
 
-
- 
-state "SoftwareDeveloper" as SoftwareDeveloper {
-    state "Manage Capabilities" as SoftwareDeveloperManageCapabilities {
+state "DataScientist" as DataScientist {
+    state "Manage AI Model" as DataScientistManageAIModel {
     }
 }
 state "sabr" as sabr #bbaaff {
-state "application" as sabrapplication #bbaaff {
-state "list" as sabrapplicationlist #bbaaff {
+state "aimodel" as sabraimodel #bbaaff {
+state "list" as sabraimodellist #bbaaff {
 }
 }
 }
 
-SoftwareDeveloperManageCapabilities --> sabrapplicationlist
+DataScientistManageAIModel --> sabraimodellist
+
+state "DataAnalyst" as DataAnalyst {
+    state "Manage AI Model" as DataAnalystManageAIModel {
+    }
+}
+state "sabr" as sabr #bbaaff {
+state "aimodel" as sabraimodel #bbaaff {
+state "list" as sabraimodellist #bbaaff {
+}
+}
+}
+
+DataAnalystManageAIModel --> sabraimodellist
 
 
  
 state "DevOpsEngineer" as DevOpsEngineer {
-    state "Manage Capbilities" as DevOpsEngineerManageCapbilities {
+    state "Manage Capabilities" as DevOpsEngineerManageCapabilities {
     }
 }
 state "sabr" as sabr #bbaaff {
@@ -59,7 +55,65 @@ state "list" as sabrcapabilitylist #bbaaff {
 }
 }
 
-DevOpsEngineerManageCapbilities --> sabrcapabilitylist
+DevOpsEngineerManageCapabilities --> sabrcapabilitylist
+
+state "ITOperations" as ITOperations {
+    state "Manage Capabilities" as ITOperationsManageCapabilities {
+    }
+}
+state "sabr" as sabr #bbaaff {
+state "capability" as sabrcapability #bbaaff {
+state "list" as sabrcapabilitylist #bbaaff {
+}
+}
+}
+
+ITOperationsManageCapabilities --> sabrcapabilitylist
+
+
+ 
+state "ITOperations" as ITOperations {
+    state "Manage Policies" as ITOperationsManagePolicies {
+    }
+}
+state "sabr" as sabr #bbaaff {
+state "policy" as sabrpolicy #bbaaff {
+state "list" as sabrpolicylist #bbaaff {
+}
+}
+}
+
+ITOperationsManagePolicies --> sabrpolicylist
+
+
+ 
+state "SecurityOperator" as SecurityOperator {
+    state "Manage Security" as SecurityOperatorManageSecurity {
+    }
+}
+state "sabr" as sabr #bbaaff {
+state "security" as sabrsecurity #bbaaff {
+state "list" as sabrsecuritylist #bbaaff {
+}
+}
+}
+
+SecurityOperatorManageSecurity --> sabrsecuritylist
+
+
+ 
+state "TacticalOperator" as TacticalOperator {
+    state "Provide Digital Assistance" as TacticalOperatorProvideDigitalAssistance {
+    }
+}
+state "sabr" as sabr #bbaaff {
+state "capability" as sabrcapability #bbaaff {
+state "list" as sabrcapabilitylist #bbaaff {
+}
+}
+}
+
+TacticalOperatorProvideDigitalAssistance --> sabrcapabilitylist
 
 
  

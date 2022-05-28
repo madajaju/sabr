@@ -6,10 +6,13 @@
 
 module.exports = {
     name: 'Manage AI Model',
-    description: 'Manage AI Model is the description',
+    description: 'Manage AI Model allows the data users to create, destroy, and update models, version control them' +
+        ' and deploy them in the system.',
     method: 'aimodel/list',
     actors: {
-        'AIDeveloper': 'uses'
+        'DataEngineer': 'uses',
+        'DataScientist': 'uses',
+        'DataAnalyst': 'uses',
     },
 };
 

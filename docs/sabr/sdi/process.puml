@@ -6,7 +6,7 @@ state "sdi" as sdi #lightyellow {
 }
 
 
-state sdi #lightyellow {
+state "sdi" as pstatename #lightyellow {
     state "Custom Function" as sdifunction {
     }
 }

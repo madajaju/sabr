@@ -7,8 +7,8 @@ Actor "Tactical Operator" as TacticalOperator
 
 
 rectangle "Sentient Agent Bundle Resources" as sabr #bbaaff {
-        usecase "Find Enemy Combatant" as FindEnemyCombatant
-    TacticalOperator --> FindEnemyCombatant
+        usecase "Provide Digital Assistance" as ProvideDigitalAssistance
+    TacticalOperator --> ProvideDigitalAssistance
 
 }
 

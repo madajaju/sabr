@@ -27,12 +27,12 @@ package "_sabm" #ffcc88 {
 node "pulsar" as pulsarService
 
 
-        artifact "apachepulsar/pulsar-all:latest" as apachepulsar/pulsar-alllatestimage
+        artifact "apachepulsar/pulsar-all:latest" as apachepulsar_pulsar_alllatestimage
     
 }
 
 pulsarService -[#black]- childrennet
-pulsarService .... apachepulsar/pulsar-alllatestimage
+pulsarService .... apachepulsar_pulsar_alllatestimage
 
 
 @enduml

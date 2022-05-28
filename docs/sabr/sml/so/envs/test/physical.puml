@@ -31,10 +31,10 @@ package "Service Orchestrator" #aaffaa {
     _so_container --> _soimage
 
   
-      artifact _so_web
+      artifact "_so_web" as _so_web
       web_container --> _so_web
     
-      artifact _so_gw
+      artifact "_so_gw" as _so_gw
       gateway_container --> _so_gw
     
   }

@@ -17,21 +17,22 @@ Application Manager is a package that contains allows to define application that
 The following are the use cases of the Application Manager subsystem. Each use case has primary and secondary scenarios
 that are elaborated in the use case descriptions.
 
+* [Integrate Learning](usecase-IntegrateLearning)
 * [Manage Application](usecase-ManageApplication)
 
 
-![UseCase Diagram](./usecases.svg)
+![UseCase Diagram](./usecases.png)
 
 ## Users
 
-The following are the actors of the Application Manager subsystem. This can include people, other subsystems 
-inside the solution and even external subsystems. 
+The following are the actors of the Application Manager subsystem. This can include people, other subsystems
+inside the solution and even external subsystems.
 
-* [DevOpsEngineer](actor-devopsengineer)
-* [SoftwareDeveloper](actor-softwaredeveloper)
+* [ApplicationDeveloper](actor-applicationdeveloper)
+* [DevOpsEngineer](actor-devops)
 
 
-![User Interaction](./userinteraction.svg)
+![User Interaction](./userinteraction.png)
 
 ## Interface
 
@@ -39,8 +40,9 @@ The subsystem has a REST, CLI, WebSocket, and Web interface. Use Cases and Scena
 of the interfaces to perform the work that needs to be completed. The following  diagram shows how
 users interact with the system.
 
-![Scenario Mappings Diagram](./scenariomapping.svg)
+![Scenario Mappings Diagram](./scenariomapping.png)
 
+* [ sabr aml am application list](#action--sabr-aml-am-application-list)
 * [ sabr aml am data create](#action--sabr-aml-am-data-create)
 * [ sabr aml am data govern](#action--sabr-aml-am-data-govern)
 * [ sabr aml am service deployed](#action--sabr-aml-am-service-deployed)
@@ -55,7 +57,7 @@ users interact with the system.
 The Data Model for the  Application Manager subsystem shows how the different objects and classes of object interact
 and their structure.
 
-![Sub Package Diagram](./subpackage.svg)
+![Sub Package Diagram](./subpackage.png)
 
 ### Sub Packages
 
@@ -64,7 +66,7 @@ organize the architecture and make it easier to analyze, understand, design, and
 
 
 
-![Logical Diagram](./logical.svg)
+![Logical Diagram](./logical.png)
 
 ### Classes
 
@@ -84,7 +86,7 @@ The following are the classes in the data model of the Application Manager subsy
 This subsystem is deployed using micro-services as shown in the diagram below. The 'micro' module is
 used to implement the micro-services in the system. The subsystem also has an CLI, REST and Web Interface
 exposed through a nodejs application. The nodejs application will interface with the micro-services and
-can monitor and drive work-flows through the mesh of micro-services. The deployment of the subsystem is 
+can monitor and drive work-flows through the mesh of micro-services. The deployment of the subsystem is
 dependent on the environment it is deployed. This subsystem has the following environments:
 * [dev](environment--sabr-aml-am-dev)
 * [test](environment--sabr-aml-am-test)
@@ -96,7 +98,7 @@ dependent on the environment it is deployed. This subsystem has the following en
 
 The Application Manager subsystem is physically laid out on a hybrid cloud infrastructure. Each microservice belongs
 to a secure micro-segmented network. All of the micro-services communicate to each other and the main app through a
-REST interface. A Command Line Interface (CLI), REST or Web User interface for the app is how other subsystems or actors 
+REST interface. A Command Line Interface (CLI), REST or Web User interface for the app is how other subsystems or actors
 interact. Requests are forwarded to micro-services through the REST interface of each micro-service. The subsystem has
 the a unique layout based on the environment the physical space. The following are the environments for this
 subsystems.
@@ -162,6 +164,20 @@ TBD
 The Application Manager subsystem has a well defined interface. This interface can be accessed using a
 command line interface (CLI), REST interface, and Web user interface. This interface is how all other
 subsystems and actors can access the system.
+
+### Action  sabr aml am application list
+
+* REST - /sabr/aml/am/application/list
+* bin -  sabr aml am application list
+* js - .sabr.aml.am.application.list
+
+Description of the action
+
+| Name | Type | Required | Description |
+|---|---|---|---|
+| attr1 | string |false | Description for the parameter |
+
+
 
 ### Action  sabr aml am data create
 

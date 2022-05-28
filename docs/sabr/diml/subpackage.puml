@@ -22,12 +22,19 @@ package "Distributed Information Management Layer" #ffcc88 {
 
     interface "Distributed Information Management Layer" as i {
     
+    
     }
 }
 
-CLI ()-- i
-REST ()-- i
-Web ()-- i
+circle REST
+circle Web
+circle CLI
+circle WebSocket
+
+i -down- Web
+i -down- CLI
+i -down- REST
+WebSocket -left- i: events >
 
 package "Distributed Information Management Layer" #ffcc88 {
 
@@ -49,13 +56,13 @@ rectangle "Sentient Agent Bundle Manager" #white {
 }
 
 
-    "Distributed Information Management Layer" --> "Software Defined Infrastructure"
+    "Software Defined Infrastructure" <-- "Distributed Information Management Layer"
 
-    "Distributed Information Management Layer" --> "Service Management Layer"
+    "Service Management Layer" <-- "Distributed Information Management Layer"
 
-    "Distributed Information Management Layer" --> "Security Aspect"
+    "Security Aspect" <-- "Distributed Information Management Layer"
 
-    "Distributed Information Management Layer" --> "Identity Aspect"
+    "Identity Aspect" <-- "Distributed Information Management Layer"
 
 
 @enduml

@@ -6,11 +6,11 @@
 
 module.exports = {
     name: 'Manage Application',
-    description: 'Manage Application is the description',
-    method: 'data/govern',
+    description: 'Manage Applications in the system. Including deploying, and updating',
+    method: 'application/list',
     actors: {
         'DevOpsEngineer': 'uses',
-        'SoftwareDeveloper': 'uses'
+        'ApplicationDeveloper': 'uses'
     },
 };
 

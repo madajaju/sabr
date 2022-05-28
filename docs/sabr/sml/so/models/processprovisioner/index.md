@@ -9,7 +9,7 @@ parent: classes
 
 Provisions services as spawned processes.
 
-![Logical Diagram](./logical.svg)
+![Logical Diagram](./logical.png)
 
 ## Attributes
 

@@ -1,14 +1,17 @@
 @startuml
 
 left to right direction
+Actor "ApplicationDeveloper" as ApplicationDeveloper
 Actor "DevOpsEngineer" as DevOpsEngineer
-Actor "SoftwareDeveloper" as SoftwareDeveloper
+Actor "ApplicationDeveloper" as ApplicationDeveloper
 
 
 rectangle "Application Manager" #00aaff {
-usecase "ManageApplication" as ManageApplication
+usecase "IntegrateLearning" as IntegrateLearning
+    ApplicationDeveloper --> IntegrateLearning
+    usecase "ManageApplication" as ManageApplication
     DevOpsEngineer --> ManageApplication
-    SoftwareDeveloper --> ManageApplication
+    ApplicationDeveloper --> ManageApplication
     }
 
 

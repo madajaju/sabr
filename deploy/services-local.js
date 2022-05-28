@@ -1,12 +1,12 @@
 module.exports = {
     services: {
         web: {
-            image: "sabr_admin",
+            image: "sabr_web",
             volumes: {
                 docker: { source: "/var/run/docker.sock", target: "/var/run/docker.sock" }
             },
             interface: {
-                admin: { path: '/web', port: 3000, protocol:"http"},
+                "/web": { path: '/web', port: 3000, protocol:"http"},
             },
             policies: { },
             environment: { },
@@ -17,8 +17,19 @@ module.exports = {
                 docker: { source: "/var/run/docker.sock", target: "/var/run/docker.sock" }
             },
             interface: {
-                pulsar: { path: '/pulsar', port: 6650, protocol:"http"},
-                // pulsaradmin: { path: '/pulsaradm', port: 8081, protocol:"http"},
+                "/pulsar": { path: '/pulsar', port: 6650, protocol:"http"},
+                "/pulsaradmin": { path: '/pulsaradm', port: 8081, protocol:"http"},
+            },
+            policies: { },
+            environment: { },
+        },
+        doc: {
+            image: 'sabr_doc',
+            volumes: {
+                docker: { source: "/var/run/docker.sock", target: "/var/run/docker.sock" }
+            },
+            interface: {
+                "/docs": { path: '/', port: 4000, protocol:"http"},
             },
             policies: { },
             environment: { },

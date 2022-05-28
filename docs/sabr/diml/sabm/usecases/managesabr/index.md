@@ -8,11 +8,11 @@ parent: usecases
 
 Manage SABR is the description
 
-![Activities Diagram](./activities.svg)
+![Activities Diagram](./activities.png)
 
 ## Actors
 
-* [DevOps Engineer](actor-devopsengineer)
+* [DevOps Engineer](actor-devops)
 
 
 
@@ -32,13 +32,13 @@ Manage SABR is the description
 * [Manage SABR](#scenario-DeploySABR3)
 * [Manage SABR](#scenario-DeploySABR4)
 
-  
+
 
 ### Scenario Create SABR
 
 Create SABR is the description
 
-![Scenario CreateSABR](./createsabr.svg)
+![Scenario CreateSABR](./createsabr.png)
 
 #### Steps
 
@@ -53,7 +53,7 @@ Create SABR is the description
 
 #### Actors
 
-* [SoftwareEngineer](actor-softwareengineer)
+* [Application Developer](actor-applicationdeveloper)
 
 
 
@@ -61,7 +61,7 @@ Create SABR is the description
 
 Deploy SABR is the description
 
-![Scenario DeploySABR](./deploysabr.svg)
+![Scenario DeploySABR](./deploysabr.png)
 
 #### Steps
 
@@ -78,7 +78,7 @@ Deploy SABR is the description
 
 #### Actors
 
-* [DevOps Engineer](actor-devopsengineer)
+* [DevOps Engineer](actor-devops)
 
 
 
@@ -86,7 +86,7 @@ Deploy SABR is the description
 
 Deploy SABR is the description
 
-![Scenario DeploySABRtwo](./deploysabrtwo.svg)
+![Scenario DeploySABRtwo](./deploysabrtwo.png)
 
 #### Steps
 
@@ -103,7 +103,7 @@ Deploy SABR is the description
 
 #### Actors
 
-* [DevOps Engineer](actor-devopsengineer)
+* [DevOps Engineer](actor-devops)
 
 
 
@@ -111,7 +111,7 @@ Deploy SABR is the description
 
 Deploy SABR is the description
 
-![Scenario DeploySABRthree](./deploysabrthree.svg)
+![Scenario DeploySABRthree](./deploysabrthree.png)
 
 #### Steps
 
@@ -128,7 +128,7 @@ Deploy SABR is the description
 
 #### Actors
 
-* [DevOps Engineer](actor-devopsengineer)
+* [DevOps Engineer](actor-devops)
 
 
 
@@ -136,7 +136,7 @@ Deploy SABR is the description
 
 Deploy SABR is the description
 
-![Scenario DeploySABRfour](./deploysabrfour.svg)
+![Scenario DeploySABRfour](./deploysabrfour.png)
 
 #### Steps
 
@@ -153,7 +153,7 @@ Deploy SABR is the description
 
 #### Actors
 
-* [DevOps Engineer](actor-devopsengineer)
+* [DevOps Engineer](actor-devops)
 
 
 

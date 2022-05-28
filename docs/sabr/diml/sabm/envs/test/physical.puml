@@ -31,10 +31,10 @@ package "Sentient Agent Bundle Manager" #ffcc88 {
     _sabm_container --> _sabmimage
 
   
-      artifact _sabm_web
+      artifact "_sabm_web" as _sabm_web
       web_container --> _sabm_web
     
-      artifact _sabm_gw
+      artifact "_sabm_gw" as _sabm_gw
       gateway_container --> _sabm_gw
     
   }

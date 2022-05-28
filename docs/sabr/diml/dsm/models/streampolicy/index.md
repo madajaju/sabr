@@ -9,7 +9,7 @@ parent: classes
 
 The Stream Policy takes the Data Stream and creates Data Channels based on the policies
 
-![Logical Diagram](./logical.svg)
+![Logical Diagram](./logical.png)
 
 ## Attributes
 
@@ -79,7 +79,7 @@ The Stream Policy takes the Data Stream and creates Data Channels based on the p
 
 
 ## State Net
-![State Net Diagram](./statenet.svg)
+![State Net Diagram](./statenet.png)
 
 | Name | Description | Events |
 | --- | --- | --- |

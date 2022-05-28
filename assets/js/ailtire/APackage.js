@@ -4,7 +4,16 @@ export default class APackage {
     constructor(config) {
         this.config = config;
     }
-
+    static showList(panel, parent) {
+        $.ajax({
+            url: 'package/list',
+            success: function (results) {
+                console.log(results);
+                let packageList = getPackageNodes(results);
+                w2ui[panel].add(parent, packageList);
+            }
+        });
+    }
     static view3D(node, type) {
         let color = node.color || "lightgray";
         if (type === 'Selected') {
@@ -133,7 +142,6 @@ export default class APackage {
             color: pkg.color
         };
 
-        let i = 0;
         for (let iname in pkg.interface) {
             let name = iname.replace(pkg.prefix, '');
             let node = {
@@ -263,7 +271,7 @@ export default class APackage {
 
         window.graph.toolbar.setToolBar( [
             { type: 'button',  id: 'classes',  text: 'Classes', img: 'w2ui-icon-search',
-                callback: (event) => {
+                onClick: (event) => {
                     window.graph.graph.cameraPosition(
                         {x: 0, y: -0, z: -1000}, // new position
                         {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
@@ -273,7 +281,7 @@ export default class APackage {
                 }
             },
             { type: 'button',  id: 'subpackage',  text: 'Sub Packages', img: 'w2ui-icon-search',
-                callback: (event) => {
+                onClick: (event) => {
                     window.graph.graph.cameraPosition(
                         {x: 0, y: -1000, z: 0}, // new position
                         {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
@@ -283,7 +291,7 @@ export default class APackage {
                 }
             },
             { type: 'button',  id: 'interface',  text: 'Interface', img: 'w2ui-icon-search',
-                callback: (event) => {
+                onClick: (event) => {
                     window.graph.graph.cameraPosition(
                         {x: 0, y: 1000, z: 0}, // new position
                         {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
@@ -293,7 +301,7 @@ export default class APackage {
                 }
             },
             { type: 'button',  id: 'handlers',  text: 'Handlers', img: 'w2ui-icon-search',
-                callback: (event) => {
+                onClick: (event) => {
                     window.graph.graph.cameraPosition(
                         {x: 1000, y: 0, z: 0}, // new position
                         {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
@@ -303,7 +311,7 @@ export default class APackage {
                 }
             },
             { type: 'button',  id: 'usecases',  text: 'UseCases', img: 'w2ui-icon-search',
-                callback: (event) => {
+                onClick: (event) => {
                     window.graph.graph.cameraPosition(
                         {x: 0, y: 0, z: 1000}, // new position
                         {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
@@ -313,7 +321,7 @@ export default class APackage {
                 }
             },
             { type: 'button',  id: 'dependents',  text: 'Dependents', img: 'w2ui-icon-search',
-                callback: (event) => {
+                onClick: (event) => {
                     window.graph.graph.cameraPosition(
                         {x: -1000, y: 0, z: 0}, // new position
                         {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
@@ -355,16 +363,16 @@ export default class APackage {
         // Clear the detail list
         w2ui['objdetail'].clear();
         w2ui['objlist'].onClick = function (event) {
-            // this.showDetail(event);
             w2ui['objdetail'].clear();
             let record = this.get(event.recid);
             let drecords = [];
             let k = 0;
-            let values = record.detail.split('|');
-            for (let i in values) {
-                let value = values[i];
+            let details = record.detail.split('|');
+
+            for (let i in details) {
                 k++;
-                drecords.push({recid: k, name: record.name, value: value});
+                let [dname, info] = details[i].split(',');
+                drecords.push({recid: k, name: dname, value: info});
             }
             w2ui['objdetail'].add(drecords);
             window.graph.selectNodeByID(event.recid);
@@ -465,9 +473,9 @@ function depend3DView(node, type) {
     let geometry = new THREE.BoxGeometry(20, 75, 50);
     const material = new THREE.MeshPhongMaterial({color: color, opacity: 1});
     const box = new THREE.Mesh(geometry, material);
-    const myText = new SpriteText(node.name.replace(/\s/g, '\n'));
-    myText.position.set(-20, 0, 0);
-    box.add(myText);
+    // const myText = new SpriteText(node.name.replace(/\s/g, '\n'));
+    // myText.position.set(-20, 0, 0);
+    // box.add(myText);
     box.position.set(node.x, node.y, node.z);
     box.aid = node.id;
     return box;
@@ -487,9 +495,9 @@ function usecase3DView(node, type) {
     const material = new THREE.MeshPhongMaterial({color: color, opacity: 1});
     const retval = new THREE.Mesh(geometry, material);
     retval.position.set(node.x, node.y, node.z);
-    const myText = new SpriteText(node.name.replace(/\s/g, '\n'));
-    myText.position.set(0, 0, 15);
-    retval.add(myText);
+    // const myText = new SpriteText(node.name.replace(/\s/g, '\n'));
+    // myText.position.set(0, 0, 15);
+    // retval.add(myText);
     retval.aid = node.id;
     return retval;
 }
@@ -531,7 +539,39 @@ function getDetails(objs) {
         let item = objs[j];
         inum++;
         let name = item.name || j;
-        items.push(`<span onclick="expandObject('${item.link}');">${name}</span>`);
+        items.push(`<span onclick="expandObject('${item.link}');">${name}</span>,${item.description}`);
     }
     return items;
+}
+
+function getPackageNodes(pkg) {
+    let sitems = [];
+    for (let pname in pkg.subpackages) {
+        let spkg = pkg.subpackages[pname];
+        let spkgi = {
+            id: spkg.shortname,
+            text: spkg.name,
+            img: 'icon-folder',
+            link: `package/get?id=${pname}`,
+            view: 'package'
+        };
+        if (spkg.subpackages) {
+            let spkgs = getPackageNodes(spkg);
+            spkgi.nodes = spkgs;
+            spkgi.count = spkgs.length;
+        }
+        sitems.push(spkgi);
+    }
+    for (let cname in pkg.classes) {
+        let cls = pkg.classes[cname];
+        let citem = {
+            id: cls.name,
+            text: cls.name,
+            img: 'icon-page',
+            link: `model/get?id=${cname}`,
+            view: 'model'
+        };
+        sitems.push(citem);
+    }
+    return sitems;
 }

@@ -6,12 +6,19 @@ package "Common Physical Layer" #lightgray {
 
     interface "Common Physical Layer" as i {
     
+    
     }
 }
 
-CLI ()-- i
-REST ()-- i
-Web ()-- i
+circle REST
+circle Web
+circle CLI
+circle WebSocket
+
+i -down- Web
+i -down- CLI
+i -down- REST
+WebSocket -left- i: events >
 
 package "Common Physical Layer" #lightgray {
 

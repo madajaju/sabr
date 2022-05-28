@@ -3,9 +3,13 @@
 
 usecase "Manage Capabilities" as ManageCapabilities #yellow
 
-Actor "Software Developer" as SoftwareDeveloper
+Actor "DevOps Engineer" as DevOpsEngineer
 
-SoftwareDeveloper --> ManageCapabilities
+DevOpsEngineer --> ManageCapabilities
+
+Actor "IT Operations" as ITOperations
+
+ITOperations --> ManageCapabilities
 
 
 

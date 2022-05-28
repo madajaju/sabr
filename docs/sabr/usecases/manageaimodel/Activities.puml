@@ -3,9 +3,17 @@
 
 usecase "Manage AI Model" as ManageAIModel #yellow
 
-Actor "AI Developer" as AIDeveloper
+Actor "DataEngineer" as DataEngineer
 
-AIDeveloper --> ManageAIModel
+DataEngineer --> ManageAIModel
+
+Actor "Data Scientist" as DataScientist
+
+DataScientist --> ManageAIModel
+
+Actor "Data Analyst" as DataAnalyst
+
+DataAnalyst --> ManageAIModel
 
 
 

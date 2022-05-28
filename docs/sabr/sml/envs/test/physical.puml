@@ -31,10 +31,10 @@ package "Service Management Layer" #lightgreen {
     _sml_container --> _smlimage
 
   
-      artifact _sml_web
+      artifact "_sml_web" as _sml_web
       web_container --> _sml_web
     
-      artifact _sml_gw
+      artifact "_sml_gw" as _sml_gw
       gateway_container --> _sml_gw
     
   }

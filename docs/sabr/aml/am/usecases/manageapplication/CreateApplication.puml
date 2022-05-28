@@ -1,6 +1,6 @@
 @startuml
 
-actor "SoftwareDeveloper"
+actor "ApplicationDeveloper"
 
 
 entity EventBus
@@ -15,7 +15,7 @@ box Service Orchestrator #aaffaa
     end box
 
 
-"SoftwareDeveloper" -> am: Create Application
+"ApplicationDeveloper" -> am: Create Application
 
     am -> "provisioner": create (name: hello,file: ./templates/application.yml)
 

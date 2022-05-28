@@ -8,11 +8,11 @@ parent: usecases
 
 Remove Capbility is the description
 
-![Activities Diagram](./activities.svg)
+![Activities Diagram](./activities.png)
 
 ## Actors
 
-* [DevOps Engineer](actor-devopsengineer)
+* [DevOps Engineer](actor-devops)
 
 
 
@@ -32,6 +32,6 @@ Remove Capbility is the description
 ## Detail Scenarios
 
 
-  
+
 
 

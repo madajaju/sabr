@@ -6,7 +6,7 @@ export default class AVolume {
     }
 
     static view3D(node, type) {
-        let color = node.color || "#bb8844";
+        let color = node.color || "#00aaaa";
         if (type === 'Selected') {
             color = "yellow";
         } else if (type === 'Targeted') {
@@ -14,7 +14,6 @@ export default class AVolume {
         } else if (type === 'Sourced') {
             color = "green";
         }
-        const theta = 3.14 / 2;
         const opacity = node.opacity || 1;
 
         const material = new THREE.MeshPhongMaterial({color: color, transparent: true, opacity: opacity});

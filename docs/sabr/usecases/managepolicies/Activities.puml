@@ -1,0 +1,20 @@
+@startuml
+
+
+usecase "Manage Policies" as ManagePolicies #yellow
+
+Actor "IT Operations" as ITOperations
+
+ITOperations --> ManagePolicies
+
+
+
+
+
+
+
+
+
+
+
+@enduml

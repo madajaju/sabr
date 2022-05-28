@@ -6,14 +6,14 @@ parent: usecases
 ---
 # Manage Application
 
-Manage Application is the description
+Manage Applications in the system. Including deploying, and updating
 
-![Activities Diagram](./activities.svg)
+![Activities Diagram](./activities.png)
 
 ## Actors
 
-* [DevOps Engineer](actor-devopsengineer)
-* [Software Developer](actor-softwaredeveloper)
+* [DevOps Engineer](actor-devops)
+* [Application Developer](actor-applicationdeveloper)
 
 
 
@@ -31,13 +31,13 @@ Manage Application is the description
 * [Manage Application](#scenario-DestroyApplication)
 * [Manage Application](#scenario-UpdateApplication)
 
-  
+
 
 ### Scenario Create Application
 
 Create Application is the description
 
-![Scenario CreateApplication](./createapplication.svg)
+![Scenario CreateApplication](./createapplication.png)
 
 #### Steps
 
@@ -46,7 +46,7 @@ Create Application is the description
 
 #### Actors
 
-* [Software Developer](actor-softwaredeveloper)
+* [Application Developer](actor-applicationdeveloper)
 
 
 
@@ -54,7 +54,7 @@ Create Application is the description
 
 Destroy Application is the description
 
-![Scenario DestroyApplication](./destroyapplication.svg)
+![Scenario DestroyApplication](./destroyapplication.png)
 
 #### Steps
 
@@ -63,7 +63,7 @@ Destroy Application is the description
 
 #### Actors
 
-* [DevOps Engineer](actor-devopsengineer)
+* [DevOps Engineer](actor-devops)
 
 
 
@@ -71,7 +71,7 @@ Destroy Application is the description
 
 Update Application is the description
 
-![Scenario UpdateApplication](./updateapplication.svg)
+![Scenario UpdateApplication](./updateapplication.png)
 
 #### Steps
 
@@ -80,7 +80,7 @@ Update Application is the description
 
 #### Actors
 
-* [DevOps Engineer](actor-devopsengineer)
+* [DevOps Engineer](actor-devops)
 
 
 

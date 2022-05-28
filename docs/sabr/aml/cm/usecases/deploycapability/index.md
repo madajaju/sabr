@@ -8,11 +8,11 @@ parent: usecases
 
 Deploy Capability is the description
 
-![Activities Diagram](./activities.svg)
+![Activities Diagram](./activities.png)
 
 ## Actors
 
-* [DevOps Engineer](actor-devopsengineer)
+* [DevOps Engineer](actor-devops)
 
 
 
@@ -33,13 +33,13 @@ Deploy Capability is the description
 
 * [Deploy Capability](#scenario-DeployCapabilityRelease)
 
-  
+
 
 ### Scenario Deploy Capability Release
 
 Deploy Capability Release is the description
 
-![Scenario DeployCapabilityRelease](./deploycapabilityrelease.svg)
+![Scenario DeployCapabilityRelease](./deploycapabilityrelease.png)
 
 #### Steps
 
@@ -50,7 +50,7 @@ Deploy Capability Release is the description
 
 #### Actors
 
-* [DevOps Engineer](actor-devopsengineer)
+* [DevOps Engineer](actor-devops)
 
 
 

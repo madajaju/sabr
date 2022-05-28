@@ -22,12 +22,19 @@ package "Application Management Layer" #00aaff {
 
     interface "Application Management Layer" as i {
     
+    
     }
 }
 
-CLI ()-- i
-REST ()-- i
-Web ()-- i
+circle REST
+circle Web
+circle CLI
+circle WebSocket
+
+i -down- Web
+i -down- CLI
+i -down- REST
+WebSocket -left- i: events >
 
 package "Application Management Layer" #00aaff {
 
@@ -50,13 +57,13 @@ rectangle "Learning Corpus" #white {
 }
 
 
-    "Application Management Layer" --> "Distributed Information Management Layer"
+    "Distributed Information Management Layer" <-- "Application Management Layer"
 
-    "Application Management Layer" --> "Service Management Layer"
+    "Service Management Layer" <-- "Application Management Layer"
 
-    "Application Management Layer" --> "Security Aspect"
+    "Security Aspect" <-- "Application Management Layer"
 
-    "Application Management Layer" --> "Identity Aspect"
+    "Identity Aspect" <-- "Application Management Layer"
 
 
 @enduml

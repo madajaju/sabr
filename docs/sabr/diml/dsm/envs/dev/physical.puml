@@ -27,8 +27,8 @@ package "Data Stream Manager" #ffcc88 {
     _dsm_container --> _dsmimage
 
   
-      artifact sabr_pulsar:standalone
-      pulsar_container --> sabr_pulsar:standalone
+      artifact "sabr_pulsar:standalone" as sabr_pulsar_standalone
+      pulsar_container --> sabr_pulsar_standalone
     
   }
 }

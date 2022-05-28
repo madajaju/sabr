@@ -29,62 +29,26 @@ package "sabr" #bbaaff {
     ]
     
 
-node "admin" as adminService
-node "am" as amService
-node "cm" as cmService
-node "dsm" as dsmService
-node "sa" as saService
-node "lc" as lcService
-node "sabm" as sabmService
-node "so" as soService
+node "web" as webService
+node "pulsar" as pulsarService
 node "doc" as docService
 
 
-        artifact "sabr_admin" as sabr_adminimage
+        artifact "sabr_web" as sabr_webimage
     
-        artifact "am" as amimage
-    
-        artifact "cm" as cmimage
-    
-        artifact "dsm" as dsmimage
-    
-        artifact "sa" as saimage
-    
-        artifact "lc" as lcimage
-    
-        artifact "sabm" as sabmimage
-    
-        artifact "so" as soimage
+        artifact "sabr_pulsar:standalone" as sabr_pulsarstandaloneimage
     
         artifact "sabr_doc" as sabr_docimage
     
 }
 
-adminService -[#red]- siblingsnet
+webService -[#red]- siblingsnet
 
-amService -[#blue]- childrennet
-
-cmService -[#blue]- childrennet
-
-dsmService -[#blue]- childrennet
-
-saService -[#blue]- childrennet
-
-lcService -[#blue]- childrennet
-
-sabmService -[#blue]- childrennet
-
-soService -[#blue]- childrennet
+pulsarService -[#red]- siblingsnet
 
 docService -[#red]- siblingsnet
-adminService .... sabr_adminimage
-amService .... amimage
-cmService .... cmimage
-dsmService .... dsmimage
-saService .... saimage
-lcService .... lcimage
-sabmService .... sabmimage
-soService .... soimage
+webService .... sabr_webimage
+pulsarService .... sabr_pulsarstandaloneimage
 docService .... sabr_docimage
 
 

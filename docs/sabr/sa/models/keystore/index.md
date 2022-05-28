@@ -9,7 +9,7 @@ parent: classes
 
 KeyStore contains security and other secret keys
 
-![Logical Diagram](./logical.svg)
+![Logical Diagram](./logical.png)
 
 ## Attributes
 

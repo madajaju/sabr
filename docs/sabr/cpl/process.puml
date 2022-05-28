@@ -6,7 +6,7 @@ state "cpl" as cpl #lightgray {
 }
 
 
-state cpl #lightgray {
+state "cpl" as pstatename #lightgray {
     state "Custom Function" as cplfunction {
     }
 }

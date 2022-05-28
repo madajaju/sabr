@@ -15,17 +15,17 @@ package "Sentient Agent Bundle Resources" #bbaaff {
       REST --> sabr_container
 
   
-    file "web" as web_container
-    REST --> web_container
-    socket ---> web_container
+    file "serviceA" as serviceA_container
+    REST --> serviceA_container
+    socket ---> serviceA_container
+  
+    file "pulsar" as pulsar_container
+    REST --> pulsar_container
+    socket ---> pulsar_container
   
     file "doc" as doc_container
     REST --> doc_container
     socket ---> doc_container
-  
-    file "jekylldoc" as jekylldoc_container
-    REST --> jekylldoc_container
-    socket ---> jekylldoc_container
   
   }
   folder images #ffffff {
@@ -35,14 +35,14 @@ package "Sentient Agent Bundle Resources" #bbaaff {
     sabr_container --> sabrimage
 
   
-      artifact sabr_web
-      web_container --> sabr_web
+      artifact "sabr_web" as sabr_web
+      serviceA_container --> sabr_web
     
-      artifact sabr_doc
+      artifact "sabr_pulsar:standalone" as sabr_pulsar_standalone
+      pulsar_container --> sabr_pulsar_standalone
+    
+      artifact "sabr_doc" as sabr_doc
       doc_container --> sabr_doc
-    
-      artifact sabr-jekyll
-      jekylldoc_container --> sabr-jekyll
     
   }
 }

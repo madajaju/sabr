@@ -1,12 +1,12 @@
 {
   "name": "sabr",
-  "version": "0.0.1",
+  "version": "0.1.1",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
     "build": "ailtire app build --env local --repo madajaju",
-    "install": "ailtire app install --env local --repo madajaju",
+    "deploy": "ailtire app install --env local --repo madajaju",
     "test": "npm run lint && npm run custom-tests && echo 'Done.'",
     "doc": "ailtire app docs",
     "lint": "eslint . --max-warnings=0 --report-unused-disable-directives && echo '✔  Your .js files look good.'",
@@ -18,8 +18,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "ailtire": "latest",
-    "csv-parse": "^4.16.3",
+    "ailtire": "^0.3.9",
     "pulsar-flex": "^1.0.1-beta.9"
   }
 }

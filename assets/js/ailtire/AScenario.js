@@ -165,7 +165,10 @@ export default class AScenario {
 
     handle(result) {
         AScenario.viewDeep3D(result, 'new');
+        detailList(result);
+
         let records = [];
+        // Scenario List for similutation.
         if (!w2ui['scenariolist']) {
             $('#scenariolist').w2grid({
                 name: 'scenariolist',
@@ -173,29 +176,29 @@ export default class AScenario {
                 columns: [
                     {
                         field: 'recid',
-                        label: 'ID',
+                        caption: 'ID',
                         size: '10%',
                         attr: "align=right",
                         sortable: true
                     },
                     {
                         field: 'action',
-                        label: 'Action',
+                        caption: 'Action',
                         size: '30%',
                         attr: "align=right",
                         sortable: true
                     },
                     {
                         field: 'parameters',
-                        label: 'Parameters',
+                        caption: 'Parameters',
                         size: '60%',
-                        attr: "align=right",
+                        attr: "align=left",
                         sortable: true
                     },
                 ],
                 toolbar: {
                     items: [
-                        {id: 'launch', type: 'button', text: 'Launch Scenario', icon: 'w2ui-icon-plus'},
+                        {id: 'launch', type: 'button', caption: 'Launch Scenario', icon: 'w2ui-icon-plus'},
                         {type: 'break'},
                         {
                             id: 'scenarioname',
@@ -204,7 +207,7 @@ export default class AScenario {
                         }
                     ],
                     onClick: function (event) {
-                        if (event.target == 'launch') {
+                        if (event.target === 'launch') {
                             let scenario = w2ui['scenariolist'].scenario;
                             $.ajax({
                                 url: `scenario/launch?id=${scenario.id}`,
@@ -229,6 +232,7 @@ export default class AScenario {
         w2ui['scenariolist'].records = records;
         w2ui['scenariolist_toolbar'].set('scenarioname', {html: `<span style="background-color: #2391dd; padding:5px;">${result.name}</span>`});
         w2ui['scenariolist'].refresh();
+
     }
 
     handleEvent(event, scenario) {
@@ -252,21 +256,77 @@ export default class AScenario {
             w2ui['scenariolist'].set(scenario.currentstep, {"w2ui": {"style": "background-color: #ffbbbb"}});
             window.graph.setNode(scenario.id + '-' + scenario.currentstep, {color:scolor['failed']});
         } else {
-            let parent = window.graph.getSelectedNode();
+            // let parent = window.graph.getSelectedNode();
             // Because the event is not a scenario it is an object event.
             let object = scenario;
-            AObject.addObject(object, parent.id);
+            AObject.addObject(object, '');
         }
         w2ui['scenariolist'].refresh();
     }
 }
 
-function showGraph(scenario, mode) {
-    let data = {nodes: {}, links: {}};
-    if (mode === 'add') {
-        window.graph.addData(data.nodes, data.links);
-    } else {
-        window.graph.setData(data.nodes, data.links);
+function detailList(result) {
+    let records = [];
+    if (!w2ui['objlist']) {
+        $('#objlist').w2grid({name: 'objlist'});
     }
-    window.graph.showLinks();
+    w2ui['objlist'].onClick = function (event) {
+        w2ui['objdetail'].clear();
+        let record = this.get(event.recid);
+        let drecords = [];
+        let k = 0;
+        let details = record.detail.split('|');
+
+        for (let i in details) {
+            k++;
+            let [dname, info] = details[i].split(',');
+            drecords.push({recid: k, name: dname, value: info});
+        }
+        w2ui['objdetail'].add(drecords);
+        window.graph.selectNodeByID(event.recid);
+    };
+    if (!w2ui['objdetail']) {
+        $('#objdetail').w2grid({
+            name: 'objdetail',
+            header: 'Details',
+            show: {header: true, columnHeaders: false},
+            columns: [
+                {
+                    field: 'name',
+                    caption: 'Name',
+                    size: '100px',
+                    style: 'background-color: #efefef; border-bottom: 1px solid white; padding-right: 5px;',
+                    attr: "align=right"
+                },
+                {
+                    field: 'value', caption: 'Value', size: '100%', render: function (record) {
+                        return '<div>' + record.value + '</div>';
+                    }
+                }
+            ]
+        });
+    }
+    let cols = [
+        {field: 'name', size: "20%", resizeable: true, caption: "Name", sortable: true},
+        {field: 'value', size: "80%", resizeable: true, caption: "Value", sortable: true},
+    ];
+    w2ui['objlist'].columns = cols;
+    let i = 0;
+    records.push({recid: i++, name:'name', value:result.name, detail:result.name});
+    records.push({recid: i++, name:'description', value:result.description, detail:result.description});
+    records.push({recid: i++, name:'method', value:result.method, detail:result.method});
+    let actorDetails = Object.keys(result.actors).map( actor => { return `${actor}, <span onclick="expandObject('actor/get?id=${actor}');">${actor}</span>` });
+    records.push({recid: i++, name:'actors', value:Object.keys(result.actors).length, detail:actorDetails.join("|")});
+    let stepsDetails = Object.keys(result.steps).map( item => {
+        return `${result.steps[item].action.name}, ${showParameters(result.steps[item].parameters) }`;
+    });
+    records.push({recid: i++, name:'steps', value:Object.keys(result.steps).length, detail:stepsDetails.join('|')});
+    w2ui['objlist'].records = records;
+    w2ui['objlist'].refresh();
+}
+
+function showParameters(params) {
+    return Object.keys(params).map(name => {
+        return `--${name}=${params[name]}`;
+    }).join(' ');
 }

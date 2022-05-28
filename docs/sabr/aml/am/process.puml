@@ -8,10 +8,20 @@ state "am" as amlam #00aaff {
 }
 
 
-state amlam #00aaff {
+state "amlam" as pstatename #00aaff {
     state "Custom Function" as amfunction {
     }
 }
+
+        state "aml" as aml #00aaff {
+state "am" as amlam #00aaff {
+state "application" as amlamapplication #00aaff {
+state "list" as amlamapplicationlist #00aaff {
+}
+}
+}
+}
+
 
         state "aml" as aml #00aaff {
 state "am" as amlam #00aaff {

@@ -8,7 +8,7 @@ state "sabm" as dimlsabm #ffcc88 {
 }
 
 
-state dimlsabm #ffcc88 {
+state "dimlsabm" as pstatename #ffcc88 {
     state "Custom Function" as sabmfunction {
     }
 }

@@ -9,7 +9,8 @@ module.exports = {
     description: 'Manage Capabilities is the description',
     method: 'application/list',
     actors: {
-        'SoftwareDeveloper': 'uses'
+        'ApplicationDeveloper': 'uses',
+        'DevOpsEngineer': 'uses'
     },
 };
 

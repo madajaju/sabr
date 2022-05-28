@@ -9,7 +9,7 @@ parent: classes
 
 Sentient Agent Bundle consists of the definition of the services, data streams, and configurations to transform data at the edge and publish the results to upstream SABRs
 
-![Logical Diagram](./logical.svg)
+![Logical Diagram](./logical.png)
 
 ## Attributes
 
@@ -102,7 +102,7 @@ Sentient Agent Bundle consists of the definition of the services, data streams, 
 
 
 ## State Net
-![State Net Diagram](./statenet.svg)
+![State Net Diagram](./statenet.png)
 
 | Name | Description | Events |
 | --- | --- | --- |

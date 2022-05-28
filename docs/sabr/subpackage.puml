@@ -5,19 +5,30 @@
 package "Sentient Agent Bundle Resources" #bbaaff {
 
     interface "Sentient Agent Bundle Resources" as i {
+    
             /sabr/aimodel/list()
             /sabr/application/list()
             /sabr/capability/list()
+            /sabr/data/govern()
+            /sabr/policy/list()
             /sabr/pulsar/streams()
             /sabr/pulsar/topic()
             /sabr/pulsar/topics()
+            /sabr/security/list()
+            /sabr/security/manage()
     
     }
 }
 
-CLI ()-- i
-REST ()-- i
-Web ()-- i
+circle REST
+circle Web
+circle CLI
+circle WebSocket
+
+i -down- Web
+i -down- CLI
+i -down- REST
+WebSocket -left- i: events >
 
 package "Sentient Agent Bundle Resources" #bbaaff {
 

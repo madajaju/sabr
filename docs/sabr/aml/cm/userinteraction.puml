@@ -1,6 +1,29 @@
 @startuml
 
-rectangle "TBD"
+
+actor "DevOpsEngineer" as devops
+
+actor "ApplicationDeveloper" as applicationdeveloper
+
+
+
+
+devops -> "Capability Manager": Deploy Capability
+"Capability Manager" -> bin: data govern
+bin -> REST: data/govern
+
+devops -> "Capability Manager": Remove Capbility
+"Capability Manager" -> bin: data govern
+bin -> REST: data/govern
+
+devops -> "Capability Manager": Update Capbility
+"Capability Manager" -> bin: data govern
+bin -> REST: data/govern
+
+applicationdeveloper -> "Capability Manager": Develop Capability
+"Capability Manager" -> bin: capability list
+bin -> REST: capability/list
+
 
 
 @enduml

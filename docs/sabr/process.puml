@@ -4,7 +4,7 @@ left to right direction
 
 
 
-state "sentient agent bundle resources" #bbaaff {
+state "sentient agent bundle resources" as pstatename #bbaaff {
     state "Custom Function" as sabrfunction {
     }
 }
@@ -27,6 +27,18 @@ state "list" as capabilitylist #bbaaff {
 }
 
 
+        state "data" as data #bbaaff {
+state "govern" as datagovern #bbaaff {
+}
+}
+
+
+        state "policy" as policy #bbaaff {
+state "list" as policylist #bbaaff {
+}
+}
+
+
         state "pulsar" as pulsar #bbaaff {
 state "streams" as pulsarstreams #bbaaff {
 }
@@ -41,6 +53,18 @@ state "topic" as pulsartopic #bbaaff {
 
         state "pulsar" as pulsar #bbaaff {
 state "topics" as pulsartopics #bbaaff {
+}
+}
+
+
+        state "security" as security #bbaaff {
+state "list" as securitylist #bbaaff {
+}
+}
+
+
+        state "security" as security #bbaaff {
+state "manage" as securitymanage #bbaaff {
 }
 }
 

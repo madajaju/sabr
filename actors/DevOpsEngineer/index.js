@@ -1,6 +1,6 @@
 module.exports = {
     name: 'DevOps Engineer',
-    shortname: 'devopsengineer',
-    description: 'Long description' +
-        ' Continued on next line',
+    shortname: 'devops',
+    description: 'Responsible for the management of the automation of the delivery of applications and' +
+        ' solutions in the organization. Works closesly with the IT Operators',
 };

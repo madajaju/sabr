@@ -8,11 +8,11 @@ parent: usecases
 
 Develop Capability is the description
 
-![Activities Diagram](./activities.svg)
+![Activities Diagram](./activities.png)
 
 ## Actors
 
-* [Software Developer](actor-softwaredeveloper)
+* [Application Developer](actor-applicationdeveloper)
 
 
 
@@ -36,13 +36,13 @@ Develop Capability is the description
 * [Develop Capability](#scenario-ReleaseCapability)
 * [Develop Capability](#scenario-TestCapability)
 
-  
+
 
 ### Scenario Build Capability
 
 Build Capability is the description
 
-![Scenario BuildCapability](./buildcapability.svg)
+![Scenario BuildCapability](./buildcapability.png)
 
 #### Steps
 
@@ -53,7 +53,7 @@ Build Capability is the description
 
 #### Actors
 
-* [DevOps Engineer](actor-devopsengineer)
+* [DevOps Engineer](actor-devops)
 
 
 
@@ -61,7 +61,7 @@ Build Capability is the description
 
 Create Capability is the description
 
-![Scenario CreateCapability](./createcapability.svg)
+![Scenario CreateCapability](./createcapability.png)
 
 #### Steps
 
@@ -72,7 +72,7 @@ Create Capability is the description
 
 #### Actors
 
-* [DevOps Engineer](actor-devopsengineer)
+* [DevOps Engineer](actor-devops)
 
 
 
@@ -80,7 +80,7 @@ Create Capability is the description
 
 Release Capability is the description
 
-![Scenario ReleaseCapability](./releasecapability.svg)
+![Scenario ReleaseCapability](./releasecapability.png)
 
 #### Steps
 
@@ -95,7 +95,7 @@ Release Capability is the description
 
 #### Actors
 
-* [DevOps Engineer](actor-devopsengineer)
+* [DevOps Engineer](actor-devops)
 
 
 
@@ -103,7 +103,7 @@ Release Capability is the description
 
 Test Capability is the description
 
-![Scenario TestCapability](./testcapability.svg)
+![Scenario TestCapability](./testcapability.png)
 
 #### Steps
 
@@ -116,7 +116,7 @@ Test Capability is the description
 
 #### Actors
 
-* [DevOps Engineer](actor-devopsengineer)
+* [DevOps Engineer](actor-devops)
 
 
 

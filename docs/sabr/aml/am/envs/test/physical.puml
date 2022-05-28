@@ -31,10 +31,10 @@ package "Application Manager" #00aaff {
     _am_container --> _amimage
 
   
-      artifact _am_web
+      artifact "_am_web" as _am_web
       web_container --> _am_web
     
-      artifact _am_gw
+      artifact "_am_gw" as _am_gw
       gateway_container --> _am_gw
     
   }

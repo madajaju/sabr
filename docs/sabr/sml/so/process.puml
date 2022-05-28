@@ -8,7 +8,7 @@ state "so" as smlso #aaffaa {
 }
 
 
-state smlso #aaffaa {
+state "smlso" as pstatename #aaffaa {
     state "Custom Function" as sofunction {
     }
 }

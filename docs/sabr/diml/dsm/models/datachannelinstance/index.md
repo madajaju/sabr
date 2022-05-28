@@ -9,7 +9,7 @@ parent: classes
 
 Data Channel Instance represents the connection of the services to the channel at the edge
 
-![Logical Diagram](./logical.svg)
+![Logical Diagram](./logical.png)
 
 ## Attributes
 
@@ -121,7 +121,7 @@ Data Channel Instance represents the connection of the services to the channel a
 
 
 ## State Net
-![State Net Diagram](./statenet.svg)
+![State Net Diagram](./statenet.png)
 
 | Name | Description | Events |
 | --- | --- | --- |

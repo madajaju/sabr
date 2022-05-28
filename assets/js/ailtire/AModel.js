@@ -1,5 +1,6 @@
 import {AAction, AAttribute, AStateNet, AText} from './index.js';
 
+
 export default class AModel {
     static scolor = {
         started: "#aaffff",
@@ -148,11 +149,13 @@ export default class AModel {
             name: cls.name,
             cube: model3d,
             opacity: 0.5,
-            fx: 0, fy: 0, fz: 0,
+            fx: 0,
+            fy: 0,
+            fz: 0,
             box: "None",
             view: AModel.view3D,
             expandView: AModel.viewDeep3D,
-            expandLink:`model/get?id=${cls.id}`
+            expandLink: `model/get?id=${cls.id}`
         };
 
         let prevID = cls.id;
@@ -169,9 +172,11 @@ export default class AModel {
             let clsid = assoc.type;
             if (!data.nodes.hasOwnProperty(clsid)) {
                 data.nodes[clsid] = {
-                    id: clsid, name: clsid, view: AModel.view3D,
+                    id: clsid,
+                    name: clsid,
+                    view: AModel.view3D,
                     expandView: AModel.viewDeep3D,
-                    expandLink:`model/get?id=${clsid}`,
+                    expandLink: `model/get?id=${clsid}`,
                     rbox: {
                         parent: cls.id,
                         x: {min: bbox.x.min - 200, max: bbox.x.min - 200},
@@ -183,7 +188,9 @@ export default class AModel {
             }
             // data.links.push({target:clsid, source: cls.id, value: 0.1, name: aname, arrow: 20, relpos: 1, curve: 0.1 });
             data.nodes[`Assoc${clsid}`] = {
-                id: `Assoc${clsid}`, name: `${aname} : ${assoc.type}`, view: AAttribute.view3D,
+                id: `Assoc${clsid}`,
+                name: `${aname} : ${assoc.type}`,
+                view: AAttribute.view3D,
                 color: 'magenta',
                 rbox: arbox,
                 rotate: {x: -theta}
@@ -195,10 +202,8 @@ export default class AModel {
             row++;
             if (row < yfactor) {
                 arbox = {
-                    parent: prevID,
-                    x: {min: 0, max: 0}, // Col
-                    y: {min: 0, max: 0},
-                    z: {min: -80, max: -80}, // Row
+                    parent: prevID, x: {min: 0, max: 0}, // Col
+                    y: {min: 0, max: 0}, z: {min: -80, max: -80}, // Row
                 }
 
             } else {
@@ -217,18 +222,14 @@ export default class AModel {
             let attr = cls._attributes[aname];
             let clsid = cls.id + aname
             data.nodes[clsid] = {
-                id: clsid, name: `${aname} : ${attr.type}`, view: AAttribute.view3D,
-                rbox: arbox,
-                rotate: {x: -theta}
+                id: clsid, name: `${aname} : ${attr.type}`, view: AAttribute.view3D, rbox: arbox, rotate: {x: -theta}
             };
             prevID = clsid;
             row++;
             if (row < yfactor) {
                 arbox = {
-                    parent: prevID,
-                    x: {min: 0, max: 0}, // Col
-                    y: {min: 0, max: 0},
-                    z: {min: -80, max: -80}, // Row
+                    parent: prevID, x: {min: 0, max: 0}, // Col
+                    y: {min: 0, max: 0}, z: {min: -80, max: -80}, // Row
                 }
 
             } else {
@@ -254,7 +255,9 @@ export default class AModel {
         }
         for (let mname in cls.methods) {
             data.nodes[`${cls.id}-${mname}`] = {
-                id: `${cls.id}-${mname}`, name: mname, view: AAction.view3D,
+                id: `${cls.id}-${mname}`,
+                name: mname,
+                view: AAction.view3D,
                 rbox: arbox,
                 rotate: {x: -theta, z: -theta, y: theta}
             };
@@ -262,8 +265,7 @@ export default class AModel {
             row++;
             if (row < yfactor) {
                 arbox = {
-                    parent: prevID,
-                    x: {min: 0, max: 0}, // Col
+                    parent: prevID, x: {min: 0, max: 0}, // Col
                     y: {min: -100, max: -100}, // Row
                     z: {min: 0, max: 0},
                 }
@@ -286,101 +288,83 @@ export default class AModel {
         // State Net it if exists.
         if (cls.statenet) {
             let mode = {
-                id: cls.id,
-                ibox: {
+                id: cls.id, ibox: {
                     parent: cls.id,
                     x: {min: bbox.x.max - 5, max: bbox.x.max - 5},
                     y: {min: bbox.y.min - 40, max: bbox.y.min - 40},
                     z: {min: bbox.z.min + 5, max: bbox.z.max - 5}
-                },
-                rbox: {
+                }, rbox: {
                     parent: cls.id,
                     x: {min: bbox.x.min + 10, max: bbox.x.max - 10},
                     y: {min: bbox.y.min - 40, max: bbox.y.min - 40},
                     z: {min: bbox.z.min + 5, max: bbox.z.max - 5}
-                },
-                rotate: {x: theta},
-                mode: 'add'
+                }, rotate: {x: theta}, mode: 'add'
             };
             AStateNet.viewDeep3D(cls.statenet, mode);
         }
-        window.graph.graph.cameraPosition(
-            {x: 0, y: 0, z: 1000}, // new position
+        window.graph.graph.cameraPosition({x: 0, y: 0, z: 1000}, // new position
             {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
             3000  // ms transition duration.
         );
         window.graph.showLinks();
 
-        window.graph.toolbar.setToolBar( [
-            { type: 'button',  id: 'states',  text: 'States', img: 'w2ui-icon-search',
-                callback: (event) => {
-                    window.graph.graph.cameraPosition(
-                        {x: 0, y: 0, z: 1000}, // new position
+        window.graph.toolbar.setToolBar([{
+            type: 'button', id: 'states', text: 'States', img: 'w2ui-icon-search', callback: (event) => {
+                window.graph.graph.cameraPosition({x: 0, y: 0, z: 1000}, // new position
+                    {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
+                    1000);
+                setTimeout(() => {
+                    window.graph.graph.cameraPosition({x: 0, y: -1000, z: 0}, // new position
                         {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
-                        1000
-                    );
-                    setTimeout( () => {
-                        window.graph.graph.cameraPosition(
-                            {x: 0, y: -1000, z: 0}, // new position
-                            {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
-                            1000
-                        );
-                    }, 500);
-                    setTimeout(() => { window.graph.graph.zoomToFit(1000)},1500);
-                }
-            },
-            { type: 'button',  id: 'attributes',  text: 'Attributes', img: 'w2ui-icon-search',
-                callback: (event) => {
-                    window.graph.graph.cameraPosition(
-                        {x: 0, y: 0, z: 1000}, // new position
+                        1000);
+                }, 500);
+                setTimeout(() => {
+                    window.graph.graph.zoomToFit(1000)
+                }, 1500);
+            }
+        }, {
+            type: 'button', id: 'attributes', text: 'Attributes', img: 'w2ui-icon-search', callback: (event) => {
+                window.graph.graph.cameraPosition({x: 0, y: 0, z: 1000}, // new position
+                    {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
+                    1000);
+                setTimeout(() => {
+                    window.graph.graph.cameraPosition({x: 0, y: 1000, z: 0}, // new position
                         {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
-                        1000
-                    );
-                    setTimeout( () => {
-                        window.graph.graph.cameraPosition(
-                            {x: 0, y: 1000, z: 0}, // new position
-                            {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
-                            1000
-                        );
-                    }, 500);
-                    setTimeout(() => { window.graph.graph.zoomToFit(1000)},1500);
-                }
-            },
-            { type: 'button',  id: 'methods',  text: 'Method', img: 'w2ui-icon-search',
-                callback: (event) => {
-                    window.graph.graph.cameraPosition(
-                        {x: 0, y: 0, z: 1000}, // new position
+                        1000);
+                }, 500);
+                setTimeout(() => {
+                    window.graph.graph.zoomToFit(1000)
+                }, 1500);
+            }
+        }, {
+            type: 'button', id: 'methods', text: 'Method', img: 'w2ui-icon-search', callback: (event) => {
+                window.graph.graph.cameraPosition({x: 0, y: 0, z: 1000}, // new position
+                    {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
+                    1000);
+                setTimeout(() => {
+                    window.graph.graph.cameraPosition({x: 1000, y: 0, z: 0}, // new position
                         {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
-                        1000
-                    );
-                    setTimeout( () => {
-                        window.graph.graph.cameraPosition(
-                            {x: 1000, y: 0, z: 0}, // new position
-                            {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
-                            1000
-                        );
-                    }, 500);
-                    setTimeout(() => { window.graph.graph.zoomToFit(1000)},1500);
-                }
-            },
-            { type: 'button',  id: 'associations',  text: 'Associations', img: 'w2ui-icon-search',
-                callback: (event) => {
-                    window.graph.graph.cameraPosition(
-                        {x: 0, y: 0, z: 1000}, // new position
+                        1000);
+                }, 500);
+                setTimeout(() => {
+                    window.graph.graph.zoomToFit(1000)
+                }, 1500);
+            }
+        }, {
+            type: 'button', id: 'associations', text: 'Associations', img: 'w2ui-icon-search', callback: (event) => {
+                window.graph.graph.cameraPosition({x: 0, y: 0, z: 1000}, // new position
+                    {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
+                    1000);
+                setTimeout(() => {
+                    window.graph.graph.cameraPosition({x: -1000, y: 0, z: 0}, // new position
                         {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
-                        1000
-                    );
-                    setTimeout( () => {
-                        window.graph.graph.cameraPosition(
-                            {x: -1000, y: 0, z: 0}, // new position
-                            {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
-                            1000
-                        );
-                    }, 500);
-                    setTimeout(() => { window.graph.graph.zoomToFit(1000)},1500);
-                }
-            },
-        ]);
+                        1000);
+                }, 500);
+                setTimeout(() => {
+                    window.graph.graph.zoomToFit(1000)
+                }, 1500);
+            }
+        },]);
     }
 
     static objectList(result) {
@@ -396,8 +380,7 @@ export default class AModel {
 
     static expandObject(link) {
         $.ajax({
-            url: link,
-            success: AModel.processObjectShow
+            url: link, success: AModel.processObjectShow
         });
     }
 
@@ -407,31 +390,28 @@ export default class AModel {
         }
         if (!w2ui['objdetail']) {
             $('#objdetail').w2grid({
-                name: 'objdetail',
-                header: 'Details',
-                show: {header: true, columnHeaders: false},
-                columns: [
-                    {
-                        field: 'name',
-                        text: 'Name',
-                        size: '100px',
-                        style: 'background-color: #efefef; border-bottom: 1px solid white; padding-right: 5px;',
-                        attr: "align=right"
-                    },
-                    {
-                        field: 'value', text: 'Value', size: '100%', render: function (record) {
-                            return '<div>' + record.value + '</div>';
-                        }
+                name: 'objdetail', header: 'Details', show: {header: true, columnHeaders: false}, columns: [{
+                    field: 'name',
+                    text: 'Name',
+                    size: '100px',
+                    style: 'background-color: #efefef; border-bottom: 1px solid white; padding-right: 5px;',
+                    attr: "align=right"
+                }, {
+                    field: 'value', text: 'Value', size: '100%', render: function (record) {
+                        return '<div>' + record.value + '</div>';
                     }
-                ]
+                }]
             });
         }
 
         let records = [];
-        let cols = [
-            {field: 'name', size: "20%", resizeable: true, text: "Name", sortable: true},
-            {field: 'value', size: "80%", resizeable: true, text: "Value", sortable: true},
-        ];
+        let cols = [{field: 'name', size: "20%", resizeable: true, text: "Name", sortable: true}, {
+            field: 'value',
+            size: "80%",
+            resizeable: true,
+            text: "Value",
+            sortable: true
+        },];
         let rec = result.record;
         let i = 0;
         for (let j in result.columns) {
@@ -482,11 +462,7 @@ export default class AModel {
         for (let i in objs.records) {
             let rec = objs.records[i];
             data.nodes[rec.id] = {
-                id: rec.id,
-                name: rec.name.name,
-                group: rec.type,
-                level: rec.package,
-                view: rec.type + '3D'
+                id: rec.id, name: rec.name.name, group: rec.type, level: rec.package, view: rec.type + '3D'
             }
             // Now add the nodes of the associations
             // Go through the cols and get the associations
@@ -498,23 +474,15 @@ export default class AModel {
                     let obj = rec[colname];
                     if (col.cardinality === 1) {
                         data.nodes[obj.id] = {
-                            id: obj.id,
-                            name: obj.name,
-                            group: obj.type,
-                            level: col.package,
-                            view: obj.type + '3D'
+                            id: obj.id, name: obj.name, group: obj.type, level: col.package, view: obj.type + '3D'
                         };
                         if (col.owner || col.composition) {
                             data.links.push({
-                                source: rec.id,
-                                target: obj.id,
-                                value: 0.1
+                                source: rec.id, target: obj.id, value: 0.1
                             });
                         } else {
                             data.links.push({
-                                source: obj.id,
-                                target: rec.id,
-                                value: 0.1
+                                source: obj.id, target: rec.id, value: 0.1
                             });
                         }
                     } else {
@@ -529,15 +497,11 @@ export default class AModel {
                             };
                             if (col.owner || col.composition) {
                                 data.links.push({
-                                    source: rec.id,
-                                    target: aobj.id,
-                                    value: 5
+                                    source: rec.id, target: aobj.id, value: 5
                                 });
                             } else {
                                 data.links.push({
-                                    target: rec.id,
-                                    source: aobj.id,
-                                    value: 5
+                                    target: rec.id, source: aobj.id, value: 5
                                 });
                             }
                         }
@@ -644,9 +608,7 @@ export default class AModel {
                     // this should be getting the list from the server side.
                     if (col.cardinality === 1) {
                         fields.push({
-                            field: cname.toLowerCase(),
-                            type: 'enum',
-                            options: {
+                            field: cname.toLowerCase(), type: 'enum', options: {
                                 openOnFocus: true,
                                 max: 1,
                                 url: `${col.type.toLowerCase()}/list?mode=json`,
@@ -676,44 +638,35 @@ export default class AModel {
                                         return re1.test(item.name.name);
                                     }
                                 },
-                            },
-                            html: {text: col.name, attr: 'style="width:375px"'}
+                            }, html: {text: col.name, attr: 'style="width:375px"'}
                         });
                     } else {
                         fields.push({
-                            field: cname.toLowerCase(),
-                            type: 'enum',
-                            options: {
-                                url: `${col.type.toLowerCase()}/list?mode=json`,
-                                renderItem: (item) => {
+                            field: cname.toLowerCase(), type: 'enum', options: {
+                                url: `${col.type.toLowerCase()}/list?mode=json`, renderItem: (item) => {
                                     if (item.name.name) {
                                         return item.name.name;
                                     } else {
                                         return item.name;
                                     }
-                                },
-                                renderDrop: (item) => {
+                                }, renderDrop: (item) => {
                                     if (item.name.name) {
                                         return item.name.name;
                                     } else {
                                         return item.name;
                                     }
-                                },
-                                onNew: (event) => {
+                                }, onNew: (event) => {
                                     $.extend(event.item, {name: {name: event.item.text}});
                                     // Add the item on the server side.
-                                },
-                                compare: function (item, search) {
+                                }, compare: function (item, search) {
                                     let re1 = new RegExp(search, 'i');
                                     if (re1.test(item.id)) {
                                         return true;
                                     } else {
                                         return re1.test(item.name.name);
                                     }
-                                },
-                                openOnFocus: true,
-                            },
-                            html: {text: col.name, attr: 'style="width:375px"'}
+                                }, openOnFocus: true,
+                            }, html: {text: col.name, attr: 'style="width:375px"'}
                         });
                     }
                 } else {
@@ -748,25 +701,18 @@ export default class AModel {
                         // Create the model.
                         let url = `${this.modelType}/create`;
                         $.ajax({
-                            url: url,
-                            data: this.record,
-                            success: function (results) {
+                            url: url, data: this.record, success: function (results) {
                                 console.log(results);
                                 // $(w2ui.editModelDialog.box).hide();
                                 w2popup.close();
-                            },
-                            failure: function (results) {
+                            }, failure: function (results) {
                                 console.error(results);
                             }
                         });
-                    },
-                    Reset: function () {
+                    }, Reset: function () {
                         this.clear();
-                    },
-                    custom: {
-                        text: "Cancel",
-                        style: 'background: pink;',
-                        onClick(event) {
+                    }, custom: {
+                        text: "Cancel", style: 'background: pink;', onClick(event) {
                             w2popup.close();
                         }
                     }
@@ -782,7 +728,9 @@ export default class AModel {
         if (w2ui[modelName]) {
             return w2ui[modelName];
         }
-        if(!results.columns) { results.columns = []};
+        if (!results.columns) {
+            results.columns = []
+        }
         let size = `${100 / Object.keys(results.columns).length + 1}%`;
         let cols = [{field: 'state', size: size, resizeable: true, text: 'State', sortable: true}];
         for (let i in results.columns) {
@@ -796,10 +744,7 @@ export default class AModel {
         }
 
         $().w2grid({
-            name: modelName,
-            modelName: results.name,
-            columns: cols,
-            show: {
+            name: modelName, modelName: results.name, columns: cols, show: {
                 header: true,
                 columnHeaders: true,
                 toolbar: true,
@@ -807,17 +752,13 @@ export default class AModel {
                 toolbarAdd: true,
                 toolbarEdit: true,
                 toolbarDelete: true
-            },
-            onAdd: (event) => {
+            }, onAdd: (event) => {
                 let myForm = w2ui[event.target];
                 let editForm = AModel.viewEdit({
-                    name: myForm.results.name,
-                    columns: myForm.results.columns,
-                    record: null
+                    name: myForm.results.name, columns: myForm.results.columns, record: null
                 });
                 AModel.popup(editForm);
-            },
-            onEdit: (event) => {
+            }, onEdit: (event) => {
                 let myForm = w2ui[event.target];
                 let items = myForm.getSelection();
                 let record;
@@ -828,29 +769,22 @@ export default class AModel {
                     }
                 }
                 $.ajax({
-                    url: `${record.type}?id=${record.id}`,
-                    success: function (results) {
+                    url: `${record.type}?id=${record.id}`, success: function (results) {
                         let editForm = AModel.viewEdit({
-                            name: myForm.results.name,
-                            columns: myForm.results.columns,
-                            record: results.record
+                            name: myForm.results.name, columns: myForm.results.columns, record: results.record
                         });
                         AModel.popup(editForm);
-                    },
-                    failure: function (results) {
+                    }, failure: function (results) {
                         console.error("AJAX Failed:", results);
                     }
                 });
                 console.log("Fired AJAX");
-            },
-            onSave: (event) => {
+            }, onSave: (event) => {
                 console.log("Save");
-            },
-            onDelete: (event) => {
+            }, onDelete: (event) => {
                 let items = w2ui[modelName].getSelection();
                 AModel.viewEdit(items[0]);
-            },
-            onSelect: (event) => {
+            }, onSelect: (event) => {
                 let myForm = w2ui[event.target];
                 myForm.selected = event.recid;
                 let record = myForm.get(event.recid);
@@ -881,9 +815,7 @@ export default class AModel {
         // Find out the class methods that are object method and put them here.
         // Add any of the methods in the results as actions in the toolbar.
         let toolbar = {
-            items: [],
-            tooltip: 'top',
-            onClick: (event) => {
+            items: [], tooltip: 'top', onClick: (event) => {
                 console.log(event.item.link);
                 console.log(event.item.inputs);
                 // Pass the object selected in the list from the detail grid into the methodForm
@@ -912,23 +844,17 @@ export default class AModel {
             header: results.name + ' Details',
             toolbar: toolbar,
             show: {header: true, toolbar: true, columnHeaders: false},
-            columns: [
-                {
-                    field: 'name',
-                    text: 'Name',
-                    size: '100px',
-                    style: 'background-color: #efefef; border-bottom: 1px solid white; padding-right: 5px;',
-                    attr: "align=right"
-                },
-                {
-                    field: 'value',
-                    text: 'Value',
-                    size: '100%',
-                    render: function (record) {
-                        return '<div>' + record.value + '</div>';
-                    }
+            columns: [{
+                field: 'name',
+                text: 'Name',
+                size: '100px',
+                style: 'background-color: #efefef; border-bottom: 1px solid white; padding-right: 5px;',
+                attr: "align=right"
+            }, {
+                field: 'value', text: 'Value', size: '100%', render: function (record) {
+                    return '<div>' + record.value + '</div>';
                 }
-            ]
+            }]
         });
         return w2ui[modelName];
     }
@@ -944,6 +870,29 @@ export default class AModel {
         return form;
     };
 
+    static showList(panel, parent) {
+        $.ajax({
+            url: 'model/list', success: function (results) {
+                let modelList = [];
+                let mnames = Object.keys(results).sort();
+                for (let i in mnames) {
+                    let mname = mnames[i];
+                    let model = results[mname];
+                    let mItem = {
+                        id: mname.toLowerCase(),
+                        text: model.name,
+                        img: 'icon-page',
+                        link: `${mname}/list`,
+                        count: model.count,
+                        view: 'model'
+                    };
+                    modelList.push(mItem);
+                }
+                w2ui[panel].add(parent, modelList);
+            }
+        });
+    }
+
     static createMethodForm(result) {
         let formName = `${result.link.replace(/\//g, '')}LaunchForm`;
         if (!w2ui[formName]) {
@@ -954,9 +903,7 @@ export default class AModel {
                     // this should be getting the list from the server side.
                     if (col.cardinality && col.cardinality === 1) {
                         fields.push({
-                            field: cname.toLowerCase(),
-                            type: 'enum',
-                            options: {
+                            field: cname.toLowerCase(), type: 'enum', options: {
                                 openOnFocus: true,
                                 max: 1,
                                 url: `${col.model.toLowerCase()}/list?mode=json`,
@@ -986,58 +933,45 @@ export default class AModel {
                                         return re1.test(item.name.name);
                                     }
                                 },
-                            },
-                            html: {text: col.name, attr: 'style="width:375px"'}
+                            }, html: {text: col.name, attr: 'style="width:375px"'}
                         });
                     } else {
                         fields.push({
-                            field: cname.toLowerCase(),
-                            type: 'enum',
-                            options: {
-                                url: `${col.model.toLowerCase()}/list?mode=json`,
-                                renderItem: (item) => {
+                            field: cname.toLowerCase(), type: 'enum', options: {
+                                url: `${col.model.toLowerCase()}/list?mode=json`, renderItem: (item) => {
                                     if (item.name.name) {
                                         return item.name.name;
                                     } else {
                                         return item.name;
                                     }
-                                },
-                                renderDrop: (item) => {
+                                }, renderDrop: (item) => {
                                     if (item.name.name) {
                                         return item.name.name;
                                     } else {
                                         return item.name;
                                     }
-                                },
-                                onNew: (event) => {
+                                }, onNew: (event) => {
                                     $.extend(event.item, {name: {name: event.item.text}});
                                     // Add the item on the server side.
-                                },
-                                compare: function (item, search) {
+                                }, compare: function (item, search) {
                                     let re1 = new RegExp(search, 'i');
                                     if (re1.test(item.id)) {
                                         return true;
                                     } else {
                                         return re1.test(item.name.name);
                                     }
-                                },
-                                openOnFocus: true,
-                            },
-                            html: {text: col.name, attr: 'style="width:375px"'}
+                                }, openOnFocus: true,
+                            }, html: {text: col.name, attr: 'style="width:375px"'}
                         });
                     }
                 } else {
                     fields.push({
-                        field: cname,
-                        type: col.type
+                        field: cname, type: col.type
                     });
                 }
             }
             $().w2form({
-                name: formName,
-                style: 'border: 0px; background-color: transparent;',
-                fields: fields,
-                actions: {
+                name: formName, style: 'border: 0px; background-color: transparent;', fields: fields, actions: {
                     Save: function () {
                         let data = {};
                         this.validate();
@@ -1060,24 +994,17 @@ export default class AModel {
                         // This is an object method and requires the object oid from the selected in the ListGrid.
                         data[result.model.toLowerCase()] = result.oid;
                         $.ajax({
-                            url: url,
-                            data: data,
-                            success: (results) => {
+                            url: url, data: data, success: (results) => {
                                 w2popup.close();
-                            },
-                            failure: (results) => {
+                            }, failure: (results) => {
                                 console.error(results);
                                 w2popup.close();
                             }
                         });
-                    },
-                    Reset: () => {
+                    }, Reset: () => {
                         this.clear();
-                    },
-                    custom: {
-                        text: "Cancel",
-                        style: 'background: pink;',
-                        onClick(event) {
+                    }, custom: {
+                        text: "Cancel", style: 'background: pink;', onClick(event) {
                             w2popup.close();
                         }
                     }
@@ -1088,15 +1015,194 @@ export default class AModel {
         return w2ui[formName];
     }
 
+    static editDocumentation(results) {
+        let text = results.document || "Enter Details Here";
+        let setURL = selectedObject.link.replace('get', 'set');
+        let fields = [{field: 'summary', type: 'textarea'}, {field: 'documentation', type: 'textarea'},];
+        let editForm = getEditForm(fields, setURL);
+        w2popup.open({
+            height: 850,
+            width: 850,
+            title: 'Edit Documentation',
+            body: '<div id="editModelDocDialog" style="width: 100%; height: 100%;"></div>',
+            showMax: true,
+            onToggle: function (event) {
+                $(w2ui.editModelDialog.box).hide();
+                event.onComplete = function () {
+                    $(w2ui.editModelDocDialog.box).show();
+                    w2ui.editModelDocDialog.resize();
+                }
+            },
+            onOpen: function (event) {
+                event.onComplete = function () {
+                    // specifying an onOpen handler instead is equivalent to specifying an onBeforeOpen handler, which would make this code execute too early and hence not deliver.
+                    $('#editModelDialog').w2render(myForm.name);
+                }
+            }
+        });
+    }
+
+    static editDocs(results, setURL) {
+        let text = results.document || "Enter Details Here";
+        let record = {
+            summary: results.description, documentation: text
+        }
+        let editForm = getEditForm(record, setURL);
+        w2popup.open({
+            height: 850,
+            width: 850,
+            title: 'Edit Documentation',
+            body: '<div id="editModelDocDialog" style="width: 100%; height: 100%;"></div>',
+            showMax: true,
+            onToggle: function (event) {
+                $(w2ui.editModelDialog.box).hide();
+                event.onComplete = function () {
+                    $(w2ui.editModelDialog.box).show();
+                    w2ui.editModelDialog.resize();
+                }
+            },
+            onOpen: function (event) {
+                event.onComplete = function () {
+                    // specifying an onOpen handler instead is equivalent to specifying an onBeforeOpen handler, which would make this code execute too early and hence not deliver.
+                    $('#editModelDocDialog').w2render(editForm.name);
+                    editForm.editors = {documentation: null, summary: null}
+                    ClassicEditor.create(document.querySelector('#documentation'), {})
+                        .then(editor => {
+                            editForm.editors.documentation = editor;
+                        });
+                    ClassicEditor.create(document.querySelector('#summary'), {})
+                        .then(editor => {
+                            editForm.editors.summary = editor;
+                        });
+                }
+            }
+        })
+    }
+
     handle(result) {
         AModel.viewDeep3D(result, 'new');
-        let records = [];
-        AModel.viewDetail({name: result.name}, result);
-        if(!result.name) {
+        AModel.modelDetail(result);
+        if (!result.name) {
             AModel.viewList({name: result.name});
         } else {
             AModel.viewList(result);
         }
         AModel.viewEdit({name: result.name}, result);
     }
+
+    static modelDetail(result) {
+        if (!w2ui['objlist']) {
+            $('#objlist').w2grid({name: 'objlist'});
+        }
+        w2ui['objlist'].onClick = function (event) {
+            w2ui['objdetail'].clear();
+            let record = this.get(event.recid);
+            let drecords = [];
+            let k = 0;
+            let details = record.detail.split('|');
+
+            for (let i in details) {
+                k++;
+                let [dname, info] = details[i].split(',');
+                drecords.push({recid: k, name: dname, value: info});
+            }
+            w2ui['objdetail'].add(drecords);
+            window.graph.selectNodeByID(event.recid);
+        };
+        if (!w2ui['objdetail']) {
+            $('#objdetail').w2grid({
+                name: 'objdetail',
+                header: 'Details',
+                show: {header: true, columnHeaders: false},
+                columns: [
+                    {
+                        field: 'name',
+                        caption: 'Name',
+                        size: '100px',
+                        style: 'background-color: #efefef; border-bottom: 1px solid white; padding-right: 5px;',
+                        attr: "align=right"
+                    },
+                    {
+                        field: 'value', caption: 'Value', size: '100%', render: function (record) {
+                            return '<div>' + record.value + '</div>';
+                        }
+                    }
+                ]
+            });
+        }
+        let cols = [
+            {field: 'name', size: "20%", resizeable: true, caption: "Name", sortable: true},
+            {field: 'value', size: "80%", resizeable: true, caption: "Value", sortable: true},
+        ];
+        w2ui['objlist'].columns = cols;
+
+        let records = [];
+        let i = 0;
+        records.push({recid: i++, name: 'name', value: result.name, detail: result.name});
+        records.push({recid: i++, name: 'Description', value: result.description, detail: result.description});
+        records.push({
+            recid: i++,
+            name: 'Methods',
+            value: Object.keys(result.methods).length,
+            detail: Object.keys(result.methods).map(name => {
+                return `${name},${result.methods[name].description}`;
+            }).join('|')
+        });
+        records.push({
+            recid: i++,
+            name: 'Attributes',
+            value: Object.keys(result._attributes).length,
+            detail: Object.keys(result._attributes).map(name => {
+                return `${name}:${result._attributes[name].type},${result._attributes[name].description}`;
+            }).join('|')
+        });
+        records.push({
+            recid: i++,
+            name: 'Attributes',
+            value: Object.keys(result._associations).length,
+            detail: Object.keys(result._associations).map(name => {
+                return `${name}:${result._associations[name].type},[${result._associations[name].cardinality}] ${result._associations[name].description}`;
+            }).join('|')
+        });
+        w2ui['objlist'].records = records;
+        w2ui['objlist'].refresh();
+    }
+}
+
+function getEditForm(record, setURL) {
+    if (!w2ui['editModelDoc']) {
+        let fields = [{field: 'summary', type: 'textarea',}, {field: 'documentation', type: 'textarea'},];
+        $().w2form({
+            name: 'editModelDoc',
+            saveURL: setURL,
+            style: 'border: 0px; background-color: transparent;',
+            fields: fields,
+            actions: {
+                Save: function () {
+                    let url = this.saveURL;
+                    let newRecord = {
+                        summary: this.editors.summary.getData(),
+                        documentation: this.editors.documentation.getData()
+                    }
+                    $.ajax({
+                        url: url, data: newRecord, success: function (results) {
+                            // $(w2ui.editModelDialog.box).hide();
+                            w2popup.close();
+                        }, failure: function (results) {
+                            console.error(results);
+                        }
+                    });
+                }, Reset: function () {
+                    this.clear();
+                }, custom: {
+                    caption: "Cancel", style: 'background: pink;', onClick(event) {
+                        w2popup.close();
+                    }
+                }
+            }
+        });
+    }
+    w2ui['editModelDoc'].record = record;
+    w2ui['editModelDoc'].saveURL = setURL;
+    return w2ui['editModelDoc'];
 }

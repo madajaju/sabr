@@ -8,7 +8,7 @@ state "lc" as amllc #00aaff {
 }
 
 
-state amllc #00aaff {
+state "amllc" as pstatename #00aaff {
     state "Custom Function" as lcfunction {
     }
 }

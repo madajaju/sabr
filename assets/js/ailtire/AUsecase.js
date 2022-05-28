@@ -5,7 +5,42 @@ export default class AUsecase {
         this.config = config;
         console.log("AUsecase:", config);
     }
-
+    static showList(panel, parent) {
+        $.ajax({
+            url: 'usecase/list',
+            success: function (results) {
+                let ucList = [];
+                for (let uname in results) {
+                    let uc = results[uname];
+                    let ucItem = {
+                        id: uname, text: uc.name, img: 'icon-folder', nodes: [],
+                        link: `usecase/get?id=${uname}`,
+                        view: 'usecase'
+                    };
+                    let snum = 0;
+                    for (let sucname in uc.extended) {
+                        let suc = uc.extended[sucname];
+                        let node = addUseCaseListNode(suc, uname);
+                        ucItem.nodes.push(node);
+                        snum += node.count + 1;
+                    }
+                    for (let sname in uc.scenarios) {
+                        snum++;
+                        ucItem.nodes.push({
+                            id: uname + sname,
+                            text: sname,
+                            img: 'icon-page',
+                            link: `scenario/get?id=${uname}.${sname}`,
+                            view: 'scenario'
+                        });
+                    }
+                    ucItem.count = snum;
+                    ucList.push(ucItem);
+                }
+                w2ui[panel].add(parent, ucList);
+            }
+        });
+    }
     static view3D(node, type) {
         let color = node.color || "#bbbb00";
         if (type === 'Selected') {
@@ -36,14 +71,12 @@ export default class AUsecase {
 
     static viewDeep3D(usecase, mode) {
         let data = {nodes: {}, links: []};
-        const theta = 3.14 / 2;
 
         data.nodes[usecase.id] = {id: usecase.id, name: usecase.name, fx: 0, fy: 0, fz: 0,
             view: AUsecase.view3D,
             expandView: AUsecase.viewDeep3D,
             expandLink: `usecase/get?id=${usecase.id}`
         };
-        let bbox = {z: {max: -100, min: -1000}};
         for (let j in usecase.scenarios) {
             let scenario = usecase.scenarios[j];
             data.nodes[j] = {id: j, name: scenario.name,
@@ -116,7 +149,6 @@ export default class AUsecase {
         let data = {nodes: {}, links: []};
 
         window.graph.clearObjects();
-        const theta = 3.14 / 2;
         for (let ucname in objs) {
             let usecase = objs[ucname];
             usecase.id = ucname;
@@ -303,3 +335,31 @@ export default class AUsecase {
     }
 }
 
+function addUseCaseListNode(usecase, parent) {
+    let uname = usecase.name.replace(/\s/g, '');
+    let snum = 0;
+    let ucItem = {
+        id: `${parent}.${uname}`, text: usecase.name, img: 'icon-folder', nodes: [],
+        link: `usecase/get?id=${uname}`,
+        view: 'usecase'
+    };
+    for (let sucname in usecase.extended) {
+        let suc = usecase.extended[sucname];
+        let node = addUseCaseListNode(suc);
+        ucItem.nodes.push(node);
+        // count the new use case added and all of the sub usecases and scenarios
+        snum += node.count + 1;
+    }
+    for (let sname in usecase.scenarios) {
+        snum++;
+        ucItem.nodes.push({
+            id: uname + sname,
+            text: sname,
+            img: 'icon-page',
+            link: `scenario/get?id=${uname}.${sname}`,
+            view: 'scenario'
+        });
+    }
+    ucItem.count = snum;
+    return ucItem;
+}

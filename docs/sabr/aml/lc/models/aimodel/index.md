@@ -9,7 +9,7 @@ parent: classes
 
 This represents an AIModel
 
-![Logical Diagram](./logical.svg)
+![Logical Diagram](./logical.png)
 
 ## Attributes
 

@@ -9,7 +9,7 @@ parent: classes
 
 This is the input to the transformation. Also known as the consumer of the datastream.
 
-![Logical Diagram](./logical.svg)
+![Logical Diagram](./logical.png)
 
 ## Attributes
 
@@ -38,7 +38,7 @@ This is the input to the transformation. Also known as the consumer of the datas
 
 
 ## State Net
-![State Net Diagram](./statenet.svg)
+![State Net Diagram](./statenet.png)
 
 | Name | Description | Events |
 | --- | --- | --- |

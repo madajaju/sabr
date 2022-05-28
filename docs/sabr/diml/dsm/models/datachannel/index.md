@@ -9,7 +9,7 @@ parent: classes
 
 This represents one channel in the data stream with specific rules for the channel.
 
-![Logical Diagram](./logical.svg)
+![Logical Diagram](./logical.png)
 
 ## Attributes
 
@@ -100,7 +100,7 @@ This represents one channel in the data stream with specific rules for the chann
 
 
 ## State Net
-![State Net Diagram](./statenet.svg)
+![State Net Diagram](./statenet.png)
 
 | Name | Description | Events |
 | --- | --- | --- |

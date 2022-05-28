@@ -28,5 +28,13 @@ export default class A3DGraph {
         }
         this.config.toolbar.refresh();
     }
+
+    addObjectToGraph(result) {
+        let retval = {records: {}, columns: result.columns};
+        retval.records[result.record.id] = result.record;
+        AModel.processObjectsForGraph(retval, 'add');
+        // Select the item in the Graph and centralize on it.
+        window.graph.selectNodeByID(result.record.id);
+    }
 }
 

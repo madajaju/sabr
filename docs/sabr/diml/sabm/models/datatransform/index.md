@@ -9,7 +9,7 @@ parent: classes
 
 Data Transformation taking inputs and producing to outputs.
 
-![Logical Diagram](./logical.svg)
+![Logical Diagram](./logical.png)
 
 ## Attributes
 

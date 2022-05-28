@@ -9,7 +9,7 @@ parent: classes
 
 Instance of a sentient agent bundle. This is were things are running. This includes the instances of services, channels, transformation services, etc...
 
-![Logical Diagram](./logical.svg)
+![Logical Diagram](./logical.png)
 
 ## Attributes
 
@@ -141,7 +141,7 @@ Instance of a sentient agent bundle. This is were things are running. This inclu
 
 
 ## State Net
-![State Net Diagram](./statenet.svg)
+![State Net Diagram](./statenet.png)
 
 | Name | Description | Events |
 | --- | --- | --- |

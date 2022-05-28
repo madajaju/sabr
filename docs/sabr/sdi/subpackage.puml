@@ -10,12 +10,19 @@ package "Software Defined Infrastructure" #lightyellow {
 
     interface "Software Defined Infrastructure" as i {
     
+    
     }
 }
 
-CLI ()-- i
-REST ()-- i
-Web ()-- i
+circle REST
+circle Web
+circle CLI
+circle WebSocket
+
+i -down- Web
+i -down- CLI
+i -down- REST
+WebSocket -left- i: events >
 
 package "Software Defined Infrastructure" #lightyellow {
 
@@ -23,7 +30,7 @@ package "Software Defined Infrastructure" #lightyellow {
 }
 
 
-    "Software Defined Infrastructure" --> "Common Physical Layer"
+    "Common Physical Layer" <-- "Software Defined Infrastructure"
 
 
 @enduml

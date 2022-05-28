@@ -9,7 +9,7 @@ parent: classes
 
 This is a specailization of the DataStreamInstance for producing output.
 
-![Logical Diagram](./logical.svg)
+![Logical Diagram](./logical.png)
 
 ## Attributes
 
@@ -97,7 +97,7 @@ This is a specailization of the DataStreamInstance for producing output.
 
 
 ## State Net
-![State Net Diagram](./statenet.svg)
+![State Net Diagram](./statenet.png)
 
 | Name | Description | Events |
 | --- | --- | --- |

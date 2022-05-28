@@ -8,9 +8,13 @@ package "Sentient Agent Bundle Resources" #bbaaff {
             /sabr/aimodel/list()
             /sabr/application/list()
             /sabr/capability/list()
+            /sabr/data/govern()
+            /sabr/policy/list()
             /sabr/pulsar/streams()
             /sabr/pulsar/topic()
             /sabr/pulsar/topics()
+            /sabr/security/list()
+            /sabr/security/manage()
     
     }
 }

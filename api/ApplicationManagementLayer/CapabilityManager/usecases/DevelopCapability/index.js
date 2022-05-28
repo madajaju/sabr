@@ -9,7 +9,7 @@ module.exports = {
     description: 'Develop Capability is the description',
     method: 'capability/list',
     actors: {
-        'Software Developer': 'uses'
+        'Application Developer': 'uses'
     },
     extends: [ 'Manage Capabilities' ],
 };

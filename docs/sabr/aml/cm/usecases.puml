@@ -2,7 +2,7 @@
 
 left to right direction
 Actor "DevOpsEngineer" as DevOpsEngineer
-Actor "Software Developer" as SoftwareDeveloper
+Actor "Application Developer" as ApplicationDeveloper
 Actor "DevOpsEngineer" as DevOpsEngineer
 Actor "DevOpsEngineer" as DevOpsEngineer
 
@@ -11,7 +11,7 @@ rectangle "Capability Manager" #00aaff {
 usecase "DeployCapability" as DeployCapability
     DevOpsEngineer --> DeployCapability
     usecase "DevelopCapability" as DevelopCapability
-    SoftwareDeveloper --> DevelopCapability
+    ApplicationDeveloper --> DevelopCapability
     usecase "RemoveCapbility" as RemoveCapbility
     DevOpsEngineer --> RemoveCapbility
     usecase "UpdateCapbility" as UpdateCapbility

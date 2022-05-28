@@ -21,6 +21,7 @@ package "Capability Manager" #00aaff {
 package "Capability Manager" #00aaff {
 
     interface "Capability Manager" as i {
+    
             /sabr/aml/cm/capability/build()
             /sabr/aml/cm/capability/deploy()
             /sabr/aml/cm/capability/list()
@@ -32,9 +33,15 @@ package "Capability Manager" #00aaff {
     }
 }
 
-CLI ()-- i
-REST ()-- i
-Web ()-- i
+circle REST
+circle Web
+circle CLI
+circle WebSocket
+
+i -down- Web
+i -down- CLI
+i -down- REST
+WebSocket -left- i: events >
 
 package "Capability Manager" #00aaff {
 
@@ -42,9 +49,9 @@ package "Capability Manager" #00aaff {
 }
 
 
-    "Capability Manager" --> "Sentient Agent Bundle Manager"
+    "Sentient Agent Bundle Manager" <-- "Capability Manager"
 
-    "Capability Manager" --> "Application Manager"
+    "Application Manager" <-- "Capability Manager"
 
 
 @enduml

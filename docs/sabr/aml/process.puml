@@ -6,7 +6,7 @@ state "aml" as aml #00aaff {
 }
 
 
-state aml #00aaff {
+state "aml" as pstatename #00aaff {
     state "Custom Function" as amlfunction {
     }
 }

@@ -14,12 +14,19 @@ package "Service Management Layer" #lightgreen {
 
     interface "Service Management Layer" as i {
     
+    
     }
 }
 
-CLI ()-- i
-REST ()-- i
-Web ()-- i
+circle REST
+circle Web
+circle CLI
+circle WebSocket
+
+i -down- Web
+i -down- CLI
+i -down- REST
+WebSocket -left- i: events >
 
 package "Service Management Layer" #lightgreen {
 
@@ -30,9 +37,9 @@ rectangle "Service Orchestrator" #white {
 }
 
 
-    "Service Management Layer" --> "Software Defined Infrastructure"
+    "Software Defined Infrastructure" <-- "Service Management Layer"
 
-    "Service Management Layer" --> "Distributed Information Management Layer"
+    "Distributed Information Management Layer" <-- "Service Management Layer"
 
 
 @enduml

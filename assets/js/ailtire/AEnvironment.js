@@ -1,10 +1,18 @@
-import {AText, AStack, AService, APackage, AActor, AInterface} from './index.js';
+import {AText, AStack, AService } from './index.js';
 
 export default class AEnvironment {
     constructor(config) {
         this.config = config;
     }
-
+    static showList(panel, parent) {
+        $.ajax({
+            url: 'deployment/list',
+            success: function (results) {
+                let deploymentList = getDeploymentNodes(results);
+                w2ui[panel].add(parent, deploymentList);
+            }
+        });
+    }
     static view3D(node, type) {
         let color = "blue";
         if (type === 'Selected') {
@@ -45,7 +53,6 @@ export default class AEnvironment {
         let data = {nodes: {}, links: []};
 
         window.graph.clearObjects();
-        const theta = 3.14 / 2;
         for (let ename in objs) {
             let env = objs[ename];
             env.id = ename;
@@ -65,7 +72,6 @@ export default class AEnvironment {
         let data = {nodes:{}, links: []};
         console.log(obj);
         for(let sname in obj.stacks) {
-            let stack = obj.stacks[sname];
             data.nodes[sname] = {
                 id: sname,
                 name: sname,
@@ -113,7 +119,6 @@ export default class AEnvironment {
             {field: 'interface', size: "20%", resizeable: true, caption: "Interface", sortable: true}
         ];
         w2ui['objlist'].columns = cols;
-        let i = 0;
         for(let sname in result.stacks) {
             let stack = result.stacks[sname];
             if(stack.design) {
@@ -184,3 +189,34 @@ function getDetails(objs,link) {
     return items;
 }
 
+function getDeploymentNodes(deployments) {
+    let sitems = [];
+    for (let ename in deployments.environments) {
+        let env = deployments.environments[ename];
+        let spkgi = {
+            id: ename,
+            text: ename,
+            img: 'icon-folder',
+            view: 'environment',
+            link: `environment/get?id=${ename}`,
+            nodes: []
+        };
+        if (env.stacks) {
+            for (let sname in env.stacks) {
+                let stack = env.stacks[sname];
+                let citem = {
+                    parent: ename,
+                    id: stack.id,
+                    text: sname,
+                    img: 'icon-page',
+                    link: `deployment/get?id=${stack.id}`,
+                    view: 'stack'
+                };
+                spkgi.nodes.push(citem);
+            }
+            spkgi.count = spkgi.nodes.length;
+        }
+        sitems.push(spkgi);
+    }
+    return sitems;
+}

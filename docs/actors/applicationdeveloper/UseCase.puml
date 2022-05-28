@@ -1,0 +1,24 @@
+@startuml
+
+left to right direction
+
+
+Actor "Application Developer" as ApplicationDeveloper
+
+
+rectangle "Application Manager" as am #00aaff {
+        usecase "Integrate Learning" as IntegrateLearning
+    ApplicationDeveloper --> IntegrateLearning
+    usecase "Manage Application" as ManageApplication
+    ApplicationDeveloper --> ManageApplication
+
+}
+
+rectangle "Capability Manager" as cm #00aaff {
+        usecase "Develop Capability" as DevelopCapability
+    ApplicationDeveloper --> DevelopCapability
+
+}
+
+
+@enduml

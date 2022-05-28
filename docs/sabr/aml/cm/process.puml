@@ -8,7 +8,7 @@ state "cm" as amlcm #00aaff {
 }
 
 
-state amlcm #00aaff {
+state "amlcm" as pstatename #00aaff {
     state "Custom Function" as cmfunction {
     }
 }

@@ -10,11 +10,14 @@ Version 0.0.1
 
 ### Actors
 * [All Actors](actors)
-* [AIDeveloper](actor-aideveloper)
-* [DevOpsEngineer](actor-devopsengineer)
-* [SoftwareDeveloper](actor-softwaredeveloper)
-* [SoftwareEngineer](actor-softwareengineer)
-* [SystemAdmin](actor-systemadmin)
+* [ApplicationDeveloper](actor-applicationdeveloper)
+* [DataAnalyst](actor-analyst)
+* [DataEngineer](actor-dataengineer)
+* [DataScientist](actor-datascientist)
+* [DataSteward](actor-datasteward)
+* [DevOpsEngineer](actor-devops)
+* [ITOperations](actor-itops)
+* [SecurityOperator](actor-secops)
 * [TacticalOperator](actor-tacticaloperator)
 
  
@@ -35,15 +38,17 @@ Version 0.0.1
 
    
 ### Use Cases  
+* [Integrate Learning](usecase-IntegrateLearning)
 * [Manage Application](usecase-ManageApplication)
 * [Deploy Capability](usecase-DeployCapability)
 * [Develop Capability](usecase-DevelopCapability)
 * [Remove Capbility](usecase-RemoveCapbility)
 * [Update Capbility](usecase-UpdateCapbility)
 * [Manage SABR](usecase-ManageSABR)
-* [Find Enemy Combatant](usecase-FindEnemyCombatant)
 * [Manage AI Model](usecase-ManageAIModel)
 * [Manage Capabilities](usecase-ManageCapabilities)
-* [Manage Capbilities](usecase-ManageCapbilities)
+* [Manage Policies](usecase-ManagePolicies)
+* [Manage Security](usecase-ManageSecurity)
+* [Provide Digital Assistance](usecase-ProvideDigitalAssistance)
 
 

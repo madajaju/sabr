@@ -9,7 +9,7 @@ parent: classes
 
 Security Key
 
-![Logical Diagram](./logical.svg)
+![Logical Diagram](./logical.png)
 
 ## Attributes
 

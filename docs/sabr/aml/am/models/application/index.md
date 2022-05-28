@@ -9,7 +9,7 @@ parent: classes
 
 Application contains several SABRs stitched together to create capabilities
 
-![Logical Diagram](./logical.svg)
+![Logical Diagram](./logical.png)
 
 ## Attributes
 

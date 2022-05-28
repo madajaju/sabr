@@ -31,10 +31,10 @@ package "Common Physical Layer" #lightgray {
     _cpl_container --> _cplimage
 
   
-      artifact _cpl_web
+      artifact "_cpl_web" as _cpl_web
       web_container --> _cpl_web
     
-      artifact _cpl_gw
+      artifact "_cpl_gw" as _cpl_gw
       gateway_container --> _cpl_gw
     
   }

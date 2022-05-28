@@ -31,10 +31,10 @@ package "Learning Corpus" #00aaff {
     _lc_container --> _lcimage
 
   
-      artifact _lc_web
+      artifact "_lc_web" as _lc_web
       web_container --> _lc_web
     
-      artifact _lc_gw
+      artifact "_lc_gw" as _lc_gw
       gateway_container --> _lc_gw
     
   }

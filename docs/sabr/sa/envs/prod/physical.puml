@@ -31,10 +31,10 @@ package "Security Aspect" #pink {
     _s_container --> _simage
 
   
-      artifact _s_web
+      artifact "_s_web" as _s_web
       web_container --> _s_web
     
-      artifact _s_gw
+      artifact "_s_gw" as _s_gw
       gateway_container --> _s_gw
     
   }

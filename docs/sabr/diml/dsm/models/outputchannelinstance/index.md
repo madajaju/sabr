@@ -9,7 +9,7 @@ parent: classes
 
 This is the producer to the data stream. Data is flowing out of the transformation.
 
-![Logical Diagram](./logical.svg)
+![Logical Diagram](./logical.png)
 
 ## Attributes
 
@@ -39,7 +39,7 @@ This is the producer to the data stream. Data is flowing out of the transformati
 
 
 ## State Net
-![State Net Diagram](./statenet.svg)
+![State Net Diagram](./statenet.png)
 
 | Name | Description | Events |
 | --- | --- | --- |

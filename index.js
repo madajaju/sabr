@@ -34,6 +34,7 @@ server.listen({
     post: async (config) => {
         console.log("Config:", config);
         console.log("Starting SABR: ", sabrName);
+
         // Create the ServiceInstance object to handle everything.
         if (provisionURL) {
             let servicei = new ServiceInstance({name:sabrName});
@@ -89,6 +90,4 @@ server.listen({
              */
         }
     }
-
 });
-

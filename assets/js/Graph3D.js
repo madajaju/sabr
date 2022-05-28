@@ -1,3 +1,29 @@
+const boundingBox = [
+    {x: 0, y: 0, z: 0},
+    {x: 0, y: 100, z: 0},
+    {x: 0, y: -100, z: 0},
+    {x: 100, y: 0, z: 0},
+    {x: -100, y: 0, z: 0},
+    {x: 0, y: 0, z: 100},
+    {x: 0, y: 0, z: -100},
+    {x: 100, y: 100, z: 0},
+    {x: 100, y: -100, z: 0},
+    {x: 100, y: 0, z: 100},
+    {x: 100, y: 0, z: -100},
+    {x: 100, y: 100, z: 100},
+    {x: 100, y: 100, z: -100},
+    {x: 100, y: -100, z: 100},
+    {x: 100, y: -100, z: -100},
+    {x: -100, y: 100, z: 0},
+    {x: -100, y: -100, z: 0},
+    {x: -100, y: 0, z: 100},
+    {x: -100, y: 0, z: -100},
+    {x: -100, y: 100, z: 100},
+    {x: -100, y: 100, z: -100},
+    {x: -100, y: -100, z: 100},
+    {x: -100, y: -100, z: -100},
+]
+
 class Graph3D {
     constructor(gdiv, data, options) {
         this.objects = {};
@@ -30,7 +56,7 @@ class Graph3D {
         }
         this.data = data;
         this.normalizeData();
-        this.graph = ForceGraph3D({controlType: 'orbit'})
+        this.graph = ForceGraph3D({controlType:'orbit'})
         (document.getElementById(this.gdiv))
             .width(this.options.width)
             .height(this.options.height)
@@ -41,9 +67,6 @@ class Graph3D {
             .nodeThreeObject(node => {
                 let retval = null;
 
-                if (!node.id) {
-                    console.error("Node not ided");
-                }
                 let type = "";
                 if (this.selected.nodes.primary === node) {
                     type += "Selected";
@@ -60,12 +83,12 @@ class Graph3D {
                     let defaultID = "#default3D" + type;
                     let material = null;
 
-                    retval = document.querySelector(objID);
-                    if (!retval) {
-                        retval = document.querySelector(defaultID);
-                    }
-                    let obj3D = retval.object3D.clone();
-                    return obj3D;
+                retval = document.querySelector(objID);
+                if (!retval) {
+                    retval = document.querySelector(defaultID);
+                }
+                let obj3D = retval.object3D.clone();
+                return obj3D;
                 }
             })
             .linkCurvature(link => {
@@ -99,13 +122,14 @@ class Graph3D {
             .linkThreeObjectExtend(true)
             .linkThreeObject(link => {
                 // extend link with text sprite
-                if (link.name) {
+                /*if (link.name) {
                     const sprite = new SpriteText(`${link.name}`);
                     sprite.color = 'lightgrey';
                     sprite.textHeight = 10;
                     sprite.lcurve = link.curve;
                     return sprite;
                 }
+                 */
                 return null;
 
             })
@@ -125,7 +149,7 @@ class Graph3D {
 
                         // Position sprite
                         Object.assign(sprite.position, middlePos);
-                    }
+                }
                 }
             })
             .linkDirectionalParticles(link => {
@@ -171,17 +195,7 @@ class Graph3D {
                 this.selectNode(node);
             })
             .onNodeRightClick(node => {
-                if (node.expandLink && node.expandView) {
-                    $.ajax({
-                        url: node.expandLink,
-                        success: node.expandView,
-                    });
-                    window.graph.graph.cameraPosition(
-                        {x: 0, y: 0, z: node.box * 2}, // new position
-                        {x: node.x, y: node.y, z: node.z}, // lookAt ({ x, y, z })
-                        1000  // ms transition duration.
-                    );
-                } else if (this.expandObject) {
+                if (this.expandObject) {
                     if (node.expandLink) {
                         this.expandObject(this.expandLink);
                     } else {
@@ -217,7 +231,6 @@ class Graph3D {
     }
 
     showLinks() {
-
         for (let id in this.links) {
             let link = this.links[id];
             let source = this.objects[link.source];
@@ -238,9 +251,9 @@ class Graph3D {
     }
 
     clearObjects() {
-        this.unSelectNodes();
         for (let i in this.objects) {
             this.graph.scene().remove(this.objects[i]);
+            ;
         }
         this.objects = {};
         this.links = {};
@@ -255,83 +268,86 @@ class Graph3D {
         this.graph.zoomToFit();
     }
 
-    normalizeData(config) {
+    normalizeData() {
         this.ndata = {
             links: [],
             nodes: []
         };
+        this.levels = {};
+        let totalItems = 0;
         for (let i in this.data.nodes) {
+            let level = this.data.nodes[i].level;
+            let group = this.data.nodes[i].group;
+            if (!this.levels.hasOwnProperty(level)) {
+                this.levels[level] = {};
+            }
+            if (!this.levels[level].hasOwnProperty(group)) {
+                this.levels[level][group] = {x: 0, y: 0, z: 0, items: 0};
+            }
+            this.levels[level][group].items++;
+            totalItems++;
             this.data.nodes[i].size = 30;
             this.ndata.nodes.push(this.data.nodes[i]);
+        }
+        let multiplier = Math.floor(totalItems/30) + 1;
+        let j = 0;
+        for (let i in this.levels) {
+            let level = this.levels[i];
+            let numOfGroups = Object.keys(level).length;
+            for (let k in level) {
+                // Check how many groups in the level
+                level[k].x = boundingBox[j].x * multiplier;
+                level[k].y = (boundingBox[j].y + (100 / numOfGroups)) * multiplier;
+                level[k].z = boundingBox[j].z * multiplier;
+            }
+            j++;
         }
         let linkmap = {};
         // Cleanup links to non-objects
         // If multiple links between objects change the curve.
+        let k = 0;
         for (let i in this.data.links) {
             let source = this.data.links[i].source;
             let target = this.data.links[i].target;
             let found = true;
-            if(typeof source === 'object') {
-                source = source.id;
-                this.data.links[i].source = source;
-            }
-            if(typeof target === 'object') {
-                target = target.id;
-                this.data.links[i].target = target;
-            }
-            if (!this.data.nodes.hasOwnProperty(source)) {
+            if (typeof source === 'string' && !this.data.nodes.hasOwnProperty(source)) {
                 console.error("Could not find the Source Node:", source);
                 found = false;
             }
-            if (!this.data.nodes.hasOwnProperty(target)) {
+            if (typeof target === 'string' && !this.data.nodes.hasOwnProperty(target)) {
                 console.error("Could not find the Target Node:", target);
                 found = false;
             }
             if (found) {
-                //this.ndata.links.push(this.data.links[i]);
+                this.ndata.links.push(this.data.links[i]);
                 if (!linkmap.hasOwnProperty(source + target)) {
                     linkmap[source + target] = [];
                 }
-                linkmap[source + target].push(this.data.links[i]);
+                linkmap[source + target].push(k);
+                k++;
             }
         }
-        if (config && config.links && config.links.single) {
-            for (let ni in linkmap) {
-                let litem = linkmap[ni];
-                let lid = litem[0];
-                lid.value = litem.length;
-                this.ndata.links.push(lid);
-            }
-        }
-        /* This is were we add multiple links and curve them appropriately
-         */
-        else {
-            for (let ni in linkmap) {
-                let litem = linkmap[ni];
-                if (litem.length > 1) {
-                    let curve = -litem.length / 2 * 0.2;
-                    for (let i in litem) {
-                        let lid = litem[i];
-                        lid.curve = curve;
-                        this.ndata.links.push(lid);
-                        curve += 0.2;
-                    }
-                } else {
-                    this.ndata.links.push(litem[0]);
+        for (let ni in linkmap) {
+            let litem = linkmap[ni];
+            if (litem.length > 1) {
+                let curve = -litem.length / 2 * 0.2;
+                for (let i in litem) {
+                    let lid = litem[i];
+                    this.ndata.links[lid].curve = curve;
+                    curve += 0.2;
                 }
-            }
+    }
         }
     };
 
-    setData(pNodes, pLinks, config) {
+    setData(pNodes, pLinks) {
         this.data.nodes = pNodes;
         this.data.links = pLinks;
-        this.normalizeData(config); // Creates the ndata. Normalizedd Data
+        this.normalizeData(); // Creates the ndata. Normalizedd Data
         this.graph.graphData(this.ndata);
-        window.graph.graph.zoomToFit(3000);
     };
 
-    addData(pNodes, pLinks, config) {
+    addData(pNodes, pLinks) {
         for (let i in pNodes) {
             if (!this.data.nodes.hasOwnProperty(i)) {
                 this.data.nodes[i] = pNodes[i];
@@ -340,7 +356,7 @@ class Graph3D {
         for (let i in pLinks) {
             this.data.links.push(pLinks[i]);
         }
-        this.normalizeData(config);
+        this.normalizeData();
         /*
         for(let i in this.levels) {
             const geo = new THREE.SphereGeometry(10);
@@ -413,6 +429,9 @@ class Graph3D {
         if (direction === "target") {
             bdir = "source";
         }
+        if (!node) {
+            console.log("NODE:", node);
+        }
         // Check if I have already processed this node.
         if (this.selected.nodes.source.hasOwnProperty(node.id)) {
             return;
@@ -428,12 +447,12 @@ class Graph3D {
                 this.selected.links[bdir].add(link);
                 if (this.data.nodes.hasOwnProperty(link[direction].id)) {
                     let nnode = this.data.nodes[link[direction].id];
-                    this.selected.nodes[bdir][nnode.id] = nnode;
                     this.selectRelNodes(nnode, direction);
+                    this.selected.nodes[bdir][nnode.id] = nnode;
+                }
                 }
             }
         }
-    }
 
     setNode(nodeid, opts) {
         let node = this.data.nodes[nodeid];
@@ -444,19 +463,16 @@ class Graph3D {
         }
         this.selectNode(this.data.nodes[nodeid]);
     }
-    getSelectedNode() {
-        return this.selected.nodes.primary;
-    }
 }
 
 function forceOnPlane() {
     function constant(_) {
         return () => _;
-    }
+                    }
 
     function index(d) {
         return d.index;
-    }
+                    }
 
     var id = index,
         nodes = [],
@@ -468,13 +484,11 @@ function forceOnPlane() {
             // Relative box to the parent node.
             if (node.rbox) {
                 let parent = nodes[nmap[node.rbox.parent]];
-                if (parent) { // the Parent is found then go forward. If not then don't.
+                if(parent) { // the Parent is found then go forward. If not then don't.
                     if (node.rbox.x) {
                         if (node.rbox.x.min === node.rbox.x.max) {
-                           //  node.fx = node.rbox.x.min;
-                           //  node.x = node.fx;
                             let newx = parent.x + node.rbox.x.min;
-                            node.vx = 0
+                            node.vx = (node.x - newx) / 2 * k;
                             node.x = newx;
                         } else {
                             let newx = node.x + node.vx;
@@ -499,13 +513,10 @@ function forceOnPlane() {
                         let max = parent.y + node.rbox.y.max;
                         let v = node.vy;
                         if (node.rbox.y.min === node.rbox.y.max) {
-                            // node.fy = node.rbox.y.min;
-                            // node.y = node.fy;
                             let newy = parent.y + node.rbox.y.min;
-                            // node.vy = (node.y - newy) / 2;
-                            node.vy = 0;
+                            node.vy = (node.y - newy) / 2;
                             node.y = newy;
-                        } else {
+                    } else {
                             if (Math.abs(node.vy) > Math.abs(max - min)) {
                                 v = (max - min) / 4;
                             }
@@ -520,11 +531,8 @@ function forceOnPlane() {
                     }
                     if (node.rbox.z) {
                         if (node.rbox.z.min === node.rbox.z.max) {
-                            // node.fz = node.rbox.z.min;
-                            // node.z = node.fz;
                             let newz = parent.z + node.rbox.z.min;
-                            // node.vz = (node.z - newz) / 2 * k;
-                            node.vz = 0;
+                            node.vz = (node.z - newz) / 2 * k;
                             node.z = newz;
                         } else {
                             let newz = node.z + node.vz;
@@ -584,7 +592,7 @@ function forceOnPlane() {
 
     function initialize() {
         if (!nodes) return;
-    }
+            }
 
     force.initialize = function (_) {
         nodes = _;

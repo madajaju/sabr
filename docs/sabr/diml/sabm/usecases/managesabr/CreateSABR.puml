@@ -1,6 +1,6 @@
 @startuml
 
-actor "SoftwareEngineer"
+actor "ApplicationDeveloper"
 
 
 entity EventBus
@@ -15,7 +15,7 @@ box Sentient Agent Bundle Manager #ffcc88
     end box
 
 
-"SoftwareEngineer" -> sabm: Create SABR
+"ApplicationDeveloper" -> sabm: Create SABR
 
     sabm -> "sabundle": create (name: mySABR1,file: ./templates/bundle1.js)
 
