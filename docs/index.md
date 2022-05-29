@@ -29,8 +29,7 @@ their data sources and approaches in a unified manner across a distributed ecosy
 Organizations need a solution that provide:
 
 * Security – Provides a hardware root of trust to match AI models with attested hardware to prevent AI models from
-  working outside the attested ecosystem. Also prevents unverified and unattested models from running in the
-  ecosystem.
+  working outside the attested ecosystem. Also prevents unverified and unattested models from running in the ecosystem.
 * Manageability – AI models and algorithms are managed from a federated control plane that manages deployment, updates
   and decommissioning.
 * Auditability – Changes to SAPRs, their AI models and algorithms are tracked from a single management framework that
@@ -58,7 +57,7 @@ sidecar pattern, zero trust architecture, and reinforced collective learning.
 
 The data stream is a mature concept that allows data to be passed between a producer and a set of consumers without
 direct coupling between the entities. This concept provides the ability to deploy large numbers of producers and
-consumers in the same ecosystem without the fragility of coupling. 
+consumers in the same ecosystem without the fragility of coupling.
 
 ![Data Stream Concept](./datastreams.png)
 
@@ -297,6 +296,40 @@ applications and services. Putting in place a modern DevOps stack in the Applica
 deployment velocity. This also decreases the need for Digital Twin infrastructure and operations. Because the hardware
 is shared between the Data Centers and On ship servers, the need to build a complete digital twin is no longer needed.
 Only specialized hardware/application systems would need to be “mimicked (ed)” for digital twin.
+
+## Deployment Design Patterns
+
+This solution is deployed using service stack design pattern where a stack of services collaborate together to deliver
+functionality to the system. An extendtion of this design pattern to aggregated service stacks allow the for isolation
+of different parts of the system to occur while maintaining consistency in security and system policies.
+
+![Deployment](./Deployment.png)
+
+Each aggregated service stack has an administration side-car container that manages and monitors the stack. This micro
+service design pattern is shown in the diagram below. A nodejs app is used to implement the admin sidecar in the system.
+Each service stack has a CLI, REST, and Web Interface exposed through this nodejs application. Additionally, the system
+can handle events through a WebSocket interface. The nodejs application will interface with the microservices and can
+monitor and drive workflows through the mesh of microservices.
+
+The solution can be deployed in different environments. The standard environments in the architecture are local, dev,
+test, and prod. These environments fit into the typical DevOps pipelines that exist in the industry. Additional
+deployment environments can be added to fit the needs of the user.
+
+## Physical Design Pattern
+
+The Sentient Agent Bundle Resources architecture is physically laid out using a microservice architecture on a hybrid
+multi-cloud infrastructure. This includes running in the cloud, in the data center, and on edge devices. All
+capabilities of the system are deployed through micro-services and require a container orchestrator to deploy
+containers.
+
+![Physical](./Physical.png)
+
+All the microservices communicate with the administrative app through a REST. WebSocket and Apache Pulsar interface. A
+CLI, REST, WebSocket, and Web interface is available for external systems or users to interact with the system. All
+communications are encrypted and decryption keys are shared in the secret encrypted vault in the SABR container. Each
+subsystem in the architecture uses an aggregated service/stack pattern that allows for the elasticity of services based
+on the workloads, capacity, and business rules established for the solution. See each subsystem for more information on
+the individual stacks and their services.
 
 
 # Sentient Agent Bundle Resources Details
