@@ -7,7 +7,7 @@ parent: classes
 
 # Capability
 
-Capabilities are deployed across multiple assets in the ecosystem. They consist of connecting multiple SABRs together to show a flow of data through the system.
+Capabilities are deployed across multiple assets in the ecosystem. They consist of connecting multiple SABRs together to show a flow of data through the system. The Capability contains policies that define how the SABR bundles should react to different events in the system. Instances of the Capabilities are managed from the capability manager and consist of all of the information about the running capability.
 
 ![Logical Diagram](./logical.png)
 
@@ -21,28 +21,14 @@ Capabilities are deployed across multiple assets in the ecosystem. They consist 
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
 | policies | n | StreamPolicy |  |  | Policies to apply to the bundles when they are deployed. |
-| bundles | n | SABundle | false | false |  |
-| instances | n | CapabilityInstance | true | true |  |
+| bundles | n | SABundle | false | false | SABR Bundles that make up the Capabilities. |
+| instances | n | CapabilityInstance | true | true | This is a instance of capability running in the ecosystem. |
 
 
 ## Users of the Model
 
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
-| owner | 1 | CapabilityInstance | false | false | Owner of the instance is the capability. |
-| owner | 1 | CapabilityInstance | false | false | Owner of the instance is the capability. |
-| owner | 1 | CapabilityInstance | false | false | Owner of the instance is the capability. |
-| owner | 1 | CapabilityInstance | false | false | Owner of the instance is the capability. |
-| owner | 1 | CapabilityInstance | false | false | Owner of the instance is the capability. |
-| owner | 1 | CapabilityInstance | false | false | Owner of the instance is the capability. |
-| owner | 1 | CapabilityInstance | false | false | Owner of the instance is the capability. |
-| owner | 1 | CapabilityInstance | false | false | Owner of the instance is the capability. |
-| owner | 1 | CapabilityInstance | false | false | Owner of the instance is the capability. |
-| owner | 1 | CapabilityInstance | false | false | Owner of the instance is the capability. |
-| owner | 1 | CapabilityInstance | false | false | Owner of the instance is the capability. |
-| owner | 1 | CapabilityInstance | false | false | Owner of the instance is the capability. |
-| owner | 1 | CapabilityInstance | false | false | Owner of the instance is the capability. |
-| owner | 1 | CapabilityInstance | false | false | Owner of the instance is the capability. |
 | owner | 1 | CapabilityInstance | false | false | Owner of the instance is the capability. |
 
 
@@ -51,27 +37,32 @@ Capabilities are deployed across multiple assets in the ecosystem. They consist 
 
 ## Methods
 
-* [build() - Create a Capability](#action-build)
+* [build() - Build a Capability](#action-build)
 
 * [create() - Create a Capability](#action-create)
 
-* [deploy() - Create a Capability](#action-deploy)
+* [deploy() - Deploy a Capability](#action-deploy)
 
-* [release() - Create a Capability](#action-release)
+* [release() - Release a Capability](#action-release)
 
-* [test() - Create a Capability](#action-test)
+* [test() - Test a Capability](#action-test)
 
 
 <h2>Method Details</h2>
     
 ### Action capability build
 
-* REST - capability/build
-* bin - capability build
-* js - capability.build
 
-Create a Capability
 
+* REST - capability/build?name=string
+* bin - capability build --name string
+* js - capability.build({ name:string })
+
+#### Description
+Build a Capability
+
+
+#### Parameters
 | Name | Type | Required | Description |
 |---|---|---|---|
 | name | string |true | name of the capability |
@@ -81,12 +72,17 @@ Create a Capability
 
 ### Action capability create
 
-* REST - capability/create
-* bin - capability create
-* js - capability.create
 
+
+* REST - capability/create?name=string&amp;file=file
+* bin - capability create --name string --file file
+* js - capability.create({ name:string,file:file })
+
+#### Description
 Create a Capability
 
+
+#### Parameters
 | Name | Type | Required | Description |
 |---|---|---|---|
 | name | string |true | name of the capability |
@@ -97,12 +93,17 @@ Create a Capability
 
 ### Action capability deploy
 
-* REST - capability/deploy
-* bin - capability deploy
-* js - capability.deploy
 
-Create a Capability
 
+* REST - capability/deploy?
+* bin - capability deploy 
+* js - capability.deploy({  })
+
+#### Description
+Deploy a Capability
+
+
+#### Parameters
 | Name | Type | Required | Description |
 |---|---|---|---|
 
@@ -111,12 +112,17 @@ Create a Capability
 
 ### Action capability release
 
-* REST - capability/release
-* bin - capability release
-* js - capability.release
 
-Create a Capability
 
+* REST - capability/release?name=string
+* bin - capability release --name string
+* js - capability.release({ name:string })
+
+#### Description
+Release a Capability
+
+
+#### Parameters
 | Name | Type | Required | Description |
 |---|---|---|---|
 | name | string |true | name of the capability |
@@ -126,12 +132,17 @@ Create a Capability
 
 ### Action capability test
 
-* REST - capability/test
-* bin - capability test
-* js - capability.test
 
-Create a Capability
 
+* REST - capability/test?name=string&amp;file=YAML
+* bin - capability test --name string --file YAML
+* js - capability.test({ name:string,file:YAML })
+
+#### Description
+Test a Capability
+
+
+#### Parameters
 | Name | Type | Required | Description |
 |---|---|---|---|
 | name | string |true | name of the capability |

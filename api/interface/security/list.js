@@ -2,14 +2,9 @@ const path = require('path');
 
 module.exports = {
     friendlyName: 'list',
-    description: 'Description of the action',
+    description: 'List the security profiles.',
     static: true, // True is for Class methods. False is for object based.
     inputs: {
-        attr1: {
-            description: 'Description for the parameter',
-            type: 'string', // string|boolean|number|json
-            required: false
-        },
     },
 
     exits: {

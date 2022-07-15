@@ -2,8 +2,10 @@
 class DockerProvisioner {
     static definition = {
         name: 'DockerProvisioner',
-        description: 'Description ' +
-            'long description',
+        description: 'The DockerProvisioner uses Docker to provision services in the system. This is a' +
+            ' specialization in the system so different provisioners can be used. In this case the docker swarm' +
+            ' engine is used to provision services.',
+        extends: 'Provisioner',
         attributes: {
             name: {
                 type: 'string',
@@ -12,34 +14,6 @@ class DockerProvisioner {
         },
         associations: {
         },
-        /*
-        statenet: {
-            Init: {
-                description: "Initial State"
-                events: {
-                    create: {
-                        StateName: { }
-                    }
-                }
-            },
-            StateName: {
-                description: "My Description of the state",
-                events: {
-                    eventName: {
-                        StateName: {
-                            condition: function(obj) { ... },
-                            action: function(obj) { ... },
-                        }
-                    },
-                    eventName2 ...
-                }
-                actions: {
-                    entry: { entry1: function(obj) { ... } },
-                    exit: { exit1: function(obj): { ... } }
-                }
-            }
-        }
-        */
     }
 }
 

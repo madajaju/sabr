@@ -1,7 +1,8 @@
 module.exports = {
     name: 'Create Application',
-    description: 'Create Application is the description',
-    method: "data/create",
+    description: 'Application developers create application that can be deployed in the ecosystem. This is created' +
+        ' in the traditional DevSecOps pipeline.',
+    method: "application/create",
     actors: {
         'ApplicationDeveloper': 'uses',
     },
@@ -9,4 +10,3 @@ module.exports = {
         { action: 'application/create', parameters: {name:'hello', file:'./templates/application.yml'}},
     ]
 };
-

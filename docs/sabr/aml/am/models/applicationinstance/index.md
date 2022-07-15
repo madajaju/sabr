@@ -7,7 +7,7 @@ parent: classes
 
 # ApplicationInstance
 
-Application Instance that is running in the ecosystem
+An Application Instance represents an application that is running in the ecosystem
 
 ![Logical Diagram](./logical.png)
 
@@ -31,49 +31,25 @@ Application Instance that is running in the ecosystem
 | --- | --- | --- | --- | --- | --- |
 | instances | n | Application | true | true |  |
 | app | 1 | StackInstance | false | false | Application Instance of the stack instance |
-| instances | n | Application | true | true |  |
-| app | 1 | StackInstance | false | false | Application Instance of the stack instance |
-| instances | n | Application | true | true |  |
-| app | 1 | StackInstance | false | false | Application Instance of the stack instance |
-| instances | n | Application | true | true |  |
-| app | 1 | StackInstance | false | false | Application Instance of the stack instance |
-| instances | n | Application | true | true |  |
-| app | 1 | StackInstance | false | false | Application Instance of the stack instance |
-| instances | n | Application | true | true |  |
-| app | 1 | StackInstance | false | false | Application Instance of the stack instance |
-| instances | n | Application | true | true |  |
-| app | 1 | StackInstance | false | false | Application Instance of the stack instance |
-| instances | n | Application | true | true |  |
-| app | 1 | StackInstance | false | false | Application Instance of the stack instance |
-| instances | n | Application | true | true |  |
-| app | 1 | StackInstance | false | false | Application Instance of the stack instance |
-| instances | n | Application | true | true |  |
-| app | 1 | StackInstance | false | false | Application Instance of the stack instance |
-| instances | n | Application | true | true |  |
-| app | 1 | StackInstance | false | false | Application Instance of the stack instance |
-| instances | n | Application | true | true |  |
-| app | 1 | StackInstance | false | false | Application Instance of the stack instance |
-| instances | n | Application | true | true |  |
-| app | 1 | StackInstance | false | false | Application Instance of the stack instance |
-| instances | n | Application | true | true |  |
-| app | 1 | StackInstance | false | false | Application Instance of the stack instance |
-| instances | n | Application | true | true |  |
-| app | 1 | StackInstance | false | false | Application Instance of the stack instance |
 
 
 
 ## State Net
+The ApplicationInstance has a state net corresponding to instances of the class. Each state transistion will emit an 
+event that can be caught with a websocket client. The name of the event is the name of the state in all lower case.
+The following diagram is the state net for this class.
+
 ![State Net Diagram](./statenet.png)
 
 | Name | Description | Events |
 | --- | --- | --- |
-| Init |  | create-&gt;Initializing,  |
-| Initializing |  | provisoned-&gt;Running,  |
-| Running |  | kill-&gt;Stopping,  |
-| Stopping |  | stopped-&gt;Stopped,  |
-| Stopped |  | exit-&gt;Exit, failed-&gt;Failed,  |
-| Exit |  |  |
-| Failed |  |  |
+| Init | Initial State of the Application Instance | create-&gt;Initializing,  |
+| Initializing | When a ApplicationInstance is being initialized in the ecosystem. | provisoned-&gt;Running,  |
+| Running | The ApplicationInstance is running in the ecosystem. | kill-&gt;Stopping,  |
+| Stopping | The ApplicationInstance is stopping but not stopped yet. | stopped-&gt;Stopped,  |
+| Stopped | The ApplicationInstance has been stopped. | exit-&gt;Exit, failed-&gt;Failed,  |
+| Exit | The ApplicationInstance has exited. |  |
+| Failed | The ApplicationInstance failed during initailization or after it was running. |  |
 
 
 

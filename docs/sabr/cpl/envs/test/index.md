@@ -30,9 +30,7 @@ the subsystem's logic.
 
 | Name | Image | Mapping | Ports | Network |
 | --- | --- | --- | --- | --- |
-| child | child_image:latest |  |  | children,parent |
-| frontend | _cpl_web |  |  | sibling |
-| gw | _cpl_gw |  |  | children,sibling |
+| cpl_web | sabr_spl_web |  |  | siblings |
 
 
 #### Networks
@@ -45,9 +43,9 @@ stack in a layer of networks.
 
 | Name | Type | External Name | Ports |
 | --- | --- | --- | --- |
-| children | egress | appname__cpl_family |
-| sibling | internal |  |
-| parent | ingress | appname__family |
+| parent | ingress | parent |
+| children | egress | children |
+| siblings | internal |  |
 
 
 The Stack is micro-segmented off and there are a set of ports that are open for the ingress networks. The following

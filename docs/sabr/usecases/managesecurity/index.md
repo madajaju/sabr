@@ -6,9 +6,9 @@ parent: usecases
 ---
 # Manage Security
 
-Manage Security use case includes prevention, detection, remediation and key management
+Manage Security use case includes attestation of devices and services; prevention, detection, and remediation of cyber threats; and encryption and hash key management.
 
-![Activities Diagram](./activities.png)
+![Activities Diagram](./Activities.png)
 
 ## Actors
 

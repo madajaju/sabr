@@ -2,7 +2,7 @@
 class Provisioner {
     static definition = {
         name: 'Provisioner',
-        description: 'Abstract Provisioner Class',
+        description: 'Abstract Provisioner Class used to develop an interface for the different provisioners.',
         attributes: {
             name: {
                 type: 'string',

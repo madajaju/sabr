@@ -28,34 +28,6 @@ This represents an AIModel
 | --- | --- | --- | --- | --- | --- |
 | aimodels | n | SABundle | false | false |  |
 | aimodels | n | SABundleInstance | false | false |  |
-| aimodels | n | SABundle | false | false |  |
-| aimodels | n | SABundleInstance | false | false |  |
-| aimodels | n | SABundle | false | false |  |
-| aimodels | n | SABundleInstance | false | false |  |
-| aimodels | n | SABundle | false | false |  |
-| aimodels | n | SABundleInstance | false | false |  |
-| aimodels | n | SABundle | false | false |  |
-| aimodels | n | SABundleInstance | false | false |  |
-| aimodels | n | SABundle | false | false |  |
-| aimodels | n | SABundleInstance | false | false |  |
-| aimodels | n | SABundle | false | false |  |
-| aimodels | n | SABundleInstance | false | false |  |
-| aimodels | n | SABundle | false | false |  |
-| aimodels | n | SABundleInstance | false | false |  |
-| aimodels | n | SABundle | false | false |  |
-| aimodels | n | SABundleInstance | false | false |  |
-| aimodels | n | SABundle | false | false |  |
-| aimodels | n | SABundleInstance | false | false |  |
-| aimodels | n | SABundle | false | false |  |
-| aimodels | n | SABundleInstance | false | false |  |
-| aimodels | n | SABundle | false | false |  |
-| aimodels | n | SABundleInstance | false | false |  |
-| aimodels | n | SABundle | false | false |  |
-| aimodels | n | SABundleInstance | false | false |  |
-| aimodels | n | SABundle | false | false |  |
-| aimodels | n | SABundleInstance | false | false |  |
-| aimodels | n | SABundle | false | false |  |
-| aimodels | n | SABundleInstance | false | false |  |
 
 
 

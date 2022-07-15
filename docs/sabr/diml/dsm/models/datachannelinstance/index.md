@@ -35,84 +35,6 @@ Data Channel Instance represents the connection of the services to the channel a
 | instances | n | DataChannel |  |  | This is a collection of all of the instances of the data channel running in the system. |
 | channels | n | DataStreamInstance | true | true | This is the collection of channel instances that are attached to this data stream |
 | policies | n | DataStreamInstance |  | false | This is the list of policies that are controlling the channels of the stream. They can come from the DataStream, the Resource, or the system overall. |
-| instances | n | DataChannel |  |  | This is a collection of all of the instances of the data channel running in the system. |
-| channels | n | DataStreamInstance | true | true | This is the collection of channel instances that are attached to this data stream |
-| policies | n | DataStreamInstance |  | false | This is the list of policies that are controlling the channels of the stream. They can come from the DataStream, the Resource, or the system overall. |
-| instances | n | DataChannel |  |  | This is a collection of all of the instances of the data channel running in the system. |
-| channels | n | DataStreamInstance | true | true | This is the collection of channel instances that are attached to this data stream |
-| policies | n | DataStreamInstance |  | false | This is the list of policies that are controlling the channels of the stream. They can come from the DataStream, the Resource, or the system overall. |
-| instances | n | DataChannel |  |  | This is a collection of all of the instances of the data channel running in the system. |
-| channels | n | DataStreamInstance | true | true | This is the collection of channel instances that are attached to this data stream |
-| policies | n | DataStreamInstance |  | false | This is the list of policies that are controlling the channels of the stream. They can come from the DataStream, the Resource, or the system overall. |
-| instances | n | DataChannel |  |  | This is a collection of all of the instances of the data channel running in the system. |
-| channels | n | DataStreamInstance | true | true | This is the collection of channel instances that are attached to this data stream |
-| policies | n | DataStreamInstance |  | false | This is the list of policies that are controlling the channels of the stream. They can come from the DataStream, the Resource, or the system overall. |
-| instances | n | DataChannel |  |  | This is a collection of all of the instances of the data channel running in the system. |
-| channels | n | DataStreamInstance | true | true | This is the collection of channel instances that are attached to this data stream |
-| policies | n | DataStreamInstance |  | false | This is the list of policies that are controlling the channels of the stream. They can come from the DataStream, the Resource, or the system overall. |
-| channels | n | InputStreamInstance | true | true | This is the collection of channel instances that are attached to this data stream |
-| policies | n | InputStreamInstance |  | false | This is the list of policies that are controlling the channels of the stream. They can come from the DataStream, the Resource, or the system overall. |
-| channels | n | OutputStreamInstance | true | true | This is the collection of channel instances that are attached to this data stream |
-| policies | n | OutputStreamInstance |  | false | This is the list of policies that are controlling the channels of the stream. They can come from the DataStream, the Resource, or the system overall. |
-| instances | n | DataChannel |  |  | This is a collection of all of the instances of the data channel running in the system. |
-| channels | n | DataStreamInstance | true | true | This is the collection of channel instances that are attached to this data stream |
-| policies | n | DataStreamInstance |  | false | This is the list of policies that are controlling the channels of the stream. They can come from the DataStream, the Resource, or the system overall. |
-| channels | n | InputStreamInstance | true | true | This is the collection of channel instances that are attached to this data stream |
-| policies | n | InputStreamInstance |  | false | This is the list of policies that are controlling the channels of the stream. They can come from the DataStream, the Resource, or the system overall. |
-| channels | n | OutputStreamInstance | true | true | This is the collection of channel instances that are attached to this data stream |
-| policies | n | OutputStreamInstance |  | false | This is the list of policies that are controlling the channels of the stream. They can come from the DataStream, the Resource, or the system overall. |
-| instances | n | DataChannel |  |  | This is a collection of all of the instances of the data channel running in the system. |
-| channels | n | DataStreamInstance | true | true | This is the collection of channel instances that are attached to this data stream |
-| policies | n | DataStreamInstance |  | false | This is the list of policies that are controlling the channels of the stream. They can come from the DataStream, the Resource, or the system overall. |
-| channels | n | InputStreamInstance | true | true | This is the collection of channel instances that are attached to this data stream |
-| policies | n | InputStreamInstance |  | false | This is the list of policies that are controlling the channels of the stream. They can come from the DataStream, the Resource, or the system overall. |
-| channels | n | OutputStreamInstance | true | true | This is the collection of channel instances that are attached to this data stream |
-| policies | n | OutputStreamInstance |  | false | This is the list of policies that are controlling the channels of the stream. They can come from the DataStream, the Resource, or the system overall. |
-| instances | n | DataChannel |  |  | This is a collection of all of the instances of the data channel running in the system. |
-| channels | n | DataStreamInstance | true | true | This is the collection of channel instances that are attached to this data stream |
-| policies | n | DataStreamInstance |  | false | This is the list of policies that are controlling the channels of the stream. They can come from the DataStream, the Resource, or the system overall. |
-| channels | n | InputStreamInstance | true | true | This is the collection of channel instances that are attached to this data stream |
-| policies | n | InputStreamInstance |  | false | This is the list of policies that are controlling the channels of the stream. They can come from the DataStream, the Resource, or the system overall. |
-| channels | n | OutputStreamInstance | true | true | This is the collection of channel instances that are attached to this data stream |
-| policies | n | OutputStreamInstance |  | false | This is the list of policies that are controlling the channels of the stream. They can come from the DataStream, the Resource, or the system overall. |
-| instances | n | DataChannel |  |  | This is a collection of all of the instances of the data channel running in the system. |
-| channels | n | DataStreamInstance | true | true | This is the collection of channel instances that are attached to this data stream |
-| policies | n | DataStreamInstance |  | false | This is the list of policies that are controlling the channels of the stream. They can come from the DataStream, the Resource, or the system overall. |
-| channels | n | InputStreamInstance | true | true | This is the collection of channel instances that are attached to this data stream |
-| policies | n | InputStreamInstance |  | false | This is the list of policies that are controlling the channels of the stream. They can come from the DataStream, the Resource, or the system overall. |
-| channels | n | OutputStreamInstance | true | true | This is the collection of channel instances that are attached to this data stream |
-| policies | n | OutputStreamInstance |  | false | This is the list of policies that are controlling the channels of the stream. They can come from the DataStream, the Resource, or the system overall. |
-| instances | n | DataChannel |  |  | This is a collection of all of the instances of the data channel running in the system. |
-| channels | n | DataStreamInstance | true | true | This is the collection of channel instances that are attached to this data stream |
-| policies | n | DataStreamInstance |  | false | This is the list of policies that are controlling the channels of the stream. They can come from the DataStream, the Resource, or the system overall. |
-| channels | n | InputStreamInstance | true | true | This is the collection of channel instances that are attached to this data stream |
-| policies | n | InputStreamInstance |  | false | This is the list of policies that are controlling the channels of the stream. They can come from the DataStream, the Resource, or the system overall. |
-| channels | n | OutputStreamInstance | true | true | This is the collection of channel instances that are attached to this data stream |
-| policies | n | OutputStreamInstance |  | false | This is the list of policies that are controlling the channels of the stream. They can come from the DataStream, the Resource, or the system overall. |
-| instances | n | DataChannel |  |  | This is a collection of all of the instances of the data channel running in the system. |
-| channels | n | DataStreamInstance | true | true | This is the collection of channel instances that are attached to this data stream |
-| policies | n | DataStreamInstance |  | false | This is the list of policies that are controlling the channels of the stream. They can come from the DataStream, the Resource, or the system overall. |
-| channels | n | InputStreamInstance | true | true | This is the collection of channel instances that are attached to this data stream |
-| policies | n | InputStreamInstance |  | false | This is the list of policies that are controlling the channels of the stream. They can come from the DataStream, the Resource, or the system overall. |
-| channels | n | OutputStreamInstance | true | true | This is the collection of channel instances that are attached to this data stream |
-| policies | n | OutputStreamInstance |  | false | This is the list of policies that are controlling the channels of the stream. They can come from the DataStream, the Resource, or the system overall. |
-| instances | n | DataChannel |  |  | This is a collection of all of the instances of the data channel running in the system. |
-| channels | n | DataStreamInstance | true | true | This is the collection of channel instances that are attached to this data stream |
-| policies | n | DataStreamInstance |  | false | This is the list of policies that are controlling the channels of the stream. They can come from the DataStream, the Resource, or the system overall. |
-| channels | n | InputStreamInstance | true | true | This is the collection of channel instances that are attached to this data stream |
-| policies | n | InputStreamInstance |  | false | This is the list of policies that are controlling the channels of the stream. They can come from the DataStream, the Resource, or the system overall. |
-| channels | n | OutputStreamInstance | true | true | This is the collection of channel instances that are attached to this data stream |
-| policies | n | OutputStreamInstance |  | false | This is the list of policies that are controlling the channels of the stream. They can come from the DataStream, the Resource, or the system overall. |
-| instances | n | DataChannel |  |  | This is a collection of all of the instances of the data channel running in the system. |
-| channels | n | DataStreamInstance | true | true | This is the collection of channel instances that are attached to this data stream |
-| policies | n | DataStreamInstance |  | false | This is the list of policies that are controlling the channels of the stream. They can come from the DataStream, the Resource, or the system overall. |
-| channels | n | InputStreamInstance | true | true | This is the collection of channel instances that are attached to this data stream |
-| policies | n | InputStreamInstance |  | false | This is the list of policies that are controlling the channels of the stream. They can come from the DataStream, the Resource, or the system overall. |
-| channels | n | OutputStreamInstance | true | true | This is the collection of channel instances that are attached to this data stream |
-| policies | n | OutputStreamInstance |  | false | This is the list of policies that are controlling the channels of the stream. They can come from the DataStream, the Resource, or the system overall. |
-| instances | n | DataChannel |  |  | This is a collection of all of the instances of the data channel running in the system. |
-| channels | n | DataStreamInstance | true | true | This is the collection of channel instances that are attached to this data stream |
-| policies | n | DataStreamInstance |  | false | This is the list of policies that are controlling the channels of the stream. They can come from the DataStream, the Resource, or the system overall. |
 | channels | n | InputStreamInstance | true | true | This is the collection of channel instances that are attached to this data stream |
 | policies | n | InputStreamInstance |  | false | This is the list of policies that are controlling the channels of the stream. They can come from the DataStream, the Resource, or the system overall. |
 | channels | n | OutputStreamInstance | true | true | This is the collection of channel instances that are attached to this data stream |
@@ -121,15 +43,19 @@ Data Channel Instance represents the connection of the services to the channel a
 
 
 ## State Net
+The DataChannelInstance has a state net corresponding to instances of the class. Each state transistion will emit an 
+event that can be caught with a websocket client. The name of the event is the name of the state in all lower case.
+The following diagram is the state net for this class.
+
 ![State Net Diagram](./statenet.png)
 
 | Name | Description | Events |
 | --- | --- | --- |
 | Init | Initial State | create-&gt;Created,  |
-| Created | Stream is created | disable-&gt;Disabled, destroy-&gt;Destroyed,  |
-| Disabled | Stream is disabled | enable-&gt;Enabled, destroy-&gt;Destroyed,  |
-| Enabled | Stream is Enabled | disbale-&gt;Disabled,  |
-| Destroyed | Stream is destroyed |  |
+| Created | DataChannelInstance is created | disable-&gt;Disabled, destroy-&gt;Destroyed,  |
+| Disabled | DataChannelInstance is disabled | enable-&gt;Enabled, destroy-&gt;Destroyed,  |
+| Enabled | DataChannelInstance is Enabled | disbale-&gt;Disabled,  |
+| Destroyed | DataChannelInstance is destroyed |  |
 
 
 
@@ -144,12 +70,17 @@ Data Channel Instance represents the connection of the services to the channel a
     
 ### Action datachannelinstance create
 
-* REST - datachannelinstance/create
-* bin - datachannelinstance create
-* js - datachannelinstance.create
 
+
+* REST - datachannelinstance/create?name=string&amp;file=YAML
+* bin - datachannelinstance create --name string --file YAML
+* js - datachannelinstance.create({ name:string,file:YAML })
+
+#### Description
 Create a Data Channel Instance
 
+
+#### Parameters
 | Name | Type | Required | Description |
 |---|---|---|---|
 | name | string |true | name of the Sentient Agent Bundle |
@@ -160,12 +91,17 @@ Create a Data Channel Instance
 
 ### Action datachannelinstance failed
 
-* REST - datachannelinstance/failed
-* bin - datachannelinstance failed
-* js - datachannelinstance.failed
 
+
+* REST - datachannelinstance/failed?message=string
+* bin - datachannelinstance failed --message string
+* js - datachannelinstance.failed({ message:string })
+
+#### Description
 Deployment Failed on the Data Channel Instance.
 
+
+#### Parameters
 | Name | Type | Required | Description |
 |---|---|---|---|
 | message | string |true | Failed Message for the deployment error. |

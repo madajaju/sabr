@@ -9,16 +9,16 @@ actor "ApplicationDeveloper" as applicationdeveloper
 
 
 devops -> "Capability Manager": Deploy Capability
-"Capability Manager" -> bin: data govern
-bin -> REST: data/govern
+"Capability Manager" -> bin: capability deploy
+bin -> REST: capability/deploy
 
-devops -> "Capability Manager": Remove Capbility
-"Capability Manager" -> bin: data govern
-bin -> REST: data/govern
+devops -> "Capability Manager": Remove Capability
+"Capability Manager" -> bin: capability remove
+bin -> REST: capability/remove
 
-devops -> "Capability Manager": Update Capbility
-"Capability Manager" -> bin: data govern
-bin -> REST: data/govern
+devops -> "Capability Manager": Update Capability
+"Capability Manager" -> bin: capability update
+bin -> REST: capability/update
 
 applicationdeveloper -> "Capability Manager": Develop Capability
 "Capability Manager" -> bin: capability list

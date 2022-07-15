@@ -2,7 +2,7 @@ module.exports = {
     name: 'serviceinstance.deployed',
     handlers: [
         {
-            description: 'Handle the service is ready to be provisioned',
+            description: 'Handle the service deployed and make sure it is ready to be provisioned.',
             action: '/aml/am/service/provision',
             fn: (data) => {
                 if(data.obj) {

@@ -7,9 +7,7 @@ package "Sentient Agent Bundle Resources" #bbaaff {
     interface "Sentient Agent Bundle Resources" as i {
     
             /sabr/aimodel/list()
-            /sabr/application/list()
             /sabr/capability/list()
-            /sabr/data/govern()
             /sabr/policy/list()
             /sabr/pulsar/streams()
             /sabr/pulsar/topic()

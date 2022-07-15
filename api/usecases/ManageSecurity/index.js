@@ -6,7 +6,8 @@
 
 module.exports = {
     name: 'Manage Security',
-    description: 'Manage Security use case includes prevention, detection, remediation and key management',
+    description: 'Manage Security use case includes attestation of devices and services; prevention, detection,' +
+        ' and remediation of cyber threats; and encryption and hash key management.',
     method: 'security/list',
     actors: {
         'SecurityOperator': 'uses'

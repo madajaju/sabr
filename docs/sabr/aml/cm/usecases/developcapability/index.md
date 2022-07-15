@@ -6,9 +6,9 @@ parent: usecases
 ---
 # Develop Capability
 
-Develop Capability is the description
+Develop Capability allows the application developer to develop a capability that contains multiple SABRs that working together to provide the capability.
 
-![Activities Diagram](./activities.png)
+![Activities Diagram](./Activities.png)
 
 ## Actors
 
@@ -21,7 +21,7 @@ Develop Capability is the description
 ## Extends Use Cases
 
 
-* [0](usecase-0)
+* [Manage Capabilities](usecase-ManageCapabilities)
 
 
 
@@ -31,18 +31,18 @@ Develop Capability is the description
 
 ## Detail Scenarios
 
-* [Develop Capability](#scenario-BuildCapability)
-* [Develop Capability](#scenario-CreateCapability)
-* [Develop Capability](#scenario-ReleaseCapability)
-* [Develop Capability](#scenario-TestCapability)
+* [BuildCapability](#scenario-BuildCapability)
+* [CreateCapability](#scenario-CreateCapability)
+* [ReleaseCapability](#scenario-ReleaseCapability)
+* [TestCapability](#scenario-TestCapability)
 
 
 
 ### Scenario Build Capability
 
-Build Capability is the description
+Build capability allows a DevOps engineer to build a capability that gets deployed into the ecosystem.
 
-![Scenario BuildCapability](./buildcapability.png)
+![Scenario BuildCapability](./BuildCapability.png)
 
 #### Steps
 
@@ -59,9 +59,9 @@ Build Capability is the description
 
 ### Scenario Create Capability
 
-Create Capability is the description
+Create Capability allows for a capability to be created in the ecosystem. A capability contains a set of SABRs that work together to provide specific solutions in the ecosystem.
 
-![Scenario CreateCapability](./createcapability.png)
+![Scenario CreateCapability](./CreateCapability.png)
 
 #### Steps
 
@@ -78,9 +78,9 @@ Create Capability is the description
 
 ### Scenario Release Capability
 
-Release Capability is the description
+Release Capability allows a capability to be released which includes creating a package that contains a sat of signed and certified SABRs that talk to each other to deliver capabilities to the ecosystem. When the capability is released it contains a hash that can be checked when deployed.
 
-![Scenario ReleaseCapability](./releasecapability.png)
+![Scenario ReleaseCapability](./ReleaseCapability.png)
 
 #### Steps
 
@@ -101,9 +101,9 @@ Release Capability is the description
 
 ### Scenario Test Capability
 
-Test Capability is the description
+Test Capability allows DevOps Engineers to test a capability before it is released. This is part of the DevSecOps process.
 
-![Scenario TestCapability](./testcapability.png)
+![Scenario TestCapability](./TestCapability.png)
 
 #### Steps
 

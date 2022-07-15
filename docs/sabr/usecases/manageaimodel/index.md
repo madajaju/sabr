@@ -8,7 +8,7 @@ parent: usecases
 
 Manage AI Model allows the data users to create, destroy, and update models, version control them and deploy them in the system.
 
-![Activities Diagram](./activities.png)
+![Activities Diagram](./Activities.png)
 
 ## Actors
 

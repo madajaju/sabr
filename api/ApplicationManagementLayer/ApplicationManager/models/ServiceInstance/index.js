@@ -6,7 +6,7 @@ class ServiceInstance {
             'actions can be performed on the instance as defined by the runScripts association. ',
         attributes: {
             name: {
-                description: 'NAme of the service instance',
+                description: 'Name of the service instance',
                 type: 'string',
             },
             pid: {

@@ -2,7 +2,7 @@
 class InputStreamInstance {
     static definition = {
         name: 'InputStreamInstance',
-        description: 'This is a specailization of the DataStreamInstance for producing output.',
+        description: 'This is a specialization of the DataStreamInstance for producing output.',
         extends: 'DataStreamInstance',
         attributes: {
             consumer: {

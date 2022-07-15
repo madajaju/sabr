@@ -49,7 +49,7 @@ class DataChannelInstance {
                 }
             },
             Created: {
-                description: "Stream is created",
+                description: "DataChannelInstance is created",
                 events: {
                     disable: {
                         Disabled: {}
@@ -60,7 +60,7 @@ class DataChannelInstance {
                 },
             },
             Disabled: {
-                description: "Stream is disabled",
+                description: "DataChannelInstance is disabled",
                 events: {
                     enable: {
                         Enabled: {}
@@ -71,7 +71,7 @@ class DataChannelInstance {
                 }
             },
             Enabled: {
-                description: "Stream is Enabled",
+                description: "DataChannelInstance is Enabled",
                 events: {
                     disbale: {
                         Disabled: {}
@@ -79,7 +79,7 @@ class DataChannelInstance {
                 }
             },
             Destroyed: {
-                description: "Stream is destroyed",
+                description: "DataChannelInstance is destroyed",
             },
         },
         view: {

@@ -1,7 +1,8 @@
 module.exports = {
     name: 'Deploy Capability Release',
-    description: 'Deploy Capability Release is the description',
-    method: "data/create",
+    description: 'Deploy Capability Release allows a capability to be deployed into the ecosystem, which can include' +
+        ' several SABRs in the ecosystem across a set of heterogeneous resources.',
+    method: "capability/deploy",
     actors: {
         'DevOpsEngineer': 'uses',
     },

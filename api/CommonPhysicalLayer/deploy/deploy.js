@@ -1,23 +1,29 @@
 
 module.exports = {
-    name: '_cpl',
+    name: 'sabr_cpl',
     contexts: {
+        local: {
+            type: 'swarm',
+            tag: 'sabr_cpl:local',
+            design: 'services.js',
+            env: {}
+        },
         dev: {
             type: 'swarm',
-            tag: '_cpl_dev',
-            file: 'docker-compose.yml',
+            tag: 'sabr_cpl:dev',
+            design: 'services.js',
             env: {}
         },
         test: {
             type: 'swarm',
-            tag: '_cpl_test',
-            file: 'docker-compose.yml',
+            tag: 'sabr_cpl:test',
+            design: 'services.js',
             env: {}
         },
         prod: {
             type: 'swarm',
-            tag: '_cpl_prod',
-            file: 'docker-compose.yml',
+            tag: 'sabr_cpl:prod',
+            design: 'services.js',
             env: {}
         }
     }

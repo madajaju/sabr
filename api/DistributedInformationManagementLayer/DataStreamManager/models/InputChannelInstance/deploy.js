@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
     friendlyName: 'deploy',
-    description: 'Deploy the channel',
+    description: 'Deploy the channel instance',
     static: false, // True is for Class methods. False is for object based.
     inputs: {},
 

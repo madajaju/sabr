@@ -1,23 +1,29 @@
 
 module.exports = {
-    name: '_lc',
+    name: 'sabr_aml_lc',
     contexts: {
+        local: {
+            type: 'swarm',
+            tag: 'sabr_aml_lc:local',
+            design: 'services.js',
+            env: {}
+        },
         dev: {
             type: 'swarm',
-            tag: '_lc_dev',
-            file: 'docker-compose.yml',
+            tag: 'sabr_aml_lc:dev',
+            design: 'services.js',
             env: {}
         },
         test: {
             type: 'swarm',
-            tag: '_lc_test',
-            file: 'docker-compose.yml',
+            tag: 'sabr_aml_lc:test',
+            design: 'services.js',
             env: {}
         },
         prod: {
             type: 'swarm',
-            tag: '_lc_prod',
-            file: 'docker-compose.yml',
+            tag: 'sabr_aml_lc:prod',
+            design: 'services.js',
             env: {}
         }
     }

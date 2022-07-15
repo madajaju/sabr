@@ -6,9 +6,9 @@ parent: usecases
 ---
 # Manage Application
 
-Manage Applications in the system. Including deploying, and updating
+Manage Applications in the system. Including creating, deploying, and updating. Applications are primarily managed by DevOps engineers and developed by an application developer.
 
-![Activities Diagram](./activities.png)
+![Activities Diagram](./Activities.png)
 
 ## Actors
 
@@ -27,17 +27,17 @@ Manage Applications in the system. Including deploying, and updating
 
 ## Detail Scenarios
 
-* [Manage Application](#scenario-CreateApplication)
-* [Manage Application](#scenario-DestroyApplication)
-* [Manage Application](#scenario-UpdateApplication)
+* [CreateApplication](#scenario-CreateApplication)
+* [DestroyApplication](#scenario-DestroyApplication)
+* [UpdateApplication](#scenario-UpdateApplication)
 
 
 
 ### Scenario Create Application
 
-Create Application is the description
+Application developers create application that can be deployed in the ecosystem. This is created in the traditional DevSecOps pipeline.
 
-![Scenario CreateApplication](./createapplication.png)
+![Scenario CreateApplication](./CreateApplication.png)
 
 #### Steps
 
@@ -52,9 +52,9 @@ Create Application is the description
 
 ### Scenario Destroy Application
 
-Destroy Application is the description
+DevOps engineer can decommission applications in the ecosystem by destroying applications in the ecosystem.
 
-![Scenario DestroyApplication](./destroyapplication.png)
+![Scenario DestroyApplication](./DestroyApplication.png)
 
 #### Steps
 
@@ -69,9 +69,9 @@ Destroy Application is the description
 
 ### Scenario Update Application
 
-Update Application is the description
+A DevSecOps engineer utilizes the DevSecOps pipeline to update an application that has been deployed in the ecosystem. There are several updating models that can be utilized to update the application, including staggered updates, and blue-green updates.
 
-![Scenario UpdateApplication](./updateapplication.png)
+![Scenario UpdateApplication](./UpdateApplication.png)
 
 #### Steps
 

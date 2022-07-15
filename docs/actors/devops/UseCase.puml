@@ -15,10 +15,10 @@ rectangle "Application Manager" as am #00aaff {
 rectangle "Capability Manager" as cm #00aaff {
         usecase "Deploy Capability" as DeployCapability
     DevOpsEngineer --> DeployCapability
-    usecase "Remove Capbility" as RemoveCapbility
-    DevOpsEngineer --> RemoveCapbility
-    usecase "Update Capbility" as UpdateCapbility
-    DevOpsEngineer --> UpdateCapbility
+    usecase "Remove Capability" as RemoveCapability
+    DevOpsEngineer --> RemoveCapability
+    usecase "Update Capability" as UpdateCapability
+    DevOpsEngineer --> UpdateCapability
 
 }
 

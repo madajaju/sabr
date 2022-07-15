@@ -17,6 +17,7 @@ class SABundleInstance {
         },
         associations: {
             parent: {
+                description: 'Parent of the SAB Instance',
                 type: 'SABundle',
                 cardinality: 1,
             },

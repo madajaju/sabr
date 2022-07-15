@@ -43,8 +43,9 @@ users interact with the system.
 * [ sabr diml sabm connect](#action--sabr-diml-sabm-connect)
 * [ sabr diml sabm bundle createanddeploy](#action--sabr-diml-sabm-bundle-createanddeploy)
 * [ sabr diml sabm bundle deploy](#action--sabr-diml-sabm-bundle-deploy)
-* [ sabr diml sabm bundle list](#action--sabr-diml-sabm-bundle-list)
 * [ sabr diml sabm sabundle create](#action--sabr-diml-sabm-sabundle-create)
+* [ sabr diml sabm sabundle deploy](#action--sabr-diml-sabm-sabundle-deploy)
+* [ sabr diml sabm sabundle list](#action--sabr-diml-sabm-sabundle-list)
 
 
 ## Logical Artifacts
@@ -141,11 +142,38 @@ The Sentient Agent Bundle Manager subsystem provides the following activities an
 cases and scenarios of the subsystem.
 
 
+### Messages Handled
+
+The Sentient Agent Bundle Manager subsystem is an event driven architecture and handle several events. The following
+events are handled by this subsystem. Please note that this subsystem is not the only subsystem that handles
+these events.
+
+| Message | Action | Description |
+| --- | --- | --- |
+| sabundleinstance.created | Custom Action |  |
+| sabundleinstance.deployed | Custom Action |  |
+| sabundleinstance.enabled | Custom Action |  |
+
 
 
 ### Messages Sent
 
-TBD
+| Event | Description | Emitter |
+|-------|-------------|---------|
+| datatransform.create |  When an object of type DataTransform is created. | DataTransform
+| datatransform.destroy |  When an object of type DataTransform is destroyed. | DataTransform
+| datatransform.updated |  When an object of type DataTransform has an attribute or association updated. | DataTransform
+| datatransforminstance.create |  When an object of type DataTransformInstance is created. | DataTransformInstance
+| datatransforminstance.destroy |  When an object of type DataTransformInstance is destroyed. | DataTransformInstance
+| datatransforminstance.updated |  When an object of type DataTransformInstance has an attribute or association updated. | DataTransformInstance
+| sabundle.create |  When an object of type SABundle is created. | SABundle
+| sabundle.destroy |  When an object of type SABundle is destroyed. | SABundle
+| sabundle.updated |  When an object of type SABundle has an attribute or association updated. | SABundle
+| sabundleinstance.create |  When an object of type SABundleInstance is created. | SABundleInstance
+| sabundleinstance.destroy |  When an object of type SABundleInstance is destroyed. | SABundleInstance
+| sabundleinstance.updated |  When an object of type SABundleInstance has an attribute or association updated. | SABundleInstance
+
+
 
 ## Interface Details
 The Sentient Agent Bundle Manager subsystem has a well defined interface. This interface can be accessed using a
@@ -154,12 +182,17 @@ subsystems and actors can access the system.
 
 ### Action  sabr diml sabm connect
 
-* REST - /sabr/diml/sabm/connect
-* bin -  sabr diml sabm connect
-* js - .sabr.diml.sabm.connect
 
+
+* REST - /sabr/diml/sabm/connect?sabr=string&amp;level=string
+* bin -  sabr diml sabm connect --sabr string --level string
+* js - .sabr.diml.sabm.connect({ sabr:string,level:string })
+
+#### Description
 Set the level of operation
 
+
+#### Parameters
 | Name | Type | Required | Description |
 |---|---|---|---|
 | sabr | string |true | The SABR to set the level |
@@ -169,12 +202,17 @@ Set the level of operation
 
 ### Action  sabr diml sabm bundle createanddeploy
 
-* REST - /sabr/diml/sabm/bundle/createanddeploy
-* bin -  sabr diml sabm bundle createanddeploy
-* js - .sabr.diml.sabm.bundle.createanddeploy
 
-Deploy the bundle
 
+* REST - /sabr/diml/sabm/bundle/createanddeploy?name=string&amp;file=file&amp;policies=file
+* bin -  sabr diml sabm bundle createanddeploy --name string --file file --policies file
+* js - .sabr.diml.sabm.bundle.createanddeploy({ name:string,file:file,policies:file })
+
+#### Description
+Create and deploy the bundle
+
+
+#### Parameters
 | Name | Type | Required | Description |
 |---|---|---|---|
 | name | string |true | name of the Sentient Agent Bundle |
@@ -185,12 +223,17 @@ Deploy the bundle
 
 ### Action  sabr diml sabm bundle deploy
 
-* REST - /sabr/diml/sabm/bundle/deploy
-* bin -  sabr diml sabm bundle deploy
-* js - .sabr.diml.sabm.bundle.deploy
 
+
+* REST - /sabr/diml/sabm/bundle/deploy?sabr=string&amp;policies=string
+* bin -  sabr diml sabm bundle deploy --sabr string --policies string
+* js - .sabr.diml.sabm.bundle.deploy({ sabr:string,policies:string })
+
+#### Description
 Deploy the bundle
 
+
+#### Parameters
 | Name | Type | Required | Description |
 |---|---|---|---|
 | sabr | string |true | The name of the SABR |
@@ -198,28 +241,57 @@ Deploy the bundle
 
 
 
-### Action  sabr diml sabm bundle list
+### Action  sabr diml sabm sabundle create
 
-* REST - /sabr/diml/sabm/bundle/list
-* bin -  sabr diml sabm bundle list
-* js - .sabr.diml.sabm.bundle.list
 
+
+* REST - /sabr/diml/sabm/sabundle/create?attr1=string
+* bin -  sabr diml sabm sabundle create --attr1 string
+* js - .sabr.diml.sabm.sabundle.create({ attr1:string })
+
+#### Description
 Description of the action
 
+
+#### Parameters
 | Name | Type | Required | Description |
 |---|---|---|---|
 | attr1 | string |false | Description for the parameter |
 
 
 
-### Action  sabr diml sabm sabundle create
+### Action  sabr diml sabm sabundle deploy
 
-* REST - /sabr/diml/sabm/sabundle/create
-* bin -  sabr diml sabm sabundle create
-* js - .sabr.diml.sabm.sabundle.create
 
+
+* REST - /sabr/diml/sabm/sabundle/deploy?attr1=string
+* bin -  sabr diml sabm sabundle deploy --attr1 string
+* js - .sabr.diml.sabm.sabundle.deploy({ attr1:string })
+
+#### Description
 Description of the action
 
+
+#### Parameters
+| Name | Type | Required | Description |
+|---|---|---|---|
+| attr1 | string |false | Description for the parameter |
+
+
+
+### Action  sabr diml sabm sabundle list
+
+
+
+* REST - /sabr/diml/sabm/sabundle/list?attr1=string
+* bin -  sabr diml sabm sabundle list --attr1 string
+* js - .sabr.diml.sabm.sabundle.list({ attr1:string })
+
+#### Description
+Description of the action
+
+
+#### Parameters
 | Name | Type | Required | Description |
 |---|---|---|---|
 | attr1 | string |false | Description for the parameter |

@@ -11,31 +11,24 @@ package "Common Physical Layer" #lightgray {
   binName --> REST
 
   folder deploy #ffffff {
-      file "node server.js\ndocker-compose.yml" as _cpl_container
-      REST --> _cpl_container
+      file "node server.js\n" as sabr_cpl_container
+      REST --> sabr_cpl_container
 
   
     file "web" as web_container
     REST --> web_container
     socket ---> web_container
   
-    file "gateway" as gateway_container
-    REST --> gateway_container
-    socket ---> gateway_container
-  
   }
   folder images #ffffff {
-    collections "_cpl" as _cplimage
+    collections "sabr_cpl" as sabr_cplimage
     artifact "ailtire:swarm" as ailtireswarm
-    _cplimage <|-- ailtireswarm
-    _cpl_container --> _cplimage
+    sabr_cplimage <|-- ailtireswarm
+    sabr_cpl_container --> sabr_cplimage
 
   
-      artifact "_cpl_web" as _cpl_web
-      web_container --> _cpl_web
-    
-      artifact "_cpl_gw" as _cpl_gw
-      gateway_container --> _cpl_gw
+      artifact "sabr_cpl_web" as sabr_cpl_web
+      web_container --> sabr_cpl_web
     
   }
 }

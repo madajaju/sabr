@@ -61,7 +61,7 @@ class DataStream {
                 }
             },
             Created: {
-                description: "Stream is created",
+                description: "DataStream is created",
                 events: {
                     disable: {
                         Disabled: { }
@@ -72,7 +72,7 @@ class DataStream {
                 },
             },
             Disabled: {
-                description: "Stream is disabled",
+                description: "DataStream is disabled",
                 events: {
                     enable: {
                         Enabled: {}
@@ -83,7 +83,7 @@ class DataStream {
                 }
             },
             Enabled: {
-                description: "Stream is Enabled",
+                description: "DataStream is Enabled",
                 events: {
                     disbale: {
                         Disabled: { }
@@ -91,7 +91,7 @@ class DataStream {
                 }
             },
             Destroyed: {
-                description: "Stream is destroyed",
+                description: "DataStream is destroyed",
             },
         },
         view: {

@@ -6,8 +6,9 @@
 
 module.exports = {
     name: 'Deploy Capability',
-    description: 'Deploy Capability is the description',
-    method: 'data/govern',
+    description: 'Deploy a capability into the ecosystem. This should deploy all of the SABRs in the capability or' +
+        ' attach to currently running SABRs in the defined capabiility.',
+    method: 'capability/deploy',
     actors: {
         'DevOpsEngineer': 'uses'
     },

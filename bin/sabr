@@ -5,7 +5,7 @@ const fs = require('fs');
 require('./lib/subcommander');
 let config;
 program
-    .version('0.1.1')
+    .version('0.1.2')
     .command('init', 'Initalize the connection');
 try {
     global.ailtire = { config: require('../.ailtire.js') };
@@ -21,5 +21,3 @@ try {
     console.log("You must run init first!");
 }
 program.parse(process.argv);
-
-

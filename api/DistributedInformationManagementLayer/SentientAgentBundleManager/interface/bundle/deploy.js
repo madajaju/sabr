@@ -28,6 +28,8 @@ module.exports = {
     fn: function (inputs, env) {
         // inputs contains the obj for the this method.
         let sabr = SABundle.find(inputs.sabr);
+        console.error("-----------------SABR Function inputs:", inputs);
+        console.error("-----------------SABR Function deploy:", sabr);
         let policies = [];
         if(inputs.policies) {
             inputs.policies = inputs.policies.split(/,/);
@@ -36,6 +38,7 @@ module.exports = {
                 policies.push(policy);
             }
         }
+        console.error("SABR Function deploy:", sabr);
         sabr.deploy({policies: policies});
         env.res.json({id:sabr.id, name:sabr.name});
     }

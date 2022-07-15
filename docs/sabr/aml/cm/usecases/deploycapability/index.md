@@ -6,9 +6,9 @@ parent: usecases
 ---
 # Deploy Capability
 
-Deploy Capability is the description
+Deploy a capability into the ecosystem. This should deploy all of the SABRs in the capability or attach to currently running SABRs in the defined capabiility.
 
-![Activities Diagram](./activities.png)
+![Activities Diagram](./Activities.png)
 
 ## Actors
 
@@ -21,7 +21,7 @@ Deploy Capability is the description
 ## Extends Use Cases
 
 
-* [0](usecase-0)
+* [Manage Capabilities](usecase-ManageCapabilities)
 
 
 
@@ -31,15 +31,15 @@ Deploy Capability is the description
 
 ## Detail Scenarios
 
-* [Deploy Capability](#scenario-DeployCapabilityRelease)
+* [DeployCapabilityRelease](#scenario-DeployCapabilityRelease)
 
 
 
 ### Scenario Deploy Capability Release
 
-Deploy Capability Release is the description
+Deploy Capability Release allows a capability to be deployed into the ecosystem, which can include several SABRs in the ecosystem across a set of heterogeneous resources.
 
-![Scenario DeployCapabilityRelease](./deploycapabilityrelease.png)
+![Scenario DeployCapabilityRelease](./DeployCapabilityRelease.png)
 
 #### Steps
 

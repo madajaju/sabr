@@ -8,7 +8,7 @@ has_children: true
 
 # Application Management Layer
 
-Application Management Layer is responsible for the management of applications and workflows andthe development, test, deployment and updates of those applications and workloads
+Application Management Layer is responsible for the management of applications and workflows andthe development, test, deployment and updates of those applications and workloads.
 
 
 
@@ -73,6 +73,7 @@ used to implement the micro-services in the system. The subsystem also has an CL
 exposed through a nodejs application. The nodejs application will interface with the micro-services and
 can monitor and drive work-flows through the mesh of micro-services. The deployment of the subsystem is
 dependent on the environment it is deployed. This subsystem has the following environments:
+* [local](environment--sabr-aml-local)
 * [dev](environment--sabr-aml-dev)
 * [test](environment--sabr-aml-test)
 * [prod](environment--sabr-aml-prod)
@@ -87,6 +88,7 @@ REST interface. A Command Line Interface (CLI), REST or Web User interface for t
 interact. Requests are forwarded to micro-services through the REST interface of each micro-service. The subsystem has
 the a unique layout based on the environment the physical space. The following are the environments for this
 subsystems.
+* [local](environment--sabr-aml-local)
 * [dev](environment--sabr-aml-dev)
 * [test](environment--sabr-aml-test)
 * [prod](environment--sabr-aml-prod)
@@ -98,6 +100,18 @@ These are the micro-services for the subsystem. The combination of the micro-ser
 the subsystem's logic.
 
 
+### local
+
+Detail information for the [local environment](environment--sabr-aml-local)
+can be found [here](environment--sabr-aml-local)
+
+Services in the local environment
+
+* am : sabr_aml_am
+* cm : sabr_aml_cm
+* lc : sabr_aml_lc
+
+
 ### dev
 
 Detail information for the [dev environment](environment--sabr-aml-dev)
@@ -105,9 +119,9 @@ can be found [here](environment--sabr-aml-dev)
 
 Services in the dev environment
 
-* child : child_image:latest
-* frontend : _aml_web
-* gw : _aml_gw
+* am : sabr_aml_am
+* cm : sabr_aml_cm
+* lc : sabr_aml_lc
 
 
 ### test
@@ -117,9 +131,9 @@ can be found [here](environment--sabr-aml-test)
 
 Services in the test environment
 
-* child : child_image:latest
-* frontend : _aml_web
-* gw : _aml_gw
+* am : sabr_aml_am
+* cm : sabr_aml_cm
+* lc : sabr_aml_lc
 
 
 ### prod
@@ -129,9 +143,9 @@ can be found [here](environment--sabr-aml-prod)
 
 Services in the prod environment
 
-* child : child_image:latest
-* frontend : _aml_web
-* gw : _aml_gw
+* am : sabr_aml_am
+* cm : sabr_aml_cm
+* lc : sabr_aml_lc
 
 
 ## Activities and Flows
@@ -143,7 +157,10 @@ cases and scenarios of the subsystem.
 
 ### Messages Sent
 
-TBD
+| Event | Description | Emitter |
+|-------|-------------|---------|
+
+
 
 ## Interface Details
 The Application Management Layer subsystem has a well defined interface. This interface can be accessed using a

@@ -11,31 +11,24 @@ package "Capability Manager" #00aaff {
   binName --> REST
 
   folder deploy #ffffff {
-      file "node server.js\ndocker-compose.yml" as _cm_container
-      REST --> _cm_container
+      file "node server.js\n" as sabr_aml_cm_container
+      REST --> sabr_aml_cm_container
 
   
     file "web" as web_container
     REST --> web_container
     socket ---> web_container
   
-    file "gateway" as gateway_container
-    REST --> gateway_container
-    socket ---> gateway_container
-  
   }
   folder images #ffffff {
-    collections "_cm" as _cmimage
+    collections "sabr_aml_cm" as sabr_aml_cmimage
     artifact "ailtire:swarm" as ailtireswarm
-    _cmimage <|-- ailtireswarm
-    _cm_container --> _cmimage
+    sabr_aml_cmimage <|-- ailtireswarm
+    sabr_aml_cm_container --> sabr_aml_cmimage
 
   
-      artifact "_cm_web" as _cm_web
-      web_container --> _cm_web
-    
-      artifact "_cm_gw" as _cm_gw
-      gateway_container --> _cm_gw
+      artifact "sabr_aml_cm_web" as sabr_aml_cm_web
+      web_container --> sabr_aml_cm_web
     
   }
 }

@@ -5,7 +5,7 @@ module.exports = {
         local: {
             type: 'swarm',
             tag: 'sabr_pulsar:local',
-            design: 'services-local.js',
+            design: 'services.js',
             env: {}
         },
         dev: {

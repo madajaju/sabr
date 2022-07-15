@@ -33,12 +33,13 @@ package "Capability Manager" #00aaff {
 
     interface "Capability Manager" as i {
             /sabr/aml/cm/capability/build()
+            /sabr/aml/cm/capability/create()
             /sabr/aml/cm/capability/deploy()
             /sabr/aml/cm/capability/list()
             /sabr/aml/cm/capability/release()
+            /sabr/aml/cm/capability/remove()
             /sabr/aml/cm/capability/test()
-            /sabr/aml/cm/data/create()
-            /sabr/aml/cm/data/govern()
+            /sabr/aml/cm/capability/update()
     
     }
 }
@@ -64,6 +65,8 @@ package "Capability Manager" #00aaff {
     class "CapabilityInstance" {
                  string name
                              deploy()
+                     kill()
+                     update()
             }
                 CapabilityInstance o--> "n" SABundleInstance : bundles
                         CapabilityInstance o--> "1" Capability : owner

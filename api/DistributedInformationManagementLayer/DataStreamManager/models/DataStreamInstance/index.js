@@ -2,8 +2,7 @@
 class DataStreamInstance {
     static definition = {
         name: 'DataStreamInstance',
-        description: 'Description ' +
-            'long description',
+        description: 'This represents a data stream that has been deployed and is running in the system.',
         attributes: {
             name: {
                 type: 'string',
@@ -16,10 +15,12 @@ class DataStreamInstance {
         },
         associations: {
             parent: {
+                description: 'This is the parent of the data stream instance.',
                 type: 'DataStream',
                 cardinality: 1,
             },
             bundle: {
+                description: 'This is the Bundle instance that the data stream instance is connected.',
                 type: 'SABundleInstance',
                 cardinality: 1,
             },
@@ -55,7 +56,7 @@ class DataStreamInstance {
                 }
             },
             Created: {
-                description: "Stream is created",
+                description: "DataStreamInstance is created",
                 events: {
                     disable: {
                         Disabled: { }
@@ -66,7 +67,7 @@ class DataStreamInstance {
                 },
             },
             Disabled: {
-                description: "Stream is disabled",
+                description: "DataStreamInstance is disabled",
                 events: {
                     enable: {
                         Enabled: {}
@@ -77,7 +78,7 @@ class DataStreamInstance {
                 }
             },
             Enabled: {
-                description: "Stream is Enabled",
+                description: "DataStreamInstance is Enabled",
                 events: {
                     disbale: {
                         Disabled: { }
@@ -85,7 +86,7 @@ class DataStreamInstance {
                 }
             },
             Destroyed: {
-                description: "Stream is destroyed",
+                description: "DataStreamInstance is destroyed",
             },
         },
         view: {

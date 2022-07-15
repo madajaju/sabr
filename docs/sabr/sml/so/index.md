@@ -8,7 +8,7 @@ grand_parent: Sentient Agent Bundle Resources
 
 # Service Orchestrator
 
-Service Orchestrator is a package that contains...
+Service Orchestrator coordinates service deployment and provisions in the system. It is the jobs of the orchestrator to find resources to deploy service software. It is also the responsibility to monitor and deliver QoS and SLA for each service according to orchestration policy.
 
 
 
@@ -144,7 +144,19 @@ cases and scenarios of the subsystem.
 
 ### Messages Sent
 
-TBD
+| Event | Description | Emitter |
+|-------|-------------|---------|
+| dockerprovisioner.create |  When an object of type DockerProvisioner is created. | DockerProvisioner
+| dockerprovisioner.destroy |  When an object of type DockerProvisioner is destroyed. | DockerProvisioner
+| dockerprovisioner.updated |  When an object of type DockerProvisioner has an attribute or association updated. | DockerProvisioner
+| processprovisioner.create |  When an object of type ProcessProvisioner is created. | ProcessProvisioner
+| processprovisioner.destroy |  When an object of type ProcessProvisioner is destroyed. | ProcessProvisioner
+| processprovisioner.updated |  When an object of type ProcessProvisioner has an attribute or association updated. | ProcessProvisioner
+| provisioner.create |  When an object of type Provisioner is created. | Provisioner
+| provisioner.destroy |  When an object of type Provisioner is destroyed. | Provisioner
+| provisioner.updated |  When an object of type Provisioner has an attribute or association updated. | Provisioner
+
+
 
 ## Interface Details
 The Service Orchestrator subsystem has a well defined interface. This interface can be accessed using a
@@ -153,12 +165,17 @@ subsystems and actors can access the system.
 
 ### Action  sabr sml so service ready
 
-* REST - /sabr/sml/so/service/ready
-* bin -  sabr sml so service ready
-* js - .sabr.sml.so.service.ready
 
+
+* REST - /sabr/sml/so/service/ready?service=string&amp;url=string
+* bin -  sabr sml so service ready --service string --url string
+* js - .sabr.sml.so.service.ready({ service:string,url:string })
+
+#### Description
 Service is ready
 
+
+#### Parameters
 | Name | Type | Required | Description |
 |---|---|---|---|
 | service | string |true | ID of the Service that is ready |

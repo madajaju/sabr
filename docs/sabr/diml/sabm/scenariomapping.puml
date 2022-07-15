@@ -10,15 +10,15 @@ state "DevOpsEngineer" as DevOpsEngineer {
 state "sabr" as sabr #ffcc88 {
 state "diml" as sabrdiml #ffcc88 {
 state "sabm" as sabrdimlsabm #ffcc88 {
-state "bundle" as sabrdimlsabmbundle #ffcc88 {
-state "list" as sabrdimlsabmbundlelist #ffcc88 {
+state "sabundle" as sabrdimlsabmsabundle #ffcc88 {
+state "list" as sabrdimlsabmsabundlelist #ffcc88 {
 }
 }
 }
 }
 }
 
-DevOpsEngineerManageSABR --> sabrdimlsabmbundlelist
+DevOpsEngineerManageSABR --> sabrdimlsabmsabundlelist
 
 
     state "ApplicationDeveloper" as ApplicationDeveloper {

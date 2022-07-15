@@ -3,7 +3,7 @@ const {spawn} = require('child_process');
 
 module.exports = {
     friendlyName: 'deploy',
-    description: 'Deploy a Service',
+    description: 'Deploy a Service generically.',
     static: false, // True is for Class methods. False is for object based.
     inputs: {
         services: {

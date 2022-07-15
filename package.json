@@ -1,11 +1,12 @@
 {
   "name": "sabr",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
     "build": "ailtire app build --env local --repo madajaju",
+    "build-all": "ailtire app build --env local --repo madajaju --recursive true",
     "deploy": "ailtire app install --env local --repo madajaju",
     "test": "npm run lint && npm run custom-tests && echo 'Done.'",
     "doc": "ailtire app docs",
@@ -18,7 +19,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "ailtire": "^0.3.9",
+    "ailtire": "^0.3.10",
     "pulsar-flex": "^1.0.1-beta.9"
   }
 }

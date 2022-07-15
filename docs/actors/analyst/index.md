@@ -18,11 +18,11 @@ The data analyst uses data to build insight based on the data scientist models. 
 * [Manage AI Model](usecase-ManageAIModel)
 
 
-![Use Case Diagram](./usecase.png)
+![Use Case Diagram](./UseCase.png)
 
 ## User Interface
 TBD
 
 ## Command Line Interface
-* [ sabr aimodel/list](action--sabr-aimodel-list) - Manage AI Model allows the data users to create, destroy, and update models, version control them and deploy them in the system.
+* [ sabr aimodel list](action--sabr-aimodel-list) - Manage AI Model allows the data users to create, destroy, and update models, version control them and deploy them in the system.
 

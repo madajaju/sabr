@@ -1,7 +1,8 @@
 module.exports = {
     name: 'Build Capability',
-    description: 'Build Capability is the description',
-    method: "data/create",
+    description: 'Build capability allows a DevOps engineer to build a capability that gets deployed into the' +
+        ' ecosystem.',
+    method: "capability/build",
     actors: {
         'DevOpsEngineer': 'uses',
     },

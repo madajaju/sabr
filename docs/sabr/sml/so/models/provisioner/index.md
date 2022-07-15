@@ -7,7 +7,7 @@ parent: classes
 
 # Provisioner
 
-Abstract Provisioner Class
+Abstract Provisioner Class used to develop an interface for the different provisioners.
 
 ![Logical Diagram](./logical.png)
 

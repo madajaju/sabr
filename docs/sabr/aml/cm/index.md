@@ -8,7 +8,7 @@ grand_parent: Sentient Agent Bundle Resources
 
 # Capability Manager
 
-Capability Manager is a package that contains...
+Capability Manager is a package that contains the interface for all of the use cases and models that work with capabilities. A capability can consist of one or more applications, services or SABRs deployed in the ecosystem.
 
 
 
@@ -19,8 +19,8 @@ that are elaborated in the use case descriptions.
 
 * [Deploy Capability](usecase-DeployCapability)
 * [Develop Capability](usecase-DevelopCapability)
-* [Remove Capbility](usecase-RemoveCapbility)
-* [Update Capbility](usecase-UpdateCapbility)
+* [Remove Capability](usecase-RemoveCapability)
+* [Update Capability](usecase-UpdateCapability)
 
 
 ![UseCase Diagram](./usecases.png)
@@ -45,12 +45,13 @@ users interact with the system.
 ![Scenario Mappings Diagram](./scenariomapping.png)
 
 * [ sabr aml cm capability build](#action--sabr-aml-cm-capability-build)
+* [ sabr aml cm capability create](#action--sabr-aml-cm-capability-create)
 * [ sabr aml cm capability deploy](#action--sabr-aml-cm-capability-deploy)
 * [ sabr aml cm capability list](#action--sabr-aml-cm-capability-list)
 * [ sabr aml cm capability release](#action--sabr-aml-cm-capability-release)
+* [ sabr aml cm capability remove](#action--sabr-aml-cm-capability-remove)
 * [ sabr aml cm capability test](#action--sabr-aml-cm-capability-test)
-* [ sabr aml cm data create](#action--sabr-aml-cm-data-create)
-* [ sabr aml cm data govern](#action--sabr-aml-cm-data-govern)
+* [ sabr aml cm capability update](#action--sabr-aml-cm-capability-update)
 
 
 ## Logical Artifacts
@@ -85,6 +86,7 @@ used to implement the micro-services in the system. The subsystem also has an CL
 exposed through a nodejs application. The nodejs application will interface with the micro-services and
 can monitor and drive work-flows through the mesh of micro-services. The deployment of the subsystem is
 dependent on the environment it is deployed. This subsystem has the following environments:
+* [local](environment--sabr-aml-cm-local)
 * [dev](environment--sabr-aml-cm-dev)
 * [test](environment--sabr-aml-cm-test)
 * [prod](environment--sabr-aml-cm-prod)
@@ -99,6 +101,7 @@ REST interface. A Command Line Interface (CLI), REST or Web User interface for t
 interact. Requests are forwarded to micro-services through the REST interface of each micro-service. The subsystem has
 the a unique layout based on the environment the physical space. The following are the environments for this
 subsystems.
+* [local](environment--sabr-aml-cm-local)
 * [dev](environment--sabr-aml-cm-dev)
 * [test](environment--sabr-aml-cm-test)
 * [prod](environment--sabr-aml-cm-prod)
@@ -110,6 +113,16 @@ These are the micro-services for the subsystem. The combination of the micro-ser
 the subsystem's logic.
 
 
+### local
+
+Detail information for the [local environment](environment--sabr-aml-cm-local)
+can be found [here](environment--sabr-aml-cm-local)
+
+Services in the local environment
+
+* web : sabr_aml_cm_web
+
+
 ### dev
 
 Detail information for the [dev environment](environment--sabr-aml-cm-dev)
@@ -117,9 +130,7 @@ can be found [here](environment--sabr-aml-cm-dev)
 
 Services in the dev environment
 
-* child : child_image:latest
-* frontend : _cm_web
-* gw : _cm_gw
+* web : sabr_aml_cm_web
 
 
 ### test
@@ -129,9 +140,7 @@ can be found [here](environment--sabr-aml-cm-test)
 
 Services in the test environment
 
-* child : child_image:latest
-* frontend : _cm_web
-* gw : _cm_gw
+* web : sabr_aml_cm_web
 
 
 ### prod
@@ -141,9 +150,7 @@ can be found [here](environment--sabr-aml-cm-prod)
 
 Services in the prod environment
 
-* child : child_image:latest
-* frontend : _cm_web
-* gw : _cm_gw
+* web : sabr_aml_cm_web
 
 
 ## Activities and Flows
@@ -155,7 +162,16 @@ cases and scenarios of the subsystem.
 
 ### Messages Sent
 
-TBD
+| Event | Description | Emitter |
+|-------|-------------|---------|
+| capability.create |  When an object of type Capability is created. | Capability
+| capability.destroy |  When an object of type Capability is destroyed. | Capability
+| capability.updated |  When an object of type Capability has an attribute or association updated. | Capability
+| capabilityinstance.create |  When an object of type CapabilityInstance is created. | CapabilityInstance
+| capabilityinstance.destroy |  When an object of type CapabilityInstance is destroyed. | CapabilityInstance
+| capabilityinstance.updated |  When an object of type CapabilityInstance has an attribute or association updated. | CapabilityInstance
+
+
 
 ## Interface Details
 The Capability Manager subsystem has a well defined interface. This interface can be accessed using a
@@ -164,26 +180,55 @@ subsystems and actors can access the system.
 
 ### Action  sabr aml cm capability build
 
-* REST - /sabr/aml/cm/capability/build
-* bin -  sabr aml cm capability build
-* js - .sabr.aml.cm.capability.build
 
+
+* REST - /sabr/aml/cm/capability/build?name=string
+* bin -  sabr aml cm capability build --name string
+* js - .sabr.aml.cm.capability.build({ name:string })
+
+#### Description
 Build a Capability
 
+
+#### Parameters
 | Name | Type | Required | Description |
 |---|---|---|---|
 | name | string |true | name of the capability |
 
 
 
+### Action  sabr aml cm capability create
+
+
+
+* REST - /sabr/aml/cm/capability/create?attr1=string
+* bin -  sabr aml cm capability create --attr1 string
+* js - .sabr.aml.cm.capability.create({ attr1:string })
+
+#### Description
+Description of the action
+
+
+#### Parameters
+| Name | Type | Required | Description |
+|---|---|---|---|
+| attr1 | string |false | Description for the parameter |
+
+
+
 ### Action  sabr aml cm capability deploy
 
-* REST - /sabr/aml/cm/capability/deploy
-* bin -  sabr aml cm capability deploy
-* js - .sabr.aml.cm.capability.deploy
 
+
+* REST - /sabr/aml/cm/capability/deploy?capability=string
+* bin -  sabr aml cm capability deploy --capability string
+* js - .sabr.aml.cm.capability.deploy({ capability:string })
+
+#### Description
 Deploy a Capability
 
+
+#### Parameters
 | Name | Type | Required | Description |
 |---|---|---|---|
 | capability | string |true | name of the capability |
@@ -192,12 +237,17 @@ Deploy a Capability
 
 ### Action  sabr aml cm capability list
 
-* REST - /sabr/aml/cm/capability/list
-* bin -  sabr aml cm capability list
-* js - .sabr.aml.cm.capability.list
 
+
+* REST - /sabr/aml/cm/capability/list?attr1=string
+* bin -  sabr aml cm capability list --attr1 string
+* js - .sabr.aml.cm.capability.list({ attr1:string })
+
+#### Description
 Description of the action
 
+
+#### Parameters
 | Name | Type | Required | Description |
 |---|---|---|---|
 | attr1 | string |false | Description for the parameter |
@@ -206,26 +256,55 @@ Description of the action
 
 ### Action  sabr aml cm capability release
 
-* REST - /sabr/aml/cm/capability/release
-* bin -  sabr aml cm capability release
-* js - .sabr.aml.cm.capability.release
 
+
+* REST - /sabr/aml/cm/capability/release?name=string
+* bin -  sabr aml cm capability release --name string
+* js - .sabr.aml.cm.capability.release({ name:string })
+
+#### Description
 Release a Capability
 
+
+#### Parameters
 | Name | Type | Required | Description |
 |---|---|---|---|
 | name | string |true | name of the capability |
 
 
 
+### Action  sabr aml cm capability remove
+
+
+
+* REST - /sabr/aml/cm/capability/remove?attr1=string
+* bin -  sabr aml cm capability remove --attr1 string
+* js - .sabr.aml.cm.capability.remove({ attr1:string })
+
+#### Description
+Description of the action
+
+
+#### Parameters
+| Name | Type | Required | Description |
+|---|---|---|---|
+| attr1 | string |false | Description for the parameter |
+
+
+
 ### Action  sabr aml cm capability test
 
-* REST - /sabr/aml/cm/capability/test
-* bin -  sabr aml cm capability test
-* js - .sabr.aml.cm.capability.test
 
+
+* REST - /sabr/aml/cm/capability/test?name=string&amp;file=YAML
+* bin -  sabr aml cm capability test --name string --file YAML
+* js - .sabr.aml.cm.capability.test({ name:string,file:YAML })
+
+#### Description
 Test a Capability
 
+
+#### Parameters
 | Name | Type | Required | Description |
 |---|---|---|---|
 | name | string |true | name of the capability |
@@ -233,28 +312,19 @@ Test a Capability
 
 
 
-### Action  sabr aml cm data create
+### Action  sabr aml cm capability update
 
-* REST - /sabr/aml/cm/data/create
-* bin -  sabr aml cm data create
-* js - .sabr.aml.cm.data.create
 
+
+* REST - /sabr/aml/cm/capability/update?attr1=string
+* bin -  sabr aml cm capability update --attr1 string
+* js - .sabr.aml.cm.capability.update({ attr1:string })
+
+#### Description
 Description of the action
 
-| Name | Type | Required | Description |
-|---|---|---|---|
-| attr1 | string |false | Description for the parameter |
 
-
-
-### Action  sabr aml cm data govern
-
-* REST - /sabr/aml/cm/data/govern
-* bin -  sabr aml cm data govern
-* js - .sabr.aml.cm.data.govern
-
-Description of the action
-
+#### Parameters
 | Name | Type | Required | Description |
 |---|---|---|---|
 | attr1 | string |false | Description for the parameter |

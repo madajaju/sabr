@@ -1,0 +1,46 @@
+@startuml
+
+actor "DevOpsEngineer"
+
+
+entity EventBus
+
+box Capability Manager #00aaff
+    boundary cm #white
+end box
+
+
+box Capability Manager #00aaff
+            participant capability
+    end box
+
+
+"DevOpsEngineer" -> cm: Update Configuration of the Capability
+
+    cm -> "capability": create (name: myUpdateCap5,file: ./templates/capability.js)
+
+    "capability" --/ EventBus: capability.create
+
+    cm -> "capability manager": release (capability: UpdateCap5)
+
+    "capability manager" --/ EventBus: capability.release
+
+    cm -> "capability manager": deploy (capability: UpdateCap5)
+
+    "capability manager" --/ EventBus: capability.deploy
+
+    cm -> "capability manager": update (capability: UpdateCap5,file: ./templates/capabilityUpdateConfig.js)
+
+    "capability manager" --/ EventBus: capability.update
+
+    cm -> "capability manager": release (capability: UpdateCap5)
+
+    "capability manager" --/ EventBus: capability.release
+
+    cm -> "capability manager": deploy (capability: UpdateCap5)
+
+    "capability manager" --/ EventBus: capability.deploy
+
+
+
+@enduml

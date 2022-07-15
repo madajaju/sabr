@@ -8,7 +8,7 @@ grand_parent: Sentient Agent Bundle Resources
 
 # Data Stream Manager
 
-Data Stream Manager is a package that contains the software stack for the data stream management.The first implementation of SABR will use Apache Pulsar to manage the data streams.
+Data Stream Manager is a package that contains the software stack for the data stream management.The first implementation of SABR will use Apache Pulsar to manage the data streams in the solution.
 
 
 
@@ -153,11 +153,54 @@ The Data Stream Manager subsystem provides the following activities and flows th
 cases and scenarios of the subsystem.
 
 
+### Messages Handled
+
+The Data Stream Manager subsystem is an event driven architecture and handle several events. The following
+events are handled by this subsystem. Please note that this subsystem is not the only subsystem that handles
+these events.
+
+| Message | Action | Description |
+| --- | --- | --- |
+| inputchannelinstance.enabled | /sabr/diml/dsm/channel/deployed |  |
+| inputstreaminstance.enabled | /sabr/diml/dsm/stream/deployed |  |
+| outputchannelinstance.enabled | /sabr/diml/dsm/channel/deployed |  |
+| outputstreaminstance.enabled | /sabr/diml/dsm/stream/deployed |  |
+
 
 
 ### Messages Sent
 
-TBD
+| Event | Description | Emitter |
+|-------|-------------|---------|
+| datachannel.create |  When an object of type DataChannel is created. | DataChannel
+| datachannel.destroy |  When an object of type DataChannel is destroyed. | DataChannel
+| datachannel.updated |  When an object of type DataChannel has an attribute or association updated. | DataChannel
+| datachannelinstance.create |  When an object of type DataChannelInstance is created. | DataChannelInstance
+| datachannelinstance.destroy |  When an object of type DataChannelInstance is destroyed. | DataChannelInstance
+| datachannelinstance.updated |  When an object of type DataChannelInstance has an attribute or association updated. | DataChannelInstance
+| datastream.create |  When an object of type DataStream is created. | DataStream
+| datastream.destroy |  When an object of type DataStream is destroyed. | DataStream
+| datastream.updated |  When an object of type DataStream has an attribute or association updated. | DataStream
+| datastreaminstance.create |  When an object of type DataStreamInstance is created. | DataStreamInstance
+| datastreaminstance.destroy |  When an object of type DataStreamInstance is destroyed. | DataStreamInstance
+| datastreaminstance.updated |  When an object of type DataStreamInstance has an attribute or association updated. | DataStreamInstance
+| inputchannelinstance.create |  When an object of type InputChannelInstance is created. | InputChannelInstance
+| inputchannelinstance.destroy |  When an object of type InputChannelInstance is destroyed. | InputChannelInstance
+| inputchannelinstance.updated |  When an object of type InputChannelInstance has an attribute or association updated. | InputChannelInstance
+| inputstreaminstance.create |  When an object of type InputStreamInstance is created. | InputStreamInstance
+| inputstreaminstance.destroy |  When an object of type InputStreamInstance is destroyed. | InputStreamInstance
+| inputstreaminstance.updated |  When an object of type InputStreamInstance has an attribute or association updated. | InputStreamInstance
+| outputchannelinstance.create |  When an object of type OutputChannelInstance is created. | OutputChannelInstance
+| outputchannelinstance.destroy |  When an object of type OutputChannelInstance is destroyed. | OutputChannelInstance
+| outputchannelinstance.updated |  When an object of type OutputChannelInstance has an attribute or association updated. | OutputChannelInstance
+| outputstreaminstance.create |  When an object of type OutputStreamInstance is created. | OutputStreamInstance
+| outputstreaminstance.destroy |  When an object of type OutputStreamInstance is destroyed. | OutputStreamInstance
+| outputstreaminstance.updated |  When an object of type OutputStreamInstance has an attribute or association updated. | OutputStreamInstance
+| streampolicy.create |  When an object of type StreamPolicy is created. | StreamPolicy
+| streampolicy.destroy |  When an object of type StreamPolicy is destroyed. | StreamPolicy
+| streampolicy.updated |  When an object of type StreamPolicy has an attribute or association updated. | StreamPolicy
+
+
 
 ## Interface Details
 The Data Stream Manager subsystem has a well defined interface. This interface can be accessed using a
@@ -166,12 +209,17 @@ subsystems and actors can access the system.
 
 ### Action  sabr diml dsm channel deployed
 
-* REST - /sabr/diml/dsm/channel/deployed
-* bin -  sabr diml dsm channel deployed
-* js - .sabr.diml.dsm.channel.deployed
 
+
+* REST - /sabr/diml/dsm/channel/deployed?channel=string
+* bin -  sabr diml dsm channel deployed --channel string
+* js - .sabr.diml.dsm.channel.deployed({ channel:string })
+
+#### Description
 Channel Instance has been deployed. Notify the stream of its status.
 
+
+#### Parameters
 | Name | Type | Required | Description |
 |---|---|---|---|
 | channel | string |true | Channel name |
@@ -180,12 +228,17 @@ Channel Instance has been deployed. Notify the stream of its status.
 
 ### Action  sabr diml dsm stream deployed
 
-* REST - /sabr/diml/dsm/stream/deployed
-* bin -  sabr diml dsm stream deployed
-* js - .sabr.diml.dsm.stream.deployed
 
-Channel Instance has been deployed. Notify the stream of its status.
 
+* REST - /sabr/diml/dsm/stream/deployed?stream=string
+* bin -  sabr diml dsm stream deployed --stream string
+* js - .sabr.diml.dsm.stream.deployed({ stream:string })
+
+#### Description
+Stream has been deployed. Notify the bundle of its status.
+
+
+#### Parameters
 | Name | Type | Required | Description |
 |---|---|---|---|
 | stream | string |true | Stream name |

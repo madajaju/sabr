@@ -15,20 +15,8 @@ state "list" as aimodellist #bbaaff {
 }
 
 
-        state "application" as application #bbaaff {
-state "list" as applicationlist #bbaaff {
-}
-}
-
-
         state "capability" as capability #bbaaff {
 state "list" as capabilitylist #bbaaff {
-}
-}
-
-
-        state "data" as data #bbaaff {
-state "govern" as datagovern #bbaaff {
 }
 }
 

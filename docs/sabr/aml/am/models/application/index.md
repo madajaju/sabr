@@ -33,48 +33,6 @@ Application contains several SABRs stitched together to create capabilities
 | app | 1 | ApplicationInstance | false | false |  |
 | app | 1 | Stack | false | false | Applications of the stacks |
 | applications | n | SABundle |  |  |  |
-| app | 1 | ApplicationInstance | false | false |  |
-| app | 1 | Stack | false | false | Applications of the stacks |
-| applications | n | SABundle |  |  |  |
-| app | 1 | ApplicationInstance | false | false |  |
-| app | 1 | Stack | false | false | Applications of the stacks |
-| applications | n | SABundle |  |  |  |
-| app | 1 | ApplicationInstance | false | false |  |
-| app | 1 | Stack | false | false | Applications of the stacks |
-| applications | n | SABundle |  |  |  |
-| app | 1 | ApplicationInstance | false | false |  |
-| app | 1 | Stack | false | false | Applications of the stacks |
-| applications | n | SABundle |  |  |  |
-| app | 1 | ApplicationInstance | false | false |  |
-| app | 1 | Stack | false | false | Applications of the stacks |
-| applications | n | SABundle |  |  |  |
-| app | 1 | ApplicationInstance | false | false |  |
-| app | 1 | Stack | false | false | Applications of the stacks |
-| applications | n | SABundle |  |  |  |
-| app | 1 | ApplicationInstance | false | false |  |
-| app | 1 | Stack | false | false | Applications of the stacks |
-| applications | n | SABundle |  |  |  |
-| app | 1 | ApplicationInstance | false | false |  |
-| app | 1 | Stack | false | false | Applications of the stacks |
-| applications | n | SABundle |  |  |  |
-| app | 1 | ApplicationInstance | false | false |  |
-| app | 1 | Stack | false | false | Applications of the stacks |
-| applications | n | SABundle |  |  |  |
-| app | 1 | ApplicationInstance | false | false |  |
-| app | 1 | Stack | false | false | Applications of the stacks |
-| applications | n | SABundle |  |  |  |
-| app | 1 | ApplicationInstance | false | false |  |
-| app | 1 | Stack | false | false | Applications of the stacks |
-| applications | n | SABundle |  |  |  |
-| app | 1 | ApplicationInstance | false | false |  |
-| app | 1 | Stack | false | false | Applications of the stacks |
-| applications | n | SABundle |  |  |  |
-| app | 1 | ApplicationInstance | false | false |  |
-| app | 1 | Stack | false | false | Applications of the stacks |
-| applications | n | SABundle |  |  |  |
-| app | 1 | ApplicationInstance | false | false |  |
-| app | 1 | Stack | false | false | Applications of the stacks |
-| applications | n | SABundle |  |  |  |
 
 
 

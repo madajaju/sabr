@@ -3,57 +3,71 @@
 left to right direction
 
 
-boundary appname__family #red
+boundary parent #black
 
 
-entity appname__aml_family #black
+entity children #blue
 
-
-
-
-package "_aml" #00aaff {
-    queue childrennet #black [
-            <b><color:white>children</color></b>
+rectangle "sabr_aml_am" as sabr_aml_amStack #00aaff {
+    queue sabr_aml_amStacksnet #blue [
+        <b><color:white>parent</color></b>
     ]
-    
-    childrennet -[#black]- appname__aml_family
-    
-    queue siblingnet #blue [
-            <b><color:white>sibling</color></b>
+}
+rectangle "sabr_aml_cm" as sabr_aml_cmStack #00aaff {
+    queue sabr_aml_cmStacksnet #blue [
+        <b><color:white>parent</color></b>
     ]
-    
-    queue parentnet #red [
+}
+rectangle "sabr_aml_lc" as sabr_aml_lcStack #00aaff {
+    queue sabr_aml_lcStacksnet #blue [
+        <b><color:white>parent</color></b>
+    ]
+}
+
+
+
+package "aml" #00aaff {
+    queue parentnet #black [
             <b><color:white>parent</color></b>
     ]
     
-    parentnet -[#red]- appname__family
+    parentnet -[#black]- parent
+    
+    queue childrennet #blue [
+            <b><color:white>children</color></b>
+    ]
+    
+    childrennet -[#blue]- children
+    
+    queue siblingsnet #red [
+            <b><color:white>siblings</color></b>
+    ]
     
 
-node "child" as childService
-node "frontend" as frontendService
-node "gw" as gwService
+node "am" as amService
+node "cm" as cmService
+node "lc" as lcService
 
-
-        artifact "child_image:latest" as child_imagelatestimage
-    
-        artifact "_aml_web" as _aml_webimage
-    
-        artifact "_aml_gw" as _aml_gwimage
+        collections "sabr_aml_am" as sabr_aml_amimage
+            collections "sabr_aml_cm" as sabr_aml_cmimage
+            collections "sabr_aml_lc" as sabr_aml_lcimage
     
 }
 
-childService -[#black]- childrennet
+amService -[#blue]- childrennet
 
-childService -[#red]- parentnet
+cmService -[#blue]- childrennet
 
-frontendService -[#blue]- siblingnet
+lcService -[#blue]- childrennet
+amService .... sabr_aml_amimage
+cmService .... sabr_aml_cmimage
+lcService .... sabr_aml_lcimage
 
-gwService -[#black]- childrennet
-
-gwService -[#blue]- siblingnet
-childService .... child_imagelatestimage
-frontendService .... _aml_webimage
-gwService .... _aml_gwimage
-
+sabr_aml_amimage --> sabr_aml_amStack
+    
+sabr_aml_cmimage --> sabr_aml_cmStack
+    
+sabr_aml_lcimage --> sabr_aml_lcStack
+    
 
 @enduml

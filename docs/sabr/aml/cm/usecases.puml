@@ -12,10 +12,10 @@ usecase "DeployCapability" as DeployCapability
     DevOpsEngineer --> DeployCapability
     usecase "DevelopCapability" as DevelopCapability
     ApplicationDeveloper --> DevelopCapability
-    usecase "RemoveCapbility" as RemoveCapbility
-    DevOpsEngineer --> RemoveCapbility
-    usecase "UpdateCapbility" as UpdateCapbility
-    DevOpsEngineer --> UpdateCapbility
+    usecase "RemoveCapability" as RemoveCapability
+    DevOpsEngineer --> RemoveCapability
+    usecase "UpdateCapability" as UpdateCapability
+    DevOpsEngineer --> UpdateCapability
     }
 
 

@@ -7,7 +7,8 @@
 module.exports = {
     name: 'Manage Policies',
     description: 'Manage Policies use case includes establishing and managing DDIL environment policies for the' +
-        ' complete ecosystem, and orchestration and deployment policies.',
+        ' complete ecosystem, individual capabilities, SABRs, and applications. This use case also refers to' +
+        ' orchestration and deployment policies.',
     method: 'policy/list',
     actors: {
         'ITOperations': 'uses'

@@ -4,6 +4,8 @@ class "CapabilityInstance" as Model {
  string name
 
  deploy()
+ kill()
+ update()
  
 }
 
@@ -21,76 +23,6 @@ Model o--> "1" Capability : owner
 
 
 
-    rectangle "Capability" as Capability #lightgreen {
-    }
-    
-        Capability   *--> "n" Model : "instances"
-    
-    rectangle "Capability" as Capability #lightgreen {
-    }
-    
-        Capability   *--> "n" Model : "instances"
-    
-    rectangle "Capability" as Capability #lightgreen {
-    }
-    
-        Capability   *--> "n" Model : "instances"
-    
-    rectangle "Capability" as Capability #lightgreen {
-    }
-    
-        Capability   *--> "n" Model : "instances"
-    
-    rectangle "Capability" as Capability #lightgreen {
-    }
-    
-        Capability   *--> "n" Model : "instances"
-    
-    rectangle "Capability" as Capability #lightgreen {
-    }
-    
-        Capability   *--> "n" Model : "instances"
-    
-    rectangle "Capability" as Capability #lightgreen {
-    }
-    
-        Capability   *--> "n" Model : "instances"
-    
-    rectangle "Capability" as Capability #lightgreen {
-    }
-    
-        Capability   *--> "n" Model : "instances"
-    
-    rectangle "Capability" as Capability #lightgreen {
-    }
-    
-        Capability   *--> "n" Model : "instances"
-    
-    rectangle "Capability" as Capability #lightgreen {
-    }
-    
-        Capability   *--> "n" Model : "instances"
-    
-    rectangle "Capability" as Capability #lightgreen {
-    }
-    
-        Capability   *--> "n" Model : "instances"
-    
-    rectangle "Capability" as Capability #lightgreen {
-    }
-    
-        Capability   *--> "n" Model : "instances"
-    
-    rectangle "Capability" as Capability #lightgreen {
-    }
-    
-        Capability   *--> "n" Model : "instances"
-    
-    rectangle "Capability" as Capability #lightgreen {
-    }
-    
-        Capability   *--> "n" Model : "instances"
-    
     rectangle "Capability" as Capability #lightgreen {
     }
     

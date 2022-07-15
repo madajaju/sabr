@@ -81,7 +81,7 @@ class StreamPolicy {
                 }
             },
             Created: {
-                description: "Stream is created",
+                description: "StreamPolicy is created",
                 events: {
                     disable: {
                         Disabled: { }
@@ -92,7 +92,7 @@ class StreamPolicy {
                 },
             },
             Disabled: {
-                description: "Stream is disabled",
+                description: "StreamPolicy is disabled",
                 events: {
                     enable: {
                         Enabled: {}
@@ -103,7 +103,7 @@ class StreamPolicy {
                 }
             },
             Enabled: {
-                description: "Stream is Enabled",
+                description: "StreamPolicy is Enabled",
                 events: {
                     disbale: {
                         Disabled: { }
@@ -111,7 +111,7 @@ class StreamPolicy {
                 }
             },
             Destroyed: {
-                description: "Stream is destroyed",
+                description: "StreamPolicy is destroyed",
             },
         }
     }

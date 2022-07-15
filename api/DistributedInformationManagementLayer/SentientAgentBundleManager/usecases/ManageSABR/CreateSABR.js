@@ -1,6 +1,6 @@
 module.exports = {
     name: 'Create SABR',
-    description: 'Create SABR is the description',
+    description: 'Create SABR in the system.',
     method: "sabundle/create",
     actors: {
         'ApplicationDeveloper': 'uses',

@@ -6,8 +6,10 @@
 
 module.exports = {
     name: 'Manage Capabilities',
-    description: 'Manage Capabilities is the description',
-    method: 'application/list',
+    description: 'Capabilities are a group of SABRs that run together to provide functionality for the system.' +
+        ' Deploying, updating and managing capabilities allows engineers and developers the ability to deploy groups' +
+        ' of SABRs together.',
+    method: 'capability/list',
     actors: {
         'ApplicationDeveloper': 'uses',
         'DevOpsEngineer': 'uses'

@@ -2,7 +2,7 @@
 class ApplicationInstance {
     static definition = {
         name: 'ApplicationInstance',
-        description: 'Application Instance that is running in the ecosystem',
+        description: 'An Application Instance represents an application that is running in the ecosystem',
         attributes: {
             name: {
                 type: 'string',
@@ -27,6 +27,7 @@ class ApplicationInstance {
         },
         statenet: {
             Init: {
+                description: 'Initial State of the Application Instance',
                 events: {
                     create: {
                         Initializing: {}
@@ -34,6 +35,7 @@ class ApplicationInstance {
                 }
             },
             Initializing: {
+                description: 'When a ApplicationInstance is being initialized in the ecosystem.',
                 events: {
                     provisoned: {
                         Running: {}
@@ -41,6 +43,7 @@ class ApplicationInstance {
                 }
             },
             Running: {
+                description: 'The ApplicationInstance is running in the ecosystem.',
                 events: {
                     kill: {
                         Stopping: {}
@@ -48,6 +51,7 @@ class ApplicationInstance {
                 }
             },
             Stopping: {
+                description: 'The ApplicationInstance is stopping but not stopped yet.',
                 events: {
                     stopped: {
                         Stopped: {}
@@ -55,6 +59,7 @@ class ApplicationInstance {
                 }
             },
             Stopped: {
+                description: 'The ApplicationInstance has been stopped.',
                 events: {
                     exit: {
                         Exit: {}
@@ -65,8 +70,10 @@ class ApplicationInstance {
                 }
             },
             Exit: {
+                description: 'The ApplicationInstance has exited.'
             },
             Failed: {
+                description: 'The ApplicationInstance failed during initailization or after it was running.'
             }
         },
         view: {

@@ -13,7 +13,7 @@ hostURL += ':' + global.ailtire.config.listenPort;
     <link rel="stylesheet/less" type="text/css" href="styles/importer.less"/>
     <script type="module" src="js/ckeditor.js"></script>
 
-    <base href="http://<%= hostURL %><%= global.ailtire.config.urlPrefix %>/">
+    <base href="http://localhost/web/">
     <script src="js/jquery.js"></script>
     <script src="js/w2ui.js"></script>
     <link rel="stylesheet" href="styles/w2ui.css"/>
@@ -465,8 +465,17 @@ hostURL += ':' + global.ailtire.config.listenPort;
         window.graph = graph;
 
         let socket = io(window.location.origin,
-            {path: window.location.pathname + 'socket.io'}
+            {path: window.location.pathname + '/socket.io'}
         );
+        socket.on("connect", () => {
+            console.log("SOCKIO connect:", socket.id);
+        });
+        socket.on("connect_error", (err) => {
+            console.log("SOCKIO connect_error:", err.message);
+        });
+        socket.on("disconnect", () => {
+            console.log("SOCKIO disconnect:", socket.id);
+        });
         socket.onAny((event, msg) => {
             showEvent(event);
             if (event.includes('.create')) {

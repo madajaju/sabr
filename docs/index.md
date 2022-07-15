@@ -347,6 +347,8 @@ goals are? and How they use the system? This list is not an exhaustive list of a
 primary actors.
 
 
+* [Actor](actor-actor) - Long description
+  
 * [ApplicationDeveloper](actor-applicationdeveloper) - The Application Developer work in coordination with DevOps to manage services, applications and workloads through the development pipeline.
   
 * [DataAnalyst](actor-analyst) - Uses Data solutions produced by the Data Scientist and Data Engineer to provide business value to the organization.
@@ -377,11 +379,13 @@ of a centralized organizational structure of the actors of the system.
   
 * [Manage Capabilities](usecase-ManageCapabilities) - Manage Capabilities use cases gives DevOps Engineers and IT Operations the ability to deploy and manage new capabilities in the system. A capability can be a set of workflows or applications that when working together provide value to the tactical operator.
   
-* [Manage Policies](usecase-ManagePolicies) - Manage Policies use case includes establishing and managing DDIL environment policies for the complete ecosystem, and orchestration and deployment policies.
+* [Manage Policies](usecase-ManagePolicies) - Manage Policies use case includes establishing and managing DDIL environment policies for the complete ecosystem, individual capabilities, SABRs, and applications. This use case also refers to orchestration and deployment policies.
   
-* [Manage Security](usecase-ManageSecurity) - Manage Security use case includes prevention, detection, remediation and key management
+* [Manage Security](usecase-ManageSecurity) - Manage Security use case includes attestation of devices and services; prevention, detection, and remediation of cyber threats; and encryption and hash key management.
   
 * [Provide Digital Assistance](usecase-ProvideDigitalAssistance) - Provide Digital Assistance use cases provides curated and decision making information to the tactical operator. This could include suggestions to perform work, alerts to changing conditions, or automation of repetitive tasks.
+  
+* [Provide Mission Insight](usecase-ProvideMissionInsight) - Provide Mission Insight use cases analyses the data on the edge and in the data center to provide insight to business and mission problems through data analytics techniques
   
 
 ![UseCase](./usecases.png)
@@ -392,7 +396,7 @@ The Data Model for the  Sentient Agent Bundle Resources shows how the different 
 structure.
 
 * [Application Management Layer](package--sabr-aml) -
-Application Management Layer is responsible for the management of applications and workflows andthe development, test, deployment and updates of those applications and workloads
+Application Management Layer is responsible for the management of applications and workflows andthe development, test, deployment and updates of those applications and workloads.
   
 * [Common Physical Layer](package--sabr-cpl) -
 Common Physical Layer gives a common way of managing the underlying physical infrastructure

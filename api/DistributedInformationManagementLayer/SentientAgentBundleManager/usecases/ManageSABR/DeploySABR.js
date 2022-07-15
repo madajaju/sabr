@@ -1,7 +1,7 @@
 module.exports = {
     name: 'Deploy SABR',
-    description: 'Deploy SABR is the description',
-    method: "sabundle/create",
+    description: 'Deploy SABR in the system.',
+    method: "sabundle/deploy",
     actors: {
         'DevOpsEngineer': 'uses',
     },

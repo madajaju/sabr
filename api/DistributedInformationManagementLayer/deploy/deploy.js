@@ -1,23 +1,29 @@
 
 module.exports = {
-    name: '_diml',
+    name: 'sabr_diml',
     contexts: {
+        local: {
+            type: 'stack',
+            tag: 'sabr_diml:local',
+            design: 'services.js',
+            env: {}
+        },
         dev: {
-            type: 'swarm',
-            tag: '_diml_dev',
-            file: 'docker-compose.yml',
+            type: 'stack',
+            tag: 'sabr_diml:dev',
+            design: 'services.js',
             env: {}
         },
         test: {
-            type: 'swarm',
-            tag: '_diml_test',
-            file: 'docker-compose.yml',
+            type: 'stack',
+            tag: 'sabr_diml:test',
+            design: 'services.js',
             env: {}
         },
         prod: {
-            type: 'swarm',
-            tag: '_diml_prod',
-            file: 'docker-compose.yml',
+            type: 'stack',
+            tag: 'sabr_diml:prod',
+            design: 'services.js',
             env: {}
         }
     }

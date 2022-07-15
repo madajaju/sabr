@@ -2,7 +2,8 @@
 class InputChannelInstance {
     static definition = {
         name: 'InputChannelInstance',
-        description: 'This is the input to the transformation. Also known as the consumer of the datastream.',
+        description: 'This is the input to the transformation. Also known as the consumer of the data stream. This is' +
+            ' a specialization of the DataStreamInstance.',
         extends: 'DataChannelInstance',
         attributes: {
             consumer: {

@@ -18,11 +18,11 @@ The Security Operator is responsible for the implementation of security best pra
 * [Manage Security](usecase-ManageSecurity)
 
 
-![Use Case Diagram](./usecase.png)
+![Use Case Diagram](./UseCase.png)
 
 ## User Interface
 TBD
 
 ## Command Line Interface
-* [ sabr security/list](action--sabr-security-list) - Manage Security use case includes prevention, detection, remediation and key management
+* [ sabr security list](action--sabr-security-list) - Manage Security use case includes attestation of devices and services; prevention, detection, and remediation of cyber threats; and encryption and hash key management.
 

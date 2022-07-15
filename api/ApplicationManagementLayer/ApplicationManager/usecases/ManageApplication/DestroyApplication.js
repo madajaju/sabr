@@ -1,7 +1,8 @@
 module.exports = {
     name: 'Destroy Application',
-    description: 'Destroy Application is the description',
-    method: "data/create",
+    description: 'DevOps engineer can decommission applications in the ecosystem by destroying applications in the' +
+        ' ecosystem.',
+    method: "application/destroy",
     actors: {
         'DevOpsEngineer': 'uses',
     },

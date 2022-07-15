@@ -117,5 +117,20 @@ TacticalOperatorProvideDigitalAssistance --> sabrcapabilitylist
 
 
  
+state "Tactical Operator" as TacticalOperator {
+    state "Provide Mission Insight" as TacticalOperatorProvideMissionInsight {
+    }
+}
+state "sabr" as sabr #bbaaff {
+state "capability" as sabrcapability #bbaaff {
+state "list" as sabrcapabilitylist #bbaaff {
+}
+}
+}
+
+TacticalOperatorProvideMissionInsight --> sabrcapabilitylist
+
+
+ 
 
 @enduml

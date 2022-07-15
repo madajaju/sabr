@@ -4,18 +4,9 @@ module.exports = {
         dir: '..',
         cmd: 'node web/server.js',
         file: 'web/Dockerfile',
-        tag: '_am_web',
+        tag: 'sabr_aml_am_web',
         env: {
 
         }
     },
-    gateway: {
-        dir: '..',
-        cmd: 'node gateway/server.js',
-        file: 'gateway/Dockerfile',
-        tag: '_am_gw',
-        env: {
-
-        }
-    }
 }

@@ -6,7 +6,8 @@
 
 module.exports = {
     name: 'Manage Application',
-    description: 'Manage Applications in the system. Including deploying, and updating',
+    description: 'Manage Applications in the system. Including creating, deploying, and updating. Applications are' +
+        ' primarily managed by DevOps engineers and developed by an application developer.',
     method: 'application/list',
     actors: {
         'DevOpsEngineer': 'uses',

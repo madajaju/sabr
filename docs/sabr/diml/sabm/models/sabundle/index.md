@@ -38,70 +38,18 @@ Sentient Agent Bundle consists of the definition of the services, data streams, 
 
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
-| bundles | n | Capability | false | false |  |
+| bundles | n | Capability | false | false | SABR Bundles that make up the Capabilities. |
 | consumers | n | DataStream |  |  | This is a consumer of the data stream. |
 | producers | n | DataStream |  |  | This is a producer of the data stream. |
-| parent | 1 | SABundleInstance |  |  |  |
-| bundles | n | Capability | false | false |  |
-| consumers | n | DataStream |  |  | This is a consumer of the data stream. |
-| producers | n | DataStream |  |  | This is a producer of the data stream. |
-| parent | 1 | SABundleInstance |  |  |  |
-| bundles | n | Capability | false | false |  |
-| consumers | n | DataStream |  |  | This is a consumer of the data stream. |
-| producers | n | DataStream |  |  | This is a producer of the data stream. |
-| parent | 1 | SABundleInstance |  |  |  |
-| bundles | n | Capability | false | false |  |
-| consumers | n | DataStream |  |  | This is a consumer of the data stream. |
-| producers | n | DataStream |  |  | This is a producer of the data stream. |
-| parent | 1 | SABundleInstance |  |  |  |
-| bundles | n | Capability | false | false |  |
-| consumers | n | DataStream |  |  | This is a consumer of the data stream. |
-| producers | n | DataStream |  |  | This is a producer of the data stream. |
-| parent | 1 | SABundleInstance |  |  |  |
-| bundles | n | Capability | false | false |  |
-| consumers | n | DataStream |  |  | This is a consumer of the data stream. |
-| producers | n | DataStream |  |  | This is a producer of the data stream. |
-| parent | 1 | SABundleInstance |  |  |  |
-| bundles | n | Capability | false | false |  |
-| consumers | n | DataStream |  |  | This is a consumer of the data stream. |
-| producers | n | DataStream |  |  | This is a producer of the data stream. |
-| parent | 1 | SABundleInstance |  |  |  |
-| bundles | n | Capability | false | false |  |
-| consumers | n | DataStream |  |  | This is a consumer of the data stream. |
-| producers | n | DataStream |  |  | This is a producer of the data stream. |
-| parent | 1 | SABundleInstance |  |  |  |
-| bundles | n | Capability | false | false |  |
-| consumers | n | DataStream |  |  | This is a consumer of the data stream. |
-| producers | n | DataStream |  |  | This is a producer of the data stream. |
-| parent | 1 | SABundleInstance |  |  |  |
-| bundles | n | Capability | false | false |  |
-| consumers | n | DataStream |  |  | This is a consumer of the data stream. |
-| producers | n | DataStream |  |  | This is a producer of the data stream. |
-| parent | 1 | SABundleInstance |  |  |  |
-| bundles | n | Capability | false | false |  |
-| consumers | n | DataStream |  |  | This is a consumer of the data stream. |
-| producers | n | DataStream |  |  | This is a producer of the data stream. |
-| parent | 1 | SABundleInstance |  |  |  |
-| bundles | n | Capability | false | false |  |
-| consumers | n | DataStream |  |  | This is a consumer of the data stream. |
-| producers | n | DataStream |  |  | This is a producer of the data stream. |
-| parent | 1 | SABundleInstance |  |  |  |
-| bundles | n | Capability | false | false |  |
-| consumers | n | DataStream |  |  | This is a consumer of the data stream. |
-| producers | n | DataStream |  |  | This is a producer of the data stream. |
-| parent | 1 | SABundleInstance |  |  |  |
-| bundles | n | Capability | false | false |  |
-| consumers | n | DataStream |  |  | This is a consumer of the data stream. |
-| producers | n | DataStream |  |  | This is a producer of the data stream. |
-| parent | 1 | SABundleInstance |  |  |  |
-| bundles | n | Capability | false | false |  |
-| consumers | n | DataStream |  |  | This is a consumer of the data stream. |
-| producers | n | DataStream |  |  | This is a producer of the data stream. |
-| parent | 1 | SABundleInstance |  |  |  |
+| parent | 1 | SABundleInstance |  |  | Parent of the SAB Instance |
 
 
 
 ## State Net
+The SABundle has a state net corresponding to instances of the class. Each state transistion will emit an 
+event that can be caught with a websocket client. The name of the event is the name of the state in all lower case.
+The following diagram is the state net for this class.
+
 ![State Net Diagram](./statenet.png)
 
 | Name | Description | Events |
@@ -127,12 +75,17 @@ Sentient Agent Bundle consists of the definition of the services, data streams, 
     
 ### Action sabundle create
 
-* REST - sabundle/create
-* bin - sabundle create
-* js - sabundle.create
 
+
+* REST - sabundle/create?name=string&amp;file=file
+* bin - sabundle create --name string --file file
+* js - sabundle.create({ name:string,file:file })
+
+#### Description
 Create a Sentient Agent Bundle
 
+
+#### Parameters
 | Name | Type | Required | Description |
 |---|---|---|---|
 | name | string |true | name of the Sentient Agent Bundle |
@@ -143,12 +96,17 @@ Create a Sentient Agent Bundle
 
 ### Action sabundle deploy
 
-* REST - sabundle/deploy
-* bin - sabundle deploy
-* js - sabundle.deploy
 
+
+* REST - sabundle/deploy?policies=ref
+* bin - sabundle deploy --policies ref
+* js - sabundle.deploy({ policies:ref })
+
+#### Description
 Deploy a SABundle
 
+
+#### Parameters
 | Name | Type | Required | Description |
 |---|---|---|---|
 | policies | ref |true | Policies to use for deploying the Bundle. |
@@ -158,12 +116,17 @@ Deploy a SABundle
 
 ### Action sabundle toJScript
 
-* REST - sabundle/toJScript
-* bin - sabundle toJScript
-* js - sabundle.toJScript
 
+
+* REST - sabundle/toJScript?
+* bin - sabundle toJScript 
+* js - sabundle.toJScript({  })
+
+#### Description
 Convert the Bundle to a string to be passed over a connection.
 
+
+#### Parameters
 | Name | Type | Required | Description |
 |---|---|---|---|
 

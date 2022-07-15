@@ -1,7 +1,8 @@
 module.exports = {
     name: 'Test Capability',
-    description: 'Test Capability is the description',
-    method: "data/create",
+    description: 'Test Capability allows DevOps Engineers to test a capability before it is released. This is part' +
+        ' of the DevSecOps process.',
+    method: "capability/test",
     actors: {
         'DevOpsEngineer': 'uses',
     },

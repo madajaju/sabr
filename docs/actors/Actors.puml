@@ -2,6 +2,8 @@
 
 left to right direction
 
+Actor "Actor" as Actor
+
 Actor "Application Developer" as ApplicationDeveloper
 
 Actor "Data Analyst" as DataAnalyst
@@ -45,13 +47,13 @@ rectangle "Application Management Layer" as aml  #00aaff {
     
         DevOpsEngineer --> DeployCapability
         
-    usecase "Remove Capbility" as RemoveCapbility
+    usecase "Remove Capability" as RemoveCapability
     
-        DevOpsEngineer --> RemoveCapbility
+        DevOpsEngineer --> RemoveCapability
         
-    usecase "Update Capbility" as UpdateCapbility
+    usecase "Update Capability" as UpdateCapability
     
-        DevOpsEngineer --> UpdateCapbility
+        DevOpsEngineer --> UpdateCapability
         
 
 }
@@ -82,6 +84,10 @@ rectangle "Sentient Agent Bundle Resources" as sabr  #bbaaff {
     usecase "Provide Digital Assistance" as ProvideDigitalAssistance
     
         TacticalOperator ---> ProvideDigitalAssistance
+        
+    usecase "Provide Mission Insight" as ProvideMissionInsight
+    
+        TacticalOperator ---> ProvideMissionInsight
         
 
 }

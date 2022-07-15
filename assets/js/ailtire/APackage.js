@@ -156,29 +156,6 @@ export default class APackage {
             };
             data.nodes[iname] = node;
         }
-        for (let hname in pkg.handlers) {
-            let handler = pkg.handlers[hname];
-            let node = {
-                id: hname,
-                name: handler.name,
-                rbox: { parent: pkg.shortname, y: bbox.y, z: bbox.z,
-                    x: {min: bbox.x.max + 50, max: bbox.x.max + 50}
-                },
-                view: handler3DView
-            };
-
-            data.nodes[hname] = node;
-            // let obj3d = handler3DView(node, "");
-            // window.graph.addObject(obj3d);
-            for (let h in handler.handlers) {
-                let hand = handler.handlers[h];
-                if (hand.action) {
-                    let aname = hand.action.replace('/' + pkg.shortname, pkg.prefix);
-                    // window.graph.addLink({source:hname, target: aname, color: 'magenta'});
-                    data.links.push({source: hname, target: aname, color: 'rgba(255,255,0,1)', value: 0.1, width: 5});
-                }
-            }
-        }
 
         for (let uname in pkg.usecases) {
             let uc = pkg.usecases[uname];
@@ -206,7 +183,8 @@ export default class APackage {
 
         for (let cname in pkg.classes) {
             let cls = pkg.classes[cname];
-            let node = {id: cname, name: cls.name,
+            let id = pkg.prefix + '/' + cname.toLowerCase();
+            let node = {id: id, name: cls.name,
                 rbox: { parent: pkg.shortname, x: bbox.x, y: bbox.y,
                     z: {min: bbox.z.min - 50, max: bbox.z.min - 50}
                 },
@@ -256,6 +234,35 @@ export default class APackage {
             }
             data.nodes[pname] = node;
             data.links.push({source: pkg.shortname, target: pname, value: 0.1, color: 'rgba(255,255,255,1)', width: 5});
+        }
+
+        for (let hname in pkg.handlers) {
+            let handler = pkg.handlers[hname];
+            let node = {
+                id: hname,
+                name: handler.name,
+                rbox: { parent: pkg.shortname, y: bbox.y, z: bbox.z,
+                    x: {min: bbox.x.max + 50, max: bbox.x.max + 50}
+                },
+                view: handler3DView
+            };
+
+            data.nodes[hname] = node;
+            for (let h in handler.handlers) {
+                let hand = handler.handlers[h];
+                if (hand.action) {
+                    let aname = hand.action;
+                    if(data.nodes.hasOwnProperty(aname)) {
+                        data.links.push({
+                            source: hname,
+                            target: aname,
+                            color: 'rgba(255,255,0,1)',
+                            value: 0.1,
+                            width: 5
+                        });
+                    }
+                }
+            }
         }
         if (mode === 'add') {
             window.graph.addData(data.nodes, data.links);

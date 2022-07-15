@@ -2,8 +2,8 @@ module.exports = {
     name: 'inputchannelinstance.enabled',
     handlers: [
         {
-            description: 'Bundle Instance deployed for the SABR',
-            action: '/diml/dsm/channel/deployed',
+            description: 'Input channel for the bundle Instance deployed for the SABR',
+            action: '/sabr/diml/dsm/channel/deployed',
             fn: (data) => {
                 if(data.obj) {
                     return {channel: data.obj.name};

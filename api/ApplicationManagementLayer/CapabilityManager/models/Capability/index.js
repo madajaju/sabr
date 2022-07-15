@@ -3,7 +3,10 @@ class Capability {
     static definition = {
         name: 'Capability',
         description: 'Capabilities are deployed across multiple assets in the ecosystem. They consist of connecting' +
-            ' multiple SABRs together to show a flow of data through the system.',
+            ' multiple SABRs together to show a flow of data through the system. The Capability contains policies' +
+            ' that define how the SABR bundles should react to different events in the system. Instances of the' +
+            ' Capabilities are managed from the capability manager and consist of all of the information about the' +
+            ' running capability.',
         unique: (obj) => { return obj.name; },
         attributes: {
             name: {
@@ -18,12 +21,14 @@ class Capability {
                 cardinality: 'n',
             },
             bundles: {
+                description: 'SABR Bundles that make up the Capabilities.',
                 type: 'SABundle',
                 cardinality: 'n',
                 composition: false,
                 owner: false,
             },
             instances: {
+                description: 'This is a instance of capability running in the ecosystem.',
                 type: 'CapabilityInstance',
                 cardinality: 'n',
                 composition: true,
@@ -65,34 +70,6 @@ class Capability {
                 return retval;
             }
         }
-        /*
-        statenet: {
-            Init: {
-                description: "Initial State"
-                events: {
-                    create: {
-                        StateName: { }
-                    }
-                }
-            },
-            StateName: {
-                description: "My Description of the state",
-                events: {
-                    eventName: {
-                        StateName: {
-                            condition: function(obj) { ... },
-                            action: function(obj) { ... },
-                        }
-                    },
-                    eventName2 ...
-                }
-                actions: {
-                    entry: { entry1: function(obj) { ... } },
-                    exit: { exit1: function(obj): { ... } }
-                }
-            }
-        }
-        */
     }
 }
 

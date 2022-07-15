@@ -3,57 +3,47 @@
 left to right direction
 
 
-boundary appname__family #red
+boundary parent #black
 
 
-entity appname__diml_family #black
+entity children #blue
 
 
 
 
-package "_diml" #ffcc88 {
-    queue childrennet #black [
-            <b><color:white>children</color></b>
-    ]
-    
-    childrennet -[#black]- appname__diml_family
-    
-    queue siblingnet #blue [
-            <b><color:white>sibling</color></b>
-    ]
-    
-    queue parentnet #red [
+package "sabr_diml" #ffcc88 {
+    queue parentnet #black [
             <b><color:white>parent</color></b>
     ]
     
-    parentnet -[#red]- appname__family
+    parentnet -[#black]- parent
+    
+    queue childrennet #blue [
+            <b><color:white>children</color></b>
+    ]
+    
+    childrennet -[#blue]- children
+    
+    queue siblingsnet #red [
+            <b><color:white>siblings</color></b>
+    ]
     
 
-node "child" as childService
-node "frontend" as frontendService
-node "gw" as gwService
+node "dsm" as dsmService
+node "sabm" as sabmService
 
 
-        artifact "child_image:latest" as child_imagelatestimage
+        artifact "sabr_diml_dsm" as sabr_diml_dsmimage
     
-        artifact "_diml_web" as _diml_webimage
-    
-        artifact "_diml_gw" as _diml_gwimage
+        artifact "sabr_diml_sabm" as sabr_diml_sabmimage
     
 }
 
-childService -[#black]- childrennet
+dsmService -[#blue]- childrennet
 
-childService -[#red]- parentnet
-
-frontendService -[#blue]- siblingnet
-
-gwService -[#black]- childrennet
-
-gwService -[#blue]- siblingnet
-childService .... child_imagelatestimage
-frontendService .... _diml_webimage
-gwService .... _diml_gwimage
+sabmService -[#blue]- childrennet
+dsmService .... sabr_diml_dsmimage
+sabmService .... sabr_diml_sabmimage
 
 
 @enduml

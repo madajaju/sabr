@@ -26,6 +26,16 @@ state "build" as amlcmcapabilitybuild #00aaff {
         state "aml" as aml #00aaff {
 state "cm" as amlcm #00aaff {
 state "capability" as amlcmcapability #00aaff {
+state "create" as amlcmcapabilitycreate #00aaff {
+}
+}
+}
+}
+
+
+        state "aml" as aml #00aaff {
+state "cm" as amlcm #00aaff {
+state "capability" as amlcmcapability #00aaff {
 state "deploy" as amlcmcapabilitydeploy #00aaff {
 }
 }
@@ -56,6 +66,16 @@ state "release" as amlcmcapabilityrelease #00aaff {
         state "aml" as aml #00aaff {
 state "cm" as amlcm #00aaff {
 state "capability" as amlcmcapability #00aaff {
+state "remove" as amlcmcapabilityremove #00aaff {
+}
+}
+}
+}
+
+
+        state "aml" as aml #00aaff {
+state "cm" as amlcm #00aaff {
+state "capability" as amlcmcapability #00aaff {
 state "test" as amlcmcapabilitytest #00aaff {
 }
 }
@@ -65,18 +85,8 @@ state "test" as amlcmcapabilitytest #00aaff {
 
         state "aml" as aml #00aaff {
 state "cm" as amlcm #00aaff {
-state "data" as amlcmdata #00aaff {
-state "create" as amlcmdatacreate #00aaff {
-}
-}
-}
-}
-
-
-        state "aml" as aml #00aaff {
-state "cm" as amlcm #00aaff {
-state "data" as amlcmdata #00aaff {
-state "govern" as amlcmdatagovern #00aaff {
+state "capability" as amlcmcapability #00aaff {
+state "update" as amlcmcapabilityupdate #00aaff {
 }
 }
 }

@@ -6,9 +6,9 @@ parent: usecases
 ---
 # Manage SABR
 
-Manage SABR is the description
+Manage SABR allows the devops engineers to create,deploy, updated and destroy SABRs in the system.
 
-![Activities Diagram](./activities.png)
+![Activities Diagram](./Activities.png)
 
 ## Actors
 
@@ -26,19 +26,19 @@ Manage SABR is the description
 
 ## Detail Scenarios
 
-* [Manage SABR](#scenario-CreateSABR)
-* [Manage SABR](#scenario-DeploySABR)
-* [Manage SABR](#scenario-DeploySABR2)
-* [Manage SABR](#scenario-DeploySABR3)
-* [Manage SABR](#scenario-DeploySABR4)
+* [CreateSABR](#scenario-CreateSABR)
+* [DeploySABR](#scenario-DeploySABR)
+* [DeploySABR2](#scenario-DeploySABR2)
+* [DeploySABR3](#scenario-DeploySABR3)
+* [DeploySABR4](#scenario-DeploySABR4)
 
 
 
 ### Scenario Create SABR
 
-Create SABR is the description
+Create SABR in the system.
 
-![Scenario CreateSABR](./createsabr.png)
+![Scenario CreateSABR](./CreateSABR.png)
 
 #### Steps
 
@@ -59,9 +59,9 @@ Create SABR is the description
 
 ### Scenario Deploy SABR
 
-Deploy SABR is the description
+Deploy SABR in the system.
 
-![Scenario DeploySABR](./deploysabr.png)
+![Scenario DeploySABR](./DeploySABR.png)
 
 #### Steps
 
@@ -84,9 +84,9 @@ Deploy SABR is the description
 
 ### Scenario Deploy SABR two
 
-Deploy SABR is the description
+Deploy SABR with policies.
 
-![Scenario DeploySABRtwo](./deploysabrtwo.png)
+![Scenario DeploySABRtwo](./DeploySABRtwo.png)
 
 #### Steps
 
@@ -109,9 +109,9 @@ Deploy SABR is the description
 
 ### Scenario Deploy SABR three
 
-Deploy SABR is the description
+Deploy SABR with multiple policies and complex SABR.
 
-![Scenario DeploySABRthree](./deploysabrthree.png)
+![Scenario DeploySABRthree](./DeploySABRthree.png)
 
 #### Steps
 
@@ -134,9 +134,9 @@ Deploy SABR is the description
 
 ### Scenario Deploy SABR four
 
-Deploy SABR is the description
+Deploy SABR with three policies and complex transformations.
 
-![Scenario DeploySABRfour](./deploysabrfour.png)
+![Scenario DeploySABRfour](./DeploySABRfour.png)
 
 #### Steps
 

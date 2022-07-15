@@ -2,7 +2,8 @@
 class StackInstance {
     static definition = {
         name: 'StackInstance',
-        description: 'The StackInstance is the execution of the Stack. This allows for control of the stack during execution.',
+        description: 'The StackInstance represents the execution of the Stack. This allows for control of the' +
+            ' stack during execution.',
         extends: 'ServiceInstance',
         attributes: {
             name: {
@@ -73,37 +74,27 @@ class StackInstance {
                 }
             },
             Running: {
+                description: 'The Service is running in the ecosystem',
                 kill: {
                     Killing: {}
                 }
             },
             Killing: {
+                description: 'The Service is being killed',
                 killed: {
                     Killed: { }
                 }
             },
-            Failed: {},
-            Completed: {},
-            Killed: {},
-        },
-            /* Deploying: {
-                description: "My Description of the state",
-                events: {
-                    eventName: {
-                        StateName: {
-                            condition: function(obj) { ... },
-                            action: function(obj) { ... },
-                        }
-                    },
-                    eventName2 ...
-                }
-                actions: {
-                    entry: { entry1: function(obj) { ... } },
-                    exit: { exit1: function(obj): { ... } }
-                }
+            Failed: {
+                description: 'The ServiceInstance has failed'
+            },
+            Completed: {
+                description: 'The ServiceInstance has completed successfully',
+            },
+            Killed: {
+                description: 'The ServiceInstance has been killed successfully',
             }
-        }
-        */
+        },
         view: {
             color: "#aaffaa",
             object2d: (options) => {

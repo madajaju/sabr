@@ -50,6 +50,10 @@ tacticaloperator -> "Sentient Agent Bundle Resources": Provide Digital Assistanc
 "Sentient Agent Bundle Resources" -> bin: capability list
 bin -> REST: capability/list
 
+tacticaloperator -> "Sentient Agent Bundle Resources": Provide Mission Insight
+"Sentient Agent Bundle Resources" -> bin: capability list
+bin -> REST: capability/list
+
 
 
 @enduml

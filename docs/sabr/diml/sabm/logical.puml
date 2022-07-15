@@ -56,8 +56,9 @@ package "Sentient Agent Bundle Manager" #ffcc88 {
             /sabr/diml/sabm/connect()
             /sabr/diml/sabm/bundle/createanddeploy()
             /sabr/diml/sabm/bundle/deploy()
-            /sabr/diml/sabm/bundle/list()
             /sabr/diml/sabm/sabundle/create()
+            /sabr/diml/sabm/sabundle/deploy()
+            /sabr/diml/sabm/sabundle/list()
     
     }
 }

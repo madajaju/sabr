@@ -2,8 +2,9 @@
 class CapabilityInstance {
     static definition = {
         name: 'CapabilityInstance',
-        description: 'Description ' +
-            'long description',
+        description: 'A CapabilityInstance contains the execution environment, logging, and state of a running' +
+            ' capability in the ecosystem. This model provides an interface to manage and control the running' +
+            ' instance.',
         attributes: {
             name: {
                 type: 'string',

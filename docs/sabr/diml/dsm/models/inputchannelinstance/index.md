@@ -7,7 +7,7 @@ parent: classes
 
 # InputChannelInstance
 
-This is the input to the transformation. Also known as the consumer of the datastream.
+This is the input to the transformation. Also known as the consumer of the data stream. This is a specialization of the DataStreamInstance.
 
 ![Logical Diagram](./logical.png)
 
@@ -38,6 +38,10 @@ This is the input to the transformation. Also known as the consumer of the datas
 
 
 ## State Net
+The InputChannelInstance has a state net corresponding to instances of the class. Each state transistion will emit an 
+event that can be caught with a websocket client. The name of the event is the name of the state in all lower case.
+The following diagram is the state net for this class.
+
 ![State Net Diagram](./statenet.png)
 
 | Name | Description | Events |
@@ -55,7 +59,7 @@ This is the input to the transformation. Also known as the consumer of the datas
 
 * [create() - Create a Input Channel Instance](#action-create)
 
-* [deploy() - Deploy the channel](#action-deploy)
+* [deploy() - Deploy the channel instance](#action-deploy)
 
 * [failed() - Deployment Failed on the Data Channel Instance.](#action-failed)
 
@@ -64,12 +68,17 @@ This is the input to the transformation. Also known as the consumer of the datas
     
 ### Action inputchannelinstance create
 
-* REST - inputchannelinstance/create
-* bin - inputchannelinstance create
-* js - inputchannelinstance.create
 
+
+* REST - inputchannelinstance/create?
+* bin - inputchannelinstance create 
+* js - inputchannelinstance.create({  })
+
+#### Description
 Create a Input Channel Instance
 
+
+#### Parameters
 | Name | Type | Required | Description |
 |---|---|---|---|
 
@@ -78,12 +87,17 @@ Create a Input Channel Instance
 
 ### Action inputchannelinstance deploy
 
-* REST - inputchannelinstance/deploy
-* bin - inputchannelinstance deploy
-* js - inputchannelinstance.deploy
 
-Deploy the channel
 
+* REST - inputchannelinstance/deploy?
+* bin - inputchannelinstance deploy 
+* js - inputchannelinstance.deploy({  })
+
+#### Description
+Deploy the channel instance
+
+
+#### Parameters
 | Name | Type | Required | Description |
 |---|---|---|---|
 
@@ -92,12 +106,17 @@ Deploy the channel
 
 ### Action inputchannelinstance failed
 
-* REST - inputchannelinstance/failed
-* bin - inputchannelinstance failed
-* js - inputchannelinstance.failed
 
+
+* REST - inputchannelinstance/failed?message=string
+* bin - inputchannelinstance failed --message string
+* js - inputchannelinstance.failed({ message:string })
+
+#### Description
 Deployment Failed on the Data Channel Instance.
 
+
+#### Parameters
 | Name | Type | Required | Description |
 |---|---|---|---|
 | message | string |true | Failed Message for the deployment error. |

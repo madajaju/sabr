@@ -7,7 +7,7 @@ has_children: true
 
 # Sentient Agent Bundle Resources
 
-SABR is a system architecture that enables data transformation through deployment and managment AI algorightms in the data center, cloud and at the semi-connected edge.
+SABR is a system architecture that enables data transformation through deployment and management of AI algorithms in the data center, cloud and at the semi-connected edge.
 
 # Introduction
 
@@ -35,8 +35,7 @@ their data sources and approaches in a unified manner across a distributed ecosy
 Organizations need a solution that provide:
 
 * Security – Provides a hardware root of trust to match AI models with attested hardware to prevent AI models from
-  working outside the attested ecosystem. Also prevents unverified and unattested models from running in the
-  ecosystem.
+  working outside the attested ecosystem. Also prevents unverified and unattested models from running in the ecosystem.
 * Manageability – AI models and algorithms are managed from a federated control plane that manages deployment, updates
   and decommissioning.
 * Auditability – Changes to SAPRs, their AI models and algorithms are tracked from a single management framework that
@@ -64,7 +63,7 @@ sidecar pattern, zero trust architecture, and reinforced collective learning.
 
 The data stream is a mature concept that allows data to be passed between a producer and a set of consumers without
 direct coupling between the entities. This concept provides the ability to deploy large numbers of producers and
-consumers in the same ecosystem without the fragility of coupling. 
+consumers in the same ecosystem without the fragility of coupling.
 
 ![Data Stream Concept](./datastreams.png)
 
@@ -304,6 +303,40 @@ deployment velocity. This also decreases the need for Digital Twin infrastructur
 is shared between the Data Centers and On ship servers, the need to build a complete digital twin is no longer needed.
 Only specialized hardware/application systems would need to be “mimicked (ed)” for digital twin.
 
+## Deployment Design Patterns
+
+This solution is deployed using service stack design pattern where a stack of services collaborate together to deliver
+functionality to the system. An extendtion of this design pattern to aggregated service stacks allow the for isolation
+of different parts of the system to occur while maintaining consistency in security and system policies.
+
+![Deployment](./Deployment.png)
+
+Each aggregated service stack has an administration side-car container that manages and monitors the stack. This micro
+service design pattern is shown in the diagram below. A nodejs app is used to implement the admin sidecar in the system.
+Each service stack has a CLI, REST, and Web Interface exposed through this nodejs application. Additionally, the system
+can handle events through a WebSocket interface. The nodejs application will interface with the microservices and can
+monitor and drive workflows through the mesh of microservices.
+
+The solution can be deployed in different environments. The standard environments in the architecture are local, dev,
+test, and prod. These environments fit into the typical DevOps pipelines that exist in the industry. Additional
+deployment environments can be added to fit the needs of the user.
+
+## Physical Design Pattern
+
+The Sentient Agent Bundle Resources architecture is physically laid out using a microservice architecture on a hybrid
+multi-cloud infrastructure. This includes running in the cloud, in the data center, and on edge devices. All
+capabilities of the system are deployed through micro-services and require a container orchestrator to deploy
+containers.
+
+![Physical](./Physical.png)
+
+All the microservices communicate with the administrative app through a REST. WebSocket and Apache Pulsar interface. A
+CLI, REST, WebSocket, and Web interface is available for external systems or users to interact with the system. All
+communications are encrypted and decryption keys are shared in the secret encrypted vault in the SABR container. Each
+subsystem in the architecture uses an aggregated service/stack pattern that allows for the elasticity of services based
+on the workloads, capacity, and business rules established for the solution. See each subsystem for more information on
+the individual stacks and their services.
+
 
 ## Use Cases
 
@@ -315,6 +348,7 @@ that are elaborated in the use case descriptions.
 * [Manage Policies](usecase-ManagePolicies)
 * [Manage Security](usecase-ManageSecurity)
 * [Provide Digital Assistance](usecase-ProvideDigitalAssistance)
+* [Provide Mission Insight](usecase-ProvideMissionInsight)
 
 
 ![UseCase Diagram](./usecases.png)
@@ -344,9 +378,7 @@ users interact with the system.
 ![Scenario Mappings Diagram](./scenariomapping.png)
 
 * [ sabr aimodel list](#action--sabr-aimodel-list)
-* [ sabr application list](#action--sabr-application-list)
 * [ sabr capability list](#action--sabr-capability-list)
-* [ sabr data govern](#action--sabr-data-govern)
 * [ sabr policy list](#action--sabr-policy-list)
 * [ sabr pulsar streams](#action--sabr-pulsar-streams)
 * [ sabr pulsar topic](#action--sabr-pulsar-topic)
@@ -494,7 +526,10 @@ cases and scenarios of the subsystem.
 
 ### Messages Sent
 
-TBD
+| Event | Description | Emitter |
+|-------|-------------|---------|
+
+
 
 ## Interface Details
 The Sentient Agent Bundle Resources subsystem has a well defined interface. This interface can be accessed using a
@@ -503,26 +538,17 @@ subsystems and actors can access the system.
 
 ### Action  sabr aimodel list
 
-* REST - /sabr/aimodel/list
-* bin -  sabr aimodel list
-* js - .sabr.aimodel.list
 
+
+* REST - /sabr/aimodel/list?attr1=string
+* bin -  sabr aimodel list --attr1 string
+* js - .sabr.aimodel.list({ attr1:string })
+
+#### Description
 Description of the action
 
-| Name | Type | Required | Description |
-|---|---|---|---|
-| attr1 | string |false | Description for the parameter |
 
-
-
-### Action  sabr application list
-
-* REST - /sabr/application/list
-* bin -  sabr application list
-* js - .sabr.application.list
-
-Description of the action
-
+#### Parameters
 | Name | Type | Required | Description |
 |---|---|---|---|
 | attr1 | string |false | Description for the parameter |
@@ -531,26 +557,17 @@ Description of the action
 
 ### Action  sabr capability list
 
-* REST - /sabr/capability/list
-* bin -  sabr capability list
-* js - .sabr.capability.list
-
-Return the topics in the pulsar configuration
-
-| Name | Type | Required | Description |
-|---|---|---|---|
-| id | string |true | ID of the topic. should be fully qualified |
 
 
+* REST - /sabr/capability/list?attr1=string
+* bin -  sabr capability list --attr1 string
+* js - .sabr.capability.list({ attr1:string })
 
-### Action  sabr data govern
-
-* REST - /sabr/data/govern
-* bin -  sabr data govern
-* js - .sabr.data.govern
-
+#### Description
 Description of the action
 
+
+#### Parameters
 | Name | Type | Required | Description |
 |---|---|---|---|
 | attr1 | string |false | Description for the parameter |
@@ -559,12 +576,17 @@ Description of the action
 
 ### Action  sabr policy list
 
-* REST - /sabr/policy/list
-* bin -  sabr policy list
-* js - .sabr.policy.list
 
+
+* REST - /sabr/policy/list?attr1=string
+* bin -  sabr policy list --attr1 string
+* js - .sabr.policy.list({ attr1:string })
+
+#### Description
 Description of the action
 
+
+#### Parameters
 | Name | Type | Required | Description |
 |---|---|---|---|
 | attr1 | string |false | Description for the parameter |
@@ -573,12 +595,17 @@ Description of the action
 
 ### Action  sabr pulsar streams
 
-* REST - /sabr/pulsar/streams
-* bin -  sabr pulsar streams
-* js - .sabr.pulsar.streams
 
+
+* REST - /sabr/pulsar/streams?id=string
+* bin -  sabr pulsar streams --id string
+* js - .sabr.pulsar.streams({ id:string })
+
+#### Description
 Return the topics in the pulsar configuration
 
+
+#### Parameters
 | Name | Type | Required | Description |
 |---|---|---|---|
 | id | string |true | ID of the topic. should be fully qualified |
@@ -587,12 +614,17 @@ Return the topics in the pulsar configuration
 
 ### Action  sabr pulsar topic
 
-* REST - /sabr/pulsar/topic
-* bin -  sabr pulsar topic
-* js - .sabr.pulsar.topic
 
+
+* REST - /sabr/pulsar/topic?id=string
+* bin -  sabr pulsar topic --id string
+* js - .sabr.pulsar.topic({ id:string })
+
+#### Description
 Return the topics in the pulsar configuration
 
+
+#### Parameters
 | Name | Type | Required | Description |
 |---|---|---|---|
 | id | string |true | ID of the topic. should be fully qualified |
@@ -601,12 +633,17 @@ Return the topics in the pulsar configuration
 
 ### Action  sabr pulsar topics
 
-* REST - /sabr/pulsar/topics
-* bin -  sabr pulsar topics
-* js - .sabr.pulsar.topics
 
+
+* REST - /sabr/pulsar/topics?
+* bin -  sabr pulsar topics 
+* js - .sabr.pulsar.topics({  })
+
+#### Description
 Return the topics in the pulsar configuration
 
+
+#### Parameters
 | Name | Type | Required | Description |
 |---|---|---|---|
 
@@ -614,26 +651,35 @@ Return the topics in the pulsar configuration
 
 ### Action  sabr security list
 
-* REST - /sabr/security/list
-* bin -  sabr security list
-* js - .sabr.security.list
 
-Description of the action
 
+* REST - /sabr/security/list?
+* bin -  sabr security list 
+* js - .sabr.security.list({  })
+
+#### Description
+List the security profiles.
+
+
+#### Parameters
 | Name | Type | Required | Description |
 |---|---|---|---|
-| attr1 | string |false | Description for the parameter |
 
 
 
 ### Action  sabr security manage
 
-* REST - /sabr/security/manage
-* bin -  sabr security manage
-* js - .sabr.security.manage
 
+
+* REST - /sabr/security/manage?attr1=string
+* bin -  sabr security manage --attr1 string
+* js - .sabr.security.manage({ attr1:string })
+
+#### Description
 Description of the action
 
+
+#### Parameters
 | Name | Type | Required | Description |
 |---|---|---|---|
 | attr1 | string |false | Description for the parameter |

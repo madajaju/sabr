@@ -2,7 +2,7 @@ module.exports = {
     name: 'serviceinstance.killed',
     handlers: [
         {
-            description: 'Handle the service is ready to be provisioned',
+            description: 'The service instance is killed.',
             fn: (data) => {
                 if(data._attributes) {
                     let serviceInstance = ServiceInstance.find(data._attributes.name);

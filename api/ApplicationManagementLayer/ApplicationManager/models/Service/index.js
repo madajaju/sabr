@@ -2,10 +2,9 @@
 class Service {
     static definition = {
         name: 'Service',
-        description: 'A Service is an orchestratable element that represents a container or vm running against a ' +
+        description: 'A Service is an orchestrate element that represents a container or vm running on a ' +
             'resource. The actual execution of the service is tracked by the ServiceInstance. A stack is made up ' +
             'of multiple services.',
-
         attributes: {
             name: {
                 type: 'string',

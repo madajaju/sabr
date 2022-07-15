@@ -1,4 +1,4 @@
-import {AText} from './index.js';
+import {AText, A3DGraph} from './index.js';
 
 export default class AObject {
     constructor(config) {

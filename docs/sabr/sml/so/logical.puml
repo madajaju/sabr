@@ -23,9 +23,13 @@ Web ()-- i
 package "Service Orchestrator" #aaffaa {
         class "DockerProvisioner" {
                  string name
+                 json config
                              deploy()
             }
+                DockerProvisioner o--> "n" ServiceInstance : services
+            
     
+        Provisioner <|-- DockerProvisioner
     
     class "ProcessProvisioner" {
                  string name

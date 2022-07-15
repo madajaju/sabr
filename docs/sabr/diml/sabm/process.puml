@@ -43,8 +43,8 @@ state "deploy" as dimlsabmbundledeploy #ffcc88 {
 
         state "diml" as diml #ffcc88 {
 state "sabm" as dimlsabm #ffcc88 {
-state "bundle" as dimlsabmbundle #ffcc88 {
-state "list" as dimlsabmbundlelist #ffcc88 {
+state "sabundle" as dimlsabmsabundle #ffcc88 {
+state "create" as dimlsabmsabundlecreate #ffcc88 {
 }
 }
 }
@@ -54,7 +54,17 @@ state "list" as dimlsabmbundlelist #ffcc88 {
         state "diml" as diml #ffcc88 {
 state "sabm" as dimlsabm #ffcc88 {
 state "sabundle" as dimlsabmsabundle #ffcc88 {
-state "create" as dimlsabmsabundlecreate #ffcc88 {
+state "deploy" as dimlsabmsabundledeploy #ffcc88 {
+}
+}
+}
+}
+
+
+        state "diml" as diml #ffcc88 {
+state "sabm" as dimlsabm #ffcc88 {
+state "sabundle" as dimlsabmsabundle #ffcc88 {
+state "list" as dimlsabmsabundlelist #ffcc88 {
 }
 }
 }

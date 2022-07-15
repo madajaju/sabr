@@ -10,6 +10,7 @@ Version 0.1.1
 
 ### Actors
 * [All Actors](actors)
+* [Actor](actor-actor)
 * [ApplicationDeveloper](actor-applicationdeveloper)
 * [DataAnalyst](actor-analyst)
 * [DataEngineer](actor-dataengineer)
@@ -42,13 +43,14 @@ Version 0.1.1
 * [Manage Application](usecase-ManageApplication)
 * [Deploy Capability](usecase-DeployCapability)
 * [Develop Capability](usecase-DevelopCapability)
-* [Remove Capbility](usecase-RemoveCapbility)
-* [Update Capbility](usecase-UpdateCapbility)
+* [Remove Capability](usecase-RemoveCapability)
+* [Update Capability](usecase-UpdateCapability)
 * [Manage SABR](usecase-ManageSABR)
 * [Manage AI Model](usecase-ManageAIModel)
 * [Manage Capabilities](usecase-ManageCapabilities)
 * [Manage Policies](usecase-ManagePolicies)
 * [Manage Security](usecase-ManageSecurity)
 * [Provide Digital Assistance](usecase-ProvideDigitalAssistance)
+* [Provide Mission Insight](usecase-ProvideMissionInsight)
 
 

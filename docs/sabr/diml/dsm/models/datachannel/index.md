@@ -34,81 +34,25 @@ This represents one channel in the data stream with specific rules for the chann
 | design | 1 | DataChannelInstance |  |  | Parent of the channel Instance. This is the definition of the channel. |
 | channels | n | DataStream | true | true | This is the collection of channel that are attached to this data stream |
 | channels | n | StreamPolicy | false | false | This collection of channels that are used to create channel instances when the stream is created. |
-| design | 1 | DataChannelInstance |  |  | Parent of the channel Instance. This is the definition of the channel. |
-| channels | n | DataStream | true | true | This is the collection of channel that are attached to this data stream |
-| channels | n | StreamPolicy | false | false | This collection of channels that are used to create channel instances when the stream is created. |
-| design | 1 | DataChannelInstance |  |  | Parent of the channel Instance. This is the definition of the channel. |
-| channels | n | DataStream | true | true | This is the collection of channel that are attached to this data stream |
-| channels | n | StreamPolicy | false | false | This collection of channels that are used to create channel instances when the stream is created. |
-| design | 1 | DataChannelInstance |  |  | Parent of the channel Instance. This is the definition of the channel. |
-| channels | n | DataStream | true | true | This is the collection of channel that are attached to this data stream |
-| channels | n | StreamPolicy | false | false | This collection of channels that are used to create channel instances when the stream is created. |
-| design | 1 | DataChannelInstance |  |  | Parent of the channel Instance. This is the definition of the channel. |
-| channels | n | DataStream | true | true | This is the collection of channel that are attached to this data stream |
-| channels | n | StreamPolicy | false | false | This collection of channels that are used to create channel instances when the stream is created. |
-| design | 1 | DataChannelInstance |  |  | Parent of the channel Instance. This is the definition of the channel. |
-| channels | n | DataStream | true | true | This is the collection of channel that are attached to this data stream |
 | design | 1 | InputChannelInstance |  |  | Parent of the channel Instance. This is the definition of the channel. |
 | design | 1 | OutputChannelInstance |  |  | Parent of the channel Instance. This is the definition of the channel. |
-| channels | n | StreamPolicy | false | false | This collection of channels that are used to create channel instances when the stream is created. |
-| design | 1 | DataChannelInstance |  |  | Parent of the channel Instance. This is the definition of the channel. |
-| channels | n | DataStream | true | true | This is the collection of channel that are attached to this data stream |
-| design | 1 | InputChannelInstance |  |  | Parent of the channel Instance. This is the definition of the channel. |
-| design | 1 | OutputChannelInstance |  |  | Parent of the channel Instance. This is the definition of the channel. |
-| channels | n | StreamPolicy | false | false | This collection of channels that are used to create channel instances when the stream is created. |
-| design | 1 | DataChannelInstance |  |  | Parent of the channel Instance. This is the definition of the channel. |
-| channels | n | DataStream | true | true | This is the collection of channel that are attached to this data stream |
-| design | 1 | InputChannelInstance |  |  | Parent of the channel Instance. This is the definition of the channel. |
-| design | 1 | OutputChannelInstance |  |  | Parent of the channel Instance. This is the definition of the channel. |
-| channels | n | StreamPolicy | false | false | This collection of channels that are used to create channel instances when the stream is created. |
-| design | 1 | DataChannelInstance |  |  | Parent of the channel Instance. This is the definition of the channel. |
-| channels | n | DataStream | true | true | This is the collection of channel that are attached to this data stream |
-| design | 1 | InputChannelInstance |  |  | Parent of the channel Instance. This is the definition of the channel. |
-| design | 1 | OutputChannelInstance |  |  | Parent of the channel Instance. This is the definition of the channel. |
-| channels | n | StreamPolicy | false | false | This collection of channels that are used to create channel instances when the stream is created. |
-| design | 1 | DataChannelInstance |  |  | Parent of the channel Instance. This is the definition of the channel. |
-| channels | n | DataStream | true | true | This is the collection of channel that are attached to this data stream |
-| design | 1 | InputChannelInstance |  |  | Parent of the channel Instance. This is the definition of the channel. |
-| design | 1 | OutputChannelInstance |  |  | Parent of the channel Instance. This is the definition of the channel. |
-| channels | n | StreamPolicy | false | false | This collection of channels that are used to create channel instances when the stream is created. |
-| design | 1 | DataChannelInstance |  |  | Parent of the channel Instance. This is the definition of the channel. |
-| channels | n | DataStream | true | true | This is the collection of channel that are attached to this data stream |
-| design | 1 | InputChannelInstance |  |  | Parent of the channel Instance. This is the definition of the channel. |
-| design | 1 | OutputChannelInstance |  |  | Parent of the channel Instance. This is the definition of the channel. |
-| channels | n | StreamPolicy | false | false | This collection of channels that are used to create channel instances when the stream is created. |
-| design | 1 | DataChannelInstance |  |  | Parent of the channel Instance. This is the definition of the channel. |
-| channels | n | DataStream | true | true | This is the collection of channel that are attached to this data stream |
-| design | 1 | InputChannelInstance |  |  | Parent of the channel Instance. This is the definition of the channel. |
-| design | 1 | OutputChannelInstance |  |  | Parent of the channel Instance. This is the definition of the channel. |
-| channels | n | StreamPolicy | false | false | This collection of channels that are used to create channel instances when the stream is created. |
-| design | 1 | DataChannelInstance |  |  | Parent of the channel Instance. This is the definition of the channel. |
-| channels | n | DataStream | true | true | This is the collection of channel that are attached to this data stream |
-| design | 1 | InputChannelInstance |  |  | Parent of the channel Instance. This is the definition of the channel. |
-| design | 1 | OutputChannelInstance |  |  | Parent of the channel Instance. This is the definition of the channel. |
-| channels | n | StreamPolicy | false | false | This collection of channels that are used to create channel instances when the stream is created. |
-| design | 1 | DataChannelInstance |  |  | Parent of the channel Instance. This is the definition of the channel. |
-| channels | n | DataStream | true | true | This is the collection of channel that are attached to this data stream |
-| design | 1 | InputChannelInstance |  |  | Parent of the channel Instance. This is the definition of the channel. |
-| design | 1 | OutputChannelInstance |  |  | Parent of the channel Instance. This is the definition of the channel. |
-| channels | n | StreamPolicy | false | false | This collection of channels that are used to create channel instances when the stream is created. |
-| design | 1 | DataChannelInstance |  |  | Parent of the channel Instance. This is the definition of the channel. |
-| channels | n | DataStream | true | true | This is the collection of channel that are attached to this data stream |
-| design | 1 | InputChannelInstance |  |  | Parent of the channel Instance. This is the definition of the channel. |
-| design | 1 | OutputChannelInstance |  |  | Parent of the channel Instance. This is the definition of the channel. |
-| channels | n | StreamPolicy | false | false | This collection of channels that are used to create channel instances when the stream is created. |
 
 
 
 ## State Net
+The DataChannel has a state net corresponding to instances of the class. Each state transistion will emit an 
+event that can be caught with a websocket client. The name of the event is the name of the state in all lower case.
+The following diagram is the state net for this class.
+
 ![State Net Diagram](./statenet.png)
 
 | Name | Description | Events |
 | --- | --- | --- |
 | Init | Initial State | create-&gt;Created,  |
-| Created | Stream is created | disable-&gt;Disabled, destroy-&gt;Destroyed,  |
-| Disabled | Stream is disabled | enable-&gt;Enabled, destroy-&gt;Destroyed,  |
-| Enabled | Stream is Enabled | disbale-&gt;Disabled,  |
-| Destroyed | Stream is destroyed |  |
+| Created | DataChannel is created | disable-&gt;Disabled, destroy-&gt;Destroyed,  |
+| Disabled | DataChannel is disabled | enable-&gt;Enabled, destroy-&gt;Destroyed,  |
+| Enabled | DataChannel is Enabled | disbale-&gt;Disabled,  |
+| Destroyed | DataChannel is destroyed |  |
 
 
 

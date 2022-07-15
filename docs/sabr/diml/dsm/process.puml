@@ -45,16 +45,18 @@ state "enabled" as dimldsminputchannelinstanceenabled #ffcc88 {
 }
 
         
-    state "diml" as diml #ffcc88 {
-state "dsm" as dimldsm #ffcc88 {
-state "channel" as dimldsmchannel #ffcc88 {
-state "deployed" as dimldsmchanneldeployed #ffcc88 {
+    state "sabr" as sabr #bbaaff {
+state "diml" as sabrdiml #ffcc88 {
+state "dsm" as sabrdimldsm #ffcc88 {
+state "channel" as sabrdimldsmchannel #ffcc88 {
+state "deployed" as sabrdimldsmchanneldeployed #ffcc88 {
+}
 }
 }
 }
 }
 
-    dimldsminputchannelinstanceenabled ---> dimldsmchanneldeployed
+    dimldsminputchannelinstanceenabled ---> sabrdimldsmchanneldeployed
   
 
         state "diml" as diml #ffcc88 {
@@ -67,16 +69,18 @@ state "enabled" as dimldsminputstreaminstanceenabled #ffcc88 {
 }
 
         
-    state "diml" as diml #ffcc88 {
-state "dsm" as dimldsm #ffcc88 {
-state "stream" as dimldsmstream #ffcc88 {
-state "deployed" as dimldsmstreamdeployed #ffcc88 {
+    state "sabr" as sabr #bbaaff {
+state "diml" as sabrdiml #ffcc88 {
+state "dsm" as sabrdimldsm #ffcc88 {
+state "stream" as sabrdimldsmstream #ffcc88 {
+state "deployed" as sabrdimldsmstreamdeployed #ffcc88 {
+}
 }
 }
 }
 }
 
-    dimldsminputstreaminstanceenabled ---> dimldsmstreamdeployed
+    dimldsminputstreaminstanceenabled ---> sabrdimldsmstreamdeployed
   
 
         state "diml" as diml #ffcc88 {
@@ -90,7 +94,7 @@ state "enabled" as dimldsmoutputchannelinstanceenabled #ffcc88 {
 
         
     
-    dimldsmoutputchannelinstanceenabled ---> dimldsmchanneldeployed
+    dimldsmoutputchannelinstanceenabled ---> sabrdimldsmchanneldeployed
   
 
         state "diml" as diml #ffcc88 {
@@ -104,16 +108,36 @@ state "enabled" as dimldsmoutputstreaminstanceenabled #ffcc88 {
 
         
     
-    dimldsmoutputstreaminstanceenabled ---> dimldsmstreamdeployed
+    dimldsmoutputstreaminstanceenabled ---> sabrdimldsmstreamdeployed
   
 
 
     
-    
+    state "sabr" as sabr #bbaaff {
+state "diml" as sabrdiml #ffcc88 {
+state "dsm" as sabrdimldsm #ffcc88 {
+state "channel" as sabrdimldsmchannel #ffcc88 {
+state "deployed" as sabrdimldsmchanneldeployed #ffcc88 {
+}
+}
+}
+}
+}
+
         
        
     
-    
+    state "sabr" as sabr #bbaaff {
+state "diml" as sabrdiml #ffcc88 {
+state "dsm" as sabrdimldsm #ffcc88 {
+state "stream" as sabrdimldsmstream #ffcc88 {
+state "deployed" as sabrdimldsmstreamdeployed #ffcc88 {
+}
+}
+}
+}
+}
+
         
        
     

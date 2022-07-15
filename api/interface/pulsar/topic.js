@@ -24,8 +24,8 @@ module.exports = {
     fn: async function (inputs, env) {
         // inputs contains the obj for the this method.
         let id = inputs.id;
-        let url = id.replace(/:\//,'');
-        url = 'http://localhost:8081/admin/v2/' + url +'/stats';
+        let fid = id.replace(/:\//,'');
+        let url = `http://${global.ailtire.config.pulsarHost}/admin/v2/${fid}/stats`;
         try {
             const get = bent(url, 'GET', 'json', 200);
             const response = await get('', {});
@@ -40,7 +40,8 @@ module.exports = {
             return response;
         }
         catch(e){
-            console.error("Topics could not be found:", e);
+            console.error("URL:", url);
+            console.error("Topics could not be found: topic>", e);
             throw new Error("Topics Failed:"+ e.message);
         }
     }

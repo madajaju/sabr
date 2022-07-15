@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
     friendlyName: 'launched',
-    description: 'The Service Instance was launched',
+    description: 'Notification that the Service Instance was launched',
     static: false, // True is for Class methods. False is for object based.
     inputs: {
         pid: {

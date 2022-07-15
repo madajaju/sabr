@@ -1,7 +1,8 @@
 module.exports = {
     name: 'Create Capability',
-    description: 'Create Capability is the description',
-    method: "data/create",
+    description: 'Create Capability allows for a capability to be created in the ecosystem. A capability contains a' +
+        ' set of SABRs that work together to provide specific solutions in the ecosystem.',
+    method: "capability/create",
     actors: {
         'DevOpsEngineer': 'uses',
     },

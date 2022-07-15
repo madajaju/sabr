@@ -11,31 +11,24 @@ package "Application Manager" #00aaff {
   binName --> REST
 
   folder deploy #ffffff {
-      file "node server.js\ndocker-compose.yml" as _am_container
-      REST --> _am_container
+      file "node server.js\n" as sabr_aml_am_container
+      REST --> sabr_aml_am_container
 
   
     file "web" as web_container
     REST --> web_container
     socket ---> web_container
   
-    file "gateway" as gateway_container
-    REST --> gateway_container
-    socket ---> gateway_container
-  
   }
   folder images #ffffff {
-    collections "_am" as _amimage
+    collections "sabr_aml_am" as sabr_aml_amimage
     artifact "ailtire:swarm" as ailtireswarm
-    _amimage <|-- ailtireswarm
-    _am_container --> _amimage
+    sabr_aml_amimage <|-- ailtireswarm
+    sabr_aml_am_container --> sabr_aml_amimage
 
   
-      artifact "_am_web" as _am_web
-      web_container --> _am_web
-    
-      artifact "_am_gw" as _am_gw
-      gateway_container --> _am_gw
+      artifact "sabr_aml_am_web" as sabr_aml_am_web
+      web_container --> sabr_aml_am_web
     
   }
 }

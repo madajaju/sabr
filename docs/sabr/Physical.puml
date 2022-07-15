@@ -1,0 +1,48 @@
+@startuml
+
+Cloud "Private/Public Cloud" #ccffff {
+    rectangle "Workflow Orchestrator" as WO
+    rectangle "Container Orchestrator" as CO
+    rectangle "Container 1" as C1 #white
+    rectangle "Container 2" as Cr #white
+    rectangle "Container n" as Cn #white
+    WO --> CO
+    CO --> C1
+    CO --> Cr
+    CO --> Cn
+}
+
+Node "Aggregated Edge Node 1" #lightblue {
+    rectangle "Container Orchestrator" as AENCO
+    rectangle "Container 1" as AENC1 #white
+    rectangle "Container 2" as AENCr #white
+    rectangle "Container n" as AENCn #white
+    AENCO --> AENC1
+    AENCO --> AENCr
+    AENCO --> AENCn
+}
+WO --> AENCO
+
+Node "Aggregated Edge Node 2" as AEN2 #lightblue {
+}
+WO ->  AEN2
+Node "Aggregated Edge Node n" as AEN3 #lightblue {
+}
+WO ->  AEN3
+
+Node "Edge Node 1" #lightsteelblue {
+    rectangle "Container 1" as ENC1 #white
+    rectangle "Container 2" as ENCr #white
+    rectangle "Container n" as ENCn #white
+    AENCO --> ENC1
+    AENCO --> ENCr
+    AENCO --> ENCn
+}
+Node "Edge Node 2" as EN2 #lightsteelblue {
+}
+AENCO -> EN2
+Node "Edge Node n" as ENn #lightsteelblue {
+}
+AENCO -> ENn
+
+@enduml

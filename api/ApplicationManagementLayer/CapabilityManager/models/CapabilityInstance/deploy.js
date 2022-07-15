@@ -3,8 +3,8 @@ const process = require("process");
 const bent = require('bent');
 
 module.exports = {
-    friendlyName: 'create',
-    description: 'Create a Capability',
+    friendlyName: 'deploy',
+    description: 'Deploy a CapabilityInstance',
     static: false, // True is for Class methods. False is for object based.
     inputs: {},
 

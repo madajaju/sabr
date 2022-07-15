@@ -25,13 +25,13 @@ usecase "DevelopCapability" as DevelopCapability #lightyellow
 
 ManageCapabilities --> DevelopCapability : extends
 
-usecase "RemoveCapbility" as RemoveCapbility #lightyellow
+usecase "RemoveCapability" as RemoveCapability #lightyellow
 
-ManageCapabilities --> RemoveCapbility : extends
+ManageCapabilities --> RemoveCapability : extends
 
-usecase "UpdateCapbility" as UpdateCapbility #lightyellow
+usecase "UpdateCapability" as UpdateCapability #lightyellow
 
-ManageCapabilities --> UpdateCapbility : extends
+ManageCapabilities --> UpdateCapability : extends
 
 
 

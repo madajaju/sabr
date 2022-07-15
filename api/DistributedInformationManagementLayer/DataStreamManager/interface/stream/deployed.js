@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
     friendlyName: 'deployed',
-    description: 'Channel Instance has been deployed. Notify the stream of its status.',
+    description: 'Stream has been deployed. Notify the bundle of its status.',
     static: true, // True is for Class methods. False is for object based.
     inputs: {
         stream: {

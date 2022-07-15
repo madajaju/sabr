@@ -141,7 +141,16 @@ cases and scenarios of the subsystem.
 
 ### Messages Sent
 
-TBD
+| Event | Description | Emitter |
+|-------|-------------|---------|
+| keystore.create |  When an object of type KeyStore is created. | KeyStore
+| keystore.destroy |  When an object of type KeyStore is destroyed. | KeyStore
+| keystore.updated |  When an object of type KeyStore has an attribute or association updated. | KeyStore
+| securitykey.create |  When an object of type SecurityKey is created. | SecurityKey
+| securitykey.destroy |  When an object of type SecurityKey is destroyed. | SecurityKey
+| securitykey.updated |  When an object of type SecurityKey has an attribute or association updated. | SecurityKey
+
+
 
 ## Interface Details
 The Security Aspect subsystem has a well defined interface. This interface can be accessed using a

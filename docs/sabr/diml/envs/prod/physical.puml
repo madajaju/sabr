@@ -11,31 +11,24 @@ package "Distributed Information Management Layer" #ffcc88 {
   binName --> REST
 
   folder deploy #ffffff {
-      file "node server.js\ndocker-compose.yml" as _diml_container
-      REST --> _diml_container
+      file "node server.js\n" as sabr_diml_container
+      REST --> sabr_diml_container
 
   
     file "web" as web_container
     REST --> web_container
     socket ---> web_container
   
-    file "gateway" as gateway_container
-    REST --> gateway_container
-    socket ---> gateway_container
-  
   }
   folder images #ffffff {
-    collections "_diml" as _dimlimage
+    collections "sabr_diml" as sabr_dimlimage
     artifact "ailtire:swarm" as ailtireswarm
-    _dimlimage <|-- ailtireswarm
-    _diml_container --> _dimlimage
+    sabr_dimlimage <|-- ailtireswarm
+    sabr_diml_container --> sabr_dimlimage
 
   
-      artifact "_diml_web" as _diml_web
-      web_container --> _diml_web
-    
-      artifact "_diml_gw" as _diml_gw
-      gateway_container --> _diml_gw
+      artifact "sabr_diml_web" as sabr_diml_web
+      web_container --> sabr_diml_web
     
   }
 }

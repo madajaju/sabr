@@ -17,7 +17,7 @@ Responsible for the governance of data in their organization. They implement pol
 
 
 
-![Use Case Diagram](./usecase.png)
+![Use Case Diagram](./UseCase.png)
 
 ## User Interface
 TBD

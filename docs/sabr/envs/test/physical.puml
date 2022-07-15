@@ -15,9 +15,9 @@ package "Sentient Agent Bundle Resources" #bbaaff {
       REST --> sabr_container
 
   
-    file "serviceA" as serviceA_container
-    REST --> serviceA_container
-    socket ---> serviceA_container
+    file "sabrweb" as sabrweb_container
+    REST --> sabrweb_container
+    socket ---> sabrweb_container
   
     file "pulsar" as pulsar_container
     REST --> pulsar_container
@@ -36,7 +36,7 @@ package "Sentient Agent Bundle Resources" #bbaaff {
 
   
       artifact "sabr_web" as sabr_web
-      serviceA_container --> sabr_web
+      sabrweb_container --> sabr_web
     
       artifact "sabr_pulsar:standalone" as sabr_pulsar_standalone
       pulsar_container --> sabr_pulsar_standalone

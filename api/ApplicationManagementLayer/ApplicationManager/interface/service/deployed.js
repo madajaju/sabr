@@ -4,7 +4,7 @@ const AEvent = require('ailtire/src/Server/AEvent');
 
 module.exports = {
     friendlyName: 'deployed',
-    description: 'Service is deployed',
+    description: 'Notification that the service is deployed',
     static: true, // True is for Class methods. False is for object based.
     inputs: {
         service: {

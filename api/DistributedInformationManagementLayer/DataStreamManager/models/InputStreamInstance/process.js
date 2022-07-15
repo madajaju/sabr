@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
     friendlyName: 'process',
-    description: 'Process data on the channel',
+    description: 'Process data on the stream',
     static: false, // True is for Class methods. False is for object based.
     inputs: {
         data: {

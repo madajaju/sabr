@@ -6,8 +6,8 @@
 
 module.exports = {
     name: 'Manage SABR',
-    description: 'Manage SABR is the description',
-    method: 'bundle/list',
+    description: 'Manage SABR allows the devops engineers to create,deploy, updated and destroy SABRs in the system.',
+    method: 'sabundle/list',
     actors: {
         'DevOpsEngineer': 'uses'
     },
@@ -16,4 +16,3 @@ module.exports = {
     // Show Aggreation from a super use case
     // extends: ["UseCase Name"],
 };
-

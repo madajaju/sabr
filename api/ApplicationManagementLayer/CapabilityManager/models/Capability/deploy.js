@@ -1,8 +1,8 @@
 const path = require('path');
 
 module.exports = {
-    friendlyName: 'create',
-    description: 'Create a Capability',
+    friendlyName: 'deploy',
+    description: 'Deploy a Capability',
     static: false, // True is for Class methods. False is for object based.
     inputs: {
     },

@@ -1,5 +1,5 @@
 module.exports = {
-    "host": "http://localhost:3000/web", "actions": {
+    "host": "http://localhost/web", "actions": {
         "/aml/am/data/create": {
             "name": "/aml/am/data/create",
             "inputs": {"attr1": {"description": "Description for the parameter", "type": "string", "required": false}},

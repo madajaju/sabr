@@ -9,6 +9,7 @@ Actor "ITOperations" as ITOperations
 Actor "ITOperations" as ITOperations
 Actor "SecurityOperator" as SecurityOperator
 Actor "TacticalOperator" as TacticalOperator
+Actor "Tactical Operator" as TacticalOperator
 
 
 rectangle "Sentient Agent Bundle Resources" #bbaaff {
@@ -25,6 +26,8 @@ usecase "ManageAIModel" as ManageAIModel
     SecurityOperator --> ManageSecurity
     usecase "ProvideDigitalAssistance" as ProvideDigitalAssistance
     TacticalOperator --> ProvideDigitalAssistance
+    usecase "ProvideMissionInsight" as ProvideMissionInsight
+    TacticalOperator --> ProvideMissionInsight
     }
 
 

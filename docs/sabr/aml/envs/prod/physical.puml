@@ -11,32 +11,18 @@ package "Application Management Layer" #00aaff {
   binName --> REST
 
   folder deploy #ffffff {
-      file "node server.js\ndocker-compose.yml" as _aml_container
-      REST --> _aml_container
+      file "node server.js\n" as aml_container
+      REST --> aml_container
 
-  
-    file "web" as web_container
-    REST --> web_container
-    socket ---> web_container
-  
-    file "gateway" as gateway_container
-    REST --> gateway_container
-    socket ---> gateway_container
   
   }
   folder images #ffffff {
-    collections "_aml" as _amlimage
+    collections "aml" as amlimage
     artifact "ailtire:swarm" as ailtireswarm
-    _amlimage <|-- ailtireswarm
-    _aml_container --> _amlimage
+    amlimage <|-- ailtireswarm
+    aml_container --> amlimage
 
   
-      artifact "_aml_web" as _aml_web
-      web_container --> _aml_web
-    
-      artifact "_aml_gw" as _aml_gw
-      gateway_container --> _aml_gw
-    
   }
 }
 CLI " sabr aml" -- binName

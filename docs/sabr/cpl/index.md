@@ -69,6 +69,7 @@ used to implement the micro-services in the system. The subsystem also has an CL
 exposed through a nodejs application. The nodejs application will interface with the micro-services and
 can monitor and drive work-flows through the mesh of micro-services. The deployment of the subsystem is
 dependent on the environment it is deployed. This subsystem has the following environments:
+* [local](environment--sabr-cpl-local)
 * [dev](environment--sabr-cpl-dev)
 * [test](environment--sabr-cpl-test)
 * [prod](environment--sabr-cpl-prod)
@@ -83,6 +84,7 @@ REST interface. A Command Line Interface (CLI), REST or Web User interface for t
 interact. Requests are forwarded to micro-services through the REST interface of each micro-service. The subsystem has
 the a unique layout based on the environment the physical space. The following are the environments for this
 subsystems.
+* [local](environment--sabr-cpl-local)
 * [dev](environment--sabr-cpl-dev)
 * [test](environment--sabr-cpl-test)
 * [prod](environment--sabr-cpl-prod)
@@ -94,6 +96,16 @@ These are the micro-services for the subsystem. The combination of the micro-ser
 the subsystem's logic.
 
 
+### local
+
+Detail information for the [local environment](environment--sabr-cpl-local)
+can be found [here](environment--sabr-cpl-local)
+
+Services in the local environment
+
+* cpl_web : sabr_spl_web
+
+
 ### dev
 
 Detail information for the [dev environment](environment--sabr-cpl-dev)
@@ -101,9 +113,7 @@ can be found [here](environment--sabr-cpl-dev)
 
 Services in the dev environment
 
-* child : child_image:latest
-* frontend : _cpl_web
-* gw : _cpl_gw
+* cpl_web : sabr_spl_web
 
 
 ### test
@@ -113,9 +123,7 @@ can be found [here](environment--sabr-cpl-test)
 
 Services in the test environment
 
-* child : child_image:latest
-* frontend : _cpl_web
-* gw : _cpl_gw
+* cpl_web : sabr_spl_web
 
 
 ### prod
@@ -125,9 +133,7 @@ can be found [here](environment--sabr-cpl-prod)
 
 Services in the prod environment
 
-* child : child_image:latest
-* frontend : _cpl_web
-* gw : _cpl_gw
+* cpl_web : sabr_spl_web
 
 
 ## Activities and Flows
@@ -139,7 +145,10 @@ cases and scenarios of the subsystem.
 
 ### Messages Sent
 
-TBD
+| Event | Description | Emitter |
+|-------|-------------|---------|
+
+
 
 ## Interface Details
 The Common Physical Layer subsystem has a well defined interface. This interface can be accessed using a

@@ -2,11 +2,11 @@ const path = require('path');
 
 module.exports = {
     friendlyName: 'create',
-    description: 'Create a Sentient Agent Bundle',
+    description: 'Create a Stream Policy',
     static: true, // True is for Class methods. False is for object based.
     inputs: {
         name: {
-            description: 'name of the Sentient Agent Bundle',
+            description: 'name of the StreamPolicy',
             type: 'string', // string|boolean|number|json
             required: true
         },

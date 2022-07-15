@@ -11,31 +11,24 @@ package "Learning Corpus" #00aaff {
   binName --> REST
 
   folder deploy #ffffff {
-      file "node server.js\ndocker-compose.yml" as _lc_container
-      REST --> _lc_container
+      file "node server.js\n" as sabr_aml_lc_container
+      REST --> sabr_aml_lc_container
 
   
     file "web" as web_container
     REST --> web_container
     socket ---> web_container
   
-    file "gateway" as gateway_container
-    REST --> gateway_container
-    socket ---> gateway_container
-  
   }
   folder images #ffffff {
-    collections "_lc" as _lcimage
+    collections "sabr_aml_lc" as sabr_aml_lcimage
     artifact "ailtire:swarm" as ailtireswarm
-    _lcimage <|-- ailtireswarm
-    _lc_container --> _lcimage
+    sabr_aml_lcimage <|-- ailtireswarm
+    sabr_aml_lc_container --> sabr_aml_lcimage
 
   
-      artifact "_lc_web" as _lc_web
-      web_container --> _lc_web
-    
-      artifact "_lc_gw" as _lc_gw
-      gateway_container --> _lc_gw
+      artifact "sabr_aml_lc_web" as sabr_aml_lc_web
+      web_container --> sabr_aml_lc_web
     
   }
 }

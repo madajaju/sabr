@@ -7,8 +7,8 @@ actor "DevOpsEngineer" as devops
 
 
 devops -> "Sentient Agent Bundle Manager": Manage SABR
-"Sentient Agent Bundle Manager" -> bin: bundle list
-bin -> REST: bundle/list
+"Sentient Agent Bundle Manager" -> bin: sabundle list
+bin -> REST: sabundle/list
 
 
 

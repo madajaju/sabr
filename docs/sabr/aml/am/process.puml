@@ -16,6 +16,26 @@ state "amlam" as pstatename #00aaff {
         state "aml" as aml #00aaff {
 state "am" as amlam #00aaff {
 state "application" as amlamapplication #00aaff {
+state "create" as amlamapplicationcreate #00aaff {
+}
+}
+}
+}
+
+
+        state "aml" as aml #00aaff {
+state "am" as amlam #00aaff {
+state "application" as amlamapplication #00aaff {
+state "destroy" as amlamapplicationdestroy #00aaff {
+}
+}
+}
+}
+
+
+        state "aml" as aml #00aaff {
+state "am" as amlam #00aaff {
+state "application" as amlamapplication #00aaff {
 state "list" as amlamapplicationlist #00aaff {
 }
 }
@@ -25,18 +45,8 @@ state "list" as amlamapplicationlist #00aaff {
 
         state "aml" as aml #00aaff {
 state "am" as amlam #00aaff {
-state "data" as amlamdata #00aaff {
-state "create" as amlamdatacreate #00aaff {
-}
-}
-}
-}
-
-
-        state "aml" as aml #00aaff {
-state "am" as amlam #00aaff {
-state "data" as amlamdata #00aaff {
-state "govern" as amlamdatagovern #00aaff {
+state "application" as amlamapplication #00aaff {
+state "update" as amlamapplicationupdate #00aaff {
 }
 }
 }

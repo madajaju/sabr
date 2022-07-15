@@ -3,7 +3,7 @@ module.exports = {
     handlers: [
         {
             description: 'Bundle Instance deployed for the SABR',
-            action: '/diml/dsm/stream/deployed',
+            action: '/sabr/diml/dsm/stream/deployed',
             fn: (data) => {
                 if(data.obj) {
                     return {stream: data.obj.name};

@@ -29,7 +29,15 @@ has_children: true
   * [Deploy SABR four](usecase-ManageSABR#DeploySABR4)
 * [Manage Security](usecase-ManageSecurity)
 * [Provide Digital Assistance](usecase-ProvideDigitalAssistance)
-* [Remove Capbility](usecase-RemoveCapbility)
-* [Update Capbility](usecase-UpdateCapbility)
+* [Provide Mission Insight](usecase-ProvideMissionInsight)
+* [Remove Capability](usecase-RemoveCapability)
+* [Update Capability](usecase-UpdateCapability)
+  * [Add a SABR to the Capability](usecase-UpdateCapability#AddaSABRtotheCapability)
+  * [Add SABRs to the Capability](usecase-UpdateCapability#AddSABRstotheCapability)
+  * [Remove a SABR from the Capability](usecase-UpdateCapability#RemoveaSABRfromtheCapability)
+  * [Remove multiple SABRs from the Capability](usecase-UpdateCapability#RemovemultipleSABRsfromtheCapability)
+  * [Update Configuration of the Capability](usecase-UpdateCapability#UpdateConfigurationoftheCapability)
+  * [Update Policies of the Capability](usecase-UpdateCapability#UpdatePoliciesoftheCapability)
+  * [Update SABRs of the Capability](usecase-UpdateCapability#UpdateSABRsoftheCapability)
 
     

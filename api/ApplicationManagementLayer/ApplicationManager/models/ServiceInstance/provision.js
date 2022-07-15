@@ -1,8 +1,8 @@
 const path = require('path');
 
 module.exports = {
-    friendlyName: 'provsion',
-    description: 'Provision the service with the provsion script.',
+    friendlyName: 'provision',
+    description: 'Provision the service with the provision script.',
     static: false, // True is for Class methods. False is for object based.
     inputs: {
     },

@@ -10,15 +10,15 @@ state "DevOpsEngineer" as DevOpsEngineer {
 state "sabr" as sabr #00aaff {
 state "aml" as sabraml #00aaff {
 state "cm" as sabramlcm #00aaff {
-state "data" as sabramlcmdata #00aaff {
-state "govern" as sabramlcmdatagovern #00aaff {
+state "capability" as sabramlcmcapability #00aaff {
+state "deploy" as sabramlcmcapabilitydeploy #00aaff {
 }
 }
 }
 }
 }
 
-DevOpsEngineerDeployCapability --> sabramlcmdatagovern
+DevOpsEngineerDeployCapability --> sabramlcmcapabilitydeploy
 
 
     state "DevOpsEngineer" as DevOpsEngineer {
@@ -92,42 +92,121 @@ ApplicationDeveloperDevelopCapability --> sabramlcmcapabilitylist
  
  
 state "DevOpsEngineer" as DevOpsEngineer {
-    state "Remove Capbility" as DevOpsEngineerRemoveCapbility {
+    state "Remove Capability" as DevOpsEngineerRemoveCapability {
     }
 }
 state "sabr" as sabr #00aaff {
 state "aml" as sabraml #00aaff {
 state "cm" as sabramlcm #00aaff {
-state "data" as sabramlcmdata #00aaff {
-state "govern" as sabramlcmdatagovern #00aaff {
+state "capability" as sabramlcmcapability #00aaff {
+state "remove" as sabramlcmcapabilityremove #00aaff {
 }
 }
 }
 }
 }
 
-DevOpsEngineerRemoveCapbility --> sabramlcmdatagovern
+DevOpsEngineerRemoveCapability --> sabramlcmcapabilityremove
 
 
  
 state "DevOpsEngineer" as DevOpsEngineer {
-    state "Update Capbility" as DevOpsEngineerUpdateCapbility {
+    state "Update Capability" as DevOpsEngineerUpdateCapability {
     }
 }
 state "sabr" as sabr #00aaff {
 state "aml" as sabraml #00aaff {
 state "cm" as sabramlcm #00aaff {
-state "data" as sabramlcmdata #00aaff {
-state "govern" as sabramlcmdatagovern #00aaff {
+state "capability" as sabramlcmcapability #00aaff {
+state "update" as sabramlcmcapabilityupdate #00aaff {
 }
 }
 }
 }
 }
 
-DevOpsEngineerUpdateCapbility --> sabramlcmdatagovern
+DevOpsEngineerUpdateCapability --> sabramlcmcapabilityupdate
 
 
+    state "DevOpsEngineer" as DevOpsEngineer {
+        state "Update Capability" as DevOpsEngineerUpdateCapability {
+            state "Add a SABR to the Capability" as DevOpsEngineerUpdateCapabilityAddaSABRtotheCapability {
+            }
+        }
+    }
+    
+    DevOpsEngineerUpdateCapabilityAddaSABRtotheCapability --> Null
+    
+ 
+    state "Actor" as Actor {
+        state "Update Capability" as ActorUpdateCapability {
+            state "Add SABRs to the Capability" as ActorUpdateCapabilityAddSABRstotheCapability {
+            }
+        }
+    }
+    
+    ActorUpdateCapabilityAddSABRstotheCapability --> Null
+    
+ 
+    state "DevOpsEngineer" as DevOpsEngineer {
+        state "Update Capability" as DevOpsEngineerUpdateCapability {
+            state "Remove a SABR from the Capability" as DevOpsEngineerUpdateCapabilityRemoveaSABRfromtheCapability {
+            }
+        }
+    }
+    
+    DevOpsEngineerUpdateCapabilityRemoveaSABRfromtheCapability --> Null
+    
+    state "ApplicationDeveloper" as ApplicationDeveloper {
+        state "Update Capability" as ApplicationDeveloperUpdateCapability {
+            state "Remove a SABR from the Capability" as ApplicationDeveloperUpdateCapabilityRemoveaSABRfromtheCapability {
+            }
+        }
+    }
+    
+    ApplicationDeveloperUpdateCapabilityRemoveaSABRfromtheCapability --> Null
+    
+ 
+    state "DevOpsEngineer" as DevOpsEngineer {
+        state "Update Capability" as DevOpsEngineerUpdateCapability {
+            state "Remove multiple SABRs from the Capability" as DevOpsEngineerUpdateCapabilityRemovemultipleSABRsfromtheCapability {
+            }
+        }
+    }
+    
+    DevOpsEngineerUpdateCapabilityRemovemultipleSABRsfromtheCapability --> Null
+    
+ 
+    state "DevOpsEngineer" as DevOpsEngineer {
+        state "Update Capability" as DevOpsEngineerUpdateCapability {
+            state "Update Configuration of the Capability" as DevOpsEngineerUpdateCapabilityUpdateConfigurationoftheCapability {
+            }
+        }
+    }
+    
+    DevOpsEngineerUpdateCapabilityUpdateConfigurationoftheCapability --> Null
+    
+ 
+    state "DevOpsEngineer" as DevOpsEngineer {
+        state "Update Capability" as DevOpsEngineerUpdateCapability {
+            state "Update Policies of the Capability" as DevOpsEngineerUpdateCapabilityUpdatePoliciesoftheCapability {
+            }
+        }
+    }
+    
+    DevOpsEngineerUpdateCapabilityUpdatePoliciesoftheCapability --> Null
+    
+ 
+    state "DevOpsEngineer" as DevOpsEngineer {
+        state "Update Capability" as DevOpsEngineerUpdateCapability {
+            state "Update SABRs of the Capability" as DevOpsEngineerUpdateCapabilityUpdateSABRsoftheCapability {
+            }
+        }
+    }
+    
+    DevOpsEngineerUpdateCapabilityUpdateSABRsoftheCapability --> Null
+    
+ 
  
 
 @enduml
