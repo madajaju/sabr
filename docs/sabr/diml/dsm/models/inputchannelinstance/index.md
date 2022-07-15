@@ -30,10 +30,6 @@ This is the input to the transformation. Also known as the consumer of the data 
 | bundle | 1 | SABundleInstance |  |  | This is the sabr instance |
 
 
-## Users of the Model
-
-| Name | Cardinality | Class | Composition | Owner | Description |
-| --- | --- | --- | --- | --- | --- |
 
 
 
@@ -77,11 +73,9 @@ The following diagram is the state net for this class.
 #### Description
 Create a Input Channel Instance
 
-
 #### Parameters
-| Name | Type | Required | Description |
-|---|---|---|---|
 
+No parameters
 
 
 
@@ -96,11 +90,9 @@ Create a Input Channel Instance
 #### Description
 Deploy the channel instance
 
-
 #### Parameters
-| Name | Type | Required | Description |
-|---|---|---|---|
 
+No parameters
 
 
 
@@ -115,8 +107,8 @@ Deploy the channel instance
 #### Description
 Deployment Failed on the Data Channel Instance.
 
-
 #### Parameters
+
 | Name | Type | Required | Description |
 |---|---|---|---|
 | message | string |true | Failed Message for the deployment error. |

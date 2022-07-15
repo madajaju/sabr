@@ -31,10 +31,6 @@ This is the producer to the data stream. Data is flowing out of the transformati
 | bundle | 1 | SABundleInstance |  |  | This is the sabr instance |
 
 
-## Users of the Model
-
-| Name | Cardinality | Class | Composition | Owner | Description |
-| --- | --- | --- | --- | --- | --- |
 
 
 
@@ -79,11 +75,9 @@ The following diagram is the state net for this class.
 #### Description
 Create a Output Channel Instance
 
-
 #### Parameters
-| Name | Type | Required | Description |
-|---|---|---|---|
 
+No parameters
 
 
 
@@ -98,11 +92,9 @@ Create a Output Channel Instance
 #### Description
 Deploy the output channel instance
 
-
 #### Parameters
-| Name | Type | Required | Description |
-|---|---|---|---|
 
+No parameters
 
 
 
@@ -117,8 +109,8 @@ Deploy the output channel instance
 #### Description
 Send data to the Data Stream Instance
 
-
 #### Parameters
+
 | Name | Type | Required | Description |
 |---|---|---|---|
 | data | json |true | Data to send to the data stream |
@@ -138,8 +130,8 @@ Send data to the Data Stream Instance
 #### Description
 Deployment Failed on the Data Channel Instance.
 
-
 #### Parameters
+
 | Name | Type | Required | Description |
 |---|---|---|---|
 | message | string |true | Failed Message for the deployment error. |

@@ -191,8 +191,8 @@ subsystems and actors can access the system.
 #### Description
 Set the level of operation
 
-
 #### Parameters
+
 | Name | Type | Required | Description |
 |---|---|---|---|
 | sabr | string |true | The SABR to set the level |
@@ -211,8 +211,8 @@ Set the level of operation
 #### Description
 Create and deploy the bundle
 
-
 #### Parameters
+
 | Name | Type | Required | Description |
 |---|---|---|---|
 | name | string |true | name of the Sentient Agent Bundle |
@@ -232,8 +232,8 @@ Create and deploy the bundle
 #### Description
 Deploy the bundle
 
-
 #### Parameters
+
 | Name | Type | Required | Description |
 |---|---|---|---|
 | sabr | string |true | The name of the SABR |
@@ -252,8 +252,8 @@ Deploy the bundle
 #### Description
 Description of the action
 
-
 #### Parameters
+
 | Name | Type | Required | Description |
 |---|---|---|---|
 | attr1 | string |false | Description for the parameter |
@@ -271,8 +271,8 @@ Description of the action
 #### Description
 Description of the action
 
-
 #### Parameters
+
 | Name | Type | Required | Description |
 |---|---|---|---|
 | attr1 | string |false | Description for the parameter |
@@ -290,8 +290,8 @@ Description of the action
 #### Description
 Description of the action
 
-
 #### Parameters
+
 | Name | Type | Required | Description |
 |---|---|---|---|
 | attr1 | string |false | Description for the parameter |

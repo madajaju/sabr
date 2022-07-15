@@ -34,6 +34,7 @@ Sentient Agent Bundle consists of the definition of the services, data streams, 
 | instances | n | SABundleInstance | false | true |  |
 
 
+
 ## Users of the Model
 
 | Name | Cardinality | Class | Composition | Owner | Description |
@@ -84,8 +85,8 @@ The following diagram is the state net for this class.
 #### Description
 Create a Sentient Agent Bundle
 
-
 #### Parameters
+
 | Name | Type | Required | Description |
 |---|---|---|---|
 | name | string |true | name of the Sentient Agent Bundle |
@@ -105,8 +106,8 @@ Create a Sentient Agent Bundle
 #### Description
 Deploy a SABundle
 
-
 #### Parameters
+
 | Name | Type | Required | Description |
 |---|---|---|---|
 | policies | ref |true | Policies to use for deploying the Bundle. |
@@ -125,11 +126,9 @@ Deploy a SABundle
 #### Description
 Convert the Bundle to a string to be passed over a connection.
 
-
 #### Parameters
-| Name | Type | Required | Description |
-|---|---|---|---|
 
+No parameters
 
 
 

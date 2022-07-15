@@ -35,6 +35,7 @@ A Stack is an aggregation of services in one context. The Stack can have any num
 | parent | 1 | Service | false | false | Parent of the service |
 
 
+
 ## Users of the Model
 
 | Name | Cardinality | Class | Composition | Owner | Description |

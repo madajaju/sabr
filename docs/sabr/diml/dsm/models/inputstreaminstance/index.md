@@ -29,6 +29,7 @@ This is a specialization of the DataStreamInstance for producing output.
 | transforms | n | DataTransformInstance |  | false | These are the transforms to run on the stream before it goes to the output streams. |
 
 
+
 ## Users of the Model
 
 | Name | Cardinality | Class | Composition | Owner | Description |
@@ -77,8 +78,8 @@ The following diagram is the state net for this class.
 #### Description
 Deploy a Data Stream Instance
 
-
 #### Parameters
+
 | Name | Type | Required | Description |
 |---|---|---|---|
 | policies | ref |true | Policies to use for deploying the Bundle. |
@@ -97,8 +98,8 @@ Deploy a Data Stream Instance
 #### Description
 Process data on the stream
 
-
 #### Parameters
+
 | Name | Type | Required | Description |
 |---|---|---|---|
 | data | json |true | Data to process. |

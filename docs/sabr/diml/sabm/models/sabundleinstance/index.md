@@ -33,6 +33,7 @@ Instance of a sentient agent bundle. This is were things are running. This inclu
 | transforms | n | DataTransformInstance | false | false |  |
 
 
+
 ## Users of the Model
 
 | Name | Cardinality | Class | Composition | Owner | Description |
@@ -84,8 +85,8 @@ The following diagram is the state net for this class.
 #### Description
 Deploy a a SABundleInstance
 
-
 #### Parameters
+
 | Name | Type | Required | Description |
 |---|---|---|---|
 | policies | ref |true | Policies to use for deploying the Bundle. |

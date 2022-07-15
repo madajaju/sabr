@@ -27,9 +27,9 @@ DevelopCapability --> TestCapability
 
 
 
-usecase "0" as 0 #lightyellow
+usecase "Manage Capabilities" as ManageCapabilities #lightyellow
 
-DevelopCapability <-- 0 : extends
+DevelopCapability <-- ManageCapabilities : extends
 
 
 

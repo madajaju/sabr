@@ -30,6 +30,7 @@ The StackInstance represents the execution of the Stack. This allows for control
 | parent | 1 | Service |  |  | Service definition for the instance. |
 
 
+
 ## Users of the Model
 
 | Name | Cardinality | Class | Composition | Owner | Description |
@@ -81,8 +82,8 @@ The following diagram is the state net for this class.
 #### Description
 Notification that the Service Instance was launched
 
-
 #### Parameters
+
 | Name | Type | Required | Description |
 |---|---|---|---|
 | pid | string | | Process id of the service instance |
@@ -101,11 +102,9 @@ Notification that the Service Instance was launched
 #### Description
 Provision the service with the provision script.
 
-
 #### Parameters
-| Name | Type | Required | Description |
-|---|---|---|---|
 
+No parameters
 
 
 

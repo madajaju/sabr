@@ -24,6 +24,7 @@ A CapabilityInstance contains the execution environment, logging, and state of a
 | owner | 1 | Capability | false | false | Owner of the instance is the capability. |
 
 
+
 ## Users of the Model
 
 | Name | Cardinality | Class | Composition | Owner | Description |
@@ -72,11 +73,9 @@ The following diagram is the state net for this class.
 #### Description
 Deploy a CapabilityInstance
 
-
 #### Parameters
-| Name | Type | Required | Description |
-|---|---|---|---|
 
+No parameters
 
 
 
@@ -91,8 +90,8 @@ Deploy a CapabilityInstance
 #### Description
 Kill a CapabilityInstance that is running in the ecosystem including all of the SABRs controlled by the capability.
 
-
 #### Parameters
+
 | Name | Type | Required | Description |
 |---|---|---|---|
 | signal | number |false | Signal of the kill command. |
@@ -111,8 +110,8 @@ Kill a CapabilityInstance that is running in the ecosystem including all of the 
 #### Description
 Update a CapabilityInstance that is running in the ecosystem including all of the SABRs controlled by the capability.
 
-
 #### Parameters
+
 | Name | Type | Required | Description |
 |---|---|---|---|
 | definition | json |true | Definition of the Capability that is being updated. |

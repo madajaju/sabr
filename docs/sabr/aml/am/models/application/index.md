@@ -26,6 +26,7 @@ Application contains several SABRs stitched together to create capabilities
 | instances | n | ApplicationInstance | true | true |  |
 
 
+
 ## Users of the Model
 
 | Name | Cardinality | Class | Composition | Owner | Description |

@@ -26,6 +26,7 @@ This represents an instance of a data transformation running in the system.
 | outputs | n | OutputStreamInstance |  |  | Outputs of the transformation. |
 
 
+
 ## Users of the Model
 
 | Name | Cardinality | Class | Composition | Owner | Description |
@@ -57,8 +58,8 @@ This represents an instance of a data transformation running in the system.
 #### Description
 Run the transform on the data and update the properties.
 
-
 #### Parameters
+
 | Name | Type | Required | Description |
 |---|---|---|---|
 | data | ref |true | Policies to use for deploying the Bundle. |

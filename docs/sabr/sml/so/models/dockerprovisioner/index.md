@@ -24,10 +24,6 @@ The DockerProvisioner uses Docker to provision services in the system. This is a
 | services | n | ServiceInstance | false | false |  |
 
 
-## Users of the Model
-
-| Name | Cardinality | Class | Composition | Owner | Description |
-| --- | --- | --- | --- | --- | --- |
 
 
 
@@ -51,8 +47,8 @@ The DockerProvisioner uses Docker to provision services in the system. This is a
 #### Description
 Deploy a Service using docker
 
-
 #### Parameters
+
 | Name | Type | Required | Description |
 |---|---|---|---|
 | services | ref |true | Service to deploy |

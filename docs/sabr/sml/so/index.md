@@ -174,8 +174,8 @@ subsystems and actors can access the system.
 #### Description
 Service is ready
 
-
 #### Parameters
+
 | Name | Type | Required | Description |
 |---|---|---|---|
 | service | string |true | ID of the Service that is ready |

@@ -24,10 +24,6 @@ Abstract Provisioner Class used to develop an interface for the different provis
 | services | n | ServiceInstance | false | false |  |
 
 
-## Users of the Model
-
-| Name | Cardinality | Class | Composition | Owner | Description |
-| --- | --- | --- | --- | --- | --- |
 
 
 

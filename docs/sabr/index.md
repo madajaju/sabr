@@ -547,8 +547,8 @@ subsystems and actors can access the system.
 #### Description
 Description of the action
 
-
 #### Parameters
+
 | Name | Type | Required | Description |
 |---|---|---|---|
 | attr1 | string |false | Description for the parameter |
@@ -566,8 +566,8 @@ Description of the action
 #### Description
 Description of the action
 
-
 #### Parameters
+
 | Name | Type | Required | Description |
 |---|---|---|---|
 | attr1 | string |false | Description for the parameter |
@@ -585,8 +585,8 @@ Description of the action
 #### Description
 Description of the action
 
-
 #### Parameters
+
 | Name | Type | Required | Description |
 |---|---|---|---|
 | attr1 | string |false | Description for the parameter |
@@ -604,8 +604,8 @@ Description of the action
 #### Description
 Return the topics in the pulsar configuration
 
-
 #### Parameters
+
 | Name | Type | Required | Description |
 |---|---|---|---|
 | id | string |true | ID of the topic. should be fully qualified |
@@ -623,8 +623,8 @@ Return the topics in the pulsar configuration
 #### Description
 Return the topics in the pulsar configuration
 
-
 #### Parameters
+
 | Name | Type | Required | Description |
 |---|---|---|---|
 | id | string |true | ID of the topic. should be fully qualified |
@@ -642,11 +642,9 @@ Return the topics in the pulsar configuration
 #### Description
 Return the topics in the pulsar configuration
 
-
 #### Parameters
-| Name | Type | Required | Description |
-|---|---|---|---|
 
+No parameters
 
 
 ### Action  sabr security list
@@ -660,11 +658,9 @@ Return the topics in the pulsar configuration
 #### Description
 List the security profiles.
 
-
 #### Parameters
-| Name | Type | Required | Description |
-|---|---|---|---|
 
+No parameters
 
 
 ### Action  sabr security manage
@@ -678,8 +674,8 @@ List the security profiles.
 #### Description
 Description of the action
 
-
 #### Parameters
+
 | Name | Type | Required | Description |
 |---|---|---|---|
 | attr1 | string |false | Description for the parameter |

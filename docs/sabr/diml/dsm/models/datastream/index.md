@@ -28,6 +28,7 @@ A Data stream defines where I am getting data from or pushing data.
 | producers | n | SABundle |  |  | This is a producer of the data stream. |
 
 
+
 ## Users of the Model
 
 | Name | Cardinality | Class | Composition | Owner | Description |
@@ -83,8 +84,8 @@ The following diagram is the state net for this class.
 #### Description
 Deploy a Data Stream
 
-
 #### Parameters
+
 | Name | Type | Required | Description |
 |---|---|---|---|
 | bundle | ref |true | Bundle Instance to attach the stream instances. |

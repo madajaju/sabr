@@ -28,6 +28,7 @@ This represents a data stream that has been deployed and is running in the syste
 | transforms | n | DataTransformInstance |  | false | These are the transforms to run on the stream before it goes to the output streams. |
 
 
+
 ## Users of the Model
 
 | Name | Cardinality | Class | Composition | Owner | Description |
@@ -74,8 +75,8 @@ The following diagram is the state net for this class.
 #### Description
 Deploy a Data Stream Instance
 
-
 #### Parameters
+
 | Name | Type | Required | Description |
 |---|---|---|---|
 | policies | ref |true | Policies to use for deploying the Bundle. |

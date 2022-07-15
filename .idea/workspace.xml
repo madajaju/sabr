@@ -4,708 +4,61 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e7f16371-c89d-4dad-98c0-026728aac0e5" name="Changes" comment="Updates to documentation and fixes to the deployment model.">
-      <change afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/ApplicationManager/deploy/services.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/CapabilityManager/deploy/.router.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/CapabilityManager/deploy/.tmp-dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/CapabilityManager/deploy/.tmp-stack-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/CapabilityManager/deploy/services.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/CapabilityManager/models/CapabilityInstance/kill.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/CapabilityManager/models/CapabilityInstance/update.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/CapabilityManager/usecases/UpdateCapability/AddSABRstotheCapability.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/CapabilityManager/usecases/UpdateCapability/AddaSABRtotheCapability.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/CapabilityManager/usecases/UpdateCapability/RemoveaSABRfromtheCapability.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/CapabilityManager/usecases/UpdateCapability/RemovemultipleSABRsfromtheCapability.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/CapabilityManager/usecases/UpdateCapability/UpdateConfigurationoftheCapability.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/CapabilityManager/usecases/UpdateCapability/UpdatePoliciesoftheCapability.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/CapabilityManager/usecases/UpdateCapability/UpdateSABRsoftheCapability.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/CapabilityManager/usecases/UpdateCapability/doc/doc.emd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/LearningCorpus/deploy/.router.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/LearningCorpus/deploy/.tmp-dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/LearningCorpus/deploy/.tmp-stack-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/LearningCorpus/deploy/services.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/deploy/services.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/CommonPhysicalLayer/deploy/services.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/deploy/.router.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/deploy/.tmp-dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/deploy/.tmp-stack-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/deploy/services.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/doc/Deployment.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/usecases/ProvideMissionInsight/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/Deployment.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/Deployment.puml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/Physical.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/Physical.puml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/actors/actor/UseCase.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/actors/actor/UseCase.puml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/actors/actor/index.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/sabr/Deployment.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/sabr/Deployment.puml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/sabr/Physical.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/sabr/Physical.puml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/capabilityRemoveSABRs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/capabilityUpdateAddSABR.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/capabilityUpdateAddSABRs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/capabilityUpdateConfig.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/capabilityUpdatePolicies.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/capabilityUpdateSABRs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/bin/ProvideMissionInsight.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.ailtire.js" beforeDir="false" afterPath="$PROJECT_DIR$/.ailtire.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp/create.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp/install.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/actors/ApplicationDeveloper/doc/Activity.puml" beforeDir="false" afterPath="$PROJECT_DIR$/actors/ApplicationDeveloper/doc/Activity.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/actors/ApplicationDeveloper/doc/UseCases.puml" beforeDir="false" afterPath="$PROJECT_DIR$/actors/ApplicationDeveloper/doc/UseCases.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/actors/ApplicationDeveloper/doc/Workflow.puml" beforeDir="false" afterPath="$PROJECT_DIR$/actors/ApplicationDeveloper/doc/Workflow.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/actors/ApplicationDeveloper/doc/doc.emd" beforeDir="false" afterPath="$PROJECT_DIR$/actors/ApplicationDeveloper/doc/doc.emd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/actors/DataEngineer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/actors/DataEngineer/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/actors/DataScientist/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/actors/DataScientist/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/actors/DataSteward/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/actors/DataSteward/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/actors/DevOpsEngineer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/actors/DevOpsEngineer/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/actors/ITOperations/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/actors/ITOperations/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/actors/TacticalOperator/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/actors/TacticalOperator/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ApplicationManagementLayer/ApplicationManager/deploy/build.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/ApplicationManager/deploy/build.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ApplicationManagementLayer/ApplicationManager/deploy/deploy.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/ApplicationManager/deploy/deploy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ApplicationManagementLayer/ApplicationManager/deploy/docker-compose.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ApplicationManagementLayer/ApplicationManager/deploy/gateway/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ApplicationManagementLayer/ApplicationManager/deploy/web/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/ApplicationManager/deploy/web/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ApplicationManagementLayer/ApplicationManager/deploy/web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/ApplicationManager/deploy/web/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ApplicationManagementLayer/ApplicationManager/handlers/serviceinstance.deployed.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/ApplicationManager/handlers/serviceinstance.deployed.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ApplicationManagementLayer/ApplicationManager/handlers/serviceinstance.killed.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/ApplicationManager/handlers/serviceinstance.killed.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ApplicationManagementLayer/ApplicationManager/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/ApplicationManager/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ApplicationManagementLayer/ApplicationManager/interface/application/list.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ApplicationManagementLayer/ApplicationManager/interface/data/create.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ApplicationManagementLayer/ApplicationManager/interface/data/govern.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ApplicationManagementLayer/ApplicationManager/interface/service/deployed.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/ApplicationManager/interface/service/deployed.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ApplicationManagementLayer/ApplicationManager/interface/service/kill.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/ApplicationManager/interface/service/kill.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ApplicationManagementLayer/ApplicationManager/interface/service/provision.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/ApplicationManager/interface/service/provision.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ApplicationManagementLayer/ApplicationManager/interface/service/stderr.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/ApplicationManager/interface/service/stderr.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ApplicationManagementLayer/ApplicationManager/interface/service/stdout.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/ApplicationManager/interface/service/stdout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ApplicationManagementLayer/ApplicationManager/models/Application/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/ApplicationManager/models/Application/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ApplicationManagementLayer/ApplicationManager/models/ApplicationInstance/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/ApplicationManager/models/ApplicationInstance/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ApplicationManagementLayer/ApplicationManager/models/Service/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/ApplicationManager/models/Service/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ApplicationManagementLayer/ApplicationManager/models/ServiceInstance/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/ApplicationManager/models/ServiceInstance/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ApplicationManagementLayer/ApplicationManager/models/ServiceInstance/launched.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/ApplicationManager/models/ServiceInstance/launched.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ApplicationManagementLayer/ApplicationManager/models/ServiceInstance/provision.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/ApplicationManager/models/ServiceInstance/provision.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ApplicationManagementLayer/ApplicationManager/models/Stack/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/ApplicationManager/models/Stack/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ApplicationManagementLayer/ApplicationManager/models/StackInstance/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/ApplicationManager/models/StackInstance/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ApplicationManagementLayer/ApplicationManager/usecases/ManageApplication/CreateApplication.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/ApplicationManager/usecases/ManageApplication/CreateApplication.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ApplicationManagementLayer/ApplicationManager/usecases/ManageApplication/DestroyApplication.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/ApplicationManager/usecases/ManageApplication/DestroyApplication.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ApplicationManagementLayer/ApplicationManager/usecases/ManageApplication/UpdateApplication.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/ApplicationManager/usecases/ManageApplication/UpdateApplication.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ApplicationManagementLayer/ApplicationManager/usecases/ManageApplication/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/ApplicationManager/usecases/ManageApplication/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ApplicationManagementLayer/CapabilityManager/deploy/build.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/CapabilityManager/deploy/build.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ApplicationManagementLayer/CapabilityManager/deploy/deploy.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/CapabilityManager/deploy/deploy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ApplicationManagementLayer/CapabilityManager/deploy/docker-compose.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ApplicationManagementLayer/CapabilityManager/deploy/gateway/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ApplicationManagementLayer/CapabilityManager/deploy/web/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/CapabilityManager/deploy/web/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ApplicationManagementLayer/CapabilityManager/deploy/web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/CapabilityManager/deploy/web/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ApplicationManagementLayer/CapabilityManager/deploy/web/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/CapabilityManager/deploy/web/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ApplicationManagementLayer/CapabilityManager/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/CapabilityManager/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ApplicationManagementLayer/CapabilityManager/interface/capability/build.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/CapabilityManager/interface/capability/build.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ApplicationManagementLayer/CapabilityManager/interface/capability/deploy.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/CapabilityManager/interface/capability/deploy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ApplicationManagementLayer/CapabilityManager/interface/capability/list.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ApplicationManagementLayer/CapabilityManager/interface/capability/release.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/CapabilityManager/interface/capability/release.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ApplicationManagementLayer/CapabilityManager/interface/capability/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/CapabilityManager/interface/capability/test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ApplicationManagementLayer/CapabilityManager/interface/data/create.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ApplicationManagementLayer/CapabilityManager/interface/data/govern.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ApplicationManagementLayer/CapabilityManager/models/Capability/build.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/CapabilityManager/models/Capability/build.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ApplicationManagementLayer/CapabilityManager/models/Capability/create.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/CapabilityManager/models/Capability/create.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ApplicationManagementLayer/CapabilityManager/models/Capability/deploy.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/CapabilityManager/models/Capability/deploy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ApplicationManagementLayer/CapabilityManager/models/Capability/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/CapabilityManager/models/Capability/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ApplicationManagementLayer/CapabilityManager/models/Capability/release.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/CapabilityManager/models/Capability/release.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ApplicationManagementLayer/CapabilityManager/models/Capability/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/CapabilityManager/models/Capability/test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ApplicationManagementLayer/CapabilityManager/models/CapabilityInstance/deploy.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/CapabilityManager/models/CapabilityInstance/deploy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ApplicationManagementLayer/CapabilityManager/models/CapabilityInstance/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/CapabilityManager/models/CapabilityInstance/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ApplicationManagementLayer/CapabilityManager/usecases/DeployCapability/DeployCapabilityRelease.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/CapabilityManager/usecases/DeployCapability/DeployCapabilityRelease.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ApplicationManagementLayer/CapabilityManager/usecases/DeployCapability/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/CapabilityManager/usecases/DeployCapability/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ApplicationManagementLayer/CapabilityManager/usecases/DevelopCapability/BuildCapability.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/CapabilityManager/usecases/DevelopCapability/BuildCapability.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ApplicationManagementLayer/CapabilityManager/usecases/DevelopCapability/CreateCapability.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/CapabilityManager/usecases/DevelopCapability/CreateCapability.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ApplicationManagementLayer/CapabilityManager/usecases/DevelopCapability/ReleaseCapability.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/CapabilityManager/usecases/DevelopCapability/ReleaseCapability.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ApplicationManagementLayer/CapabilityManager/usecases/DevelopCapability/TestCapability.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/CapabilityManager/usecases/DevelopCapability/TestCapability.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ApplicationManagementLayer/CapabilityManager/usecases/DevelopCapability/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/CapabilityManager/usecases/DevelopCapability/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ApplicationManagementLayer/CapabilityManager/usecases/RemoveCapbility/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/CapabilityManager/usecases/RemoveCapability/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ApplicationManagementLayer/CapabilityManager/usecases/UpdateCapbility/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/CapabilityManager/usecases/UpdateCapability/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ApplicationManagementLayer/LearningCorpus/deploy/build.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/LearningCorpus/deploy/build.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ApplicationManagementLayer/LearningCorpus/deploy/deploy.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/LearningCorpus/deploy/deploy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ApplicationManagementLayer/LearningCorpus/deploy/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/LearningCorpus/deploy/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ApplicationManagementLayer/LearningCorpus/deploy/gateway/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ApplicationManagementLayer/LearningCorpus/deploy/web/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/LearningCorpus/deploy/web/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ApplicationManagementLayer/LearningCorpus/deploy/web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/LearningCorpus/deploy/web/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ApplicationManagementLayer/LearningCorpus/deploy/web/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/LearningCorpus/deploy/web/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ApplicationManagementLayer/LearningCorpus/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/LearningCorpus/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ApplicationManagementLayer/LearningCorpus/models/AIModel/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/LearningCorpus/models/AIModel/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ApplicationManagementLayer/deploy/build.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/deploy/build.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ApplicationManagementLayer/deploy/deploy.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/deploy/deploy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ApplicationManagementLayer/deploy/docker-compose.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ApplicationManagementLayer/deploy/gateway/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ApplicationManagementLayer/deploy/web/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ApplicationManagementLayer/deploy/web/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ApplicationManagementLayer/deploy/web/server.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ApplicationManagementLayer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/CommonPhysicalLayer/deploy/build.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/CommonPhysicalLayer/deploy/build.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/CommonPhysicalLayer/deploy/deploy.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/CommonPhysicalLayer/deploy/deploy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/CommonPhysicalLayer/deploy/docker-compose.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/CommonPhysicalLayer/deploy/gateway/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/CommonPhysicalLayer/deploy/web/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/api/CommonPhysicalLayer/deploy/web/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/CommonPhysicalLayer/deploy/web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/api/CommonPhysicalLayer/deploy/web/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/CommonPhysicalLayer/deploy/web/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/CommonPhysicalLayer/deploy/web/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/CommonPhysicalLayer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/CommonPhysicalLayer/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/deploy/build.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/deploy/build.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/deploy/deploy.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/deploy/deploy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/deploy/pulsar/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/deploy/pulsar/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/deploy/pulsar/conf/standalone2.conf" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/deploy/pulsar/conf/standalone2.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/deploy/services-local.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/deploy/services-local.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/deploy/services.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/deploy/services.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/handlers/inputchannelinstance.enabled.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/handlers/inputchannelinstance.enabled.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/handlers/inputstreaminstance.enabled.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/handlers/inputstreaminstance.enabled.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/handlers/outputchannelinstance.enabled.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/handlers/outputchannelinstance.enabled.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/handlers/outputstreaminstance.enabled.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/handlers/outputstreaminstance.enabled.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/interface/channel/deployed.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/interface/channel/deployed.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/interface/stream/deployed.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/interface/stream/deployed.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/models/DataChannel/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/models/DataChannel/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/models/DataChannelInstance/create.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/models/DataChannelInstance/create.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/models/DataChannelInstance/failed.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/models/DataChannelInstance/failed.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/models/DataChannelInstance/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/models/DataChannelInstance/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/models/DataStream/deploy.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/models/DataStream/deploy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/models/DataStream/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/models/DataStream/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/models/DataStreamInstance/deploy.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/models/DataStreamInstance/deploy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/models/DataStreamInstance/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/models/DataStreamInstance/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/models/InputChannelInstance/create.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/models/InputChannelInstance/create.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/models/InputChannelInstance/deploy.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/models/InputChannelInstance/deploy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/models/InputChannelInstance/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/models/InputChannelInstance/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/models/InputStreamInstance/deploy.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/models/InputStreamInstance/deploy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/models/InputStreamInstance/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/models/InputStreamInstance/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/models/InputStreamInstance/process.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/models/InputStreamInstance/process.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/models/OutputChannelInstance/create.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/models/OutputChannelInstance/create.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/models/OutputChannelInstance/deploy.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/models/OutputChannelInstance/deploy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/models/OutputChannelInstance/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/models/OutputChannelInstance/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/models/OutputChannelInstance/send.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/models/OutputChannelInstance/send.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/models/OutputStreamInstance/deploy.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/models/OutputStreamInstance/deploy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/models/OutputStreamInstance/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/models/OutputStreamInstance/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/models/OutputStreamInstance/send.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/models/OutputStreamInstance/send.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/models/StreamPolicy/create.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/models/StreamPolicy/create.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/models/StreamPolicy/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/models/StreamPolicy/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/deploy/build.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/deploy/build.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/deploy/deploy.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/deploy/deploy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/deploy/docker-compose-sabr.yml" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/deploy/docker-compose-sabr.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/deploy/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/deploy/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/deploy/gateway/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/deploy/gateway/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/deploy/pulsar/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/deploy/pulsar/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/deploy/pulsar/conf/standalone2.conf" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/deploy/pulsar/conf/standalone2.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/deploy/sabr/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/deploy/sabr/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/deploy/sabr/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/deploy/sabr/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/deploy/sabr/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/deploy/sabr/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/deploy/sabr/policies.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/deploy/sabr/policies.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/deploy/sabr/runme.sh" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/deploy/sabr/runme.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/deploy/sabr/sabr-server.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/deploy/sabr/sabr-server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/deploy/sabr/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/deploy/sabr/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/deploy/sabr/streams.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/deploy/sabr/streams.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/deploy/sabr/streams.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/deploy/sabr/streams.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/deploy/sabr/streams2.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/deploy/sabr/streams2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/deploy/sabr/streams3.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/deploy/sabr/streams3.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/deploy/sabr/streams4.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/deploy/sabr/streams4.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/deploy/services.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/deploy/services.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/deploy/services.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/deploy/web/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/deploy/web/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/deploy/web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/deploy/web/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/deploy/web/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/deploy/web/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/handlers/sabundleinstance.created.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/handlers/sabundleinstance.created.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/handlers/sabundleinstance.deployed.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/handlers/sabundleinstance.deployed.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/handlers/sabundleinstance.enabled.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/handlers/sabundleinstance.enabled.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/interface/bundle/createAndDeploy.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/interface/bundle/createAndDeploy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/interface/bundle/deploy.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/interface/bundle/deploy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/interface/bundle/list.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/interface/connect.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/interface/connect.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/interface/sabundle/create.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/models/DataTransform/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/models/DataTransform/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/models/DataTransformInstance/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/models/DataTransformInstance/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/models/DataTransformInstance/run.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/models/DataTransformInstance/run.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/models/SABundle/create.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/models/SABundle/create.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/models/SABundle/deploy.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/models/SABundle/deploy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/models/SABundle/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/models/SABundle/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/models/SABundle/toJScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/models/SABundle/toJScript.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/models/SABundleInstance/deploy.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/models/SABundleInstance/deploy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/models/SABundleInstance/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/models/SABundleInstance/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/usecases/ManageSABR/CreateSABR.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/usecases/ManageSABR/CreateSABR.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/usecases/ManageSABR/DeploySABR.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/usecases/ManageSABR/DeploySABR.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/usecases/ManageSABR/DeploySABR2.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/usecases/ManageSABR/DeploySABR2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/usecases/ManageSABR/DeploySABR3.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/usecases/ManageSABR/DeploySABR3.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/usecases/ManageSABR/DeploySABR4.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/usecases/ManageSABR/DeploySABR4.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/usecases/ManageSABR/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/usecases/ManageSABR/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/deploy/build.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/deploy/build.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/deploy/deploy.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/deploy/deploy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/deploy/docker-compose.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/deploy/gateway/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/deploy/web/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/deploy/web/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/deploy/web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/deploy/web/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/deploy/web/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/deploy/web/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/IdentityAspect/deploy/build.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/IdentityAspect/deploy/build.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/IdentityAspect/deploy/deploy.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/IdentityAspect/deploy/deploy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/IdentityAspect/deploy/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/api/IdentityAspect/deploy/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/IdentityAspect/deploy/gateway/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/api/IdentityAspect/deploy/gateway/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/IdentityAspect/deploy/web/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/api/IdentityAspect/deploy/web/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/IdentityAspect/deploy/web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/api/IdentityAspect/deploy/web/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/IdentityAspect/deploy/web/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/IdentityAspect/deploy/web/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/IdentityAspect/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/IdentityAspect/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/SecurityAspect/deploy/build.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/SecurityAspect/deploy/build.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/SecurityAspect/deploy/deploy.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/SecurityAspect/deploy/deploy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/SecurityAspect/deploy/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/api/SecurityAspect/deploy/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/SecurityAspect/deploy/gateway/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/api/SecurityAspect/deploy/gateway/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/SecurityAspect/deploy/web/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/api/SecurityAspect/deploy/web/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/SecurityAspect/deploy/web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/api/SecurityAspect/deploy/web/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/SecurityAspect/deploy/web/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/SecurityAspect/deploy/web/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/SecurityAspect/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/SecurityAspect/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/SecurityAspect/models/KeyStore/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/SecurityAspect/models/KeyStore/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/SecurityAspect/models/SecurityKey/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/SecurityAspect/models/SecurityKey/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ServiceManagementLayer/ServiceOrchestrator/deploy/build.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ServiceManagementLayer/ServiceOrchestrator/deploy/build.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ServiceManagementLayer/ServiceOrchestrator/deploy/deploy.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ServiceManagementLayer/ServiceOrchestrator/deploy/deploy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ServiceManagementLayer/ServiceOrchestrator/deploy/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/api/ServiceManagementLayer/ServiceOrchestrator/deploy/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ServiceManagementLayer/ServiceOrchestrator/deploy/gateway/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/api/ServiceManagementLayer/ServiceOrchestrator/deploy/gateway/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ServiceManagementLayer/ServiceOrchestrator/deploy/web/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/api/ServiceManagementLayer/ServiceOrchestrator/deploy/web/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ServiceManagementLayer/ServiceOrchestrator/deploy/web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/api/ServiceManagementLayer/ServiceOrchestrator/deploy/web/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ServiceManagementLayer/ServiceOrchestrator/deploy/web/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ServiceManagementLayer/ServiceOrchestrator/deploy/web/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ServiceManagementLayer/ServiceOrchestrator/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ServiceManagementLayer/ServiceOrchestrator/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ServiceManagementLayer/ServiceOrchestrator/interface/service/ready.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ServiceManagementLayer/ServiceOrchestrator/interface/service/ready.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ServiceManagementLayer/ServiceOrchestrator/models/DockerProvisioner/deploy.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ServiceManagementLayer/ServiceOrchestrator/models/DockerProvisioner/deploy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ServiceManagementLayer/ServiceOrchestrator/models/DockerProvisioner/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ServiceManagementLayer/ServiceOrchestrator/models/DockerProvisioner/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ServiceManagementLayer/ServiceOrchestrator/models/ProcessProvisioner/deploy.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ServiceManagementLayer/ServiceOrchestrator/models/ProcessProvisioner/deploy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ServiceManagementLayer/ServiceOrchestrator/models/ProcessProvisioner/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ServiceManagementLayer/ServiceOrchestrator/models/ProcessProvisioner/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ServiceManagementLayer/ServiceOrchestrator/models/Provisioner/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ServiceManagementLayer/ServiceOrchestrator/models/Provisioner/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ServiceManagementLayer/deploy/build.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ServiceManagementLayer/deploy/build.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ServiceManagementLayer/deploy/deploy.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ServiceManagementLayer/deploy/deploy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ServiceManagementLayer/deploy/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/api/ServiceManagementLayer/deploy/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ServiceManagementLayer/deploy/gateway/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/api/ServiceManagementLayer/deploy/gateway/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ServiceManagementLayer/deploy/web/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/api/ServiceManagementLayer/deploy/web/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ServiceManagementLayer/deploy/web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/api/ServiceManagementLayer/deploy/web/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ServiceManagementLayer/deploy/web/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ServiceManagementLayer/deploy/web/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ServiceManagementLayer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ServiceManagementLayer/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/SoftwareDefinedInfrastructure/deploy/build.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/SoftwareDefinedInfrastructure/deploy/build.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/SoftwareDefinedInfrastructure/deploy/deploy.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/SoftwareDefinedInfrastructure/deploy/deploy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/SoftwareDefinedInfrastructure/deploy/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/api/SoftwareDefinedInfrastructure/deploy/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/SoftwareDefinedInfrastructure/deploy/gateway/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/api/SoftwareDefinedInfrastructure/deploy/gateway/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/SoftwareDefinedInfrastructure/deploy/web/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/api/SoftwareDefinedInfrastructure/deploy/web/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/SoftwareDefinedInfrastructure/deploy/web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/api/SoftwareDefinedInfrastructure/deploy/web/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/SoftwareDefinedInfrastructure/deploy/web/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/SoftwareDefinedInfrastructure/deploy/web/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/SoftwareDefinedInfrastructure/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/SoftwareDefinedInfrastructure/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/doc/Deployment3D.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/api/doc/Deployment3D.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/doc/HighLevelArchitecture.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/api/doc/HighLevelArchitecture.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/doc/doc.emd" beforeDir="false" afterPath="$PROJECT_DIR$/api/doc/doc.emd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/interface/aimodel/list.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/interface/application/list.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/interface/capability/list.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/interface/data/govern.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/interface/deploy/show.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/interface/deploy/show.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/interface/policy/list.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/interface/pulsar/streams.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/interface/pulsar/streams.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/interface/pulsar/topic.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/interface/pulsar/topic.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/interface/pulsar/topics.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/interface/pulsar/topics.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/interface/security/list.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/usecases/ManageAIModel/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/usecases/ManageAIModel/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/usecases/ManageApplication/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/usecases/ManageApplication/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/usecases/ManageCapbilities/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/usecases/ManageCapbilities/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/usecases/ManagePolicies/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/usecases/ManagePolicies/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/usecases/ManageSecurity/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/usecases/ManageSecurity/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/3d-force-graph.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/3d-force-graph.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/Graph.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/Graph.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/Graph2D.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/Graph2D.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/Graph3D.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/Graph3D.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/Graph3DLogical.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/Graph3DLogical.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/aframe.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/aframe.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/aframe.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/aframe.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/A3DGraph.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/A3DGraph.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AAction.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AActor.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AActor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AAttribute.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AAttribute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AEnvironment.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AEnvironment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AImage.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AImage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AInterface.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AInterface.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AModel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/ANetwork.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/ANetwork.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AObject.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AObject.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/APackage.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/APackage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AScenario.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AScenario.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AService.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AStack.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AStack.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AState.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AState.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AStateNet.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AStateNet.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AText.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AText.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AUsecase.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AUsecase.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AVolume.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AVolume.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/d3-force-3d.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/d3-force-3d.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/d3-octree.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/d3-octree.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/d3.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/d3.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/displacement-shader.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/displacement-shader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/fonts/helvetiker_regular.typeface.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/fonts/helvetiker_regular.typeface.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/forceInACube.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/forceInACube.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/forceOnPlane.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/forceOnPlane.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/jquery.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/less.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/less.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/sabr/SChannel.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/sabr/SChannel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/sabr/SConsumer.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/sabr/SConsumer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/sabr/SProducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/sabr/SProducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/sabr/SSabr.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/sabr/SSabr.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/sabr/SService.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/sabr/SService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/sabr/SServiceInstance.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/sabr/SServiceInstance.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/sabr/SStream.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/sabr/SStream.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/sabr/SSubscription.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/sabr/SSubscription.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/sabr/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/sabr/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/sdf-shader.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/sdf-shader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/socket.io.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/socket.io.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/text-bitmap.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/text-bitmap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/three-bmfont-text-bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/three-bmfont-text-bundle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/three-mesh-ui.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/three-mesh-ui.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/three.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/three.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/three.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/three.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/w2ui.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/w2ui.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/w2ui.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/w2ui.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/3d/Key_B_02.mtl" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/3d/Key_B_02.mtl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/3d/Key_B_02.obj" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/3d/Key_B_02.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/color.less" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/color.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/doc.less" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/doc.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/docimporter.less" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/docimporter.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/graph.less" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/graph.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/importer.less" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/importer.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/state.less" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/state.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/top.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/top.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/top.less" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/top.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/w2ui.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/w2ui.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/w2ui.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/w2ui.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/init" beforeDir="false" afterPath="$PROJECT_DIR$/bin/init" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/lib/subcommander.js" beforeDir="false" afterPath="$PROJECT_DIR$/bin/lib/subcommander.js" afterDir="false" />
+    <list default="true" id="e7f16371-c89d-4dad-98c0-026728aac0e5" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/sabr" beforeDir="false" afterPath="$PROJECT_DIR$/bin/sabr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deploy/build.js" beforeDir="false" afterPath="$PROJECT_DIR$/deploy/build.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deploy/deploy.js" beforeDir="false" afterPath="$PROJECT_DIR$/deploy/deploy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deploy/doc/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/deploy/doc/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deploy/doc/Dockerfile-jekyll" beforeDir="false" afterPath="$PROJECT_DIR$/deploy/doc/Dockerfile-jekyll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deploy/doc/doc.js" beforeDir="false" afterPath="$PROJECT_DIR$/deploy/doc/doc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deploy/doc/docbuild.js" beforeDir="false" afterPath="$PROJECT_DIR$/deploy/doc/docbuild.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deploy/doc/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/deploy/doc/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deploy/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/deploy/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deploy/pulsar/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/deploy/pulsar/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deploy/pulsar/conf/standalone2.conf" beforeDir="false" afterPath="$PROJECT_DIR$/deploy/pulsar/conf/standalone2.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deploy/services-local.js" beforeDir="false" afterPath="$PROJECT_DIR$/deploy/services-local.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deploy/services.js" beforeDir="false" afterPath="$PROJECT_DIR$/deploy/services.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deploy/testDeploy/bundle1.js" beforeDir="false" afterPath="$PROJECT_DIR$/deploy/testDeploy/bundle1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deploy/testDeploy/bundle2.js" beforeDir="false" afterPath="$PROJECT_DIR$/deploy/testDeploy/bundle2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deploy/testDeploy/bundle3.js" beforeDir="false" afterPath="$PROJECT_DIR$/deploy/testDeploy/bundle3.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deploy/testDeploy/bundle4.js" beforeDir="false" afterPath="$PROJECT_DIR$/deploy/testDeploy/bundle4.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deploy/testDeploy/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/deploy/testDeploy/docker-compose.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deploy/testDeploy/policies.js" beforeDir="false" afterPath="$PROJECT_DIR$/deploy/testDeploy/policies.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deploy/testDeploy/policy1.js" beforeDir="false" afterPath="$PROJECT_DIR$/deploy/testDeploy/policy1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deploy/testDeploy/policy2.js" beforeDir="false" afterPath="$PROJECT_DIR$/deploy/testDeploy/policy2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deploy/testDeploy/policy3.js" beforeDir="false" afterPath="$PROJECT_DIR$/deploy/testDeploy/policy3.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deploy/web/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/deploy/web/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagram.puml" beforeDir="false" afterPath="$PROJECT_DIR$/diagram.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Deployment3D.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Deployment3D.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/HighLevelArchitecture.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/docs/HighLevelArchitecture.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/actors/Actors.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/actors/Actors.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/actors/Actors.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/actors/Actors.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/actors/analyst/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/actors/analyst/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/actors/applicationdeveloper/Activity.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/actors/applicationdeveloper/Activity.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/actors/applicationdeveloper/UseCases.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/actors/applicationdeveloper/UseCases.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/actors/applicationdeveloper/Workflow.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/actors/applicationdeveloper/Workflow.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/actors/applicationdeveloper/doc.emd" beforeDir="false" afterPath="$PROJECT_DIR$/docs/actors/applicationdeveloper/doc.emd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/actors/applicationdeveloper/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/actors/applicationdeveloper/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/actors/dataengineer/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/actors/dataengineer/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/actors/datascientist/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/actors/datascientist/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/actors/datasteward/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/actors/datasteward/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/actors/devops/UseCase.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/actors/devops/UseCase.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/actors/devops/UseCase.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/actors/devops/UseCase.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/actors/devops/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/actors/devops/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/actors/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/actors/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/actors/itops/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/actors/itops/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/actors/secops/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/actors/secops/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/actors/tacticaloperator/UseCase.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/actors/tacticaloperator/UseCase.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/actors/tacticaloperator/UseCase.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/actors/tacticaloperator/UseCase.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/actors/tacticaloperator/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/actors/tacticaloperator/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/doc.emd" beforeDir="false" afterPath="$PROJECT_DIR$/docs/doc.emd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/Deployment3D.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/Deployment3D.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/HighLevelArchitecture.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/HighLevelArchitecture.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/am/envs/dev/deployment.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/am/envs/dev/deployment.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/am/envs/dev/deployment.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/am/envs/dev/deployment.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/am/envs/dev/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/am/envs/dev/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/am/envs/dev/physical.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/am/envs/dev/physical.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/am/envs/dev/physical.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/am/envs/dev/physical.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/am/envs/prod/deployment.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/am/envs/prod/deployment.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/am/envs/prod/deployment.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/am/envs/prod/deployment.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/am/envs/prod/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/am/envs/prod/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/am/envs/prod/physical.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/am/envs/prod/physical.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/am/envs/prod/physical.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/am/envs/prod/physical.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/am/envs/test/deployment.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/am/envs/test/deployment.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/am/envs/test/deployment.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/am/envs/test/deployment.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/am/envs/test/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/am/envs/test/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/am/envs/test/physical.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/am/envs/test/physical.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/am/envs/test/physical.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/am/envs/test/physical.puml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/sabr/aml/am/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/am/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/am/logical.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/am/logical.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/am/logical.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/am/logical.puml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/sabr/aml/am/models/application/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/am/models/application/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/am/models/application/logical.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/am/models/application/logical.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/am/models/application/logical.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/am/models/application/logical.puml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/sabr/aml/am/models/applicationinstance/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/am/models/applicationinstance/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/am/models/applicationinstance/logical.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/am/models/applicationinstance/logical.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/am/models/applicationinstance/logical.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/am/models/applicationinstance/logical.puml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/sabr/aml/am/models/service/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/am/models/service/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/am/models/service/logical.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/am/models/service/logical.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/am/models/service/logical.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/am/models/service/logical.puml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/sabr/aml/am/models/serviceinstance/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/am/models/serviceinstance/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/am/models/serviceinstance/logical.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/am/models/serviceinstance/logical.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/am/models/serviceinstance/logical.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/am/models/serviceinstance/logical.puml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/sabr/aml/am/models/stack/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/am/models/stack/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/am/models/stack/logical.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/am/models/stack/logical.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/am/models/stack/logical.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/am/models/stack/logical.puml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/sabr/aml/am/models/stackinstance/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/am/models/stackinstance/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/am/models/stackinstance/logical.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/am/models/stackinstance/logical.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/am/models/stackinstance/logical.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/am/models/stackinstance/logical.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/am/process.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/am/process.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/am/process.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/am/process.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/am/subpackage.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/am/subpackage.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/am/subpackage.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/am/subpackage.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/am/usecases/integratelearning/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/am/usecases/integratelearning/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/am/usecases/manageapplication/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/am/usecases/manageapplication/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/cm/envs/dev/deployment.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/cm/envs/dev/deployment.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/cm/envs/dev/deployment.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/cm/envs/dev/deployment.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/cm/envs/dev/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/cm/envs/dev/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/cm/envs/dev/physical.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/cm/envs/dev/physical.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/cm/envs/dev/physical.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/cm/envs/dev/physical.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/cm/envs/prod/deployment.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/cm/envs/prod/deployment.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/cm/envs/prod/deployment.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/cm/envs/prod/deployment.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/cm/envs/prod/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/cm/envs/prod/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/cm/envs/prod/physical.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/cm/envs/prod/physical.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/cm/envs/prod/physical.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/cm/envs/prod/physical.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/cm/envs/test/deployment.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/cm/envs/test/deployment.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/cm/envs/test/deployment.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/cm/envs/test/deployment.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/cm/envs/test/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/cm/envs/test/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/cm/envs/test/physical.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/cm/envs/test/physical.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/cm/envs/test/physical.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/cm/envs/test/physical.puml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/am/usecases/integratelearning/Activities.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/am/usecases/integratelearning/Activities.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/am/usecases/integratelearning/Activities.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/am/usecases/integratelearning/Activities.puml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/sabr/aml/cm/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/cm/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/cm/logical.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/cm/logical.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/cm/logical.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/cm/logical.puml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/sabr/aml/cm/models/capability/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/cm/models/capability/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/cm/models/capability/logical.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/cm/models/capability/logical.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/cm/models/capability/logical.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/cm/models/capability/logical.puml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/sabr/aml/cm/models/capabilityinstance/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/cm/models/capabilityinstance/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/cm/models/capabilityinstance/logical.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/cm/models/capabilityinstance/logical.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/cm/models/capabilityinstance/logical.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/cm/models/capabilityinstance/logical.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/cm/process.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/cm/process.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/cm/process.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/cm/process.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/cm/scenariomapping.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/cm/scenariomapping.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/cm/scenariomapping.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/cm/scenariomapping.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/cm/subpackage.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/cm/subpackage.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/cm/subpackage.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/cm/subpackage.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/cm/usecases.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/cm/usecases.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/cm/usecases.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/cm/usecases.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/cm/usecases/deploycapability/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/cm/usecases/deploycapability/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/cm/usecases/developcapability/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/cm/usecases/developcapability/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/cm/userinteraction.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/cm/userinteraction.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/cm/userinteraction.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/cm/userinteraction.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/envs/dev/deployment.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/envs/dev/deployment.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/envs/dev/deployment.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/envs/dev/deployment.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/envs/dev/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/envs/dev/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/envs/dev/physical.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/envs/dev/physical.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/envs/dev/physical.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/envs/dev/physical.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/envs/prod/deployment.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/envs/prod/deployment.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/envs/prod/deployment.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/envs/prod/deployment.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/envs/prod/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/envs/prod/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/envs/prod/physical.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/envs/prod/physical.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/envs/prod/physical.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/envs/prod/physical.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/envs/test/deployment.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/envs/test/deployment.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/envs/test/deployment.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/envs/test/deployment.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/envs/test/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/envs/test/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/envs/test/physical.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/envs/test/physical.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/envs/test/physical.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/envs/test/physical.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/lc/envs/dev/deployment.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/lc/envs/dev/deployment.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/lc/envs/dev/deployment.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/lc/envs/dev/deployment.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/lc/envs/dev/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/lc/envs/dev/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/lc/envs/dev/physical.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/lc/envs/dev/physical.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/lc/envs/dev/physical.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/lc/envs/dev/physical.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/lc/envs/prod/deployment.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/lc/envs/prod/deployment.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/lc/envs/prod/deployment.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/lc/envs/prod/deployment.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/lc/envs/prod/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/lc/envs/prod/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/lc/envs/prod/physical.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/lc/envs/prod/physical.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/lc/envs/prod/physical.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/lc/envs/prod/physical.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/lc/envs/test/deployment.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/lc/envs/test/deployment.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/lc/envs/test/deployment.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/lc/envs/test/deployment.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/lc/envs/test/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/lc/envs/test/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/lc/envs/test/physical.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/lc/envs/test/physical.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/lc/envs/test/physical.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/lc/envs/test/physical.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/lc/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/lc/index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/cm/usecases/UpdateCapability/Activities.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/cm/usecases/UpdateCapability/Activities.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/cm/usecases/UpdateCapability/Activities.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/cm/usecases/UpdateCapability/Activities.puml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/cm/usecases/deploycapability/Activities.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/cm/usecases/deploycapability/Activities.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/cm/usecases/deploycapability/Activities.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/cm/usecases/deploycapability/Activities.puml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/cm/usecases/developcapability/Activities.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/cm/usecases/developcapability/Activities.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/cm/usecases/developcapability/Activities.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/cm/usecases/developcapability/Activities.puml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/cm/usecases/removecapability/Activities.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/cm/usecases/removecapability/Activities.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/cm/usecases/removecapability/Activities.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/cm/usecases/removecapability/Activities.puml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/cm/usecases/removecapbility/Activities.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/cm/usecases/removecapbility/Activities.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/cm/usecases/removecapbility/index.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/cm/usecases/updatecapbility/Activities.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/cm/usecases/updatecapbility/Activities.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/cm/usecases/updatecapbility/index.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/sabr/aml/lc/models/aimodel/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/lc/models/aimodel/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/lc/models/aimodel/logical.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/lc/models/aimodel/logical.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/lc/models/aimodel/logical.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/lc/models/aimodel/logical.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/cpl/envs/dev/deployment.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/cpl/envs/dev/deployment.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/cpl/envs/dev/deployment.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/cpl/envs/dev/deployment.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/cpl/envs/dev/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/cpl/envs/dev/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/cpl/envs/dev/physical.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/cpl/envs/dev/physical.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/cpl/envs/dev/physical.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/cpl/envs/dev/physical.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/cpl/envs/prod/deployment.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/cpl/envs/prod/deployment.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/cpl/envs/prod/deployment.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/cpl/envs/prod/deployment.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/cpl/envs/prod/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/cpl/envs/prod/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/cpl/envs/prod/physical.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/cpl/envs/prod/physical.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/cpl/envs/prod/physical.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/cpl/envs/prod/physical.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/cpl/envs/test/deployment.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/cpl/envs/test/deployment.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/cpl/envs/test/deployment.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/cpl/envs/test/deployment.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/cpl/envs/test/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/cpl/envs/test/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/cpl/envs/test/physical.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/cpl/envs/test/physical.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/cpl/envs/test/physical.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/cpl/envs/test/physical.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/cpl/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/cpl/index.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/sabr/diml/dsm/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/diml/dsm/index.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/sabr/diml/dsm/models/datachannel/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/diml/dsm/models/datachannel/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/diml/dsm/models/datachannel/logical.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/diml/dsm/models/datachannel/logical.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/diml/dsm/models/datachannel/logical.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/diml/dsm/models/datachannel/logical.puml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/sabr/diml/dsm/models/datachannelinstance/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/diml/dsm/models/datachannelinstance/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/diml/dsm/models/datachannelinstance/logical.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/diml/dsm/models/datachannelinstance/logical.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/diml/dsm/models/datachannelinstance/logical.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/diml/dsm/models/datachannelinstance/logical.puml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/sabr/diml/dsm/models/datastream/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/diml/dsm/models/datastream/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/diml/dsm/models/datastream/logical.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/diml/dsm/models/datastream/logical.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/diml/dsm/models/datastream/logical.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/diml/dsm/models/datastream/logical.puml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/sabr/diml/dsm/models/datastreaminstance/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/diml/dsm/models/datastreaminstance/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/diml/dsm/models/datastreaminstance/logical.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/diml/dsm/models/datastreaminstance/logical.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/diml/dsm/models/datastreaminstance/logical.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/diml/dsm/models/datastreaminstance/logical.puml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/sabr/diml/dsm/models/inputchannelinstance/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/diml/dsm/models/inputchannelinstance/index.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/sabr/diml/dsm/models/inputstreaminstance/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/diml/dsm/models/inputstreaminstance/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/diml/dsm/models/inputstreaminstance/logical.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/diml/dsm/models/inputstreaminstance/logical.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/diml/dsm/models/inputstreaminstance/logical.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/diml/dsm/models/inputstreaminstance/logical.puml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/sabr/diml/dsm/models/outputchannelinstance/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/diml/dsm/models/outputchannelinstance/index.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/sabr/diml/dsm/models/outputstreaminstance/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/diml/dsm/models/outputstreaminstance/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/diml/dsm/models/outputstreaminstance/logical.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/diml/dsm/models/outputstreaminstance/logical.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/diml/dsm/models/outputstreaminstance/logical.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/diml/dsm/models/outputstreaminstance/logical.puml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/sabr/diml/dsm/models/streampolicy/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/diml/dsm/models/streampolicy/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/diml/dsm/models/streampolicy/logical.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/diml/dsm/models/streampolicy/logical.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/diml/dsm/models/streampolicy/logical.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/diml/dsm/models/streampolicy/logical.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/diml/dsm/process.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/diml/dsm/process.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/diml/dsm/process.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/diml/dsm/process.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/diml/envs/dev/deployment.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/diml/envs/dev/deployment.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/diml/envs/dev/deployment.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/diml/envs/dev/deployment.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/diml/envs/dev/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/diml/envs/dev/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/diml/envs/dev/physical.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/diml/envs/dev/physical.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/diml/envs/dev/physical.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/diml/envs/dev/physical.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/diml/envs/prod/deployment.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/diml/envs/prod/deployment.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/diml/envs/prod/deployment.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/diml/envs/prod/deployment.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/diml/envs/prod/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/diml/envs/prod/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/diml/envs/prod/physical.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/diml/envs/prod/physical.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/diml/envs/prod/physical.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/diml/envs/prod/physical.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/diml/envs/test/deployment.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/diml/envs/test/deployment.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/diml/envs/test/deployment.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/diml/envs/test/deployment.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/diml/envs/test/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/diml/envs/test/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/diml/envs/test/physical.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/diml/envs/test/physical.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/diml/envs/test/physical.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/diml/envs/test/physical.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/diml/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/diml/index.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/sabr/diml/sabm/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/diml/sabm/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/diml/sabm/logical.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/diml/sabm/logical.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/diml/sabm/logical.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/diml/sabm/logical.puml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/sabr/diml/sabm/models/datatransform/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/diml/sabm/models/datatransform/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/diml/sabm/models/datatransform/logical.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/diml/sabm/models/datatransform/logical.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/diml/sabm/models/datatransform/logical.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/diml/sabm/models/datatransform/logical.puml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/sabr/diml/sabm/models/datatransforminstance/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/diml/sabm/models/datatransforminstance/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/diml/sabm/models/datatransforminstance/logical.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/diml/sabm/models/datatransforminstance/logical.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/diml/sabm/models/datatransforminstance/logical.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/diml/sabm/models/datatransforminstance/logical.puml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/sabr/diml/sabm/models/sabundle/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/diml/sabm/models/sabundle/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/diml/sabm/models/sabundle/logical.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/diml/sabm/models/sabundle/logical.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/diml/sabm/models/sabundle/logical.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/diml/sabm/models/sabundle/logical.puml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/sabr/diml/sabm/models/sabundleinstance/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/diml/sabm/models/sabundleinstance/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/diml/sabm/models/sabundleinstance/logical.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/diml/sabm/models/sabundleinstance/logical.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/diml/sabm/models/sabundleinstance/logical.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/diml/sabm/models/sabundleinstance/logical.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/diml/sabm/process.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/diml/sabm/process.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/diml/sabm/process.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/diml/sabm/process.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/diml/sabm/scenariomapping.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/diml/sabm/scenariomapping.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/diml/sabm/scenariomapping.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/diml/sabm/scenariomapping.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/diml/sabm/subpackage.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/diml/sabm/subpackage.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/diml/sabm/subpackage.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/diml/sabm/subpackage.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/diml/sabm/usecases/managesabr/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/diml/sabm/usecases/managesabr/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/diml/sabm/userinteraction.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/diml/sabm/userinteraction.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/diml/sabm/userinteraction.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/diml/sabm/userinteraction.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/doc.emd" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/doc.emd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/envs/dev/physical.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/envs/dev/physical.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/envs/dev/physical.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/envs/dev/physical.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/envs/local/physical.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/envs/local/physical.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/envs/local/physical.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/envs/local/physical.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/envs/prod/physical.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/envs/prod/physical.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/envs/prod/physical.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/envs/prod/physical.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/envs/test/physical.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/envs/test/physical.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/envs/test/physical.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/envs/test/physical.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/ia/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/ia/index.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/sabr/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/logical.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/logical.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/logical.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/logical.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/process.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/process.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/process.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/process.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/sa/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/sa/index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/sabr/sa/models/keystore/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/sa/models/keystore/index.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/sabr/sa/models/securitykey/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/sa/models/securitykey/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/sa/models/securitykey/logical.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/sa/models/securitykey/logical.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/sa/models/securitykey/logical.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/sa/models/securitykey/logical.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/scenariomapping.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/scenariomapping.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/scenariomapping.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/scenariomapping.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/sdi/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/sdi/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/sml/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/sml/index.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/sabr/sml/so/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/sml/so/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/sml/so/logical.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/sml/so/logical.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/sml/so/logical.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/sml/so/logical.puml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/sabr/sml/so/models/dockerprovisioner/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/sml/so/models/dockerprovisioner/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/sml/so/models/dockerprovisioner/logical.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/sml/so/models/dockerprovisioner/logical.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/sml/so/models/dockerprovisioner/logical.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/sml/so/models/dockerprovisioner/logical.puml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/sabr/sml/so/models/processprovisioner/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/sml/so/models/processprovisioner/index.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/sabr/sml/so/models/provisioner/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/sml/so/models/provisioner/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/subpackage.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/subpackage.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/subpackage.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/subpackage.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/usecases.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/usecases.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/usecases.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/usecases.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/usecases/manageaimodel/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/usecases/manageaimodel/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/usecases/managecapabilities/Activities.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/usecases/managecapabilities/Activities.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/usecases/managecapabilities/Activities.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/usecases/managecapabilities/Activities.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/usecases/managecapabilities/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/usecases/managecapabilities/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/usecases/managepolicies/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/usecases/managepolicies/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/usecases/managesecurity/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/usecases/managesecurity/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/usecases/providedigitalassistance/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/usecases/providedigitalassistance/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/userinteraction.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/userinteraction.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/userinteraction.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/userinteraction.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/subpackage.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/subpackage.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/subpackage.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/subpackage.puml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/toc.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/toc.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/usecases.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/usecases.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/usecases.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/usecases.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/usecases.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/usecases.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/bundle.yml" beforeDir="false" afterPath="$PROJECT_DIR$/templates/bundle.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/bundle1.js" beforeDir="false" afterPath="$PROJECT_DIR$/templates/bundle1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/bundle2.js" beforeDir="false" afterPath="$PROJECT_DIR$/templates/bundle2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/bundle3.js" beforeDir="false" afterPath="$PROJECT_DIR$/templates/bundle3.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/bundle4.js" beforeDir="false" afterPath="$PROJECT_DIR$/templates/bundle4.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/capability.js" beforeDir="false" afterPath="$PROJECT_DIR$/templates/capability.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/capability.yml" beforeDir="false" afterPath="$PROJECT_DIR$/templates/capability.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/policies.js" beforeDir="false" afterPath="$PROJECT_DIR$/templates/policies.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/policy1.js" beforeDir="false" afterPath="$PROJECT_DIR$/templates/policy1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/policy2.js" beforeDir="false" afterPath="$PROJECT_DIR$/templates/policy2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/policy3.js" beforeDir="false" afterPath="$PROJECT_DIR$/templates/policy3.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/bin/ApplicationManager/ManageApplication.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/bin/ApplicationManager/ManageApplication.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/bin/CapabilityManager/DeployCapability.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/bin/CapabilityManager/DeployCapability.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/bin/CapabilityManager/DeployCapbility.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/bin/CapabilityManager/DeployCapbility.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/bin/CapabilityManager/DevelopCapbility.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/bin/CapabilityManager/DevelopCapbility.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/bin/CapabilityManager/RemoveCapbility.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/bin/CapabilityManager/RemoveCapbility.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/bin/CapabilityManager/UpdateCapbility.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/bin/CapabilityManager/UpdateCapbility.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/bin/CapacityManager/DevelopCapability.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/bin/CapacityManager/DevelopCapability.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/bin/FindEnemyCombatant.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/bin/FindEnemyCombatant.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/bin/ManageAIModel.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/bin/ManageAIModel.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/bin/ManageApplication.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/bin/ManageApplication.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/bin/ManageCapbilities.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/bin/ManageCapbilities.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/bin/SentientAgentBundleManager/ManageSABR.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/bin/SentientAgentBundleManager/ManageSABR.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/deployed.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/deployed.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/index.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/layouts/default-working.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/layouts/default-working.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/layouts/default.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/layouts/default.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/layouts/default2.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/layouts/default2.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/layouts/default3.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/layouts/default3.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/layouts/deployed.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/layouts/deployed.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -868,7 +221,7 @@
       <workItem from="1656519944141" duration="599000" />
       <workItem from="1657264483572" duration="501000" />
       <workItem from="1657265170787" duration="266000" />
-      <workItem from="1657829243493" duration="15596000" />
+      <workItem from="1657829243493" duration="17304000" />
     </task>
     <task id="LOCAL-00001" summary="Updates to documentation and fixes to the deployment model.">
       <created>1653779220207</created>
@@ -898,7 +251,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653831747157</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Updates to documentation and fixes to the deployment model.">
+      <created>1657895812326</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1657895812326</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

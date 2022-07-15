@@ -11,9 +11,9 @@ DevOpsEngineer --> RemoveCapability
 
 
 
-usecase "0" as 0 #lightyellow
+usecase "Manage Capabilities" as ManageCapabilities #lightyellow
 
-RemoveCapability <-- 0 : extends
+RemoveCapability <-- ManageCapabilities : extends
 
 
 

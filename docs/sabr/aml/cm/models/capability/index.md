@@ -25,6 +25,7 @@ Capabilities are deployed across multiple assets in the ecosystem. They consist 
 | instances | n | CapabilityInstance | true | true | This is a instance of capability running in the ecosystem. |
 
 
+
 ## Users of the Model
 
 | Name | Cardinality | Class | Composition | Owner | Description |
@@ -61,8 +62,8 @@ Capabilities are deployed across multiple assets in the ecosystem. They consist 
 #### Description
 Build a Capability
 
-
 #### Parameters
+
 | Name | Type | Required | Description |
 |---|---|---|---|
 | name | string |true | name of the capability |
@@ -81,8 +82,8 @@ Build a Capability
 #### Description
 Create a Capability
 
-
 #### Parameters
+
 | Name | Type | Required | Description |
 |---|---|---|---|
 | name | string |true | name of the capability |
@@ -102,11 +103,9 @@ Create a Capability
 #### Description
 Deploy a Capability
 
-
 #### Parameters
-| Name | Type | Required | Description |
-|---|---|---|---|
 
+No parameters
 
 
 
@@ -121,8 +120,8 @@ Deploy a Capability
 #### Description
 Release a Capability
 
-
 #### Parameters
+
 | Name | Type | Required | Description |
 |---|---|---|---|
 | name | string |true | name of the capability |
@@ -141,8 +140,8 @@ Release a Capability
 #### Description
 Test a Capability
 
-
 #### Parameters
+
 | Name | Type | Required | Description |
 |---|---|---|---|
 | name | string |true | name of the capability |

@@ -215,8 +215,8 @@ subsystems and actors can access the system.
 #### Description
 Description of the action
 
-
 #### Parameters
+
 | Name | Type | Required | Description |
 |---|---|---|---|
 | attr1 | string |false | Description for the parameter |
@@ -234,8 +234,8 @@ Description of the action
 #### Description
 Description of the action
 
-
 #### Parameters
+
 | Name | Type | Required | Description |
 |---|---|---|---|
 | attr1 | string |false | Description for the parameter |
@@ -253,8 +253,8 @@ Description of the action
 #### Description
 Description of the action
 
-
 #### Parameters
+
 | Name | Type | Required | Description |
 |---|---|---|---|
 | attr1 | string |false | Description for the parameter |
@@ -272,8 +272,8 @@ Description of the action
 #### Description
 Description of the action
 
-
 #### Parameters
+
 | Name | Type | Required | Description |
 |---|---|---|---|
 | attr1 | string |false | Description for the parameter |
@@ -291,8 +291,8 @@ Description of the action
 #### Description
 Notification that the service is deployed
 
-
 #### Parameters
+
 | Name | Type | Required | Description |
 |---|---|---|---|
 | service | string |true | ID of the Service that is ready |
@@ -311,11 +311,9 @@ Notification that the service is deployed
 #### Description
 Service is being killed
 
-
 #### Parameters
-| Name | Type | Required | Description |
-|---|---|---|---|
 
+No parameters
 
 
 ### Action  sabr aml am service provision
@@ -329,8 +327,8 @@ Service is being killed
 #### Description
 Provision the service
 
-
 #### Parameters
+
 | Name | Type | Required | Description |
 |---|---|---|---|
 | service | string |true | Name or ID of the service to provision |
@@ -349,11 +347,9 @@ Provision the service
 #### Description
 Return stderr of the service instance
 
-
 #### Parameters
-| Name | Type | Required | Description |
-|---|---|---|---|
 
+No parameters
 
 
 ### Action  sabr aml am service stdout
@@ -367,11 +363,9 @@ Return stderr of the service instance
 #### Description
 Return stdout of the service instance
 
-
 #### Parameters
-| Name | Type | Required | Description |
-|---|---|---|---|
 
+No parameters
 
 
 

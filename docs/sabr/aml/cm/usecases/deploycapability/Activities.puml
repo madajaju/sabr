@@ -15,9 +15,9 @@ DeployCapability --> DeployCapabilityRelease
 
 
 
-usecase "0" as 0 #lightyellow
+usecase "Manage Capabilities" as ManageCapabilities #lightyellow
 
-DeployCapability <-- 0 : extends
+DeployCapability <-- ManageCapabilities : extends
 
 
 

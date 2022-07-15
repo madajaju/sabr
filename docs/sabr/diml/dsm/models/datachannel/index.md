@@ -27,6 +27,7 @@ This represents one channel in the data stream with specific rules for the chann
 | stream | 1 | DataStream |  |  | This is the owning stream |
 
 
+
 ## Users of the Model
 
 | Name | Cardinality | Class | Composition | Owner | Description |

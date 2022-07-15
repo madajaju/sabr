@@ -39,9 +39,9 @@ UpdateCapability --> UpdateSABRsoftheCapability
 
 
 
-usecase "0" as 0 #lightyellow
+usecase "Manage Capabilities" as ManageCapabilities #lightyellow
 
-UpdateCapability <-- 0 : extends
+UpdateCapability <-- ManageCapabilities : extends
 
 
 

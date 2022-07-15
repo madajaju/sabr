@@ -23,10 +23,6 @@ KeyStore contains security and other secret keys
 | keys | n | SecurityKey | false | false |  |
 
 
-## Users of the Model
-
-| Name | Cardinality | Class | Composition | Owner | Description |
-| --- | --- | --- | --- | --- | --- |
 
 
 

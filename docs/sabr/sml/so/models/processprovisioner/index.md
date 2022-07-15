@@ -24,10 +24,6 @@ Provisions services as spawned processes. This is a specailization of the Provis
 | services | n | ServiceInstance | false | false |  |
 
 
-## Users of the Model
-
-| Name | Cardinality | Class | Composition | Owner | Description |
-| --- | --- | --- | --- | --- | --- |
 
 
 
@@ -51,8 +47,8 @@ Provisions services as spawned processes. This is a specailization of the Provis
 #### Description
 Deploy a Service generically.
 
-
 #### Parameters
+
 | Name | Type | Required | Description |
 |---|---|---|---|
 | services | ref |true | Service to deploy |

@@ -28,6 +28,7 @@ Data Channel Instance represents the connection of the services to the channel a
 | bundle | 1 | SABundleInstance |  |  | This is the sabr instance |
 
 
+
 ## Users of the Model
 
 | Name | Cardinality | Class | Composition | Owner | Description |
@@ -79,8 +80,8 @@ The following diagram is the state net for this class.
 #### Description
 Create a Data Channel Instance
 
-
 #### Parameters
+
 | Name | Type | Required | Description |
 |---|---|---|---|
 | name | string |true | name of the Sentient Agent Bundle |
@@ -100,8 +101,8 @@ Create a Data Channel Instance
 #### Description
 Deployment Failed on the Data Channel Instance.
 
-
 #### Parameters
+
 | Name | Type | Required | Description |
 |---|---|---|---|
 | message | string |true | Failed Message for the deployment error. |

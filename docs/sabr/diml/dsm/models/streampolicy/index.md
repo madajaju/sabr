@@ -26,6 +26,7 @@ The Stream Policy takes the Data Stream and creates Data Channels based on the p
 | channels | n | DataChannel | false | false | This collection of channels that are used to create channel instances when the stream is created. |
 
 
+
 ## Users of the Model
 
 | Name | Cardinality | Class | Composition | Owner | Description |
@@ -71,8 +72,8 @@ The following diagram is the state net for this class.
 #### Description
 Create a Stream Policy
 
-
 #### Parameters
+
 | Name | Type | Required | Description |
 |---|---|---|---|
 | name | string |true | name of the StreamPolicy |

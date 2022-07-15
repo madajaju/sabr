@@ -11,9 +11,9 @@ ApplicationDeveloper --> IntegrateLearning
 
 
 
-usecase "0" as 0 #lightyellow
+usecase "Provide Digital Assistance" as ProvideDigitalAssistance #lightyellow
 
-IntegrateLearning <-- 0 : extends
+IntegrateLearning <-- ProvideDigitalAssistance : extends
 
 
 

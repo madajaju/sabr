@@ -19,8 +19,8 @@ Security Key
 
 ## Associations
 
-| Name | Cardinality | Class | Composition | Owner | Description |
-| --- | --- | --- | --- | --- | --- |
+No associations
+
 
 
 ## Users of the Model

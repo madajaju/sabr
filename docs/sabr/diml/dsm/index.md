@@ -218,8 +218,8 @@ subsystems and actors can access the system.
 #### Description
 Channel Instance has been deployed. Notify the stream of its status.
 
-
 #### Parameters
+
 | Name | Type | Required | Description |
 |---|---|---|---|
 | channel | string |true | Channel name |
@@ -237,8 +237,8 @@ Channel Instance has been deployed. Notify the stream of its status.
 #### Description
 Stream has been deployed. Notify the bundle of its status.
 
-
 #### Parameters
+
 | Name | Type | Required | Description |
 |---|---|---|---|
 | stream | string |true | Stream name |

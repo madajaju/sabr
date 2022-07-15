@@ -28,6 +28,7 @@ This is an instance of a service running on resources. The Instance is allocated
 | stack | 1 | StackInstance | false | false | StackInstance that is running the service instance |
 
 
+
 ## Users of the Model
 
 | Name | Cardinality | Class | Composition | Owner | Description |
@@ -83,8 +84,8 @@ The following diagram is the state net for this class.
 #### Description
 Notification that the Service Instance was launched
 
-
 #### Parameters
+
 | Name | Type | Required | Description |
 |---|---|---|---|
 | pid | string | | Process id of the service instance |
@@ -103,11 +104,9 @@ Notification that the Service Instance was launched
 #### Description
 Provision the service with the provision script.
 
-
 #### Parameters
-| Name | Type | Required | Description |
-|---|---|---|---|
 
+No parameters
 
 
 

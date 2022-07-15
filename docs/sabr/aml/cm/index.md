@@ -189,8 +189,8 @@ subsystems and actors can access the system.
 #### Description
 Build a Capability
 
-
 #### Parameters
+
 | Name | Type | Required | Description |
 |---|---|---|---|
 | name | string |true | name of the capability |
@@ -208,8 +208,8 @@ Build a Capability
 #### Description
 Description of the action
 
-
 #### Parameters
+
 | Name | Type | Required | Description |
 |---|---|---|---|
 | attr1 | string |false | Description for the parameter |
@@ -227,8 +227,8 @@ Description of the action
 #### Description
 Deploy a Capability
 
-
 #### Parameters
+
 | Name | Type | Required | Description |
 |---|---|---|---|
 | capability | string |true | name of the capability |
@@ -246,8 +246,8 @@ Deploy a Capability
 #### Description
 Description of the action
 
-
 #### Parameters
+
 | Name | Type | Required | Description |
 |---|---|---|---|
 | attr1 | string |false | Description for the parameter |
@@ -265,8 +265,8 @@ Description of the action
 #### Description
 Release a Capability
 
-
 #### Parameters
+
 | Name | Type | Required | Description |
 |---|---|---|---|
 | name | string |true | name of the capability |
@@ -284,8 +284,8 @@ Release a Capability
 #### Description
 Description of the action
 
-
 #### Parameters
+
 | Name | Type | Required | Description |
 |---|---|---|---|
 | attr1 | string |false | Description for the parameter |
@@ -303,8 +303,8 @@ Description of the action
 #### Description
 Test a Capability
 
-
 #### Parameters
+
 | Name | Type | Required | Description |
 |---|---|---|---|
 | name | string |true | name of the capability |
@@ -323,8 +323,8 @@ Test a Capability
 #### Description
 Description of the action
 
-
 #### Parameters
+
 | Name | Type | Required | Description |
 |---|---|---|---|
 | attr1 | string |false | Description for the parameter |
