@@ -5,68 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e7f16371-c89d-4dad-98c0-026728aac0e5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/js/ailtire/AHandler.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/bidi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/ckeditor.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/three.module.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/troika-three-text.esm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/troika-three-text.umd.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/troika-three-utils.esm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/troika-worker-utils.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/webgl-sdf-generator.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.tmp/create" beforeDir="false" afterPath="$PROJECT_DIR$/.tmp/create" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.tmp/deploy" beforeDir="false" afterPath="$PROJECT_DIR$/.tmp/deploy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/interface/aimodel/list.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/interface/aimodel/list.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/3d-force-graph.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/3d-force-graph.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/Graph3D.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/Graph3D.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/aframe.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/aframe.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/A3DGraph.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/A3DGraph.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AAction.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AActor.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AActor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AAttribute.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AAttribute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AEnvironment.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AEnvironment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AImage.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AImage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AInterface.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AInterface.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AModel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/ANetwork.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/ANetwork.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AObject.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AObject.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/APackage.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/APackage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AScenario.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AScenario.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AService.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AStack.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AStack.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AState.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AState.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AStateNet.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AStateNet.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AText.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AText.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AUsecase.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AUsecase.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AVolume.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AVolume.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/ckeditor.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ckeditor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/fonts/helvetiker_regular.typeface.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/socket.io.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/socket.io.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/three.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/three.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/w2ui.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/w2ui.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/w2ui.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/w2ui.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/lib/subcommander.js" beforeDir="false" afterPath="$PROJECT_DIR$/bin/lib/subcommander.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/actors/actor/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/actors/actor/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/actors/analyst/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/actors/analyst/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/actors/applicationdeveloper/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/actors/applicationdeveloper/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/actors/dataengineer/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/actors/dataengineer/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/actors/datascientist/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/actors/datascientist/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/actors/datasteward/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/actors/datasteward/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/actors/devops/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/actors/devops/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/actors/itops/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/actors/itops/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/actors/secops/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/actors/secops/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/actors/tacticaloperator/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/actors/tacticaloperator/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/am/usecases/manageapplication/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/am/usecases/manageapplication/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/cm/usecases/UpdateCapability/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/cm/usecases/UpdateCapability/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/cm/usecases/deploycapability/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/cm/usecases/deploycapability/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/cm/usecases/developcapability/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/cm/usecases/developcapability/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/diml/sabm/usecases/managesabr/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/diml/sabm/usecases/managesabr/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/sabr" beforeDir="false" afterPath="$PROJECT_DIR$/bin/sabr" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_config.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/layouts/default.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/layouts/default.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -241,7 +185,7 @@
       <workItem from="1660767346270" duration="98000" />
       <workItem from="1660767485638" duration="172000" />
       <workItem from="1660768146992" duration="70000" />
-      <workItem from="1660768255144" duration="1839000" />
+      <workItem from="1660768255144" duration="1941000" />
     </task>
     <task id="LOCAL-00001" summary="Updates to documentation and fixes to the deployment model.">
       <created>1653779220207</created>
@@ -285,7 +229,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657897726550</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Updates to documentation and fixes to the deployment model.">
+      <created>1660772722256</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1660772722256</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
