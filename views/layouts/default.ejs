@@ -11,9 +11,10 @@ hostURL += ':' + global.ailtire.config.listenPort;
     <title>Sentient Agent Bundle Resources</title>
     <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.1/less.min.js"></script>
     <link rel="stylesheet/less" type="text/css" href="styles/importer.less"/>
-    <script type="module" src="js/ckeditor.js"></script>
+   <!-- <scripy src="https://cdn.ckeditor.com/ckeditor5/35.0.1/classic/ckeditor.js"></script>-->
 
-    <base href="http://localhost/web/">
+    <base href="http://<%= hostURL %><%= global.ailtire.config.urlPrefix %>/">
+    <script type="module" src="js/ckeditor.js"></script>
     <script src="js/jquery.js"></script>
     <script src="js/w2ui.js"></script>
     <link rel="stylesheet" href="styles/w2ui.css"/>
@@ -55,16 +56,9 @@ hostURL += ':' + global.ailtire.config.listenPort;
 <script type="module">
 
     import {APackage, AScenario, AUsecase, AActor, AModel, AStack, AEnvironment,AObject,A3DGraph} from './js/ailtire/index.js';
+    import {SChannel} from './js/sabr/index.js';
+    import {Graph3D} from './js/Graph3D.js';
     let selectedObject ={};
-    import {SChannel, SStream} from './js/sabr/index.js';
-
-    let pkgview = new APackage({});
-    let scenarioview = new AScenario({});
-    let usecaseview = new AUsecase({});
-    let actorview = new AActor({});
-    let modelview = new AModel({});
-    let stackview = new AStack({});
-    let envview = new AEnvironment({});
 
     // common colors to use based on status
     const scolor = {
@@ -83,13 +77,13 @@ hostURL += ':' + global.ailtire.config.listenPort;
     };
 
     const handlers = {
-        scenario: scenarioview.handle,
-        package: pkgview.handle,
-        usecase: usecaseview.handle,
-        actor: actorview.handle,
-        model: modelview.handle,
-        stack: stackview.handle,
-        environment: envview.handle,
+        scenario: AScenario.handle,
+        package: APackage.handle,
+        usecase: AUsecase.handle,
+        actor: AActor.handle,
+        model: AModel.handle,
+        stack: AStack.handle,
+        environment: AEnvironment.handle,
         channel: SChannel.handle,
     }
     // currentView is set to null first.
@@ -190,12 +184,12 @@ hostURL += ':' + global.ailtire.config.listenPort;
                     overflow: 'hidden',
                     style: 'border: 1px solid #0088ff; background-color:#4a96d3; color:white;',
                     toolbar: {
-                        style: "background-color: #4a96d3; color: black;",
+                        style: "background-color: #880088; color: black;",
                         items: [
                             {type: 'html', html: '<h3 style="color:white;"><%= global.ailtire.config.prefix %></h3>'},
                             {type: 'spacer'},
-                            {type: 'radio', id: 'expand', group: '1', text: 'Graph Only', style: 'color: black;'},
-                            {type: 'radio', id: 'normal', group: '1', text: 'All', style: 'color: black;'},
+                            {type: 'radio', id: 'expand', group: '1', text: 'Graph Only', style: 'color: white;'},
+                            {type: 'radio', id: 'normal', group: '1', text: 'All', style: 'color: white;'},
                         ],
                         onClick: function (event) {
                             if (event.target === 'expand' && !event.object.checked) {
@@ -304,12 +298,11 @@ hostURL += ':' + global.ailtire.config.listenPort;
             ],
             onClick: function (event) {
                 if (event.object.link) {
-                    // w2ui['layout'].content('main', `<iframe name="mainframe" style="width: 100%; height: 100%;" src="${event.object.link}"></iframe>`, 'slide-bottom');
                     // Get the information from the link and load it in the mainpage and the preview
                     currentView = event.object.link;
                     $.ajax({
                         url: event.object.link,
-                        success: AModel.objectList
+                        success: AObject.handle
                     });
                 }
             }
@@ -352,13 +345,10 @@ hostURL += ':' + global.ailtire.config.listenPort;
                             console.log(text);
                         }
                     })
-                } else if (event.object.id === 'pulsar') {
-                    window.graph.toolbar.setToolBar();
-                    SStream.getAll({fn: (streams) => { SStream.showAllGraph(streams, "new"); }});
                 } else if (event.object.id === 'deployments') {
                     window.graph.toolbar.setToolBar();
                     $.ajax({
-                        url: 'environment/list',
+                        url: 'env/list',
                         success: (results) => { AEnvironment.viewList3D(results.environments); },
                         error: function(req, text,err) {
                             console.log(text);
@@ -383,11 +373,13 @@ hostURL += ':' + global.ailtire.config.listenPort;
                 if (event.object.link) {
                     // Get the information from the link and load it in the mainpage and the preview
                     selectedObject = event.object;
-                    currentView = event.object.link;
+                    currentView = event.object.view;
                     $.ajax({
                         url: event.object.link,
-                        success:  (result) => { handlers[event.object.view](result, event.object.id)},
-                        error: function(req, text, err) {
+                        success: (results) => {
+                            handlers[event.object.view](results);
+                        },
+                        error: (req, text, err) => {
                             console.log(text);
                         }
                     });
@@ -431,34 +423,38 @@ hostURL += ':' + global.ailtire.config.listenPort;
         AUsecase.showList('sidebar', 'usecases');
         APackage.showList('sidebar', 'packages');
         AEnvironment.showList('sidebar', 'deployments');
-        SStream.showList('sidebar', 'pulsar');
 
         let width = $('#modelGraph').width();
         let height = $('#modelGraph').height();
         let graph = new Graph3D("DrawingArea", {nodes: {}, links: []}, {
-            background: "#004488",
+            background: "#550066",
             width: width,
             height: height,
-            selectCallback: (id) => {
+            selectCallback: (node) => {
                 if (w2ui['objlist']) {
                     w2ui['objlist'].selectNone();
-                    w2ui['objlist'].select(id);
-                    w2ui['objdetail'].clear();
-                    let record = w2ui['objlist'].get(id);
-                    let drecords = [];
-                    let k = 0;
-                    for (let name in record) {
-                        if (name.includes('detail')) {
-                            k++;
-                            let aname = name.replace('detail', '');
-                            drecords.push({recid: k, name: aname, value: record[name]});
-                        }
+                    w2ui['objlist'].select(node.id);
+                    if(node.hasOwnProperty('getDetail')) {
+                        node.getDetail(node);
+                    } else {
+                        AObject.showDetail(node.id);
                     }
-                    w2ui['objdetail'].add(drecords);
                 }
             },
             expandObject: (link) => {
                 AObject.expandObject(link);
+            },
+            expandDesign: (node) => {
+                $.ajax({
+                    url: node.expandLink,
+                    success: (results) => {
+                        console.log("Results:", results);
+                        node.expandView(results, "add");
+                    },
+                    failed: (error) => {
+                        console.error("Error:", error);
+                    }
+                });
             }
         });
         graph.toolbar = graphPanel;
@@ -467,15 +463,6 @@ hostURL += ':' + global.ailtire.config.listenPort;
         let socket = io(window.location.origin,
             {path: window.location.pathname + '/socket.io'}
         );
-        socket.on("connect", () => {
-            console.log("SOCKIO connect:", socket.id);
-        });
-        socket.on("connect_error", (err) => {
-            console.log("SOCKIO connect_error:", err.message);
-        });
-        socket.on("disconnect", () => {
-            console.log("SOCKIO disconnect:", socket.id);
-        });
         socket.onAny((event, msg) => {
             showEvent(event);
             if (event.includes('.create')) {
@@ -492,7 +479,7 @@ hostURL += ':' + global.ailtire.config.listenPort;
                     obj = msg.obj;
                 }
                 if (currentView.includes('scenario')) {
-                    scenarioview.handleEvent(event, obj);
+                    AScenario.handleEvent(event, obj);
                 } else if (event.includes(model)) {
                     // Add the node to the list and to the graph.
                     if (obj) {

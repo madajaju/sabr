@@ -19,7 +19,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "ailtire": "^0.3.10",
+    "ailtire": "^0.4.1",
     "pulsar-flex": "^1.0.1-beta.9"
   }
 }

@@ -40,9 +40,7 @@ Application developers create application that can be deployed in the ecosystem.
 ![Scenario CreateApplication](./CreateApplication.png)
 
 #### Steps
-
 1. [application create --name hello --file ./templates/application.yml](#action-application-create)
-
 
 #### Actors
 
@@ -57,9 +55,7 @@ DevOps engineer can decommission applications in the ecosystem by destroying app
 ![Scenario DestroyApplication](./DestroyApplication.png)
 
 #### Steps
-
 1. [application destroy --name hello](#action-application-destroy)
-
 
 #### Actors
 
@@ -74,9 +70,7 @@ A DevSecOps engineer utilizes the DevSecOps pipeline to update an application th
 ![Scenario UpdateApplication](./UpdateApplication.png)
 
 #### Steps
-
 1. [application update --name hello --file ./templates/world.yml](#action-application-update)
-
 
 #### Actors
 

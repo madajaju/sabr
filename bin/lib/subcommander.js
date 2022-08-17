@@ -230,6 +230,7 @@ const findAction = (args, localBin) => {
 const bent = require('bent');
 const program = require('commander');
 const YAML = require('yamljs');
+const fs = require('fs');
 global.ailtire = { config: require('${__dirname.replace(/\\/g, '\\\\')}/../../.ailtire.js') };
 program.description('${action.description}')`;
         for (let iname in action.inputs) {
@@ -246,14 +247,16 @@ let options = program.opts();
 \n`;
         for (key in action.inputs) {
             if (action.inputs[key].type.toUpperCase() === 'YAML') {
-                tempString += `if(program['${key}']) { args['${key}'] = YAML.load(program['${key}']); }\n`;
+                tempString += `if(options['${key}']) { args['${key}'] = YAML.load(options['${key}']); }\n`;
             } else if(action.inputs[key].type.toUpperCase() === 'FILE') {
-                tempString += `if(program['${key}']) { args['${key}'] = fs.readFileSync(program['${key}']); }\n`;
+                tempString += `if(options['${key}']) { args['${key}'] = fs.readFileSync(options['${key}']); }\n`;
             } else {
-                tempString += `if(program['${key}']) { args['${key}'] = program['${key}']; }\n`;
+                tempString += `if(options['${key}']) { args['${key}'] = options['${key}']; }\n`;
             }
         }
         tempString += `
+        console.log("URL:", url);
+        console.log("Args:", args);
 const post = bent(url, 'POST', 'json', 200);
 (async () => {
     const response = await post(params, args);

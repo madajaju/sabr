@@ -5,60 +5,68 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e7f16371-c89d-4dad-98c0-026728aac0e5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/assets/js/ailtire/AHandler.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/bidi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/ckeditor.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/three.module.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/troika-three-text.esm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/troika-three-text.umd.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/troika-three-utils.esm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/troika-worker-utils.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/webgl-sdf-generator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/sabr" beforeDir="false" afterPath="$PROJECT_DIR$/bin/sabr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/am/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/am/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/am/models/application/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/am/models/application/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/am/models/applicationinstance/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/am/models/applicationinstance/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/am/models/service/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/am/models/service/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/am/models/serviceinstance/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/am/models/serviceinstance/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/am/models/stack/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/am/models/stack/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/am/models/stackinstance/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/am/models/stackinstance/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/am/usecases/integratelearning/Activities.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/am/usecases/integratelearning/Activities.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/am/usecases/integratelearning/Activities.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/am/usecases/integratelearning/Activities.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/cm/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/cm/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/cm/models/capability/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/cm/models/capability/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/cm/models/capabilityinstance/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/cm/models/capabilityinstance/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/cm/usecases/UpdateCapability/Activities.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/cm/usecases/UpdateCapability/Activities.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/cm/usecases/UpdateCapability/Activities.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/cm/usecases/UpdateCapability/Activities.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/cm/usecases/deploycapability/Activities.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/cm/usecases/deploycapability/Activities.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/cm/usecases/deploycapability/Activities.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/cm/usecases/deploycapability/Activities.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/cm/usecases/developcapability/Activities.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/cm/usecases/developcapability/Activities.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/cm/usecases/developcapability/Activities.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/cm/usecases/developcapability/Activities.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/cm/usecases/removecapability/Activities.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/cm/usecases/removecapability/Activities.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/cm/usecases/removecapability/Activities.puml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/cm/usecases/removecapability/Activities.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/cm/usecases/removecapbility/Activities.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/cm/usecases/removecapbility/Activities.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/cm/usecases/removecapbility/index.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/cm/usecases/updatecapbility/Activities.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/cm/usecases/updatecapbility/Activities.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/cm/usecases/updatecapbility/index.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/lc/models/aimodel/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/lc/models/aimodel/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/diml/dsm/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/diml/dsm/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/diml/dsm/models/datachannel/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/diml/dsm/models/datachannel/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/diml/dsm/models/datachannelinstance/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/diml/dsm/models/datachannelinstance/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/diml/dsm/models/datastream/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/diml/dsm/models/datastream/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/diml/dsm/models/datastreaminstance/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/diml/dsm/models/datastreaminstance/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/diml/dsm/models/inputchannelinstance/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/diml/dsm/models/inputchannelinstance/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/diml/dsm/models/inputstreaminstance/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/diml/dsm/models/inputstreaminstance/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/diml/dsm/models/outputchannelinstance/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/diml/dsm/models/outputchannelinstance/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/diml/dsm/models/outputstreaminstance/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/diml/dsm/models/outputstreaminstance/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/diml/dsm/models/streampolicy/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/diml/dsm/models/streampolicy/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/diml/sabm/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/diml/sabm/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/diml/sabm/models/datatransform/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/diml/sabm/models/datatransform/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/diml/sabm/models/datatransforminstance/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/diml/sabm/models/datatransforminstance/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/diml/sabm/models/sabundle/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/diml/sabm/models/sabundle/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/diml/sabm/models/sabundleinstance/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/diml/sabm/models/sabundleinstance/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/sa/models/keystore/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/sa/models/keystore/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/sa/models/securitykey/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/sa/models/securitykey/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/sml/so/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/sml/so/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/sml/so/models/dockerprovisioner/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/sml/so/models/dockerprovisioner/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/sml/so/models/processprovisioner/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/sml/so/models/processprovisioner/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sabr/sml/so/models/provisioner/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/sml/so/models/provisioner/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/toc.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/toc.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp/create" beforeDir="false" afterPath="$PROJECT_DIR$/.tmp/create" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp/deploy" beforeDir="false" afterPath="$PROJECT_DIR$/.tmp/deploy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/interface/aimodel/list.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/interface/aimodel/list.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/3d-force-graph.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/3d-force-graph.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/Graph3D.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/Graph3D.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/aframe.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/aframe.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/A3DGraph.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/A3DGraph.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AAction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AActor.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AActor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AAttribute.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AAttribute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AEnvironment.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AEnvironment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AImage.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AImage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AInterface.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AInterface.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/ANetwork.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/ANetwork.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AObject.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AObject.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/APackage.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/APackage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AScenario.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AScenario.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AService.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AStack.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AStack.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AState.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AState.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AStateNet.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AStateNet.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AText.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AText.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AUsecase.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AUsecase.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AVolume.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AVolume.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/ckeditor.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ckeditor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/fonts/helvetiker_regular.typeface.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/socket.io.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/socket.io.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/three.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/three.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/w2ui.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/w2ui.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/w2ui.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/w2ui.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/lib/subcommander.js" beforeDir="false" afterPath="$PROJECT_DIR$/bin/lib/subcommander.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/actors/actor/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/actors/actor/index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/actors/analyst/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/actors/analyst/index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/actors/applicationdeveloper/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/actors/applicationdeveloper/index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/actors/dataengineer/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/actors/dataengineer/index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/actors/datascientist/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/actors/datascientist/index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/actors/datasteward/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/actors/datasteward/index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/actors/devops/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/actors/devops/index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/actors/itops/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/actors/itops/index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/actors/secops/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/actors/secops/index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/actors/tacticaloperator/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/actors/tacticaloperator/index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/am/usecases/manageapplication/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/am/usecases/manageapplication/index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/cm/usecases/UpdateCapability/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/cm/usecases/UpdateCapability/index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/cm/usecases/deploycapability/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/cm/usecases/deploycapability/index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/sabr/aml/cm/usecases/developcapability/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/aml/cm/usecases/developcapability/index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/sabr/diml/sabm/usecases/managesabr/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sabr/diml/sabm/usecases/managesabr/index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/layouts/default.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/layouts/default.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,21 +98,24 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Project.color&quot;: &quot;144a0c&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/dwpulsip/IdeaProjects/sabr/api/DistributedInformationManagementLayer/deploy&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/dwpulsip/IdeaProjects/sabr/assets/js&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\dwpulsip\IdeaProjects\sabr\api\DistributedInformationManagementLayer\deploy" />
-      <recent name="C:\Users\dwpulsip\IdeaProjects\sabr\api\CommonPhysicalLayer" />
-      <recent name="C:\Users\dwpulsip\IdeaProjects\sabr\node_modules\ailtire\src\Documentation\templates\Package\deploy" />
-      <recent name="C:\Users\dwpulsip\IdeaProjects\sabr\api\ApplicationManagementLayer\LearningCorpus\deploy" />
-      <recent name="C:\Users\dwpulsip\IdeaProjects\sabr\api\ApplicationManagementLayer\CapabilityManager\deploy" />
+      <recent name="C:\Users\dwpulsip\IdeaProjects\sabr\assets\js" />
+      <recent name="C:\Users\dwpulsip\IdeaProjects\sabr\bin\lib" />
+      <recent name="C:\Users\dwpulsip\IdeaProjects\sabr\assets\styles" />
+      <recent name="C:\Users\dwpulsip\IdeaProjects\sabr\views\layouts" />
+      <recent name="C:\Users\dwpulsip\IdeaProjects\sabr\node_modules\ailtire\src\Documentation\templates\App" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\dwpulsip\IdeaProjects\sabr\assets\js" />
       <recent name="C:\Users\dwpulsip\IdeaProjects\sabr\api\CommonPhysicalLayer\deploy" />
       <recent name="C:\Users\dwpulsip\IdeaProjects\sabr\actors" />
       <recent name="C:\Users\dwpulsip\IdeaProjects\sabr\api\doc" />
@@ -221,7 +232,16 @@
       <workItem from="1656519944141" duration="599000" />
       <workItem from="1657264483572" duration="501000" />
       <workItem from="1657265170787" duration="266000" />
-      <workItem from="1657829243493" duration="17304000" />
+      <workItem from="1657829243493" duration="18595000" />
+      <workItem from="1659132026203" duration="607000" />
+      <workItem from="1659462788668" duration="5051000" />
+      <workItem from="1660084992145" duration="8513000" />
+      <workItem from="1660714142004" duration="593000" />
+      <workItem from="1660767155411" duration="90000" />
+      <workItem from="1660767346270" duration="98000" />
+      <workItem from="1660767485638" duration="172000" />
+      <workItem from="1660768146992" duration="70000" />
+      <workItem from="1660768255144" duration="1839000" />
     </task>
     <task id="LOCAL-00001" summary="Updates to documentation and fixes to the deployment model.">
       <created>1653779220207</created>
@@ -258,7 +278,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657895812326</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Updates to documentation and fixes to the deployment model.">
+      <created>1657897726550</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1657897726550</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -307,7 +334,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/node_modules/ailtire/src/Server/actions/list.js</url>
-          <line>84</line>
+          <line>105</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
@@ -332,7 +359,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/node_modules/ailtire/src/Server/Loader.js</url>
-          <line>434</line>
+          <line>442</line>
           <option name="timeStamp" value="24" />
         </line-breakpoint>
       </breakpoints>

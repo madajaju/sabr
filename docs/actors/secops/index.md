@@ -4,9 +4,6 @@ title: Security Operator
 permalink: actor-secops
 parent: All Actors
 ---
-
-{#actor-function toLowerCase() { [native code] }}
-
 # Security Operator
 
 The Security Operator is responsible for the implementation of security best practices and management of security operations like security key management, estalbishment of preventive, detectivetive and remediation services.

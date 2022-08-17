@@ -4,9 +4,6 @@ title: Actor
 permalink: actor-actor
 parent: All Actors
 ---
-
-{#actor-function toLowerCase() { [native code] }}
-
 # Actor
 
 Long description

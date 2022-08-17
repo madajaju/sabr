@@ -4,9 +4,6 @@ title: Tactical Operator
 permalink: actor-tacticaloperator
 parent: All Actors
 ---
-
-{#actor-function toLowerCase() { [native code] }}
-
 # Tactical Operator
 
 The tactical operator is the end user of the digital assistance given from the AI models processing and developing insight from the data generated in the ecosystem.

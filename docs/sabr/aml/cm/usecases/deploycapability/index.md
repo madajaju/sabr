@@ -42,11 +42,8 @@ Deploy Capability Release allows a capability to be deployed into the ecosystem,
 ![Scenario DeployCapabilityRelease](./DeployCapabilityRelease.png)
 
 #### Steps
-
 1. [capability create --name myCapability1 --file ./templates/capability.js](#action-capability create)
-
 1. [aml cm capability deploy --capability myCapability1](#action-aml cm capability deploy)
-
 
 #### Actors
 
