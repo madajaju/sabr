@@ -1,23 +1,23 @@
 
 module.exports = {
-    name: '_sml',
+    name: 'sabr_sml',
     contexts: {
         dev: {
             type: 'swarm',
-            tag: '_sml_dev',
-            file: 'docker-compose.yml',
+            tag: 'sabr_sml:dev',
+            design: 'services.js',
             env: {}
         },
         test: {
             type: 'swarm',
-            tag: '_sml_test',
-            file: 'docker-compose.yml',
+            tag: 'sabr_sml:test',
+            design: 'services.js',
             env: {}
         },
         prod: {
             type: 'swarm',
-            tag: '_sml_prod',
-            file: 'docker-compose.yml',
+            tag: 'sabr_sml:prod',
+            design: 'services.js',
             env: {}
         }
     }

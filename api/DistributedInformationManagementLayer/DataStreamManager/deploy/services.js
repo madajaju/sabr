@@ -1,7 +1,7 @@
 module.exports = {
     services: {
         pulsar: {
-            image: "sabr_pulsar:local",
+            image: "sabr_diml_dsm:standalone",
             interface: {
                 pulsar: {path:'/pulsar', port: 6650 },
                 pulsaradmin: {path:'/pulsar-admin', port: 8081 },

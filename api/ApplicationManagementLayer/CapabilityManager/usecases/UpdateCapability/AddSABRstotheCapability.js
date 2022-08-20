@@ -3,7 +3,8 @@ module.exports = {
     description: 'Add Multiple SABRs to a running Capability',
     method: "capability/update",
     actors: {
-        'Actor': 'uses',
+        'ApplicationDeveloper': 'uses',
+        'DevOpsEngineer': 'uses',
     },
     steps: [
         { action: 'capability create', parameters: {name:'myUpdateCap2', file:'./templates/capability.js'}},

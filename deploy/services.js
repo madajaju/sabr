@@ -11,9 +11,9 @@ module.exports = {
             policies: { },
             environment: { },
         },
-        am: {
+        aml: {
             type: "stack",
-            image: "am",
+            image: "sabr_aml",
             volumes: {
                 docker: { source: "/var/run/docker.sock", target: "/var/run/docker.sock" }
             },
@@ -21,29 +21,29 @@ module.exports = {
                 am: {path:'/am', port: 3000 },
             }
         },
-        cm: {
+        cpl: {
             type: "stack",
-            image: "cm",
+            image: "sabr_cpl",
             volumes: {
                 docker: { source: "/var/run/docker.sock", target: "/var/run/docker.sock" }
             },
             interface: {
-                cm: {path:'/cm', port: 3000 },
+                cm: {path:'/cpl', port: 3000 },
             }
         },
-        dsm: {
+        diml: {
             type: "stack",
-            image: "dsm",
+            image: "sabr_diml",
             volumes: {
                 docker: { source: "/var/run/docker.sock", target: "/var/run/docker.sock" }
             },
             interface: {
-                dsm: {path:'/dsm', port: 3000 },
+                diml: {path:'/diml', port: 3000 },
             }
         },
         sa: {
             type: "stack",
-            image: "sa",
+            image: "sabr_sa",
             volumes: {
                 docker: { source: "/var/run/docker.sock", target: "/var/run/docker.sock" }
             },
@@ -51,34 +51,34 @@ module.exports = {
                 sa: {path:'/sa', port: 3000 },
             }
         },
-        lc: {
+        sml: {
             type: "stack",
-            image: "lc",
+            image: "sabr_sml",
             volumes: {
                 docker: { source: "/var/run/docker.sock", target: "/var/run/docker.sock" }
             },
             interface: {
-                lc: {path:'/lc', port: 3000 },
+                sml: {path:'/sml', port: 3000 },
             }
         },
-        sabm: {
+        sdi: {
             type: "stack",
-            image: "sabm",
+            image: "sabr_sdi",
             volumes: {
                 docker: { source: "/var/run/docker.sock", target: "/var/run/docker.sock" }
             },
             interface: {
-                sabm: {path:'/sabm', port: 3000 },
+                sdi: {path:'/sdi', port: 3000 },
             }
         },
-        so: {
+        ia: {
             type: "stack",
-            image: "so",
+            image: "sabr_ia",
             volumes: {
                 docker: { source: "/var/run/docker.sock", target: "/var/run/docker.sock" }
             },
             interface: {
-                so: {path:'/so', port: 3000 },
+                ia: {path:'/ia', port: 3000 },
             }
         },
         doc: {

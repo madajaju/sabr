@@ -1,21 +1,21 @@
 
 module.exports = {
-    sabrweb: {
+    sabr_web: {
         dir: '..',
-        file: 'web/Dockerfile',
+        file: 'deploy/web/Dockerfile',
         tag: 'sabr_web',
         env: {
         }
     },
-    pulsar: {
-        dir: '.',
+    sabr_pulsar: {
+        dir: './pulsar',
         cmd: 'bin/pulsar standalone',
-        file: 'pulsar/Dockerfile',
+        file: 'Dockerfile',
         tag: 'sabr_pulsar:standalone',
         env: {
         }
     },
-    doc: {
+    sabr_doc: {
         dir: '../docs',
         file: '../deploy/doc/Dockerfile-jekyll',
         tag: 'sabr_doc',
