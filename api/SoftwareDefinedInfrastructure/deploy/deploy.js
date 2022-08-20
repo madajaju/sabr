@@ -1,23 +1,23 @@
 
 module.exports = {
-    name: '_sdi',
+    name: 'sabr_sdi',
     contexts: {
         dev: {
             type: 'swarm',
-            tag: '_sdi_dev',
-            file: 'docker-compose.yml',
+            tag: 'sabr_sdi:dev',
+            design: 'services.js',
             env: {}
         },
         test: {
             type: 'swarm',
-            tag: '_sdi_test',
-            file: 'docker-compose.yml',
+            tag: 'sabr_sdi:test',
+            design: 'services.js',
             env: {}
         },
         prod: {
             type: 'swarm',
-            tag: '_sdi_prod',
-            file: 'docker-compose.yml',
+            tag: 'sabr_sdi:prod',
+            design: 'services.js',
             env: {}
         }
     }

@@ -1,6 +1,6 @@
 
 module.exports = {
-    name: 'aml',
+    name: 'sabr_aml',
     contexts: {
         local: {
             type: 'swarm',

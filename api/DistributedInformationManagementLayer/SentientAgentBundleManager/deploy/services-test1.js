@@ -1,9 +1,9 @@
 module.exports = {
     services: {
-        sabr: {
+        sabr1: {
             image: "sabr_diml_sabm_sabr",
             interface: {
-                web: {path:'/sabr', port: 3000 },
+                sabr1: {path:'/sabr', port: 3000 },
             },
             networks: {
                 children: {},
@@ -14,6 +14,38 @@ module.exports = {
                 PULSAR_HOST:"tasks.pulsar:6650",
                 SABR_STREAM:"./streams.js",
                 SABR_NAME:"sabr1",
+            }
+        },
+        sabr2: {
+            image: "sabr_diml_sabm_sabr",
+            interface: {
+                sabr2: {path:'/sabr2', port: 3000 },
+            },
+            networks: {
+                children: {},
+                siblings: {}
+            },
+            environment: {
+                PULSAR_ADMIN:"tasks.pulsar:8080",
+                PULSAR_HOST:"tasks.pulsar:6650",
+                SABR_STREAM:"./streams.js",
+                SABR_NAME:"sabr2",
+            }
+        },
+        sabr3: {
+            image: "sabr_diml_sabm_sabr",
+            interface: {
+                sabr4: {path:'/sabr3', port: 3000 },
+            },
+            networks: {
+                children: {},
+                siblings: {}
+            },
+            environment: {
+                PULSAR_ADMIN:"tasks.pulsar:8080",
+                PULSAR_HOST:"tasks.pulsar:6650",
+                SABR_STREAM:"./streams.js",
+                SABR_NAME:"sabr3",
             }
         },
         web: {

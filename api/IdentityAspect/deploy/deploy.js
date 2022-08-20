@@ -1,23 +1,23 @@
 
 module.exports = {
-    name: '_ia',
+    name: 'sabr_ia',
     contexts: {
         dev: {
             type: 'swarm',
-            tag: '_ia_dev',
-            file: 'docker-compose.yml',
+            tag: 'sabr_ia:dev',
+            design: 'services.js',
             env: {}
         },
         test: {
             type: 'swarm',
-            tag: '_ia_test',
-            file: 'docker-compose.yml',
+            tag: 'sabr_ia:test',
+            design: 'services.js',
             env: {}
         },
         prod: {
             type: 'swarm',
-            tag: '_ia_prod',
-            file: 'docker-compose.yml',
+            tag: 'sabr_ia:prod',
+            design: 'services.js',
             env: {}
         }
     }

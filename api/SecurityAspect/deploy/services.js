@@ -1,14 +1,14 @@
 module.exports = {
     services: {
-        cpl_web: {
+        sabr_sa_web: {
             type: "service",
-            image: "sabr_cpl_web",
+            image: "sabr_sa_web",
             volumes: {
                 docker: { source: "/var/run/docker.sock", target: "/var/run/docker.sock" }
             },
             interface: {
-                "/cpl": { path: '/cpl', port: 3000, protocol:"http"},
-                "/cpl/socket.io": { path: '/cpl/socket.io', port: 3000, protocol:"http"},
+                "/sa": { path: '/sa', port: 3000, protocol:"http"},
+                "/sa/socket.io": { path: '/sa/socket.io', port: 3000, protocol:"http"},
             },
             policies: { },
             environment: { },
