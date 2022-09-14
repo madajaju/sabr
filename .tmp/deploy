@@ -2,6 +2,7 @@
 const bent = require('bent');
 const program = require('commander');
 const YAML = require('yamljs');
+const fs = require('fs');
 global.ailtire = { config: require('C:\\Users\\dwpulsip\\IdeaProjects\\sabr\\bin\\lib/../../.ailtire.js') };
 program.description('Deploy a Capability')
 	.option('--capability <string>', 'name of the capability');
@@ -12,8 +13,10 @@ let params = '/aml/cm/capability/deploy?';
 params += 'mode=json';
 let options = program.opts();
 
-if(program['capability']) { args['capability'] = program['capability']; }
+if(options['capability']) { args['capability'] = options['capability']; }
 
+        console.log("URL:", url);
+        console.log("Args:", args);
 const post = bent(url, 'POST', 'json', 200);
 (async () => {
     const response = await post(params, args);

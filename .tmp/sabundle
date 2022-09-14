@@ -4,18 +4,14 @@ const program = require('commander');
 const YAML = require('yamljs');
 const fs = require('fs');
 global.ailtire = { config: require('C:\\Users\\dwpulsip\\IdeaProjects\\sabr\\bin\\lib/../../.ailtire.js') };
-program.description('create entity')
-	.option('--name <string>', 'name of the capability')
-	.option('--file <file>', 'file with the definition');
+program.description('New called for web interface');
 program.parse(process.argv);
 let url = global.ailtire.config.host;
 let args = {};
-let params = '/capability/create?';
+let params = '/sabundle?';
 params += 'mode=json';
 let options = program.opts();
 
-if(options['name']) { args['name'] = options['name']; }
-if(options['file']) { args['file'] = fs.readFileSync(options['file']); }
 
         console.log("URL:", url);
         console.log("Args:", args);
