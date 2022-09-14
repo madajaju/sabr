@@ -2,10 +2,11 @@
 layout: default
 title: Environment prod
 permalink: environment--sabr-aml-lc-prod
+parent: environment-prod
 nav_exclude: true
 ---
 
-### prod
+### Learning Corpus prod
 
 
 #### Deployment

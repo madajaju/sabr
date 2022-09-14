@@ -2,10 +2,11 @@
 layout: default
 title: Environment local
 permalink: environment--sabr-diml-local
+parent: environment-local
 nav_exclude: true
 ---
 
-### local
+### Distributed Information Management Layer local
 
 
 #### Deployment

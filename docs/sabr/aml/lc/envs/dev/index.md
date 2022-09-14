@@ -2,10 +2,11 @@
 layout: default
 title: Environment dev
 permalink: environment--sabr-aml-lc-dev
+parent: environment-dev
 nav_exclude: true
 ---
 
-### dev
+### Learning Corpus dev
 
 
 #### Deployment

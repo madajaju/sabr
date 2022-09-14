@@ -1,0 +1,30 @@
+@startuml
+
+actor "ApplicationDeveloper"
+
+
+entity EventBus
+
+box Sentient Agent Bundle Manager #ffcc88
+    boundary sabm #white
+end box
+
+
+box Sentient Agent Bundle Manager #ffcc88
+            participant sabundle
+    end box
+
+
+"ApplicationDeveloper" -> sabm: Create SAB
+
+    sabm -> "sabundle": create (name: mySABR1,file: ./templates/bundle1.js)
+
+    "sabundle" --/ EventBus: sabundle.create
+
+    sabm -> "sentient agent bundle manager": build (name: mySABR1)
+
+    "sentient agent bundle manager" --/ EventBus: sabundle.build
+
+
+
+@enduml

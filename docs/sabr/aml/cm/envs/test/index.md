@@ -2,10 +2,11 @@
 layout: default
 title: Environment test
 permalink: environment--sabr-aml-cm-test
+parent: environment-test
 nav_exclude: true
 ---
 
-### test
+### Capability Manager test
 
 
 #### Deployment

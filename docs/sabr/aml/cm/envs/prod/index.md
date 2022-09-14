@@ -2,10 +2,11 @@
 layout: default
 title: Environment prod
 permalink: environment--sabr-aml-cm-prod
+parent: environment-prod
 nav_exclude: true
 ---
 
-### prod
+### Capability Manager prod
 
 
 #### Deployment

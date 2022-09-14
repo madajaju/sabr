@@ -2,10 +2,11 @@
 layout: default
 title: Environment local
 permalink: environment--sabr-aml-am-local
+parent: environment-local
 nav_exclude: true
 ---
 
-### local
+### Application Manager local
 
 
 #### Deployment

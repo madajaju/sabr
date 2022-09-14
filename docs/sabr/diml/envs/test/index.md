@@ -2,10 +2,11 @@
 layout: default
 title: Environment test
 permalink: environment--sabr-diml-test
+parent: environment-test
 nav_exclude: true
 ---
 
-### test
+### Distributed Information Management Layer test
 
 
 #### Deployment

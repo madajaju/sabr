@@ -2,10 +2,11 @@
 layout: default
 title: Environment dev
 permalink: environment--sabr-diml-dev
+parent: environment-dev
 nav_exclude: true
 ---
 
-### dev
+### Distributed Information Management Layer dev
 
 
 #### Deployment

@@ -2,10 +2,11 @@
 layout: default
 title: Environment test
 permalink: environment--sabr-aml-lc-test
+parent: environment-test
 nav_exclude: true
 ---
 
-### test
+### Learning Corpus test
 
 
 #### Deployment

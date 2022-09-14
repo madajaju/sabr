@@ -2,10 +2,11 @@
 layout: default
 title: Environment test
 permalink: environment--sabr-aml-test
+parent: environment-test
 nav_exclude: true
 ---
 
-### test
+### Application Management Layer test
 
 
 #### Deployment

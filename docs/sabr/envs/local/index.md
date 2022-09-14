@@ -2,10 +2,11 @@
 layout: default
 title: Environment local
 permalink: environment--sabr-local
+parent: environment-local
 nav_exclude: true
 ---
 
-### local
+### Sentient Agent Bundle Resources local
 
 
 #### Deployment

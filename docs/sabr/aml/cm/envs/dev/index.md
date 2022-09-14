@@ -2,10 +2,11 @@
 layout: default
 title: Environment dev
 permalink: environment--sabr-aml-cm-dev
+parent: environment-dev
 nav_exclude: true
 ---
 
-### dev
+### Capability Manager dev
 
 
 #### Deployment
