@@ -15,17 +15,17 @@ package "Sentient Agent Bundle Resources" #bbaaff {
       REST --> sabr_container
 
   
-    file "sabrweb" as sabrweb_container
-    REST --> sabrweb_container
-    socket ---> sabrweb_container
+    file "sabr_web" as sabr_web_container
+    REST --> sabr_web_container
+    socket ---> sabr_web_container
   
-    file "pulsar" as pulsar_container
-    REST --> pulsar_container
-    socket ---> pulsar_container
+    file "sabr_pulsar" as sabr_pulsar_container
+    REST --> sabr_pulsar_container
+    socket ---> sabr_pulsar_container
   
-    file "doc" as doc_container
-    REST --> doc_container
-    socket ---> doc_container
+    file "sabr_doc" as sabr_doc_container
+    REST --> sabr_doc_container
+    socket ---> sabr_doc_container
   
   }
   folder images #ffffff {
@@ -36,13 +36,13 @@ package "Sentient Agent Bundle Resources" #bbaaff {
 
   
       artifact "sabr_web" as sabr_web
-      sabrweb_container --> sabr_web
+      sabr_web_container --> sabr_web
     
       artifact "sabr_pulsar:standalone" as sabr_pulsar_standalone
-      pulsar_container --> sabr_pulsar_standalone
+      sabr_pulsar_container --> sabr_pulsar_standalone
     
       artifact "sabr_doc" as sabr_doc
-      doc_container --> sabr_doc
+      sabr_doc_container --> sabr_doc
     
   }
 }

@@ -103,9 +103,8 @@ can be found [here](environment--sabr-sml-dev)
 
 Services in the dev environment
 
-* child : child_image:latest
-* frontend : _sml_web
-* gw : _sml_gw
+* sabr_sml_web : sabr_sml_web
+* sabr_sml_so : sabr_sml_so
 
 
 ### test
@@ -115,9 +114,8 @@ can be found [here](environment--sabr-sml-test)
 
 Services in the test environment
 
-* child : child_image:latest
-* frontend : _sml_web
-* gw : _sml_gw
+* sabr_sml_web : sabr_sml_web
+* sabr_sml_so : sabr_sml_so
 
 
 ### prod
@@ -127,9 +125,8 @@ can be found [here](environment--sabr-sml-prod)
 
 Services in the prod environment
 
-* child : child_image:latest
-* frontend : _sml_web
-* gw : _sml_gw
+* sabr_sml_web : sabr_sml_web
+* sabr_sml_so : sabr_sml_so
 
 
 ## Activities and Flows

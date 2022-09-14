@@ -2,11 +2,11 @@
 left to right direction
 
 
-state "cpl" as cpl #lightgray {
+state "cpl" as cpl #bbbbbb {
 }
 
 
-state "cpl" as pstatename #lightgray {
+state "cpl" as pstatename #bbbbbb {
     state "Custom Function" as cplfunction {
     }
 }

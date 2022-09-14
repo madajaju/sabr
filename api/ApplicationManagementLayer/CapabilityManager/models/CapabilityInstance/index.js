@@ -24,6 +24,11 @@ class CapabilityInstance {
                 composition: false,
                 owner: false,
             },
+         provisioner: {
+                type: 'Provisioner',
+                description: 'Provisioner of the Instance',
+                cardinality: 1,
+            },
         },
         view: {
             color: "#00aaff",

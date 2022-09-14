@@ -31,23 +31,13 @@ class SABundle {
                 composition: false,
                 owner: false,
             },
-            learningInput: {
-                description: 'Learning Corpus Input Stream receives updates to the aimodel',
-                type: 'DataStream',
-                cardinality: 1,
-            },
-            learningOutput: {
-                description: 'Learning Corpus Output Stream receives updates to the aimodel',
+            learningStream: {
+                description: 'Learning Corpus Stream receives updates and sends out updates to the aimodel',
                 type: 'DataStream',
                 cardinality: 1,
             },
             adminStream: {
                 description: 'Administration Stream to handle registration of SABRS to Capabilities',
-                type: 'DataStream',
-                cardinality: 1,
-            },
-            admoutStream: {
-                description: 'Administration Stream to handle registration of SABRS and Capabilities',
                 type: 'DataStream',
                 cardinality: 1,
             },
@@ -82,6 +72,12 @@ class SABundle {
                 composition: false,
                 owner: true,
                 via: 'parent',
+            },
+            secureVault: {
+                type: 'SecureVault',
+                cardinality: 1,
+                composition: true,
+                owner: true,
             }
         },
         view: {
@@ -127,7 +123,26 @@ class SABundle {
                 }
             },
             Created: {
-                description: "The SABR has been created and ready to be deployed.",
+                description: "The SAB has been created and ready and can be built.",
+                events: {
+                    build: {
+                        Building: { }
+                    },
+                }
+            },
+            Building: {
+                description: "The SAB is being built.",
+                events: {
+                    built: {
+                        Built: { }
+                    },
+                    failed: {
+                        Failed: { }
+                    }
+                }
+            },
+            Built: {
+                description: "The SABR has been built and ready to be deployed.",
                 events: {
                     deploy: {
                         Deploying: { }
@@ -160,6 +175,9 @@ class SABundle {
                         Enabled: {}
                     }
                 }
+            },
+            Failed: {
+                description: "The SABR failed to be built or created."
             }
         }
     }

@@ -3,7 +3,7 @@ const path = require('path');
 module.exports = {
     friendlyName: 'release',
     description: 'Release a Capability',
-    static: true, // True is for Class methods. False is for object based.
+    static: false, // True is for Class methods. False is for object based.
     inputs: {
         name: {
             description: 'name of the capability',

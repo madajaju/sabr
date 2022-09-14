@@ -11,31 +11,24 @@ package "Service Orchestrator" #aaffaa {
   binName --> REST
 
   folder deploy #ffffff {
-      file "node server.js\ndocker-compose.yml" as _so_container
-      REST --> _so_container
+      file "node server.js\n" as sabr_sml_so_container
+      REST --> sabr_sml_so_container
 
   
     file "web" as web_container
     REST --> web_container
     socket ---> web_container
   
-    file "gateway" as gateway_container
-    REST --> gateway_container
-    socket ---> gateway_container
-  
   }
   folder images #ffffff {
-    collections "_so" as _soimage
+    collections "sabr_sml_so" as sabr_sml_soimage
     artifact "ailtire:swarm" as ailtireswarm
-    _soimage <|-- ailtireswarm
-    _so_container --> _soimage
+    sabr_sml_soimage <|-- ailtireswarm
+    sabr_sml_so_container --> sabr_sml_soimage
 
   
-      artifact "_so_web" as _so_web
-      web_container --> _so_web
-    
-      artifact "_so_gw" as _so_gw
-      gateway_container --> _so_gw
+      artifact "sabr_sml_so_web" as sabr_sml_so_web
+      web_container --> sabr_sml_so_web
     
   }
 }

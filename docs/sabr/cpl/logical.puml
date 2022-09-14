@@ -2,7 +2,7 @@
 
 
 
-package "Common Physical Layer" #lightgray {
+package "Common Physical Layer" #bbbbbb {
 
     interface "Common Physical Layer" as i {
     
@@ -13,7 +13,7 @@ CLI ()-- i
 REST ()-- i
 Web ()-- i
 
-package "Common Physical Layer" #lightgray {
+package "Common Physical Layer" #bbbbbb {
     
 }
 

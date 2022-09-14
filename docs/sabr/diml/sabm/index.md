@@ -43,6 +43,7 @@ users interact with the system.
 * [ sabr diml sabm connect](#action--sabr-diml-sabm-connect)
 * [ sabr diml sabm bundle createanddeploy](#action--sabr-diml-sabm-bundle-createanddeploy)
 * [ sabr diml sabm bundle deploy](#action--sabr-diml-sabm-bundle-deploy)
+* [ sabr diml sabm sabundle build](#action--sabr-diml-sabm-sabundle-build)
 * [ sabr diml sabm sabundle create](#action--sabr-diml-sabm-sabundle-create)
 * [ sabr diml sabm sabundle deploy](#action--sabr-diml-sabm-sabundle-deploy)
 * [ sabr diml sabm sabundle list](#action--sabr-diml-sabm-sabundle-list)
@@ -114,7 +115,9 @@ can be found [here](environment--sabr-diml-sabm-dev)
 
 Services in the dev environment
 
-* pulsar : apachepulsar/pulsar-all:latest
+* sabr : sabr_diml_sabm_sabr
+* web : sabr_diml_sabm_web
+* pulsar : sabr_diml_dsm_pulsar
 
 
 ### test
@@ -124,7 +127,6 @@ can be found [here](environment--sabr-diml-sabm-test)
 
 Services in the test environment
 
-* pulsar : apachepulsar/pulsar-all:latest
 
 
 ### prod
@@ -134,7 +136,9 @@ can be found [here](environment--sabr-diml-sabm-prod)
 
 Services in the prod environment
 
-* pulsar : apachepulsar/pulsar-all:latest
+* sabr : sabr_diml_sabm_sabr
+* web : sabr_diml_sabm_web
+* pulsar : sabr_diml_dsm_pulsar
 
 
 ## Activities and Flows
@@ -238,6 +242,26 @@ Deploy the bundle
 |---|---|---|---|
 | sabr | string |true | The name of the SABR |
 | policies | string |true | The name of the policies to use in the deployment. Comma separated |
+
+
+
+### Action  sabr diml sabm sabundle build
+
+
+
+* REST - /sabr/diml/sabm/sabundle/build?name=string&amp;id=string
+* bin -  sabr diml sabm sabundle build --name string --id string
+* js - .sabr.diml.sabm.sabundle.build({ name:string,id:string })
+
+#### Description
+Build the SAB with all of the elements including encrypting the bundle and the vault.
+
+#### Parameters
+
+| Name | Type | Required | Description |
+|---|---|---|---|
+| name | string |false | The name of the Bundle. |
+| id | string |false | The id of the build. |
 
 
 

@@ -55,7 +55,7 @@ Model o--> "n" DataTransformInstance : transforms
     rectangle "SABundleInstance" as SABundleInstance #lightgreen {
     }
     
-        SABundleInstance   o--> "1" Model : "learningInput"
+        SABundleInstance   o--> "1" Model : "learningStream"
     
     rectangle "SABundleInstance" as SABundleInstance #lightgreen {
     }

@@ -27,7 +27,14 @@ module.exports = {
             if(inputs.file.data) { // This coming from a rest call.
                 let fileBuffer = Buffer.from(inputs.file.data);
                 let fileString = fileBuffer.toString('utf-8');
-                definition = eval(fileString);
+                try {
+                    definition = eval(fileString);
+                }
+                catch(e) {
+                    console.error("Error evaluating file:", fileString);
+                    console.error(e);
+                    return obj;
+                }
             }
             for (let name in definition.bundles) {
                 let sabr = definition.bundles[name];

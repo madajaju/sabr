@@ -11,31 +11,24 @@ package "Security Aspect" #pink {
   binName --> REST
 
   folder deploy #ffffff {
-      file "node server.js\ndocker-compose.yml" as _s_container
-      REST --> _s_container
+      file "node server.js\n" as sabr_sa_container
+      REST --> sabr_sa_container
 
   
     file "web" as web_container
     REST --> web_container
     socket ---> web_container
   
-    file "gateway" as gateway_container
-    REST --> gateway_container
-    socket ---> gateway_container
-  
   }
   folder images #ffffff {
-    collections "_s" as _simage
+    collections "sabr_sa" as sabr_saimage
     artifact "ailtire:swarm" as ailtireswarm
-    _simage <|-- ailtireswarm
-    _s_container --> _simage
+    sabr_saimage <|-- ailtireswarm
+    sabr_sa_container --> sabr_saimage
 
   
-      artifact "_s_web" as _s_web
-      web_container --> _s_web
-    
-      artifact "_s_gw" as _s_gw
-      gateway_container --> _s_gw
+      artifact "sabr_sa_web" as sabr_sa_web
+      web_container --> sabr_sa_web
     
   }
 }

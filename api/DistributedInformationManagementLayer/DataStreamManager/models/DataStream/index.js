@@ -1,9 +1,10 @@
-
 class DataStream {
     static definition = {
         name: 'DataStream',
         description: 'A Data stream defines where I am getting data from or pushing data.',
-        unique: (obj) => { return obj.name; },
+        unique: (obj) => {
+            return obj.name;
+        },
         attributes: {
             name: {
                 type: 'string',
@@ -37,7 +38,7 @@ class DataStream {
             },
             transforms: {
                 description: 'This is the transformation that is called on data arriving to the Data Stream.',
-                type: 'DataTransform' ,
+                type: 'DataTransform',
                 cardinality: 'n',
             },
             consumers: {
@@ -49,25 +50,79 @@ class DataStream {
                 description: 'This is a producer of the data stream.',
                 type: 'SABundle',
                 cardinality: 'n',
+            },
+            encryptionKey: {
+                description: 'This is the encryption key for the data stream',
+                type: 'SecurityKey',
+                cardinality: 1,
+            },
+            decryptionKey: {
+                description: 'This is the decryption key for the data stream',
+                type: 'SecurityKey',
+                cardinality: 1,
             }
         },
         statenet: {
             Init: {
                 description: "Initial State",
                 events: {
-                    deploy: {
-                        Created: { }
+                    build: {
+                        Building: {}
                     }
+                }
+            },
+            Building: {
+                description: "Building the Data Stream",
+                events: {
+                    built: {
+                        Created: {
+                            condition: {
+                                description: "No build error",
+                                fn: (obj) => {
+                                    return !obj.error;
+                                }
+                            }
+                        },
+                        Failed: {
+                            condition: {
+                                description: "Build error",
+                                fn: (obj) => {
+                                    return obj.error;
+                                }
+                            }
+                        }
+                    }
+                },
+                actions: {
+                    entry: [
+                        {
+                            description: "Return Good",
+                            fn: (obj) => {
+                                return "Good";
+                            }
+                        },
+                        {
+                            description: "List all of the datastreams",
+                            action: 'datastream/list'
+                        }
+                    ],
+                    exit: [
+                        {
+                            description: "List the data",
+                            action: 'data/list',
+                        },
+                        {
+                            description: "Change the version number",
+                            action: 'data/get'
+                        }
+                    ]
                 }
             },
             Created: {
                 description: "DataStream is created",
                 events: {
-                    disable: {
-                        Disabled: { }
-                    },
-                    destroy: {
-                        Destroyed: {}
+                    deploy: {
+                        Enabled: {}
                     }
                 },
             },
@@ -85,10 +140,13 @@ class DataStream {
             Enabled: {
                 description: "DataStream is Enabled",
                 events: {
-                    disbale: {
-                        Disabled: { }
+                    disable: {
+                        Disabled: {}
                     }
                 }
+            },
+            Failed: {
+                description: "Failed to build",
             },
             Destroyed: {
                 description: "DataStream is destroyed",

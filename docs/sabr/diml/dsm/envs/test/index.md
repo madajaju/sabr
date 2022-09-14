@@ -2,10 +2,11 @@
 layout: default
 title: Environment test
 permalink: environment--sabr-diml-dsm-test
+parent: environment-test
 nav_exclude: true
 ---
 
-### test
+### Data Stream Manager test
 
 
 #### Deployment
@@ -30,7 +31,7 @@ the subsystem's logic.
 
 | Name | Image | Mapping | Ports | Network |
 | --- | --- | --- | --- | --- |
-| pulsar | sabr_pulsar:local |  |  |  |
+| pulsar | sabr_diml_dsm:standalone |  |  |  |
 
 
 #### Networks

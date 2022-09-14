@@ -103,7 +103,7 @@ can be found [here](environment--sabr-cpl-local)
 
 Services in the local environment
 
-* cpl_web : sabr_spl_web
+* cpl_web : sabr_cpl_web
 
 
 ### dev
@@ -113,7 +113,7 @@ can be found [here](environment--sabr-cpl-dev)
 
 Services in the dev environment
 
-* cpl_web : sabr_spl_web
+* cpl_web : sabr_cpl_web
 
 
 ### test
@@ -123,7 +123,7 @@ can be found [here](environment--sabr-cpl-test)
 
 Services in the test environment
 
-* cpl_web : sabr_spl_web
+* cpl_web : sabr_cpl_web
 
 
 ### prod
@@ -133,7 +133,7 @@ can be found [here](environment--sabr-cpl-prod)
 
 Services in the prod environment
 
-* cpl_web : sabr_spl_web
+* cpl_web : sabr_cpl_web
 
 
 ## Activities and Flows

@@ -17,17 +17,17 @@ box Capability Manager #00aaff
 
 "DevOpsEngineer" -> cm: Test Capability
 
-    cm -> "capability": create (name: myCapabilityT1,file: ./templates/capability.yml)
+    cm -> "capability": create (name: myCapabilityT1,file: ./templates/capability.js)
 
     "capability" --/ EventBus: capability.create
 
-    cm -> "capability": build (name: myCapabilityT1)
+    cm -> "capability manager": build (name: myCapabilityT1)
 
-    "capability" --/ EventBus: capability.build
+    "capability manager" --/ EventBus: capability.build
 
-    cm -> "capability": test (name: myCapabilityT1)
+    cm -> "capability manager": test (name: myCapabilityT1)
 
-    "capability" --/ EventBus: capability.test
+    "capability manager" --/ EventBus: capability.test
 
 
 

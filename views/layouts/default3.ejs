@@ -50,7 +50,7 @@
 <div id="main" style="position: absolute; width: 100%; height: 100%; overflow: hidden;"></div>
 <script type="module">
 
-    import {APackage, AScenario, AUsecase, AActor, AModel, AStack, AEnvironment,AObject,A3DGraph} from './js/ailtire/index.js';
+    import {APackage, AScenario, AUsecase, AActor, AModel, AStack, AEnvironment,AObject,A3DGraph, ASelectedHUD} from './js/ailtire/index.js';
     import {SChannel, SStream} from './js/sabr/index.js';
     let pkgview = new APackage({});
     let scenarioview = new AScenario({});
@@ -829,14 +829,7 @@
             ],
             onExpand: (event) => {
                 if (event.object.id === 'packages') {
-                    window.graph.toolbar.setToolBar();
-                    $.ajax({
-                        url: 'package/list',
-                        success: APackage.viewSubPackage3D,
-                        error: function (req, text, err) {
-                            console.log(text);
-                        }
-                    })
+                    A3DGraph.logcalView();
                 } else if (event.object.id === 'actors') {
                     window.graph.toolbar.setToolBar();
                     $.ajax({

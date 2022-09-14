@@ -1,7 +1,7 @@
 
 module.exports = {
     pulsar: {
-        dir: '..',
+        dir: '.',
         cmd: 'bin/pulsar standalone',
         file: 'pulsar/Dockerfile',
         tag: 'sabr_diml_dsm:standalone',

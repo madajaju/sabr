@@ -1,10 +1,10 @@
 
 module.exports = {
     web: {
-        dir: '..',
+        dir: '.',
         cmd: 'node web/server.js',
         file: 'web/Dockerfile',
-        tag: '_s_web',
+        tag: 'sabr_sa_web',
         env: {
 
         }

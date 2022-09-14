@@ -7,8 +7,8 @@ module.exports = {
         'DevOpsEngineer': 'uses',
     },
     steps: [
-        { action: 'capability/create', parameters: {name:'myCapabilityB1', file:'./templates/capability.yml'}},
-        { action: 'capability/build', parameters: {name:'myCapabilityB1'}},
+        { action: 'capability/create', parameters: {name:'myCapabilityB1', file:'./templates/capability.js'}},
+        { action: 'aml/cm/capability/build', parameters: {name:'myCapabilityB1'}},
     ]
 };
 

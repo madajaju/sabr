@@ -182,9 +182,9 @@ subsystems and actors can access the system.
 
 
 
-* REST - /sabr/aml/cm/capability/build?name=string
-* bin -  sabr aml cm capability build --name string
-* js - .sabr.aml.cm.capability.build({ name:string })
+* REST - /sabr/aml/cm/capability/build?name=string&amp;id=string
+* bin -  sabr aml cm capability build --name string --id string
+* js - .sabr.aml.cm.capability.build({ name:string,id:string })
 
 #### Description
 Build a Capability
@@ -193,7 +193,8 @@ Build a Capability
 
 | Name | Type | Required | Description |
 |---|---|---|---|
-| name | string |true | name of the capability |
+| name | string |false | name of the capability |
+| id | string |false | id of the capability |
 
 
 
@@ -220,9 +221,9 @@ Description of the action
 
 
 
-* REST - /sabr/aml/cm/capability/deploy?capability=string
-* bin -  sabr aml cm capability deploy --capability string
-* js - .sabr.aml.cm.capability.deploy({ capability:string })
+* REST - /sabr/aml/cm/capability/deploy?name=string
+* bin -  sabr aml cm capability deploy --name string
+* js - .sabr.aml.cm.capability.deploy({ name:string })
 
 #### Description
 Deploy a Capability
@@ -231,7 +232,7 @@ Deploy a Capability
 
 | Name | Type | Required | Description |
 |---|---|---|---|
-| capability | string |true | name of the capability |
+| name | string |true | name of the capability |
 
 
 

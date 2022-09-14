@@ -11,8 +11,8 @@ package "Data Stream Manager" #ffcc88 {
   binName --> REST
 
   folder deploy #ffffff {
-      file "node server.js\n" as _dsm_container
-      REST --> _dsm_container
+      file "node server.js\n" as sabr_diml_dsm_container
+      REST --> sabr_diml_dsm_container
 
   
     file "pulsar" as pulsar_container
@@ -21,14 +21,14 @@ package "Data Stream Manager" #ffcc88 {
   
   }
   folder images #ffffff {
-    collections "_dsm" as _dsmimage
+    collections "sabr_diml_dsm" as sabr_diml_dsmimage
     artifact "ailtire:swarm" as ailtireswarm
-    _dsmimage <|-- ailtireswarm
-    _dsm_container --> _dsmimage
+    sabr_diml_dsmimage <|-- ailtireswarm
+    sabr_diml_dsm_container --> sabr_diml_dsmimage
 
   
-      artifact "sabr_pulsar:standalone" as sabr_pulsar_standalone
-      pulsar_container --> sabr_pulsar_standalone
+      artifact "sabr_diml_dsm:standalone" as sabr_diml_dsm_standalone
+      pulsar_container --> sabr_diml_dsm_standalone
     
   }
 }

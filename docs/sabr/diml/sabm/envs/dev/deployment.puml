@@ -3,36 +3,69 @@
 left to right direction
 
 
-queue external #black [
-    <b><color:white>external</color></b>
-]
+boundary parent #blue
+
+
+entity pulsar_net #black
+
+entity children #red
+
+
+
+
+package "sabr_diml_sabm" #ffcc88 {
+    queue pulsar_netnet #black [
+            <b><color:white>pulsar_net</color></b>
+    ]
     
-interface 6650
-6650 -- external
+    pulsar_netnet -[#black]- pulsar_net
     
-interface 8081
-8081 -- external
+    queue parentnet #blue [
+            <b><color:white>parent</color></b>
+    ]
     
-
-
-
-
-
-package "_sabm" #ffcc88 {
-    queue childrennet #black [
+    parentnet -[#blue]- parent
+    
+    queue childrennet #red [
             <b><color:white>children</color></b>
     ]
     
+    childrennet -[#red]- children
+    
+    queue siblingsnet #orange [
+            <b><color:white>siblings</color></b>
+    ]
+    
 
+node "sabr" as sabrService
+node "web" as webService
 node "pulsar" as pulsarService
 
 
-        artifact "apachepulsar/pulsar-all:latest" as apachepulsar_pulsar_alllatestimage
+        artifact "sabr_diml_sabm_sabr" as sabr_diml_sabm_sabrimage
+    
+        artifact "sabr_diml_sabm_web" as sabr_diml_sabm_webimage
+    
+        artifact "sabr_diml_dsm_pulsar" as sabr_diml_dsm_pulsarimage
     
 }
 
-pulsarService -[#black]- childrennet
-pulsarService .... apachepulsar_pulsar_alllatestimage
+sabrService -[#red]- childrennet
+
+sabrService -[#orange]- siblingsnet
+
+webService -[#red]- childrennet
+
+webService -[#orange]- siblingsnet
+
+pulsarService -[#black]- pulsar_netnet
+
+pulsarService -[#red]- childrennet
+
+pulsarService -[#blue]- parentnet
+sabrService .... sabr_diml_sabm_sabrimage
+webService .... sabr_diml_sabm_webimage
+pulsarService .... sabr_diml_dsm_pulsarimage
 
 
 @enduml

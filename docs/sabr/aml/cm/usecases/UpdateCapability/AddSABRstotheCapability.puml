@@ -1,6 +1,8 @@
 @startuml
 
-actor "Actor"
+actor "ApplicationDeveloper"
+
+actor "DevOpsEngineer"
 
 
 entity EventBus
@@ -15,7 +17,34 @@ box Capability Manager #00aaff
     end box
 
 
-"Actor" -> cm: Add SABRs to the Capability
+"ApplicationDeveloper" -> cm: Add SABRs to the Capability
+
+    cm -> "capability": create (name: myUpdateCap2,file: ./templates/capability.js)
+
+    "capability" --/ EventBus: capability.create
+
+    cm -> "capability manager": release (capability: UpdateCap2)
+
+    "capability manager" --/ EventBus: capability.release
+
+    cm -> "capability manager": deploy (capability: UpdateCap2)
+
+    "capability manager" --/ EventBus: capability.deploy
+
+    cm -> "capability manager": update (capability: UpdateCap2,file: ./templates/capabilityUpdateAddSABRs.js)
+
+    "capability manager" --/ EventBus: capability.update
+
+    cm -> "capability manager": release (capability: UpdateCap2)
+
+    "capability manager" --/ EventBus: capability.release
+
+    cm -> "capability manager": deploy (capability: UpdateCap2)
+
+    "capability manager" --/ EventBus: capability.deploy
+
+
+"DevOpsEngineer" -> cm: Add SABRs to the Capability
 
     cm -> "capability": create (name: myUpdateCap2,file: ./templates/capability.js)
 

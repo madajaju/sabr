@@ -8,7 +8,7 @@ module.exports = {
     name: 'Develop Capability',
     description: 'Develop Capability allows the application developer to develop a capability that contains multiple' +
         ' SABRs that working together to provide the capability.',
-    method: 'capability/list',
+    method: 'capability/show',
     actors: {
         'Application Developer': 'uses'
     },

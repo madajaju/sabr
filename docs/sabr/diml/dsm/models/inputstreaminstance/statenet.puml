@@ -19,22 +19,22 @@ state InputStreamInstance #ffcc88 {
     state Disabled #ffcc88 {
     }
 
+
+
+
+Init -[#black]--> Created : create
+
+Created -[#black]--> Deploying : deploy
+
+Deploying -[#black]--> Enabled : deployed
+
+Enabled -[#black]--> Disabled : disable
+
+Enabled -[#black]--> Enabled : send
+
+Disabled -[#black]--> Enabled : enable
+
 }
-
-
-Init --> Created : create
-
-Created --> Deploying : deploy
-
-Deploying --> Enabled : deployed
-
-Enabled --> Disabled : disable
-
-Enabled --> Enabled : send
-
-Disabled --> Enabled : enable
-
-
 
  
  Enabled -[#black]--> Null

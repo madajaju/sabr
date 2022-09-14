@@ -24,10 +24,8 @@ Instance of a sentient agent bundle. This is were things are running. This inclu
 | parent | 1 | SABundle |  |  | Parent of the SAB Instance |
 | inputs | n | InputStreamInstance | false | false | Input Data Streams for the SABR |
 | outputs | n | OutputStreamInstance | false | false | Output Data Streams for the SABR |
-| learningInput | 1 | InputStreamInstance |  |  | Learning Corpus Input Stream receives updates to the aimodel |
-| learningOutput | 1 | OutputStreamInstance |  |  | Learning Corpus Output Stream receives updates to the aimodel |
+| learningStream | 1 | InputStreamInstance |  |  | Learning Corpus Input Stream receives updates to the aimodel |
 | adminStream | 1 | InputStreamInstance |  |  | Administration Stream to handle registration of SABRS to Capabilities |
-| admoutStream | 1 | OutputStreamInstance |  |  | Administration Stream to handle registration of SABRS and Capabilities |
 | stack | n | StackInstance | false | false |  |
 | aimodels | n | AIModel | false | false |  |
 | transforms | n | DataTransformInstance | false | false |  |

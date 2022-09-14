@@ -11,31 +11,31 @@ package "Sentient Agent Bundle Manager" #ffcc88 {
   binName --> REST
 
   folder deploy #ffffff {
-      file "node server.js\ndocker-compose.yml" as _sabm_container
-      REST --> _sabm_container
+      file "node server.js\n" as sabr_diml_sabm_container
+      REST --> sabr_diml_sabm_container
 
   
     file "web" as web_container
     REST --> web_container
     socket ---> web_container
   
-    file "gateway" as gateway_container
-    REST --> gateway_container
-    socket ---> gateway_container
+    file "sabr" as sabr_container
+    REST --> sabr_container
+    socket ---> sabr_container
   
   }
   folder images #ffffff {
-    collections "_sabm" as _sabmimage
+    collections "sabr_diml_sabm" as sabr_diml_sabmimage
     artifact "ailtire:swarm" as ailtireswarm
-    _sabmimage <|-- ailtireswarm
-    _sabm_container --> _sabmimage
+    sabr_diml_sabmimage <|-- ailtireswarm
+    sabr_diml_sabm_container --> sabr_diml_sabmimage
 
   
-      artifact "_sabm_web" as _sabm_web
-      web_container --> _sabm_web
+      artifact "sabr_diml_sabm_web" as sabr_diml_sabm_web
+      web_container --> sabr_diml_sabm_web
     
-      artifact "_sabm_gw" as _sabm_gw
-      gateway_container --> _sabm_gw
+      artifact "sabr_diml_sabm_sabr" as sabr_diml_sabm_sabr
+      sabr_container --> sabr_diml_sabm_sabr
     
   }
 }

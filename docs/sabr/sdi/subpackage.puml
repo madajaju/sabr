@@ -1,7 +1,7 @@
 @startuml
 
 
-package "Common Physical Layer" #lightgray {
+package "Common Physical Layer" #bbbbbb {
 
 }
 

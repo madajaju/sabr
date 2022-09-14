@@ -15,5 +15,10 @@ Model o--> "n" ServiceInstance : services
 
 
 
+    rectangle "CapabilityInstance" as CapabilityInstance #lightgreen {
+    }
+    
+        CapabilityInstance   o--> "1" Model : "provisioner"
+    
 
 @enduml

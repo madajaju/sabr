@@ -101,9 +101,7 @@ can be found [here](environment--sabr-sdi-dev)
 
 Services in the dev environment
 
-* child : child_image:latest
-* frontend : _sdi_web
-* gw : _sdi_gw
+* sabr_sdi_web : sabr_sdi_web
 
 
 ### test
@@ -113,9 +111,7 @@ can be found [here](environment--sabr-sdi-test)
 
 Services in the test environment
 
-* child : child_image:latest
-* frontend : _sdi_web
-* gw : _sdi_gw
+* sabr_sdi_web : sabr_sdi_web
 
 
 ### prod
@@ -125,9 +121,7 @@ can be found [here](environment--sabr-sdi-prod)
 
 Services in the prod environment
 
-* child : child_image:latest
-* frontend : _sdi_web
-* gw : _sdi_gw
+* sabr_sdi_web : sabr_sdi_web
 
 
 ## Activities and Flows

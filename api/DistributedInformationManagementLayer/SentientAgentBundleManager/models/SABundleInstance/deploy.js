@@ -36,16 +36,12 @@ module.exports = {
             obj.addToOutputs(sinstance);
             outStreams[stream.name] = sinstance;
         }
-        let learnInInstance = parent.learningInput.deploy({policies:inputs.policies, direction:'In', bundle:obj});
-        obj.learningInput = learnInInstance;
         // This connects the instance streams to the bundle stream.
-        let learnOutInstance = parent.learningOutput.deploy({policies:inputs.policies, direction:'Out', bundle:obj});
-        obj.learningOutput = learnOutInstance;
+        let learnInInstance = parent.learningStream.deploy({policies:inputs.policies, direction:'In', bundle:obj});
+        obj.learningStream = learnInInstance;
 
         let adminInstance = parent.adminStream.deploy({policies:inputs.policies, direction:'In', bundle:obj});
         obj.adminStream = adminInstance;
-        let admoutInstance = parent.admoutStream.deploy({policies:inputs.policies, direction:'Out', bundle:obj});
-        obj.admoutStream = admoutInstance;
 
         // Deploy the Transforms
         for(let i in parent.transforms) {

@@ -31,12 +31,12 @@ state StackInstance #00aaff {
     state Killed #00aaff {
     }
 
+
+
+
+Init -[#black]--> Deploying : create
+
 }
-
-
-Init --> Deploying : create
-
-
 
 
 @enduml

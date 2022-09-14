@@ -52,15 +52,5 @@ Model o--> "n" DataTransformInstance : transforms
     
         SABundleInstance   o--> "n" Model : "outputs"
     
-    rectangle "SABundleInstance" as SABundleInstance #lightgreen {
-    }
-    
-        SABundleInstance   o--> "1" Model : "learningOutput"
-    
-    rectangle "SABundleInstance" as SABundleInstance #lightgreen {
-    }
-    
-        SABundleInstance   o--> "1" Model : "admoutStream"
-    
 
 @enduml

@@ -2,10 +2,11 @@
 layout: default
 title: Environment dev
 permalink: environment--sabr-diml-sabm-dev
+parent: environment-dev
 nav_exclude: true
 ---
 
-### dev
+### Sentient Agent Bundle Manager dev
 
 
 #### Deployment
@@ -30,7 +31,9 @@ the subsystem's logic.
 
 | Name | Image | Mapping | Ports | Network |
 | --- | --- | --- | --- | --- |
-| pulsar | apachepulsar/pulsar-all:latest |  | 6650:6650,8081:8080 | children |
+| sabr | sabr_diml_sabm_sabr |  |  | children,siblings |
+| web | sabr_diml_sabm_web |  |  | children,siblings |
+| pulsar | sabr_diml_dsm_pulsar |  |  | pulsar_net,children,parent |
 
 
 #### Networks
@@ -43,7 +46,10 @@ stack in a layer of networks.
 
 | Name | Type | External Name | Ports |
 | --- | --- | --- | --- |
-| children | internal |  |
+| pulsar_net | egress | pulsar_net |
+| parent | ingress | parent |
+| children | egress | children |
+| siblings | internal |  |
 
 
 The Stack is micro-segmented off and there are a set of ports that are open for the ingress networks. The following
@@ -51,8 +57,6 @@ table shows the ports available and the internal port mappings and services on t
 
 | External Access Port | To Port | Service |
 | --- | --- | --- |
-| 6650 | 6650 | pulsar |
-| 8081 | 8080 | pulsar |
 
 
 

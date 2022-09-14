@@ -347,8 +347,6 @@ goals are? and How they use the system? This list is not an exhaustive list of a
 primary actors.
 
 
-* [Actor](actor-actor) - Long description
-  
 * [ApplicationDeveloper](actor-applicationdeveloper) - The Application Developer work in coordination with DevOps to manage services, applications and workloads through the development pipeline.
   
 * [DataAnalyst](actor-analyst) - Uses Data solutions produced by the Data Scientist and Data Engineer to provide business value to the organization.

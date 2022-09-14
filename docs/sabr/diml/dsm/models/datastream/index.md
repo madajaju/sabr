@@ -26,6 +26,8 @@ A Data stream defines where I am getting data from or pushing data.
 | transforms | n | DataTransform |  |  | This is the transformation that is called on data arriving to the Data Stream. |
 | consumers | n | SABundle |  |  | This is a consumer of the data stream. |
 | producers | n | SABundle |  |  | This is a producer of the data stream. |
+| encryptionKey | 1 | SecurityKey |  |  | This is the encryption key for the data stream |
+| decryptionKey | 1 | SecurityKey |  |  | This is the decryption key for the data stream |
 
 
 
@@ -40,10 +42,8 @@ A Data stream defines where I am getting data from or pushing data.
 | outputs | n | DataTransform |  |  | Outputs of the transformation. |
 | inputs | n | SABundle | false | false | Input Data Streams for the SABR |
 | outputs | n | SABundle | false | false | Output Data Streams for the SABR |
-| learningInput | 1 | SABundle |  |  | Learning Corpus Input Stream receives updates to the aimodel |
-| learningOutput | 1 | SABundle |  |  | Learning Corpus Output Stream receives updates to the aimodel |
+| learningStream | 1 | SABundle |  |  | Learning Corpus Stream receives updates and sends out updates to the aimodel |
 | adminStream | 1 | SABundle |  |  | Administration Stream to handle registration of SABRS to Capabilities |
-| admoutStream | 1 | SABundle |  |  | Administration Stream to handle registration of SABRS and Capabilities |
 | parent | 1 | InputStreamInstance |  |  | This is the parent of the data stream instance. |
 | parent | 1 | OutputStreamInstance |  |  | This is the parent of the data stream instance. |
 
@@ -58,21 +58,42 @@ The following diagram is the state net for this class.
 
 | Name | Description | Events |
 | --- | --- | --- |
-| Init | Initial State | deploy-&gt;Created,  |
-| Created | DataStream is created | disable-&gt;Disabled, destroy-&gt;Destroyed,  |
+| Init | Initial State | build-&gt;Building,  |
+| Building | Building the Data Stream | built-&gt;Created,  |
+| Created | DataStream is created | deploy-&gt;Enabled,  |
 | Disabled | DataStream is disabled | enable-&gt;Enabled, destroy-&gt;Destroyed,  |
-| Enabled | DataStream is Enabled | disbale-&gt;Disabled,  |
+| Enabled | DataStream is Enabled | disable-&gt;Disabled,  |
+| Failed | Failed to build |  |
 | Destroyed | DataStream is destroyed |  |
 
 
 
 ## Methods
 
+* [build() - Build a Data Stream, generates the security keys for the data stream.](#action-build)
+
 * [deploy() - Deploy a Data Stream](#action-deploy)
 
 
 <h2>Method Details</h2>
     
+### Action datastream build
+
+
+
+* REST - datastream/build?
+* bin - datastream build 
+* js - datastream.build({  })
+
+#### Description
+Build a Data Stream, generates the security keys for the data stream.
+
+#### Parameters
+
+No parameters
+
+
+
 ### Action datastream deploy
 
 

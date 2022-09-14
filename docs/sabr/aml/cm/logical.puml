@@ -28,6 +28,12 @@ package "Capability Manager" #00aaff {
         }
     }
 
+package "Service Orchestrator" #aaffaa {
+    
+        class Provisioner {
+        }
+    }
+
 
 package "Capability Manager" #00aaff {
 
@@ -70,6 +76,7 @@ package "Capability Manager" #00aaff {
             }
                 CapabilityInstance o--> "n" SABundleInstance : bundles
                         CapabilityInstance o--> "1" Capability : owner
+                        CapabilityInstance o--> "1" Provisioner : provisioner
             
     
 

@@ -21,6 +21,7 @@ module.exports = {
 
     fn: function (obj, inputs) {
         // inputs contains the obj for the this method.
+        obj.test
         return obj;
     }
 };

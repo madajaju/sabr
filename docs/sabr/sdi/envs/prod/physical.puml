@@ -11,31 +11,24 @@ package "Software Defined Infrastructure" #lightyellow {
   binName --> REST
 
   folder deploy #ffffff {
-      file "node server.js\ndocker-compose.yml" as _sdi_container
-      REST --> _sdi_container
+      file "node server.js\n" as sabr_sdi_container
+      REST --> sabr_sdi_container
 
   
     file "web" as web_container
     REST --> web_container
     socket ---> web_container
   
-    file "gateway" as gateway_container
-    REST --> gateway_container
-    socket ---> gateway_container
-  
   }
   folder images #ffffff {
-    collections "_sdi" as _sdiimage
+    collections "sabr_sdi" as sabr_sdiimage
     artifact "ailtire:swarm" as ailtireswarm
-    _sdiimage <|-- ailtireswarm
-    _sdi_container --> _sdiimage
+    sabr_sdiimage <|-- ailtireswarm
+    sabr_sdi_container --> sabr_sdiimage
 
   
-      artifact "_sdi_web" as _sdi_web
-      web_container --> _sdi_web
-    
-      artifact "_sdi_gw" as _sdi_gw
-      gateway_container --> _sdi_gw
+      artifact "sabr_sdi_web" as sabr_sdi_web
+      web_container --> sabr_sdi_web
     
   }
 }

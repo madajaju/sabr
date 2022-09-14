@@ -3,7 +3,7 @@
 left to right direction
 
 
-rectangle "Common Physical Layer" #lightgray {
+rectangle "Common Physical Layer" #bbbbbb {
 }
 
 

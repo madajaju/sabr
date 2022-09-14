@@ -8,6 +8,16 @@ boundary parent #black
 
 entity children #blue
 
+rectangle "sabr_diml_dsm" as sabr_diml_dsmStack #ffcc88 {
+    queue sabr_diml_dsmStacksnet #blue [
+        <b><color:white>parent</color></b>
+    ]
+}
+rectangle "sabr_diml_sabm" as sabr_diml_sabmStack #ffcc88 {
+    queue sabr_diml_sabmStacksnet #blue [
+        <b><color:white>parent</color></b>
+    ]
+}
 
 
 
@@ -32,10 +42,8 @@ package "sabr_diml" #ffcc88 {
 node "dsm" as dsmService
 node "sabm" as sabmService
 
-
-        artifact "sabr_diml_dsm" as sabr_diml_dsmimage
-    
-        artifact "sabr_diml_sabm" as sabr_diml_sabmimage
+        collections "sabr_diml_dsm" as sabr_diml_dsmimage
+            collections "sabr_diml_sabm" as sabr_diml_sabmimage
     
 }
 
@@ -45,5 +53,9 @@ sabmService -[#blue]- childrennet
 dsmService .... sabr_diml_dsmimage
 sabmService .... sabr_diml_sabmimage
 
+sabr_diml_dsmimage --> sabr_diml_dsmStack
+    
+sabr_diml_sabmimage --> sabr_diml_sabmStack
+    
 
 @enduml

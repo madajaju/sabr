@@ -36,8 +36,6 @@ This is a specialization of the DataStreamInstance for producing output.
 | --- | --- | --- | --- | --- | --- |
 | outputs | n | DataTransformInstance |  |  | Outputs of the transformation. |
 | outputs | n | SABundleInstance | false | false | Output Data Streams for the SABR |
-| learningOutput | 1 | SABundleInstance |  |  | Learning Corpus Output Stream receives updates to the aimodel |
-| admoutStream | 1 | SABundleInstance |  |  | Administration Stream to handle registration of SABRS and Capabilities |
 
 
 

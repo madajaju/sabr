@@ -11,7 +11,7 @@ entity children #blue
 
 
 
-package "sabr_cpl" #lightgray {
+package "sabr_cpl" #bbbbbb {
     queue parentnet #black [
             <b><color:white>parent</color></b>
     ]
@@ -32,12 +32,12 @@ package "sabr_cpl" #lightgray {
 node "cpl_web" as cpl_webService
 
 
-        artifact "sabr_spl_web" as sabr_spl_webimage
+        artifact "sabr_cpl_web" as sabr_cpl_webimage
     
 }
 
 cpl_webService -[#red]- siblingsnet
-cpl_webService .... sabr_spl_webimage
+cpl_webService .... sabr_cpl_webimage
 
 
 @enduml

@@ -36,18 +36,8 @@ state "Application Developer" as ApplicationDeveloper {
     state "Develop Capability" as ApplicationDeveloperDevelopCapability {
     }
 }
-state "sabr" as sabr #00aaff {
-state "aml" as sabraml #00aaff {
-state "cm" as sabramlcm #00aaff {
-state "capability" as sabramlcmcapability #00aaff {
-state "list" as sabramlcmcapabilitylist #00aaff {
-}
-}
-}
-}
-}
 
-ApplicationDeveloperDevelopCapability --> sabramlcmcapabilitylist
+ApplicationDeveloperDevelopCapability --> Null
 
 
     state "DevOpsEngineer" as DevOpsEngineer {
@@ -138,14 +128,23 @@ DevOpsEngineerUpdateCapability --> sabramlcmcapabilityupdate
     DevOpsEngineerUpdateCapabilityAddaSABRtotheCapability --> Null
     
  
-    state "Actor" as Actor {
-        state "Update Capability" as ActorUpdateCapability {
-            state "Add SABRs to the Capability" as ActorUpdateCapabilityAddSABRstotheCapability {
+    state "ApplicationDeveloper" as ApplicationDeveloper {
+        state "Update Capability" as ApplicationDeveloperUpdateCapability {
+            state "Add SABRs to the Capability" as ApplicationDeveloperUpdateCapabilityAddSABRstotheCapability {
             }
         }
     }
     
-    ActorUpdateCapabilityAddSABRstotheCapability --> Null
+    ApplicationDeveloperUpdateCapabilityAddSABRstotheCapability --> Null
+    
+    state "DevOpsEngineer" as DevOpsEngineer {
+        state "Update Capability" as DevOpsEngineerUpdateCapability {
+            state "Add SABRs to the Capability" as DevOpsEngineerUpdateCapabilityAddSABRstotheCapability {
+            }
+        }
+    }
+    
+    DevOpsEngineerUpdateCapabilityAddSABRstotheCapability --> Null
     
  
     state "DevOpsEngineer" as DevOpsEngineer {

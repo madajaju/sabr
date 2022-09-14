@@ -2,10 +2,11 @@
 layout: default
 title: Environment test
 permalink: environment--sabr-cpl-test
+parent: environment-test
 nav_exclude: true
 ---
 
-### test
+### Common Physical Layer test
 
 
 #### Deployment
@@ -30,7 +31,7 @@ the subsystem's logic.
 
 | Name | Image | Mapping | Ports | Network |
 | --- | --- | --- | --- | --- |
-| cpl_web | sabr_spl_web |  |  | siblings |
+| cpl_web | sabr_cpl_web |  |  | siblings |
 
 
 #### Networks

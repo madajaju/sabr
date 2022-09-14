@@ -7,10 +7,11 @@ const bent = require('bent');
 
 program
     .version('0.0.1')
-    .option('--host <hostname:port>', 'Initalize the connection')
+    .option('--host <hostname:port>', 'Initialize the connection')
     .parse(process.argv);
 
-let url = program.host;
+let options = program.opts();
+let url = options.host;
 let params = '/init';
 const getJSON = bent(url, 'GET', 'json', 200);
 (async () => {

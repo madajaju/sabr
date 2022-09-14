@@ -3,36 +3,16 @@
 left to right direction
 
 
-queue external #black [
-    <b><color:white>external</color></b>
-]
-    
-interface 6650
-6650 -- external
-    
-interface 8081
-8081 -- external
-    
 
 
 
 
 
-package "_sabm" #ffcc88 {
-    queue childrennet #black [
-            <b><color:white>children</color></b>
-    ]
-    
-
-node "pulsar" as pulsarService
+package "sabr_diml_sabm" #ffcc88 {
 
 
-        artifact "apachepulsar/pulsar-all:latest" as apachepulsar_pulsar_alllatestimage
-    
+
 }
-
-pulsarService -[#black]- childrennet
-pulsarService .... apachepulsar_pulsar_alllatestimage
 
 
 @enduml

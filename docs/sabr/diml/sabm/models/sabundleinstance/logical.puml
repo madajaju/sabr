@@ -29,25 +29,13 @@ Model o--> "n" OutputStreamInstance : outputs
 rectangle "InputStreamInstance" as InputStreamInstance #lightblue {
 }
 
-Model o--> "1" InputStreamInstance : learningInput
-
-
-rectangle "OutputStreamInstance" as OutputStreamInstance #lightblue {
-}
-
-Model o--> "1" OutputStreamInstance : learningOutput
+Model o--> "1" InputStreamInstance : learningStream
 
 
 rectangle "InputStreamInstance" as InputStreamInstance #lightblue {
 }
 
 Model o--> "1" InputStreamInstance : adminStream
-
-
-rectangle "OutputStreamInstance" as OutputStreamInstance #lightblue {
-}
-
-Model o--> "1" OutputStreamInstance : admoutStream
 
 
 rectangle "StackInstance" as StackInstance #lightblue {

@@ -10,6 +10,7 @@ module.exports = {
         { action: 'streampolicy create', parameters: {name:'historical', file:'./templates/policy1.js'}},
         { action: 'streampolicy create', parameters: {name:'summary', file:'./templates/policy2.js'}},
         { action: 'streampolicy create', parameters: {name:'realtime', file:'./templates/policy3.js'}},
+        // Build the bundle
         { action: 'diml/sabm/bundle deploy', parameters: {sabr:'mySABR1', policies:'realtime'}},
     ]
 };

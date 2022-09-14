@@ -3,6 +3,7 @@
 class "DataStream" as Model {
  string name
 
+ build()
  deploy()
  
 }
@@ -41,6 +42,18 @@ rectangle "SABundle" as SABundle #lightblue {
 }
 
 Model o--> "n" SABundle : producers
+
+
+rectangle "SecurityKey" as SecurityKey #lightblue {
+}
+
+Model o--> "1" SecurityKey : encryptionKey
+
+
+rectangle "SecurityKey" as SecurityKey #lightblue {
+}
+
+Model o--> "1" SecurityKey : decryptionKey
 
 
 
@@ -83,22 +96,12 @@ Model o--> "n" SABundle : producers
     rectangle "SABundle" as SABundle #lightgreen {
     }
     
-        SABundle   o--> "1" Model : "learningInput"
-    
-    rectangle "SABundle" as SABundle #lightgreen {
-    }
-    
-        SABundle   o--> "1" Model : "learningOutput"
+        SABundle   o--> "1" Model : "learningStream"
     
     rectangle "SABundle" as SABundle #lightgreen {
     }
     
         SABundle   o--> "1" Model : "adminStream"
-    
-    rectangle "SABundle" as SABundle #lightgreen {
-    }
-    
-        SABundle   o--> "1" Model : "admoutStream"
     
     rectangle "InputStreamInstance" as InputStreamInstance #lightgreen {
     }

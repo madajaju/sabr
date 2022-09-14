@@ -10,6 +10,12 @@ state SABundle #ffcc88 {
     state Created #ffcc88 {
     }
 
+    state Building #ffcc88 {
+    }
+
+    state Built #ffcc88 {
+    }
+
     state Deploying #ffcc88 {
     }
 
@@ -19,22 +25,31 @@ state SABundle #ffcc88 {
     state Disabled #ffcc88 {
     }
 
+    state Failed #ffcc88 {
+    }
+
+
+
+
+Init -[#black]--> Created : create
+
+Created -[#black]--> Building : build
+
+Building -[#black]--> Built : built
+
+Building -[#black]--> Failed : failed
+
+Built -[#black]--> Deploying : deploy
+
+Built -[#black]--> Deploying : deploying
+
+Deploying -[#black]--> Enabled : deployed
+
+Enabled -[#black]--> Disabled : disable
+
+Disabled -[#black]--> Enabled : enable
+
 }
-
-
-Init --> Created : create
-
-Created --> Deploying : deploy
-
-Created --> Deploying : deploying
-
-Deploying --> Enabled : deployed
-
-Enabled --> Disabled : disable
-
-Disabled --> Enabled : enable
-
-
 
 
 @enduml

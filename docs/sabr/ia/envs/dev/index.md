@@ -2,10 +2,11 @@
 layout: default
 title: Environment dev
 permalink: environment--sabr-ia-dev
+parent: environment-dev
 nav_exclude: true
 ---
 
-### dev
+### Identity Aspect dev
 
 
 #### Deployment
@@ -30,9 +31,7 @@ the subsystem's logic.
 
 | Name | Image | Mapping | Ports | Network |
 | --- | --- | --- | --- | --- |
-| child | child_image:latest |  |  | children,parent |
-| frontend | _ia_web |  |  | sibling |
-| gw | _ia_gw |  |  | children,sibling |
+| ia_web | sabr_ia_web |  |  | siblings |
 
 
 #### Networks
@@ -45,9 +44,9 @@ stack in a layer of networks.
 
 | Name | Type | External Name | Ports |
 | --- | --- | --- | --- |
-| children | egress | appname__ia_family |
-| sibling | internal |  |
-| parent | ingress | appname__family |
+| parent | ingress | parent |
+| children | egress | children |
+| siblings | internal |  |
 
 
 The Stack is micro-segmented off and there are a set of ports that are open for the ingress networks. The following

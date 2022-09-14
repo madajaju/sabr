@@ -23,6 +23,16 @@ DevOpsEngineerManageSABR --> sabrdimlsabmsabundlelist
 
     state "ApplicationDeveloper" as ApplicationDeveloper {
         state "Manage SABR" as ApplicationDeveloperManageSABR {
+            state "Create SAB" as ApplicationDeveloperManageSABRBuildSAB {
+            }
+        }
+    }
+    
+    ApplicationDeveloperManageSABRBuildSAB --> Null
+    
+ 
+    state "ApplicationDeveloper" as ApplicationDeveloper {
+        state "Manage SABR" as ApplicationDeveloperManageSABR {
             state "Create SABR" as ApplicationDeveloperManageSABRCreateSABR {
             }
         }

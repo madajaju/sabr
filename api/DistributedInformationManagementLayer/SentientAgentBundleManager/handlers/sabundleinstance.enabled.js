@@ -12,7 +12,7 @@ module.exports = {
                             let fn = app.fn;
                             fn(data.obj);
                         }
-                        data.obj.admoutStream.send({
+                        data.obj.adminStream.send({
                             data: {
                                 event: 'sabundleinstance.enabled',
                                 bundle: data.obj.id,

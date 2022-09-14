@@ -25,22 +25,22 @@ state ApplicationInstance #00aaff {
     state Failed #00aaff {
     }
 
+
+
+
+Init -[#black]--> Initializing : create
+
+Initializing -[#black]--> Running : provisoned
+
+Running -[#black]--> Stopping : kill
+
+Stopping -[#black]--> Stopped : stopped
+
+Stopped -[#black]--> Exit : exit
+
+Stopped -[#black]--> Failed : failed
+
 }
-
-
-Init --> Initializing : create
-
-Initializing --> Running : provisoned
-
-Running --> Stopping : kill
-
-Stopping --> Stopped : stopped
-
-Stopped --> Exit : exit
-
-Stopped --> Failed : failed
-
-
 
 
 @enduml

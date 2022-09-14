@@ -24,6 +24,12 @@ KeyStore contains security and other secret keys
 
 
 
+## Users of the Model
+
+| Name | Cardinality | Class | Composition | Owner | Description |
+| --- | --- | --- | --- | --- | --- |
+| store | 1 | SecureVault | true | true |  |
+
 
 
 

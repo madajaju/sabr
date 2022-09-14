@@ -2,10 +2,11 @@
 layout: default
 title: Environment local
 permalink: environment--sabr-cpl-local
+parent: environment-local
 nav_exclude: true
 ---
 
-### local
+### Common Physical Layer local
 
 
 #### Deployment
@@ -30,7 +31,7 @@ the subsystem's logic.
 
 | Name | Image | Mapping | Ports | Network |
 | --- | --- | --- | --- | --- |
-| cpl_web | sabr_spl_web |  |  | siblings |
+| cpl_web | sabr_cpl_web |  |  | siblings |
 
 
 #### Networks

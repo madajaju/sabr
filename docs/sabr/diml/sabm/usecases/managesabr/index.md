@@ -26,11 +26,28 @@ Manage SABR allows the devops engineers to create,deploy, updated and destroy SA
 
 ## Detail Scenarios
 
+* [BuildSAB](#scenario-BuildSAB)
 * [CreateSABR](#scenario-CreateSABR)
 * [DeploySABR](#scenario-DeploySABR)
 * [DeploySABR2](#scenario-DeploySABR2)
 * [DeploySABR3](#scenario-DeploySABR3)
 * [DeploySABR4](#scenario-DeploySABR4)
+
+
+
+### Scenario Create SAB
+
+Build the sentient agent bundle including the security vault, streams, transforms, etc..
+
+![Scenario CreateSAB](./CreateSAB.png)
+
+#### Steps
+1. [sabundle create --name mySABR1 --file ./templates/bundle1.js](#action-sabundle create)
+1. [diml sabm sabundle build --name mySABR1](#action-diml sabm sabundle build)
+
+#### Actors
+
+* [Application Developer](actor-applicationdeveloper)
 
 
 

@@ -83,21 +83,15 @@ module.exports = {
             }
         }
 
-        let linstream = new DataStream({name:"LearningInputStream"});
-        obj.learningInput = linstream
+        let linstream = new DataStream({name:"LearningStream"});
+        obj.learningStream = linstream
         linstream.addToConsumers(obj);
+        linstream.addToProducers(obj);
 
-        let loutstream = new DataStream({name:"LearningOutputStream"});
-        obj.learningOutput = loutstream
-        loutstream.addToProducers(obj);
-
-        let adminStream = new DataStream({name:"AdmInStream"});
+        let adminStream = new DataStream({name:"AdminStream"});
         obj.adminStream = adminStream
         adminStream.addToConsumers(obj);
-
-        let admoutStream = new DataStream({name:"AdmOutStream"});
-        obj.admoutStream = admoutStream;
-        admoutStream.addToProducers(obj);
+        adminStream.addToProducers(obj);
         return obj;
     }
 

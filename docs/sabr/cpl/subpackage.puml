@@ -2,7 +2,7 @@
 
 
 
-package "Common Physical Layer" #lightgray {
+package "Common Physical Layer" #bbbbbb {
 
     interface "Common Physical Layer" as i {
     
@@ -20,7 +20,7 @@ i -down- CLI
 i -down- REST
 WebSocket -left- i: events >
 
-package "Common Physical Layer" #lightgray {
+package "Common Physical Layer" #bbbbbb {
 
 
 }

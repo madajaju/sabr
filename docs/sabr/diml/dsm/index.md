@@ -115,7 +115,7 @@ can be found [here](environment--sabr-diml-dsm-local)
 
 Services in the local environment
 
-* pulsar : sabr_pulsar:local
+* pulsar : sabr_diml_dsm:standalone
 
 
 ### dev
@@ -125,7 +125,7 @@ can be found [here](environment--sabr-diml-dsm-dev)
 
 Services in the dev environment
 
-* pulsar : sabr_pulsar:local
+* pulsar : sabr_diml_dsm:standalone
 
 
 ### test
@@ -135,7 +135,7 @@ can be found [here](environment--sabr-diml-dsm-test)
 
 Services in the test environment
 
-* pulsar : sabr_pulsar:local
+* pulsar : sabr_diml_dsm:standalone
 
 
 ### prod
@@ -145,7 +145,7 @@ can be found [here](environment--sabr-diml-dsm-prod)
 
 Services in the prod environment
 
-* pulsar : sabr_pulsar:local
+* pulsar : sabr_diml_dsm:standalone
 
 
 ## Activities and Flows

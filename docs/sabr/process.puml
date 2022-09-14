@@ -9,24 +9,6 @@ state "sentient agent bundle resources" as pstatename #bbaaff {
     }
 }
 
-        state "aimodel" as aimodel #bbaaff {
-state "list" as aimodellist #bbaaff {
-}
-}
-
-
-        state "capability" as capability #bbaaff {
-state "list" as capabilitylist #bbaaff {
-}
-}
-
-
-        state "policy" as policy #bbaaff {
-state "list" as policylist #bbaaff {
-}
-}
-
-
         state "pulsar" as pulsar #bbaaff {
 state "streams" as pulsarstreams #bbaaff {
 }
@@ -41,18 +23,6 @@ state "topic" as pulsartopic #bbaaff {
 
         state "pulsar" as pulsar #bbaaff {
 state "topics" as pulsartopics #bbaaff {
-}
-}
-
-
-        state "security" as security #bbaaff {
-state "list" as securitylist #bbaaff {
-}
-}
-
-
-        state "security" as security #bbaaff {
-state "manage" as securitymanage #bbaaff {
 }
 }
 

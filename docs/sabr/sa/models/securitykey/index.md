@@ -27,7 +27,11 @@ No associations
 
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
+| encryptionKey | 1 | DataStream |  |  | This is the encryption key for the data stream |
+| decryptionKey | 1 | DataStream |  |  | This is the decryption key for the data stream |
 | keys | n | KeyStore | false | false |  |
+| encryptKey | 1 | SecureVault | true | true |  |
+| decryptKey | 1 | SecureVault | true | true |  |
 
 
 

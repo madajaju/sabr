@@ -7,40 +7,22 @@ state "DataEngineer" as DataEngineer {
     state "Manage AI Model" as DataEngineerManageAIModel {
     }
 }
-state "sabr" as sabr #bbaaff {
-state "aimodel" as sabraimodel #bbaaff {
-state "list" as sabraimodellist #bbaaff {
-}
-}
-}
 
-DataEngineerManageAIModel --> sabraimodellist
+DataEngineerManageAIModel --> Null
 
 state "DataScientist" as DataScientist {
     state "Manage AI Model" as DataScientistManageAIModel {
     }
 }
-state "sabr" as sabr #bbaaff {
-state "aimodel" as sabraimodel #bbaaff {
-state "list" as sabraimodellist #bbaaff {
-}
-}
-}
 
-DataScientistManageAIModel --> sabraimodellist
+DataScientistManageAIModel --> Null
 
 state "DataAnalyst" as DataAnalyst {
     state "Manage AI Model" as DataAnalystManageAIModel {
     }
 }
-state "sabr" as sabr #bbaaff {
-state "aimodel" as sabraimodel #bbaaff {
-state "list" as sabraimodellist #bbaaff {
-}
-}
-}
 
-DataAnalystManageAIModel --> sabraimodellist
+DataAnalystManageAIModel --> Null
 
 
  
@@ -48,27 +30,15 @@ state "DevOpsEngineer" as DevOpsEngineer {
     state "Manage Capabilities" as DevOpsEngineerManageCapabilities {
     }
 }
-state "sabr" as sabr #bbaaff {
-state "capability" as sabrcapability #bbaaff {
-state "list" as sabrcapabilitylist #bbaaff {
-}
-}
-}
 
-DevOpsEngineerManageCapabilities --> sabrcapabilitylist
+DevOpsEngineerManageCapabilities --> Null
 
 state "ITOperations" as ITOperations {
     state "Manage Capabilities" as ITOperationsManageCapabilities {
     }
 }
-state "sabr" as sabr #bbaaff {
-state "capability" as sabrcapability #bbaaff {
-state "list" as sabrcapabilitylist #bbaaff {
-}
-}
-}
 
-ITOperationsManageCapabilities --> sabrcapabilitylist
+ITOperationsManageCapabilities --> Null
 
 
  
@@ -76,14 +46,8 @@ state "ITOperations" as ITOperations {
     state "Manage Policies" as ITOperationsManagePolicies {
     }
 }
-state "sabr" as sabr #bbaaff {
-state "policy" as sabrpolicy #bbaaff {
-state "list" as sabrpolicylist #bbaaff {
-}
-}
-}
 
-ITOperationsManagePolicies --> sabrpolicylist
+ITOperationsManagePolicies --> Null
 
 
  
@@ -91,14 +55,8 @@ state "SecurityOperator" as SecurityOperator {
     state "Manage Security" as SecurityOperatorManageSecurity {
     }
 }
-state "sabr" as sabr #bbaaff {
-state "security" as sabrsecurity #bbaaff {
-state "list" as sabrsecuritylist #bbaaff {
-}
-}
-}
 
-SecurityOperatorManageSecurity --> sabrsecuritylist
+SecurityOperatorManageSecurity --> Null
 
 
  
@@ -106,14 +64,8 @@ state "TacticalOperator" as TacticalOperator {
     state "Provide Digital Assistance" as TacticalOperatorProvideDigitalAssistance {
     }
 }
-state "sabr" as sabr #bbaaff {
-state "capability" as sabrcapability #bbaaff {
-state "list" as sabrcapabilitylist #bbaaff {
-}
-}
-}
 
-TacticalOperatorProvideDigitalAssistance --> sabrcapabilitylist
+TacticalOperatorProvideDigitalAssistance --> Null
 
 
  
@@ -121,14 +73,8 @@ state "Tactical Operator" as TacticalOperator {
     state "Provide Mission Insight" as TacticalOperatorProvideMissionInsight {
     }
 }
-state "sabr" as sabr #bbaaff {
-state "capability" as sabrcapability #bbaaff {
-state "list" as sabrcapabilitylist #bbaaff {
-}
-}
-}
 
-TacticalOperatorProvideMissionInsight --> sabrcapabilitylist
+TacticalOperatorProvideMissionInsight --> Null
 
 
  

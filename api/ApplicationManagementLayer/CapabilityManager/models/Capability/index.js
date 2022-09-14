@@ -1,4 +1,3 @@
-
 class Capability {
     static definition = {
         name: 'Capability',
@@ -7,7 +6,9 @@ class Capability {
             ' that define how the SABR bundles should react to different events in the system. Instances of the' +
             ' Capabilities are managed from the capability manager and consist of all of the information about the' +
             ' running capability.',
-        unique: (obj) => { return obj.name; },
+        unique: (obj) => {
+            return obj.name;
+        },
         attributes: {
             name: {
                 type: 'string',
@@ -44,7 +45,7 @@ class Capability {
                 if (options) {
                     material = options;
                 }
-                return `<rect width="10" height="10"style="fill:${material.color};stroke:${material.border};stroke-width:1" />`;
+                return `<rect width="10" height="10" style="fill:${material.color};stroke:${material.border};stroke-width:1" />`;
             },
             object3d: (options) => {
 
@@ -68,6 +69,76 @@ class Capability {
                         `</a-entity>`;
                 }
                 return retval;
+            }
+        },
+        statenet: {
+            Init: {
+                description: "Initial State",
+                events: {
+                    create: {
+                        Created: {}
+                    }
+                }
+            },
+            Created: {
+                description: "The Capability has been created and ready and can be built.",
+                events: {
+                    build: {
+                        Building: { }
+                    },
+                }
+            },
+            Building: {
+                description: "The Capability is being built.",
+                events: {
+                    built: {
+                        Built: {
+                            condition: (obj) => {
+                                return obj.results;
+                            }
+                        },
+                        Failed: {
+                            condition: (obj) => {
+                                return !obj.results
+                            }
+                        }
+                    },
+                }
+            },
+            Built: {
+                description: "The Capability has been built and ready to be deployed.",
+                events: {
+                    test: {
+                        Testing: {}
+                    },
+                }
+            },
+            Testing: {
+                description: "The Capability is aggregated with all of the SABRs",
+                events: {
+                    testSuccess: {
+                        Tested: {}
+                    }
+                }
+            },
+            Tested: {
+                description: "The Capability is aggregated with all of the SABRs",
+                events: {
+                    release: {
+                        Released: {}
+                    }
+                }
+            },
+            Released: {
+                description: "The Capability is released and ready for Deployment",
+                events: {
+                    deploy: {
+                        Released: {}
+                    }
+                }
+            },
+            Failed: {
+                description: "The Capability failed to be built or created."
             }
         }
     }

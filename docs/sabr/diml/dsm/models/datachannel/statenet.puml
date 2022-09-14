@@ -19,22 +19,22 @@ state DataChannel #ffcc88 {
     state Destroyed #ffcc88 {
     }
 
+
+
+
+Init -[#black]--> Created : create
+
+Created -[#black]--> Disabled : disable
+
+Created -[#black]--> Destroyed : destroy
+
+Disabled -[#black]--> Enabled : enable
+
+Disabled -[#black]--> Destroyed : destroy
+
+Enabled -[#black]--> Disabled : disbale
+
 }
-
-
-Init --> Created : create
-
-Created --> Disabled : disable
-
-Created --> Destroyed : destroy
-
-Disabled --> Enabled : enable
-
-Disabled --> Destroyed : destroy
-
-Enabled --> Disabled : disbale
-
-
 
 
 @enduml

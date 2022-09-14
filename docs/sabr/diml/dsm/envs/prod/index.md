@@ -2,10 +2,11 @@
 layout: default
 title: Environment prod
 permalink: environment--sabr-diml-dsm-prod
+parent: environment-prod
 nav_exclude: true
 ---
 
-### prod
+### Data Stream Manager prod
 
 
 #### Deployment
@@ -30,7 +31,7 @@ the subsystem's logic.
 
 | Name | Image | Mapping | Ports | Network |
 | --- | --- | --- | --- | --- |
-| pulsar | sabr_pulsar:local |  |  |  |
+| pulsar | sabr_diml_dsm:standalone |  |  |  |
 
 
 #### Networks

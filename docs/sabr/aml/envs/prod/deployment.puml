@@ -26,7 +26,7 @@ rectangle "sabr_aml_lc" as sabr_aml_lcStack #00aaff {
 
 
 
-package "aml" #00aaff {
+package "sabr_aml" #00aaff {
     queue parentnet #black [
             <b><color:white>parent</color></b>
     ]

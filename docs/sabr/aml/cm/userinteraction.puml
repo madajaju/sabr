@@ -21,8 +21,8 @@ devops -> "Capability Manager": Update Capability
 bin -> REST: capability/update
 
 applicationdeveloper -> "Capability Manager": Develop Capability
-"Capability Manager" -> bin: capability list
-bin -> REST: capability/list
+"Capability Manager" -> bin: capability show
+bin -> REST: capability/show
 
 
 

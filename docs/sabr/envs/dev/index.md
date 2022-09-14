@@ -2,10 +2,11 @@
 layout: default
 title: Environment dev
 permalink: environment--sabr-dev
+parent: environment-dev
 nav_exclude: true
 ---
 
-### dev
+### Sentient Agent Bundle Resources dev
 
 
 #### Deployment
@@ -30,14 +31,13 @@ the subsystem's logic.
 
 | Name | Image | Mapping | Ports | Network |
 | --- | --- | --- | --- | --- |
-| admin | sabr_admin |  |  | siblings |
-| am | am |  |  | children |
-| cm | cm |  |  | children |
-| dsm | dsm |  |  | children |
-| sa | sa |  |  | children |
-| lc | lc |  |  | children |
-| sabm | sabm |  |  | children |
-| so | so |  |  | children |
+| aml | sabr_aml |  |  | children |
+| cpl | sabr_cpl |  |  | children |
+| diml | sabr_diml |  |  | children |
+| sa | sabr_sa |  |  | children |
+| sml | sabr_sml |  |  | children |
+| sdi | sabr_sdi |  |  | children |
+| ia | sabr_ia |  |  | children |
 | doc | sabr_doc |  |  | siblings |
 
 

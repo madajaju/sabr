@@ -1,6 +1,6 @@
 ---
 layout: default
-title: usecases
+title: UseCases
 permalink: usecases
 has_children: true
 ---
@@ -22,6 +22,7 @@ has_children: true
 * [Manage Capabilities](usecase-ManageCapabilities)
 * [Manage Policies](usecase-ManagePolicies)
 * [Manage SABR](usecase-ManageSABR)
+  * [Create SAB](usecase-ManageSABR#BuildSAB)
   * [Create SABR](usecase-ManageSABR#CreateSABR)
   * [Deploy SABR](usecase-ManageSABR#DeploySABR)
   * [Deploy SABR two](usecase-ManageSABR#DeploySABR2)

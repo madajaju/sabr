@@ -8,14 +8,26 @@ module.exports = {
         name: {
             description: 'name of the capability',
             type: 'string', // string|boolean|number|json
-            required: true
+            required: false
+        },
+        id: {
+            description: 'id of the capability',
+            type: 'string', // string|boolean|number|json
+            required: false
         },
     },
 
     exits: {},
 
-    fn: function (obj, inputs) {
+    fn: function (inputs, env) {
         // inputs contains the obj for the this method.
-        return obj;
+        if(inputs.name) {
+            capability = Capability.find(inputs.name);
+        } else if(inputs.id) {
+            capability = Capability.find(inputs.id);
+        }
+        capability.build({name:"Auto"});
+        env.res.json(capability);
+        return capability;
     }
 };

@@ -48,13 +48,9 @@ module.exports = {
                 deployed = false;
             }
         }
-        if(bundle.learningInput.state !== "Enabled") {
-            deployed = false;
-        } else if(bundle.learningOutput.state !== "Enabled") {
+        if(bundle.learningStream.state !== "Enabled") {
             deployed = false;
         } else if(bundle.adminStream.state !== "Enabled") {
-            deployed = false;
-        } else if(bundle.admoutStream.state !== "Enabled") {
             deployed = false;
         }
 

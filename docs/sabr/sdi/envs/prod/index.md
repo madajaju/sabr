@@ -2,10 +2,11 @@
 layout: default
 title: Environment prod
 permalink: environment--sabr-sdi-prod
+parent: environment-prod
 nav_exclude: true
 ---
 
-### prod
+### Software Defined Infrastructure prod
 
 
 #### Deployment
@@ -30,9 +31,7 @@ the subsystem's logic.
 
 | Name | Image | Mapping | Ports | Network |
 | --- | --- | --- | --- | --- |
-| child | child_image:latest |  |  | children,parent |
-| frontend | _sdi_web |  |  | sibling |
-| gw | _sdi_gw |  |  | children,sibling |
+| sabr_sdi_web | sabr_sdi_web |  |  | siblings |
 
 
 #### Networks
@@ -45,9 +44,9 @@ stack in a layer of networks.
 
 | Name | Type | External Name | Ports |
 | --- | --- | --- | --- |
-| children | egress | appname__sdi_family |
-| sibling | internal |  |
-| parent | ingress | appname__family |
+| parent | ingress | parent |
+| children | egress | children |
+| siblings | internal |  |
 
 
 The Stack is micro-segmented off and there are a set of ports that are open for the ingress networks. The following

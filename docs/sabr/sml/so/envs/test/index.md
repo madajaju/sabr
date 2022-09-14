@@ -2,10 +2,11 @@
 layout: default
 title: Environment test
 permalink: environment--sabr-sml-so-test
+parent: environment-test
 nav_exclude: true
 ---
 
-### test
+### Service Orchestrator test
 
 
 #### Deployment
@@ -30,9 +31,7 @@ the subsystem's logic.
 
 | Name | Image | Mapping | Ports | Network |
 | --- | --- | --- | --- | --- |
-| child | child_image:latest |  |  | children,parent |
-| frontend | _so_web |  |  | sibling |
-| gw | _so_gw |  |  | children,sibling |
+| sabr_sml_so_web | sabr_sml_so_web |  |  | siblings |
 
 
 #### Networks
@@ -45,9 +44,9 @@ stack in a layer of networks.
 
 | Name | Type | External Name | Ports |
 | --- | --- | --- | --- |
-| children | egress | appname__so_family |
-| sibling | internal |  |
-| parent | ingress | appname__family |
+| parent | ingress | parent |
+| children | egress | children |
+| siblings | internal |  |
 
 
 The Stack is micro-segmented off and there are a set of ports that are open for the ingress networks. The following

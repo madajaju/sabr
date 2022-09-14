@@ -77,7 +77,8 @@ Add Multiple SABRs to a running Capability
 
 #### Actors
 
-* [Actor](actor-actor)
+* [Application Developer](actor-applicationdeveloper)
+* [DevOps Engineer](actor-devops)
 
 
 

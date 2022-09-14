@@ -23,15 +23,14 @@ Sentient Agent Bundle consists of the definition of the services, data streams, 
 | --- | --- | --- | --- | --- | --- |
 | inputs | n | DataStream | false | false | Input Data Streams for the SABR |
 | outputs | n | DataStream | false | false | Output Data Streams for the SABR |
-| learningInput | 1 | DataStream |  |  | Learning Corpus Input Stream receives updates to the aimodel |
-| learningOutput | 1 | DataStream |  |  | Learning Corpus Output Stream receives updates to the aimodel |
+| learningStream | 1 | DataStream |  |  | Learning Corpus Stream receives updates and sends out updates to the aimodel |
 | adminStream | 1 | DataStream |  |  | Administration Stream to handle registration of SABRS to Capabilities |
-| admoutStream | 1 | DataStream |  |  | Administration Stream to handle registration of SABRS and Capabilities |
 | transforms | n | DataTransform |  |  | Data Transformations run on input data send to output data. |
 | applications | n | Application |  |  |  |
 | stacks | n | Stack | false | false |  |
 | aimodels | n | AIModel | false | false |  |
 | instances | n | SABundleInstance | false | true |  |
+| secureVault | 1 | SecureVault | true | true |  |
 
 
 
@@ -56,14 +55,19 @@ The following diagram is the state net for this class.
 | Name | Description | Events |
 | --- | --- | --- |
 | Init | Initial State | create-&gt;Created,  |
-| Created | The SABR has been created and ready to be deployed. | deploy-&gt;Deploying, deploying-&gt;Deploying,  |
+| Created | The SAB has been created and ready and can be built. | build-&gt;Building,  |
+| Building | The SAB is being built. | built-&gt;Built, failed-&gt;Failed,  |
+| Built | The SABR has been built and ready to be deployed. | deploy-&gt;Deploying, deploying-&gt;Deploying,  |
 | Deploying | The SABR is connecting to all of the streams including admin and learning streams. | deployed-&gt;Enabled,  |
 | Enabled | The SABR is running all transformation and streams are receiving and transmitting | disable-&gt;Disabled,  |
 | Disabled | The SABR is disabled and is not receiving or transmitting data. | enable-&gt;Enabled,  |
+| Failed | The SABR failed to be built or created. |  |
 
 
 
 ## Methods
+
+* [build() - Build the Sentient Agent Bundle](#action-build)
 
 * [create() - Create a Sentient Agent Bundle](#action-create)
 
@@ -74,6 +78,26 @@ The following diagram is the state net for this class.
 
 <h2>Method Details</h2>
     
+### Action sabundle build
+
+
+
+* REST - sabundle/build?buildID=string
+* bin - sabundle build --buildID string
+* js - sabundle.build({ buildID:string })
+
+#### Description
+Build the Sentient Agent Bundle
+
+#### Parameters
+
+| Name | Type | Required | Description |
+|---|---|---|---|
+| buildID | string |true | ID for the build of the bundle |
+
+
+
+
 ### Action sabundle create
 
 

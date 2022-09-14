@@ -19,22 +19,22 @@ state DataStreamInstance #ffcc88 {
     state Destroyed #ffcc88 {
     }
 
+
+
+
+Init -[#black]--> Created : deploy
+
+Created -[#black]--> Disabled : disable
+
+Created -[#black]--> Destroyed : destroy
+
+Disabled -[#black]--> Enabled : enable
+
+Disabled -[#black]--> Destroyed : destroy
+
+Enabled -[#black]--> Disabled : disbale
+
 }
-
-
-Init --> Created : deploy
-
-Created --> Disabled : disable
-
-Created --> Destroyed : destroy
-
-Disabled --> Enabled : enable
-
-Disabled --> Destroyed : destroy
-
-Enabled --> Disabled : disbale
-
-
 
 
 @enduml

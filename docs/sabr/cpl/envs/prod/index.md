@@ -2,10 +2,11 @@
 layout: default
 title: Environment prod
 permalink: environment--sabr-cpl-prod
+parent: environment-prod
 nav_exclude: true
 ---
 
-### prod
+### Common Physical Layer prod
 
 
 #### Deployment
@@ -30,7 +31,7 @@ the subsystem's logic.
 
 | Name | Image | Mapping | Ports | Network |
 | --- | --- | --- | --- | --- |
-| cpl_web | sabr_spl_web |  |  | siblings |
+| cpl_web | sabr_cpl_web |  |  | siblings |
 
 
 #### Networks

@@ -9,6 +9,10 @@ DevOpsEngineer --> ManageSABR
 
 
 
+usecase "BuildSAB" as BuildSAB #lightgrey
+
+ManageSABR --> BuildSAB
+
 usecase "CreateSABR" as CreateSABR #lightgrey
 
 ManageSABR --> CreateSABR

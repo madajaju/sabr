@@ -45,8 +45,8 @@ Build capability allows a DevOps engineer to build a capability that gets deploy
 ![Scenario BuildCapability](./BuildCapability.png)
 
 #### Steps
-1. [capability create --name myCapabilityB1 --file ./templates/capability.yml](#action-capability-create)
-1. [capability build --name myCapabilityB1](#action-capability-build)
+1. [capability create --name myCapabilityB1 --file ./templates/capability.js](#action-capability-create)
+1. [aml cm/capability/build --name myCapabilityB1](#action-aml-cm-capability-build)
 
 #### Actors
 
@@ -77,10 +77,10 @@ Release Capability allows a capability to be released which includes creating a 
 ![Scenario ReleaseCapability](./ReleaseCapability.png)
 
 #### Steps
-1. [capability create --name myCapabilityT1 --file ./templates/capability.yml](#action-capability-create)
-1. [capability build --name myCapabilityT1](#action-capability-build)
-1. [capability test --name myCapabilityT1](#action-capability-test)
-1. [capability release --name myCapabilityT1](#action-capability-release)
+1. [capability create --name myCapabilityT1 --file ./templates/capability.js](#action-capability-create)
+1. [aml cm/capability/build --name myCapabilityT1](#action-aml-cm-capability-build)
+1. [aml cm/capability/test --name myCapabilityT1](#action-aml-cm-capability-test)
+1. [aml cm/capability/release --name myCapabilityT1](#action-aml-cm-capability-release)
 
 #### Actors
 
@@ -95,9 +95,9 @@ Test Capability allows DevOps Engineers to test a capability before it is releas
 ![Scenario TestCapability](./TestCapability.png)
 
 #### Steps
-1. [capability create --name myCapabilityT1 --file ./templates/capability.yml](#action-capability-create)
-1. [capability build --name myCapabilityT1](#action-capability-build)
-1. [capability test --name myCapabilityT1](#action-capability-test)
+1. [capability create --name myCapabilityT1 --file ./templates/capability.js](#action-capability-create)
+1. [aml cm/capability/build --name myCapabilityT1](#action-aml-cm-capability-build)
+1. [aml cm/capability/test --name myCapabilityT1](#action-aml-cm-capability-test)
 
 #### Actors
 

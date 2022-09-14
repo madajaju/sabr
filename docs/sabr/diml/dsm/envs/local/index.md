@@ -2,10 +2,11 @@
 layout: default
 title: Environment local
 permalink: environment--sabr-diml-dsm-local
+parent: environment-local
 nav_exclude: true
 ---
 
-### local
+### Data Stream Manager local
 
 
 #### Deployment
@@ -30,7 +31,7 @@ the subsystem's logic.
 
 | Name | Image | Mapping | Ports | Network |
 | --- | --- | --- | --- | --- |
-| pulsar | sabr_pulsar:local |  |  |  |
+| pulsar | sabr_diml_dsm:standalone |  |  |  |
 
 
 #### Networks

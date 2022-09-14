@@ -377,14 +377,9 @@ users interact with the system.
 
 ![Scenario Mappings Diagram](./scenariomapping.png)
 
-* [ sabr aimodel list](#action--sabr-aimodel-list)
-* [ sabr capability list](#action--sabr-capability-list)
-* [ sabr policy list](#action--sabr-policy-list)
 * [ sabr pulsar streams](#action--sabr-pulsar-streams)
 * [ sabr pulsar topic](#action--sabr-pulsar-topic)
 * [ sabr pulsar topics](#action--sabr-pulsar-topics)
-* [ sabr security list](#action--sabr-security-list)
-* [ sabr security manage](#action--sabr-security-manage)
 
 
 ## Logical Artifacts
@@ -470,14 +465,13 @@ can be found [here](environment--sabr-dev)
 
 Services in the dev environment
 
-* admin : sabr_admin
-* am : am
-* cm : cm
-* dsm : dsm
-* sa : sa
-* lc : lc
-* sabm : sabm
-* so : so
+* aml : sabr_aml
+* cpl : sabr_cpl
+* diml : sabr_diml
+* sa : sabr_sa
+* sml : sabr_sml
+* sdi : sabr_sdi
+* ia : sabr_ia
 * doc : sabr_doc
 
 
@@ -488,14 +482,13 @@ can be found [here](environment--sabr-test)
 
 Services in the test environment
 
-* admin : sabr_admin
-* am : am
-* cm : cm
-* dsm : dsm
-* sa : sa
-* lc : lc
-* sabm : sabm
-* so : so
+* aml : sabr_aml
+* cpl : sabr_cpl
+* diml : sabr_diml
+* sa : sabr_sa
+* sml : sabr_sml
+* sdi : sabr_sdi
+* ia : sabr_ia
 * doc : sabr_doc
 
 
@@ -506,14 +499,13 @@ can be found [here](environment--sabr-prod)
 
 Services in the prod environment
 
-* admin : sabr_admin
-* am : am
-* cm : cm
-* dsm : dsm
-* sa : sa
-* lc : lc
-* sabm : sabm
-* so : so
+* aml : sabr_aml
+* cpl : sabr_cpl
+* diml : sabr_diml
+* sa : sabr_sa
+* sml : sabr_sml
+* sdi : sabr_sdi
+* ia : sabr_ia
 * doc : sabr_doc
 
 
@@ -535,63 +527,6 @@ cases and scenarios of the subsystem.
 The Sentient Agent Bundle Resources subsystem has a well defined interface. This interface can be accessed using a
 command line interface (CLI), REST interface, and Web user interface. This interface is how all other
 subsystems and actors can access the system.
-
-### Action  sabr aimodel list
-
-
-
-* REST - /sabr/aimodel/list?attr1=string
-* bin -  sabr aimodel list --attr1 string
-* js - .sabr.aimodel.list({ attr1:string })
-
-#### Description
-Description of the action
-
-#### Parameters
-
-| Name | Type | Required | Description |
-|---|---|---|---|
-| attr1 | string |false | Description for the parameter |
-
-
-
-### Action  sabr capability list
-
-
-
-* REST - /sabr/capability/list?attr1=string
-* bin -  sabr capability list --attr1 string
-* js - .sabr.capability.list({ attr1:string })
-
-#### Description
-Description of the action
-
-#### Parameters
-
-| Name | Type | Required | Description |
-|---|---|---|---|
-| attr1 | string |false | Description for the parameter |
-
-
-
-### Action  sabr policy list
-
-
-
-* REST - /sabr/policy/list?attr1=string
-* bin -  sabr policy list --attr1 string
-* js - .sabr.policy.list({ attr1:string })
-
-#### Description
-Description of the action
-
-#### Parameters
-
-| Name | Type | Required | Description |
-|---|---|---|---|
-| attr1 | string |false | Description for the parameter |
-
-
 
 ### Action  sabr pulsar streams
 
@@ -645,41 +580,6 @@ Return the topics in the pulsar configuration
 #### Parameters
 
 No parameters
-
-
-### Action  sabr security list
-
-
-
-* REST - /sabr/security/list?
-* bin -  sabr security list 
-* js - .sabr.security.list({  })
-
-#### Description
-List the security profiles.
-
-#### Parameters
-
-No parameters
-
-
-### Action  sabr security manage
-
-
-
-* REST - /sabr/security/manage?attr1=string
-* bin -  sabr security manage --attr1 string
-* js - .sabr.security.manage({ attr1:string })
-
-#### Description
-Description of the action
-
-#### Parameters
-
-| Name | Type | Required | Description |
-|---|---|---|---|
-| attr1 | string |false | Description for the parameter |
-
 
 
 

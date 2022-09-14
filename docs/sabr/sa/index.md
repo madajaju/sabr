@@ -60,6 +60,7 @@ organize the architecture and make it easier to analyze, understand, design, and
 The following are the classes in the data model of the Security Aspect subsystem.
 
 * [KeyStore](class-KeyStore)
+* [SecureVault](class-SecureVault)
 * [SecurityKey](class-SecurityKey)
 
 
@@ -103,9 +104,7 @@ can be found [here](environment--sabr-sa-dev)
 
 Services in the dev environment
 
-* child : child_image:latest
-* frontend : _s_web
-* gw : _s_gw
+* sabr_sa_web : sabr_sa_web
 
 
 ### test
@@ -115,9 +114,7 @@ can be found [here](environment--sabr-sa-test)
 
 Services in the test environment
 
-* child : child_image:latest
-* frontend : _s_web
-* gw : _s_gw
+* sabr_sa_web : sabr_sa_web
 
 
 ### prod
@@ -127,9 +124,7 @@ can be found [here](environment--sabr-sa-prod)
 
 Services in the prod environment
 
-* child : child_image:latest
-* frontend : _s_web
-* gw : _s_gw
+* sabr_sa_web : sabr_sa_web
 
 
 ## Activities and Flows
@@ -146,6 +141,9 @@ cases and scenarios of the subsystem.
 | keystore.create |  When an object of type KeyStore is created. | KeyStore
 | keystore.destroy |  When an object of type KeyStore is destroyed. | KeyStore
 | keystore.updated |  When an object of type KeyStore has an attribute or association updated. | KeyStore
+| securevault.create |  When an object of type SecureVault is created. | SecureVault
+| securevault.destroy |  When an object of type SecureVault is destroyed. | SecureVault
+| securevault.updated |  When an object of type SecureVault has an attribute or association updated. | SecureVault
 | securitykey.create |  When an object of type SecurityKey is created. | SecurityKey
 | securitykey.destroy |  When an object of type SecurityKey is destroyed. | SecurityKey
 | securitykey.updated |  When an object of type SecurityKey has an attribute or association updated. | SecurityKey

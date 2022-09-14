@@ -22,24 +22,24 @@ state CapabilityInstance #00aaff {
     state Destroyed #00aaff {
     }
 
+
+
+
+Init -[#black]--> Created : create
+
+Created -[#black]--> Deploying : deploy
+
+Created -[#black]--> Destroyed : destroy
+
+Deploying -[#black]--> Deployed : deployed
+
+Deployed -[#black]--> Disabled : disable
+
+Disabled -[#black]--> Deployed : enable
+
+Disabled -[#black]--> Destroyed : destroy
+
 }
-
-
-Init --> Created : create
-
-Created --> Deploying : deploy
-
-Created --> Destroyed : destroy
-
-Deploying --> Deployed : deployed
-
-Deployed --> Disabled : disable
-
-Disabled --> Deployed : enable
-
-Disabled --> Destroyed : destroy
-
-
 
 
 @enduml

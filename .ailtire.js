@@ -1,15 +1,28 @@
 module.exports = {
-    "host": "http://localhost/web", "actions": {
-        "/aml/am/data/create": {
-            "name": "/aml/am/data/create",
+    "host": "http://localhost/web",
+    "actions": {
+        "/aml/am/application/create": {
+            "name": "/aml/am/application/create",
             "inputs": {"attr1": {"description": "Description for the parameter", "type": "string", "required": false}},
             "friendlyName": "create",
             "description": "Description of the action"
         },
-        "/aml/am/data/govern": {
-            "name": "/aml/am/data/govern",
+        "/aml/am/application/destroy": {
+            "name": "/aml/am/application/destroy",
             "inputs": {"attr1": {"description": "Description for the parameter", "type": "string", "required": false}},
-            "friendlyName": "govern",
+            "friendlyName": "destroy",
+            "description": "Description of the action"
+        },
+        "/aml/am/application/list": {
+            "name": "/aml/am/application/list",
+            "inputs": {"attr1": {"description": "Description for the parameter", "type": "string", "required": false}},
+            "friendlyName": "list",
+            "description": "Description of the action"
+        },
+        "/aml/am/application/update": {
+            "name": "/aml/am/application/update",
+            "inputs": {"attr1": {"description": "Description for the parameter", "type": "string", "required": false}},
+            "friendlyName": "update",
             "description": "Description of the action"
         },
         "/aml/am/service/deployed": {
@@ -27,7 +40,7 @@ module.exports = {
                 }
             },
             "friendlyName": "deployed",
-            "description": "Service is deployed"
+            "description": "Notification that the service is deployed"
         },
         "/aml/am/service/kill": {
             "name": "/aml/am/service/kill",
@@ -65,6 +78,12 @@ module.exports = {
             "friendlyName": "build",
             "description": "Build a Capability"
         },
+        "/aml/cm/capability/create": {
+            "name": "/aml/cm/capability/create",
+            "inputs": {"attr1": {"description": "Description for the parameter", "type": "string", "required": false}},
+            "friendlyName": "create",
+            "description": "Description of the action"
+        },
         "/aml/cm/capability/deploy": {
             "name": "/aml/cm/capability/deploy",
             "inputs": {"capability": {"description": "name of the capability", "type": "string", "required": true}},
@@ -83,6 +102,12 @@ module.exports = {
             "friendlyName": "release",
             "description": "Release a Capability"
         },
+        "/aml/cm/capability/remove": {
+            "name": "/aml/cm/capability/remove",
+            "inputs": {"attr1": {"description": "Description for the parameter", "type": "string", "required": false}},
+            "friendlyName": "remove",
+            "description": "Description of the action"
+        },
         "/aml/cm/capability/test": {
             "name": "/aml/cm/capability/test",
             "inputs": {
@@ -92,16 +117,10 @@ module.exports = {
             "friendlyName": "test",
             "description": "Test a Capability"
         },
-        "/aml/cm/data/create": {
-            "name": "/aml/cm/data/create",
+        "/aml/cm/capability/update": {
+            "name": "/aml/cm/capability/update",
             "inputs": {"attr1": {"description": "Description for the parameter", "type": "string", "required": false}},
-            "friendlyName": "create",
-            "description": "Description of the action"
-        },
-        "/aml/cm/data/govern": {
-            "name": "/aml/cm/data/govern",
-            "inputs": {"attr1": {"description": "Description for the parameter", "type": "string", "required": false}},
-            "friendlyName": "govern",
+            "friendlyName": "update",
             "description": "Description of the action"
         },
         "/diml/dsm/channel/deployed": {
@@ -114,7 +133,7 @@ module.exports = {
             "name": "/diml/dsm/stream/deployed",
             "inputs": {"stream": {"description": "Stream name", "type": "string", "required": true}},
             "friendlyName": "deployed",
-            "description": "Channel Instance has been deployed. Notify the stream of its status."
+            "description": "Stream has been deployed. Notify the bundle of its status."
         },
         "/diml/sabm/connect": {
             "name": "/diml/sabm/connect",
@@ -136,8 +155,8 @@ module.exports = {
                     "required": true
                 }
             },
-            "friendlyName": "deploy",
-            "description": "Deploy the bundle"
+            "friendlyName": "createAnddeploy",
+            "description": "Create and deploy the bundle"
         },
         "/diml/sabm/bundle/deploy": {
             "name": "/diml/sabm/bundle/deploy",
@@ -152,11 +171,14 @@ module.exports = {
             "friendlyName": "deploy",
             "description": "Deploy the bundle"
         },
-        "/diml/sabm/bundle/list": {
-            "name": "/diml/sabm/bundle/list",
-            "inputs": {"attr1": {"description": "Description for the parameter", "type": "string", "required": false}},
-            "friendlyName": "list",
-            "description": "Description of the action"
+        "/diml/sabm/sabundle/build": {
+            "name": "/diml/sabm/sabundle/build",
+            "inputs": {
+                "name": {"description": "The name of the Bundle.", "type": "string", "required": false},
+                "id": {"description": "The id of the build.", "type": "string", "required": false}
+            },
+            "friendlyName": "build",
+            "description": "Build the SAB with all of the elements including encrypting the bundle and the vault."
         },
         "/diml/sabm/sabundle/create": {
             "name": "/diml/sabm/sabundle/create",
@@ -164,14 +186,20 @@ module.exports = {
             "friendlyName": "create",
             "description": "Description of the action"
         },
+        "/diml/sabm/sabundle/deploy": {
+            "name": "/diml/sabm/sabundle/deploy",
+            "inputs": {"attr1": {"description": "Description for the parameter", "type": "string", "required": false}},
+            "friendlyName": "deploy",
+            "description": "Description of the action"
+        },
+        "/diml/sabm/sabundle/list": {
+            "name": "/diml/sabm/sabundle/list",
+            "inputs": {"attr1": {"description": "Description for the parameter", "type": "string", "required": false}},
+            "friendlyName": "list",
+            "description": "Description of the action"
+        },
         "/aimodel/list": {
             "name": "/aimodel/list",
-            "inputs": {},
-            "friendlyName": "list",
-            "description": "List of model objects"
-        },
-        "/application/list": {
-            "name": "/application/list",
             "inputs": {},
             "friendlyName": "list",
             "description": "List of model objects"
@@ -181,6 +209,12 @@ module.exports = {
             "inputs": {},
             "friendlyName": "list",
             "description": "List of model objects"
+        },
+        "/policy/list": {
+            "name": "/policy/list",
+            "inputs": {"attr1": {"description": "Description for the parameter", "type": "string", "required": false}},
+            "friendlyName": "list",
+            "description": "Description of the action"
         },
         "/pulsar/streams": {
             "name": "/pulsar/streams",
@@ -211,6 +245,18 @@ module.exports = {
             "inputs": {},
             "friendlyName": "topics",
             "description": "Return the topics in the pulsar configuration"
+        },
+        "/security/list": {
+            "name": "/security/list",
+            "inputs": {},
+            "friendlyName": "list",
+            "description": "List the security profiles."
+        },
+        "/security/manage": {
+            "name": "/security/manage",
+            "inputs": {"attr1": {"description": "Description for the parameter", "type": "string", "required": false}},
+            "friendlyName": "manage",
+            "description": "Description of the action"
         },
         "/sml/so/service/ready": {
             "name": "/sml/so/service/ready",
@@ -244,6 +290,12 @@ module.exports = {
             "friendlyName": "create",
             "description": "Create object of the class type"
         },
+        "/application/list": {
+            "name": "/application/list",
+            "inputs": {},
+            "friendlyName": "list",
+            "description": "List of model objects"
+        },
         "/application/destory": {
             "name": "/application/destory",
             "inputs": {"cls": {"description": "Class to use for the object new", "type": "string", "required": true}},
@@ -262,11 +314,7 @@ module.exports = {
         },
         "/application/addinstances": {
             "name": "/application/addinstances",
-            "inputs": {
-                "name": {"description": "Name of the object", "type": "string", "required": false},
-                "items": {"description": "Name of the items to add", "type": "string", "required": false},
-                "file": {"description": "file with the definition of the items", "type": "YAML", "required": false}
-            },
+            "inputs": {},
             "friendlyName": "addInstances",
             "description": "Add items to the object"
         },
@@ -293,16 +341,13 @@ module.exports = {
         },
         "/applicationinstance/new": {
             "name": "/applicationinstance/new",
-            "inputs": {"cls": {"description": "Class to use for the object new", "type": "string", "required": true}},
+            "inputs": {},
             "friendlyName": "new",
             "description": "New called for web interface"
         },
         "/applicationinstance/create": {
             "name": "/applicationinstance/create",
-            "inputs": {
-                "name": {"description": "Name of the object", "type": "string", "required": false},
-                "file": {"description": "file with the definition", "type": "YAML", "required": false}
-            },
+            "inputs": {},
             "friendlyName": "create",
             "description": "Create object of the class type"
         },
@@ -314,7 +359,7 @@ module.exports = {
         },
         "/applicationinstance/destory": {
             "name": "/applicationinstance/destory",
-            "inputs": {"cls": {"description": "Class to use for the object new", "type": "string", "required": true}},
+            "inputs": {},
             "friendlyName": "new",
             "description": "New called for web interface"
         },
@@ -342,16 +387,13 @@ module.exports = {
         },
         "/service/new": {
             "name": "/service/new",
-            "inputs": {"cls": {"description": "Class to use for the object new", "type": "string", "required": true}},
+            "inputs": {},
             "friendlyName": "new",
             "description": "New called for web interface"
         },
         "/service/create": {
             "name": "/service/create",
-            "inputs": {
-                "name": {"description": "Name of the object", "type": "string", "required": false},
-                "file": {"description": "file with the definition", "type": "YAML", "required": false}
-            },
+            "inputs": {},
             "friendlyName": "create",
             "description": "Create object of the class type"
         },
@@ -363,27 +405,19 @@ module.exports = {
         },
         "/service/destory": {
             "name": "/service/destory",
-            "inputs": {"cls": {"description": "Class to use for the object new", "type": "string", "required": true}},
+            "inputs": {},
             "friendlyName": "new",
             "description": "New called for web interface"
         },
         "/service/addchildren": {
             "name": "/service/addchildren",
-            "inputs": {
-                "name": {"description": "Name of the object", "type": "string", "required": false},
-                "items": {"description": "Name of the items to add", "type": "string", "required": false},
-                "file": {"description": "file with the definition of the items", "type": "YAML", "required": false}
-            },
+            "inputs": {},
             "friendlyName": "addChildren",
             "description": "Add items to the object"
         },
         "/service/addinstances": {
             "name": "/service/addinstances",
-            "inputs": {
-                "name": {"description": "Name of the object", "type": "string", "required": false},
-                "items": {"description": "Name of the items to add", "type": "string", "required": false},
-                "file": {"description": "file with the definition of the items", "type": "YAML", "required": false}
-            },
+            "inputs": {},
             "friendlyName": "addInstances",
             "description": "Add items to the object"
         },
@@ -422,16 +456,13 @@ module.exports = {
         },
         "/serviceinstance/new": {
             "name": "/serviceinstance/new",
-            "inputs": {"cls": {"description": "Class to use for the object new", "type": "string", "required": true}},
+            "inputs": {},
             "friendlyName": "new",
             "description": "New called for web interface"
         },
         "/serviceinstance/create": {
             "name": "/serviceinstance/create",
-            "inputs": {
-                "name": {"description": "Name of the object", "type": "string", "required": false},
-                "file": {"description": "file with the definition", "type": "YAML", "required": false}
-            },
+            "inputs": {},
             "friendlyName": "create",
             "description": "Create object of the class type"
         },
@@ -443,7 +474,7 @@ module.exports = {
         },
         "/serviceinstance/destory": {
             "name": "/serviceinstance/destory",
-            "inputs": {"cls": {"description": "Class to use for the object new", "type": "string", "required": true}},
+            "inputs": {},
             "friendlyName": "new",
             "description": "New called for web interface"
         },
@@ -474,16 +505,13 @@ module.exports = {
         },
         "/stack/new": {
             "name": "/stack/new",
-            "inputs": {"cls": {"description": "Class to use for the object new", "type": "string", "required": true}},
+            "inputs": {},
             "friendlyName": "new",
             "description": "New called for web interface"
         },
         "/stack/create": {
             "name": "/stack/create",
-            "inputs": {
-                "name": {"description": "Name of the object", "type": "string", "required": false},
-                "file": {"description": "file with the definition", "type": "YAML", "required": false}
-            },
+            "inputs": {},
             "friendlyName": "create",
             "description": "Create object of the class type"
         },
@@ -495,37 +523,25 @@ module.exports = {
         },
         "/stack/destory": {
             "name": "/stack/destory",
-            "inputs": {"cls": {"description": "Class to use for the object new", "type": "string", "required": true}},
+            "inputs": {},
             "friendlyName": "new",
             "description": "New called for web interface"
         },
         "/stack/addservices": {
             "name": "/stack/addservices",
-            "inputs": {
-                "name": {"description": "Name of the object", "type": "string", "required": false},
-                "items": {"description": "Name of the items to add", "type": "string", "required": false},
-                "file": {"description": "file with the definition of the items", "type": "YAML", "required": false}
-            },
+            "inputs": {},
             "friendlyName": "addServices",
             "description": "Add items to the object"
         },
         "/stack/addinstances": {
             "name": "/stack/addinstances",
-            "inputs": {
-                "name": {"description": "Name of the object", "type": "string", "required": false},
-                "items": {"description": "Name of the items to add", "type": "string", "required": false},
-                "file": {"description": "file with the definition of the items", "type": "YAML", "required": false}
-            },
+            "inputs": {},
             "friendlyName": "addInstances",
             "description": "Add items to the object"
         },
         "/stack/addchildren": {
             "name": "/stack/addchildren",
-            "inputs": {
-                "name": {"description": "Name of the object", "type": "string", "required": false},
-                "items": {"description": "Name of the items to add", "type": "string", "required": false},
-                "file": {"description": "file with the definition of the items", "type": "YAML", "required": false}
-            },
+            "inputs": {},
             "friendlyName": "addChildren",
             "description": "Add items to the object"
         },
@@ -565,16 +581,13 @@ module.exports = {
         },
         "/stackinstance/new": {
             "name": "/stackinstance/new",
-            "inputs": {"cls": {"description": "Class to use for the object new", "type": "string", "required": true}},
+            "inputs": {},
             "friendlyName": "new",
             "description": "New called for web interface"
         },
         "/stackinstance/create": {
             "name": "/stackinstance/create",
-            "inputs": {
-                "name": {"description": "Name of the object", "type": "string", "required": false},
-                "file": {"description": "file with the definition", "type": "YAML", "required": false}
-            },
+            "inputs": {},
             "friendlyName": "create",
             "description": "Create object of the class type"
         },
@@ -586,17 +599,13 @@ module.exports = {
         },
         "/stackinstance/destory": {
             "name": "/stackinstance/destory",
-            "inputs": {"cls": {"description": "Class to use for the object new", "type": "string", "required": true}},
+            "inputs": {},
             "friendlyName": "new",
             "description": "New called for web interface"
         },
         "/stackinstance/addservices": {
             "name": "/stackinstance/addservices",
-            "inputs": {
-                "name": {"description": "Name of the object", "type": "string", "required": false},
-                "items": {"description": "Name of the items to add", "type": "string", "required": false},
-                "file": {"description": "file with the definition of the items", "type": "YAML", "required": false}
-            },
+            "inputs": {},
             "friendlyName": "addServices",
             "description": "Add items to the object"
         },
@@ -628,7 +637,7 @@ module.exports = {
         },
         "/capability/new": {
             "name": "/capability/new",
-            "inputs": {"cls": {"description": "Class to use for the object new", "type": "string", "required": true}},
+            "inputs": {},
             "friendlyName": "new",
             "description": "New called for web interface"
         },
@@ -643,37 +652,25 @@ module.exports = {
         },
         "/capability/destory": {
             "name": "/capability/destory",
-            "inputs": {"cls": {"description": "Class to use for the object new", "type": "string", "required": true}},
+            "inputs": {},
             "friendlyName": "new",
             "description": "New called for web interface"
         },
         "/capability/addpolicies": {
             "name": "/capability/addpolicies",
-            "inputs": {
-                "name": {"description": "Name of the object", "type": "string", "required": false},
-                "items": {"description": "Name of the items to add", "type": "string", "required": false},
-                "file": {"description": "file with the definition of the items", "type": "YAML", "required": false}
-            },
+            "inputs": {},
             "friendlyName": "addPolicies",
             "description": "Add items to the object"
         },
         "/capability/addbundles": {
             "name": "/capability/addbundles",
-            "inputs": {
-                "name": {"description": "Name of the object", "type": "string", "required": false},
-                "items": {"description": "Name of the items to add", "type": "string", "required": false},
-                "file": {"description": "file with the definition of the items", "type": "YAML", "required": false}
-            },
+            "inputs": {},
             "friendlyName": "addBundles",
             "description": "Add items to the object"
         },
         "/capability/addinstances": {
             "name": "/capability/addinstances",
-            "inputs": {
-                "name": {"description": "Name of the object", "type": "string", "required": false},
-                "items": {"description": "Name of the items to add", "type": "string", "required": false},
-                "file": {"description": "file with the definition of the items", "type": "YAML", "required": false}
-            },
+            "inputs": {},
             "friendlyName": "addInstances",
             "description": "Add items to the object"
         },
@@ -694,16 +691,13 @@ module.exports = {
         },
         "/capabilityinstance/new": {
             "name": "/capabilityinstance/new",
-            "inputs": {"cls": {"description": "Class to use for the object new", "type": "string", "required": true}},
+            "inputs": {},
             "friendlyName": "new",
             "description": "New called for web interface"
         },
         "/capabilityinstance/create": {
             "name": "/capabilityinstance/create",
-            "inputs": {
-                "name": {"description": "Name of the object", "type": "string", "required": false},
-                "file": {"description": "file with the definition", "type": "YAML", "required": false}
-            },
+            "inputs": {},
             "friendlyName": "create",
             "description": "Create object of the class type"
         },
@@ -715,17 +709,13 @@ module.exports = {
         },
         "/capabilityinstance/destory": {
             "name": "/capabilityinstance/destory",
-            "inputs": {"cls": {"description": "Class to use for the object new", "type": "string", "required": true}},
+            "inputs": {},
             "friendlyName": "new",
             "description": "New called for web interface"
         },
         "/capabilityinstance/addbundles": {
             "name": "/capabilityinstance/addbundles",
-            "inputs": {
-                "name": {"description": "Name of the object", "type": "string", "required": false},
-                "items": {"description": "Name of the items to add", "type": "string", "required": false},
-                "file": {"description": "file with the definition of the items", "type": "YAML", "required": false}
-            },
+            "inputs": {},
             "friendlyName": "addBundles",
             "description": "Add items to the object"
         },
@@ -751,22 +741,19 @@ module.exports = {
         },
         "/aimodel/new": {
             "name": "/aimodel/new",
-            "inputs": {"cls": {"description": "Class to use for the object new", "type": "string", "required": true}},
+            "inputs": {},
             "friendlyName": "new",
             "description": "New called for web interface"
         },
         "/aimodel/create": {
             "name": "/aimodel/create",
-            "inputs": {
-                "name": {"description": "Name of the object", "type": "string", "required": false},
-                "file": {"description": "file with the definition", "type": "YAML", "required": false}
-            },
+            "inputs": {},
             "friendlyName": "create",
             "description": "Create object of the class type"
         },
         "/aimodel/destory": {
             "name": "/aimodel/destory",
-            "inputs": {"cls": {"description": "Class to use for the object new", "type": "string", "required": true}},
+            "inputs": {},
             "friendlyName": "new",
             "description": "New called for web interface"
         },
@@ -787,16 +774,13 @@ module.exports = {
         },
         "/datachannel/new": {
             "name": "/datachannel/new",
-            "inputs": {"cls": {"description": "Class to use for the object new", "type": "string", "required": true}},
+            "inputs": {},
             "friendlyName": "new",
             "description": "New called for web interface"
         },
         "/datachannel/create": {
             "name": "/datachannel/create",
-            "inputs": {
-                "name": {"description": "Name of the object", "type": "string", "required": false},
-                "file": {"description": "file with the definition", "type": "YAML", "required": false}
-            },
+            "inputs": {},
             "friendlyName": "create",
             "description": "Create object of the class type"
         },
@@ -808,27 +792,19 @@ module.exports = {
         },
         "/datachannel/destory": {
             "name": "/datachannel/destory",
-            "inputs": {"cls": {"description": "Class to use for the object new", "type": "string", "required": true}},
+            "inputs": {},
             "friendlyName": "new",
             "description": "New called for web interface"
         },
         "/datachannel/addpolicy": {
             "name": "/datachannel/addpolicy",
-            "inputs": {
-                "name": {"description": "Name of the object", "type": "string", "required": false},
-                "items": {"description": "Name of the items to add", "type": "string", "required": false},
-                "file": {"description": "file with the definition of the items", "type": "YAML", "required": false}
-            },
+            "inputs": {},
             "friendlyName": "addPolicy",
             "description": "Add items to the object"
         },
         "/datachannel/addinstances": {
             "name": "/datachannel/addinstances",
-            "inputs": {
-                "name": {"description": "Name of the object", "type": "string", "required": false},
-                "items": {"description": "Name of the items to add", "type": "string", "required": false},
-                "file": {"description": "file with the definition of the items", "type": "YAML", "required": false}
-            },
+            "inputs": {},
             "friendlyName": "addInstances",
             "description": "Add items to the object"
         },
@@ -856,7 +832,7 @@ module.exports = {
         },
         "/datachannelinstance/new": {
             "name": "/datachannelinstance/new",
-            "inputs": {"cls": {"description": "Class to use for the object new", "type": "string", "required": true}},
+            "inputs": {},
             "friendlyName": "new",
             "description": "New called for web interface"
         },
@@ -877,17 +853,13 @@ module.exports = {
         },
         "/datachannelinstance/destory": {
             "name": "/datachannelinstance/destory",
-            "inputs": {"cls": {"description": "Class to use for the object new", "type": "string", "required": true}},
+            "inputs": {},
             "friendlyName": "new",
             "description": "New called for web interface"
         },
         "/datachannelinstance/addtransforminstance": {
             "name": "/datachannelinstance/addtransforminstance",
-            "inputs": {
-                "name": {"description": "Name of the object", "type": "string", "required": false},
-                "items": {"description": "Name of the items to add", "type": "string", "required": false},
-                "file": {"description": "file with the definition of the items", "type": "YAML", "required": false}
-            },
+            "inputs": {},
             "friendlyName": "addTransformInstance",
             "description": "Add items to the object"
         },
@@ -925,16 +897,13 @@ module.exports = {
         },
         "/datastream/new": {
             "name": "/datastream/new",
-            "inputs": {"cls": {"description": "Class to use for the object new", "type": "string", "required": true}},
+            "inputs": {},
             "friendlyName": "new",
             "description": "New called for web interface"
         },
         "/datastream/create": {
             "name": "/datastream/create",
-            "inputs": {
-                "name": {"description": "Name of the object", "type": "string", "required": false},
-                "file": {"description": "file with the definition", "type": "YAML", "required": false}
-            },
+            "inputs": {},
             "friendlyName": "create",
             "description": "Create object of the class type"
         },
@@ -946,67 +915,43 @@ module.exports = {
         },
         "/datastream/destory": {
             "name": "/datastream/destory",
-            "inputs": {"cls": {"description": "Class to use for the object new", "type": "string", "required": true}},
+            "inputs": {},
             "friendlyName": "new",
             "description": "New called for web interface"
         },
         "/datastream/addpolicies": {
             "name": "/datastream/addpolicies",
-            "inputs": {
-                "name": {"description": "Name of the object", "type": "string", "required": false},
-                "items": {"description": "Name of the items to add", "type": "string", "required": false},
-                "file": {"description": "file with the definition of the items", "type": "YAML", "required": false}
-            },
+            "inputs": {},
             "friendlyName": "addPolicies",
             "description": "Add items to the object"
         },
         "/datastream/addchannels": {
             "name": "/datastream/addchannels",
-            "inputs": {
-                "name": {"description": "Name of the object", "type": "string", "required": false},
-                "items": {"description": "Name of the items to add", "type": "string", "required": false},
-                "file": {"description": "file with the definition of the items", "type": "YAML", "required": false}
-            },
+            "inputs": {},
             "friendlyName": "addChannels",
             "description": "Add items to the object"
         },
         "/datastream/addinstances": {
             "name": "/datastream/addinstances",
-            "inputs": {
-                "name": {"description": "Name of the object", "type": "string", "required": false},
-                "items": {"description": "Name of the items to add", "type": "string", "required": false},
-                "file": {"description": "file with the definition of the items", "type": "YAML", "required": false}
-            },
+            "inputs": {},
             "friendlyName": "addInstances",
             "description": "Add items to the object"
         },
         "/datastream/addtransforms": {
             "name": "/datastream/addtransforms",
-            "inputs": {
-                "name": {"description": "Name of the object", "type": "string", "required": false},
-                "items": {"description": "Name of the items to add", "type": "string", "required": false},
-                "file": {"description": "file with the definition of the items", "type": "YAML", "required": false}
-            },
+            "inputs": {},
             "friendlyName": "addTransforms",
             "description": "Add items to the object"
         },
         "/datastream/addconsumers": {
             "name": "/datastream/addconsumers",
-            "inputs": {
-                "name": {"description": "Name of the object", "type": "string", "required": false},
-                "items": {"description": "Name of the items to add", "type": "string", "required": false},
-                "file": {"description": "file with the definition of the items", "type": "YAML", "required": false}
-            },
+            "inputs": {},
             "friendlyName": "addConsumers",
             "description": "Add items to the object"
         },
         "/datastream/addproducers": {
             "name": "/datastream/addproducers",
-            "inputs": {
-                "name": {"description": "Name of the object", "type": "string", "required": false},
-                "items": {"description": "Name of the items to add", "type": "string", "required": false},
-                "file": {"description": "file with the definition of the items", "type": "YAML", "required": false}
-            },
+            "inputs": {},
             "friendlyName": "addProducers",
             "description": "Add items to the object"
         },
@@ -1027,16 +972,13 @@ module.exports = {
         },
         "/datastreaminstance/new": {
             "name": "/datastreaminstance/new",
-            "inputs": {"cls": {"description": "Class to use for the object new", "type": "string", "required": true}},
+            "inputs": {},
             "friendlyName": "new",
             "description": "New called for web interface"
         },
         "/datastreaminstance/create": {
             "name": "/datastreaminstance/create",
-            "inputs": {
-                "name": {"description": "Name of the object", "type": "string", "required": false},
-                "file": {"description": "file with the definition", "type": "YAML", "required": false}
-            },
+            "inputs": {},
             "friendlyName": "create",
             "description": "Create object of the class type"
         },
@@ -1048,37 +990,25 @@ module.exports = {
         },
         "/datastreaminstance/destory": {
             "name": "/datastreaminstance/destory",
-            "inputs": {"cls": {"description": "Class to use for the object new", "type": "string", "required": true}},
+            "inputs": {},
             "friendlyName": "new",
             "description": "New called for web interface"
         },
         "/datastreaminstance/addchannels": {
             "name": "/datastreaminstance/addchannels",
-            "inputs": {
-                "name": {"description": "Name of the object", "type": "string", "required": false},
-                "items": {"description": "Name of the items to add", "type": "string", "required": false},
-                "file": {"description": "file with the definition of the items", "type": "YAML", "required": false}
-            },
+            "inputs": {},
             "friendlyName": "addChannels",
             "description": "Add items to the object"
         },
         "/datastreaminstance/addpolicies": {
             "name": "/datastreaminstance/addpolicies",
-            "inputs": {
-                "name": {"description": "Name of the object", "type": "string", "required": false},
-                "items": {"description": "Name of the items to add", "type": "string", "required": false},
-                "file": {"description": "file with the definition of the items", "type": "YAML", "required": false}
-            },
+            "inputs": {},
             "friendlyName": "addPolicies",
             "description": "Add items to the object"
         },
         "/datastreaminstance/addtransforms": {
             "name": "/datastreaminstance/addtransforms",
-            "inputs": {
-                "name": {"description": "Name of the object", "type": "string", "required": false},
-                "items": {"description": "Name of the items to add", "type": "string", "required": false},
-                "file": {"description": "file with the definition of the items", "type": "YAML", "required": false}
-            },
+            "inputs": {},
             "friendlyName": "addTransforms",
             "description": "Add items to the object"
         },
@@ -1093,8 +1023,16 @@ module.exports = {
             "inputs": {
                 "name": {"type": "string", "description": "Name of the item to update", "required": false},
                 "direction": {"type": "string", "description": "In or Out", "required": false},
-                "parent": {"type": "object", "required": false},
-                "bundle": {"type": "object", "required": false},
+                "parent": {
+                    "type": "object",
+                    "description": "This is the parent of the data stream instance.",
+                    "required": false
+                },
+                "bundle": {
+                    "type": "object",
+                    "description": "This is the Bundle instance that the data stream instance is connected.",
+                    "required": false
+                },
                 "id": {"type": "string", "description": "ID of the item to update", "required": false}
             },
             "friendlyName": "update",
@@ -1102,7 +1040,7 @@ module.exports = {
         },
         "/inputchannelinstance/new": {
             "name": "/inputchannelinstance/new",
-            "inputs": {"cls": {"description": "Class to use for the object new", "type": "string", "required": true}},
+            "inputs": {},
             "friendlyName": "new",
             "description": "New called for web interface"
         },
@@ -1123,27 +1061,19 @@ module.exports = {
         },
         "/inputchannelinstance/destory": {
             "name": "/inputchannelinstance/destory",
-            "inputs": {"cls": {"description": "Class to use for the object new", "type": "string", "required": true}},
+            "inputs": {},
             "friendlyName": "new",
             "description": "New called for web interface"
         },
         "/inputchannelinstance/addtransforms": {
             "name": "/inputchannelinstance/addtransforms",
-            "inputs": {
-                "name": {"description": "Name of the object", "type": "string", "required": false},
-                "items": {"description": "Name of the items to add", "type": "string", "required": false},
-                "file": {"description": "file with the definition of the items", "type": "YAML", "required": false}
-            },
+            "inputs": {},
             "friendlyName": "addTransforms",
             "description": "Add items to the object"
         },
         "/inputchannelinstance/addtransforminstance": {
             "name": "/inputchannelinstance/addtransforminstance",
-            "inputs": {
-                "name": {"description": "Name of the object", "type": "string", "required": false},
-                "items": {"description": "Name of the items to add", "type": "string", "required": false},
-                "file": {"description": "file with the definition of the items", "type": "YAML", "required": false}
-            },
+            "inputs": {},
             "friendlyName": "addTransformInstance",
             "description": "Add items to the object"
         },
@@ -1186,16 +1116,13 @@ module.exports = {
         },
         "/inputstreaminstance/new": {
             "name": "/inputstreaminstance/new",
-            "inputs": {"cls": {"description": "Class to use for the object new", "type": "string", "required": true}},
+            "inputs": {},
             "friendlyName": "new",
             "description": "New called for web interface"
         },
         "/inputstreaminstance/create": {
             "name": "/inputstreaminstance/create",
-            "inputs": {
-                "name": {"description": "Name of the object", "type": "string", "required": false},
-                "file": {"description": "file with the definition", "type": "YAML", "required": false}
-            },
+            "inputs": {},
             "friendlyName": "create",
             "description": "Create object of the class type"
         },
@@ -1207,37 +1134,25 @@ module.exports = {
         },
         "/inputstreaminstance/destory": {
             "name": "/inputstreaminstance/destory",
-            "inputs": {"cls": {"description": "Class to use for the object new", "type": "string", "required": true}},
+            "inputs": {},
             "friendlyName": "new",
             "description": "New called for web interface"
         },
         "/inputstreaminstance/addchannels": {
             "name": "/inputstreaminstance/addchannels",
-            "inputs": {
-                "name": {"description": "Name of the object", "type": "string", "required": false},
-                "items": {"description": "Name of the items to add", "type": "string", "required": false},
-                "file": {"description": "file with the definition of the items", "type": "YAML", "required": false}
-            },
+            "inputs": {},
             "friendlyName": "addChannels",
             "description": "Add items to the object"
         },
         "/inputstreaminstance/addpolicies": {
             "name": "/inputstreaminstance/addpolicies",
-            "inputs": {
-                "name": {"description": "Name of the object", "type": "string", "required": false},
-                "items": {"description": "Name of the items to add", "type": "string", "required": false},
-                "file": {"description": "file with the definition of the items", "type": "YAML", "required": false}
-            },
+            "inputs": {},
             "friendlyName": "addPolicies",
             "description": "Add items to the object"
         },
         "/inputstreaminstance/addtransforms": {
             "name": "/inputstreaminstance/addtransforms",
-            "inputs": {
-                "name": {"description": "Name of the object", "type": "string", "required": false},
-                "items": {"description": "Name of the items to add", "type": "string", "required": false},
-                "file": {"description": "file with the definition of the items", "type": "YAML", "required": false}
-            },
+            "inputs": {},
             "friendlyName": "addTransforms",
             "description": "Add items to the object"
         },
@@ -1257,8 +1172,16 @@ module.exports = {
                 },
                 "name": {"type": "string", "description": "Name of the item to update", "required": false},
                 "direction": {"type": "string", "description": "In or Out", "required": false},
-                "parent": {"type": "object", "required": false},
-                "bundle": {"type": "object", "required": false},
+                "parent": {
+                    "type": "object",
+                    "description": "This is the parent of the data stream instance.",
+                    "required": false
+                },
+                "bundle": {
+                    "type": "object",
+                    "description": "This is the Bundle instance that the data stream instance is connected.",
+                    "required": false
+                },
                 "id": {"type": "string", "description": "ID of the item to update", "required": false}
             },
             "friendlyName": "update",
@@ -1266,7 +1189,7 @@ module.exports = {
         },
         "/outputchannelinstance/new": {
             "name": "/outputchannelinstance/new",
-            "inputs": {"cls": {"description": "Class to use for the object new", "type": "string", "required": true}},
+            "inputs": {},
             "friendlyName": "new",
             "description": "New called for web interface"
         },
@@ -1287,17 +1210,13 @@ module.exports = {
         },
         "/outputchannelinstance/destory": {
             "name": "/outputchannelinstance/destory",
-            "inputs": {"cls": {"description": "Class to use for the object new", "type": "string", "required": true}},
+            "inputs": {},
             "friendlyName": "new",
             "description": "New called for web interface"
         },
         "/outputchannelinstance/addtransforminstance": {
             "name": "/outputchannelinstance/addtransforminstance",
-            "inputs": {
-                "name": {"description": "Name of the object", "type": "string", "required": false},
-                "items": {"description": "Name of the items to add", "type": "string", "required": false},
-                "file": {"description": "file with the definition of the items", "type": "YAML", "required": false}
-            },
+            "inputs": {},
             "friendlyName": "addTransformInstance",
             "description": "Add items to the object"
         },
@@ -1347,16 +1266,13 @@ module.exports = {
         },
         "/outputstreaminstance/new": {
             "name": "/outputstreaminstance/new",
-            "inputs": {"cls": {"description": "Class to use for the object new", "type": "string", "required": true}},
+            "inputs": {},
             "friendlyName": "new",
             "description": "New called for web interface"
         },
         "/outputstreaminstance/create": {
             "name": "/outputstreaminstance/create",
-            "inputs": {
-                "name": {"description": "Name of the object", "type": "string", "required": false},
-                "file": {"description": "file with the definition", "type": "YAML", "required": false}
-            },
+            "inputs": {},
             "friendlyName": "create",
             "description": "Create object of the class type"
         },
@@ -1368,37 +1284,25 @@ module.exports = {
         },
         "/outputstreaminstance/destory": {
             "name": "/outputstreaminstance/destory",
-            "inputs": {"cls": {"description": "Class to use for the object new", "type": "string", "required": true}},
+            "inputs": {},
             "friendlyName": "new",
             "description": "New called for web interface"
         },
         "/outputstreaminstance/addchannels": {
             "name": "/outputstreaminstance/addchannels",
-            "inputs": {
-                "name": {"description": "Name of the object", "type": "string", "required": false},
-                "items": {"description": "Name of the items to add", "type": "string", "required": false},
-                "file": {"description": "file with the definition of the items", "type": "YAML", "required": false}
-            },
+            "inputs": {},
             "friendlyName": "addChannels",
             "description": "Add items to the object"
         },
         "/outputstreaminstance/addpolicies": {
             "name": "/outputstreaminstance/addpolicies",
-            "inputs": {
-                "name": {"description": "Name of the object", "type": "string", "required": false},
-                "items": {"description": "Name of the items to add", "type": "string", "required": false},
-                "file": {"description": "file with the definition of the items", "type": "YAML", "required": false}
-            },
+            "inputs": {},
             "friendlyName": "addPolicies",
             "description": "Add items to the object"
         },
         "/outputstreaminstance/addtransforms": {
             "name": "/outputstreaminstance/addtransforms",
-            "inputs": {
-                "name": {"description": "Name of the object", "type": "string", "required": false},
-                "items": {"description": "Name of the items to add", "type": "string", "required": false},
-                "file": {"description": "file with the definition of the items", "type": "YAML", "required": false}
-            },
+            "inputs": {},
             "friendlyName": "addTransforms",
             "description": "Add items to the object"
         },
@@ -1418,8 +1322,16 @@ module.exports = {
                 },
                 "name": {"type": "string", "description": "Name of the item to update", "required": false},
                 "direction": {"type": "string", "description": "In or Out", "required": false},
-                "parent": {"type": "object", "required": false},
-                "bundle": {"type": "object", "required": false},
+                "parent": {
+                    "type": "object",
+                    "description": "This is the parent of the data stream instance.",
+                    "required": false
+                },
+                "bundle": {
+                    "type": "object",
+                    "description": "This is the Bundle instance that the data stream instance is connected.",
+                    "required": false
+                },
                 "id": {"type": "string", "description": "ID of the item to update", "required": false}
             },
             "friendlyName": "update",
@@ -1427,14 +1339,14 @@ module.exports = {
         },
         "/streampolicy/new": {
             "name": "/streampolicy/new",
-            "inputs": {"cls": {"description": "Class to use for the object new", "type": "string", "required": true}},
+            "inputs": {},
             "friendlyName": "new",
             "description": "New called for web interface"
         },
         "/streampolicy/create": {
             "name": "/streampolicy/create",
             "inputs": {
-                "name": {"description": "name of the Sentient Agent Bundle", "type": "string", "required": true},
+                "name": {"description": "name of the StreamPolicy", "type": "string", "required": true},
                 "file": {"description": "file with the definition", "type": "file", "required": false}
             },
             "friendlyName": "create",
@@ -1448,27 +1360,19 @@ module.exports = {
         },
         "/streampolicy/destory": {
             "name": "/streampolicy/destory",
-            "inputs": {"cls": {"description": "Class to use for the object new", "type": "string", "required": true}},
+            "inputs": {},
             "friendlyName": "new",
             "description": "New called for web interface"
         },
         "/streampolicy/addstream": {
             "name": "/streampolicy/addstream",
-            "inputs": {
-                "name": {"description": "Name of the object", "type": "string", "required": false},
-                "items": {"description": "Name of the items to add", "type": "string", "required": false},
-                "file": {"description": "file with the definition of the items", "type": "YAML", "required": false}
-            },
+            "inputs": {},
             "friendlyName": "addStream",
             "description": "Add items to the object"
         },
         "/streampolicy/addchannels": {
             "name": "/streampolicy/addchannels",
-            "inputs": {
-                "name": {"description": "Name of the object", "type": "string", "required": false},
-                "items": {"description": "Name of the items to add", "type": "string", "required": false},
-                "file": {"description": "file with the definition of the items", "type": "YAML", "required": false}
-            },
+            "inputs": {},
             "friendlyName": "addChannels",
             "description": "Add items to the object"
         },
@@ -1499,16 +1403,13 @@ module.exports = {
         },
         "/datatransform/new": {
             "name": "/datatransform/new",
-            "inputs": {"cls": {"description": "Class to use for the object new", "type": "string", "required": true}},
+            "inputs": {},
             "friendlyName": "new",
             "description": "New called for web interface"
         },
         "/datatransform/create": {
             "name": "/datatransform/create",
-            "inputs": {
-                "name": {"description": "Name of the object", "type": "string", "required": false},
-                "file": {"description": "file with the definition", "type": "YAML", "required": false}
-            },
+            "inputs": {},
             "friendlyName": "create",
             "description": "Create object of the class type"
         },
@@ -1520,27 +1421,19 @@ module.exports = {
         },
         "/datatransform/destory": {
             "name": "/datatransform/destory",
-            "inputs": {"cls": {"description": "Class to use for the object new", "type": "string", "required": true}},
+            "inputs": {},
             "friendlyName": "new",
             "description": "New called for web interface"
         },
         "/datatransform/addinputs": {
             "name": "/datatransform/addinputs",
-            "inputs": {
-                "name": {"description": "Name of the object", "type": "string", "required": false},
-                "items": {"description": "Name of the items to add", "type": "string", "required": false},
-                "file": {"description": "file with the definition of the items", "type": "YAML", "required": false}
-            },
+            "inputs": {},
             "friendlyName": "addInputs",
             "description": "Add items to the object"
         },
         "/datatransform/addoutputs": {
             "name": "/datatransform/addoutputs",
-            "inputs": {
-                "name": {"description": "Name of the object", "type": "string", "required": false},
-                "items": {"description": "Name of the items to add", "type": "string", "required": false},
-                "file": {"description": "file with the definition of the items", "type": "YAML", "required": false}
-            },
+            "inputs": {},
             "friendlyName": "addOutputs",
             "description": "Add items to the object"
         },
@@ -1566,16 +1459,13 @@ module.exports = {
         },
         "/datatransforminstance/new": {
             "name": "/datatransforminstance/new",
-            "inputs": {"cls": {"description": "Class to use for the object new", "type": "string", "required": true}},
+            "inputs": {},
             "friendlyName": "new",
             "description": "New called for web interface"
         },
         "/datatransforminstance/create": {
             "name": "/datatransforminstance/create",
-            "inputs": {
-                "name": {"description": "Name of the object", "type": "string", "required": false},
-                "file": {"description": "file with the definition", "type": "YAML", "required": false}
-            },
+            "inputs": {},
             "friendlyName": "create",
             "description": "Create object of the class type"
         },
@@ -1587,27 +1477,19 @@ module.exports = {
         },
         "/datatransforminstance/destory": {
             "name": "/datatransforminstance/destory",
-            "inputs": {"cls": {"description": "Class to use for the object new", "type": "string", "required": true}},
+            "inputs": {},
             "friendlyName": "new",
             "description": "New called for web interface"
         },
         "/datatransforminstance/addinputs": {
             "name": "/datatransforminstance/addinputs",
-            "inputs": {
-                "name": {"description": "Name of the object", "type": "string", "required": false},
-                "items": {"description": "Name of the items to add", "type": "string", "required": false},
-                "file": {"description": "file with the definition of the items", "type": "YAML", "required": false}
-            },
+            "inputs": {},
             "friendlyName": "addInputs",
             "description": "Add items to the object"
         },
         "/datatransforminstance/addoutputs": {
             "name": "/datatransforminstance/addoutputs",
-            "inputs": {
-                "name": {"description": "Name of the object", "type": "string", "required": false},
-                "items": {"description": "Name of the items to add", "type": "string", "required": false},
-                "file": {"description": "file with the definition of the items", "type": "YAML", "required": false}
-            },
+            "inputs": {},
             "friendlyName": "addOutputs",
             "description": "Add items to the object"
         },
@@ -1634,7 +1516,7 @@ module.exports = {
         },
         "/sabundle/new": {
             "name": "/sabundle/new",
-            "inputs": {"cls": {"description": "Class to use for the object new", "type": "string", "required": true}},
+            "inputs": {},
             "friendlyName": "new",
             "description": "New called for web interface"
         },
@@ -1655,77 +1537,49 @@ module.exports = {
         },
         "/sabundle/destory": {
             "name": "/sabundle/destory",
-            "inputs": {"cls": {"description": "Class to use for the object new", "type": "string", "required": true}},
+            "inputs": {},
             "friendlyName": "new",
             "description": "New called for web interface"
         },
         "/sabundle/addinputs": {
             "name": "/sabundle/addinputs",
-            "inputs": {
-                "name": {"description": "Name of the object", "type": "string", "required": false},
-                "items": {"description": "Name of the items to add", "type": "string", "required": false},
-                "file": {"description": "file with the definition of the items", "type": "YAML", "required": false}
-            },
+            "inputs": {},
             "friendlyName": "addInputs",
             "description": "Add items to the object"
         },
         "/sabundle/addoutputs": {
             "name": "/sabundle/addoutputs",
-            "inputs": {
-                "name": {"description": "Name of the object", "type": "string", "required": false},
-                "items": {"description": "Name of the items to add", "type": "string", "required": false},
-                "file": {"description": "file with the definition of the items", "type": "YAML", "required": false}
-            },
+            "inputs": {},
             "friendlyName": "addOutputs",
             "description": "Add items to the object"
         },
         "/sabundle/addtransforms": {
             "name": "/sabundle/addtransforms",
-            "inputs": {
-                "name": {"description": "Name of the object", "type": "string", "required": false},
-                "items": {"description": "Name of the items to add", "type": "string", "required": false},
-                "file": {"description": "file with the definition of the items", "type": "YAML", "required": false}
-            },
+            "inputs": {},
             "friendlyName": "addTransforms",
             "description": "Add items to the object"
         },
         "/sabundle/addapplications": {
             "name": "/sabundle/addapplications",
-            "inputs": {
-                "name": {"description": "Name of the object", "type": "string", "required": false},
-                "items": {"description": "Name of the items to add", "type": "string", "required": false},
-                "file": {"description": "file with the definition of the items", "type": "YAML", "required": false}
-            },
+            "inputs": {},
             "friendlyName": "addApplications",
             "description": "Add items to the object"
         },
         "/sabundle/addstacks": {
             "name": "/sabundle/addstacks",
-            "inputs": {
-                "name": {"description": "Name of the object", "type": "string", "required": false},
-                "items": {"description": "Name of the items to add", "type": "string", "required": false},
-                "file": {"description": "file with the definition of the items", "type": "YAML", "required": false}
-            },
+            "inputs": {},
             "friendlyName": "addStacks",
             "description": "Add items to the object"
         },
         "/sabundle/addaimodels": {
             "name": "/sabundle/addaimodels",
-            "inputs": {
-                "name": {"description": "Name of the object", "type": "string", "required": false},
-                "items": {"description": "Name of the items to add", "type": "string", "required": false},
-                "file": {"description": "file with the definition of the items", "type": "YAML", "required": false}
-            },
+            "inputs": {},
             "friendlyName": "addAimodels",
             "description": "Add items to the object"
         },
         "/sabundle/addinstances": {
             "name": "/sabundle/addinstances",
-            "inputs": {
-                "name": {"description": "Name of the object", "type": "string", "required": false},
-                "items": {"description": "Name of the items to add", "type": "string", "required": false},
-                "file": {"description": "file with the definition of the items", "type": "YAML", "required": false}
-            },
+            "inputs": {},
             "friendlyName": "addInstances",
             "description": "Add items to the object"
         },
@@ -1760,6 +1614,7 @@ module.exports = {
                     "description": "Administration Stream to handle registration of SABRS and Capabilities",
                     "required": false
                 },
+                "secureVault": {"type": "object", "required": false},
                 "id": {"type": "string", "description": "ID of the item to update", "required": false}
             },
             "friendlyName": "update",
@@ -1767,16 +1622,13 @@ module.exports = {
         },
         "/sabundleinstance/new": {
             "name": "/sabundleinstance/new",
-            "inputs": {"cls": {"description": "Class to use for the object new", "type": "string", "required": true}},
+            "inputs": {},
             "friendlyName": "new",
             "description": "New called for web interface"
         },
         "/sabundleinstance/create": {
             "name": "/sabundleinstance/create",
-            "inputs": {
-                "name": {"description": "Name of the object", "type": "string", "required": false},
-                "file": {"description": "file with the definition", "type": "YAML", "required": false}
-            },
+            "inputs": {},
             "friendlyName": "create",
             "description": "Create object of the class type"
         },
@@ -1788,57 +1640,37 @@ module.exports = {
         },
         "/sabundleinstance/destory": {
             "name": "/sabundleinstance/destory",
-            "inputs": {"cls": {"description": "Class to use for the object new", "type": "string", "required": true}},
+            "inputs": {},
             "friendlyName": "new",
             "description": "New called for web interface"
         },
         "/sabundleinstance/addinputs": {
             "name": "/sabundleinstance/addinputs",
-            "inputs": {
-                "name": {"description": "Name of the object", "type": "string", "required": false},
-                "items": {"description": "Name of the items to add", "type": "string", "required": false},
-                "file": {"description": "file with the definition of the items", "type": "YAML", "required": false}
-            },
+            "inputs": {},
             "friendlyName": "addInputs",
             "description": "Add items to the object"
         },
         "/sabundleinstance/addoutputs": {
             "name": "/sabundleinstance/addoutputs",
-            "inputs": {
-                "name": {"description": "Name of the object", "type": "string", "required": false},
-                "items": {"description": "Name of the items to add", "type": "string", "required": false},
-                "file": {"description": "file with the definition of the items", "type": "YAML", "required": false}
-            },
+            "inputs": {},
             "friendlyName": "addOutputs",
             "description": "Add items to the object"
         },
         "/sabundleinstance/addstack": {
             "name": "/sabundleinstance/addstack",
-            "inputs": {
-                "name": {"description": "Name of the object", "type": "string", "required": false},
-                "items": {"description": "Name of the items to add", "type": "string", "required": false},
-                "file": {"description": "file with the definition of the items", "type": "YAML", "required": false}
-            },
+            "inputs": {},
             "friendlyName": "addStack",
             "description": "Add items to the object"
         },
         "/sabundleinstance/addaimodels": {
             "name": "/sabundleinstance/addaimodels",
-            "inputs": {
-                "name": {"description": "Name of the object", "type": "string", "required": false},
-                "items": {"description": "Name of the items to add", "type": "string", "required": false},
-                "file": {"description": "file with the definition of the items", "type": "YAML", "required": false}
-            },
+            "inputs": {},
             "friendlyName": "addAimodels",
             "description": "Add items to the object"
         },
         "/sabundleinstance/addtransforms": {
             "name": "/sabundleinstance/addtransforms",
-            "inputs": {
-                "name": {"description": "Name of the object", "type": "string", "required": false},
-                "items": {"description": "Name of the items to add", "type": "string", "required": false},
-                "file": {"description": "file with the definition of the items", "type": "YAML", "required": false}
-            },
+            "inputs": {},
             "friendlyName": "addTransforms",
             "description": "Add items to the object"
         },
@@ -1857,7 +1689,7 @@ module.exports = {
                     "description": "Level of the SABR Instance. Determines the mode of operation.",
                     "required": false
                 },
-                "parent": {"type": "object", "required": false},
+                "parent": {"type": "object", "description": "Parent of the SAB Instance", "required": false},
                 "learningInput": {
                     "type": "object",
                     "description": "Learning Corpus Input Stream receives updates to the aimodel",
@@ -1885,16 +1717,13 @@ module.exports = {
         },
         "/keystore/new": {
             "name": "/keystore/new",
-            "inputs": {"cls": {"description": "Class to use for the object new", "type": "string", "required": true}},
+            "inputs": {},
             "friendlyName": "new",
             "description": "New called for web interface"
         },
         "/keystore/create": {
             "name": "/keystore/create",
-            "inputs": {
-                "name": {"description": "Name of the object", "type": "string", "required": false},
-                "file": {"description": "file with the definition", "type": "YAML", "required": false}
-            },
+            "inputs": {},
             "friendlyName": "create",
             "description": "Create object of the class type"
         },
@@ -1906,17 +1735,13 @@ module.exports = {
         },
         "/keystore/destory": {
             "name": "/keystore/destory",
-            "inputs": {"cls": {"description": "Class to use for the object new", "type": "string", "required": true}},
+            "inputs": {},
             "friendlyName": "new",
             "description": "New called for web interface"
         },
         "/keystore/addkeys": {
             "name": "/keystore/addkeys",
-            "inputs": {
-                "name": {"description": "Name of the object", "type": "string", "required": false},
-                "items": {"description": "Name of the items to add", "type": "string", "required": false},
-                "file": {"description": "file with the definition of the items", "type": "YAML", "required": false}
-            },
+            "inputs": {},
             "friendlyName": "addKeys",
             "description": "Add items to the object"
         },
@@ -1935,18 +1760,56 @@ module.exports = {
             "friendlyName": "update",
             "description": "Update entity"
         },
+        "/securevault/new": {
+            "name": "/securevault/new",
+            "inputs": {},
+            "friendlyName": "new",
+            "description": "New called for web interface"
+        },
+        "/securevault/create": {
+            "name": "/securevault/create",
+            "inputs": {},
+            "friendlyName": "create",
+            "description": "Create object of the class type"
+        },
+        "/securevault/list": {
+            "name": "/securevault/list",
+            "inputs": {},
+            "friendlyName": "list",
+            "description": "List of model objects"
+        },
+        "/securevault/destory": {
+            "name": "/securevault/destory",
+            "inputs": {},
+            "friendlyName": "new",
+            "description": "New called for web interface"
+        },
+        "/securevault": {
+            "name": "/securevault",
+            "inputs": {},
+            "friendlyName": "new",
+            "description": "New called for web interface"
+        },
+        "/securevault/update": {
+            "name": "/securevault/update",
+            "inputs": {
+                "name": {"type": "string", "description": "Name of the item to update", "required": false},
+                "key": {"type": "object", "required": false},
+                "vault": {"type": "object", "required": false},
+                "id": {"type": "string", "description": "ID of the item to update", "required": false}
+            },
+            "friendlyName": "update",
+            "description": "Update entity"
+        },
         "/securitykey/new": {
             "name": "/securitykey/new",
-            "inputs": {"cls": {"description": "Class to use for the object new", "type": "string", "required": true}},
+            "inputs": {},
             "friendlyName": "new",
             "description": "New called for web interface"
         },
         "/securitykey/create": {
             "name": "/securitykey/create",
-            "inputs": {
-                "name": {"description": "Name of the object", "type": "string", "required": false},
-                "file": {"description": "file with the definition", "type": "YAML", "required": false}
-            },
+            "inputs": {},
             "friendlyName": "create",
             "description": "Create object of the class type"
         },
@@ -1958,7 +1821,7 @@ module.exports = {
         },
         "/securitykey/destory": {
             "name": "/securitykey/destory",
-            "inputs": {"cls": {"description": "Class to use for the object new", "type": "string", "required": true}},
+            "inputs": {},
             "friendlyName": "new",
             "description": "New called for web interface"
         },
@@ -1980,16 +1843,13 @@ module.exports = {
         },
         "/dockerprovisioner/new": {
             "name": "/dockerprovisioner/new",
-            "inputs": {"cls": {"description": "Class to use for the object new", "type": "string", "required": true}},
+            "inputs": {},
             "friendlyName": "new",
             "description": "New called for web interface"
         },
         "/dockerprovisioner/create": {
             "name": "/dockerprovisioner/create",
-            "inputs": {
-                "name": {"description": "Name of the object", "type": "string", "required": false},
-                "file": {"description": "file with the definition", "type": "YAML", "required": false}
-            },
+            "inputs": {},
             "friendlyName": "create",
             "description": "Create object of the class type"
         },
@@ -2001,9 +1861,15 @@ module.exports = {
         },
         "/dockerprovisioner/destory": {
             "name": "/dockerprovisioner/destory",
-            "inputs": {"cls": {"description": "Class to use for the object new", "type": "string", "required": true}},
+            "inputs": {},
             "friendlyName": "new",
             "description": "New called for web interface"
+        },
+        "/dockerprovisioner/addservices": {
+            "name": "/dockerprovisioner/addservices",
+            "inputs": {},
+            "friendlyName": "addServices",
+            "description": "Add items to the object"
         },
         "/dockerprovisioner": {
             "name": "/dockerprovisioner",
@@ -2015,6 +1881,7 @@ module.exports = {
             "name": "/dockerprovisioner/update",
             "inputs": {
                 "name": {"type": "string", "description": "Name of the item to update", "required": false},
+                "config": {"type": "json", "description": "Configuration for the provisioner.", "required": false},
                 "id": {"type": "string", "description": "ID of the item to update", "required": false}
             },
             "friendlyName": "update",
@@ -2022,16 +1889,13 @@ module.exports = {
         },
         "/processprovisioner/new": {
             "name": "/processprovisioner/new",
-            "inputs": {"cls": {"description": "Class to use for the object new", "type": "string", "required": true}},
+            "inputs": {},
             "friendlyName": "new",
             "description": "New called for web interface"
         },
         "/processprovisioner/create": {
             "name": "/processprovisioner/create",
-            "inputs": {
-                "name": {"description": "Name of the object", "type": "string", "required": false},
-                "file": {"description": "file with the definition", "type": "YAML", "required": false}
-            },
+            "inputs": {},
             "friendlyName": "create",
             "description": "Create object of the class type"
         },
@@ -2043,17 +1907,13 @@ module.exports = {
         },
         "/processprovisioner/destory": {
             "name": "/processprovisioner/destory",
-            "inputs": {"cls": {"description": "Class to use for the object new", "type": "string", "required": true}},
+            "inputs": {},
             "friendlyName": "new",
             "description": "New called for web interface"
         },
         "/processprovisioner/addservices": {
             "name": "/processprovisioner/addservices",
-            "inputs": {
-                "name": {"description": "Name of the object", "type": "string", "required": false},
-                "items": {"description": "Name of the items to add", "type": "string", "required": false},
-                "file": {"description": "file with the definition of the items", "type": "YAML", "required": false}
-            },
+            "inputs": {},
             "friendlyName": "addServices",
             "description": "Add items to the object"
         },
@@ -2075,16 +1935,13 @@ module.exports = {
         },
         "/provisioner/new": {
             "name": "/provisioner/new",
-            "inputs": {"cls": {"description": "Class to use for the object new", "type": "string", "required": true}},
+            "inputs": {},
             "friendlyName": "new",
             "description": "New called for web interface"
         },
         "/provisioner/create": {
             "name": "/provisioner/create",
-            "inputs": {
-                "name": {"description": "Name of the object", "type": "string", "required": false},
-                "file": {"description": "file with the definition", "type": "YAML", "required": false}
-            },
+            "inputs": {},
             "friendlyName": "create",
             "description": "Create object of the class type"
         },
@@ -2096,17 +1953,13 @@ module.exports = {
         },
         "/provisioner/destory": {
             "name": "/provisioner/destory",
-            "inputs": {"cls": {"description": "Class to use for the object new", "type": "string", "required": true}},
+            "inputs": {},
             "friendlyName": "new",
             "description": "New called for web interface"
         },
         "/provisioner/addservices": {
             "name": "/provisioner/addservices",
-            "inputs": {
-                "name": {"description": "Name of the object", "type": "string", "required": false},
-                "items": {"description": "Name of the items to add", "type": "string", "required": false},
-                "file": {"description": "file with the definition of the items", "type": "YAML", "required": false}
-            },
+            "inputs": {},
             "friendlyName": "addServices",
             "description": "Add items to the object"
         },
@@ -2128,16 +1981,35 @@ module.exports = {
         },
         "/actor/get": {
             "name": "/actor/get",
-            "inputs": {"id": {"description": "The id of the actor", "type": "string", "required": true}},
+            "inputs": {
+                "id": {"description": "The id of the actor", "type": "string", "required": true},
+                "doc": {"descritpion": "Return the documentation of the actor", "type": "boolean", "required": false}
+            },
             "friendlyName": "get",
             "description": "Get an Actor"
         },
         "/actor/list": {"name": "/actor/list", "inputs": {}, "friendlyName": "list", "description": "List the Actors"},
+        "/actor/set": {
+            "name": "/actor/set",
+            "inputs": {
+                "id": {"description": "Id of the actor", "type": "string", "required": true},
+                "summary": {"descritpion": "Summary of the actor", "type": "string", "required": false},
+                "document": {"descritpion": "Documentation of the actor", "type": "string", "required": false}
+            },
+            "friendlyName": "set",
+            "description": "Set an Actor documentation"
+        },
         "/actor/show": {
             "name": "/actor/show",
             "inputs": {"name": {"description": "The scope name of the actor", "type": "string", "required": true}},
             "friendlyName": "show",
             "description": "Show the application"
+        },
+        "/app/errors": {
+            "name": "/app/errors",
+            "inputs": {},
+            "friendlyName": "error",
+            "description": "Errors in an app"
         },
         "/app/show": {"name": "/app/show", "inputs": {}, "friendlyName": "show", "description": "Show the application"},
         "/deployment/get": {
@@ -2152,6 +2024,8 @@ module.exports = {
             "friendlyName": "list",
             "description": "List the Deployment"
         },
+        "/env/get": {"name": "/env/get", "inputs": {}, "friendlyName": "get", "description": "get an Environment"},
+        "/env/list": {"name": "/env/list", "inputs": {}, "friendlyName": "list", "description": "List the Deployment"},
         "/environment/get": {
             "name": "/environment/get",
             "inputs": {},
@@ -2178,14 +2052,30 @@ module.exports = {
         },
         "/model/get": {
             "name": "/model/get",
-            "inputs": {"id": {"description": "The id of the model", "type": "string", "required": true}},
+            "inputs": {
+                "id": {"description": "The id of the model", "type": "string", "required": true},
+                "doc": {"description": "Get the documentation of the model", "type": "boolean", "required": false}
+            },
             "friendlyName": "get",
             "description": "Get a Model"
         },
         "/model/list": {"name": "/model/list", "inputs": {}, "friendlyName": "list", "description": "List the Models"},
+        "/model/set": {
+            "name": "/model/set",
+            "inputs": {
+                "id": {"description": "Id of the UseCase", "type": "string", "required": true},
+                "summary": {"descritpion": "Summary of the UseCase", "type": "string", "required": false},
+                "document": {"descritpion": "Documentation of the UseCase", "type": "string", "required": false}
+            },
+            "friendlyName": "set",
+            "description": "Set an UseCase documentation"
+        },
         "/package/get": {
             "name": "/package/get",
-            "inputs": {"id": {"description": "The name of the package", "type": "string", "required": true}},
+            "inputs": {
+                "id": {"description": "The name of the package", "type": "string", "required": true},
+                "doc": {"description": "Get the documentation of the package", "type": "boolean", "required": false}
+            },
             "friendlyName": "get",
             "description": "Get the Packages"
         },
@@ -2195,11 +2085,36 @@ module.exports = {
             "friendlyName": "list",
             "description": "List the Packages"
         },
+        "/package/set": {
+            "name": "/package/set",
+            "inputs": {
+                "id": {"description": "Id of the Package", "type": "string", "required": true},
+                "summary": {"descritpion": "Summary of the Package", "type": "string", "required": false},
+                "document": {"descritpion": "Documentation of the Package", "type": "string", "required": false}
+            },
+            "friendlyName": "set",
+            "description": "Set an Package documentation"
+        },
         "/scenario/get": {
             "name": "/scenario/get",
-            "inputs": {"id": {"description": "The name of the scenario", "type": "string", "required": true}},
+            "inputs": {
+                "id": {"description": "The name of the scenario", "type": "string", "required": true},
+                "doc": {"description": "Get the documentation of the scenario", "type": "boolean", "required": false}
+            },
             "friendlyName": "get",
             "description": "Get a Scenario in a UseCase"
+        },
+        "/scenario/instance": {
+            "name": "/scenario/instance",
+            "inputs": {"id": {"description": "The id of the scenario", "type": "string", "required": true}},
+            "friendlyName": "instance",
+            "description": "Return one of the scenario Instances based on the id."
+        },
+        "/scenario/instances": {
+            "name": "/scenario/instances",
+            "inputs": {},
+            "friendlyName": "instances",
+            "description": "Return all of the scenario Instances"
         },
         "/scenario/launch": {
             "name": "/scenario/launch",
@@ -2209,7 +2124,10 @@ module.exports = {
         },
         "/usecase/get": {
             "name": "/usecase/get",
-            "inputs": {"id": {"description": "The id of the usecase", "type": "string", "required": true}},
+            "inputs": {
+                "id": {"description": "The id of the usecase", "type": "string", "required": true},
+                "doc": {"description": "This is the documentation of the use case", "type": "boolean", "required": true}
+            },
             "friendlyName": "get",
             "description": "Get a UseCase"
         },
@@ -2219,29 +2137,27 @@ module.exports = {
             "friendlyName": "list",
             "description": "List the Actors"
         },
+        "/usecase/set": {
+            "name": "/usecase/set",
+            "inputs": {
+                "id": {"description": "Id of the UseCase", "type": "string", "required": true},
+                "summary": {"descritpion": "Summary of the UseCase", "type": "string", "required": false},
+                "document": {"descritpion": "Documentation of the UseCase", "type": "string", "required": false}
+            },
+            "friendlyName": "set",
+            "description": "Set an UseCase documentation"
+        },
         "sabr/aimodel/list": {
             "name": "sabr/aimodel/list",
             "inputs": {"attr1": {"description": "Description for the parameter", "type": "string", "required": false}},
             "friendlyName": "list",
             "description": "Description of the action"
         },
-        "sabr/application/list": {
-            "name": "sabr/application/list",
+        "sabr/capability/list": {
+            "name": "sabr/capability/list",
             "inputs": {"attr1": {"description": "Description for the parameter", "type": "string", "required": false}},
             "friendlyName": "list",
             "description": "Description of the action"
-        },
-        "sabr/capability/list": {
-            "name": "sabr/capability/list",
-            "inputs": {
-                "id": {
-                    "type": "string",
-                    "description": "ID of the topic. should be fully qualified",
-                    "required": true
-                }
-            },
-            "friendlyName": "topic",
-            "description": "Return the topics in the pulsar configuration"
         },
         "sabr/deploy/show": {
             "name": "sabr/deploy/show",
@@ -2249,27 +2165,21 @@ module.exports = {
             "friendlyName": "show",
             "description": "Show the main deployment page."
         },
+        "sabr/policy/list": {
+            "name": "sabr/policy/list",
+            "inputs": {},
+            "friendlyName": "list",
+            "description": "Description of the action"
+        },
         "sabr/pulsar/streams": {
             "name": "sabr/pulsar/streams",
-            "inputs": {
-                "id": {
-                    "type": "string",
-                    "description": "ID of the topic. should be fully qualified",
-                    "required": true
-                }
-            },
+            "inputs": {},
             "friendlyName": "topic",
             "description": "Return the topics in the pulsar configuration"
         },
         "sabr/pulsar/topic": {
             "name": "sabr/pulsar/topic",
-            "inputs": {
-                "id": {
-                    "type": "string",
-                    "description": "ID of the topic. should be fully qualified",
-                    "required": true
-                }
-            },
+            "inputs": {},
             "friendlyName": "topic",
             "description": "Return the topics in the pulsar configuration"
         },
@@ -2278,6 +2188,18 @@ module.exports = {
             "inputs": {},
             "friendlyName": "topics",
             "description": "Return the topics in the pulsar configuration"
+        },
+        "sabr/security/list": {
+            "name": "sabr/security/list",
+            "inputs": {},
+            "friendlyName": "list",
+            "description": "List the security profiles."
+        },
+        "sabr/security/manage": {
+            "name": "sabr/security/manage",
+            "inputs": {},
+            "friendlyName": "manage",
+            "description": "Description of the action"
         }
     }
 }

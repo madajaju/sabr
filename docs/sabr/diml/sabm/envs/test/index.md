@@ -2,10 +2,11 @@
 layout: default
 title: Environment test
 permalink: environment--sabr-diml-sabm-test
+parent: environment-test
 nav_exclude: true
 ---
 
-### test
+### Sentient Agent Bundle Manager test
 
 
 #### Deployment
@@ -30,7 +31,6 @@ the subsystem's logic.
 
 | Name | Image | Mapping | Ports | Network |
 | --- | --- | --- | --- | --- |
-| pulsar | apachepulsar/pulsar-all:latest |  | 6650:6650,8081:8080 | children |
 
 
 #### Networks
@@ -43,7 +43,6 @@ stack in a layer of networks.
 
 | Name | Type | External Name | Ports |
 | --- | --- | --- | --- |
-| children | internal |  |
 
 
 The Stack is micro-segmented off and there are a set of ports that are open for the ingress networks. The following
@@ -51,8 +50,6 @@ table shows the ports available and the internal port mappings and services on t
 
 | External Access Port | To Port | Service |
 | --- | --- | --- |
-| 6650 | 6650 | pulsar |
-| 8081 | 8080 | pulsar |
 
 
 

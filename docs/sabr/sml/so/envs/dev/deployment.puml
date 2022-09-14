@@ -3,57 +3,41 @@
 left to right direction
 
 
-boundary appname__family #red
+boundary parent #black
 
 
-entity appname__so_family #black
+entity children #blue
 
 
 
 
-package "_so" #aaffaa {
-    queue childrennet #black [
-            <b><color:white>children</color></b>
-    ]
-    
-    childrennet -[#black]- appname__so_family
-    
-    queue siblingnet #blue [
-            <b><color:white>sibling</color></b>
-    ]
-    
-    queue parentnet #red [
+package "sabr_sml_so" #aaffaa {
+    queue parentnet #black [
             <b><color:white>parent</color></b>
     ]
     
-    parentnet -[#red]- appname__family
+    parentnet -[#black]- parent
+    
+    queue childrennet #blue [
+            <b><color:white>children</color></b>
+    ]
+    
+    childrennet -[#blue]- children
+    
+    queue siblingsnet #red [
+            <b><color:white>siblings</color></b>
+    ]
     
 
-node "child" as childService
-node "frontend" as frontendService
-node "gw" as gwService
+node "sabr_sml_so_web" as sabr_sml_so_webService
 
 
-        artifact "child_image:latest" as child_imagelatestimage
-    
-        artifact "_so_web" as _so_webimage
-    
-        artifact "_so_gw" as _so_gwimage
+        artifact "sabr_sml_so_web" as sabr_sml_so_webimage
     
 }
 
-childService -[#black]- childrennet
-
-childService -[#red]- parentnet
-
-frontendService -[#blue]- siblingnet
-
-gwService -[#black]- childrennet
-
-gwService -[#blue]- siblingnet
-childService .... child_imagelatestimage
-frontendService .... _so_webimage
-gwService .... _so_gwimage
+sabr_sml_so_webService -[#red]- siblingsnet
+sabr_sml_so_webService .... sabr_sml_so_webimage
 
 
 @enduml

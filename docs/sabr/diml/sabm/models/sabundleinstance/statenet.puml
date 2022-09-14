@@ -22,28 +22,28 @@ state SABundleInstance #ffcc88 {
     state Disabled #ffcc88 {
     }
 
+
+
+
+Init -[#black]--> Created : create
+
+Created -[#black]--> Deploying : deploy
+
+Created -[#black]--> Deploying : deploying
+
+Deploying -[#black]--> Enabled : deployed
+
+Deploying -[#black]--> Running : running
+
+Running -[#black]--> Enabled : enable
+
+Running -[#black]--> Disabled : disable
+
+Enabled -[#black]--> Disabled : disable
+
+Disabled -[#black]--> Enabled : enable
+
 }
-
-
-Init --> Created : create
-
-Created --> Deploying : deploy
-
-Created --> Deploying : deploying
-
-Deploying --> Enabled : deployed
-
-Deploying --> Running : running
-
-Running --> Enabled : enable
-
-Running --> Disabled : disable
-
-Enabled --> Disabled : disable
-
-Disabled --> Enabled : enable
-
-
 
  
  Created -[#black]--> Null

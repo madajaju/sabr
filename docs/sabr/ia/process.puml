@@ -2,11 +2,11 @@
 left to right direction
 
 
-state "ia" as ia #pink {
+state "ia" as ia #ffbbbb {
 }
 
 
-state "ia" as pstatename #pink {
+state "ia" as pstatename #ffbbbb {
     state "Custom Function" as iafunction {
     }
 }

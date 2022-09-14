@@ -1,5 +1,6 @@
 module.exports = {
     services: {
+        /*
         admin: {
             image: "sabr_admin",
             volumes: {
@@ -11,6 +12,7 @@ module.exports = {
             policies: { },
             environment: { },
         },
+         */
         aml: {
             type: "stack",
             image: "sabr_aml",

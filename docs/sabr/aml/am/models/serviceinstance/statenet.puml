@@ -28,24 +28,24 @@ state ServiceInstance #00aaff {
     state Killed #00aaff {
     }
 
+
+
+
+Init -[#black]--> Created : create
+
+Created -[#black]--> Deploying : launched
+
+Deploying -[#black]--> Deployed : deployed
+
+Deployed -[#black]--> Provisioning : provision
+
+Provisioning -[#black]--> Ready : provisioned
+
+Provisioning -[#black]--> Failed : failed
+
+Ready -[#black]--> Killed : kill
+
 }
-
-
-Init --> Created : create
-
-Created --> Deploying : launched
-
-Deploying --> Deployed : deployed
-
-Deployed --> Provisioning : provision
-
-Provisioning --> Ready : provisioned
-
-Provisioning --> Failed : failed
-
-Ready --> Killed : kill
-
-
 
  
  Deployed -[#black]--> Null

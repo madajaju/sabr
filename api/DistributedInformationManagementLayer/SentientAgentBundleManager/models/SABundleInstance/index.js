@@ -35,24 +35,14 @@ class SABundleInstance {
                 composition: false,
                 owner: false,
             },
-            learningInput: {
+            learningStream: {
                 description: 'Learning Corpus Input Stream receives updates to the aimodel',
                 type: 'InputStreamInstance',
-                cardinality: 1,
-            },
-            learningOutput: {
-                description: 'Learning Corpus Output Stream receives updates to the aimodel',
-                type: 'OutputStreamInstance',
                 cardinality: 1,
             },
             adminStream: {
                 description: 'Administration Stream to handle registration of SABRS to Capabilities',
                 type: 'InputStreamInstance',
-                cardinality: 1,
-            },
-            admoutStream: {
-                description: 'Administration Stream to handle registration of SABRS and Capabilities',
-                type: 'OutputStreamInstance',
                 cardinality: 1,
             },
             stack: {
@@ -100,6 +90,7 @@ class SABundleInstance {
                         `<a-cylinder height="15" radius="1" position="-10 -2 0" rotation="0 0 90" material="color:#ffcc88;" ></a-cylinder>` +
                         `<a-cylinder height="15" radius="1.5" position="13 0 0" rotation="0 0 90" material="color:#ffcc88;" ></a-cylinder>` +
                         `<a-cone height="15" radius-bottom="4" radius-top="0" position="10 0 0" rotation="0 0 -90" material="color:#ffcc88;" ></a-cone>` +
+                        `<a-sphere radius="8" position="0 0 8" material="color:white; transparent:true;opacity:0.60" ></a-sphere>` +
                         `</a-entity>`;
                 }
                 return retval;

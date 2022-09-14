@@ -101,9 +101,7 @@ can be found [here](environment--sabr-ia-dev)
 
 Services in the dev environment
 
-* child : child_image:latest
-* frontend : _ia_web
-* gw : _ia_gw
+* ia_web : sabr_ia_web
 
 
 ### test
@@ -113,9 +111,7 @@ can be found [here](environment--sabr-ia-test)
 
 Services in the test environment
 
-* child : child_image:latest
-* frontend : _ia_web
-* gw : _ia_gw
+* ia_web : sabr_ia_web
 
 
 ### prod
@@ -125,9 +121,7 @@ can be found [here](environment--sabr-ia-prod)
 
 Services in the prod environment
 
-* child : child_image:latest
-* frontend : _ia_web
-* gw : _ia_gw
+* ia_web : sabr_ia_web
 
 
 ## Activities and Flows

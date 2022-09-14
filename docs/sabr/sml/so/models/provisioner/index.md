@@ -25,6 +25,12 @@ Abstract Provisioner Class used to develop an interface for the different provis
 
 
 
+## Users of the Model
+
+| Name | Cardinality | Class | Composition | Owner | Description |
+| --- | --- | --- | --- | --- | --- |
+| provisioner | 1 | CapabilityInstance |  |  | Provisioner of the Instance |
+
 
 
 

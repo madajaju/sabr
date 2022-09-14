@@ -21,6 +21,12 @@ rectangle "Capability" as Capability #lightblue {
 Model o--> "1" Capability : owner
 
 
+rectangle "Provisioner" as Provisioner #lightblue {
+}
+
+Model o--> "1" Provisioner : provisioner
+
+
 
 
     rectangle "Capability" as Capability #lightgreen {

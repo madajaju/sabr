@@ -22,6 +22,7 @@ A CapabilityInstance contains the execution environment, logging, and state of a
 | --- | --- | --- | --- | --- | --- |
 | bundles | n | SABundleInstance |  |  | Bundle instances running on the ecosystem. |
 | owner | 1 | Capability | false | false | Owner of the instance is the capability. |
+| provisioner | 1 | Provisioner |  |  | Provisioner of the Instance |
 
 
 

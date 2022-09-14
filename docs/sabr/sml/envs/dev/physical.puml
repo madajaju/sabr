@@ -11,31 +11,24 @@ package "Service Management Layer" #lightgreen {
   binName --> REST
 
   folder deploy #ffffff {
-      file "node server.js\ndocker-compose.yml" as _sml_container
-      REST --> _sml_container
+      file "node server.js\n" as sabr_sml_container
+      REST --> sabr_sml_container
 
   
     file "web" as web_container
     REST --> web_container
     socket ---> web_container
   
-    file "gateway" as gateway_container
-    REST --> gateway_container
-    socket ---> gateway_container
-  
   }
   folder images #ffffff {
-    collections "_sml" as _smlimage
+    collections "sabr_sml" as sabr_smlimage
     artifact "ailtire:swarm" as ailtireswarm
-    _smlimage <|-- ailtireswarm
-    _sml_container --> _smlimage
+    sabr_smlimage <|-- ailtireswarm
+    sabr_sml_container --> sabr_smlimage
 
   
-      artifact "_sml_web" as _sml_web
-      web_container --> _sml_web
-    
-      artifact "_sml_gw" as _sml_gw
-      gateway_container --> _sml_gw
+      artifact "sabr_sml_web" as sabr_sml_web
+      web_container --> sabr_sml_web
     
   }
 }

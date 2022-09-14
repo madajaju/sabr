@@ -2,10 +2,11 @@
 layout: default
 title: Environment dev
 permalink: environment--sabr-cpl-dev
+parent: environment-dev
 nav_exclude: true
 ---
 
-### dev
+### Common Physical Layer dev
 
 
 #### Deployment
@@ -30,7 +31,7 @@ the subsystem's logic.
 
 | Name | Image | Mapping | Ports | Network |
 | --- | --- | --- | --- | --- |
-| cpl_web | sabr_spl_web |  |  | siblings |
+| cpl_web | sabr_cpl_web |  |  | siblings |
 
 
 #### Networks

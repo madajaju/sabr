@@ -1,6 +1,6 @@
 ---
 layout: default
-title: classes
+title: Classes
 permalink: classes
 has_children: true
 ---
@@ -27,6 +27,7 @@ has_children: true
 * [Provisioner](class-Provisioner)
 * [SABundle](class-SABundle)
 * [SABundleInstance](class-SABundleInstance)
+* [SecureVault](class-SecureVault)
 * [SecurityKey](class-SecurityKey)
 * [Service](class-Service)
 * [ServiceInstance](class-ServiceInstance)

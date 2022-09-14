@@ -5,7 +5,7 @@ module.exports = {
     description: 'Deploy a Capability',
     static: false, // True is for Class methods. False is for object based.
     inputs: {
-        capability: {
+        name: {
             description: 'name of the capability',
             type: 'string', // string|boolean|number|json
             required: true

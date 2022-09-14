@@ -17,6 +17,10 @@ package "Capability Manager" #00aaff {
 
 }
 
+package "Service Orchestrator" #aaffaa {
+
+}
+
 
 package "Capability Manager" #00aaff {
 

@@ -34,6 +34,24 @@ Capabilities are deployed across multiple assets in the ecosystem. They consist 
 
 
 
+## State Net
+The Capability has a state net corresponding to instances of the class. Each state transistion will emit an 
+event that can be caught with a websocket client. The name of the event is the name of the state in all lower case.
+The following diagram is the state net for this class.
+
+![State Net Diagram](./statenet.png)
+
+| Name | Description | Events |
+| --- | --- | --- |
+| Init | Initial State | create-&gt;Created,  |
+| Created | The Capability has been created and ready and can be built. | build-&gt;Building,  |
+| Building | The Capability is being built. | built-&gt;Built,  |
+| Built | The Capability has been built and ready to be deployed. | test-&gt;Testing,  |
+| Testing | The Capability is aggregated with all of the SABRs | testSuccess-&gt;Tested,  |
+| Tested | The Capability is aggregated with all of the SABRs | release-&gt;Released,  |
+| Released | The Capability is released and ready for Deployment | deploy-&gt;Released,  |
+| Failed | The Capability failed to be built or created. |  |
+
 
 
 ## Methods
@@ -66,7 +84,7 @@ Build a Capability
 
 | Name | Type | Required | Description |
 |---|---|---|---|
-| name | string |true | name of the capability |
+| name | string |true | name of the build |
 
 
 

@@ -43,6 +43,12 @@ package "Sentient Agent Bundle Manager" #ffcc88 {
         }
     }
 
+package "Security Aspect" #pink {
+    
+        class SecurityKey {
+        }
+    }
+
 
 package "Data Stream Manager" #ffcc88 {
 
@@ -83,7 +89,8 @@ package "Data Stream Manager" #ffcc88 {
     
     class "DataStream" {
                  string name
-                             deploy()
+                             build()
+                     deploy()
             }
                 DataStream o--> "n" StreamPolicy : policies
                         DataStream *--> "n" DataChannel : channels
@@ -91,6 +98,8 @@ package "Data Stream Manager" #ffcc88 {
                         DataStream o--> "n" DataTransform : transforms
                         DataStream o--> "n" SABundle : consumers
                         DataStream o--> "n" SABundle : producers
+                        DataStream o--> "1" SecurityKey : encryptionKey
+                        DataStream o--> "1" SecurityKey : decryptionKey
             
     
     class "DataStreamInstance" {
