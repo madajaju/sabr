@@ -1,0 +1,22 @@
+@startuml
+
+class "AIModel" as Model {
+ string name
+
+ 
+}
+
+
+
+    rectangle "SABundle" as SABundle #lightgreen {
+    }
+    
+        SABundle   o--> "n" Model : "aimodels"
+    
+    rectangle "SABundleInstance" as SABundleInstance #lightgreen {
+    }
+    
+        SABundleInstance   o--> "n" Model : "aimodels"
+    
+
+@enduml

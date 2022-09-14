@@ -1,0 +1,47 @@
+@startuml
+
+class "DataTransformInstance" as Model {
+ string name
+ string version
+ json fn
+
+ run()
+ 
+}
+
+rectangle "InputStreamInstance" as InputStreamInstance #lightblue {
+}
+
+Model o--> "n" InputStreamInstance : inputs
+
+
+rectangle "OutputStreamInstance" as OutputStreamInstance #lightblue {
+}
+
+Model o--> "n" OutputStreamInstance : outputs
+
+
+
+
+    rectangle "DataStreamInstance" as DataStreamInstance #lightgreen {
+    }
+    
+        DataStreamInstance   o--> "n" Model : "transforms"
+    
+    rectangle "SABundleInstance" as SABundleInstance #lightgreen {
+    }
+    
+        SABundleInstance   o--> "n" Model : "transforms"
+    
+    rectangle "InputStreamInstance" as InputStreamInstance #lightgreen {
+    }
+    
+        InputStreamInstance   o--> "n" Model : "transforms"
+    
+    rectangle "OutputStreamInstance" as OutputStreamInstance #lightgreen {
+    }
+    
+        OutputStreamInstance   o--> "n" Model : "transforms"
+    
+
+@enduml

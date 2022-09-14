@@ -1,0 +1,127 @@
+@startuml
+
+left to right direction
+
+
+boundary parent #black
+
+
+entity children #blue
+
+rectangle "sabr_aml" as sabr_amlStack #00aaff {
+    queue sabr_amlStacksnet #blue [
+        <b><color:white>parent</color></b>
+    ]
+}
+rectangle "sabr_cpl" as sabr_cplStack #bbbbbb {
+    queue sabr_cplStacksnet #blue [
+        <b><color:white>parent</color></b>
+    ]
+}
+rectangle "sabr_diml" as sabr_dimlStack #ffcc88 {
+    queue sabr_dimlStacksnet #blue [
+        <b><color:white>parent</color></b>
+    ]
+}
+rectangle "sabr_sa" as sabr_saStack #pink {
+    queue sabr_saStacksnet #blue [
+        <b><color:white>parent</color></b>
+    ]
+}
+rectangle "sabr_sml" as sabr_smlStack #lightgreen {
+    queue sabr_smlStacksnet #blue [
+        <b><color:white>parent</color></b>
+    ]
+}
+rectangle "sabr_sdi" as sabr_sdiStack #lightyellow {
+    queue sabr_sdiStacksnet #blue [
+        <b><color:white>parent</color></b>
+    ]
+}
+rectangle "sabr_ia" as sabr_iaStack #ffbbbb {
+    queue sabr_iaStacksnet #blue [
+        <b><color:white>parent</color></b>
+    ]
+}
+
+
+
+package "sabr" #bbaaff {
+    queue parentnet #black [
+            <b><color:white>parent</color></b>
+    ]
+    
+    parentnet -[#black]- parent
+    
+    queue childrennet #blue [
+            <b><color:white>children</color></b>
+    ]
+    
+    childrennet -[#blue]- children
+    
+    queue siblingsnet #red [
+            <b><color:white>siblings</color></b>
+    ]
+    
+
+node "aml" as amlService
+node "cpl" as cplService
+node "diml" as dimlService
+node "sa" as saService
+node "sml" as smlService
+node "sdi" as sdiService
+node "ia" as iaService
+node "doc" as docService
+
+        collections "sabr_aml" as sabr_amlimage
+            collections "sabr_cpl" as sabr_cplimage
+            collections "sabr_diml" as sabr_dimlimage
+            collections "sabr_sa" as sabr_saimage
+            collections "sabr_sml" as sabr_smlimage
+            collections "sabr_sdi" as sabr_sdiimage
+            collections "sabr_ia" as sabr_iaimage
+    
+        artifact "sabr_doc" as sabr_docimage
+    
+}
+
+amlService -[#blue]- childrennet
+
+cplService -[#blue]- childrennet
+
+dimlService -[#blue]- childrennet
+
+saService -[#blue]- childrennet
+
+smlService -[#blue]- childrennet
+
+sdiService -[#blue]- childrennet
+
+iaService -[#blue]- childrennet
+
+docService -[#red]- siblingsnet
+amlService .... sabr_amlimage
+cplService .... sabr_cplimage
+dimlService .... sabr_dimlimage
+saService .... sabr_saimage
+smlService .... sabr_smlimage
+sdiService .... sabr_sdiimage
+iaService .... sabr_iaimage
+docService .... sabr_docimage
+
+sabr_amlimage --> sabr_amlStack
+    
+sabr_cplimage --> sabr_cplStack
+    
+sabr_dimlimage --> sabr_dimlStack
+    
+sabr_saimage --> sabr_saStack
+    
+sabr_smlimage --> sabr_smlStack
+    
+sabr_sdiimage --> sabr_sdiStack
+    
+sabr_iaimage --> sabr_iaStack
+    
+
+@enduml

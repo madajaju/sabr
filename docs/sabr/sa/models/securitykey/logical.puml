@@ -1,0 +1,38 @@
+@startuml
+
+class "SecurityKey" as Model {
+ string name
+ string value
+
+ 
+}
+
+
+
+    rectangle "DataStream" as DataStream #lightgreen {
+    }
+    
+        DataStream   o--> "1" Model : "encryptionKey"
+    
+    rectangle "DataStream" as DataStream #lightgreen {
+    }
+    
+        DataStream   o--> "1" Model : "decryptionKey"
+    
+    rectangle "KeyStore" as KeyStore #lightgreen {
+    }
+    
+        KeyStore   o--> "n" Model : "keys"
+    
+    rectangle "SecureVault" as SecureVault #lightgreen {
+    }
+    
+        SecureVault   *--> "1" Model : "encryptKey"
+    
+    rectangle "SecureVault" as SecureVault #lightgreen {
+    }
+    
+        SecureVault   *--> "1" Model : "decryptKey"
+    
+
+@enduml

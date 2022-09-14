@@ -1,0 +1,46 @@
+@startuml
+
+
+
+state InputChannelInstance #ffcc88 {
+
+    state Init #ffcc88 {
+    }
+
+    state Created #ffcc88 {
+    }
+
+    state Deploying #ffcc88 {
+    }
+
+    state Enabled #ffcc88 {
+    }
+
+    state Disabled #ffcc88 {
+    }
+
+    state Failed #ffcc88 {
+    }
+
+
+
+
+Init -[#black]--> Created : create
+
+Created -[#black]--> Deploying : deploy
+
+Deploying -[#black]--> Enabled : deployed
+
+Deploying -[#black]--> Failed : failed
+
+Enabled -[#black]--> Disabled : disable
+
+Disabled -[#black]--> Enabled : enable
+
+}
+
+ 
+ Enabled -[#black]--> Null
+ 
+
+@enduml

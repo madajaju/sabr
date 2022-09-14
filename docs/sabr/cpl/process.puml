@@ -1,0 +1,18 @@
+@startuml
+left to right direction
+
+
+state "cpl" as cpl #bbbbbb {
+}
+
+
+state "cpl" as pstatename #bbbbbb {
+    state "Custom Function" as cplfunction {
+    }
+}
+
+
+
+
+
+@enduml

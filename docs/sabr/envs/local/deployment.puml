@@ -1,0 +1,55 @@
+@startuml
+
+left to right direction
+
+
+boundary parent #black
+
+
+entity children #blue
+
+
+
+
+package "sabr" #bbaaff {
+    queue parentnet #black [
+            <b><color:white>parent</color></b>
+    ]
+    
+    parentnet -[#black]- parent
+    
+    queue childrennet #blue [
+            <b><color:white>children</color></b>
+    ]
+    
+    childrennet -[#blue]- children
+    
+    queue siblingsnet #red [
+            <b><color:white>siblings</color></b>
+    ]
+    
+
+node "web" as webService
+node "pulsar" as pulsarService
+node "doc" as docService
+
+
+        artifact "sabr_web" as sabr_webimage
+    
+        artifact "sabr_pulsar:standalone" as sabr_pulsarstandaloneimage
+    
+        artifact "sabr_doc" as sabr_docimage
+    
+}
+
+webService -[#red]- siblingsnet
+
+pulsarService -[#red]- siblingsnet
+
+docService -[#red]- siblingsnet
+webService .... sabr_webimage
+pulsarService .... sabr_pulsarstandaloneimage
+docService .... sabr_docimage
+
+
+@enduml

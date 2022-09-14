@@ -1,0 +1,82 @@
+@startuml
+left to right direction
+
+
+
+state "DataEngineer" as DataEngineer {
+    state "Manage AI Model" as DataEngineerManageAIModel {
+    }
+}
+
+DataEngineerManageAIModel --> Null
+
+state "DataScientist" as DataScientist {
+    state "Manage AI Model" as DataScientistManageAIModel {
+    }
+}
+
+DataScientistManageAIModel --> Null
+
+state "DataAnalyst" as DataAnalyst {
+    state "Manage AI Model" as DataAnalystManageAIModel {
+    }
+}
+
+DataAnalystManageAIModel --> Null
+
+
+ 
+state "DevOpsEngineer" as DevOpsEngineer {
+    state "Manage Capabilities" as DevOpsEngineerManageCapabilities {
+    }
+}
+
+DevOpsEngineerManageCapabilities --> Null
+
+state "ITOperations" as ITOperations {
+    state "Manage Capabilities" as ITOperationsManageCapabilities {
+    }
+}
+
+ITOperationsManageCapabilities --> Null
+
+
+ 
+state "ITOperations" as ITOperations {
+    state "Manage Policies" as ITOperationsManagePolicies {
+    }
+}
+
+ITOperationsManagePolicies --> Null
+
+
+ 
+state "SecurityOperator" as SecurityOperator {
+    state "Manage Security" as SecurityOperatorManageSecurity {
+    }
+}
+
+SecurityOperatorManageSecurity --> Null
+
+
+ 
+state "TacticalOperator" as TacticalOperator {
+    state "Provide Digital Assistance" as TacticalOperatorProvideDigitalAssistance {
+    }
+}
+
+TacticalOperatorProvideDigitalAssistance --> Null
+
+
+ 
+state "Tactical Operator" as TacticalOperator {
+    state "Provide Mission Insight" as TacticalOperatorProvideMissionInsight {
+    }
+}
+
+TacticalOperatorProvideMissionInsight --> Null
+
+
+ 
+
+@enduml

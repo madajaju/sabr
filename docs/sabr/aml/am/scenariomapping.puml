@@ -1,0 +1,92 @@
+@startuml
+left to right direction
+
+
+
+state "ApplicationDeveloper" as ApplicationDeveloper {
+    state "Integrate Learning" as ApplicationDeveloperIntegrateLearning {
+    }
+}
+state "sabr" as sabr #00aaff {
+state "aml" as sabraml #00aaff {
+state "am" as sabramlam #00aaff {
+state "application" as sabramlamapplication #00aaff {
+state "list" as sabramlamapplicationlist #00aaff {
+}
+}
+}
+}
+}
+
+ApplicationDeveloperIntegrateLearning --> sabramlamapplicationlist
+
+
+ 
+state "DevOpsEngineer" as DevOpsEngineer {
+    state "Manage Application" as DevOpsEngineerManageApplication {
+    }
+}
+state "sabr" as sabr #00aaff {
+state "aml" as sabraml #00aaff {
+state "am" as sabramlam #00aaff {
+state "application" as sabramlamapplication #00aaff {
+state "list" as sabramlamapplicationlist #00aaff {
+}
+}
+}
+}
+}
+
+DevOpsEngineerManageApplication --> sabramlamapplicationlist
+
+state "ApplicationDeveloper" as ApplicationDeveloper {
+    state "Manage Application" as ApplicationDeveloperManageApplication {
+    }
+}
+state "sabr" as sabr #00aaff {
+state "aml" as sabraml #00aaff {
+state "am" as sabramlam #00aaff {
+state "application" as sabramlamapplication #00aaff {
+state "list" as sabramlamapplicationlist #00aaff {
+}
+}
+}
+}
+}
+
+ApplicationDeveloperManageApplication --> sabramlamapplicationlist
+
+
+    state "ApplicationDeveloper" as ApplicationDeveloper {
+        state "Manage Application" as ApplicationDeveloperManageApplication {
+            state "Create Application" as ApplicationDeveloperManageApplicationCreateApplication {
+            }
+        }
+    }
+    
+    ApplicationDeveloperManageApplicationCreateApplication --> Null
+    
+ 
+    state "DevOpsEngineer" as DevOpsEngineer {
+        state "Manage Application" as DevOpsEngineerManageApplication {
+            state "Destroy Application" as DevOpsEngineerManageApplicationDestroyApplication {
+            }
+        }
+    }
+    
+    DevOpsEngineerManageApplicationDestroyApplication --> Null
+    
+ 
+    state "DevOpsEngineer" as DevOpsEngineer {
+        state "Manage Application" as DevOpsEngineerManageApplication {
+            state "Update Application" as DevOpsEngineerManageApplicationUpdateApplication {
+            }
+        }
+    }
+    
+    DevOpsEngineerManageApplicationUpdateApplication --> Null
+    
+ 
+ 
+
+@enduml

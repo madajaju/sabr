@@ -1,0 +1,34 @@
+@startuml
+
+left to right direction
+Actor "DataEngineer" as DataEngineer
+Actor "DataScientist" as DataScientist
+Actor "DataAnalyst" as DataAnalyst
+Actor "DevOpsEngineer" as DevOpsEngineer
+Actor "ITOperations" as ITOperations
+Actor "ITOperations" as ITOperations
+Actor "SecurityOperator" as SecurityOperator
+Actor "TacticalOperator" as TacticalOperator
+Actor "Tactical Operator" as TacticalOperator
+
+
+rectangle "Sentient Agent Bundle Resources" #bbaaff {
+usecase "ManageAIModel" as ManageAIModel
+    DataEngineer --> ManageAIModel
+    DataScientist --> ManageAIModel
+    DataAnalyst --> ManageAIModel
+    usecase "ManageCapabilities" as ManageCapabilities
+    DevOpsEngineer --> ManageCapabilities
+    ITOperations --> ManageCapabilities
+    usecase "ManagePolicies" as ManagePolicies
+    ITOperations --> ManagePolicies
+    usecase "ManageSecurity" as ManageSecurity
+    SecurityOperator --> ManageSecurity
+    usecase "ProvideDigitalAssistance" as ProvideDigitalAssistance
+    TacticalOperator --> ProvideDigitalAssistance
+    usecase "ProvideMissionInsight" as ProvideMissionInsight
+    TacticalOperator --> ProvideMissionInsight
+    }
+
+
+@enduml

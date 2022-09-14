@@ -1,0 +1,39 @@
+@startuml
+  interface CLI
+  interface Web
+  interface WebSocket
+package "Learning Corpus" #00aaff {
+  component express as REST
+  component socket.io as socket
+  folder bin #ffffff {
+    component " sabr aml lc" as binName
+  }
+  binName --> REST
+
+  folder deploy #ffffff {
+      file "node server.js\n" as sabr_aml_lc_container
+      REST --> sabr_aml_lc_container
+
+  
+    file "web" as web_container
+    REST --> web_container
+    socket ---> web_container
+  
+  }
+  folder images #ffffff {
+    collections "sabr_aml_lc" as sabr_aml_lcimage
+    artifact "ailtire:swarm" as ailtireswarm
+    sabr_aml_lcimage <|-- ailtireswarm
+    sabr_aml_lc_container --> sabr_aml_lcimage
+
+  
+      artifact "sabr_aml_lc_web" as sabr_aml_lc_web
+      web_container --> sabr_aml_lc_web
+    
+  }
+}
+CLI " sabr aml lc" -- binName
+Web "/sabr/aml/lc" - REST
+WebSocket ".sabr.aml.lc" -- socket
+
+@enduml

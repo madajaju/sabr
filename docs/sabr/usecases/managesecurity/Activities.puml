@@ -1,0 +1,20 @@
+@startuml
+
+
+usecase "Manage Security" as ManageSecurity #yellow
+
+Actor "Security Operator" as SecurityOperator
+
+SecurityOperator --> ManageSecurity
+
+
+
+
+
+
+
+
+
+
+
+@enduml

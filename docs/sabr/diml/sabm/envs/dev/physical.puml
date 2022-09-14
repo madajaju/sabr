@@ -1,0 +1,46 @@
+@startuml
+  interface CLI
+  interface Web
+  interface WebSocket
+package "Sentient Agent Bundle Manager" #ffcc88 {
+  component express as REST
+  component socket.io as socket
+  folder bin #ffffff {
+    component " sabr diml sabm" as binName
+  }
+  binName --> REST
+
+  folder deploy #ffffff {
+      file "node server.js\n" as sabr_diml_sabm_container
+      REST --> sabr_diml_sabm_container
+
+  
+    file "web" as web_container
+    REST --> web_container
+    socket ---> web_container
+  
+    file "sabr" as sabr_container
+    REST --> sabr_container
+    socket ---> sabr_container
+  
+  }
+  folder images #ffffff {
+    collections "sabr_diml_sabm" as sabr_diml_sabmimage
+    artifact "ailtire:swarm" as ailtireswarm
+    sabr_diml_sabmimage <|-- ailtireswarm
+    sabr_diml_sabm_container --> sabr_diml_sabmimage
+
+  
+      artifact "sabr_diml_sabm_web" as sabr_diml_sabm_web
+      web_container --> sabr_diml_sabm_web
+    
+      artifact "sabr_diml_sabm_sabr" as sabr_diml_sabm_sabr
+      sabr_container --> sabr_diml_sabm_sabr
+    
+  }
+}
+CLI " sabr diml sabm" -- binName
+Web "/sabr/diml/sabm" - REST
+WebSocket ".sabr.diml.sabm" -- socket
+
+@enduml

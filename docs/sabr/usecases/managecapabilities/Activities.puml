@@ -1,0 +1,40 @@
+@startuml
+
+
+usecase "Manage Capabilities" as ManageCapabilities #yellow
+
+Actor "DevOps Engineer" as DevOpsEngineer
+
+DevOpsEngineer --> ManageCapabilities
+
+Actor "IT Operations" as ITOperations
+
+ITOperations --> ManageCapabilities
+
+
+
+
+
+
+
+usecase "DeployCapability" as DeployCapability #lightyellow
+
+ManageCapabilities --> DeployCapability : extends
+
+usecase "DevelopCapability" as DevelopCapability #lightyellow
+
+ManageCapabilities --> DevelopCapability : extends
+
+usecase "RemoveCapability" as RemoveCapability #lightyellow
+
+ManageCapabilities --> RemoveCapability : extends
+
+usecase "UpdateCapability" as UpdateCapability #lightyellow
+
+ManageCapabilities --> UpdateCapability : extends
+
+
+
+
+
+@enduml

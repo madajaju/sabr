@@ -1,0 +1,43 @@
+@startuml
+
+left to right direction
+
+
+boundary parent #black
+
+
+entity children #blue
+
+
+
+
+package "sabr_sml_so" #aaffaa {
+    queue parentnet #black [
+            <b><color:white>parent</color></b>
+    ]
+    
+    parentnet -[#black]- parent
+    
+    queue childrennet #blue [
+            <b><color:white>children</color></b>
+    ]
+    
+    childrennet -[#blue]- children
+    
+    queue siblingsnet #red [
+            <b><color:white>siblings</color></b>
+    ]
+    
+
+node "sabr_sml_so_web" as sabr_sml_so_webService
+
+
+        artifact "sabr_sml_so_web" as sabr_sml_so_webimage
+    
+}
+
+sabr_sml_so_webService -[#red]- siblingsnet
+sabr_sml_so_webService .... sabr_sml_so_webimage
+
+
+@enduml

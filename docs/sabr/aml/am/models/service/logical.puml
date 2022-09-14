@@ -1,0 +1,83 @@
+@startuml
+
+class "Service" as Model {
+ string name
+ string command
+ string version
+ json ports
+ json expose
+ json parameters
+ json environment
+ ref provisionScript
+
+ 
+}
+
+rectangle "Stack" as Stack #lightblue {
+}
+
+Model o--> "1" Stack : stack
+
+
+rectangle "Service" as Service #lightblue {
+}
+
+Model o--> "n" Service : children
+
+
+rectangle "Service" as Service #lightblue {
+}
+
+Model o--> "1" Service : parent
+
+
+rectangle "ServiceInstance" as ServiceInstance #lightblue {
+}
+
+Model *--> "n" ServiceInstance : instances
+
+
+
+
+    rectangle "Service" as Service #lightgreen {
+    }
+    
+        Service   o--> "n" Model : "children"
+    
+    rectangle "Service" as Service #lightgreen {
+    }
+    
+        Service   o--> "1" Model : "parent"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   o--> "1" Model : "parent"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "services"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   o--> "n" Model : "children"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   o--> "1" Model : "parent"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "parent"
+    
+    rectangle "DataChannel" as DataChannel #lightgreen {
+    }
+    
+        DataChannel   o--> "1" Model : "transformService"
+    
+
+@enduml

@@ -1,0 +1,56 @@
+@startuml
+
+class "OutputStreamInstance" as Model {
+ ref producer
+ string name
+ string direction
+
+ deploy()
+ send()
+ 
+}
+
+rectangle "DataStream" as DataStream #lightblue {
+}
+
+Model o--> "1" DataStream : parent
+
+
+rectangle "SABundleInstance" as SABundleInstance #lightblue {
+}
+
+Model o--> "1" SABundleInstance : bundle
+
+
+rectangle "DataChannelInstance" as DataChannelInstance #lightblue {
+}
+
+Model *--> "n" DataChannelInstance : channels
+
+
+rectangle "DataChannelInstance" as DataChannelInstance #lightblue {
+}
+
+Model o--> "n" DataChannelInstance : policies
+
+
+rectangle "DataTransformInstance" as DataTransformInstance #lightblue {
+}
+
+Model o--> "n" DataTransformInstance : transforms
+
+
+
+
+    rectangle "DataTransformInstance" as DataTransformInstance #lightgreen {
+    }
+    
+        DataTransformInstance   o--> "n" Model : "outputs"
+    
+    rectangle "SABundleInstance" as SABundleInstance #lightgreen {
+    }
+    
+        SABundleInstance   o--> "n" Model : "outputs"
+    
+
+@enduml

@@ -1,0 +1,34 @@
+@startuml
+
+actor "DevOpsEngineer"
+
+
+entity EventBus
+
+box Capability Manager #00aaff
+    boundary cm #white
+end box
+
+
+box Capability Manager #00aaff
+            participant capability
+    end box
+
+
+"DevOpsEngineer" -> cm: Deploy Capability Release
+
+    cm -> "capability": create (name: myCapability1,file: ./templates/capability.js)
+
+    "capability" --/ EventBus: capability.create
+
+    cm -> "capability manager": build (name: myCapability1)
+
+    "capability manager" --/ EventBus: capability.build
+
+    cm -> "capability manager": deploy (name: myCapability1)
+
+    "capability manager" --/ EventBus: capability.deploy
+
+
+
+@enduml

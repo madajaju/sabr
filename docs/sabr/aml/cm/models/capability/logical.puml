@@ -1,0 +1,40 @@
+@startuml
+
+class "Capability" as Model {
+ string name
+
+ build()
+ create()
+ deploy()
+ release()
+ test()
+ 
+}
+
+rectangle "StreamPolicy" as StreamPolicy #lightblue {
+}
+
+Model o--> "n" StreamPolicy : policies
+
+
+rectangle "SABundle" as SABundle #lightblue {
+}
+
+Model o--> "n" SABundle : bundles
+
+
+rectangle "CapabilityInstance" as CapabilityInstance #lightblue {
+}
+
+Model *--> "n" CapabilityInstance : instances
+
+
+
+
+    rectangle "CapabilityInstance" as CapabilityInstance #lightgreen {
+    }
+    
+        CapabilityInstance   o--> "1" Model : "owner"
+    
+
+@enduml

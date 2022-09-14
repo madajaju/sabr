@@ -1,0 +1,24 @@
+@startuml
+
+
+usecase "Remove Capability" as RemoveCapability #yellow
+
+Actor "DevOps Engineer" as DevOpsEngineer
+
+DevOpsEngineer --> RemoveCapability
+
+
+
+
+
+usecase "Manage Capabilities" as ManageCapabilities #lightyellow
+
+RemoveCapability <-- ManageCapabilities : extends
+
+
+
+
+
+
+
+@enduml

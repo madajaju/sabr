@@ -1,0 +1,26 @@
+@startuml
+
+actor "ApplicationDeveloper"
+
+
+entity EventBus
+
+box Application Manager #00aaff
+    boundary am #white
+end box
+
+
+box Service Orchestrator #aaffaa
+            participant provisioner
+    end box
+
+
+"ApplicationDeveloper" -> am: Create Application
+
+    am -> "provisioner": create (name: hello,file: ./templates/application.yml)
+
+    "provisioner" --/ EventBus: application.create
+
+
+
+@enduml

@@ -1,0 +1,141 @@
+@startuml
+
+
+package "Data Stream Manager" #ffcc88 {
+    
+        class DataStream {
+        }
+    
+        class InputStreamInstance {
+        }
+    
+        class OutputStreamInstance {
+        }
+    }
+
+package "Security Aspect" #pink {
+    
+        class SecureVault {
+        }
+    }
+
+package "Application Manager" #00aaff {
+    
+        class Application {
+        }
+    
+        class Stack {
+        }
+    
+        class StackInstance {
+        }
+    }
+
+package "Learning Corpus" #00aaff {
+    
+        class AIModel {
+        }
+    }
+
+package "Sentient Agent Bundle Manager" #ffcc88 {
+    
+        class DataTransform {
+        }
+    
+        class SABundleInstance {
+        }
+    
+        class SABundle {
+        }
+    
+        class DataTransformInstance {
+        }
+    }
+
+
+package "Sentient Agent Bundle Manager" #ffcc88 {
+
+    interface "Sentient Agent Bundle Manager" as i {
+            /sabr/diml/sabm/connect()
+            /sabr/diml/sabm/bundle/createanddeploy()
+            /sabr/diml/sabm/bundle/deploy()
+            /sabr/diml/sabm/sabundle/build()
+            /sabr/diml/sabm/sabundle/create()
+            /sabr/diml/sabm/sabundle/deploy()
+            /sabr/diml/sabm/sabundle/list()
+    
+    }
+}
+
+CLI ()-- i
+REST ()-- i
+Web ()-- i
+
+package "Sentient Agent Bundle Manager" #ffcc88 {
+        class "DataTransform" {
+                 string name
+                 json fn
+                    }
+                DataTransform o--> "n" DataStream : inputs
+                        DataTransform o--> "n" DataStream : outputs
+            
+    
+    class "DataTransformInstance" {
+                 string name
+                 string version
+                 json fn
+                             run()
+            }
+                DataTransformInstance o--> "n" InputStreamInstance : inputs
+                        DataTransformInstance o--> "n" OutputStreamInstance : outputs
+            
+    
+    class "SABundle" {
+                 string name
+                 string version
+                             build()
+                     create()
+                     deploy()
+                     toJScript()
+            }
+                SABundle o--> "n" DataStream : inputs
+                        SABundle o--> "n" DataStream : outputs
+                        SABundle o--> "1" DataStream : learningStream
+                        SABundle o--> "1" DataStream : adminStream
+                        SABundle o--> "n" DataTransform : transforms
+                        SABundle o--> "n" Application : applications
+                        SABundle o--> "n" Stack : stacks
+                        SABundle o--> "n" AIModel : aimodels
+                        SABundle *--> "n" SABundleInstance : instances
+                        SABundle *--> "1" SecureVault : secureVault
+            
+    
+    class "SABundleInstance" {
+                 string name
+                 string level
+                             deploy()
+            }
+                SABundleInstance o--> "1" SABundle : parent
+                        SABundleInstance o--> "n" InputStreamInstance : inputs
+                        SABundleInstance o--> "n" OutputStreamInstance : outputs
+                        SABundleInstance o--> "1" InputStreamInstance : learningStream
+                        SABundleInstance o--> "1" InputStreamInstance : adminStream
+                        SABundleInstance o--> "n" StackInstance : stack
+                        SABundleInstance o--> "n" AIModel : aimodels
+                        SABundleInstance o--> "n" DataTransformInstance : transforms
+            
+    
+
+}
+
+
+    "Sentient Agent Bundle Manager" --> "Data Stream Manager"
+
+    "Sentient Agent Bundle Manager" --> "Security Aspect"
+
+    "Sentient Agent Bundle Manager" --> "Application Manager"
+
+    "Sentient Agent Bundle Manager" --> "Learning Corpus"
+
+
+@enduml
