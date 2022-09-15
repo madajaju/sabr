@@ -2,7 +2,7 @@
 layout: default
 title: Image sabr_aml_lc_web
 permalink: image-sabr_aml_lc_web
-parent: images
+parent: Images
 ---
 # sabr_aml_lc_web
 

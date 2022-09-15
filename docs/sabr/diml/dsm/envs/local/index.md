@@ -3,7 +3,7 @@ layout: default
 title: Environment local
 permalink: environment--sabr-diml-dsm-local
 parent: environment-local
-grand_parent: environments
+grand_parent: Environments
 ---
 
 ### Data Stream Manager local

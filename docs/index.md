@@ -1,5 +1,6 @@
 ---
 title: Sentient Agent Bundle Resources Overview
+nav_order: 1
 ---
 
 # Introduction

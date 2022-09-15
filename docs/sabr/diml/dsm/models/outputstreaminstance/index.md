@@ -2,7 +2,7 @@
 layout: default
 title: Class OutputStreamInstance
 permalink: class-OutputStreamInstance
-parent: classes
+parent: Classes
 ---
 
 # OutputStreamInstance

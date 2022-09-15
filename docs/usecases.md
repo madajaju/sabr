@@ -3,6 +3,7 @@ layout: default
 title: UseCases
 permalink: usecases
 has_children: true
+nav_order: 3
 ---
 # UseCases
 

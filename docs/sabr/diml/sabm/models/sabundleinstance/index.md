@@ -2,7 +2,7 @@
 layout: default
 title: Class SABundleInstance
 permalink: class-SABundleInstance
-parent: classes
+parent: Classes
 ---
 
 # SABundleInstance

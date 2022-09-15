@@ -2,7 +2,7 @@
 layout: default
 title: Class DataTransform
 permalink: class-DataTransform
-parent: classes
+parent: Classes
 ---
 
 # DataTransform

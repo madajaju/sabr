@@ -2,7 +2,7 @@
 layout: default
 title: Class KeyStore
 permalink: class-KeyStore
-parent: classes
+parent: Classes
 ---
 
 # KeyStore

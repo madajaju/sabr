@@ -2,7 +2,7 @@
 layout: default
 title: Class StreamPolicy
 permalink: class-StreamPolicy
-parent: classes
+parent: Classes
 ---
 
 # StreamPolicy

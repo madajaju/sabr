@@ -2,7 +2,7 @@
 layout: default
 title: Image sabr_diml_dsm:standalone
 permalink: image-sabr_diml_dsm:standalone
-parent: images
+parent: Images
 ---
 # sabr_diml_dsm:standalone
 

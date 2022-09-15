@@ -1,9 +1,8 @@
 ---
-layout: default
-title: Sentient Agent Bundle Manager
+title: Package Sentient Agent Bundle Manager
 permalink: package--sabr-diml-sabm
-parent: Distributed Information Management Layer
-grand_parent: Sentient Agent Bundle Resources
+parent: Package Distributed Information Management Layer
+grand_parent: Package Sentient Agent Bundle Resources
 ---
 
 # Sentient Agent Bundle Manager

@@ -1,8 +1,7 @@
 ---
-layout: default
 title: Remove Capability
 permalink: usecase-RemoveCapability
-parent: usecases
+parent: UseCases
 ---
 # Remove Capability
 

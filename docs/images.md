@@ -3,6 +3,7 @@ layout: default
 title: Images
 permalink: images
 has_children: true
+nav_order: 8
 ---
 # Images
 

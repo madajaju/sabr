@@ -1,8 +1,7 @@
 ---
-layout: default
 title: Update Capability
 permalink: usecase-UpdateCapability
-parent: usecases
+parent: UseCases
 ---
 # Update Capability
 

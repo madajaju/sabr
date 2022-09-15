@@ -3,7 +3,7 @@ layout: default
 title: Environment local
 permalink: environment--sabr-diml-local
 parent: environment-local
-grand_parent: environments
+grand_parent: Environments
 ---
 
 ### Distributed Information Management Layer local

@@ -2,7 +2,7 @@
 layout: default
 title: Image sabr_web
 permalink: image-sabr_web
-parent: images
+parent: Images
 ---
 # sabr_web
 

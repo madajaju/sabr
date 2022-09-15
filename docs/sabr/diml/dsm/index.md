@@ -1,9 +1,8 @@
 ---
-layout: default
-title: Data Stream Manager
+title: Package Data Stream Manager
 permalink: package--sabr-diml-dsm
-parent: Distributed Information Management Layer
-grand_parent: Sentient Agent Bundle Resources
+parent: Package Distributed Information Management Layer
+grand_parent: Package Sentient Agent Bundle Resources
 ---
 
 # Data Stream Manager

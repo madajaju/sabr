@@ -1,8 +1,7 @@
 ---
-layout: default
 title: Environment prod
 permalink: environment-prod
-nav_exclude: false
+parent: Environments
 ---
 
 # Environment prod

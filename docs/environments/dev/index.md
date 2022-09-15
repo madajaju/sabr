@@ -1,8 +1,7 @@
 ---
-layout: default
 title: Environment dev
 permalink: environment-dev
-nav_exclude: false
+parent: Environments
 ---
 
 # Environment dev

@@ -3,7 +3,7 @@ layout: default
 title: Environment prod
 permalink: environment--sabr-sa-prod
 parent: environment-prod
-grand_parent: environments
+grand_parent: Environments
 ---
 
 ### Security Aspect prod

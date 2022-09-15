@@ -1,9 +1,8 @@
 ---
-layout: default
-title: Application Manager
+title: Package Application Manager
 permalink: package--sabr-aml-am
-parent: Application Management Layer
-grand_parent: Sentient Agent Bundle Resources
+parent: Package Application Management Layer
+grand_parent: Package Sentient Agent Bundle Resources
 ---
 
 # Application Manager

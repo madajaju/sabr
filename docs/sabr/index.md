@@ -1,7 +1,7 @@
 ---
-layout: default
-title: Sentient Agent Bundle Resources
+title: Package Sentient Agent Bundle Resources
 permalink: package--sabr
+nav_order: 5
 has_children: true
 ---
 

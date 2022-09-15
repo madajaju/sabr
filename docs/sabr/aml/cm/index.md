@@ -1,9 +1,8 @@
 ---
-layout: default
-title: Capability Manager
+title: Package Capability Manager
 permalink: package--sabr-aml-cm
-parent: Application Management Layer
-grand_parent: Sentient Agent Bundle Resources
+parent: Package Application Management Layer
+grand_parent: Package Sentient Agent Bundle Resources
 ---
 
 # Capability Manager

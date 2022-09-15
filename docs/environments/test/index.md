@@ -1,8 +1,7 @@
 ---
-layout: default
 title: Environment test
 permalink: environment-test
-nav_exclude: false
+parent: Environments
 ---
 
 # Environment test

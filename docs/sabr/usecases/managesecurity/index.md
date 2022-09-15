@@ -1,8 +1,7 @@
 ---
-layout: default
 title: Manage Security
 permalink: usecase-ManageSecurity
-parent: usecases
+parent: UseCases
 ---
 # Manage Security
 

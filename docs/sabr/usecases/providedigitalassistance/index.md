@@ -1,8 +1,7 @@
 ---
-layout: default
 title: Provide Digital Assistance
 permalink: usecase-ProvideDigitalAssistance
-parent: usecases
+parent: UseCases
 ---
 # Provide Digital Assistance
 

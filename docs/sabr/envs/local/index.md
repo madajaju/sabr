@@ -3,7 +3,7 @@ layout: default
 title: Environment local
 permalink: environment--sabr-local
 parent: environment-local
-grand_parent: environments
+grand_parent: Environments
 ---
 
 ### Sentient Agent Bundle Resources local

@@ -2,7 +2,7 @@
 layout: default
 title: Class DataStream
 permalink: class-DataStream
-parent: classes
+parent: Classes
 ---
 
 # DataStream

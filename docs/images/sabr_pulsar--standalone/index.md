@@ -2,7 +2,7 @@
 layout: default
 title: Image sabr_pulsar:standalone
 permalink: image-sabr_pulsar:standalone
-parent: images
+parent: Images
 ---
 # sabr_pulsar:standalone
 

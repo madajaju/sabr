@@ -2,7 +2,7 @@
 layout: default
 title: Class SABundle
 permalink: class-SABundle
-parent: classes
+parent: Classes
 ---
 
 # SABundle

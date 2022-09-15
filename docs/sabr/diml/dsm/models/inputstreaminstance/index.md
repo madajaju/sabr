@@ -2,7 +2,7 @@
 layout: default
 title: Class InputStreamInstance
 permalink: class-InputStreamInstance
-parent: classes
+parent: Classes
 ---
 
 # InputStreamInstance

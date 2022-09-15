@@ -1,8 +1,7 @@
 ---
-layout: default
 title: Develop Capability
 permalink: usecase-DevelopCapability
-parent: usecases
+parent: UseCases
 ---
 # Develop Capability
 

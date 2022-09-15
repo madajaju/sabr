@@ -1,8 +1,7 @@
 ---
-layout: default
 title: Deploy Capability
 permalink: usecase-DeployCapability
-parent: usecases
+parent: UseCases
 ---
 # Deploy Capability
 

@@ -2,7 +2,7 @@
 layout: default
 title: Class ProcessProvisioner
 permalink: class-ProcessProvisioner
-parent: classes
+parent: Classes
 ---
 
 # ProcessProvisioner

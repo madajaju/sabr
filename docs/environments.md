@@ -1,8 +1,9 @@
 ---
 layout: default
 title: Environments
-permalink: environments
+permalink: Environments
 has_children: true
+nav_order: 6
 ---
 # Environments
 

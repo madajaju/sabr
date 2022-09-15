@@ -1,8 +1,7 @@
 ---
-layout: default
-title: Distributed Information Management Layer
+title: Package Distributed Information Management Layer
 permalink: package--sabr-diml
-parent: Sentient Agent Bundle Resources
+parent: Package Sentient Agent Bundle Resources
 has_children: true
 ---
 

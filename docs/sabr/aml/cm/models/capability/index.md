@@ -2,7 +2,7 @@
 layout: default
 title: Class Capability
 permalink: class-Capability
-parent: classes
+parent: Classes
 ---
 
 # Capability

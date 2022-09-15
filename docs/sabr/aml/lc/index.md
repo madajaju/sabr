@@ -1,9 +1,8 @@
 ---
-layout: default
-title: Learning Corpus
+title: Package Learning Corpus
 permalink: package--sabr-aml-lc
-parent: Application Management Layer
-grand_parent: Sentient Agent Bundle Resources
+parent: Package Application Management Layer
+grand_parent: Package Sentient Agent Bundle Resources
 ---
 
 # Learning Corpus

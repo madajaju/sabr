@@ -2,7 +2,7 @@
 layout: default
 title: Class DockerProvisioner
 permalink: class-DockerProvisioner
-parent: classes
+parent: Classes
 ---
 
 # DockerProvisioner

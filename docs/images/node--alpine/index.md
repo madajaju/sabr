@@ -2,7 +2,7 @@
 layout: default
 title: Image node:alpine
 permalink: image-node:alpine
-parent: images
+parent: Images
 ---
 # node:alpine
 

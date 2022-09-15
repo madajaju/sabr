@@ -1,8 +1,7 @@
 ---
-layout: default
 title: Integrate Learning
 permalink: usecase-IntegrateLearning
-parent: usecases
+parent: UseCases
 ---
 # Integrate Learning
 

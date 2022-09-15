@@ -2,7 +2,7 @@
 layout: default
 title: Class Provisioner
 permalink: class-Provisioner
-parent: classes
+parent: Classes
 ---
 
 # Provisioner

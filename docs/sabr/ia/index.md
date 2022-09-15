@@ -1,8 +1,7 @@
 ---
-layout: default
-title: Identity Aspect
+title: Package Identity Aspect
 permalink: package--sabr-ia
-parent: Sentient Agent Bundle Resources
+parent: Package Sentient Agent Bundle Resources
 ---
 
 # Identity Aspect

@@ -2,7 +2,7 @@
 layout: default
 title: Image sabr_doc
 permalink: image-sabr_doc
-parent: images
+parent: Images
 ---
 # sabr_doc
 

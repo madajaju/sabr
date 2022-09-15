@@ -3,7 +3,7 @@ layout: default
 title: Environment test
 permalink: environment--sabr-ia-test
 parent: environment-test
-grand_parent: environments
+grand_parent: Environments
 ---
 
 ### Identity Aspect test

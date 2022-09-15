@@ -1,8 +1,7 @@
 ---
-layout: default
 title: Provide Mission Insight
 permalink: usecase-ProvideMissionInsight
-parent: usecases
+parent: UseCases
 ---
 # Provide Mission Insight
 

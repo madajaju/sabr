@@ -2,7 +2,7 @@
 layout: default
 title: Class SecurityKey
 permalink: class-SecurityKey
-parent: classes
+parent: Classes
 ---
 
 # SecurityKey

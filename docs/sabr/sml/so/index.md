@@ -1,9 +1,8 @@
 ---
-layout: default
-title: Service Orchestrator
+title: Package Service Orchestrator
 permalink: package--sabr-sml-so
-parent: Service Management Layer
-grand_parent: Sentient Agent Bundle Resources
+parent: Package Service Management Layer
+grand_parent: Package Sentient Agent Bundle Resources
 ---
 
 # Service Orchestrator

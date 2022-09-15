@@ -1,8 +1,7 @@
 ---
-layout: default
 title: Manage AI Model
 permalink: usecase-ManageAIModel
-parent: usecases
+parent: UseCases
 ---
 # Manage AI Model
 

@@ -2,7 +2,7 @@
 layout: default
 title: Class DataChannel
 permalink: class-DataChannel
-parent: classes
+parent: Classes
 ---
 
 # DataChannel

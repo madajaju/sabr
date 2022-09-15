@@ -2,7 +2,7 @@
 layout: default
 title: Class OutputChannelInstance
 permalink: class-OutputChannelInstance
-parent: classes
+parent: Classes
 ---
 
 # OutputChannelInstance

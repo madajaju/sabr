@@ -2,6 +2,7 @@
 layout: default
 title: TOC
 permalink: toc
+nav_order: 7
 ---
 Version 0.1.4 
 

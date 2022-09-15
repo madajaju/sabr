@@ -2,7 +2,7 @@
 layout: default
 title: Class DataTransformInstance
 permalink: class-DataTransformInstance
-parent: classes
+parent: Classes
 ---
 
 # DataTransformInstance

@@ -2,7 +2,7 @@
 layout: default
 title: Class InputChannelInstance
 permalink: class-InputChannelInstance
-parent: classes
+parent: Classes
 ---
 
 # InputChannelInstance

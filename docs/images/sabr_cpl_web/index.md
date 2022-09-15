@@ -2,7 +2,7 @@
 layout: default
 title: Image sabr_cpl_web
 permalink: image-sabr_cpl_web
-parent: images
+parent: Images
 ---
 # sabr_cpl_web
 

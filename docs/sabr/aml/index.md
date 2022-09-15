@@ -1,8 +1,7 @@
 ---
-layout: default
-title: Application Management Layer
+title: Package Application Management Layer
 permalink: package--sabr-aml
-parent: Sentient Agent Bundle Resources
+parent: Package Sentient Agent Bundle Resources
 has_children: true
 ---
 

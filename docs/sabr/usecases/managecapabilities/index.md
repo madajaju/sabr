@@ -1,8 +1,7 @@
 ---
-layout: default
 title: Manage Capabilities
 permalink: usecase-ManageCapabilities
-parent: usecases
+parent: UseCases
 ---
 # Manage Capabilities
 

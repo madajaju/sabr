@@ -2,7 +2,7 @@
 layout: default
 title: Class DataStreamInstance
 permalink: class-DataStreamInstance
-parent: classes
+parent: Classes
 ---
 
 # DataStreamInstance

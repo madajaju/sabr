@@ -2,7 +2,7 @@
 layout: default
 title: Image jekyll/jekyll
 permalink: image-jekyll/jekyll
-parent: images
+parent: Images
 ---
 # jekyll/jekyll
 

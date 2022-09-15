@@ -1,8 +1,7 @@
 ---
-layout: default
 title: Manage Policies
 permalink: usecase-ManagePolicies
-parent: usecases
+parent: UseCases
 ---
 # Manage Policies
 

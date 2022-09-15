@@ -2,7 +2,7 @@
 layout: default
 title: Class SecureVault
 permalink: class-SecureVault
-parent: classes
+parent: Classes
 ---
 
 # SecureVault

@@ -3,7 +3,7 @@ layout: default
 title: Environment dev
 permalink: environment--sabr-dev
 parent: environment-dev
-grand_parent: environments
+grand_parent: Environments
 ---
 
 ### Sentient Agent Bundle Resources dev

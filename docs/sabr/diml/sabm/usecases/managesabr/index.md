@@ -1,8 +1,7 @@
 ---
-layout: default
 title: Manage SABR
 permalink: usecase-ManageSABR
-parent: usecases
+parent: UseCases
 ---
 # Manage SABR
 

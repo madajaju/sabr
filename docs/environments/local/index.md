@@ -1,8 +1,7 @@
 ---
-layout: default
 title: Environment local
 permalink: environment-local
-nav_exclude: false
+parent: Environments
 ---
 
 # Environment local

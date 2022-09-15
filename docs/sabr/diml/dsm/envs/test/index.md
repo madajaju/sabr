@@ -3,7 +3,7 @@ layout: default
 title: Environment test
 permalink: environment--sabr-diml-dsm-test
 parent: environment-test
-grand_parent: environments
+grand_parent: Environments
 ---
 
 ### Data Stream Manager test

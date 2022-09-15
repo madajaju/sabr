@@ -3,7 +3,7 @@ layout: default
 title: Environment prod
 permalink: environment--sabr-diml-sabm-prod
 parent: environment-prod
-grand_parent: environments
+grand_parent: Environments
 ---
 
 ### Sentient Agent Bundle Manager prod

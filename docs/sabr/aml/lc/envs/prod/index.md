@@ -3,7 +3,7 @@ layout: default
 title: Environment prod
 permalink: environment--sabr-aml-lc-prod
 parent: environment-prod
-grand_parent: environments
+grand_parent: Environments
 ---
 
 ### Learning Corpus prod

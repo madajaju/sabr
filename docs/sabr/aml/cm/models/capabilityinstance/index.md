@@ -2,7 +2,7 @@
 layout: default
 title: Class CapabilityInstance
 permalink: class-CapabilityInstance
-parent: classes
+parent: Classes
 ---
 
 # CapabilityInstance
