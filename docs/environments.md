@@ -9,11 +9,11 @@ has_children: true
 The following are the operational environments of the system utilized in all phases of development and production.
 
 
-* [local](envrionment-local)
+* [local](environment-local)
 
-* [dev](envrionment-dev)
+* [dev](environment-dev)
 
-* [test](envrionment-test)
+* [test](environment-test)
 
-* [prod](envrionment-prod)
+* [prod](environment-prod)
 

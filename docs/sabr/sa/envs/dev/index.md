@@ -3,7 +3,7 @@ layout: default
 title: Environment dev
 permalink: environment--sabr-sa-dev
 parent: environment-dev
-nav_exclude: true
+grand_parent: environments
 ---
 
 ### Security Aspect dev

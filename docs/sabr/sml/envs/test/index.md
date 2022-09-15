@@ -3,7 +3,7 @@ layout: default
 title: Environment test
 permalink: environment--sabr-sml-test
 parent: environment-test
-nav_exclude: true
+grand_parent: environments
 ---
 
 ### Service Management Layer test

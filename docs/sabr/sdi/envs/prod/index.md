@@ -3,7 +3,7 @@ layout: default
 title: Environment prod
 permalink: environment--sabr-sdi-prod
 parent: environment-prod
-nav_exclude: true
+grand_parent: environments
 ---
 
 ### Software Defined Infrastructure prod

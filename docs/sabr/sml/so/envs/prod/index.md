@@ -3,7 +3,7 @@ layout: default
 title: Environment prod
 permalink: environment--sabr-sml-so-prod
 parent: environment-prod
-nav_exclude: true
+grand_parent: environments
 ---
 
 ### Service Orchestrator prod

@@ -8,6 +8,14 @@ parent: All Actors
 
 The Application Developer work in coordination with DevOps to manage services, applications and workloads through the development pipeline.
 
+The Application Developer work in coordination with [DevOps](/doc/actor/devops) to  
+manage services, applications and workloads through the development pipeline
+
+![UseCase](./UseCases.png)
+
+![Activity](./Activity.png)
+
+![Workflow](./Workflow.png)
 
 
 ## Use Cases

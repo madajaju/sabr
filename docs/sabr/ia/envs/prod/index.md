@@ -3,7 +3,7 @@ layout: default
 title: Environment prod
 permalink: environment--sabr-ia-prod
 parent: environment-prod
-nav_exclude: true
+grand_parent: environments
 ---
 
 ### Identity Aspect prod

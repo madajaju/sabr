@@ -8,7 +8,7 @@ parent: All Actors
 
 Uses Data solutions produced by the Data Scientist and Data Engineer to provide business value to the organization.
 
-
+The data analyst uses data to build insight based on the data scientist models. Their job is to analyze the results and find business value from the analysis.
 
 ## Use Cases
 

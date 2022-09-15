@@ -1,5 +1,5 @@
 FROM jekyll/jekyll
-# Create app directory
+# Create app directory:w:w
 WORKDIR /srv/jekyll
 
 # Install app dependencies
@@ -7,7 +7,11 @@ WORKDIR /srv/jekyll
 # where available (npm@5+)
 COPY . .
 ENV JEKYLL_ENV=docker
-RUN bundle
+
+RUN gem install just-the-docs
+
+RUN bundle exec just-the-docs rake search:init
+
 # RUN jekyll build --config _config.yml
 EXPOSE 4000
 CMD jekyll serve --config _config.yml

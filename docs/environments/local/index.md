@@ -2,7 +2,7 @@
 layout: default
 title: Environment local
 permalink: environment-local
-nav_exclude: true
+nav_exclude: false
 ---
 
 # Environment local

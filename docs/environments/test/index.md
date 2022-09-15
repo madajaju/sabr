@@ -2,7 +2,7 @@
 layout: default
 title: Environment test
 permalink: environment-test
-nav_exclude: true
+nav_exclude: false
 ---
 
 # Environment test

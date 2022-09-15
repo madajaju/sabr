@@ -3,7 +3,7 @@ layout: default
 title: Environment dev
 permalink: environment--sabr-diml-sabm-dev
 parent: environment-dev
-nav_exclude: true
+grand_parent: environments
 ---
 
 ### Sentient Agent Bundle Manager dev

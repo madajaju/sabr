@@ -3,7 +3,7 @@ layout: default
 title: Environment local
 permalink: environment--sabr-cpl-local
 parent: environment-local
-nav_exclude: true
+grand_parent: environments
 ---
 
 ### Common Physical Layer local

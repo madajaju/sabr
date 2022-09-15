@@ -3,7 +3,7 @@ layout: default
 title: Environment dev
 permalink: environment--sabr-diml-dsm-dev
 parent: environment-dev
-nav_exclude: true
+grand_parent: environments
 ---
 
 ### Data Stream Manager dev

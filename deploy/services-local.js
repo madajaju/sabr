@@ -6,8 +6,8 @@ module.exports = {
                 docker: { source: "/var/run/docker.sock", target: "/var/run/docker.sock" }
             },
             interface: {
-                "/web": { path: '/web', port: 3000, protocol:"http"},
-                "/web/socket.io": { path: '/web/socket.io', port: 3000, protocol:"http"},
+                "/web": { path: '/web', port: 80, protocol:"http"},
+                "/web/socket.io": { path: '/web/socket.io', port: 80, protocol:"http"},
             },
             policies: { },
             environment: {

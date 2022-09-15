@@ -2,7 +2,7 @@
 layout: default
 title: Environment dev
 permalink: environment-dev
-nav_exclude: true
+nav_exclude: false
 ---
 
 # Environment dev

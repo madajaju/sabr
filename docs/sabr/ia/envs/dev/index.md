@@ -3,7 +3,7 @@ layout: default
 title: Environment dev
 permalink: environment--sabr-ia-dev
 parent: environment-dev
-nav_exclude: true
+grand_parent: environments
 ---
 
 ### Identity Aspect dev

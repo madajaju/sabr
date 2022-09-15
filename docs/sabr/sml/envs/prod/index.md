@@ -3,7 +3,7 @@ layout: default
 title: Environment prod
 permalink: environment--sabr-sml-prod
 parent: environment-prod
-nav_exclude: true
+grand_parent: environments
 ---
 
 ### Service Management Layer prod

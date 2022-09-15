@@ -3,7 +3,7 @@ layout: default
 title: Environment dev
 permalink: environment--sabr-aml-cm-dev
 parent: environment-dev
-nav_exclude: true
+grand_parent: environments
 ---
 
 ### Capability Manager dev

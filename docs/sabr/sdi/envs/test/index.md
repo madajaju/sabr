@@ -3,7 +3,7 @@ layout: default
 title: Environment test
 permalink: environment--sabr-sdi-test
 parent: environment-test
-nav_exclude: true
+grand_parent: environments
 ---
 
 ### Software Defined Infrastructure test

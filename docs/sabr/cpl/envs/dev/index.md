@@ -3,7 +3,7 @@ layout: default
 title: Environment dev
 permalink: environment--sabr-cpl-dev
 parent: environment-dev
-nav_exclude: true
+grand_parent: environments
 ---
 
 ### Common Physical Layer dev

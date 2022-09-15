@@ -3,7 +3,7 @@ layout: default
 title: Environment prod
 permalink: environment--sabr-diml-dsm-prod
 parent: environment-prod
-nav_exclude: true
+grand_parent: environments
 ---
 
 ### Data Stream Manager prod

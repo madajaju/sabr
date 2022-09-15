@@ -3,7 +3,7 @@ layout: default
 title: Environment test
 permalink: environment--sabr-aml-cm-test
 parent: environment-test
-nav_exclude: true
+grand_parent: environments
 ---
 
 ### Capability Manager test

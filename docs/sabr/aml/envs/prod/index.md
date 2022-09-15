@@ -3,7 +3,7 @@ layout: default
 title: Environment prod
 permalink: environment--sabr-aml-prod
 parent: environment-prod
-nav_exclude: true
+grand_parent: environments
 ---
 
 ### Application Management Layer prod

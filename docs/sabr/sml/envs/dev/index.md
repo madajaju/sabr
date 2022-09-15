@@ -3,7 +3,7 @@ layout: default
 title: Environment dev
 permalink: environment--sabr-sml-dev
 parent: environment-dev
-nav_exclude: true
+grand_parent: environments
 ---
 
 ### Service Management Layer dev

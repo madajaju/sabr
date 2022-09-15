@@ -1,7 +1,7 @@
 version: "3.7"
 services:
   web:
-    image: madajaju/sabr_web
+    image: sabr_web
     stop_grace_period: 1m
     stop_signal: SIGINT
     deploy:
@@ -19,7 +19,7 @@ services:
         aliases:
         - web
   pulsar:
-    image: madajaju/sabr_pulsar:standalone
+    image: sabr_pulsar:standalone
     stop_grace_period: 1m
     stop_signal: SIGINT
     deploy:
@@ -36,7 +36,7 @@ services:
         aliases:
         - pulsar
   doc:
-    image: madajaju/sabr_doc
+    image: sabr_doc
     stop_grace_period: 1m
     stop_signal: SIGINT
     deploy:

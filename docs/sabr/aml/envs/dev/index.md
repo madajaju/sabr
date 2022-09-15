@@ -3,7 +3,7 @@ layout: default
 title: Environment dev
 permalink: environment--sabr-aml-dev
 parent: environment-dev
-nav_exclude: true
+grand_parent: environments
 ---
 
 ### Application Management Layer dev
