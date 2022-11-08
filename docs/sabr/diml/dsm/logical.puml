@@ -28,6 +28,12 @@ package "Data Stream Manager" #ffcc88 {
         }
     }
 
+package "Security Aspect" #pink {
+    
+        class SecurityKey {
+        }
+    }
+
 package "Sentient Agent Bundle Manager" #ffcc88 {
     
         class SABundleInstance {
@@ -40,12 +46,6 @@ package "Sentient Agent Bundle Manager" #ffcc88 {
         }
     
         class DataTransformInstance {
-        }
-    }
-
-package "Security Aspect" #pink {
-    
-        class SecurityKey {
         }
     }
 
@@ -67,11 +67,14 @@ package "Data Stream Manager" #ffcc88 {
         class "DataChannel" {
                  string name
                  string direction
-                    }
+                             build()
+            }
                 DataChannel o--> "1" Service : transformService
                         DataChannel o--> "n" StreamPolicy : policy
                         DataChannel o--> "n" DataChannelInstance : instances
                         DataChannel o--> "1" DataStream : stream
+                        DataChannel o--> "1" SecurityKey : encryptionKey
+                        DataChannel o--> "1" SecurityKey : decryptionKey
             
     
     class "DataChannelInstance" {
@@ -89,8 +92,9 @@ package "Data Stream Manager" #ffcc88 {
     
     class "DataStream" {
                  string name
-                             build()
-                     deploy()
+                             addKeysToStore()
+                     build()
+                     provision()
             }
                 DataStream o--> "n" StreamPolicy : policies
                         DataStream *--> "n" DataChannel : channels
@@ -138,6 +142,7 @@ package "Data Stream Manager" #ffcc88 {
                  string direction
                              deploy()
                      process()
+                     provision()
             }
                 InputStreamInstance o--> "1" DataStream : parent
                         InputStreamInstance o--> "1" SABundleInstance : bundle
@@ -173,6 +178,7 @@ package "Data Stream Manager" #ffcc88 {
                  string name
                  string direction
                              deploy()
+                     provision()
                      send()
             }
                 OutputStreamInstance o--> "1" DataStream : parent

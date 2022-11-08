@@ -37,15 +37,17 @@ A Data stream defines where I am getting data from or pushing data.
 | --- | --- | --- | --- | --- | --- |
 | stream | 1 | DataChannel |  |  | This is the owning stream |
 | parent | 1 | DataStreamInstance |  |  | This is the parent of the data stream instance. |
+| parent | 1 | InputStreamInstance |  |  | This is the parent of the data stream instance. |
+| parent | 1 | OutputStreamInstance |  |  | This is the parent of the data stream instance. |
 | stream | n | StreamPolicy | false | false | This is the collection of streams that the policy is attached. The policy will only apply to the attached DataStreams. |
+| inputs | n | AdminTransform |  |  | Inputs of the transformation. |
+| outputs | n | AdminTransform |  |  | Outputs of the transformation. |
 | inputs | n | DataTransform |  |  | Inputs of the transformation. |
 | outputs | n | DataTransform |  |  | Outputs of the transformation. |
 | inputs | n | SABundle | false | false | Input Data Streams for the SABR |
 | outputs | n | SABundle | false | false | Output Data Streams for the SABR |
 | learningStream | 1 | SABundle |  |  | Learning Corpus Stream receives updates and sends out updates to the aimodel |
 | adminStream | 1 | SABundle |  |  | Administration Stream to handle registration of SABRS to Capabilities |
-| parent | 1 | InputStreamInstance |  |  | This is the parent of the data stream instance. |
-| parent | 1 | OutputStreamInstance |  |  | This is the parent of the data stream instance. |
 
 
 
@@ -69,14 +71,34 @@ The following diagram is the state net for this class.
 
 
 ## Methods
-
+* [addKeysToStore() - Build a Data Stream, generates the security keys for the data stream.](#action-addKeysToStore)
 * [build() - Build a Data Stream, generates the security keys for the data stream.](#action-build)
-
-* [deploy() - Deploy a Data Stream](#action-deploy)
+* [provision() - Provision a DataStream creates and instances of the data streamm to be deployed.](#action-provision)
 
 
 <h2>Method Details</h2>
     
+### Action datastream addKeysToStore
+
+
+
+* REST - datastream/addKeysToStore?keyType=string&amp;store=ref
+* bin - datastream addKeysToStore --keyType string --store ref
+* js - datastream.addKeysToStore({ keyType:string,store:ref })
+
+#### Description
+Build a Data Stream, generates the security keys for the data stream.
+
+#### Parameters
+
+| Name | Type | Required | Description |
+|---|---|---|---|
+| keyType | string |true | The type of keys to add to the store encrypt or decrypt |
+| store | ref |true |  |
+
+
+
+
 ### Action datastream build
 
 
@@ -94,16 +116,16 @@ No parameters
 
 
 
-### Action datastream deploy
+### Action datastream provision
 
 
 
-* REST - datastream/deploy?bundle=ref&amp;policies=ref
-* bin - datastream deploy --bundle ref --policies ref
-* js - datastream.deploy({ bundle:ref,policies:ref })
+* REST - datastream/provision?bundle=ref&amp;policies=ref
+* bin - datastream provision --bundle ref --policies ref
+* js - datastream.provision({ bundle:ref,policies:ref })
 
 #### Description
-Deploy a Data Stream
+Provision a DataStream creates and instances of the data streamm to be deployed.
 
 #### Parameters
 

@@ -47,8 +47,9 @@ function startService(instance) {
     environment.SABR_PROVISION_URL = global.ailtire.config.host + ':' +
         global.ailtire.config.port + global.ailtire.config.urlPrefix;
     environment.SABR_SERVICE_ID = instance.id;
-    /*
-    let instanceID = spawn(cmd, command, {
+    environment.SABR_NAME = instance.name;
+
+    let instanceID = spawn('docker', ['run', 'sabr-service'], {
         env: environment,
         detached: true,
         stdio: 'ignore'
@@ -56,6 +57,5 @@ function startService(instance) {
     instanceID.on('error', (err) => {
         console.error("Error with spawn:", err);
     });
-     */
     instance.launched({pid: instanceID});
 }

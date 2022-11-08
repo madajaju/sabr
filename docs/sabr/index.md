@@ -1,7 +1,8 @@
 ---
+layout: default
 title: Package Sentient Agent Bundle Resources
 permalink: package--sabr
-nav_order: 5
+nav_order: 4
 has_children: true
 ---
 
@@ -377,6 +378,7 @@ users interact with the system.
 
 ![Scenario Mappings Diagram](./scenariomapping.png)
 
+* [ sabr bundle build](#action--sabr-bundle-build)
 * [ sabr pulsar streams](#action--sabr-pulsar-streams)
 * [ sabr pulsar topic](#action--sabr-pulsar-topic)
 * [ sabr pulsar topics](#action--sabr-pulsar-topics)
@@ -527,6 +529,27 @@ cases and scenarios of the subsystem.
 The Sentient Agent Bundle Resources subsystem has a well defined interface. This interface can be accessed using a
 command line interface (CLI), REST interface, and Web user interface. This interface is how all other
 subsystems and actors can access the system.
+
+### Action  sabr bundle build
+
+
+
+* REST - /sabr/bundle/build?dir=string&amp;recurse=boolean&amp;output=string
+* bin -  sabr bundle build --dir string --recurse boolean --output string
+* js - .sabr.bundle.build({ dir:string,recurse:boolean,output:string })
+
+#### Description
+Build a SAB bundle for the directory specified.
+
+#### Parameters
+
+| Name | Type | Required | Description |
+|---|---|---|---|
+| dir | string |true | Directory to perform the build. |
+| recurse | boolean |false | Recursive build from the directory down. |
+| output | string |false | Output file for the bundle. |
+
+
 
 ### Action  sabr pulsar streams
 

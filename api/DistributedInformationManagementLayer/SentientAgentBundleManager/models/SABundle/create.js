@@ -88,7 +88,7 @@ module.exports = {
         linstream.addToConsumers(obj);
         linstream.addToProducers(obj);
 
-        let adminStream = new DataStream({name:"AdminStream"});
+        let adminStream = new AdminDataStream({name:"AdminStream"});
         obj.adminStream = adminStream
         adminStream.addToConsumers(obj);
         adminStream.addToProducers(obj);

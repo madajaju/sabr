@@ -32,12 +32,6 @@ Init -[#black]--> Building : build
 
 Building: entry/ Custom
 
-Building: entry/ datastream/list
-
-Building: exit/ data/list
-
-Building: exit/ data/get
-
 state builtCondition <<choice>>
 Building -[#black]--> builtCondition : built
 

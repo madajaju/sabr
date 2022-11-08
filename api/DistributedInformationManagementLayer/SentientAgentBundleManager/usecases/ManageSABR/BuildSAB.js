@@ -1,5 +1,5 @@
 module.exports = {
-    name: 'Create SAB',
+    name: 'Build SAB',
     description: 'Build the sentient agent bundle including the security vault, streams, transforms, etc..',
     method: "sabundle/build",
     actors: {

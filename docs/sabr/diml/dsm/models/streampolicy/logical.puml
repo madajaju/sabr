@@ -48,5 +48,15 @@ Model o--> "n" DataChannel : channels
     
         DataStream   o--> "n" Model : "policies"
     
+    rectangle "AdminDataStream" as AdminDataStream #lightgreen {
+    }
+    
+        AdminDataStream   o--> "n" Model : "policies"
+    
+    rectangle "SABundle" as SABundle #lightgreen {
+    }
+    
+        SABundle   o--> "n" Model : "policies"
+    
 
 @enduml

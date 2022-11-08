@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Package Service Management Layer
 permalink: package--sabr-sml
 parent: Package Sentient Agent Bundle Resources

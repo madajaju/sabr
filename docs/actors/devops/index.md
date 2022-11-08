@@ -32,4 +32,3 @@ TBD
 * [ sabr aml cm capability update](action--sabr-aml-cm-capability-update) - Update Capability allows a DevOps Engineer to update a capability in the ecosystem. This might include updating configurations, updating SABRs, removing SABRs, or adding SABRs to and existing capability.
 * [ sabr diml sabm sabundle list](action--sabr-diml-sabm-sabundle-list) - Manage SABR allows the devops engineers to create,deploy, updated and destroy SABRs in the system.
 * [ sabr capability list](action--sabr-capability-list) - Manage Capabilities use cases gives DevOps Engineers and IT Operations the ability to deploy and manage new capabilities in the system. A capability can be a set of workflows or applications that when working together provide value to the tactical operator.
-

@@ -53,11 +53,8 @@ The following diagram is the state net for this class.
 
 
 ## Methods
-
 * [deploy() - Deploy a CapabilityInstance](#action-deploy)
-
 * [kill() - Kill a CapabilityInstance that is running in the ecosystem including all of the SABRs controlled by the capability.](#action-kill)
-
 * [update() - Update a CapabilityInstance that is running in the ecosystem including all of the SABRs controlled by the capability.](#action-update)
 
 

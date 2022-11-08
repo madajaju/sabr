@@ -66,45 +66,47 @@ export default class AObject {
     }
 
     static addObject(obj, creator) {
-        // Add the object to the list
-        let ritem = {recid: obj._attributes.id};
-        for (let i in obj.definition.attributes) {
-            if (obj._attributes.hasOwnProperty(i)) {
-                ritem[i] = obj._attributes[i];
-                ritem[i + 'detail'] = obj._attributes[i];
-            }
-        }
-        for (let i in obj.definition.associations) {
-            if (obj._associations.hasOwnProperty(i)) {
-                let assocValue = obj._associations[i];
-                let assoc = obj.definition.associations[i];
-                if (assoc.cardinality === 1) {
-                    ritem[i] = assocValue._attributes.name;
-                    ritem[i + 'detail'] = `<span onclick="expandObject('${assocValue.type}?id=${assocValue._attributes.id}');">${assocValue._attributes.name}</spana>`;
-                } else {
-                    ritem[i] = assocValue.length;
-                    let values = [];
-                    for (let j in assocValue) {
-                        let aValue = assocValue[j];
-                        values.push(`<span onclick="expandObject('${aValue.type}?id=${aValue._attributes.id}');">${aValue._attributes.name}</spana>`);
-                    }
-                    ritem[i + 'detail'] = values.join('|');
+        if(!creator) {
+            // Add the object to the list Only if the creator is not set. This prevents junk from being added to the
+            // detail list.
+            let ritem = {recid: obj._attributes.id};
+            for (let i in obj.definition.attributes) {
+                if (obj._attributes.hasOwnProperty(i)) {
+                    ritem[i] = obj._attributes[i];
+                    ritem[i + 'detail'] = obj._attributes[i];
                 }
             }
+            for (let i in obj.definition.associations) {
+                if (obj._associations.hasOwnProperty(i)) {
+                    let assocValue = obj._associations[i];
+                    let assoc = obj.definition.associations[i];
+                    if (assoc.cardinality === 1) {
+                        ritem[i] = assocValue._attributes.name;
+                        ritem[i + 'detail'] = `<span onclick="expandObject('${assocValue.type}?id=${assocValue._attributes.id}');">${assocValue._attributes.name}</spana>`;
+                    } else {
+                        ritem[i] = assocValue.length;
+                        let values = [];
+                        for (let j in assocValue) {
+                            let aValue = assocValue[j];
+                            values.push(`<span onclick="expandObject('${aValue.type}?id=${aValue._attributes.id}');">${aValue._attributes.name}</spana>`);
+                        }
+                        ritem[i + 'detail'] = values.join('|');
+                    }
+                }
+            }
+            w2ui['objlist'].add([ritem]);
         }
-        w2ui['objlist'].add([ritem]);
         // Add the object to the graph
         let data = {nodes: {}, links: []};
         data.nodes[obj._attributes.id] = {
             id: obj._attributes.id,
             name: obj._attributes.name,
             group: obj.definition.name,
-            universe: "Created",
             level: obj.definition.package.shortname,
             view: obj.definition.name + '3D'
         }
         if (creator) {
-            data.links.push({target: obj._attributes.id, source: creator, value: 50, width: 0.5, color: "lightgreen"});
+            data.links.push({target: obj._attributes.id, source: creator, value: 100, width: 0.001, color: "#aaffff"});
         }
         // Now add the nodes of the associations
         // Go through the cols and get the associations
@@ -122,7 +124,6 @@ export default class AObject {
             for (let i in data.nodes) {
                 if (!data.nodes[i].rbox) {
                     data.nodes[i].rbox = rbox;
-                    data.universe = "Created";
                 }
             }
         }

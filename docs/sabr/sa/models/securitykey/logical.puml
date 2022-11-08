@@ -4,11 +4,22 @@ class "SecurityKey" as Model {
  string name
  string value
 
+ generatePair()
  
 }
 
 
 
+    rectangle "DataChannel" as DataChannel #lightgreen {
+    }
+    
+        DataChannel   o--> "1" Model : "encryptionKey"
+    
+    rectangle "DataChannel" as DataChannel #lightgreen {
+    }
+    
+        DataChannel   o--> "1" Model : "decryptionKey"
+    
     rectangle "DataStream" as DataStream #lightgreen {
     }
     
@@ -18,6 +29,31 @@ class "SecurityKey" as Model {
     }
     
         DataStream   o--> "1" Model : "decryptionKey"
+    
+    rectangle "AdminDataStream" as AdminDataStream #lightgreen {
+    }
+    
+        AdminDataStream   o--> "1" Model : "encryptionKey"
+    
+    rectangle "AdminDataStream" as AdminDataStream #lightgreen {
+    }
+    
+        AdminDataStream   o--> "1" Model : "decryptionKey"
+    
+    rectangle "SABundleBuild" as SABundleBuild #lightgreen {
+    }
+    
+        SABundleBuild   *--> "1" Model : "encryptKey"
+    
+    rectangle "SABundleBuild" as SABundleBuild #lightgreen {
+    }
+    
+        SABundleBuild   *--> "1" Model : "decryptKey"
+    
+    rectangle "SABundleBuild" as SABundleBuild #lightgreen {
+    }
+    
+        SABundleBuild   *--> "1" Model : "iv"
     
     rectangle "KeyStore" as KeyStore #lightgreen {
     }
@@ -33,6 +69,11 @@ class "SecurityKey" as Model {
     }
     
         SecureVault   *--> "1" Model : "decryptKey"
+    
+    rectangle "SecureVault" as SecureVault #lightgreen {
+    }
+    
+        SecureVault   *--> "1" Model : "iv"
     
 
 @enduml

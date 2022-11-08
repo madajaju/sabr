@@ -14,7 +14,9 @@ module.exports = {
         // inputs contains the obj for the this method.
         // Create the consumer for the channel.
         obj.name = inputs.name;
-        let topicName = obj.name.replace(/\//g,'-');
+        // Remove the .out before allocating the topic name.
+        // This provides the channel instances to be unique for out and in.
+        let topicName = obj.name.replace(/\//g,'-').replace(/\.out$/,'');
         let pulsarHost = ailtire.config.pulsarHost;
         let sabrName = obj.name;
 

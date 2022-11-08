@@ -45,20 +45,17 @@ The following diagram is the state net for this class.
 | --- | --- | --- |
 | Init | Initial State | create-&gt;Created,  |
 | Created | The Channel is created but not connected to message queues | deploy-&gt;Deploying,  |
-| Deploying | The channel is currently being deployed and connected to the message queues | deployed-&gt;Enabled,  |
-| Enabled | Channel can send information. | disable-&gt;Disabled, send-&gt;undefined,  |
+| Deploying | The channel is currently being deployed and connected to the message queues | deployed-&gt;Enabled, failed-&gt;Failed,  |
+| Enabled | Channel can send information. | disable-&gt;Disabled,  |
 | Disabled | Channel cannot send information. | enable-&gt;Enabled,  |
+| Failed | Channel failed to deploy. |  |
 
 
 
 ## Methods
-
 * [create() - Create a Output Channel Instance](#action-create)
-
 * [deploy() - Deploy the output channel instance](#action-deploy)
-
 * [send() - Send data to the Data Stream Instance](#action-send)
-
 * [failed() - Deployment Failed on the Data Channel Instance.](#action-failed)
 
 

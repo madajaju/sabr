@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Package Service Orchestrator
 permalink: package--sabr-sml-so
 parent: Package Service Management Layer

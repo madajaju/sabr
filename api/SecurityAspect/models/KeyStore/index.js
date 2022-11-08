@@ -7,6 +7,10 @@ class KeyStore {
             name: {
                 type: 'string',
                 description: 'Name of the Key Store',
+            },
+            encryptedData: {
+                type: 'string',
+                description: 'This is the encrypted representation of the key store.'
             }
         },
         associations: {

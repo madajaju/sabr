@@ -24,4 +24,3 @@ TBD
 ## Command Line Interface
 * [ sabr capability list](action--sabr-capability-list) - Manage Capabilities use cases gives DevOps Engineers and IT Operations the ability to deploy and manage new capabilities in the system. A capability can be a set of workflows or applications that when working together provide value to the tactical operator.
 * [ sabr policy list](action--sabr-policy-list) - Manage Policies use case includes establishing and managing DDIL environment policies for the complete ecosystem, individual capabilities, SABRs, and applications. This use case also refers to orchestration and deployment policies.
-

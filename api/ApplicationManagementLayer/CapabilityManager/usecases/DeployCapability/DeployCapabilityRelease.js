@@ -9,7 +9,7 @@ module.exports = {
     steps: [
         { action: 'capability create', parameters: {name:'myCapability1', file:'./templates/capability.js'}},
         { action: 'aml cm capability build', parameters: {name:'myCapability1' }},
-        { action: 'aml cm capability deploy', parameters: {name:'myCapability1' }},
+        { action: 'aml cm capability deploy', parameters: {capability:'myCapability1' }},
     ]
 };
 

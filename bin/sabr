@@ -5,8 +5,9 @@ const fs = require('fs');
 require('./lib/subcommander');
 let config;
 program
-    .version('0.1.4')
-    .command('init', 'Initalize the connection');
+    .version('0.1.5')
+    .command('init', 'Initalize the connection')
+    .command('build', 'Build a SAB from the directory');
 try {
     global.ailtire = { config: require('../.ailtire.js') };
     let topCommands = {};

@@ -19,6 +19,9 @@ state OutputChannelInstance #ffcc88 {
     state Disabled #ffcc88 {
     }
 
+    state Failed #ffcc88 {
+    }
+
 
 
 
@@ -27,6 +30,8 @@ Init -[#black]--> Created : create
 Created -[#black]--> Deploying : deploy
 
 Deploying -[#black]--> Enabled : deployed
+
+Deploying -[#black]--> Failed : failed
 
 Enabled -[#black]--> Disabled : disable
 

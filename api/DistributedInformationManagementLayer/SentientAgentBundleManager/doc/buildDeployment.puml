@@ -1,0 +1,66 @@
+@startuml
+'https://plantuml.com/component-diagram
+
+
+node "Bundle" as Bundle {
+    component image1 #ffffaa
+    component image2 #ffffaa
+    component image3 #ffffaa
+    component streamManager #ffffaa
+    storage secureVault
+    file bundle.js
+    file policy.js
+    database ApplicationData
+}
+
+component "BundleBuild" as BB #ffffaa {
+    file Blob.enc
+    storage publicKey
+    control unpack.js
+    unpack.js <-- publicKey
+    unpack.js ..> Blob.enc
+}
+control "Key Generation" as KG
+
+control "Build Process" as BP
+
+frame "SecurityController" as SC {
+    storage "Public Key Store" as ks1
+    storage "Private Key Store" as pks1
+}
+control "Device Provision\nProcess" as dpp
+
+node Device #dddddd {
+frame "EdgeSecurityController" as ESC #ffffff {
+    storage "Private Key Store" as ks2
+    control "Deploy Process" as dp
+}
+frame "SABR" as SABR #ffffff {
+   frame "ms1:image1" as ms1
+   frame "ms2:image2" as ms2
+   frame "ms3:image3" as ms3
+   frame "streamManager:streamManager" as SM
+   database ApplicationData as ad
+   file bundle.js as b2
+   file policy.js as p2
+   storage secureVault as sv
+   ms1 --> ad
+   ms2 --> ad
+   ms3 --> ad
+   SM -->  b2
+   SM -->  p2
+   SM -->  sv
+}
+}
+
+dpp --> ESC
+dpp ..> ks2
+BB --> dp
+dp --> SABR
+Bundle --> BP
+BP ---> BB
+BP <.. ks1
+KG --> ks1
+KG --> pks1
+pks1 ..> dpp
+@enduml

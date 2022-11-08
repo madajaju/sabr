@@ -22,6 +22,7 @@ The secure vault contains a SecureKey with the decryption keys to the encrypted 
 | --- | --- | --- | --- | --- | --- |
 | encryptKey | 1 | SecurityKey | true | true |  |
 | decryptKey | 1 | SecurityKey | true | true |  |
+| iv | 1 | SecurityKey | true | true | Init Vector of the cipher |
 | store | 1 | KeyStore | true | true |  |
 
 
@@ -37,7 +38,6 @@ The secure vault contains a SecureKey with the decryption keys to the encrypted 
 
 
 ## Methods
-
 * [encrypt() - Encrypt a the Security Vault](#action-encrypt)
 
 
@@ -47,16 +47,19 @@ The secure vault contains a SecureKey with the decryption keys to the encrypted 
 
 
 
-* REST - securevault/encrypt?
-* bin - securevault encrypt 
-* js - securevault.encrypt({  })
+* REST - securevault/encrypt?name=string
+* bin - securevault encrypt --name string
+* js - securevault.encrypt({ name:string })
 
 #### Description
 Encrypt a the Security Vault
 
 #### Parameters
 
-No parameters
+| Name | Type | Required | Description |
+|---|---|---|---|
+| name | string |false | Name of the SecurityKey Pair |
+
 
 
 

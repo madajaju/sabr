@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Environment test
 permalink: environment-test
 parent: Environments
@@ -12,6 +13,7 @@ parent stack and child stack relationships.
 * [sabr_aml_am](environment--sabr-aml-am-test)
 * [sabr_aml_cm](environment--sabr-aml-cm-test)
 * [sabr_aml](environment--sabr-aml-test)
+* [a_d](environment--sabr-aml-dsom-test)
 * [sabr_aml_lc](environment--sabr-aml-lc-test)
 * [sabr_cpl](environment--sabr-cpl-test)
 * [sabr_diml_dsm](environment--sabr-diml-dsm-test)

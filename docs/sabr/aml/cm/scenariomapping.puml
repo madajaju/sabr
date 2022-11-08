@@ -2,210 +2,190 @@
 left to right direction
 
 
-
-state "DevOpsEngineer" as DevOpsEngineer {
-    state "Deploy Capability" as DevOpsEngineerDeployCapability {
-    }
-}
-state "sabr" as sabr #00aaff {
-state "aml" as sabraml #00aaff {
-state "cm" as sabramlcm #00aaff {
-state "capability" as sabramlcmcapability #00aaff {
-state "deploy" as sabramlcmcapabilitydeploy #00aaff {
-}
-}
+    package "sabr" as sabr {
+package "aml" as sabraml {
+package "cm" as sabramlcm #00aaff {
+ component "capability" as sabramlcmcapability
+ interface "build" as sabramlcmcapabilitybuild
+sabramlcmcapability -- sabramlcmcapabilitybuild
 }
 }
 }
 
-DevOpsEngineerDeployCapability --> sabramlcmcapabilitydeploy
-
-
-    state "DevOpsEngineer" as DevOpsEngineer {
-        state "Deploy Capability" as DevOpsEngineerDeployCapability {
-            state "Deploy Capability Release" as DevOpsEngineerDeployCapabilityDeployCapabilityRelease {
-            }
-        }
-    }
     
-    DevOpsEngineerDeployCapabilityDeployCapabilityRelease --> Null
-    
- 
- 
-state "Application Developer" as ApplicationDeveloper {
-    state "Develop Capability" as ApplicationDeveloperDevelopCapability {
-    }
-}
-
-ApplicationDeveloperDevelopCapability --> Null
-
-
-    state "DevOpsEngineer" as DevOpsEngineer {
-        state "Develop Capability" as DevOpsEngineerDevelopCapability {
-            state "Build Capability" as DevOpsEngineerDevelopCapabilityBuildCapability {
-            }
-        }
-    }
-    
-    DevOpsEngineerDevelopCapabilityBuildCapability --> Null
-    
- 
-    state "DevOpsEngineer" as DevOpsEngineer {
-        state "Develop Capability" as DevOpsEngineerDevelopCapability {
-            state "Create Capability" as DevOpsEngineerDevelopCapabilityCreateCapability {
-            }
-        }
-    }
-    
-    DevOpsEngineerDevelopCapabilityCreateCapability --> Null
-    
- 
-    state "DevOpsEngineer" as DevOpsEngineer {
-        state "Develop Capability" as DevOpsEngineerDevelopCapability {
-            state "Release Capability" as DevOpsEngineerDevelopCapabilityReleaseCapability {
-            }
-        }
-    }
-    
-    DevOpsEngineerDevelopCapabilityReleaseCapability --> Null
-    
- 
-    state "DevOpsEngineer" as DevOpsEngineer {
-        state "Develop Capability" as DevOpsEngineerDevelopCapability {
-            state "Test Capability" as DevOpsEngineerDevelopCapabilityTestCapability {
-            }
-        }
-    }
-    
-    DevOpsEngineerDevelopCapabilityTestCapability --> Null
-    
- 
- 
-state "DevOpsEngineer" as DevOpsEngineer {
-    state "Remove Capability" as DevOpsEngineerRemoveCapability {
-    }
-}
-state "sabr" as sabr #00aaff {
-state "aml" as sabraml #00aaff {
-state "cm" as sabramlcm #00aaff {
-state "capability" as sabramlcmcapability #00aaff {
-state "remove" as sabramlcmcapabilityremove #00aaff {
-}
-}
+    package "sabr" as sabr {
+package "aml" as sabraml {
+package "cm" as sabramlcm #00aaff {
+ component "capability" as sabramlcmcapability
+ interface "create" as sabramlcmcapabilitycreate
+sabramlcmcapability -- sabramlcmcapabilitycreate
 }
 }
 }
 
-DevOpsEngineerRemoveCapability --> sabramlcmcapabilityremove
-
-
- 
-state "DevOpsEngineer" as DevOpsEngineer {
-    state "Update Capability" as DevOpsEngineerUpdateCapability {
-    }
-}
-state "sabr" as sabr #00aaff {
-state "aml" as sabraml #00aaff {
-state "cm" as sabramlcm #00aaff {
-state "capability" as sabramlcmcapability #00aaff {
-state "update" as sabramlcmcapabilityupdate #00aaff {
-}
-}
+    
+    package "sabr" as sabr {
+package "aml" as sabraml {
+package "cm" as sabramlcm #00aaff {
+ component "capability" as sabramlcmcapability
+ interface "deploy" as sabramlcmcapabilitydeploy
+sabramlcmcapability -- sabramlcmcapabilitydeploy
 }
 }
 }
 
-DevOpsEngineerUpdateCapability --> sabramlcmcapabilityupdate
+    
+    package "sabr" as sabr {
+package "aml" as sabraml {
+package "cm" as sabramlcm #00aaff {
+ component "capability" as sabramlcmcapability
+ interface "list" as sabramlcmcapabilitylist
+sabramlcmcapability -- sabramlcmcapabilitylist
+}
+}
+}
+
+    
+    package "sabr" as sabr {
+package "aml" as sabraml {
+package "cm" as sabramlcm #00aaff {
+ component "capability" as sabramlcmcapability
+ interface "release" as sabramlcmcapabilityrelease
+sabramlcmcapability -- sabramlcmcapabilityrelease
+}
+}
+}
+
+    
+    package "sabr" as sabr {
+package "aml" as sabraml {
+package "cm" as sabramlcm #00aaff {
+ component "capability" as sabramlcmcapability
+ interface "remove" as sabramlcmcapabilityremove
+sabramlcmcapability -- sabramlcmcapabilityremove
+}
+}
+}
+
+    
+    package "sabr" as sabr {
+package "aml" as sabraml {
+package "cm" as sabramlcm #00aaff {
+ component "capability" as sabramlcmcapability
+ interface "test" as sabramlcmcapabilitytest
+sabramlcmcapability -- sabramlcmcapabilitytest
+}
+}
+}
+
+    
+    package "sabr" as sabr {
+package "aml" as sabraml {
+package "cm" as sabramlcm #00aaff {
+ component "capability" as sabramlcmcapability
+ interface "update" as sabramlcmcapabilityupdate
+sabramlcmcapability -- sabramlcmcapabilityupdate
+}
+}
+}
+
+    
 
 
-    state "DevOpsEngineer" as DevOpsEngineer {
-        state "Update Capability" as DevOpsEngineerUpdateCapability {
-            state "Add a SABR to the Capability" as DevOpsEngineerUpdateCapabilityAddaSABRtotheCapability {
-            }
+
+        rectangle "Deploy Capability" as DeployCapability #ffffaa {
+            ("Deploy Capability Release")/ as DevOpsEngineerDeployCapabilityDeployCapabilityRelease
         }
-    }
     
-    DevOpsEngineerUpdateCapabilityAddaSABRtotheCapability --> Null
+    sabramlcmcapabilitydeploy <-- DevOpsEngineerDeployCapabilityDeployCapabilityRelease
     
- 
-    state "ApplicationDeveloper" as ApplicationDeveloper {
-        state "Update Capability" as ApplicationDeveloperUpdateCapability {
-            state "Add SABRs to the Capability" as ApplicationDeveloperUpdateCapabilityAddSABRstotheCapability {
-            }
+
+        rectangle "Develop Capability" as DevelopCapability #ffffaa {
+            ("Build Capability")/ as DevOpsEngineerDevelopCapabilityBuildCapability
         }
-    }
     
-    ApplicationDeveloperUpdateCapabilityAddSABRstotheCapability --> Null
+    sabramlcmcapabilitybuild <-- DevOpsEngineerDevelopCapabilityBuildCapability
     
-    state "DevOpsEngineer" as DevOpsEngineer {
-        state "Update Capability" as DevOpsEngineerUpdateCapability {
-            state "Add SABRs to the Capability" as DevOpsEngineerUpdateCapabilityAddSABRstotheCapability {
-            }
+        rectangle "Develop Capability" as DevelopCapability #ffffaa {
+            ("Create Capability")/ as DevOpsEngineerDevelopCapabilityCreateCapability
         }
-    }
     
-    DevOpsEngineerUpdateCapabilityAddSABRstotheCapability --> Null
+    sabramlcmcapabilitycreate <-- DevOpsEngineerDevelopCapabilityCreateCapability
     
- 
-    state "DevOpsEngineer" as DevOpsEngineer {
-        state "Update Capability" as DevOpsEngineerUpdateCapability {
-            state "Remove a SABR from the Capability" as DevOpsEngineerUpdateCapabilityRemoveaSABRfromtheCapability {
-            }
+        rectangle "Develop Capability" as DevelopCapability #ffffaa {
+            ("Release Capability")/ as DevOpsEngineerDevelopCapabilityReleaseCapability
         }
-    }
     
-    DevOpsEngineerUpdateCapabilityRemoveaSABRfromtheCapability --> Null
+    sabramlcmcapabilityrelease <-- DevOpsEngineerDevelopCapabilityReleaseCapability
     
-    state "ApplicationDeveloper" as ApplicationDeveloper {
-        state "Update Capability" as ApplicationDeveloperUpdateCapability {
-            state "Remove a SABR from the Capability" as ApplicationDeveloperUpdateCapabilityRemoveaSABRfromtheCapability {
-            }
+        rectangle "Develop Capability" as DevelopCapability #ffffaa {
+            ("Test Capability")/ as DevOpsEngineerDevelopCapabilityTestCapability
         }
-    }
     
-    ApplicationDeveloperUpdateCapabilityRemoveaSABRfromtheCapability --> Null
+    sabramlcmcapabilitytest <-- DevOpsEngineerDevelopCapabilityTestCapability
     
- 
-    state "DevOpsEngineer" as DevOpsEngineer {
-        state "Update Capability" as DevOpsEngineerUpdateCapability {
-            state "Remove multiple SABRs from the Capability" as DevOpsEngineerUpdateCapabilityRemovemultipleSABRsfromtheCapability {
-            }
+
+
+        rectangle "Update Capability" as UpdateCapability #ffffaa {
+            ("Add a SABR to the Capability")/ as DevOpsEngineerUpdateCapabilityAddaSABRtotheCapability
         }
-    }
     
-    DevOpsEngineerUpdateCapabilityRemovemultipleSABRsfromtheCapability --> Null
+    sabramlcmcapabilityupdate <-- DevOpsEngineerUpdateCapabilityAddaSABRtotheCapability
     
- 
-    state "DevOpsEngineer" as DevOpsEngineer {
-        state "Update Capability" as DevOpsEngineerUpdateCapability {
-            state "Update Configuration of the Capability" as DevOpsEngineerUpdateCapabilityUpdateConfigurationoftheCapability {
-            }
+        rectangle "Update Capability" as UpdateCapability #ffffaa {
+            ("Add SABRs to the Capability")/ as ApplicationDeveloperUpdateCapabilityAddSABRstotheCapability
         }
-    }
     
-    DevOpsEngineerUpdateCapabilityUpdateConfigurationoftheCapability --> Null
+    sabramlcmcapabilityupdate <-- ApplicationDeveloperUpdateCapabilityAddSABRstotheCapability
     
- 
-    state "DevOpsEngineer" as DevOpsEngineer {
-        state "Update Capability" as DevOpsEngineerUpdateCapability {
-            state "Update Policies of the Capability" as DevOpsEngineerUpdateCapabilityUpdatePoliciesoftheCapability {
-            }
+        rectangle "Update Capability" as UpdateCapability #ffffaa {
+            ("Add SABRs to the Capability")/ as DevOpsEngineerUpdateCapabilityAddSABRstotheCapability
         }
-    }
     
-    DevOpsEngineerUpdateCapabilityUpdatePoliciesoftheCapability --> Null
+    sabramlcmcapabilityupdate <-- DevOpsEngineerUpdateCapabilityAddSABRstotheCapability
     
- 
-    state "DevOpsEngineer" as DevOpsEngineer {
-        state "Update Capability" as DevOpsEngineerUpdateCapability {
-            state "Update SABRs of the Capability" as DevOpsEngineerUpdateCapabilityUpdateSABRsoftheCapability {
-            }
+        rectangle "Update Capability" as UpdateCapability #ffffaa {
+            ("Remove a SABR from the Capability")/ as DevOpsEngineerUpdateCapabilityRemoveaSABRfromtheCapability
         }
-    }
     
-    DevOpsEngineerUpdateCapabilityUpdateSABRsoftheCapability --> Null
+    sabramlcmcapabilityupdate <-- DevOpsEngineerUpdateCapabilityRemoveaSABRfromtheCapability
     
- 
- 
+        rectangle "Update Capability" as UpdateCapability #ffffaa {
+            ("Remove a SABR from the Capability")/ as ApplicationDeveloperUpdateCapabilityRemoveaSABRfromtheCapability
+        }
+    
+    sabramlcmcapabilityupdate <-- ApplicationDeveloperUpdateCapabilityRemoveaSABRfromtheCapability
+    
+        rectangle "Update Capability" as UpdateCapability #ffffaa {
+            ("Remove multiple SABRs from the Capability")/ as DevOpsEngineerUpdateCapabilityRemovemultipleSABRsfromtheCapability
+        }
+    
+    sabramlcmcapabilityupdate <-- DevOpsEngineerUpdateCapabilityRemovemultipleSABRsfromtheCapability
+    
+        rectangle "Update Capability" as UpdateCapability #ffffaa {
+            ("Update Configuration of the Capability")/ as DevOpsEngineerUpdateCapabilityUpdateConfigurationoftheCapability
+        }
+    
+    sabramlcmcapabilityupdate <-- DevOpsEngineerUpdateCapabilityUpdateConfigurationoftheCapability
+    
+        rectangle "Update Capability" as UpdateCapability #ffffaa {
+            ("Update Policies of the Capability")/ as DevOpsEngineerUpdateCapabilityUpdatePoliciesoftheCapability
+        }
+    
+    sabramlcmcapabilityupdate <-- DevOpsEngineerUpdateCapabilityUpdatePoliciesoftheCapability
+    
+        rectangle "Update Capability" as UpdateCapability #ffffaa {
+            ("Update SABRs of the Capability")/ as DevOpsEngineerUpdateCapabilityUpdateSABRsoftheCapability
+        }
+    
+    sabramlcmcapabilityupdate <-- DevOpsEngineerUpdateCapabilityUpdateSABRsoftheCapability
+    
+
+
+
+
+
+
+
 
 @enduml

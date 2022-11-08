@@ -9,7 +9,7 @@ class InputChannelInstance {
             consumer: {
                 type: 'ref',
                 description: 'This is the actual consumer of the datastream. It is implemented using Pulsar or kafka.',
-            }
+            },
         },
         associations: {
             transforms: {

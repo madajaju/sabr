@@ -19,7 +19,6 @@ Update Capability allows a DevOps Engineer to update a capability in the ecosyst
 
 ## Extends Use Cases
 
-
 * [Manage Capabilities](usecase-ManageCapabilities)
 
 

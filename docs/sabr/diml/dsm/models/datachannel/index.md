@@ -25,6 +25,8 @@ This represents one channel in the data stream with specific rules for the chann
 | policy | n | StreamPolicy |  |  | This policy is the policy that will create an instance of the data channel attached to a data stream. The policy defines how the channel is created and what transformation service to use when publishing or consuming information on the channel. |
 | instances | n | DataChannelInstance |  |  | This is a collection of all of the instances of the data channel running in the system. |
 | stream | 1 | DataStream |  |  | This is the owning stream |
+| encryptionKey | 1 | SecurityKey |  |  | Encryption Key for the channel |
+| decryptionKey | 1 | SecurityKey |  |  | Decryption Key for the channel |
 
 
 
@@ -34,9 +36,10 @@ This represents one channel in the data stream with specific rules for the chann
 | --- | --- | --- | --- | --- | --- |
 | design | 1 | DataChannelInstance |  |  | Parent of the channel Instance. This is the definition of the channel. |
 | channels | n | DataStream | true | true | This is the collection of channel that are attached to this data stream |
-| channels | n | StreamPolicy | false | false | This collection of channels that are used to create channel instances when the stream is created. |
 | design | 1 | InputChannelInstance |  |  | Parent of the channel Instance. This is the definition of the channel. |
 | design | 1 | OutputChannelInstance |  |  | Parent of the channel Instance. This is the definition of the channel. |
+| channels | n | StreamPolicy | false | false | This collection of channels that are used to create channel instances when the stream is created. |
+| channels | n | AdminDataStream | true | true | This is the collection of channel that are attached to this data stream |
 
 
 
@@ -58,8 +61,26 @@ The following diagram is the state net for this class.
 
 
 ## Methods
+* [build() - Build a Data Channel, generates the security keys for the data stream.](#action-build)
 
 
 <h2>Method Details</h2>
     
+### Action datachannel build
+
+
+
+* REST - datachannel/build?
+* bin - datachannel build 
+* js - datachannel.build({  })
+
+#### Description
+Build a Data Channel, generates the security keys for the data stream.
+
+#### Parameters
+
+No parameters
+
+
+
 

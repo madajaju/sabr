@@ -2,85 +2,149 @@
 left to right direction
 
 
-
-state "DevOpsEngineer" as DevOpsEngineer {
-    state "Manage SABR" as DevOpsEngineerManageSABR {
-    }
-}
-state "sabr" as sabr #ffcc88 {
-state "diml" as sabrdiml #ffcc88 {
-state "sabm" as sabrdimlsabm #ffcc88 {
-state "sabundle" as sabrdimlsabmsabundle #ffcc88 {
-state "list" as sabrdimlsabmsabundlelist #ffcc88 {
-}
-}
-}
+    package "sabr" as sabr {
+package "diml" as sabrdiml {
+ component "sabm" as sabrdimlsabm
+ interface "connect" as sabrdimlsabmconnect
+sabrdimlsabm -- sabrdimlsabmconnect
 }
 }
 
-DevOpsEngineerManageSABR --> sabrdimlsabmsabundlelist
+    
+    package "sabr" as sabr {
+package "diml" as sabrdiml {
+package "sabm" as sabrdimlsabm #ffcc88 {
+ component "bundle" as sabrdimlsabmbundle
+ interface "createanddeploy" as sabrdimlsabmbundlecreateanddeploy
+sabrdimlsabmbundle -- sabrdimlsabmbundlecreateanddeploy
+}
+}
+}
+
+    
+    package "sabr" as sabr {
+package "diml" as sabrdiml {
+package "sabm" as sabrdimlsabm #ffcc88 {
+ component "bundle" as sabrdimlsabmbundle
+ interface "deploy" as sabrdimlsabmbundledeploy
+sabrdimlsabmbundle -- sabrdimlsabmbundledeploy
+}
+}
+}
+
+    
+    package "sabr" as sabr {
+package "diml" as sabrdiml {
+package "sabm" as sabrdimlsabm #ffcc88 {
+ component "policy" as sabrdimlsabmpolicy
+ interface "create" as sabrdimlsabmpolicycreate
+sabrdimlsabmpolicy -- sabrdimlsabmpolicycreate
+}
+}
+}
+
+    
+    package "sabr" as sabr {
+package "diml" as sabrdiml {
+package "sabm" as sabrdimlsabm #ffcc88 {
+ component "sabundle" as sabrdimlsabmsabundle
+ interface "build" as sabrdimlsabmsabundlebuild
+sabrdimlsabmsabundle -- sabrdimlsabmsabundlebuild
+}
+}
+}
+
+    
+    package "sabr" as sabr {
+package "diml" as sabrdiml {
+package "sabm" as sabrdimlsabm #ffcc88 {
+ component "sabundle" as sabrdimlsabmsabundle
+ interface "create" as sabrdimlsabmsabundlecreate
+sabrdimlsabmsabundle -- sabrdimlsabmsabundlecreate
+}
+}
+}
+
+    
+    package "sabr" as sabr {
+package "diml" as sabrdiml {
+package "sabm" as sabrdimlsabm #ffcc88 {
+ component "sabundle" as sabrdimlsabmsabundle
+ interface "deploy" as sabrdimlsabmsabundledeploy
+sabrdimlsabmsabundle -- sabrdimlsabmsabundledeploy
+}
+}
+}
+
+    
+    package "sabr" as sabr {
+package "diml" as sabrdiml {
+package "sabm" as sabrdimlsabm #ffcc88 {
+ component "sabundle" as sabrdimlsabmsabundle
+ interface "list" as sabrdimlsabmsabundlelist
+sabrdimlsabmsabundle -- sabrdimlsabmsabundlelist
+}
+}
+}
+
+    
+hexagon "sabundleinstance.created" as sabundleinstancecreated
+            sabrdimlsabm <-- sabundleinstancecreated
+        
+hexagon "sabundleinstance.deployed" as sabundleinstancedeployed
+            sabrdimlsabm <-- sabundleinstancedeployed
+        
+hexagon "sabundleinstance.enabled" as sabundleinstanceenabled
+            sabrdimlsabm <-- sabundleinstanceenabled
+        
 
 
-    state "ApplicationDeveloper" as ApplicationDeveloper {
-        state "Manage SABR" as ApplicationDeveloperManageSABR {
-            state "Create SAB" as ApplicationDeveloperManageSABRBuildSAB {
-            }
+
+
+
+
+
+
+        rectangle "Manage SABR" as ManageSABR #ffffaa {
+            ("Build SAB")/ as ApplicationDeveloperManageSABRBuildSAB
         }
-    }
     
-    ApplicationDeveloperManageSABRBuildSAB --> Null
+    sabrdimlsabmsabundlebuild <-- ApplicationDeveloperManageSABRBuildSAB
     
- 
-    state "ApplicationDeveloper" as ApplicationDeveloper {
-        state "Manage SABR" as ApplicationDeveloperManageSABR {
-            state "Create SABR" as ApplicationDeveloperManageSABRCreateSABR {
-            }
+        rectangle "Manage SABR" as ManageSABR #ffffaa {
+            ("Create SABR")/ as ApplicationDeveloperManageSABRCreateSABR
         }
-    }
     
-    ApplicationDeveloperManageSABRCreateSABR --> Null
+    sabrdimlsabmsabundlecreate <-- ApplicationDeveloperManageSABRCreateSABR
     
- 
-    state "DevOpsEngineer" as DevOpsEngineer {
-        state "Manage SABR" as DevOpsEngineerManageSABR {
-            state "Deploy SABR" as DevOpsEngineerManageSABRDeploySABR {
-            }
+        rectangle "Manage SABR" as ManageSABR #ffffaa {
+            ("Deploy SABR")/ as DevOpsEngineerManageSABRDeploySABR
         }
-    }
     
-    DevOpsEngineerManageSABRDeploySABR --> Null
+    sabrdimlsabmsabundledeploy <-- DevOpsEngineerManageSABRDeploySABR
     
- 
-    state "DevOpsEngineer" as DevOpsEngineer {
-        state "Manage SABR" as DevOpsEngineerManageSABR {
-            state "Deploy SABR two" as DevOpsEngineerManageSABRDeploySABR2 {
-            }
+        rectangle "Manage SABR" as ManageSABR #ffffaa {
+            ("Deploy SABR two")/ as DevOpsEngineerManageSABRDeploySABR2
         }
-    }
     
-    DevOpsEngineerManageSABRDeploySABR2 --> Null
+    sabrdimlsabmsabundledeploy <-- DevOpsEngineerManageSABRDeploySABR2
     
- 
-    state "DevOpsEngineer" as DevOpsEngineer {
-        state "Manage SABR" as DevOpsEngineerManageSABR {
-            state "Deploy SABR three" as DevOpsEngineerManageSABRDeploySABR3 {
-            }
+        rectangle "Manage SABR" as ManageSABR #ffffaa {
+            ("Deploy SABR three")/ as DevOpsEngineerManageSABRDeploySABR3
         }
-    }
     
-    DevOpsEngineerManageSABRDeploySABR3 --> Null
+    sabrdimlsabmsabundledeploy <-- DevOpsEngineerManageSABRDeploySABR3
     
- 
-    state "DevOpsEngineer" as DevOpsEngineer {
-        state "Manage SABR" as DevOpsEngineerManageSABR {
-            state "Deploy SABR four" as DevOpsEngineerManageSABRDeploySABR4 {
-            }
+        rectangle "Manage SABR" as ManageSABR #ffffaa {
+            ("Deploy SABR four")/ as DevOpsEngineerManageSABRDeploySABR4
         }
-    }
     
-    DevOpsEngineerManageSABRDeploySABR4 --> Null
+    sabrdimlsabmsabundledeploy <-- DevOpsEngineerManageSABRDeploySABR4
     
- 
- 
+
+
+
+
+
 
 @enduml

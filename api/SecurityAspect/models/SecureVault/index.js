@@ -23,6 +23,13 @@ class SecureVault {
                 composition: true,
                 owner: true,
             },
+            iv: {
+                description: 'Init Vector of the cipher',
+                type: 'SecurityKey',
+                cardinality: 1,
+                composition: true,
+                owner: true,
+            },
             store: {
                 type: 'KeyStore',
                 cardinality: 1,

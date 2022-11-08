@@ -9,13 +9,13 @@ module.exports = {
     exits: {},
 
     fn: async function (obj, inputs) {
-        // inputs contains the obj for the this method.
+        // inputs contains the obj for this method.
         let consumer = obj.consumer;
 
         // Need to wait for the consumer before calling run.
         try {
             await consumer.subscribe();
-            console.log("Subscribed");
+            console.log("Subscribed:", obj.name );
             await consumer.run({
                 onMessage: async ({ack, message, properties, redeliveryCount}) => {
                     await ack(); // Default is individual ack
@@ -28,7 +28,8 @@ module.exports = {
             obj.deployed();
         } catch (e) {
             console.error("Error during deploy of Channel Instance:", e);
-            obj.failed(`Error Creating Consumer for channel:${obj.name}, ${e}`);
+            obj.message = `Error Creating Consumer for channel:${obj.name}, ${e}`;
+            obj.failed();
         }
         return obj;
     }

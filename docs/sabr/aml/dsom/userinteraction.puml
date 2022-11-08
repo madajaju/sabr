@@ -1,0 +1,15 @@
+@startuml
+
+
+actor "Actor" as actor
+
+
+
+
+actor -> "DevSecOpsManager": Manage Environments
+"DevSecOpsManager" -> bin: data govern
+bin -> REST: data/govern
+
+
+
+@enduml

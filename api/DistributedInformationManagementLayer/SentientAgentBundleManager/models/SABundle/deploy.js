@@ -16,14 +16,19 @@ module.exports = {
 
     exits: {},
 
-    fn: (obj, inputs) => {
+    fn: async (obj, inputs) => {
         // For each Stream in the Bundle create a streaminstance.
         // Pass the policies to the stream so appropriate channels are created.
         // Create a SABundleInstance with all of the StreamInstances attached.
+        if(inputs.policies) {
+            for(let i in inputs.policies)  {
+                obj.addToPolicies(inputs.policies[i]);
+            }
+        }
         let numi = obj.instances.length;
         let instance = new SABundleInstance({name:obj.name + '-' + numi, parent: obj});
         obj.addToInstances(instance);
-        instance.deploy(inputs);
+        await instance.deploy({policies: obj.policies});
         return instance;
     }
 };

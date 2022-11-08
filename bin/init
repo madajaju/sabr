@@ -6,7 +6,7 @@ const path = require('path');
 const bent = require('bent');
 
 program
-    .version('0.0.1')
+    .version('0.1.5')
     .option('--host <hostname:port>', 'Initialize the connection')
     .parse(process.argv);
 

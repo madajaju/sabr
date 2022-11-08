@@ -24,9 +24,17 @@ class InputStreamInstance {
             Created: {
                 description: "Stream Instance created but not connected.",
                 events: {
-                    deploy: {
-                        Deploying: { }
+                    provision: {
+                        Provisioned: { }
                     },
+                }
+            },
+            Provisioned: {
+                description: "The input stream is provisioned are ready to be deployed",
+                events: {
+                    deploy: {
+                        Deploying: {}
+                    }
                 }
             },
             Deploying: {

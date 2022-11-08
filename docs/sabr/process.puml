@@ -9,6 +9,12 @@ state "sentient agent bundle resources" as pstatename #bbaaff {
     }
 }
 
+        state "bundle" as bundle #bbaaff {
+state "build" as bundlebuild #bbaaff {
+}
+}
+
+
         state "pulsar" as pulsar #bbaaff {
 state "streams" as pulsarstreams #bbaaff {
 }

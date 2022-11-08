@@ -1,0 +1,36 @@
+@startuml
+left to right direction
+
+
+    package "sabr" as sabr {
+package "aml" as sabraml {
+package "dsom" as sabramldsom #00aaff {
+ component "data" as sabramldsomdata
+ interface "create" as sabramldsomdatacreate
+sabramldsomdata -- sabramldsomdatacreate
+}
+}
+}
+
+    
+
+
+
+
+
+
+
+        rectangle "Manage Environments" as ManageEnvironments #ffffaa {
+            ("Create Build Environment")/ as ActorManageEnvironmentsCreateBuildEnvironment
+        }
+    
+    sabramldsomdatacreate <-- ActorManageEnvironmentsCreateBuildEnvironment
+    
+
+
+
+
+
+
+
+@enduml

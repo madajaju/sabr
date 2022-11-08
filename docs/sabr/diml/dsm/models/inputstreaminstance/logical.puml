@@ -7,6 +7,7 @@ class "InputStreamInstance" as Model {
 
  deploy()
  process()
+ provision()
  
 }
 
@@ -55,12 +56,12 @@ Model o--> "n" DataTransformInstance : transforms
     rectangle "SABundleInstance" as SABundleInstance #lightgreen {
     }
     
-        SABundleInstance   o--> "1" Model : "learningStream"
+        SABundleInstance   o--> "1" Model : "learningInStream"
     
     rectangle "SABundleInstance" as SABundleInstance #lightgreen {
     }
     
-        SABundleInstance   o--> "1" Model : "adminStream"
+        SABundleInstance   o--> "1" Model : "adminInStream"
     
 
 @enduml

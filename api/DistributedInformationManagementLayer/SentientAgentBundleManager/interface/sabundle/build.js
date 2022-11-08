@@ -28,10 +28,11 @@ module.exports = {
     fn: function (inputs, env) {
         // inputs contains the obj for the this method.
         let bundle = SABundle.find(inputs.name);
+        let id = inputs.id || bundle.name;
         if(bundle) {
-            bundle.build({buildID:inputs.id});
+            let build = bundle.build({buildID:id});
+            env.res.json({id: build.id});
         }
-        env.res.json({id: bundle.id, state:bundle.state});
-
+        env.res.json({status: "Error"})
     }
 };

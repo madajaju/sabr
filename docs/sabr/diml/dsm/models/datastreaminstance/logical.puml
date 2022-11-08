@@ -60,5 +60,10 @@ Model o--> "n" DataTransformInstance : transforms
     
         OutputChannelInstance   o--> "1" Model : "stream"
     
+    rectangle "AdminDataStream" as AdminDataStream #lightgreen {
+    }
+    
+        AdminDataStream   *--> "n" Model : "instances"
+    
 
 @enduml

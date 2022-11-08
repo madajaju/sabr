@@ -45,6 +45,9 @@ rectangle "Application Manager" #white {
 rectangle "Capability Manager" #white {
 }
 
+rectangle "DevSecOpsManager" #white {
+}
+
 rectangle "Learning Corpus" #white {
 }
 

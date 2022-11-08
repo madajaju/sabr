@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Package Application Management Layer
 permalink: package--sabr-aml
 parent: Package Sentient Agent Bundle Resources
@@ -53,6 +54,7 @@ organize the architecture and make it easier to analyze, understand, design, and
 
 * [Application Manager](package--sabr-aml-am)
 * [Capability Manager](package--sabr-aml-cm)
+* [DevSecOpsManager](package--sabr-aml-dsom)
 * [Learning Corpus](package--sabr-aml-lc)
 
 

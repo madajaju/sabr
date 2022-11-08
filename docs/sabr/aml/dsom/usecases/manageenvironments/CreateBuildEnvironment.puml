@@ -1,0 +1,26 @@
+@startuml
+
+actor "Actor"
+
+
+entity EventBus
+
+box DevSecOpsManager #00aaff
+    boundary dsom #white
+end box
+
+
+
+"Actor" -> dsom: Create Build Environment
+
+    dsom -> "dsom": list (name: hello,file: ./templates/world.yml)
+
+    "dsom" --/ EventBus: data.list
+
+    dsom -> "dsom": list (name: hello,file: ./templates/world.yml)
+
+    "dsom" --/ EventBus: data.list
+
+
+
+@enduml

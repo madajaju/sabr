@@ -30,7 +30,6 @@ Provisions services as spawned processes. This is a specailization of the Provis
 
 
 ## Methods
-
 * [deploy() - Deploy a Service generically.](#action-deploy)
 
 

@@ -3,11 +3,13 @@ layout: default
 title: Classes
 permalink: classes
 has_children: true
-nav_order: 4
+nav_order: 5
 ---
 # Classes
 
 * [AIModel](class-AIModel)
+* [AdminDataStream](class-AdminDataStream)
+* [AdminTransform](class-AdminTransform)
 * [Application](class-Application)
 * [ApplicationInstance](class-ApplicationInstance)
 * [Capability](class-Capability)
@@ -27,6 +29,7 @@ nav_order: 4
 * [ProcessProvisioner](class-ProcessProvisioner)
 * [Provisioner](class-Provisioner)
 * [SABundle](class-SABundle)
+* [SABundleBuild](class-SABundleBuild)
 * [SABundleInstance](class-SABundleInstance)
 * [SecureVault](class-SecureVault)
 * [SecurityKey](class-SecurityKey)

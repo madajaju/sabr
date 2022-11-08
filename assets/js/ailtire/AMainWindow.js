@@ -13,7 +13,10 @@ import {
     AEventHUD,
     ASelectedHUD,
 } from './index.js';
-import {SChannel} from '../sabr/index.js';
+
+import AWorkFlow from './AWorkFlow.js';
+
+import {SStream, SChannel} from '../sabr/index.js';
 import {Graph3D} from '../Graph3D.js';
 
 export default class AMainWindow {
@@ -57,8 +60,10 @@ export default class AMainWindow {
         stack: AStack.handle,
         environment: AEnvironment.handle,
         channel: SChannel.handle,
+        stream: SStream.handle,
         component: AComponent.handle,
         image: AImage.handle,
+        workflow: AWorkFlow.handle,
     }
 
     static initialize(pconfig) {
@@ -223,12 +228,16 @@ export default class AMainWindow {
                 ],
                 onClick: function (event) {
                     if (event.object.link) {
+                        if (event.object.link != 'nolink') {
                         // Get the information from the link and load it in the mainpage and the preview
                         AMainWindow.currentView = event.object.link;
                         $.ajax({
                             url: event.object.link,
                             success: AObject.handle
                         });
+                        } else {
+                            AObject.handle(null, event.object);
+                        }
                     }
                 }
             },
@@ -279,6 +288,8 @@ export default class AMainWindow {
                         A3DGraph.implementationView();
                     } else if (event.object.id === 'process') {
                         A3DGraph.processView();
+                    } else if (event.object.id === 'pulsar') {
+                        SStream.getAll({ fn: SStream.handleList});
                     }
                 },
                 onCollapse: (event) => {
@@ -302,12 +313,16 @@ export default class AMainWindow {
                                 console.log(text);
                             }
                         })
+                    } else if (event.object.id === 'usecases') {
+                        A3DGraph.usecaseView();
                     } else if (event.object.id === 'deployments') {
                         A3DGraph.deploymentView();
                     } else if (event.object.id === 'implementation') {
                         A3DGraph.implementationView();
                     } else if (event.object.id === 'process') {
                         A3DGraph.processView();
+                    }    else if (event.object.id === 'pulsar') {
+                        SStream.getAll({ fn: SStream.handleList});
                     }
                 },
                 onClick: function (event) {
@@ -319,7 +334,7 @@ export default class AMainWindow {
                         $.ajax({
                             url: event.object.link,
                             success: (results) => {
-                                AMainWindow.handlers[event.object.view](results);
+                                AMainWindow.handlers[event.object.view](results,event.object);
                             },
                             error: (req, text, err) => {
                                 console.log(text);
@@ -368,6 +383,8 @@ export default class AMainWindow {
         AEnvironment.showList('sidebar', 'deployments');
         AComponent.showList('sidebar', 'libraries');
         AImage.showList('sidebar', 'images');
+        AWorkFlow.showList( 'sidebar', 'process');
+        SStream.showList('sidebar', 'pulsar');
     }
 
     static setupEventWatcher(config) {

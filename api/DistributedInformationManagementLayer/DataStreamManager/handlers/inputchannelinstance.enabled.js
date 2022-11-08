@@ -6,6 +6,7 @@ module.exports = {
             action: '/sabr/diml/dsm/channel/deployed',
             fn: (data) => {
                 if(data.obj) {
+                    console.log("ENABLED INPUT CHANNEL:", data.obj.name);
                     return {channel: data.obj.name};
                     // Other side do not propagate.
                 } else if (data._attributes) {

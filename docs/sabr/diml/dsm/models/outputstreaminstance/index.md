@@ -36,6 +36,8 @@ This is a specialization of the DataStreamInstance for producing output.
 | --- | --- | --- | --- | --- | --- |
 | outputs | n | DataTransformInstance |  |  | Outputs of the transformation. |
 | outputs | n | SABundleInstance | false | false | Output Data Streams for the SABR |
+| learningOutStream | 1 | SABundleInstance |  |  | Learning Corpus Input Stream receives updates to the aimodel |
+| adminOutStream | 1 | SABundleInstance |  |  | Administration Stream to handle registration of SABRS to Capabilities |
 
 
 
@@ -49,17 +51,17 @@ The following diagram is the state net for this class.
 | Name | Description | Events |
 | --- | --- | --- |
 | Init | Initial State | create-&gt;Created,  |
-| Created | Stream Instance created but not connected. | deploy-&gt;Deploying,  |
+| Created | Stream Instance created but not connected. | provision-&gt;Provisioned,  |
+| Provisioned | Stream Instance is provisioned and ready for deployment. | deploy-&gt;Deploying,  |
 | Deploying | Stream Instance is connecting to the message queues | deployed-&gt;Enabled,  |
-| Enabled | Stream Instance is ready to send information to the message queues. | disable-&gt;Disabled, send-&gt;Enabled,  |
+| Enabled | Stream Instance is ready to send information to the message queues. | disable-&gt;Disabled,  |
 | Disabled | Stream Instance cannot send information at this time and no transformations are working. | enable-&gt;Enabled,  |
 
 
 
 ## Methods
-
 * [deploy() - Deploy a Data Stream Instance](#action-deploy)
-
+* [provision() - Provision a Data Stream Instance which will create channel instances for deployment.](#action-provision)
 * [send() - Send data to the Data Stream Instance](#action-send)
 
 
@@ -75,6 +77,26 @@ The following diagram is the state net for this class.
 
 #### Description
 Deploy a Data Stream Instance
+
+#### Parameters
+
+| Name | Type | Required | Description |
+|---|---|---|---|
+| policies | ref |true | Policies to use for deploying the Bundle. |
+
+
+
+
+### Action outputstreaminstance provision
+
+
+
+* REST - outputstreaminstance/provision?policies=ref
+* bin - outputstreaminstance provision --policies ref
+* js - outputstreaminstance.provision({ policies:ref })
+
+#### Description
+Provision a Data Stream Instance which will create channel instances for deployment.
 
 #### Parameters
 

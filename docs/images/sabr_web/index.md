@@ -6,8 +6,6 @@ parent: Images
 ---
 # sabr_web
 
-* Base image:  [node:alpine](image-node:alpine)
-
 * Parent Package: [Sentient Agent Bundle Resources](package--sabr)
 
 

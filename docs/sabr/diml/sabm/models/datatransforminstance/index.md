@@ -32,16 +32,15 @@ This represents an instance of a data transformation running in the system.
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
 | transforms | n | DataStreamInstance |  | false | These are the transforms to run on the stream before it goes to the output streams. |
-| transforms | n | SABundleInstance | false | false |  |
 | transforms | n | InputStreamInstance |  | false | These are the transforms to run on the stream before it goes to the output streams. |
 | transforms | n | OutputStreamInstance |  | false | These are the transforms to run on the stream before it goes to the output streams. |
+| transforms | n | SABundleInstance | false | false |  |
 
 
 
 
 
 ## Methods
-
 * [run() - Run the transform on the data and update the properties.](#action-run)
 
 

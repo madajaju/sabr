@@ -101,21 +101,7 @@ class DataStream {
                                 return "Good";
                             }
                         },
-                        {
-                            description: "List all of the datastreams",
-                            action: 'datastream/list'
-                        }
                     ],
-                    exit: [
-                        {
-                            description: "List the data",
-                            action: 'data/list',
-                        },
-                        {
-                            description: "Change the version number",
-                            action: 'data/get'
-                        }
-                    ]
                 }
             },
             Created: {

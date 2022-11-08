@@ -19,7 +19,6 @@ Integrate Learning allows application developers to integrate learnings from the
 
 ## Extends Use Cases
 
-
 * [Provide Digital Assistance](usecase-ProvideDigitalAssistance)
 
 

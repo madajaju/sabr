@@ -35,14 +35,24 @@ class SABundleInstance {
                 composition: false,
                 owner: false,
             },
-            learningStream: {
+            learningInStream: {
                 description: 'Learning Corpus Input Stream receives updates to the aimodel',
                 type: 'InputStreamInstance',
                 cardinality: 1,
             },
-            adminStream: {
+            adminInStream: {
                 description: 'Administration Stream to handle registration of SABRS to Capabilities',
                 type: 'InputStreamInstance',
+                cardinality: 1,
+            },
+            learningOutStream: {
+                description: 'Learning Corpus Input Stream receives updates to the aimodel',
+                type: 'OutputStreamInstance',
+                cardinality: 1,
+            },
+            adminOutStream: {
+                description: 'Administration Stream to handle registration of SABRS to Capabilities',
+                type: 'OutputStreamInstance',
                 cardinality: 1,
             },
             stack: {

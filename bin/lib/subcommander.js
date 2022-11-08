@@ -12,6 +12,7 @@ const commander = require('commander');
 // Get the package.json to get the current working directory and project name.
 
 commander._executeSubCommand = function (subcommand, args) {
+    args.unshift(subcommand._name);
     if (!args.length) {
         this.help();
     }
@@ -25,7 +26,6 @@ commander._executeSubCommand = function (subcommand, args) {
         args[1] = '--help';
     }
 
-    args.unshift(subcommand._name);
 
     // name of the subcommand, link `pm-install`
     let bin = args.join('/');

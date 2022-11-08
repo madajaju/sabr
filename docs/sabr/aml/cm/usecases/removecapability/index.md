@@ -19,7 +19,6 @@ Remove Capability allows a DevOps Engineer to remove a capability from the ecosy
 
 ## Extends Use Cases
 
-
 * [Manage Capabilities](usecase-ManageCapabilities)
 
 

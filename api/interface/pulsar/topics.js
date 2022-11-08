@@ -18,7 +18,7 @@ module.exports = {
 
     fn: async function (inputs, env) {
         // inputs contains the obj for the this method.
-        let url = `http://${global.ailtire.config.pulsarHost}/admin/v2/persistent/public/default`;
+        let url = `http://${global.ailtire.config.pulsarAdmin}/admin/v2/persistent/public/default`;
         try {
             const get = bent(url, 'GET', 'json', 200);
             const response = await get('', {});

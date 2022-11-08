@@ -1,0 +1,14 @@
+
+SABundle contains the definition for the SABR. Including the definition of the input and output streams. Any 
+transformations and the application, AIModel, for the transformation.
+
+## Application and SABR integration.
+The SABR handles input and output data stream management for the application.
+The first version of SABR all applications can be written using any language.
+Data from the input stream is intercepted by the transforms for the SABR.
+Those transformation can communicate with the application using any internal mechanism required. filesystem, 
+websocket.io. rest interface etc...
+Additionally a transformation can take output from an application and send it to the output streams defined in the 
+SABR. This can be done by watching a filesystem, relaying messages from a websocket or other streaming mechanism.
+
+

@@ -1,11 +1,12 @@
 {
   "name": "sabr",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
     "build": "ailtire app build --env local --repo madajaju",
+    "build-sabr-service": "ailtire package build --name 'SentientAgentBundleManager' --env local",
     "build-all": "ailtire app build --env local --repo madajaju --recursive true",
     "deploy": "ailtire app install --env local --repo madajaju",
     "test": "npm run lint && npm run custom-tests && echo 'Done.'",
@@ -19,8 +20,10 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "3d-force-graph": "^1.70.13",
-    "ailtire": "^0.4.1",
-    "pulsar-flex": "^1.0.1-beta.9"
+    "ailtire": "latest",
+    "fstream": "^1.0.12",
+    "pulsar-flex": "latest",
+    "tar": "^6.1.11",
+    "tar-stream": "^2.2.0"
   }
 }

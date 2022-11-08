@@ -9,11 +9,11 @@ package "Data Stream Manager" #ffcc88 {
 
 }
 
-package "Sentient Agent Bundle Manager" #ffcc88 {
+package "Security Aspect" #pink {
 
 }
 
-package "Security Aspect" #pink {
+package "Sentient Agent Bundle Manager" #ffcc88 {
 
 }
 

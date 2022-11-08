@@ -11,6 +11,7 @@ export default class AEventHUD {
     static events = {};
     static colors = {};
     static dist = 20;
+    static size = 0.2;
 
     static sync() {
         AEventHUD.hide();
@@ -21,7 +22,7 @@ export default class AEventHUD {
         let width = AEventHUD.width;
         let height = AEventHUD.height;
         let currentHeight = AEventHUD.currentHeight;
-        let size = 0.2;
+        let size = AEventHUD.size;
 
         if (!AEventHUD.events.hasOwnProperty(event.recid)) {
             currentHeight += size;
@@ -154,9 +155,12 @@ export default class AEventHUD {
             AEventHUD.currentHeight = -AEventHUD.height/2.27;
 
             // Add the current events to the plane.
+            // change the height and width for the events already created.
             for(let ename in AEventHUD.events) {
                 let event = AEventHUD.events[ename];
+                event.plane.position.set(-AEventHUD.width/2,AEventHUD.currentHeight)
                 AEventHUD.plane.add(event.plane);
+                AEventHUD.currentHeight += AEventHUD.size;
             }
         }
         if (!AEventHUD.visible) {

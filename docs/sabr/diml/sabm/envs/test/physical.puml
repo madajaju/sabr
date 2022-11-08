@@ -19,9 +19,17 @@ package "Sentient Agent Bundle Manager" #ffcc88 {
     REST --> web_container
     socket ---> web_container
   
-    file "sabr" as sabr_container
-    REST --> sabr_container
-    socket ---> sabr_container
+    file "sabr_service" as sabr_service_container
+    REST --> sabr_service_container
+    socket ---> sabr_service_container
+  
+    file "sabr_registry" as sabr_registry_container
+    REST --> sabr_registry_container
+    socket ---> sabr_registry_container
+  
+    file "sabr_builder" as sabr_builder_container
+    REST --> sabr_builder_container
+    socket ---> sabr_builder_container
   
   }
   folder images #ffffff {
@@ -34,8 +42,14 @@ package "Sentient Agent Bundle Manager" #ffcc88 {
       artifact "sabr_diml_sabm_web" as sabr_diml_sabm_web
       web_container --> sabr_diml_sabm_web
     
-      artifact "sabr_diml_sabm_sabr" as sabr_diml_sabm_sabr
-      sabr_container --> sabr_diml_sabm_sabr
+      artifact "sabr_service" as sabr_service
+      sabr_service_container --> sabr_service
+    
+      artifact "sabr_registry" as sabr_registry
+      sabr_registry_container --> sabr_registry
+    
+      artifact "sabr_builder" as sabr_builder
+      sabr_builder_container --> sabr_builder
     
   }
 }

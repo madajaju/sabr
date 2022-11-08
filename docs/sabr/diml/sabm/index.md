@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Package Sentient Agent Bundle Manager
 permalink: package--sabr-diml-sabm
 parent: Package Distributed Information Management Layer
@@ -9,6 +10,46 @@ grand_parent: Package Sentient Agent Bundle Resources
 
 Sentient Agent Bundle Manager is a package that contains the definition to manage data streams,data transformation, and the deployment of those bundles.
 
+#
+
+## Self decrypting repository and launcher
+
+* The image that gets deployed is a self encrypted repo that has all of the images for the SABR to run properly 
+  including the stream manager, application images, AI volumes, etc..
+* When the SAB image gets created all of the images are already in the registry that was created specifically for 
+  the build. Then the /var/lib/registry is encrypted and put into the base docker image. which is a registry image. 
+  This has to be the case because there is no connectivity to a central repo when the SAB is deployed. Everything 
+  must be self contained.
+### Building a SAB
+1. Create a temporary volume for the registry (tempreg)
+1. <strike>Start a build registry with the volume mounted to /var/lib/registry</Strike> - Not Needed
+1. Build all of the images that will be going into the SAB
+1. <Strike>Push the images to the build registry</strike>
+1. <Strike>stop and remove the build registry</strike>
+1. save the images with docker save > image.tar
+1. <strike>encrypt the temporary volume for the registry (tmpreg) create one file tmpreg.enc</strike>
+1. encrypt the image.tar files
+1. Build the SAB image 
+   1. SAB image is a combination of <strike>registry</strike>, node:alpine, docker:alpine
+   1. Copy tmpreg.enc copied into the SAB image
+   1. Copy the init.js script into the SAB image
+   1. Copy the package.json into the SAB image
+   1. Copy new entrypoint.sh into the SAB image
+   1. entrypoint should be changed to entrypoint.sh
+1. Save the docker image to a compress tar file with docker save
+
+### Deploying a SAB
+1. transfer the docker image to the target device in a *.tar.gz file
+1. load the docker image with docker load
+1. start the container with the SAB image
+   1. Check to see if the device is attested to this SAB
+   1. Decrypt the tmpreg.enc
+   1. <strike>Start the registry in the background</strike>
+   1. load the image.tar files using the docker load command.
+   1. call the entrypoint.sh file. This should deploy the images using a swarm or compose file depending on the method.
+
+    
+Note: Registry may not be needed to load the images. Using docker save and docker load. 
 
 
 ## Use Cases
@@ -42,6 +83,7 @@ users interact with the system.
 * [ sabr diml sabm connect](#action--sabr-diml-sabm-connect)
 * [ sabr diml sabm bundle createanddeploy](#action--sabr-diml-sabm-bundle-createanddeploy)
 * [ sabr diml sabm bundle deploy](#action--sabr-diml-sabm-bundle-deploy)
+* [ sabr diml sabm policy create](#action--sabr-diml-sabm-policy-create)
 * [ sabr diml sabm sabundle build](#action--sabr-diml-sabm-sabundle-build)
 * [ sabr diml sabm sabundle create](#action--sabr-diml-sabm-sabundle-create)
 * [ sabr diml sabm sabundle deploy](#action--sabr-diml-sabm-sabundle-deploy)
@@ -68,9 +110,12 @@ organize the architecture and make it easier to analyze, understand, design, and
 
 The following are the classes in the data model of the Sentient Agent Bundle Manager subsystem.
 
+* [AdminDataStream](class-AdminDataStream)
+* [AdminTransform](class-AdminTransform)
 * [DataTransform](class-DataTransform)
 * [DataTransformInstance](class-DataTransformInstance)
 * [SABundle](class-SABundle)
+* [SABundleBuild](class-SABundleBuild)
 * [SABundleInstance](class-SABundleInstance)
 
 
@@ -163,6 +208,12 @@ these events.
 
 | Event | Description | Emitter |
 |-------|-------------|---------|
+| admindatastream.create |  When an object of type AdminDataStream is created. | AdminDataStream
+| admindatastream.destroy |  When an object of type AdminDataStream is destroyed. | AdminDataStream
+| admindatastream.updated |  When an object of type AdminDataStream has an attribute or association updated. | AdminDataStream
+| admintransform.create |  When an object of type AdminTransform is created. | AdminTransform
+| admintransform.destroy |  When an object of type AdminTransform is destroyed. | AdminTransform
+| admintransform.updated |  When an object of type AdminTransform has an attribute or association updated. | AdminTransform
 | datatransform.create |  When an object of type DataTransform is created. | DataTransform
 | datatransform.destroy |  When an object of type DataTransform is destroyed. | DataTransform
 | datatransform.updated |  When an object of type DataTransform has an attribute or association updated. | DataTransform
@@ -172,6 +223,9 @@ these events.
 | sabundle.create |  When an object of type SABundle is created. | SABundle
 | sabundle.destroy |  When an object of type SABundle is destroyed. | SABundle
 | sabundle.updated |  When an object of type SABundle has an attribute or association updated. | SABundle
+| sabundlebuild.create |  When an object of type SABundleBuild is created. | SABundleBuild
+| sabundlebuild.destroy |  When an object of type SABundleBuild is destroyed. | SABundleBuild
+| sabundlebuild.updated |  When an object of type SABundleBuild has an attribute or association updated. | SABundleBuild
 | sabundleinstance.create |  When an object of type SABundleInstance is created. | SABundleInstance
 | sabundleinstance.destroy |  When an object of type SABundleInstance is destroyed. | SABundleInstance
 | sabundleinstance.updated |  When an object of type SABundleInstance has an attribute or association updated. | SABundleInstance
@@ -241,6 +295,25 @@ Deploy the bundle
 |---|---|---|---|
 | sabr | string |true | The name of the SABR |
 | policies | string |true | The name of the policies to use in the deployment. Comma separated |
+
+
+
+### Action  sabr diml sabm policy create
+
+
+
+* REST - /sabr/diml/sabm/policy/create?file=file
+* bin -  sabr diml sabm policy create --file file
+* js - .sabr.diml.sabm.policy.create({ file:file })
+
+#### Description
+Description of the action
+
+#### Parameters
+
+| Name | Type | Required | Description |
+|---|---|---|---|
+| file | file |false | Description for the parameter |
 
 
 

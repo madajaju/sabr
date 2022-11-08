@@ -1,0 +1,16 @@
+{
+  "name": "sabr_city",
+  "version": "0.1.5",
+  "description": "City microservice",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "express": "^4.18.1"
+  }
+}

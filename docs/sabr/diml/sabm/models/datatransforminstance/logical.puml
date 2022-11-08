@@ -28,11 +28,6 @@ Model o--> "n" OutputStreamInstance : outputs
     
         DataStreamInstance   o--> "n" Model : "transforms"
     
-    rectangle "SABundleInstance" as SABundleInstance #lightgreen {
-    }
-    
-        SABundleInstance   o--> "n" Model : "transforms"
-    
     rectangle "InputStreamInstance" as InputStreamInstance #lightgreen {
     }
     
@@ -42,6 +37,11 @@ Model o--> "n" OutputStreamInstance : outputs
     }
     
         OutputStreamInstance   o--> "n" Model : "transforms"
+    
+    rectangle "SABundleInstance" as SABundleInstance #lightgreen {
+    }
+    
+        SABundleInstance   o--> "n" Model : "transforms"
     
 
 @enduml

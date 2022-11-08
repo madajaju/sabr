@@ -25,13 +25,13 @@ module.exports = {
         // inputs contains the obj for the this method.
         let id = inputs.id;
         let fid = id.replace(/:\//,'');
-        let url = `http://${global.ailtire.config.pulsarHost}/admin/v2/${fid}/stats`;
+        let url = `http://${global.ailtire.config.pulsarAdmin}/admin/v2/${fid}/stats`;
         try {
             const get = bent(url, 'GET', 'json', 200);
             const response = await get('', {});
             for(let i in response.publishers) {
                 let producer = response.publishers[i];
-                if(global.producers.hasOwnProperty(producer.producerName)) {
+                if(global.producers && global.producers.hasOwnProperty(producer.producerName)) {
                     producer.sabr = global.producers[producer.producerName];
                 }
             }
@@ -42,7 +42,7 @@ module.exports = {
         catch(e){
             console.error("URL:", url);
             console.error("Topics could not be found: topic>", e);
-            throw new Error("Topics Failed:"+ e.message);
+            // throw new Error("Topics Failed:"+ e.message);
         }
     }
 };

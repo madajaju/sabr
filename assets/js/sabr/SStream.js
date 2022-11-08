@@ -48,7 +48,7 @@ export default class SStream {
             }
         }
         group.aid = node.id;
-        node.box = 100;
+        node.box = 50;
         return group;
     }
 
@@ -74,11 +74,18 @@ export default class SStream {
         });
     }
 
-    static handle(result, id) {
-        let stream = _instances[id];
-        stream.results = result;
+    static handle(result, obj) {
+        let stream = _instances[obj.id];
+        if(result) {
+            stream.results = result;
+        }
         stream.showGraph('new');
         stream.showDetails();
+    }
+
+    static handleList(result, id) {
+        window.graph.clearObjects();
+        SStream.showAllGraph(result, "new");
     }
 
     static showList(panel, parent) {
@@ -94,6 +101,7 @@ export default class SStream {
                         text: stream.name,
                         img: 'icon-folder',
                         view:'stream',
+                        link: `nolink`,
                         nodes: []
                     };
                     for(let j in stream.channels) {
@@ -193,7 +201,7 @@ export default class SStream {
         this.results = result;
     }
     static showAllGraph(streams, mode) {
-        if(mode === "new") {
+        if(mode !== "add") {
             window.graph.clearObjects();
         }
         for(let i in streams) {
@@ -223,6 +231,7 @@ export default class SStream {
                 id: cname,
                 name: nodeText,
                 view: SChannel.view3D,
+                box: 0.001,
                 rbox: {parent:stream.id,
                     x:{min:150, max: 150},
                     y:{min:-35, max: 35},

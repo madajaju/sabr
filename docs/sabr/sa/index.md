@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Package Security Aspect
 permalink: package--sabr-sa
 parent: Package Sentient Agent Bundle Resources

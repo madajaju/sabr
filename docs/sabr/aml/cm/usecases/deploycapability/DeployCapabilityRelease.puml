@@ -25,7 +25,7 @@ box Capability Manager #00aaff
 
     "capability manager" --/ EventBus: capability.build
 
-    cm -> "capability manager": deploy (name: myCapability1)
+    cm -> "capability manager": deploy (capability: myCapability1)
 
     "capability manager" --/ EventBus: capability.deploy
 

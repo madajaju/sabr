@@ -34,4 +34,3 @@ TBD
 * [ sabr aml am application list](action--sabr-aml-am-application-list) - Integrate Learning allows application developers to integrate learnings from the AI algorithms into applications. This allows the insight gained from the AI models to be used to aid the tactical operator, helps an application run more effectively, or provide information to a high level orchestrator.
 * [ sabr aml am application list](action--sabr-aml-am-application-list) - Manage Applications in the system. Including creating, deploying, and updating. Applications are primarily managed by DevOps engineers and developed by an application developer.
 * [ sabr aml cm capability show](action--sabr-aml-cm-capability-show) - Develop Capability allows the application developer to develop a capability that contains multiple SABRs that working together to provide the capability.
-

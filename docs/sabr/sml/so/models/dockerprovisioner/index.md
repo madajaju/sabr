@@ -30,7 +30,6 @@ The DockerProvisioner uses Docker to provision services in the system. This is a
 
 
 ## Methods
-
 * [deploy() - Deploy a Service using docker](#action-deploy)
 
 

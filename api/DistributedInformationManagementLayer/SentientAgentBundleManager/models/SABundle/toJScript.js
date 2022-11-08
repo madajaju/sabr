@@ -10,34 +10,54 @@ module.exports = {
 
     fn: (obj, inputs) => {
         let retval = 'module.exports = {';
-        retval += 'inputs: {';
-        retval += getItems(obj.inputs, (item) => { return `${item}: { }`;}).join(',');
-        retval += '},';
+        for (let aname in obj._attributes) {
+            retval += `${aname}: "${obj._attributes[aname]}",\n`;
+        }
+        retval += 'inputs: {\n';
+        retval += getItems(obj.inputs, (item) => { return `${item.name}: { }`;}).join(',');
+        retval += '},\n';
         retval += 'outputs: {';
-        retval += getItems(obj.outputs, (item) => { return `${item}: { }`;}).join(',');
-        retval += '},';
+        retval += getItems(obj.outputs, (item) => { return `${item.name}: { }`;}).join(',');
+        retval += '},\n';
         retval += 'transforms: {';
         for (let i in obj.transforms) {
             let transform = obj.transforms[i];
-            retval += `${transform.name}: { `
+            retval += `${transform.name}: { `;
             retval += ` inputs: [ `;
-            retval += getItems(transform.inputs, (item) => { return `"${item}"`;}).join(',');
+            retval += getItems(transform.inputs, (item) => { return `"${item.name}"`;}).join(',');
             retval += '],';
             retval += ` outputs: [ `;
-            retval += getItems(transform.outputs, (item) => { return `"${item}"`;}).join(',');
+            retval += getItems(transform.outputs, (item) => { return `"${item.name}"`;}).join(',');
             retval += '],';
-            retval += `fn: ${transform.fn.toString()},`;
+            if(transform.fn) {
+                retval += `fn: ${JSON.stringify(transform.fn)},`;
+            }
             retval += '},';
         }
-        retval += "},";
-        retval += "applications: { "
+        retval += "},\n";
+        retval += "applications: { ";
         for(let i in obj.applications) {
             let app = obj.applications[i];
             retval += `${app.name}: `;
             retval += app.fn.toString();
             retval += ",";
         }
-        retval += "}}"
+        retval += "},\n";
+        retval += 'policies: {';
+        retval += getItems(obj.policies, (item) => {
+            let subval = "";
+            subval += `${item.name}: {\n`;
+            subval += `name: '${item.name},\n`;
+            subval += `transforms: {\n`;
+            subval += getItems(item.transforms, (sitem, name) => { return `${name}: ${sitem.toString}`; }).join(',');
+            subval += '}';
+            return subval;
+        }).join(',');
+        retval += '},\n';
+        retval += `secureVault: {`;
+        retval += `store: \n`;
+        retval += obj.secureVault.store.encryptedData;
+        retval += " }\n";
         return retval;
     }
 };
@@ -45,8 +65,8 @@ module.exports = {
 function getItems(items,fn) {
     let retval = [];
     for(let i in items) {
-        let item = items[i].name;
-        let newString = fn(item);
+        let item = items[i];
+        let newString = fn(item, i);
         retval.push(newString);
     }
     return retval;

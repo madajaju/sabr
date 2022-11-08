@@ -6,7 +6,7 @@ module.exports = {
             action: '/sabr/diml/dsm/channel/deployed',
             fn: (data) => {
                 if(data.obj) {
-                    return {channel: data.obj.name};
+                    return {channel: data.obj.name, obj: data.obj};
                 } else if(data._attributes) {
                     // Sabrs are reporting their producer information.
                     // store the producer's connection to the sabr.

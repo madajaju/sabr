@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Environment prod
 permalink: environment-prod
 parent: Environments
@@ -12,6 +13,7 @@ parent stack and child stack relationships.
 * [sabr_aml_am](environment--sabr-aml-am-prod)
 * [sabr_aml_cm](environment--sabr-aml-cm-prod)
 * [sabr_aml](environment--sabr-aml-prod)
+* [a_d](environment--sabr-aml-dsom-prod)
 * [sabr_aml_lc](environment--sabr-aml-lc-prod)
 * [sabr_cpl](environment--sabr-cpl-prod)
 * [sabr_diml_dsm](environment--sabr-diml-dsm-prod)

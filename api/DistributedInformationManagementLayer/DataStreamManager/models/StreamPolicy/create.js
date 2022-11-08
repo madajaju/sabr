@@ -34,7 +34,7 @@ module.exports = {
                     obj.post = new DataTransform({name:obj.name + '-post', fn: definition.transforms.post});
                 }
                 if(definition.transforms.pre) {
-                    obj.post = new DataTransform({name:obj.name + '-pre', fn: definition.transforms.pre});
+                    obj.pre = new DataTransform({name:obj.name + '-pre', fn: definition.transforms.pre});
                 }
             }
         }

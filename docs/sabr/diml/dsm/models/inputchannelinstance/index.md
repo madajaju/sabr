@@ -52,11 +52,8 @@ The following diagram is the state net for this class.
 
 
 ## Methods
-
 * [create() - Create a Input Channel Instance](#action-create)
-
 * [deploy() - Deploy the channel instance](#action-deploy)
-
 * [failed() - Deployment Failed on the Data Channel Instance.](#action-failed)
 
 

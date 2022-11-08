@@ -19,6 +19,12 @@ rectangle "SecurityKey" as SecurityKey #lightblue {
 Model *--> "1" SecurityKey : decryptKey
 
 
+rectangle "SecurityKey" as SecurityKey #lightblue {
+}
+
+Model *--> "1" SecurityKey : iv
+
+
 rectangle "KeyStore" as KeyStore #lightblue {
 }
 

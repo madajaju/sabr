@@ -24,6 +24,14 @@ class OutputStreamInstance {
             Created: {
                 description: "Stream Instance created but not connected.",
                 events: {
+                    provision: {
+                        Provisioned: { }
+                    },
+                }
+            },
+            Provisioned: {
+                description: "Stream Instance is provisioned and ready for deployment.",
+                events: {
                     deploy: {
                         Deploying: { }
                     },
@@ -42,9 +50,6 @@ class OutputStreamInstance {
                 events: {
                     disable: {
                         Disabled: {},
-                    },
-                    send: {
-                        Enabled: {},
                     }
                 }
             },

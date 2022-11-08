@@ -41,6 +41,11 @@ Model o--> "n" DataStream : outputs
     
         StreamPolicy   o--> "1" Model : "pre"
     
+    rectangle "AdminDataStream" as AdminDataStream #lightgreen {
+    }
+    
+        AdminDataStream   o--> "n" Model : "transforms"
+    
     rectangle "SABundle" as SABundle #lightgreen {
     }
     

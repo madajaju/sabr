@@ -1,0 +1,40 @@
+#
+
+## Self decrypting repository and launcher
+
+* The image that gets deployed is a self encrypted repo that has all of the images for the SABR to run properly 
+  including the stream manager, application images, AI volumes, etc..
+* When the SAB image gets created all of the images are already in the registry that was created specifically for 
+  the build. Then the /var/lib/registry is encrypted and put into the base docker image. which is a registry image. 
+  This has to be the case because there is no connectivity to a central repo when the SAB is deployed. Everything 
+  must be self contained.
+### Building a SAB
+1. Create a temporary volume for the registry (tempreg)
+1. <strike>Start a build registry with the volume mounted to /var/lib/registry</Strike> - Not Needed
+1. Build all of the images that will be going into the SAB
+1. <Strike>Push the images to the build registry</strike>
+1. <Strike>stop and remove the build registry</strike>
+1. save the images with docker save > image.tar
+1. <strike>encrypt the temporary volume for the registry (tmpreg) create one file tmpreg.enc</strike>
+1. encrypt the image.tar files
+1. Build the SAB image 
+   1. SAB image is a combination of <strike>registry</strike>, node:alpine, docker:alpine
+   1. Copy tmpreg.enc copied into the SAB image
+   1. Copy the init.js script into the SAB image
+   1. Copy the package.json into the SAB image
+   1. Copy new entrypoint.sh into the SAB image
+   1. entrypoint should be changed to entrypoint.sh
+1. Save the docker image to a compress tar file with docker save
+
+### Deploying a SAB
+1. transfer the docker image to the target device in a *.tar.gz file
+1. load the docker image with docker load
+1. start the container with the SAB image
+   1. Check to see if the device is attested to this SAB
+   1. Decrypt the tmpreg.enc
+   1. <strike>Start the registry in the background</strike>
+   1. load the image.tar files using the docker load command.
+   1. call the entrypoint.sh file. This should deploy the images using a swarm or compose file depending on the method.
+
+    
+Note: Registry may not be needed to load the images. Using docker save and docker load. 

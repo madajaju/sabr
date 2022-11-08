@@ -78,6 +78,23 @@ class SABundle {
                 cardinality: 1,
                 composition: true,
                 owner: true,
+            },
+            policies: {
+                type: 'StreamPolicy',
+                cardinality: 'n',
+                description: 'Policies to apply to the SABR when the instance is launched. This should build the' +
+                    ' channels for the data streams.',
+            },
+            builds: {
+                type: 'SABundleBuild',
+                cardinality: 'n',
+                description: 'Builds for the SABundle. A SABundleBuild encrypts the bundle and gets it ready for' +
+                    ' deployment.',
+            },
+            images: {
+                type: 'Image',
+                cardinality: 'n',
+                description: 'Images attached to the bundle',
             }
         },
         view: {

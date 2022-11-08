@@ -6,6 +6,7 @@ class "OutputStreamInstance" as Model {
  string direction
 
  deploy()
+ provision()
  send()
  
 }
@@ -51,6 +52,16 @@ Model o--> "n" DataTransformInstance : transforms
     }
     
         SABundleInstance   o--> "n" Model : "outputs"
+    
+    rectangle "SABundleInstance" as SABundleInstance #lightgreen {
+    }
+    
+        SABundleInstance   o--> "1" Model : "learningOutStream"
+    
+    rectangle "SABundleInstance" as SABundleInstance #lightgreen {
+    }
+    
+        SABundleInstance   o--> "1" Model : "adminOutStream"
     
 
 @enduml

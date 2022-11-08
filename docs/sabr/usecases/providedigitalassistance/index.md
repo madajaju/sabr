@@ -17,7 +17,6 @@ Provide Digital Assistance use cases provides curated and decision making inform
 
 ## Extended Use Cases
 
-
 * [IntegrateLearning](usecase-IntegrateLearning)
 
 

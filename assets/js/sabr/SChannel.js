@@ -43,7 +43,7 @@ export default class SChannel {
             }
         }
         group.aid = node.id;
-        node.box = 100;
+        node.box = node.box || 50;
         return group;
     }
 
@@ -65,11 +65,15 @@ export default class SChannel {
         });
     }
 
-    static handle(result, id) {
-        let channel = _instances[id];
+    static handle(result, obj) {
+        let channel = _instances[obj.id];
         channel.results = result;
         channel.showGraph('new');
         channel.showDetails();
+    }
+    static handleList(results) {
+        window.graph.clearObjects();
+        SChannel.showAllGraph(results, "new");
     }
 
     static showList(panel, parent) {
@@ -186,48 +190,50 @@ export default class SChannel {
     static viewDeep3D(channel, mode) {
         let data = {nodes: {}, links: []};
 
+        let cid = channel.id.replace(/\//g,'-');
+        cid = cid.replace(/\:/g,'-');
         let node = {
-            id: channel.id,
+            id: cid,
             name: channel.name.replace(/\s/g, '\n'),
             view: SChannel.view3D,
         };
 
-        data.nodes[channel.id] = node;
+        data.nodes[cid] = node;
         let i = 0;
 
         for (let sname in channel.results.subscriptions) {
             let subscription = channel.results.subscriptions[sname];
+            sname = sname.replace(/\//g,'-').replace(/\:/,'');
             let node = {
                 id: sname,
                 name: sname,
                 view: SSubscription.view3D,
-                rbox: {parent:channel.id, y:{max:-100}},
             };
             data.nodes[sname] = node;
             for (let i in subscription.consumers) {
                 let consumer = subscription.consumers[i];
+                 let cnname = consumer.consumerName.replace(/\//g,'-').replace(/\:/,'');
                 let cnode = {
-                    id: consumer.consumerName,
+                    id: cnname,
                     name: consumer.consumerName.replace(/\-.*$/, ''),
                     view: SConsumer.view3D,
-                    rbox: {parent:sname, y:{max:-100}},
                 };
                 data.nodes[cnode.id] = cnode;
-                data.links.push({source: sname, target: cnode.id, value: 0.1});
+                data.links.push({source: sname, target: cnode.id, value: 10});
             }
-            data.links.push({source: channel.id, target: sname, value: 0.1});
+            data.links.push({source: cid, target: sname, value: 10});
             i++;
         }
         for (let sname in channel.results.publishers) {
             let producer = channel.results.publishers[sname];
+            let pname = producer.producerName.replace(/\//g, '-').replace(/\:/,'');
             let node = {
-                id: producer.producerName,
+                id: pname,
                 name: producer.producerName,
                 view: SProducer.view3D,
-                rbox: {parent:channel.id, y:{min:100}},
             };
             data.nodes[node.id] = node;
-            data.links.push({source: node.id, target: channel.id, value: 0.1});
+            data.links.push({source: node.id, target: cid, value: 10});
             i++;
         }
         if (mode === 'add') {

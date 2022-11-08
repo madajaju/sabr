@@ -38,10 +38,13 @@ class OutputChannelInstance {
                 }
             },
             Deploying: {
-                description:'The channel is currently being deployed and connected to the message queues',
+                description: 'The channel is currently being deployed and connected to the message queues',
                 events: {
                     deployed: {
                         Enabled: {},
+                    },
+                    failed: {
+                        Failed: {},
                     }
                 }
             },
@@ -51,8 +54,6 @@ class OutputChannelInstance {
                     disable: {
                         Disabled: {}
                     },
-                    send: {
-                    }
                 }
             },
             Disabled: {
@@ -62,7 +63,11 @@ class OutputChannelInstance {
                         Enabled: {}
                     }
                 }
+            },
+            Failed: {
+                description: "Channel failed to deploy."
             }
+
         },
         view: {
             color: "#ffcc88",

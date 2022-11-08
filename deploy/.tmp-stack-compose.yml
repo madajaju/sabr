@@ -1,7 +1,7 @@
 version: "3.7"
 services:
   web:
-    image: sabr_web
+    image: madajaju/sabr_web
     stop_grace_period: 1m
     stop_signal: SIGINT
     deploy:
@@ -12,14 +12,14 @@ services:
       - AILTIRE_PARENT=${AILTIRE_APPNAME}
       - AILTIRE_PARENTHOST=admin
       - AILTIRE_APPNAME=${AILTIRE_APPNAME}
-      - PULSAR_HOST=localhost/_padmin
+      - PULSAR_HOST=pulsar:6650
     networks:
       sibling:
       parent:
         aliases:
         - web
   pulsar:
-    image: sabr_pulsar:standalone
+    image: madajaju/sabr_pulsar:standalone
     stop_grace_period: 1m
     stop_signal: SIGINT
     deploy:
@@ -36,7 +36,7 @@ services:
         aliases:
         - pulsar
   doc:
-    image: sabr_doc
+    image: madajaju/sabr_doc
     stop_grace_period: 1m
     stop_signal: SIGINT
     deploy:

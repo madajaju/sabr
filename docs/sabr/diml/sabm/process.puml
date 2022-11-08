@@ -43,6 +43,16 @@ state "deploy" as dimlsabmbundledeploy #ffcc88 {
 
         state "diml" as diml #ffcc88 {
 state "sabm" as dimlsabm #ffcc88 {
+state "policy" as dimlsabmpolicy #ffcc88 {
+state "create" as dimlsabmpolicycreate #ffcc88 {
+}
+}
+}
+}
+
+
+        state "diml" as diml #ffcc88 {
+state "sabm" as dimlsabm #ffcc88 {
 state "sabundle" as dimlsabmsabundle #ffcc88 {
 state "build" as dimlsabmsabundlebuild #ffcc88 {
 }

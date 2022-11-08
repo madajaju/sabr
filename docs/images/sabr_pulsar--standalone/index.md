@@ -6,8 +6,6 @@ parent: Images
 ---
 # sabr_pulsar:standalone
 
-* Base image:  [apachepulsar/pulsar-all](image-apachepulsar/pulsar-all)
-
 * Parent Package: [Sentient Agent Bundle Resources](package--sabr)
 
 

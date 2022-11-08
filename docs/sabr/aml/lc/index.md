@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Package Learning Corpus
 permalink: package--sabr-aml-lc
 parent: Package Application Management Layer

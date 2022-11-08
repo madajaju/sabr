@@ -1,0 +1,23 @@
+@startuml
+
+
+
+package "DevSecOpsManager" #00aaff {
+
+    interface "DevSecOpsManager" as i {
+            /sabr/aml/dsom/data/create()
+    
+    }
+}
+
+CLI ()-- i
+REST ()-- i
+Web ()-- i
+
+package "DevSecOpsManager" #00aaff {
+    
+}
+
+
+
+@enduml

@@ -12,12 +12,11 @@ module.exports = {
     fn: async function (obj, inputs) {
         // inputs contains the obj for the this method.
         let producer = obj.producer;
-        console.log("Deploy Output Channel", obj.state);
-        if(obj.state !== "Created") {
-            console.log("Already starting");
+        console.log("Deploy Output Channel", obj.name, obj.state);
+        if(obj.state !== "Deploying") {
+            console.log("Already deploying");
             return;
         }
-        // await producer.create();
         try {
             await producer.create();
             obj.producerName = producer._producerName;

@@ -2,6 +2,52 @@
 left to right direction
 
 
+    package "sabr" as sabr {
+package "diml" as sabrdiml {
+package "dsm" as sabrdimldsm #ffcc88 {
+ component "channel" as sabrdimldsmchannel
+ interface "deployed" as sabrdimldsmchanneldeployed
+sabrdimldsmchannel -- sabrdimldsmchanneldeployed
+}
+}
+}
+
+    
+    package "sabr" as sabr {
+package "diml" as sabrdiml {
+package "dsm" as sabrdimldsm #ffcc88 {
+ component "stream" as sabrdimldsmstream
+ interface "deployed" as sabrdimldsmstreamdeployed
+sabrdimldsmstream -- sabrdimldsmstreamdeployed
+}
+}
+}
+
+    
+hexagon "inputchannelinstance.enabled" as inputchannelinstanceenabled
+        sabrdimldsmchanneldeployed <-- inputchannelinstanceenabled
+    
+hexagon "inputstreaminstance.enabled" as inputstreaminstanceenabled
+        sabrdimldsmstreamdeployed <-- inputstreaminstanceenabled
+    
+hexagon "outputchannelinstance.enabled" as outputchannelinstanceenabled
+        sabrdimldsmchanneldeployed <-- outputchannelinstanceenabled
+    
+hexagon "outputstreaminstance.enabled" as outputstreaminstanceenabled
+        sabrdimldsmstreamdeployed <-- outputstreaminstanceenabled
+    
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @enduml

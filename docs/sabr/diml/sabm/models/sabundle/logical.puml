@@ -71,6 +71,24 @@ rectangle "SecureVault" as SecureVault #lightblue {
 Model *--> "1" SecureVault : secureVault
 
 
+rectangle "StreamPolicy" as StreamPolicy #lightblue {
+}
+
+Model o--> "n" StreamPolicy : policies
+
+
+rectangle "SABundleBuild" as SABundleBuild #lightblue {
+}
+
+Model o--> "n" SABundleBuild : builds
+
+
+rectangle "Image" as Image #lightblue {
+}
+
+Model o--> "n" Image : images
+
+
 
 
     rectangle "Capability" as Capability #lightgreen {
@@ -87,6 +105,16 @@ Model *--> "1" SecureVault : secureVault
     }
     
         DataStream   o--> "n" Model : "producers"
+    
+    rectangle "AdminDataStream" as AdminDataStream #lightgreen {
+    }
+    
+        AdminDataStream   o--> "n" Model : "consumers"
+    
+    rectangle "AdminDataStream" as AdminDataStream #lightgreen {
+    }
+    
+        AdminDataStream   o--> "n" Model : "producers"
     
     rectangle "SABundleInstance" as SABundleInstance #lightgreen {
     }

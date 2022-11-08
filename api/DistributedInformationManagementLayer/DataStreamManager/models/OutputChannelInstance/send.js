@@ -34,6 +34,6 @@ module.exports = {
             obj.queue.push(inputs);
             console.warn('Cannot send on channel:', obj.name, '. Channel is in the ', obj.state, ' state.')
         }
-        return;
+        return 1;
     }
 };

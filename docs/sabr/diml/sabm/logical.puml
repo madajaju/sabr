@@ -3,6 +3,15 @@
 
 package "Data Stream Manager" #ffcc88 {
     
+        class StreamPolicy {
+        }
+    
+        class DataChannel {
+        }
+    
+        class DataStreamInstance {
+        }
+    
         class DataStream {
         }
     
@@ -14,6 +23,9 @@ package "Data Stream Manager" #ffcc88 {
     }
 
 package "Security Aspect" #pink {
+    
+        class SecurityKey {
+        }
     
         class SecureVault {
         }
@@ -42,10 +54,13 @@ package "Sentient Agent Bundle Manager" #ffcc88 {
         class DataTransform {
         }
     
+        class SABundle {
+        }
+    
         class SABundleInstance {
         }
     
-        class SABundle {
+        class SABundleBuild {
         }
     
         class DataTransformInstance {
@@ -59,6 +74,7 @@ package "Sentient Agent Bundle Manager" #ffcc88 {
             /sabr/diml/sabm/connect()
             /sabr/diml/sabm/bundle/createanddeploy()
             /sabr/diml/sabm/bundle/deploy()
+            /sabr/diml/sabm/policy/create()
             /sabr/diml/sabm/sabundle/build()
             /sabr/diml/sabm/sabundle/create()
             /sabr/diml/sabm/sabundle/deploy()
@@ -72,7 +88,38 @@ REST ()-- i
 Web ()-- i
 
 package "Sentient Agent Bundle Manager" #ffcc88 {
-        class "DataTransform" {
+        class "AdminDataStream" {
+                 string name
+                             create()
+                     provision()
+                     addKeysToStore()
+                     build()
+            }
+                AdminDataStream o--> "n" StreamPolicy : policies
+                        AdminDataStream *--> "n" DataChannel : channels
+                        AdminDataStream *--> "n" DataStreamInstance : instances
+                        AdminDataStream o--> "n" DataTransform : transforms
+                        AdminDataStream o--> "n" SABundle : consumers
+                        AdminDataStream o--> "n" SABundle : producers
+                        AdminDataStream o--> "1" SecurityKey : encryptionKey
+                        AdminDataStream o--> "1" SecurityKey : decryptionKey
+            
+    
+        DataStream <|-- AdminDataStream
+    
+    class "AdminTransform" {
+                 string name
+                 json fn
+                             create()
+                     process()
+            }
+                AdminTransform o--> "n" DataStream : inputs
+                        AdminTransform o--> "n" DataStream : outputs
+            
+    
+        DataTransform <|-- AdminTransform
+    
+    class "DataTransform" {
                  string name
                  json fn
                     }
@@ -108,6 +155,20 @@ package "Sentient Agent Bundle Manager" #ffcc88 {
                         SABundle o--> "n" AIModel : aimodels
                         SABundle *--> "n" SABundleInstance : instances
                         SABundle *--> "1" SecureVault : secureVault
+                        SABundle o--> "n" StreamPolicy : policies
+                        SABundle o--> "n" SABundleBuild : builds
+                        SABundle o--> "n" Image : images
+            
+    
+    class "SABundleBuild" {
+                 string name
+                 string version
+                 string encryptedData
+                             encrypt()
+            }
+                SABundleBuild *--> "1" SecurityKey : encryptKey
+                        SABundleBuild *--> "1" SecurityKey : decryptKey
+                        SABundleBuild *--> "1" SecurityKey : iv
             
     
     class "SABundleInstance" {
@@ -118,8 +179,10 @@ package "Sentient Agent Bundle Manager" #ffcc88 {
                 SABundleInstance o--> "1" SABundle : parent
                         SABundleInstance o--> "n" InputStreamInstance : inputs
                         SABundleInstance o--> "n" OutputStreamInstance : outputs
-                        SABundleInstance o--> "1" InputStreamInstance : learningStream
-                        SABundleInstance o--> "1" InputStreamInstance : adminStream
+                        SABundleInstance o--> "1" InputStreamInstance : learningInStream
+                        SABundleInstance o--> "1" InputStreamInstance : adminInStream
+                        SABundleInstance o--> "1" OutputStreamInstance : learningOutStream
+                        SABundleInstance o--> "1" OutputStreamInstance : adminOutStream
                         SABundleInstance o--> "n" StackInstance : stack
                         SABundleInstance o--> "n" AIModel : aimodels
                         SABundleInstance o--> "n" DataTransformInstance : transforms

@@ -1,0 +1,64 @@
+@startuml
+
+class "AdminDataStream" as Model {
+ string name
+
+ create()
+ provision()
+ addKeysToStore()
+ build()
+ 
+}
+
+rectangle "StreamPolicy" as StreamPolicy #lightblue {
+}
+
+Model o--> "n" StreamPolicy : policies
+
+
+rectangle "DataChannel" as DataChannel #lightblue {
+}
+
+Model *--> "n" DataChannel : channels
+
+
+rectangle "DataStreamInstance" as DataStreamInstance #lightblue {
+}
+
+Model *--> "n" DataStreamInstance : instances
+
+
+rectangle "DataTransform" as DataTransform #lightblue {
+}
+
+Model o--> "n" DataTransform : transforms
+
+
+rectangle "SABundle" as SABundle #lightblue {
+}
+
+Model o--> "n" SABundle : consumers
+
+
+rectangle "SABundle" as SABundle #lightblue {
+}
+
+Model o--> "n" SABundle : producers
+
+
+rectangle "SecurityKey" as SecurityKey #lightblue {
+}
+
+Model o--> "1" SecurityKey : encryptionKey
+
+
+rectangle "SecurityKey" as SecurityKey #lightblue {
+}
+
+Model o--> "1" SecurityKey : decryptionKey
+
+
+
+
+
+@enduml

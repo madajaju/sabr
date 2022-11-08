@@ -19,7 +19,6 @@ Develop Capability allows the application developer to develop a capability that
 
 ## Extends Use Cases
 
-
 * [Manage Capabilities](usecase-ManageCapabilities)
 
 

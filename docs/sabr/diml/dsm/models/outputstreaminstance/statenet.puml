@@ -10,6 +10,9 @@ state OutputStreamInstance #ffcc88 {
     state Created #ffcc88 {
     }
 
+    state Provisioned #ffcc88 {
+    }
+
     state Deploying #ffcc88 {
     }
 
@@ -24,13 +27,13 @@ state OutputStreamInstance #ffcc88 {
 
 Init -[#black]--> Created : create
 
-Created -[#black]--> Deploying : deploy
+Created -[#black]--> Provisioned : provision
+
+Provisioned -[#black]--> Deploying : deploy
 
 Deploying -[#black]--> Enabled : deployed
 
 Enabled -[#black]--> Disabled : disable
-
-Enabled -[#black]--> Enabled : send
 
 Disabled -[#black]--> Enabled : enable
 

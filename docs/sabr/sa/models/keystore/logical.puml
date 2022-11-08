@@ -2,7 +2,9 @@
 
 class "KeyStore" as Model {
  string name
+ string encryptedData
 
+ encrypt()
  
 }
 

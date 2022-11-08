@@ -2,91 +2,141 @@
 left to right direction
 
 
-
-state "ApplicationDeveloper" as ApplicationDeveloper {
-    state "Integrate Learning" as ApplicationDeveloperIntegrateLearning {
-    }
-}
-state "sabr" as sabr #00aaff {
-state "aml" as sabraml #00aaff {
-state "am" as sabramlam #00aaff {
-state "application" as sabramlamapplication #00aaff {
-state "list" as sabramlamapplicationlist #00aaff {
-}
-}
+    package "sabr" as sabr {
+package "aml" as sabraml {
+package "am" as sabramlam #00aaff {
+ component "application" as sabramlamapplication
+ interface "create" as sabramlamapplicationcreate
+sabramlamapplication -- sabramlamapplicationcreate
 }
 }
 }
 
-ApplicationDeveloperIntegrateLearning --> sabramlamapplicationlist
-
-
- 
-state "DevOpsEngineer" as DevOpsEngineer {
-    state "Manage Application" as DevOpsEngineerManageApplication {
-    }
-}
-state "sabr" as sabr #00aaff {
-state "aml" as sabraml #00aaff {
-state "am" as sabramlam #00aaff {
-state "application" as sabramlamapplication #00aaff {
-state "list" as sabramlamapplicationlist #00aaff {
-}
-}
+    
+    package "sabr" as sabr {
+package "aml" as sabraml {
+package "am" as sabramlam #00aaff {
+ component "application" as sabramlamapplication
+ interface "destroy" as sabramlamapplicationdestroy
+sabramlamapplication -- sabramlamapplicationdestroy
 }
 }
 }
 
-DevOpsEngineerManageApplication --> sabramlamapplicationlist
-
-state "ApplicationDeveloper" as ApplicationDeveloper {
-    state "Manage Application" as ApplicationDeveloperManageApplication {
-    }
-}
-state "sabr" as sabr #00aaff {
-state "aml" as sabraml #00aaff {
-state "am" as sabramlam #00aaff {
-state "application" as sabramlamapplication #00aaff {
-state "list" as sabramlamapplicationlist #00aaff {
-}
-}
+    
+    package "sabr" as sabr {
+package "aml" as sabraml {
+package "am" as sabramlam #00aaff {
+ component "application" as sabramlamapplication
+ interface "list" as sabramlamapplicationlist
+sabramlamapplication -- sabramlamapplicationlist
 }
 }
 }
 
-ApplicationDeveloperManageApplication --> sabramlamapplicationlist
+    
+    package "sabr" as sabr {
+package "aml" as sabraml {
+package "am" as sabramlam #00aaff {
+ component "application" as sabramlamapplication
+ interface "update" as sabramlamapplicationupdate
+sabramlamapplication -- sabramlamapplicationupdate
+}
+}
+}
+
+    
+    package "sabr" as sabr {
+package "aml" as sabraml {
+package "am" as sabramlam #00aaff {
+ component "service" as sabramlamservice
+ interface "deployed" as sabramlamservicedeployed
+sabramlamservice -- sabramlamservicedeployed
+}
+}
+}
+
+    
+    package "sabr" as sabr {
+package "aml" as sabraml {
+package "am" as sabramlam #00aaff {
+ component "service" as sabramlamservice
+ interface "kill" as sabramlamservicekill
+sabramlamservice -- sabramlamservicekill
+}
+}
+}
+
+    
+    package "sabr" as sabr {
+package "aml" as sabraml {
+package "am" as sabramlam #00aaff {
+ component "service" as sabramlamservice
+ interface "provision" as sabramlamserviceprovision
+sabramlamservice -- sabramlamserviceprovision
+}
+}
+}
+
+    
+    package "sabr" as sabr {
+package "aml" as sabraml {
+package "am" as sabramlam #00aaff {
+ component "service" as sabramlamservice
+ interface "stderr" as sabramlamservicestderr
+sabramlamservice -- sabramlamservicestderr
+}
+}
+}
+
+    
+    package "sabr" as sabr {
+package "aml" as sabraml {
+package "am" as sabramlam #00aaff {
+ component "service" as sabramlamservice
+ interface "stdout" as sabramlamservicestdout
+sabramlamservice -- sabramlamservicestdout
+}
+}
+}
+
+    
+hexagon "serviceinstance.deployed" as serviceinstancedeployed
+            sabramlam <-- serviceinstancedeployed
+        
+hexagon "serviceinstance.killed" as serviceinstancekilled
+            sabramlam <-- serviceinstancekilled
+        
 
 
-    state "ApplicationDeveloper" as ApplicationDeveloper {
-        state "Manage Application" as ApplicationDeveloperManageApplication {
-            state "Create Application" as ApplicationDeveloperManageApplicationCreateApplication {
-            }
+        rectangle "Manage Application" as ManageApplication #ffffaa {
+            ("Create Application")/ as ApplicationDeveloperManageApplicationCreateApplication
         }
-    }
     
-    ApplicationDeveloperManageApplicationCreateApplication --> Null
+    sabramlamapplicationcreate <-- ApplicationDeveloperManageApplicationCreateApplication
     
- 
-    state "DevOpsEngineer" as DevOpsEngineer {
-        state "Manage Application" as DevOpsEngineerManageApplication {
-            state "Destroy Application" as DevOpsEngineerManageApplicationDestroyApplication {
-            }
+        rectangle "Manage Application" as ManageApplication #ffffaa {
+            ("Destroy Application")/ as DevOpsEngineerManageApplicationDestroyApplication
         }
-    }
     
-    DevOpsEngineerManageApplicationDestroyApplication --> Null
+    sabramlamapplicationdestroy <-- DevOpsEngineerManageApplicationDestroyApplication
     
- 
-    state "DevOpsEngineer" as DevOpsEngineer {
-        state "Manage Application" as DevOpsEngineerManageApplication {
-            state "Update Application" as DevOpsEngineerManageApplicationUpdateApplication {
-            }
+        rectangle "Manage Application" as ManageApplication #ffffaa {
+            ("Update Application")/ as DevOpsEngineerManageApplicationUpdateApplication
         }
-    }
     
-    DevOpsEngineerManageApplicationUpdateApplication --> Null
+    sabramlamapplicationupdate <-- DevOpsEngineerManageApplicationUpdateApplication
     
- 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 @enduml

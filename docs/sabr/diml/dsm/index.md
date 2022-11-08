@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Package Data Stream Manager
 permalink: package--sabr-diml-dsm
 parent: Package Distributed Information Management Layer

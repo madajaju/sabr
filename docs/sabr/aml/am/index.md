@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Package Application Manager
 permalink: package--sabr-aml-am
 parent: Package Application Management Layer

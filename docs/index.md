@@ -1,7 +1,9 @@
 ---
-title: Sentient Agent Bundle Resources Overview
+layout: default
+title: Overview
 nav_order: 1
 ---
+# Sentient Agent Bundle Resources
 
 # Introduction
 
@@ -346,25 +348,17 @@ identifying the actors/users of the system and building out how the actor uses t
 goals are? and How they use the system? This list is not an exhaustive list of all actors of the system but are the
 primary actors.
 
-
+* [Actor](actor-actor) - Long description
 * [ApplicationDeveloper](actor-applicationdeveloper) - The Application Developer work in coordination with DevOps to manage services, applications and workloads through the development pipeline.
-  
 * [DataAnalyst](actor-analyst) - Uses Data solutions produced by the Data Scientist and Data Engineer to provide business value to the organization.
-  
 * [DataEngineer](actor-dataengineer) - Responsible for operationalization of data pipeline and the automation and deployment of data solutions. They work closely with the Data Scientist to deliver solutions to data analyst.
-  
 * [DataScientist](actor-datascientist) - Responsible for the architecture and development of data analytic models and solutions. They work closely with the Data engineer to deliver solutions to the Data Analyst.
-  
 * [DataSteward](actor-datasteward) - Responsible for the governance of data in their organization. They implement policies established by the CDO.
-  
 * [DevOpsEngineer](actor-devops) - Responsible for the management of the automation of the delivery of applications and solutions in the organization. Works closesly with the IT Operators
-  
 * [ITOperations](actor-itops) - Responsible for the management of the infrastructure.
-  
 * [SecurityOperator](actor-secops) - The Security Operator is responsible for the implementation of security best practices and management of security operations like security key management, estalbishment of preventive, detectivetive and remediation services.
-  
 * [TacticalOperator](actor-tacticaloperator) - The tactical operator is the end user of the digital assistance given from the AI models processing and developing insight from the data generated in the ecosystem.
-  
+
 
 These actors are found in most organizations and there are several organizational structures that can be employed. The
 key is to identify the people or organization that fits the different actors in the systems. The following is an example
@@ -372,19 +366,12 @@ of a centralized organizational structure of the actors of the system.
 
 ## UseCases
 
-
 * [Manage AI Model](usecase-ManageAIModel) - Manage AI Model allows the data users to create, destroy, and update models, version control them and deploy them in the system.
-  
 * [Manage Capabilities](usecase-ManageCapabilities) - Manage Capabilities use cases gives DevOps Engineers and IT Operations the ability to deploy and manage new capabilities in the system. A capability can be a set of workflows or applications that when working together provide value to the tactical operator.
-  
 * [Manage Policies](usecase-ManagePolicies) - Manage Policies use case includes establishing and managing DDIL environment policies for the complete ecosystem, individual capabilities, SABRs, and applications. This use case also refers to orchestration and deployment policies.
-  
 * [Manage Security](usecase-ManageSecurity) - Manage Security use case includes attestation of devices and services; prevention, detection, and remediation of cyber threats; and encryption and hash key management.
-  
 * [Provide Digital Assistance](usecase-ProvideDigitalAssistance) - Provide Digital Assistance use cases provides curated and decision making information to the tactical operator. This could include suggestions to perform work, alerts to changing conditions, or automation of repetitive tasks.
-  
 * [Provide Mission Insight](usecase-ProvideMissionInsight) - Provide Mission Insight use cases analyses the data on the edge and in the data center to provide insight to business and mission problems through data analytics techniques
-  
 
 ![UseCase](./usecases.png)
 
@@ -392,28 +379,20 @@ of a centralized organizational structure of the actors of the system.
 
 The Data Model for the  Sentient Agent Bundle Resources shows how the different objects and classes of object interact and their
 structure.
-
 * [Application Management Layer](package--sabr-aml) -
 Application Management Layer is responsible for the management of applications and workflows andthe development, test, deployment and updates of those applications and workloads.
-  
 * [Common Physical Layer](package--sabr-cpl) -
 Common Physical Layer gives a common way of managing the underlying physical infrastructure
-  
 * [Distributed Information Management Layer](package--sabr-diml) -
 Distributed Information Management Layer is a package that contains data management plane of the architecture.
-  
 * [Identity Aspect](package--sabr-ia) -
 Identity Aspect is a package that contains management of identity of physical machines, people, data, applications, and workflows.
-  
 * [Security Aspect](package--sabr-sa) -
 SecurityAspect is a package that contains all security tools and frameworks for the system.
-  
 * [Service Management Layer](package--sabr-sml) -
 Service Management Layer is a subsystem that manages services, stacks, environments, and multi-clouds.
-  
 * [Software Defined Infrastructure](package--sabr-sdi) -
 Software Defined Infrastructure(SDI) contains the abstractions for private and public clouds. The SDI layer is a common standard interface for all cloud resources both virutal, container, and bare metal.
-  
 
 ![Logical Diagram](./subpackage.png)
 
@@ -428,15 +407,10 @@ The solution can be deployed on different environments. The standard environment
 test, and prod. These environments fit into the typical devops pipelines that exist in the industry. Additional
 deployment environments can be added to fit the needs of the user.
 
-
 * [local](environment--sabr-local)
-  
 * [dev](environment--sabr-dev)
-  
 * [test](environment--sabr-test)
-  
 * [prod](environment--sabr-prod)
-  
 
 ### Physical Architecture
 
@@ -447,12 +421,7 @@ system. Each subsystem in the architecture uses an aggregated service/stack patt
 services based on the workloads, capacity and business rules established for the solution. See each subsystem for more
 information on the individual stacks and their services.
 
-
 * [local](environment--sabr-local)
-  
 * [dev](environment--sabr-dev)
-  
 * [test](environment--sabr-test)
-  
 * [prod](environment--sabr-prod)
-  

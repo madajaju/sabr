@@ -22,4 +22,3 @@ TBD
 
 ## Command Line Interface
 * [ sabr security list](action--sabr-security-list) - Manage Security use case includes attestation of devices and services; prevention, detection, and remediation of cyber threats; and encryption and hash key management.
-

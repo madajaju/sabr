@@ -43,7 +43,7 @@ module.exports = {
         target: 'http://doc:4000',
         ws: true,
         pathRewrite: {
-            '^/docs': '/'
+            '^/docs': '/docs'
         },
         service: 'doc',
         logLevel: 'debug',

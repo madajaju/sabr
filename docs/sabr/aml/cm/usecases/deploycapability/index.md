@@ -19,7 +19,6 @@ Deploy a capability into the ecosystem. This should deploy all of the SABRs in t
 
 ## Extends Use Cases
 
-
 * [Manage Capabilities](usecase-ManageCapabilities)
 
 
@@ -43,7 +42,7 @@ Deploy Capability Release allows a capability to be deployed into the ecosystem,
 #### Steps
 1. [capability create --name myCapability1 --file ./templates/capability.js](#action-capability create)
 1. [aml cm capability build --name myCapability1](#action-aml cm capability build)
-1. [aml cm capability deploy --name myCapability1](#action-aml cm capability deploy)
+1. [aml cm capability deploy --capability myCapability1](#action-aml cm capability deploy)
 
 #### Actors
 

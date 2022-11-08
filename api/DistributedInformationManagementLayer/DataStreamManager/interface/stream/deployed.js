@@ -27,6 +27,7 @@ module.exports = {
             return;
         }
         let stream = DataStreamInstance.find(inputs.stream);
+        console.log("STREAM DEPLOYED OBJ:", stream.name, stream.state);
         // If the stream is not here then it is on a different server. Do Nothing.
         if (!stream) {
             if(env.res) {
@@ -38,19 +39,30 @@ module.exports = {
         let deployed = true;
         for (let i in bundle.inputs) {
             let mystream = bundle.inputs[i];
+            console.log(`CHECKING INPUTS STREAM: ${bundle.name}: `, mystream.name, mystream.state);
             if (mystream.state !== "Enabled") {
+                console.log("IN False");
                 deployed = false;
             }
         }
         for (let i in bundle.outputs) {
             let mystream = bundle.outputs[i];
+            console.log(`CHECKING OUTPUTS STREAM: ${bundle.name}: `, mystream.name, mystream.state);
             if (mystream.state !== "Enabled") {
+                console.log("OUT False");
                 deployed = false;
             }
         }
-        if(bundle.learningStream.state !== "Enabled") {
-            deployed = false;
-        } else if(bundle.adminStream.state !== "Enabled") {
+
+        if (bundle.learningInStream.state !== "Enabled" ||
+            bundle.learningOutStream.state !== "Enabled" ||
+            bundle.adminInStream.state !== "Enabled" ||
+            bundle.adminOutStream.state !== "Enabled") {
+            console.log("LEARNADMIN False");
+            console.log("LEARNInStream", bundle.learningInStream.state);
+            console.log("LEARNOutStream", bundle.learningOutStream.state);
+            console.log("AdminIn", bundle.adminInStream.state);
+            console.log("ADMINOUT", bundle.adminOutStream.state);
             deployed = false;
         }
 

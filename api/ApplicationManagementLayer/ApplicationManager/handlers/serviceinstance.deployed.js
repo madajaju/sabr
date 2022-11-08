@@ -7,7 +7,7 @@ module.exports = {
             fn: (data) => {
                 if(data.obj) {
                     let service = ServiceInstance.find(data.obj.name);
-                    if ( service.state && service.state !== "Deployed") {
+                    if ( service && service.state && service.state !== "Deployed") {
                         service.url = data.obj.url;
                         service.deployed();
                     }

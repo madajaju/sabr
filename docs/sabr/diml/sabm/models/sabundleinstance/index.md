@@ -24,8 +24,10 @@ Instance of a sentient agent bundle. This is were things are running. This inclu
 | parent | 1 | SABundle |  |  | Parent of the SAB Instance |
 | inputs | n | InputStreamInstance | false | false | Input Data Streams for the SABR |
 | outputs | n | OutputStreamInstance | false | false | Output Data Streams for the SABR |
-| learningStream | 1 | InputStreamInstance |  |  | Learning Corpus Input Stream receives updates to the aimodel |
-| adminStream | 1 | InputStreamInstance |  |  | Administration Stream to handle registration of SABRS to Capabilities |
+| learningInStream | 1 | InputStreamInstance |  |  | Learning Corpus Input Stream receives updates to the aimodel |
+| adminInStream | 1 | InputStreamInstance |  |  | Administration Stream to handle registration of SABRS to Capabilities |
+| learningOutStream | 1 | OutputStreamInstance |  |  | Learning Corpus Input Stream receives updates to the aimodel |
+| adminOutStream | 1 | OutputStreamInstance |  |  | Administration Stream to handle registration of SABRS to Capabilities |
 | stack | n | StackInstance | false | false |  |
 | aimodels | n | AIModel | false | false |  |
 | transforms | n | DataTransformInstance | false | false |  |
@@ -39,11 +41,11 @@ Instance of a sentient agent bundle. This is were things are running. This inclu
 | bundles | n | CapabilityInstance |  |  | Bundle instances running on the ecosystem. |
 | bundle | 1 | DataChannelInstance |  |  | This is the sabr instance |
 | bundle | 1 | DataStreamInstance |  |  | This is the Bundle instance that the data stream instance is connected. |
-| instances | n | SABundle | false | true |  |
 | bundle | 1 | InputChannelInstance |  |  | This is the sabr instance |
 | bundle | 1 | InputStreamInstance |  |  | This is the Bundle instance that the data stream instance is connected. |
 | bundle | 1 | OutputChannelInstance |  |  | This is the sabr instance |
 | bundle | 1 | OutputStreamInstance |  |  | This is the Bundle instance that the data stream instance is connected. |
+| instances | n | SABundle | false | true |  |
 
 
 
@@ -66,7 +68,6 @@ The following diagram is the state net for this class.
 
 
 ## Methods
-
 * [deploy() - Deploy a a SABundleInstance](#action-deploy)
 
 

@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Package Software Defined Infrastructure
 permalink: package--sabr-sdi
 parent: Package Sentient Agent Bundle Resources

@@ -3,8 +3,9 @@
 class "DataStream" as Model {
  string name
 
+ addKeysToStore()
  build()
- deploy()
+ provision()
  
 }
 
@@ -68,10 +69,30 @@ Model o--> "1" SecurityKey : decryptionKey
     
         DataStreamInstance   o--> "1" Model : "parent"
     
+    rectangle "InputStreamInstance" as InputStreamInstance #lightgreen {
+    }
+    
+        InputStreamInstance   o--> "1" Model : "parent"
+    
+    rectangle "OutputStreamInstance" as OutputStreamInstance #lightgreen {
+    }
+    
+        OutputStreamInstance   o--> "1" Model : "parent"
+    
     rectangle "StreamPolicy" as StreamPolicy #lightgreen {
     }
     
         StreamPolicy   o--> "n" Model : "stream"
+    
+    rectangle "AdminTransform" as AdminTransform #lightgreen {
+    }
+    
+        AdminTransform   o--> "n" Model : "inputs"
+    
+    rectangle "AdminTransform" as AdminTransform #lightgreen {
+    }
+    
+        AdminTransform   o--> "n" Model : "outputs"
     
     rectangle "DataTransform" as DataTransform #lightgreen {
     }
@@ -102,16 +123,6 @@ Model o--> "1" SecurityKey : decryptionKey
     }
     
         SABundle   o--> "1" Model : "adminStream"
-    
-    rectangle "InputStreamInstance" as InputStreamInstance #lightgreen {
-    }
-    
-        InputStreamInstance   o--> "1" Model : "parent"
-    
-    rectangle "OutputStreamInstance" as OutputStreamInstance #lightgreen {
-    }
-    
-        OutputStreamInstance   o--> "1" Model : "parent"
     
 
 @enduml

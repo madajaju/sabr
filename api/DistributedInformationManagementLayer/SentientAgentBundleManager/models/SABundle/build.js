@@ -1,4 +1,5 @@
 const path = require('path');
+const {parse, stringify, toJSON, fromJSON} = require('flatted');
 
 module.exports = {
     friendlyName: 'build',
@@ -26,24 +27,48 @@ module.exports = {
         for(let i in obj.inputs) {
             let input = obj.inputs[i];
             input.build();
-            let key = input.decryptionKey;
-            vault.store.addToKeys(key);
+            input.addKeysToStore({keyType: 'decrypt', store: vault.store});
         }
         for(let i in obj.outputs) {
             let output = obj.outputs[i];
             output.build();
-            let key = output.encryptionKey;
-            vault.store.addToKeys(key);
+            output.addKeysToStore({keyType: 'encrypt', store: vault.store});
         }
 
         obj.learningStream.build();
-        vault.store.addToKeys(obj.learningStream.encryptionKey)
-        vault.store.addToKeys(obj.learningStream.decryptionKey)
+        obj.learningStream.addKeysToStore({keyType: 'encrypt', store: vault.store});
+        obj.learningStream.addKeysToStore({keyType: 'decrypt', store: vault.store});
         obj.adminStream.build();
-        vault.store.addToKeys(obj.adminStream.encryptionKey)
-        vault.store.addToKeys(obj.adminStream.decryptionKey)
+        obj.adminStream.addKeysToStore({keyType: 'encrypt', store: vault.store});
+        obj.learningStream.addKeysToStore({keyType: 'decrypt', store: vault.store});
         // Now generate the encryption and keys for the bundle.
         vault.encrypt();
+        let builds = obj.builds;
+        let numbuilds = builds.length;
+        let build = new SABundleBuild({name: `${obj.name}-${numbuilds}`});
+        obj.addToBuilds(build);
+        build.encrypt({bundle: obj});
         obj.built();
+        return build;
     }
 };
+
+function buildSecureVault(obj) {
+
+}
+
+function buildImages(obj) {
+
+}
+
+function definitionFile(obj) {
+
+}
+
+function buildPolicies(obj) {
+
+}
+
+function buildVolumes(obj) {
+
+}

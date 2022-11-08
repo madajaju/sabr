@@ -63,9 +63,7 @@ The following diagram is the state net for this class.
 
 
 ## Methods
-
 * [launched() - Notification that the Service Instance was launched](#action-launched)
-
 * [provision() - Provision the service with the provision script.](#action-provision)
 
 

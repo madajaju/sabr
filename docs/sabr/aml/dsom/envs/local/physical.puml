@@ -1,0 +1,39 @@
+@startuml
+  interface CLI
+  interface Web
+  interface WebSocket
+package "DevSecOpsManager" #00aaff {
+  component express as REST
+  component socket.io as socket
+  folder bin #ffffff {
+    component " sabr aml dsom" as binName
+  }
+  binName --> REST
+
+  folder deploy #ffffff {
+      file "node server.js\n" as a_d_container
+      REST --> a_d_container
+
+  
+    file "web" as web_container
+    REST --> web_container
+    socket ---> web_container
+  
+  }
+  folder images #ffffff {
+    collections "a_d" as a_dimage
+    artifact "ailtire:swarm" as ailtireswarm
+    a_dimage <|-- ailtireswarm
+    a_d_container --> a_dimage
+
+  
+      artifact "a_d_web" as a_d_web
+      web_container --> a_d_web
+    
+  }
+}
+CLI " sabr aml dsom" -- binName
+Web "/sabr/aml/dsom" - REST
+WebSocket ".sabr.aml.dsom" -- socket
+
+@enduml

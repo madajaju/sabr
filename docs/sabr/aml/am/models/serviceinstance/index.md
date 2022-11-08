@@ -36,11 +36,11 @@ This is an instance of a service running on resources. The Instance is allocated
 | instances | n | Service |  | true | Instances of the services. |
 | services | n | StackInstance | true | true | Instances of the Services running in the Stack |
 | transformInstance | n | DataChannelInstance |  |  | This is the instance of the transformation Service for the channel. |
-| services | n | Provisioner | false | false |  |
 | transformInstance | n | InputChannelInstance |  |  | This is the instance of the transformation Service for the channel. |
 | transformInstance | n | OutputChannelInstance |  |  | This is the instance of the transformation Service for the channel. |
 | services | n | DockerProvisioner | false | false |  |
 | services | n | ProcessProvisioner | false | false |  |
+| services | n | Provisioner | false | false |  |
 
 
 
@@ -65,9 +65,7 @@ The following diagram is the state net for this class.
 
 
 ## Methods
-
 * [launched() - Notification that the Service Instance was launched](#action-launched)
-
 * [provision() - Provision the service with the provision script.](#action-provision)
 
 

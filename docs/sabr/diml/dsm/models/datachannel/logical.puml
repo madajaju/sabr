@@ -4,6 +4,7 @@ class "DataChannel" as Model {
  string name
  string direction
 
+ build()
  
 }
 
@@ -31,6 +32,18 @@ rectangle "DataStream" as DataStream #lightblue {
 Model o--> "1" DataStream : stream
 
 
+rectangle "SecurityKey" as SecurityKey #lightblue {
+}
+
+Model o--> "1" SecurityKey : encryptionKey
+
+
+rectangle "SecurityKey" as SecurityKey #lightblue {
+}
+
+Model o--> "1" SecurityKey : decryptionKey
+
+
 
 
     rectangle "DataChannelInstance" as DataChannelInstance #lightgreen {
@@ -43,11 +56,6 @@ Model o--> "1" DataStream : stream
     
         DataStream   *--> "n" Model : "channels"
     
-    rectangle "StreamPolicy" as StreamPolicy #lightgreen {
-    }
-    
-        StreamPolicy   o--> "n" Model : "channels"
-    
     rectangle "InputChannelInstance" as InputChannelInstance #lightgreen {
     }
     
@@ -57,6 +65,16 @@ Model o--> "1" DataStream : stream
     }
     
         OutputChannelInstance   o--> "1" Model : "design"
+    
+    rectangle "StreamPolicy" as StreamPolicy #lightgreen {
+    }
+    
+        StreamPolicy   o--> "n" Model : "channels"
+    
+    rectangle "AdminDataStream" as AdminDataStream #lightgreen {
+    }
+    
+        AdminDataStream   *--> "n" Model : "channels"
     
 
 @enduml

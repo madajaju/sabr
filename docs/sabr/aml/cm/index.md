@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Package Capability Manager
 permalink: package--sabr-aml-cm
 parent: Package Application Management Layer
@@ -220,9 +221,9 @@ Description of the action
 
 
 
-* REST - /sabr/aml/cm/capability/deploy?name=string
-* bin -  sabr aml cm capability deploy --name string
-* js - .sabr.aml.cm.capability.deploy({ name:string })
+* REST - /sabr/aml/cm/capability/deploy?capability=string
+* bin -  sabr aml cm capability deploy --capability string
+* js - .sabr.aml.cm.capability.deploy({ capability:string })
 
 #### Description
 Deploy a Capability
@@ -231,7 +232,7 @@ Deploy a Capability
 
 | Name | Type | Required | Description |
 |---|---|---|---|
-| name | string |true | name of the capability |
+| capability | string |true | name of the capability |
 
 
 

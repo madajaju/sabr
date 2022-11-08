@@ -55,15 +55,10 @@ The following diagram is the state net for this class.
 
 
 ## Methods
-
 * [build() - Build a Capability](#action-build)
-
 * [create() - Create a Capability](#action-create)
-
 * [deploy() - Deploy a Capability](#action-deploy)
-
 * [release() - Release a Capability](#action-release)
-
 * [test() - Test a Capability](#action-test)
 
 

@@ -31,6 +31,9 @@ Sentient Agent Bundle consists of the definition of the services, data streams, 
 | aimodels | n | AIModel | false | false |  |
 | instances | n | SABundleInstance | false | true |  |
 | secureVault | 1 | SecureVault | true | true |  |
+| policies | n | StreamPolicy |  |  | Policies to apply to the SABR when the instance is launched. This should build the channels for the data streams. |
+| builds | n | SABundleBuild |  |  | Builds for the SABundle. A SABundleBuild encrypts the bundle and gets it ready for deployment. |
+| images | n | Image |  |  | Images attached to the bundle |
 
 
 
@@ -41,6 +44,8 @@ Sentient Agent Bundle consists of the definition of the services, data streams, 
 | bundles | n | Capability | false | false | SABR Bundles that make up the Capabilities. |
 | consumers | n | DataStream |  |  | This is a consumer of the data stream. |
 | producers | n | DataStream |  |  | This is a producer of the data stream. |
+| consumers | n | AdminDataStream |  |  | This is a consumer of the data stream. |
+| producers | n | AdminDataStream |  |  | This is a producer of the data stream. |
 | parent | 1 | SABundleInstance |  |  | Parent of the SAB Instance |
 
 
@@ -66,13 +71,9 @@ The following diagram is the state net for this class.
 
 
 ## Methods
-
 * [build() - Build the Sentient Agent Bundle](#action-build)
-
 * [create() - Create a Sentient Agent Bundle](#action-create)
-
 * [deploy() - Deploy a SABundle](#action-deploy)
-
 * [toJScript() - Convert the Bundle to a string to be passed over a connection.](#action-toJScript)
 
 

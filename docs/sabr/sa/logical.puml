@@ -25,7 +25,9 @@ Web ()-- i
 package "Security Aspect" #pink {
         class "KeyStore" {
                  string name
-                    }
+                 string encryptedData
+                             encrypt()
+            }
                 KeyStore o--> "n" SecurityKey : keys
             
     
@@ -35,13 +37,15 @@ package "Security Aspect" #pink {
             }
                 SecureVault *--> "1" SecurityKey : encryptKey
                         SecureVault *--> "1" SecurityKey : decryptKey
+                        SecureVault *--> "1" SecurityKey : iv
                         SecureVault *--> "1" KeyStore : store
             
     
     class "SecurityKey" {
                  string name
                  string value
-                    }
+                             generatePair()
+            }
     
     
 

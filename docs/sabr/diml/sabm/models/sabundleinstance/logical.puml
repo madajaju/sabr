@@ -29,13 +29,25 @@ Model o--> "n" OutputStreamInstance : outputs
 rectangle "InputStreamInstance" as InputStreamInstance #lightblue {
 }
 
-Model o--> "1" InputStreamInstance : learningStream
+Model o--> "1" InputStreamInstance : learningInStream
 
 
 rectangle "InputStreamInstance" as InputStreamInstance #lightblue {
 }
 
-Model o--> "1" InputStreamInstance : adminStream
+Model o--> "1" InputStreamInstance : adminInStream
+
+
+rectangle "OutputStreamInstance" as OutputStreamInstance #lightblue {
+}
+
+Model o--> "1" OutputStreamInstance : learningOutStream
+
+
+rectangle "OutputStreamInstance" as OutputStreamInstance #lightblue {
+}
+
+Model o--> "1" OutputStreamInstance : adminOutStream
 
 
 rectangle "StackInstance" as StackInstance #lightblue {
@@ -73,11 +85,6 @@ Model o--> "n" DataTransformInstance : transforms
     
         DataStreamInstance   o--> "1" Model : "bundle"
     
-    rectangle "SABundle" as SABundle #lightgreen {
-    }
-    
-        SABundle   *--> "n" Model : "instances"
-    
     rectangle "InputChannelInstance" as InputChannelInstance #lightgreen {
     }
     
@@ -97,6 +104,11 @@ Model o--> "n" DataTransformInstance : transforms
     }
     
         OutputStreamInstance   o--> "1" Model : "bundle"
+    
+    rectangle "SABundle" as SABundle #lightgreen {
+    }
+    
+        SABundle   *--> "n" Model : "instances"
     
 
 @enduml

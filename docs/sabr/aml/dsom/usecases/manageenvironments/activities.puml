@@ -1,0 +1,24 @@
+@startuml
+
+
+usecase "Manage Environments" as ManageEnvironments #yellow
+
+Actor "Actor" as Actor
+
+Actor --> ManageEnvironments
+
+
+
+usecase "CreateBuildEnvironment" as CreateBuildEnvironment #lightgrey
+
+ManageEnvironments --> CreateBuildEnvironment
+
+
+
+
+
+
+
+
+
+@enduml

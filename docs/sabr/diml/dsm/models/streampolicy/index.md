@@ -34,6 +34,8 @@ The Stream Policy takes the Data Stream and creates Data Channels based on the p
 | policies | n | Capability |  |  | Policies to apply to the bundles when they are deployed. |
 | policy | n | DataChannel |  |  | This policy is the policy that will create an instance of the data channel attached to a data stream. The policy defines how the channel is created and what transformation service to use when publishing or consuming information on the channel. |
 | policies | n | DataStream | false | false | This is the collection policies that apply to the stream when the stream is created. |
+| policies | n | AdminDataStream | false | false | This is the collection policies that apply to the stream when the stream is created. |
+| policies | n | SABundle |  |  | Policies to apply to the SABR when the instance is launched. This should build the channels for the data streams. |
 
 
 
@@ -55,7 +57,6 @@ The following diagram is the state net for this class.
 
 
 ## Methods
-
 * [create() - Create a Stream Policy](#action-create)
 
 

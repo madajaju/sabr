@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-    friendlyName: 'createAnddeploy',
+    friendlyName: 'createAndDeploy',
     description: 'Create and deploy the bundle',
     static: true, // True is for Class methods. False is for object based.
     inputs: {

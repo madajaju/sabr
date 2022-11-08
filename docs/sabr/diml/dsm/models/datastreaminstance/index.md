@@ -37,6 +37,7 @@ This represents a data stream that has been deployed and is running in the syste
 | instances | n | DataStream | false | true | This is the collection of deployed data streams in the system of this specific data stream. |
 | stream | 1 | InputChannelInstance |  |  | This is the stream instance that is running the channel |
 | stream | 1 | OutputChannelInstance |  |  | This is the stream instance that is running the channel |
+| instances | n | AdminDataStream | false | true | This is the collection of deployed data streams in the system of this specific data stream. |
 
 
 
@@ -58,7 +59,6 @@ The following diagram is the state net for this class.
 
 
 ## Methods
-
 * [deploy() - Deploy a Data Stream Instance](#action-deploy)
 
 

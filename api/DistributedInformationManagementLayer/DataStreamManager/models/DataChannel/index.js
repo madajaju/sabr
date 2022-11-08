@@ -3,6 +3,7 @@ class DataChannel {
     static definition = {
         name: 'DataChannel',
         description: 'This represents one channel in the data stream with specific rules for the channel.',
+        unique: (obj) => { return obj.name+obj.direction; },
         attributes: {
             name: {
                 type: 'string',
@@ -36,6 +37,16 @@ class DataChannel {
             stream: {
                 description: 'This is the owning stream',
                 type: 'DataStream',
+                cardinality: 1,
+            },
+            encryptionKey: {
+                description: 'Encryption Key for the channel',
+                type: 'SecurityKey',
+                cardinality: 1,
+            },
+            decryptionKey: {
+                description: 'Decryption Key for the channel',
+                type: 'SecurityKey',
                 cardinality: 1,
             }
         },

@@ -36,8 +36,8 @@ This is a specialization of the DataStreamInstance for producing output.
 | --- | --- | --- | --- | --- | --- |
 | inputs | n | DataTransformInstance |  |  | Inputs of the transformation. |
 | inputs | n | SABundleInstance | false | false | Input Data Streams for the SABR |
-| learningStream | 1 | SABundleInstance |  |  | Learning Corpus Input Stream receives updates to the aimodel |
-| adminStream | 1 | SABundleInstance |  |  | Administration Stream to handle registration of SABRS to Capabilities |
+| learningInStream | 1 | SABundleInstance |  |  | Learning Corpus Input Stream receives updates to the aimodel |
+| adminInStream | 1 | SABundleInstance |  |  | Administration Stream to handle registration of SABRS to Capabilities |
 
 
 
@@ -51,7 +51,8 @@ The following diagram is the state net for this class.
 | Name | Description | Events |
 | --- | --- | --- |
 | Init | Initial State | create-&gt;Created,  |
-| Created | Stream Instance created but not connected. | deploy-&gt;Deploying,  |
+| Created | Stream Instance created but not connected. | provision-&gt;Provisioned,  |
+| Provisioned | The input stream is provisioned are ready to be deployed | deploy-&gt;Deploying,  |
 | Deploying | Stream Instance is connecting to the message queues | deployed-&gt;Enabled,  |
 | Enabled | Stream Instance is ready to receive information to the message queues. | disable-&gt;Disabled, send-&gt;Enabled,  |
 | Disabled | Stream Instance cannot receive information at this time and no transformations are working. | enable-&gt;Enabled,  |
@@ -59,10 +60,9 @@ The following diagram is the state net for this class.
 
 
 ## Methods
-
 * [deploy() - Deploy a Data Stream Instance](#action-deploy)
-
 * [process() - Process data on the stream](#action-process)
+* [provision() - Provison a Data Stream Instance which will create the channelinstances that need to be deployed.](#action-provision)
 
 
 <h2>Method Details</h2>
@@ -105,6 +105,26 @@ Process data on the stream
 | data | json |true | Data to process. |
 | properties | json |true | Properties of the data |
 | channel | ref |true | Channel the data came on |
+
+
+
+
+### Action inputstreaminstance provision
+
+
+
+* REST - inputstreaminstance/provision?policies=ref
+* bin - inputstreaminstance provision --policies ref
+* js - inputstreaminstance.provision({ policies:ref })
+
+#### Description
+Provison a Data Stream Instance which will create the channelinstances that need to be deployed.
+
+#### Parameters
+
+| Name | Type | Required | Description |
+|---|---|---|---|
+| policies | ref |true | Policies to use for deploying the Bundle. |
 
 
 

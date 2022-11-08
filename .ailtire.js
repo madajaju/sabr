@@ -210,6 +210,18 @@ module.exports = {
             "friendlyName": "list",
             "description": "List of model objects"
         },
+        "/diml/sabm/policy/create": {
+            "name": "/diml/sabm/policy/create",
+            "inputs": {
+                "file": {
+                    "description": "File containing the policies for use on the SABRs",
+                    "type": "file",
+                    "required": true
+                }
+            },
+            "friendlyName": "create",
+            "description": "Create policies based on the file for the SABRs"
+        },
         "/policy/list": {
             "name": "/policy/list",
             "inputs": {"attr1": {"description": "Description for the parameter", "type": "string", "required": false}},

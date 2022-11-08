@@ -10,6 +10,9 @@ state InputStreamInstance #ffcc88 {
     state Created #ffcc88 {
     }
 
+    state Provisioned #ffcc88 {
+    }
+
     state Deploying #ffcc88 {
     }
 
@@ -24,7 +27,9 @@ state InputStreamInstance #ffcc88 {
 
 Init -[#black]--> Created : create
 
-Created -[#black]--> Deploying : deploy
+Created -[#black]--> Provisioned : provision
+
+Provisioned -[#black]--> Deploying : deploy
 
 Deploying -[#black]--> Enabled : deployed
 

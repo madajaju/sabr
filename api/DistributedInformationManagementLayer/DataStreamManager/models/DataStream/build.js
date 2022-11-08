@@ -13,11 +13,16 @@ module.exports = {
         // inputs contains the obj for this method.
         // Check the state to see if the keys need to be re-generated.
         if(obj.encryptionKey === null) {
-            let key = "TBD"; // This is where the keys are generated and stored.
-            obj.encryptionKey = new SecurityKey({name: `${obj.name}.encrypt`, value: key});
-            obj.decryptionKey = new SecurityKey({name: `${obj.name}.decrypt`, value: key});
+            const pair = SecurityKey.generatePair({name: `${obj.name}`});
+            obj.encryptionKey = pair.public;
+            obj.decryptionKey = pair.private;
             obj.error = false;
-            obj.built();
         }
+
+        for(let i in obj.channels) {
+            let channel = obj.channels[i];
+            channel.build();
+        }
+        obj.built();
     }
 };

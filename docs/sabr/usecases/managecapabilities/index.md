@@ -18,13 +18,9 @@ Manage Capabilities use cases gives DevOps Engineers and IT Operations the abili
 
 ## Extended Use Cases
 
-
 * [DeployCapability](usecase-DeployCapability)
-
 * [DevelopCapability](usecase-DevelopCapability)
-
 * [RemoveCapability](usecase-RemoveCapability)
-
 * [UpdateCapability](usecase-UpdateCapability)
 
 

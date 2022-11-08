@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Package Common Physical Layer
 permalink: package--sabr-cpl
 parent: Package Sentient Agent Bundle Resources

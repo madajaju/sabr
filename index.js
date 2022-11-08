@@ -16,6 +16,7 @@ let urlPrefix = process.env.AILTIRE_BASEURL || '/web'
 let sabrDefinition = process.env.SABR_DEF;
 let sabrName = process.env.SABR_NAME;
 let pulsarHost = process.env.PULSAR_HOST || "localhost:6650";
+let pulsarAdmin = process.env.PULSAR_ADMIN || "localhost:8080";
 let sabrPolicyDefs = process.env.SABR_POLICIES;
 let provisionURL = process.env.SABR_PROVISION_URL;
 let serviceID = process.env.SABR_SERVICE_ID;
@@ -23,11 +24,11 @@ let serviceID = process.env.SABR_SERVICE_ID;
 server.listen({
     baseDir: '.',
     prefix: 'sabr',
-    routes: {},
     host: host,
     urlPrefix: urlPrefix,
     listenPort: port,
     pulsarHost: pulsarHost,
+    pulsarAdmin: pulsarAdmin,
     routes: {
         'deploy': 'deploy/show',
     },
@@ -37,30 +38,24 @@ server.listen({
 
         // Create the ServiceInstance object to handle everything.
         if (provisionURL) {
-            let servicei = new ServiceInstance({name:sabrName});
+            // Handle the Service Instance getting started.
+            let servicei = new ServiceInstance({name: sabrName});
             global._serviceInstance = servicei;
             const orgStdout = process.stdout.write.bind(process.stdout);
             process.stdout.write = (chunk, encoding, callback) => {
-                if(typeof chunk === 'string') {
+                if (typeof chunk === 'string') {
                     global._serviceInstance.stdout += chunk;
                 }
                 return orgStdout(chunk, encoding, callback);
             };
             const orgStderr = process.stderr.write.bind(process.stderr);
             process.stderr.write = (chunk, encoding, callback) => {
-                if(typeof chunk === 'string') {
+                if (typeof chunk === 'string') {
                     global._serviceInstance.stderr += chunk;
                 }
                 return orgStderr(chunk, encoding, callback);
             };
-            /* let socket2 = io_client.connect('http://localhost:3000');
-            socket2.on('connect', () => {
-                socket2.emit("EdgeConnected");
-            });
-            socket2.on('ConnectedEdge', (data) => {
-                console.log("EdgeConnected:", data);
-            });
-            */
+
             // Add the provisioning Server as a listener on the websocket.
             AEvent.addServers([{
                 url: provisionURL,
@@ -73,21 +68,17 @@ server.listen({
                     }
                 }
             }]);
-
-            // Now call the restful service letting the provision server we are ready to provision.
-            // let url = 'http://' + provisionURL + '/am/service';
-            // console.log("Provisioning URL:", url);
-            /* let params = `/deployed?service=${serviceID}&url=${host}:${port}${urlPrefix}`
-            const put = bent(url, 'PUT', 'json', 200);
-            (async () => {
-                const response = await put(params, {});
-                console.log(response.results);
-                console.log("Completed!");
-            })().catch(e => {
-                // Deal with the fact the chain failed
-                console.error("Registration Error:", e);
-            });
-             */
+            // Need ability to handle AdminIn and send things on the output.
+            let sabrDef = require(sabrDefinition);
+            let sabr = new SABundle({name: sabrName, file: sabrDef});
+            let policyDefs = require(sabrPolicyDefs);
+            let policies = [];
+            for (let pname in policyDefs) {
+                let policydef = policyDefs[pname];
+                let policy = new StreamPolicy({name: pname, file: policydef});
+                policies.push(policy);
+            }
+            sabr.deploy({policies: policies});
         }
     }
 });

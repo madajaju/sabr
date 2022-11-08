@@ -16,18 +16,14 @@ module.exports = {
 
     exits: {},
 
-    fn: (obj, inputs) => {
-        // inputs contains the obj for the this method.
-        let parent = obj.parent;
-        // Iterate over the parent stream and create instance channels.
-        for(let i in parent.channels) {
-            let channel = parent.channels[i];
-            let instance = new OutputChannelInstance({name: channel.name});
-            instance.bundle = obj.bundle;
-            channel.addToInstances(instance);
-            obj.addToChannels(instance);
-            instance.deploy();
+    fn: async function (obj, inputs) {
+        // inputs contains the obj for this method.
+        let tasks = [];
+        for(let i in obj.channels) {
+            let task = obj.channels[i].deploy();
+            tasks.push(task);
         }
-        return obj;
+        await Promise.all(tasks);
+        return;
     }
 };
