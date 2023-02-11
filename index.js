@@ -4,11 +4,17 @@ if (!fs.existsSync('./node_modules')) {
     console.error('Error: you must run "npm install" first');
     return;
 }
+console.log("Top1");
 const server = require('ailtire');
+console.log("Top2");
 const io_client = require('socket.io-client');
+console.log("Top3");
 const process = require("process");
+console.log("Top4");
 const bent = require('bent');
+console.log("Top5");
 const AEvent = require('ailtire/src/Server/AEvent');
+console.log("Top6");
 
 let host = process.env.AILTIRE_HOST || 'localhost'
 let port = process.env.AILTIRE_PORT || 3000

@@ -1,0 +1,27 @@
+@startuml
+'https://plantuml.com/component-diagram
+
+component SABRadmin as admin
+stack "SABR1\n(Docker Stack)" as SABR1 {
+    frame "Transformation\nService" as TS
+    frame "Stream\nManager" as SM {
+        collections consumer as C
+        collections producer as P
+    }
+    database "Temporal Store\nAeroSpike" as AS
+}
+
+stack "Apache Pulsar\n[$PULSAR_HOST]\n(Sigma X)" as MB {
+    collections "Zookeeper"
+    collections "Broker"
+    collections "Bookie"
+}
+
+admin .> SABR1 : deploy\nmanage
+TS --> P : send\n[3100]
+P --> AS : saveMessages\n[3000-3002]
+P --> MB : sendMessage\n[6650]
+MB --> C : receiveMessage\n[6650]
+C --> TS : receive\n[3101]
+
+@enduml

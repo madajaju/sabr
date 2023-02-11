@@ -14,7 +14,7 @@ class DataStream {
         associations: {
             policies: {
                 description: 'This is the collection policies that apply to the stream when the stream is created.',
-                type: 'StreamPolicy',
+                type: 'ChannelCreationPolicy',
                 cardinality: 'n',
                 composition: false,
                 owner: false,

@@ -11,6 +11,10 @@ class SecurityKey {
             value: {
                 type: 'string',
                 description: 'Value of the security key.'
+            },
+            iv: {
+                type: 'string',
+                description: 'IV of the Security Key.',
             }
         },
         associations: {

@@ -15,6 +15,7 @@ Security Key
 
 * name:string - Name of the security key
 * value:string - Value of the security key.
+* iv:string - IV of the Security Key.
 
 
 ## Associations

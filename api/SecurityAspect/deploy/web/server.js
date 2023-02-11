@@ -8,7 +8,7 @@ const server = require('ailtire');
 
 server.micro( {
     baseDir: '.',
-    prefix: '/s',
+    prefix: '/sa',
     routes: {
     },
     listenPort: 3000

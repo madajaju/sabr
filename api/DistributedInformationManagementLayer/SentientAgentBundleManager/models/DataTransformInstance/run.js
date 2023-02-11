@@ -9,7 +9,7 @@ module.exports = {
             description: 'Policies to use for deploying the Bundle.',
             type: 'ref', // string|boolean|number|json
             required: true,
-            model: 'StreamPolicy',
+            model: 'ChannelCreationPolicy',
             cardinality: 'n'
         },
         properties: {
@@ -27,11 +27,12 @@ module.exports = {
         }
         let hData = {date: new Date(), transform: obj.name, input: inputs.data};
         inputs.properties.heritage.push(hData);
-        console.log("RUN:", obj.name);
         let output = obj.fn(inputs.data, inputs.properties);
-        for(let i in obj.outputs) {
-            let outStream = obj.outputs[i];
-            outStream.send(output);
+        if(output) {
+            for (let i in obj.outputs) {
+                let outStream = obj.outputs[i];
+                outStream.send(output);
+            }
         }
         return true;
     }

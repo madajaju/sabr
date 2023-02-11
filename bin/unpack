@@ -1,0 +1,33 @@
+#!/usr/bin/env node
+
+const program = require('commander');
+const build = require('../api/interface/bundle/build');
+global.ailtire = {config: require('../.ailtire.js')};
+program
+    .version('0.1.5')
+    .option('--dir <directory>', 'Directory to create the SAB build')
+    .option('--recurse', 'Recursive build through all of the sub directories')
+    .parse(process.argv);
+
+let options = program.opts();
+
+(async () => {
+    await build.fn(options, null);
+})().catch(e => {
+    // Deal with the fact the chain failed
+    console.error("Build Command Failed Error:", e);
+});
+/* (async () => {
+    const response = await getJSON(params);
+    console.log(`Registered with ${program.host}`);
+
+    let config = {
+        host: program.host,
+        actions: response
+    };
+    fs.writeFileSync('.ailtire.js', "module.exports = " + JSON.stringify(config));
+})().catch(e => {
+    // Deal with the fact the chain failed
+    console.error("Response Error:", e);
+});
+ */

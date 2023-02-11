@@ -57,7 +57,8 @@ module.exports = {
         await encryptBundle(inputs.dir);
         // Write out a entrypoint.sh  That unbundles the bundle.
         cleanupBuild(inputs.dir);
-
+        // Create Image
+        createBundleImage(inputs.dir);
     }
 };
 
@@ -122,7 +123,10 @@ async function encryptBundle(dir) {
     const iv = crypto.randomBytes(16);
     const cipher = crypto.createCipheriv('aes256', key, iv);
     const folder = path.resolve(`${dir}/.bundle`);
-    const enc_writer = fs.createWriteStream(`${dir}/bundle.enc`);
+    const destFolder = path.resolve(`${dir}/.image`);
+    fs.mkdirSync(destFolder);
+
+    const enc_writer = fs.createWriteStream(`${destFolder}/bundle.enc`);
 
     let tarprocess = tar.c({sync: true}, [folder]).pipe(cipher).pipe(enc_writer);
     await once(tarprocess, 'finished');
@@ -182,4 +186,11 @@ async function createBundle(dir) {
     } catch (e) {
         console.error(e);
     }
+}
+function createBundleImage(dir) {
+    // copy the unpack.js file into the same directory as the encryption file
+    const destFolder = path.resolve(`${dir}/.image`);
+    // Copy the Dockerfile for the encrypted bundle into the same directory
+    // Run docker build
+
 }

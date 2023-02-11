@@ -1,0 +1,22 @@
+@startuml
+
+
+
+package "Key Manager" #lightblue {
+
+    interface "Key Manager" as i {
+    
+    }
+}
+
+CLI ()-- i
+REST ()-- i
+Web ()-- i
+
+package "Key Manager" #lightblue {
+    
+}
+
+
+
+@enduml

@@ -1,6 +1,7 @@
-import {AText, A3DGraph, ASelectedHUD} from './index.js';
+import {AText, A3DGraph, ASelectedHUD, AMainWindow} from './index.js';
 
 export default class AObject {
+    static _ships = {};
     static scolor = {
         started: "#aaffff",
         create: "#aaffff",
@@ -66,7 +67,7 @@ export default class AObject {
     }
 
     static addObject(obj, creator) {
-        if(!creator) {
+        if (obj._attributes && !creator) {
             // Add the object to the list Only if the creator is not set. This prevents junk from being added to the
             // detail list.
             let ritem = {recid: obj._attributes.id};
@@ -95,39 +96,82 @@ export default class AObject {
                 }
             }
             w2ui['objlist'].add([ritem]);
-        }
-        // Add the object to the graph
-        let data = {nodes: {}, links: []};
-        data.nodes[obj._attributes.id] = {
-            id: obj._attributes.id,
-            name: obj._attributes.name,
-            group: obj.definition.name,
-            level: obj.definition.package.shortname,
-            view: obj.definition.name + '3D'
-        }
-        if (creator) {
-            data.links.push({target: obj._attributes.id, source: creator, value: 100, width: 0.001, color: "#aaffff"});
-        }
-        // Now add the nodes of the associations
-        // Go through the cols and get the associations
-
-        addRelationshipObjects(data, obj.definition,obj._associations, data.nodes[obj._attributes.id]);
-        // If there is a creator and there is not an rbox then add an rbox to the creator.
-        if (creator) {
-            let rbox = {
-                parent: creator,
-                x: {min: -2000, max: 2000},
-                z: {min: -2000, max: -700},
-                y: {min: -2000, max: 2000}
+        } else if(obj._attributes) {
+            // Add the object to the graph
+            let data = {nodes: {}, links: []};
+            data.nodes[obj._attributes.id] = {
+                id: obj._attributes.id,
+                name: obj._attributes.name,
+                group: obj.definition.name,
+                level: obj.definition.package.shortname,
+                view: obj.definition.name + '3D'
             }
+            if (creator) {
+                data.links.push({
+                    target: obj._attributes.id,
+                    source: creator,
+                    value: 100,
+                    width: 0.001,
+                    color: "#aaffff"
+                });
+            }
+            // Now add the nodes of the associations
+            // Go through the cols and get the associations
 
-            for (let i in data.nodes) {
-                if (!data.nodes[i].rbox) {
-                    data.nodes[i].rbox = rbox;
+            addRelationshipObjects(data, obj.definition, obj._associations, data.nodes[obj._attributes.id]);
+            // If there is a creator and there is not an rbox then add an rbox to the creator.
+            if (creator) {
+                let rbox = {
+                    parent: creator,
+                    x: {min: -2000, max: 2000},
+                    z: {min: -2000, max: -700},
+                    y: {min: -2000, max: 2000}
+                }
+
+                for (let i in data.nodes) {
+                    if (!data.nodes[i].rbox) {
+                        data.nodes[i].rbox = rbox;
+                    }
                 }
             }
+            window.graph.addData(data.nodes, data.links);
+        } else {
+            if(!AObject._ships.hasOwnProperty(obj.MMSI)) {
+                console.log("SHIPS:", AObject._ships);
+                let defaultID = "#default3D" + type;
+                let retval = document.querySelector(defaultID);
+
+                let obj3D = retval.object3D.clone();
+                obj3D.position.set({x: obj.location.LAT*10, y:obj.location.LONG*10, z:0});
+                window.graph.addObject(obj3D);
+                AObject._ships[obj.MMSI] = {
+                        object: obj3D,
+                        name: obj.VesselName,
+                        description: `${obj.VesselName}\nSOG: ${obj.location.SOG}\nCOG: ${obj.location.COG}\nLAT: ${obj.location.LAT}\nLONG: ${obj.location.LONG}`,
+                        id: obj.MMSI,
+                        fx: obj.location.LAT*10,
+                        fy: obj.location.LONG*10,
+                        fz: 100,
+                        group: "Ship"
+                };
+               // window.graph.setData(AObject.ships, []);
+            } else {
+                /*
+                AObject._ships[obj.MMSI] = {
+                    name: obj.VesselName,
+                    description: `${obj.VesselName}\nSOG: ${obj.location.SOG}\nCOG: ${obj.location.COG}\nLAT: ${obj.location.LAT}\nLONG: ${obj.location.LONG}`,
+                    id: obj.MMSI,
+                    fx: obj.location.LAT*10,
+                    fy: obj.location.LONG*10,
+                    fz: 100,
+                    group: "Ship"
+                };
+                window.graph.addData(AObject._ships, []);
+                // let objID = "#" + node.view + type;
+                 */
+                obj3D.position.set({x: obj.location.LAT*10, y:obj.location.LONG*10, z:0});
+            }
         }
-        window.graph.addData(data.nodes, data.links);
     }
 
     static createList(results) {
@@ -146,7 +190,9 @@ export default class AObject {
         retForm.onClick = function (event) {
             // The detail is loaded in the showDetail which is called after the node is selected in the graph.
             // this happens in the callback function for selecting a node.
+            let record = this.get(event.recid);
             window.graph.selectNodeByID(event.recid);
+            AMainWindow.selectedObject = record;
         };
 
         retForm.refresh();
@@ -174,16 +220,16 @@ export default class AObject {
         myForm.records = records;
         // Create new records that show the number of each state.
         let jmap = {};
-        for(let i in records) {
+        for (let i in records) {
             let rec = records[i];
-            if(!jmap.hasOwnProperty(rec.state)) {
+            if (!jmap.hasOwnProperty(rec.state)) {
                 jmap[rec.state] = {name: rec.state, value: 0};
             }
             jmap[rec.state].value++;
         }
-        let jrecords = [{name:'Total', value: records.length}]
-        for(let name in jmap) {
-            jrecords.push({name:name, value:jmap[name].value});
+        let jrecords = [{name: 'Total', value: records.length}]
+        for (let name in jmap) {
+            jrecords.push({name: name, value: jmap[name].value});
         }
         ASelectedHUD.update(results.name + 's', jrecords);
         myForm.refresh();
@@ -342,6 +388,33 @@ export default class AObject {
             window.graph.setData(data.nodes, data.links);
         }
     }
+
+    static editObject(obj) {
+        if (AMainWindow.objectEditors.hasOwnProperty(obj._type)) {
+            let editForm = AMainWindow.objectEditors[obj._type](obj);
+            w2popup.open({
+                height: 850,
+                width: 850,
+                title: `Edit ${obj._type}`,
+                body: '<div id="editObjectDialog" style="width: 100%; height: 100%;"></div>',
+                showMax: true,
+                onToggle: function (event) {
+                    $(w2ui.editModelDialog.box).hide();
+                    event.onComplete = function () {
+                        $(w2ui.editObjectDialog.box).show();
+                        w2ui.editObjectDialog.resize();
+                    }
+                },
+                onOpen: function (event) {
+                    event.onComplete = function () {
+                        // specifying an onOpen handler instead is equivalent to specifying an onBeforeOpen handler,
+                        // which would make this code execute too early and hence not deliver.
+                        $('#editObjectDialog').w2render(editForm);
+                    }
+                }
+            });
+        }
+    }
 }
 
 function expandObjectOnGraph(link) {
@@ -351,11 +424,11 @@ function expandObjectOnGraph(link) {
     });
 }
 
-function addRelationshipObjects(data, definition, associations,parent) {
+function addRelationshipObjects(data, definition, associations, parent) {
     for (let i in associations) {
         if (associations.hasOwnProperty(i)) {
             let aobj = associations[i];
-            if(!definition.associations.hasOwnProperty(i)) {
+            if (!definition.associations.hasOwnProperty(i)) {
                 console.log("i:", i);
             } else {
                 let assoc = definition.associations[i];

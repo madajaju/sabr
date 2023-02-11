@@ -10,7 +10,8 @@ module.exports = {
                         for (let aname in apps) {
                             let app = apps[aname];
                             let fn = app.fn;
-                            fn(data.obj);
+                            // Need to pass the parameters as well
+                            // fn(data.obj, );
                         }
                         data.obj.adminOutStream.send({
                             data: {

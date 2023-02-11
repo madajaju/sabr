@@ -44,7 +44,7 @@ function createPolicies(policyDefinition) {
     let retval = [];
    let policies = eval(policyDefinition);
    for(let pname in policies) {
-       retval.push(new StreamPolicy({name: pname, file: policies[pname]}));
+       retval.push(new ChannelCreationPolicy({name: pname, file: policies[pname]}));
    }
    return retval;
 }

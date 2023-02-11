@@ -80,7 +80,7 @@ class SABundle {
                 owner: true,
             },
             policies: {
-                type: 'StreamPolicy',
+                type: 'ChannelCreationPolicy',
                 cardinality: 'n',
                 description: 'Policies to apply to the SABR when the instance is launched. This should build the' +
                     ' channels for the data streams.',

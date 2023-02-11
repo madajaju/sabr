@@ -16,7 +16,6 @@ import {
 
 import AWorkFlow from './AWorkFlow.js';
 
-import {SStream, SChannel} from '../sabr/index.js';
 import {Graph3D} from '../Graph3D.js';
 
 export default class AMainWindow {
@@ -59,8 +58,6 @@ export default class AMainWindow {
         model: AModel.handle,
         stack: AStack.handle,
         environment: AEnvironment.handle,
-        channel: SChannel.handle,
-        stream: SStream.handle,
         component: AComponent.handle,
         image: AImage.handle,
         workflow: AWorkFlow.handle,
@@ -73,6 +70,7 @@ export default class AMainWindow {
         AMainWindow.setupEventWatcher(config);
         AMainWindow.showObjectList();
         AMainWindow.showEventList();
+        AMainWindow.objectEditors = pconfig.objectEditors;
     }
 
     static graphOpening() {
@@ -191,6 +189,10 @@ export default class AMainWindow {
                                     ]
                                 },
                                 {type: 'break'},
+                                {
+                                    type: 'button', id: 'visibility', caption: 'Trim', img: 'icon-cut',
+                                },
+
                             ],
                             onClick: function (event) {
                                 let [item, selected] = event.target.split(':');
@@ -198,6 +200,8 @@ export default class AMainWindow {
                                     if (selected) {
                                         window.graph.graph.dagMode(selected);
                                     }
+                                } else if(item === 'visibility') {
+                                    window.graph.showSelectedOnly();
                                 } else if (event.target.includes('Dim-')) {
                                     let [item, selected] = event.target.split('-');
                                     window.graph.graph.numDimensions(selected);
@@ -228,16 +232,12 @@ export default class AMainWindow {
                 ],
                 onClick: function (event) {
                     if (event.object.link) {
-                        if (event.object.link != 'nolink') {
                         // Get the information from the link and load it in the mainpage and the preview
                         AMainWindow.currentView = event.object.link;
                         $.ajax({
                             url: event.object.link,
                             success: AObject.handle
                         });
-                        } else {
-                            AObject.handle(null, event.object);
-                        }
                     }
                 }
             },
@@ -266,7 +266,6 @@ export default class AMainWindow {
                     },
                     {id: 'deployments', text: 'Deployment View', group: true, expanded: true, nodes: []},
                     {id: 'process', text: 'Process View', group: true, expanded: true, nodes: []},
-                    {id: 'pulsar', text: 'Pulsar Topics', group: true, expanded: true, nodes: []},
                 ],
                 onExpand: (event) => {
                     if (event.object.id === 'logical') {
@@ -288,8 +287,6 @@ export default class AMainWindow {
                         A3DGraph.implementationView();
                     } else if (event.object.id === 'process') {
                         A3DGraph.processView();
-                    } else if (event.object.id === 'pulsar') {
-                        SStream.getAll({ fn: SStream.handleList});
                     }
                 },
                 onCollapse: (event) => {
@@ -321,8 +318,6 @@ export default class AMainWindow {
                         A3DGraph.implementationView();
                     } else if (event.object.id === 'process') {
                         A3DGraph.processView();
-                    }    else if (event.object.id === 'pulsar') {
-                        SStream.getAll({ fn: SStream.handleList});
                     }
                 },
                 onClick: function (event) {
@@ -334,7 +329,7 @@ export default class AMainWindow {
                         $.ajax({
                             url: event.object.link,
                             success: (results) => {
-                                AMainWindow.handlers[event.object.view](results,event.object);
+                                AMainWindow.handlers[event.object.view](results);
                             },
                             error: (req, text, err) => {
                                 console.log(text);
@@ -384,7 +379,6 @@ export default class AMainWindow {
         AComponent.showList('sidebar', 'libraries');
         AImage.showList('sidebar', 'images');
         AWorkFlow.showList( 'sidebar', 'process');
-        SStream.showList('sidebar', 'pulsar');
     }
 
     static setupEventWatcher(config) {
@@ -477,6 +471,7 @@ export default class AMainWindow {
             }
             w2ui['objdetail'].add(drecords);
             window.graph.selectNodeByID(event.recid);
+            AMainWindow.selectedObject = record;
         }
         $('#objdetail').w2grid({
             name: 'objdetail',
@@ -596,13 +591,19 @@ export default class AMainWindow {
                 }
             });
         } else if (event.target === 'editItem') {
-            $.ajax({
-                url: AMainWindow.selectedObject.link + '&doc=true',
-                success: function (results) {
-                    let setURL = AMainWindow.selectedObject.link.replace('get', 'set');
-                    AModel.editDocs(results, setURL);
-                }
-            });
+            if(AMainWindow.selectedObject.link) {
+                $.ajax({
+                    url: AMainWindow.selectedObject.link + '&doc=true',
+                    success: function (results) {
+                        let setURL = AMainWindow.selectedObject.link.replace('get', 'set');
+                        AModel.editDocs(results, setURL);
+                    }
+                });
+            } else {
+                let sobj = AMainWindow.selectedObject.results;
+                AObject.editObject(sobj);
+
+            }
         }
     }
 
@@ -618,7 +619,6 @@ export default class AMainWindow {
             w2popup.close();
         });
     }
-
     static createErrorDialog(results) {
         for (let i in results) {
             results[i].recid = i;

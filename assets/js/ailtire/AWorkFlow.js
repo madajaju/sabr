@@ -92,7 +92,7 @@ export default class AWorkFlow {
         group.aid = node.id;
         node.box = size.r;
         node.expandLink = `statenet/get?id=${node.id}`;
-        node.expandView = (item) => { AWorkFlow.handle(item, {mode: "add"}); },
+        node.expandView = AWorkFlow.handle;
         node.getDetail = AWorkFlow.getDetail;
 
         return group;
@@ -110,10 +110,7 @@ export default class AWorkFlow {
     static handle(results, config) {
         if (!config) {
             config = {mode: "new"}
-        } else if(!config.mode) {
-            config.mode = "new";
         }
-
         AWorkFlow.viewDeep3D(results, config);
         AWorkFlow.showDetail(results);
         window.graph.toolbar.setToolBar([

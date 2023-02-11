@@ -9,8 +9,13 @@ module.exports = {
             description: 'Policies to use for deploying the Bundle.',
             type: 'ref', // string|boolean|number|json
             required: true,
-            model: 'StreamPolicy',
+            model: 'ChannelCreationPolicy',
             cardinality: 'n'
+        },
+        parameters: {
+            description: 'Parameters for the Instance',
+            type: 'json', // string|boolean|number|json
+            required: false,
         },
     },
 
@@ -27,12 +32,14 @@ module.exports = {
         let parent = obj.parent;
         for (let i in parent.inputs) {
             let stream = parent.inputs[i];
+            console.log("Input Stream provision:", stream.id);
             let sinstance = stream.provision({policies:inputs.policies, direction:'In', bundle:obj});
             obj.addToInputs(sinstance);
             inStreams[stream.name] = sinstance;
         }
         for (let i in parent.outputs) {
             let stream = parent.outputs[i];
+            console.log("Output Stream provision:", stream.id);
             let sinstance = stream.provision({policies:inputs.policies, direction:'Out', bundle:obj});
             obj.addToOutputs(sinstance);
             outStreams[stream.name] = sinstance;
@@ -42,10 +49,10 @@ module.exports = {
         obj.learningOutStream = parent.learningStream.provision({policies:inputs.policies, direction:'Out', bundle:obj});
         obj.adminInStream = parent.adminStream.provision({policies:inputs.policies, direction:'In', bundle:obj});
         obj.adminOutStream = parent.adminStream.provision({policies:inputs.policies, direction:'Out', bundle:obj});
-
         // Deploy the Transforms
         for(let i in parent.transforms) {
             let trans = parent.transforms[i];
+            console.log("Transform:", trans.id );
             let tinstance = new DataTransformInstance({name: trans.name, version: "0.0.1", fn: trans.fn });
             for(let i in trans.inputs) {
                 let sname = trans.inputs[i].name;
@@ -76,10 +83,12 @@ module.exports = {
             obj.learningOutStream.deploy();
             // Now deploy the output streams
             for (let i in obj.outputs) {
+                console.log("Deploy output Stream:", obj.outputs[i].id);
                 obj.outputs[i].deploy();
             }
             // Now the input streams.
             for (let i in obj.inputs) {
+                console.log("Deploy input Stream:", obj.inputs[i].id);
                 obj.inputs[i].deploy();
             }
         }
@@ -88,15 +97,19 @@ module.exports = {
         }
         // Cannot start the application until everything has been set up and the response made. This should be event
         // driven.
-        /*
-        let apps = parent.applications;
-        for(let aname in apps) {
-            let app = apps[aname];
-            let fn = app.fn;
-            fn(obj);
-        }
-
-         */
+        setTimeout(_startApplications, 20000, parent, obj, inputs.parameters);
+        console.log("\n\n\n\n\n\nInstance Deployed\n\n\n\n\n\n");
         return obj;
     }
 };
+
+function _startApplications(parent, obj, parameters) {
+    let apps = parent.applications;
+    console.log("Start the Applications");
+    for(let aname in apps) {
+        let app = apps[aname];
+        let fn = app.fn;
+        console.log("Calling Application");
+        fn(obj, parameters);
+    }
+}

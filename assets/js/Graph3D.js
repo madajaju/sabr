@@ -390,8 +390,10 @@ export class Graph3D {
         this.normalizeData(); // Creates the ndata. Normalizedd Data
         this.graph.graphData(this.ndata);
     };
-
     addData(pNodes, pLinks) {
+        if(!this.data.nodes) {
+            this.data.nodes = {};
+        }
         for (let i in pNodes) {
             if (!this.data.nodes.hasOwnProperty(i)) {
                 this.data.nodes[i] = pNodes[i];
@@ -876,6 +878,31 @@ export class Graph3D {
         };
 
         return force;
+    }
+
+    showSelectedOnly() {
+        let selectedNodes = this.selected.nodes;
+        let selectedLinks = this.selected.links;
+        // this.clearObjects()
+        let nodes = {};
+        nodes[selectedNodes.primary.id] = selectedNodes.primary;
+        for(let si in selectedNodes.source) {
+            nodes[si] = selectedNodes.source[si];
+        }
+        for(let ti in selectedNodes.target) {
+            nodes[ti] = selectedNodes.target[ti];
+        }
+        let links = [];
+        selectedLinks.source.forEach((link) => {
+                links.push(link);
+        });
+        selectedLinks.target.forEach((link) => {
+                links.push(link);
+        });
+        this.data.nodes = nodes;
+        this.data.links = links;
+        this.normalizeData(); // Creates the ndata. Normalizedd Data
+        this.graph.graphData(this.ndata);
     }
 
 }

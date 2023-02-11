@@ -22,10 +22,8 @@ module.exports = {
     fn: function (obj, inputs) {
         // inputs contains the obj for the this method.
         obj.name = inputs.name;
-        console.log("Inputs:", inputs);
         if (inputs.hasOwnProperty('file')) {
             let definition = inputs.file;
-            console.log("Inputs File Data:", inputs.file);
             if(inputs.file.data) { // This coming from a rest call.
                 let fileBuffer = Buffer.from(inputs.file.data);
                 let fileString = fileBuffer.toString('utf-8');

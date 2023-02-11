@@ -1,0 +1,17 @@
+@startuml
+
+actor DevSecOps as DSO
+participant EdgeSecurityController as ESC
+participant "Bundle Build" as SAB
+participant SABR
+participant Docker
+
+DSO -> ESC : deploy(SAB)
+DSO -> SAB : unpack
+SAB -> SAB : decrypt(iv,key)
+loop *.tar
+SAB -> Docker : loadImage(file.tar)
+end repeat
+SAB -> SABR : deploy
+SABR -> Docker : stack deploy(docker-compose.yaml)
+@enduml

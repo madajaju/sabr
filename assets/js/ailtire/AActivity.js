@@ -105,21 +105,21 @@ export default class AActivity {
                 group.add(item);
                 // The Scenario id is UseCase.Scenario This is found in the object.obj.uid field.
                 node.expandLink = `scenario/get?id=${node.object.obj.uid}`;
-                node.expandView = (item) => { AScenario.viewDeep3D(item,  "add", node); };
+                node.expandView = AScenario.handle;
             } else if (node.object.type === "usecase") {
                 let item = AUsecase.view3D(subNode);
                 item.scale.set(0.3, 0.3, 0.3);
                 item.position.set(-(size.w / 2), size.h / 2, size.d + 1);
                 group.add(item);
                 node.expandLink = `usecase/get?id=${node.name}`;
-                node.expandView = (item) => { AUsecase.viewDeep3D(item,"add", node); };
+                node.expandView = AUsecase.handle;
             } else if (node.object.type === "workflow") {
                 let item = AWorkFlow.view3D(subNode);
                 item.scale.set(0.3, 0.3, 0.3);
                 item.position.set(-(size.w / 2), size.h / 2, size.d + 1);
                 group.add(item);
                 node.expandLink = `workflow/get?id=${node.name}`;
-                node.expandView = (item) => { AWorkFlow.viewDeep3D(item, { mode: "add"}, node); };
+                node.expandView = AWorkFlow.handle;
             }
             if (node.name === "Init") {
                 const materialSphere = new THREE.MeshPhysicalMaterial({

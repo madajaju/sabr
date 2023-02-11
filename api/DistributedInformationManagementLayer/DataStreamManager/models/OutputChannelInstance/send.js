@@ -20,6 +20,7 @@ module.exports = {
     exits: {},
 
     fn: async function (obj, inputs) {
+        if(!inputs.data) { return 1; }
         if(obj.state === 'Enabled') {
             try {
                 await obj.producer.sendMessage({payload: inputs.data, properties: inputs.properties});

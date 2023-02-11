@@ -36,7 +36,7 @@ module.exports = {
             let policies = [];
             for(let pname in definition) {
                 let policydef = definition[pname];
-                let policy = new StreamPolicy({name: pname, file: policydef});
+                let policy = new ChannelCreationPolicy({name: pname, file: policydef});
                 policies.push(policies);
             }
 

@@ -3,6 +3,7 @@
 class "SecurityKey" as Model {
  string name
  string value
+ string iv
 
  generatePair()
  

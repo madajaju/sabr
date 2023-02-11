@@ -37,6 +37,10 @@ the container images for the deployment of the solution.
 
 * [sabr_sa_web](image-sabr_sa_web)
 
+* [ss_esc_controller](image-ss_esc_controller)
+
+* [sa_km_registry](image-sa_km_registry)
+
 * [sabr_sml_web](image-sabr_sml_web)
 
 * [sabr_sml_so_web](image-sabr_sml_so_web)

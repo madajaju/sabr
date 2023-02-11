@@ -27,6 +27,12 @@ WebSocket -left- i: events >
 package "Security Aspect" #pink {
 
 
+rectangle "Edge Security Controller" #white {
+}
+
+rectangle "Key Manager" #white {
+}
+
 }
 
 

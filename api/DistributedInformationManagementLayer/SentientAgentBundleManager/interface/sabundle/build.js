@@ -32,7 +32,9 @@ module.exports = {
         if(bundle) {
             let build = bundle.build({buildID:id});
             env.res.json({id: build.id});
+            return;
         }
         env.res.json({status: "Error"})
+        return;
     }
 };

@@ -26,7 +26,7 @@ class DataChannel {
                 description: 'This policy is the policy that will create an instance of the data channel attached to' +
                     ' a data stream. The policy defines how the channel is created and what transformation service' +
                     ' to use when publishing or consuming information on the channel.',
-                type: 'StreamPolicy',
+                type: 'ChannelCreationPolicy',
                 cardinality: 'n',
             },
             instances: {

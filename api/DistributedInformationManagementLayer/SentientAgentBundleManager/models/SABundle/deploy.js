@@ -9,14 +9,19 @@ module.exports = {
             description: 'Policies to use for deploying the Bundle.',
             type: 'ref', // string|boolean|number|json
             required: true,
-            model: 'StreamPolicy',
+            model: 'ChannelCreationPolicy',
             cardinality: 'n'
+        },
+        parameters: {
+            description: 'Parameters for the Instance',
+            type: 'json', // string|boolean|number|json
+            required: false,
         },
     },
 
     exits: {},
 
-    fn: async (obj, inputs) => {
+    fn: (obj, inputs) => {
         // For each Stream in the Bundle create a streaminstance.
         // Pass the policies to the stream so appropriate channels are created.
         // Create a SABundleInstance with all of the StreamInstances attached.
@@ -28,7 +33,8 @@ module.exports = {
         let numi = obj.instances.length;
         let instance = new SABundleInstance({name:obj.name + '-' + numi, parent: obj});
         obj.addToInstances(instance);
-        await instance.deploy({policies: obj.policies});
+        instance.deploy({policies: obj.policies, parameters: inputs.parameters});
+        console.log("\n\n\n\nDone");
         return instance;
     }
 };

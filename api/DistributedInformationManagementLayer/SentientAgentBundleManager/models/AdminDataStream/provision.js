@@ -16,7 +16,7 @@ module.exports = {
             description: 'Policies to use for deploying the Bundle.',
             type: 'ref', // string|boolean|number|json
             required: true,
-            model: 'StreamPolicy',
+            model: 'ChannelCreationPolicy',
             cardinality: 'n'
         },
     },

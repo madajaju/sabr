@@ -166,6 +166,11 @@ module.exports = {
                     "description": "The name of the policies to use in the deployment. Comma separated",
                     "type": "string",
                     "required": true
+                },
+                "parameters": {
+                    "description": "Command Separate list of parameters name=value,...",
+                    "type": "string",
+                    "required": false
                 }
             },
             "friendlyName": "deploy",
@@ -1355,10 +1360,9 @@ module.exports = {
             "friendlyName": "new",
             "description": "New called for web interface"
         },
-        "/streampolicy/create": {
-            "name": "/streampolicy/create",
+        "/diml/sabm/policy/create": {
+            "name": "/diml/sabm/policy/create",
             "inputs": {
-                "name": {"description": "name of the StreamPolicy", "type": "string", "required": true},
                 "file": {"description": "file with the definition", "type": "file", "required": false}
             },
             "friendlyName": "create",

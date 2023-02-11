@@ -15,6 +15,11 @@ module.exports = {
             type: 'string', // string|boolean|number|json
             required: true
         },
+        parameters: {
+            description: 'Parameters used for the instance deployment',
+            type: 'string',
+            required: false,
+        }
     },
 
     exits: {
@@ -25,18 +30,28 @@ module.exports = {
         }
     },
 
-    fn: async function (inputs, env) {
+    fn: function (inputs, env) {
         // inputs contains the obj for the this method.
         let sabr = SABundle.find(inputs.sabr);
         let policies = [];
-        if(inputs.policies) {
+        if (inputs.policies) {
             inputs.policies = inputs.policies.split(/,/);
-            for(let i in inputs.policies) {
-                let policy = StreamPolicy.find(inputs.policies[i]);
+            for (let i in inputs.policies) {
+                let policy = ChannelCreationPolicy.find(inputs.policies[i]);
                 policies.push(policy);
             }
         }
-        await sabr.deploy({policies: policies});
-        env.res.json({id:sabr.id, name:sabr.name});
+        let parameters = {};
+        if (inputs.parameters) {
+            inputs.parameters.split(',').forEach((parameter) => {
+                const [key, value] = parameter.split('=');
+                parameters[key] = value;
+            });
+        }
+        sabr.deploy({policies: policies, parameters: parameters});
+        if(env.res) {
+            env.res.json({id: sabr.id, name: sabr.name});
+        }
+        return;
     }
 };

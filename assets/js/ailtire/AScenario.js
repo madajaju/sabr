@@ -368,7 +368,7 @@ export default class AScenario {
     }
 
     static handle(result) {
-        AScenario.viewDeep3D(result, "new");
+        AScenario.viewDeep3D(result, 'new');
         AScenario.showDetail(result);
         AMainWindow.currentView = "scenario"
 

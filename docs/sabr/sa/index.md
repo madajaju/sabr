@@ -3,6 +3,7 @@ layout: default
 title: Package Security Aspect
 permalink: package--sabr-sa
 parent: Package Sentient Agent Bundle Resources
+has_children: true
 ---
 
 # Security Aspect
@@ -51,6 +52,8 @@ and their structure.
 The Security Aspect subsystem has sub packages as well. These subsystems are logical components to better
 organize the architecture and make it easier to analyze, understand, design, and implement.
 
+* [Edge Security Controller](package--sabr-sa-esc)
+* [Key Manager](package--sabr-sa-km)
 
 
 ![Logical Diagram](./logical.png)
@@ -60,7 +63,6 @@ organize the architecture and make it easier to analyze, understand, design, and
 The following are the classes in the data model of the Security Aspect subsystem.
 
 * [KeyStore](class-KeyStore)
-* [SecureVault](class-SecureVault)
 * [SecurityKey](class-SecurityKey)
 
 
@@ -141,9 +143,6 @@ cases and scenarios of the subsystem.
 | keystore.create |  When an object of type KeyStore is created. | KeyStore
 | keystore.destroy |  When an object of type KeyStore is destroyed. | KeyStore
 | keystore.updated |  When an object of type KeyStore has an attribute or association updated. | KeyStore
-| securevault.create |  When an object of type SecureVault is created. | SecureVault
-| securevault.destroy |  When an object of type SecureVault is destroyed. | SecureVault
-| securevault.updated |  When an object of type SecureVault has an attribute or association updated. | SecureVault
 | securitykey.create |  When an object of type SecurityKey is created. | SecurityKey
 | securitykey.destroy |  When an object of type SecurityKey is destroyed. | SecurityKey
 | securitykey.updated |  When an object of type SecurityKey has an attribute or association updated. | SecurityKey

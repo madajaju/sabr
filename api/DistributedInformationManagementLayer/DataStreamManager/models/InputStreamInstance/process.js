@@ -44,9 +44,11 @@ module.exports = {
         inputs.properties = myProps;
         // inputs.properties = JSON.parse(inputs.properties);
         inputs.data = JSON.parse(inputs.data);
-        for(let tname in obj.transforms) {
-            let trans = obj.transforms[tname];
-            trans.run({data:inputs.data, properties: inputs.properties});
+        if(inputs.data) {
+            for (let tname in obj.transforms) {
+                let trans = obj.transforms[tname];
+                trans.run({data: inputs.data, properties: inputs.properties});
+            }
         }
         return obj;
     }

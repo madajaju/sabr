@@ -76,6 +76,8 @@ Version 0.1.5
   * [Sentient Agent Bundle Manager](package--sabr-diml-sabm)
 * [Identity Aspect](package--sabr-ia)
 * [Security Aspect](package--sabr-sa)
+  * [Edge Security Controller](package--sabr-sa-esc)
+  * [Key Manager](package--sabr-sa-km)
 * [Service Management Layer](package--sabr-sml)
   * [Service Orchestrator](package--sabr-sml-so)
 * [Software Defined Infrastructure](package--sabr-sdi)
@@ -155,6 +157,10 @@ the container images for the deployment of the solution.
 
 * [sabr_sa_web](image-sabr_sa_web)
 
+* [ss_esc_controller](image-ss_esc_controller)
+
+* [sa_km_registry](image-sa_km_registry)
+
 * [sabr_sml_web](image-sabr_sml_web)
 
 * [sabr_sml_so_web](image-sabr_sml_so_web)
@@ -199,6 +205,8 @@ the container images for the deployment of the solution.
 * sabr_cpl - [local](environment-local-sabr_cpl), [dev](environment-dev-sabr_cpl), [test](environment-test-sabr_cpl), [prod](environment-prod-sabr_cpl)
 * sabr_diml_dsm - [local](environment-local-sabr_diml_dsm), [dev](environment-dev-sabr_diml_dsm), [test](environment-test-sabr_diml_dsm), [prod](environment-prod-sabr_diml_dsm)
 * sabr_diml - [local](environment-local-sabr_diml), [dev](environment-dev-sabr_diml), [test](environment-test-sabr_diml), [prod](environment-prod-sabr_diml)
+* sa_esc - [local](environment-local-sa_esc), [dev](environment-dev-sa_esc), [test](environment-test-sa_esc), [prod](environment-prod-sa_esc)
+* s_km - [local](environment-local-s_km), [dev](environment-dev-s_km), [test](environment-test-s_km), [prod](environment-prod-s_km)
 * sabr - [local](environment-local-sabr), [dev](environment-dev-sabr), [test](environment-test-sabr), [prod](environment-prod-sabr)
 * sabr_diml_sabm - [dev](environment-dev-sabr_diml_sabm), [test](environment-test-sabr_diml_sabm), [prod](environment-prod-sabr_diml_sabm)
 * sabr_ia - [dev](environment-dev-sabr_ia), [test](environment-test-sabr_ia), [prod](environment-prod-sabr_ia)

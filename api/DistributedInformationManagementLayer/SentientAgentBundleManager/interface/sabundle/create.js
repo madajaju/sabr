@@ -22,7 +22,7 @@ module.exports = {
 
     fn: function (inputs, env) {
         // inputs contains the obj for the this method.
-        env.res.json(global.classes);
+        // env.res.json(global.classes);
         env.res.end("Done");
     }
 };

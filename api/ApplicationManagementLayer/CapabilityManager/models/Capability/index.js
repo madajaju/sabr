@@ -18,7 +18,7 @@ class Capability {
         associations: {
             policies: {
                 description: 'Policies to apply to the bundles when they are deployed.',
-                type: 'StreamPolicy',
+                type: 'ChannelCreationPolicy',
                 cardinality: 'n',
             },
             bundles: {
