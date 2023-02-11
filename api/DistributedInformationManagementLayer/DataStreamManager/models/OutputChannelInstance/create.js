@@ -25,7 +25,7 @@ module.exports = {
             discoveryServers: [pulsarHost],
             producerAccessMode: Producer.ACCESS_MODES.SHARED,
             _producerName: sabrName,
-            logLevel: logLevel.DEBUG
+            logLevel: logLevel.ERROR
         });
         obj.producer = producer;
         return obj;

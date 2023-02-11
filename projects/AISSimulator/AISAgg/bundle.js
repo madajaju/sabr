@@ -49,7 +49,7 @@ function _timeCompress(aisItem) {
         };
     } else {
         let locations = _ships[aisItem.MMSI].location;
-        let lastLocation = locations.slice(-1);
+        let lastLocation = locations.slice(-1)[0];
         if (lastLocation.LAT !== aisItem.LAT || lastLocation.LONG !== aisItem.LONG) {
             locations.push({
                 BaseDateTime: aisItem.BaseDateTime,

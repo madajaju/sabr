@@ -1,0 +1,9 @@
+version: "3.7"
+services:
+networks:
+  sibling:
+    driver: overlay
+  parent:
+    external: true
+    name: ${AILTIRE_PARENT_NETWORK}
+

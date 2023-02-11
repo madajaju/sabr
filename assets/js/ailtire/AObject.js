@@ -138,20 +138,20 @@ export default class AObject {
         } else {
             if(!AObject._ships.hasOwnProperty(obj.MMSI)) {
                 console.log("SHIPS:", AObject._ships);
-                let defaultID = "#default3D" + type;
+                let defaultID = "#default3D";
                 let retval = document.querySelector(defaultID);
 
                 let obj3D = retval.object3D.clone();
-                obj3D.position.set({x: obj.location.LAT*10, y:obj.location.LONG*10, z:0});
+                obj3D.position.set(obj.location.LAT*10, obj.location.LONG*10, 0);
                 window.graph.addObject(obj3D);
                 AObject._ships[obj.MMSI] = {
                         object: obj3D,
                         name: obj.VesselName,
                         description: `${obj.VesselName}\nSOG: ${obj.location.SOG}\nCOG: ${obj.location.COG}\nLAT: ${obj.location.LAT}\nLONG: ${obj.location.LONG}`,
-                        id: obj.MMSI,
-                        fx: obj.location.LAT*10,
-                        fy: obj.location.LONG*10,
-                        fz: 100,
+                        aid: obj.MMSI,
+                        x: obj.location.LAT*10,
+                        y: obj.location.LONG*10,
+                        z: 0,
                         group: "Ship"
                 };
                // window.graph.setData(AObject.ships, []);
@@ -169,7 +169,12 @@ export default class AObject {
                 window.graph.addData(AObject._ships, []);
                 // let objID = "#" + node.view + type;
                  */
-                obj3D.position.set({x: obj.location.LAT*10, y:obj.location.LONG*10, z:0});
+                let ship = AObject._ships[obj.MMSI];
+                let obj3D = ship.object;
+                ship.z++;
+                ship.x = obj.location.LAT*10;
+                ship.y = obj.location.LONG*10;
+                obj3D.position.set(ship.x, ship.y, ship.z);
             }
         }
     }

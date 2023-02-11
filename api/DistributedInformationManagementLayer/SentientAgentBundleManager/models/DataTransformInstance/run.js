@@ -28,7 +28,8 @@ module.exports = {
         let hData = {date: new Date(), transform: obj.name, input: inputs.data};
         inputs.properties.heritage.push(hData);
         let output = obj.fn(inputs.data, inputs.properties);
-        if(output) {
+        conosle.log("\n\nRUN:", output);
+        if(output.data) {
             for (let i in obj.outputs) {
                 let outStream = obj.outputs[i];
                 outStream.send(output);

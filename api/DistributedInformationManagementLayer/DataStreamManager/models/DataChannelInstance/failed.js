@@ -16,7 +16,10 @@ module.exports = {
 
     fn: function (obj, inputs) {
         // inputs contains the obj for the this method.
-        obj.message = inputs.message;
+        console.log("Failed", obj);
+        if(obj) {
+            obj.message = inputs.message;
+        }
         return obj;
     }
 
