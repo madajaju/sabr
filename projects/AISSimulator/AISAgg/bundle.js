@@ -14,7 +14,11 @@ module.exports = {
             outputs: ['AISAggregate'],
             fn: (data, props) => {
                 let newMessage = _timeCompress(data.message);
-                return {data: {message: newMessage}, properties: props};
+                if(newMessage) {
+                    return {data: {message: newMessage}, properties: props};
+                } else {
+                    return null;
+                }
             }
         }
     },
@@ -74,7 +78,7 @@ function _timeCompress(aisItem) {
                 location: locations.slice(-1)[0]
             };
         } else {
-            return null;
+            return undefined;
         }
     }
 }

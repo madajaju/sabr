@@ -5,13 +5,25 @@ module.exports = {
     name: 'viewer',
     inputs: {
         AISAggregate: {},
+        AISNoContact: {},
     },
     transforms: {
         aggregator: {
             inputs: ['AISAggregate'],
             fn: (data, props) => {
-                AEvent.emit("ship.moved", data.message);
-                return {data: {message: null}, properties: props};
+                if(data.message) {
+                    AEvent.emit("ship.moved", data.message);
+                }
+                return null;
+            }
+        },
+        noContact: {
+            inputs: ['AISNoContact'],
+            fn: (data, props) => {
+                if(data.message) {
+                    AEvent.emit('ship.nocontact', data.message);
+                }
+                return null;
             }
         }
     },

@@ -1,4 +1,5 @@
 import {AMainWindow, AText, APackage, AModel, AAction, AObject,A3DGraph, ASelectedHUD} from "./index.js";
+import {SShip} from "../sabr/index.js";
 
 const scolor = {
     started: "#00ffff",
@@ -475,6 +476,8 @@ export default class AScenario {
         } else if (event.includes('step.failed')) {
             w2ui['scenariolist'].set(scenario.currentstep, {"w2ui": {"style": "background-color: #ffbbbb"}});
             window.graph.setNode(scenario.id + '-' + scenario.currentstep, {color: scolor['failed']});
+        } else if (event.includes('ship.')) {
+            SShip.handle(event,scenario);
         } else {
             let parent = window.graph.getSelectedNode();
             // Because the event is not a scenario it is an object event.

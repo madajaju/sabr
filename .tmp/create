@@ -3,18 +3,16 @@ const bent = require('bent');
 const program = require('commander');
 const YAML = require('yamljs');
 const fs = require('fs');
-global.ailtire = { config: require('C:\\Users\\dwpulsip\\IdeaProjects\\sabr\\bin\\lib/../../.ailtire.js') };
+global.ailtire = { config: require('/mnt/c/users/dwpulsip/IdeaProjects/sabr/bin/lib/../../.ailtire.js') };
 program.description('create entity')
-	.option('--name <string>', 'name of the capability')
 	.option('--file <file>', 'file with the definition');
 program.parse(process.argv);
 let url = global.ailtire.config.host;
 let args = {};
-let params = '/capability/create?';
+let params = '/diml/sabm/policy/create?';
 params += 'mode=json';
 let options = program.opts();
 
-if(options['name']) { args['name'] = options['name']; }
 if(options['file']) { args['file'] = fs.readFileSync(options['file']); }
 
         console.log("URL:", url);

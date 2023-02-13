@@ -301,7 +301,6 @@ export class Graph3D {
     clearObjects() {
         for (let i in this.objects) {
             this.graph.scene().remove(this.objects[i]);
-            ;
         }
         this.objects = {};
         this.links = {};

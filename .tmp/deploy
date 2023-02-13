@@ -3,17 +3,21 @@ const bent = require('bent');
 const program = require('commander');
 const YAML = require('yamljs');
 const fs = require('fs');
-global.ailtire = { config: require('C:\\Users\\dwpulsip\\IdeaProjects\\sabr\\bin\\lib/../../.ailtire.js') };
-program.description('Deploy a Capability')
-	.option('--capability <string>', 'name of the capability');
+global.ailtire = { config: require('/mnt/c/users/dwpulsip/IdeaProjects/sabr/bin/lib/../../.ailtire.js') };
+program.description('Deploy the bundle')
+	.option('--sabr <string>', 'The name of the SABR')
+	.option('--policies <string>', 'The name of the policies to use in the deployment. Comma separated')
+	.option('--parameters <string>', 'Command Separate list of parameters name=value,...');
 program.parse(process.argv);
 let url = global.ailtire.config.host;
 let args = {};
-let params = '/aml/cm/capability/deploy?';
+let params = '/diml/sabm/bundle/deploy?';
 params += 'mode=json';
 let options = program.opts();
 
-if(options['capability']) { args['capability'] = options['capability']; }
+if(options['sabr']) { args['sabr'] = options['sabr']; }
+if(options['policies']) { args['policies'] = options['policies']; }
+if(options['parameters']) { args['parameters'] = options['parameters']; }
 
         console.log("URL:", url);
         console.log("Args:", args);

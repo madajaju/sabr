@@ -6,6 +6,7 @@ import SSubscription from './SSubscription.js';
 import SConsumer from './SConsumer.js';
 import SProducer from './SProducer.js';
 import SSabr from './SSabr.js';
+import SShip from './SShip.js';
 
 // without default
 export {
@@ -16,5 +17,6 @@ export {
     SServiceInstance,
     SStream,
     SSubscription,
-    SProducer
+    SProducer,
+    SShip
 }

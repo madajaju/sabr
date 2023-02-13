@@ -60,9 +60,10 @@ function transmit(sortedTransmit, current, bundle) {
     if(sortedTransmit.length > 0 ) {
         const next = sortedTransmit.pop();
         const difference = current.BaseDateTime - next.BaseDateTime;
-        const timedelay = Math.abs(difference) / 100 || 1;
+        const timedelay = Math.abs(difference) / 10 || 1;
         sendMessage(bundle, current);
         setTimeout(transmit, timedelay, sortedTransmit, next, bundle);
+        return 1;
     } else {
         return 0;
     }

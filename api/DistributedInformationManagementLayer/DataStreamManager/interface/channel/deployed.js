@@ -25,7 +25,6 @@ module.exports = {
         if(!inputs.channel) {
             return;
         }
-        console.log("CHANNEL deployed:", inputs.channel);
         let channel = DataChannelInstance.find(inputs.channel);
         // If the DataChannel is not here then do nothing.
         if (!channel) {
@@ -35,7 +34,6 @@ module.exports = {
             return;
         }
         let stream = channel.stream;
-        console.log("STREAM OF CHANNEL deployed:", stream.name);
         let deployed = true;
         for (let i in stream.channels) {
             let mychannel = stream.channels[i];
@@ -44,7 +42,6 @@ module.exports = {
             }
         }
         if (deployed) {
-            console.log("STREAM OF CHANNEL CALLING deployed:", stream.name);
             stream.deployed();
         }
         if(env.res) {

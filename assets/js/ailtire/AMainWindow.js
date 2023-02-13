@@ -13,6 +13,17 @@ import {
     AEventHUD,
     ASelectedHUD,
 } from './index.js';
+import {
+    SShip,
+    SChannel,
+    SConsumer,
+    SProducer,
+    SSabr,
+    SService,
+    SServiceInstance,
+    SStream,
+    SSubscription
+} from '../sabr/index.js';
 
 import AWorkFlow from './AWorkFlow.js';
 
@@ -35,6 +46,8 @@ export default class AMainWindow {
         needed: "#ffbb44",
         selected: "#aaffaa",
         evaluated: "#ffffaa",
+        moved: "#00ff00",
+        nocontact: "#ff0000"
     };
 
     static config = {
@@ -47,7 +60,7 @@ export default class AMainWindow {
         graphDiv: "#modelGraph",
         graph3D: {
             div: "#modelGraph",
-            color: "#330044"
+            color: "#220033"
         }
     };
     static handlers = {
@@ -61,6 +74,7 @@ export default class AMainWindow {
         component: AComponent.handle,
         image: AImage.handle,
         workflow: AWorkFlow.handle,
+        ship: SShip.handle,
     }
 
     static initialize(pconfig) {
@@ -246,14 +260,14 @@ export default class AMainWindow {
                 img: null,
                 nodes: [
                     {
-                        id: 'usecaseview', text: 'UseCase View', group: true, expanded: true, nodes: [
-                            {id: 'actors', text: 'Actors', img: 'icon-folder', expanded: true, nodes: []},
-                            {id: 'usecases', text: 'Use Cases', img: 'icon-folder', expanded: true, nodes: []},
+                        id: 'usecaseview', text: 'UseCase View', group: true, expanded: false, nodes: [
+                            {id: 'actors', text: 'Actors', img: 'icon-folder', expanded: false, nodes: []},
+                            {id: 'usecases', text: 'Use Cases', img: 'icon-folder', expanded: false, nodes: []},
                         ]
                     },
-                    {id: 'logical', text: 'Logical View', group: true, expanded: true, nodes: []},
+                    {id: 'logical', text: 'Logical View', group: true, expanded: false, nodes: []},
                     {
-                        id: 'implementation', text: 'Implementation View', group: true, expanded: true, nodes: [
+                        id: 'implementation', text: 'Implementation View', group: true, expanded: false, nodes: [
                             {
                                 id: 'libraries',
                                 text: 'External Libraries',
@@ -261,11 +275,12 @@ export default class AMainWindow {
                                 expanded: true,
                                 nodes: []
                             },
-                            {id: 'images', text: 'Images', img: 'icon-folder', expanded: true, nodes: []},
+                            {id: 'images', text: 'Images', img: 'icon-folder', expanded: false, nodes: []},
                         ]
                     },
-                    {id: 'deployments', text: 'Deployment View', group: true, expanded: true, nodes: []},
-                    {id: 'process', text: 'Process View', group: true, expanded: true, nodes: []},
+                    {id: 'deployments', text: 'Deployment View', group: true, expanded: false, nodes: []},
+                    {id: 'process', text: 'Process View', group: true, expanded: false, nodes: []},
+                    {id: 'ships', text: 'Ships', group: true, expanded: true, nodes: []},
                 ],
                 onExpand: (event) => {
                     if (event.object.id === 'logical') {
@@ -287,7 +302,11 @@ export default class AMainWindow {
                         A3DGraph.implementationView();
                     } else if (event.object.id === 'process') {
                         A3DGraph.processView();
+                    } else if(event.target === 'ships') {
+                        SShip.showAllGraph('new');
+                        AMainWindow.currentView = "ship";
                     }
+
                 },
                 onCollapse: (event) => {
                     if (event.object.id === 'logical') {
@@ -318,6 +337,9 @@ export default class AMainWindow {
                         A3DGraph.implementationView();
                     } else if (event.object.id === 'process') {
                         A3DGraph.processView();
+                    } else if(event.target === 'ships') {
+                        SShip.showAllGraph('new');
+                        AMainWindow.currentView = "ship";
                     }
                 },
                 onClick: function (event) {
@@ -392,20 +414,27 @@ export default class AMainWindow {
                 let rec = w2ui['rightbar'].get(eventClass);
                 w2ui['rightbar'].set(eventClass, {count: rec.count + 1});
                 w2ui['rightbar'].select(eventClass);
+            } else if(event.includes('ship.')) {
+                // Add the ship to the list on the left.
+                w2ui['sidebar'].add('ships', {id: msg.MMSI, text:msg.VesselName, view: 'ship', data: msg} );
             }
             if (AMainWindow.currentView) {
-                let [model, view] = AMainWindow.currentView.split('/');
-                model = model.toLowerCase();
-                let obj = msg;
-                if (msg.obj) {
-                    obj = msg.obj;
-                }
-                if (AMainWindow.currentView.includes('scenario')) {
-                    AScenario.handleEvent(event, obj);
-                } else if (event.includes(model)) {
-                    // Add the node to the list and to the graph.
-                    if (obj) {
-                        AObject.addObject(obj);
+                if(AMainWindow.currentView === "ship") {
+                    SShip.handle(event, msg);
+                } else {
+                    let [model, view] = AMainWindow.currentView.split('/');
+                    model = model.toLowerCase();
+                    let obj = msg;
+                    if (msg.obj) {
+                        obj = msg.obj;
+                    }
+                    if (AMainWindow.currentView.includes('scenario')) {
+                        AScenario.handleEvent(event, obj);
+                    } else if (event.includes(model)) {
+                        // Add the node to the list and to the graph.
+                        if (obj) {
+                            AObject.addObject(obj);
+                        }
                     }
                 }
             }

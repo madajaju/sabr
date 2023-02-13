@@ -97,19 +97,21 @@ module.exports = {
         }
         // Cannot start the application until everything has been set up and the response made. This should be event
         // driven.
-        setTimeout(_startApplications, 20000, parent, obj, inputs.parameters);
+        setTimeout(_startApplications, 5000, parent, obj, inputs.parameters);
         console.log("\n\n\n\n\n\nInstance Deployed\n\n\n\n\n\n");
         return obj;
     }
 };
 
 function _startApplications(parent, obj, parameters) {
+
     let apps = parent.applications;
-    console.log("Start the Applications");
+    console.log("Start the Applications:", apps);
     for(let aname in apps) {
+        console.log("Start Application", aname);
         let app = apps[aname];
         let fn = app.fn;
-        console.log("Calling Application");
+        console.log("Calling Application, ", aname);
         fn(obj, parameters);
     }
 }

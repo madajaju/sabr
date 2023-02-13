@@ -27,7 +27,6 @@ module.exports = {
             return;
         }
         let stream = DataStreamInstance.find(inputs.stream);
-        console.log("STREAM DEPLOYED OBJ:", stream.name, stream.state);
         // If the stream is not here then it is on a different server. Do Nothing.
         if (!stream) {
             if(env.res) {
@@ -39,7 +38,6 @@ module.exports = {
         let deployed = true;
         for (let i in bundle.inputs) {
             let mystream = bundle.inputs[i];
-            console.log(`CHECKING INPUTS STREAM: ${bundle.name}: `, mystream.name, mystream.state);
             if (mystream.state !== "Enabled") {
                 console.log("IN False");
                 deployed = false;
