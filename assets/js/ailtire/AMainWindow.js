@@ -74,7 +74,7 @@ export default class AMainWindow {
         component: AComponent.handle,
         image: AImage.handle,
         workflow: AWorkFlow.handle,
-        ship: SShip.handle,
+        ship: SShip.handleView,
     }
 
     static initialize(pconfig) {
@@ -357,6 +357,8 @@ export default class AMainWindow {
                                 console.log(text);
                             }
                         });
+                    } else if(event.object.view === 'ship') {
+                        AMainWindow.handlers[event.object.view](event.object.data);
                     }
                 }
             },

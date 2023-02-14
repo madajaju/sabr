@@ -60,7 +60,8 @@ function transmit(sortedTransmit, current, bundle) {
     if(sortedTransmit.length > 0 ) {
         const next = sortedTransmit.pop();
         const difference = current.BaseDateTime - next.BaseDateTime;
-        const timedelay = Math.abs(difference) / 10 || 1;
+        // Set the time delay for speed up in simulation.
+        const timedelay = Math.abs(difference) / 50 || 1;
         sendMessage(bundle, current);
         setTimeout(transmit, timedelay, sortedTransmit, next, bundle);
         return 1;

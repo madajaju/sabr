@@ -1,6 +1,6 @@
 module.exports = {
     name: 'Build AIS SAB',
-    description: 'Build the sentient agent bundle including the security vault, streams, transforms, etc..',
+    description: 'Build and SABRs for Ships, No Contact, and Viewer',
     method: "sabundle/build",
     actors: {
         'ApplicationDeveloper': 'uses',

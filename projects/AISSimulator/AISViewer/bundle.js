@@ -25,6 +25,15 @@ module.exports = {
                 }
                 return null;
             }
+        },
+        shipFound: {
+            inputs: ['AISUSV'],
+            fn: (data, props) => {
+                if(data.message) {
+                    AEvent.emit('ship.found', data.message);
+                }
+                return null;
+            }
         }
     },
     applications: {},

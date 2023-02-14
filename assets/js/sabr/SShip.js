@@ -1,6 +1,7 @@
-import {AText} from "../ailtire/index.js";
+import {ASelectedHUD, AText} from "../ailtire/index.js";
 
 let _instances = {};
+let _selected = undefined;
 const _shipColor = {
     21: "#ffffaa",
     22: "#ffffaa",
@@ -43,6 +44,9 @@ const _shipColor = {
 }
 export default class SShip {
     constructor(aisData) {
+        if(!aisData.MMSI) {
+            return;
+        }
         if (_instances.hasOwnProperty(aisData.MMSI)) {
             return _instances[aisData.MMSI];
         }
@@ -71,7 +75,7 @@ export default class SShip {
         if (_shipColor.hasOwnProperty(ship.VesselType)) {
             color = _shipColor[ship.VesselType];
         }
-        const geo = new THREE.ConeGeometry(ship.Width / 5, ship.Length / 10, 3, 1);
+        const geo = new THREE.ConeGeometry(ship.Width / 20, ship.Length / 40, 3, 1);
         const material = new THREE.MeshPhysicalMaterial({
             color: color,
             transparent: true,
@@ -85,7 +89,7 @@ export default class SShip {
             side: THREE.DoubleSide
         });
         const obj3D = new THREE.Mesh(geo, material);
-        const arrow = new THREE.ConeGeometry(1, (ship.Length / 10) + 4, 20, 1);
+        const arrow = new THREE.ConeGeometry(ship.width/30, (ship.Length * 1.10 / 40), 20, 1);
         const matArrow = new THREE.MeshPhysicalMaterial({
             color: "#00ff00",
             transparent: true,
@@ -103,18 +107,18 @@ export default class SShip {
         obj3D.rotation.z = (ship.location.Heading * (2 * Math.PI / 360));
         // arrowObj.rotation.x = Math.PI / 2;
         arrowObj.rotation.z = (ship.location.COG * (2 * Math.PI / 360));
-        let label = AText.view3D({text: ship.VesselName, color: "#ffffff", width: 200, size: 5, textAlign: 'left'});
-        label.position.set(10, 10, 10);
+        let label = AText.view3D({text: ship.VesselName, color: "#ffffff", width: 200, size: 1, textAlign: 'left'});
+        label.position.set(2, 2, 2);
         let stats = `COG: ${ship.location.COG}\nHeading: ${ship.location.Heading}\nSOG:${ship.location.SOG}\nLAT: ${ship.location.LAT}\nLONG: ${ship.location.LONG}`;
         let statsObj = AText.view3D({
             text: stats,
             color: "#ffffff",
             width: 100,
-            size: 2.5,
+            size: 0.5,
             textAlign: 'left',
             anchorY: 'top'
         });
-        statsObj.position.set(10, 7, 10);
+        statsObj.position.set(2, 1.25, 2);
         ship.statsObj = statsObj;
         ship.arrowObj = arrowObj;
         ship.shipObj = obj3D;
@@ -128,17 +132,81 @@ export default class SShip {
         window.graph.addObject(group);
         return group;
     }
+    showDetail() {
+        let records = [];
+        let cols = [
+            {field: 'name', size: "20%", resizeable: true, label: "Name", sortable: true},
+            {field: 'value', size: "80%", resizeable: true, label: "Value", sortable: true},
+        ];
+        w2ui['objlist'].columns = cols;
+        let i = 0;
+        records.push({recid: i++, name: 'Name', value: this.VesselName, detail: this.VesselName});
+        records.push({recid: i++, name: 'CallSign', value: this.CallSign, detail: this.CallSign});
+        records.push({recid: i++, name: 'VesselType', value: this.VesselType, detail: this.VesselType});
+        records.push({recid: i++, name: 'MMSI', value: this.MMSI, detail: this.MMSI});
+        records.push({recid: i++, name: 'COG', value: this.location.COG, detail: this.location.COG});
+        records.push({recid: i++, name: 'Heading', value: this.location.Heading, detail: this.location.Heading});
+        records.push({recid: i++, name: 'SOG', value: this.location.SOG, detail: this.location.SOG});
+        records.push({recid: i++, name: 'LAT', value: this.location.LAT, detail: this.location.LAT});
+        records.push({recid: i++, name: 'LONG', value: this.location.LONG, detail: this.location.LONG});
+        w2ui['objlist'].records = records;
+        // Clear the detail list
+        w2ui['objdetail'].clear();
+        ASelectedHUD.update('Ship', records);
+        w2ui['objlist'].refresh();
+
+    }
+    static handleView(data) {
+        let ship = _instances[data.MMSI];
+        // Turn the color back on the previous selected ship.
+        if(_selected) {
+            _selected.label.color = "#ffffff";
+        }
+
+        // Set the selection
+        _selected = ship;
+
+      // Change the text to yellow.
+        // Currently removes the objects. Need to figure that out.
+        ship.label.color = "#ffff00";
+
+        // Center the view on this ship.
+
+        let lookAt = {x: ship.x, y: ship.y, z: ship.z};
+        let newPos = {x: lookAt.x, y: lookAt.y, z: lookAt.z + 50};
+        window.graph.graph.cameraPosition(
+            newPos,
+            lookAt,
+            3000  // ms transition duration.
+        );
+       // Populate the objList.
+        ship.showDetail();
+    }
 
     static handle(event, data) {
         let ship = new SShip(data);
         switch (event) {
-            case 'ship.moved':
-                let point2 = {x: data.location.LAT * 10, y: data.location.LONG * 10, z: ship.z + 1};
+            case 'ship.found':
+                let point2 = {x: data.location.LAT * 10, y: data.location.LONG * 10, z: ship.z + 0.01};
                 let point1 = {x: ship.x, y: ship.y, z: ship.z};
-                let lineObj = ship.getLine(point1, point2, "#cccccc");
+                let lineObj = ship.getLine(point1, point2, "#00ff00");
                 window.graph.addObject(lineObj);
                 ship.location = data.location;
                 ship.setShipPosition(point2);
+                if(_selected && _selected.MMSI === ship.MMSI) {
+                    _selected.showDetail();
+                }
+                break;
+            case 'ship.moved':
+                let point3 = {x: data.location.LAT * 10, y: data.location.LONG * 10, z: ship.z + 0.01};
+                let point4 = {x: ship.x, y: ship.y, z: ship.z};
+                let lineObj2 = ship.getLine(point3, point4, "#cccccc");
+                window.graph.addObject(lineObj2);
+                ship.location = data.location;
+                ship.setShipPosition(point4);
+                if(_selected && _selected.MMSI === ship.MMSI) {
+                    _selected.showDetail();
+                }
                 break;
             case 'ship.nocontact':
                 ship.setNoContact(data);
@@ -154,7 +222,7 @@ export default class SShip {
             window.graph.setData({}, []);
         }
         // Calculte the center of the ships.
-        let min = {x: 1900, y: 1900, z: 1000};
+        let min = {x: 1900, y: 1900, z: 150};
         let max = {x: -1900, y: -1900, z: -900};
         for (let i in _instances) {
             SShip.view3D(_instances[i]);
@@ -171,7 +239,7 @@ export default class SShip {
         // const fov = window.graph.graph.camera().fov * (Math.PI / 180);
         // let cameraZ = Math.abs(maxDim / 2 * Math.tan(fov * 2));
         let lookAt = {x: max.x - ((max.x - min.x) / 2), y: max.y - ((max.y - min.y) / 2), z: max.z - ((max.z - min.z) / 2)};
-        let newPos = {x: lookAt.x, y: lookAt.y, z: 1000};
+        let newPos = {x: lookAt.x, y: lookAt.y, z: 150};
         window.graph.graph.cameraPosition(
             newPos,
             lookAt,

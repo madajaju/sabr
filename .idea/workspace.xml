@@ -5,35 +5,118 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e7f16371-c89d-4dad-98c0-026728aac0e5" name="Changes" comment="Updates to documentation and fixes to the deployment model.">
-      <change afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/usecases/ManageSABR/AISNoContact.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/usecases/ManageSABR/AISOne.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/sabr/SShip.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projects/AISSimulator/AISNoContact/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projects/AISSimulator/AISNoContact/bundle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projects/AISSimulator/AISNoContact/policies.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/interface/sabundle/build.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/usecases/Ships/USVOne.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/usecases/Ships/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projects/AISSimulator/AISUSV/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projects/AISSimulator/AISUSV/bundle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projects/AISSimulator/AISUSV/policies.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/kotlinc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/plantuml.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/plantuml.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sabr.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sabr.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp/build" beforeDir="false" afterPath="$PROJECT_DIR$/.tmp/build" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp/build.js" beforeDir="false" afterPath="$PROJECT_DIR$/.tmp/build.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp/capability" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.tmp/create" beforeDir="false" afterPath="$PROJECT_DIR$/.tmp/create" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.tmp/deploy" beforeDir="false" afterPath="$PROJECT_DIR$/.tmp/deploy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp/install.js" beforeDir="false" afterPath="$PROJECT_DIR$/.tmp/create.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp/release" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp/sabundle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp/update" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/interface/channel/deployed.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/interface/channel/deployed.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/interface/stream/deployed.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/interface/stream/deployed.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/models/DataTransformInstance/run.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/models/DataTransformInstance/run.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/models/SABundleInstance/deploy.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/models/SABundleInstance/deploy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/usecases/ManageSABR/AISSABR.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/usecases/ManageSABR/AISSABR.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/ApplicationManagementLayer/CapabilityManager/usecases/UpdateCapability/AddSABRstotheCapability.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/CapabilityManager/usecases/UpdateCapability/AddSABRstotheCapability.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/ApplicationManagementLayer/deploy/deploy.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/deploy/deploy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/CommonPhysicalLayer/deploy/services.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/CommonPhysicalLayer/deploy/services.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/deploy/build.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/deploy/build.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/deploy/deploy.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/deploy/deploy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/deploy/services-local.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/deploy/services-local.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/deploy/services.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/deploy/services.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/deploy/deploy.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/deploy/deploy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/deploy/services-test1.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/deploy/services-test1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/deploy/services.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/deploy/services.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/usecases/ManageSABR/AISNoContact.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/usecases/Ships/AISNoContact.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/usecases/ManageSABR/AISOne.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/usecases/Ships/AISOne.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/usecases/ManageSABR/AISSABR.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/usecases/Ships/AISSABR.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/IdentityAspect/deploy/build.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/IdentityAspect/deploy/build.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/IdentityAspect/deploy/deploy.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/IdentityAspect/deploy/deploy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/IdentityAspect/deploy/services.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/IdentityAspect/deploy/services.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/IdentityAspect/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/IdentityAspect/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/SecurityAspect/deploy/build.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/SecurityAspect/deploy/build.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/SecurityAspect/deploy/deploy.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/SecurityAspect/deploy/deploy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/SecurityAspect/deploy/services.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/SecurityAspect/deploy/services.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/ServiceManagementLayer/ServiceOrchestrator/deploy/build.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ServiceManagementLayer/ServiceOrchestrator/deploy/build.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/ServiceManagementLayer/ServiceOrchestrator/deploy/deploy.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ServiceManagementLayer/ServiceOrchestrator/deploy/deploy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/ServiceManagementLayer/ServiceOrchestrator/deploy/services.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ServiceManagementLayer/ServiceOrchestrator/deploy/services.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/ServiceManagementLayer/deploy/build.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ServiceManagementLayer/deploy/build.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/ServiceManagementLayer/deploy/deploy.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ServiceManagementLayer/deploy/deploy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/ServiceManagementLayer/deploy/services.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ServiceManagementLayer/deploy/services.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/SoftwareDefinedInfrastructure/deploy/build.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/SoftwareDefinedInfrastructure/deploy/build.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/SoftwareDefinedInfrastructure/deploy/deploy.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/SoftwareDefinedInfrastructure/deploy/deploy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/SoftwareDefinedInfrastructure/deploy/services.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/SoftwareDefinedInfrastructure/deploy/services.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/3d-force-graph.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/3d-force-graph.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/Graph.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/Graph.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/Graph2D.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/Graph2D.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/js/Graph3D.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/Graph3D.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/Graph3DLogical.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/Graph3DLogical.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/aframe.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/aframe.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/A3DGraph.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/A3DGraph.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AAction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AActivity.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AActivity.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AActor.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AActor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AAttribute.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AAttribute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AEnvironment.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AEnvironment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AFlowCondition.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AFlowCondition.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AHandler.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AHandler.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AImage.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AImage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AInterface.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AInterface.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AMainWindow.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AMainWindow.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AObject.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AObject.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/ANetwork.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/ANetwork.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/APackage.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/APackage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AScenario.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AScenario.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/sabr/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/sabr/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/AISSimulator/AISAgg/bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/projects/AISSimulator/AISAgg/bundle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AService.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AStack.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AStack.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AState.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AState.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AStateCondition.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AStateCondition.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AStateNet.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AStateNet.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/ASwimlane.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/ASwimlane.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AText.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AText.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AUsecase.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AUsecase.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AVolume.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AVolume.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AWorkFlow.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AWorkFlow.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/HUD/AEventHUD.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/HUD/AEventHUD.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/HUD/ASelectedHUD.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/HUD/ASelectedHUD.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/bidi.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/bidi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/ckeditor.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ckeditor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/d3-force-3d.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/d3-force-3d.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/d3-octree.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/d3-octree.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/d3.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/d3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/displacement-shader.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/displacement-shader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/forceInACube.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/forceInACube.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/forceOnPlane.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/forceOnPlane.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/jquery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/less.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/less.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/sabr/SShip.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/sabr/SShip.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/sdf-shader.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/sdf-shader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/socket.io.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/socket.io.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/text-bitmap.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/text-bitmap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/three-bmfont-text-bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/three-bmfont-text-bundle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/three-mesh-ui.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/three-mesh-ui.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/three.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/three.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/three.module.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/three.module.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/troika-three-text.esm.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/troika-three-text.esm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/troika-three-text.umd.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/troika-three-text.umd.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/troika-three-utils.esm.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/troika-three-utils.esm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/troika-worker-utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/troika-worker-utils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/w2ui.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/w2ui.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/webgl-sdf-generator.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/webgl-sdf-generator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/w2ui.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/w2ui.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deploy/services.js" beforeDir="false" afterPath="$PROJECT_DIR$/deploy/services.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/AISSimulator/AISNoContact/bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/projects/AISSimulator/AISNoContact/bundle.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projects/AISSimulator/AISShip/bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/projects/AISSimulator/AISShip/bundle.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projects/AISSimulator/AISViewer/bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/projects/AISSimulator/AISViewer/bundle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sabr.iml" beforeDir="false" afterPath="$PROJECT_DIR$/sabr.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/layouts/default.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/layouts/default.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,63 +155,65 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultPlantUmlFileTemplate": "UML Component",
-    "Project.color": "144a0c",
-    "RunOnceActivity.go.formatter.settings.were.checked": "true",
-    "RunOnceActivity.go.migrated.go.modules.settings": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "go.import.settings.migrated": "true",
-    "javascript.nodejs.core.library.configured.version": "16.14.2",
-    "javascript.nodejs.core.library.typings.version": "16.18.4",
-    "last_opened_file_path": "C:/Users/dwpulsip/IdeaProjects/sabr/assets/js/sabr",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "timeTracker.activityTracker": "null",
-    "timeTracker.comment": "",
-    "timeTracker.inactivityPeriodInMills": "600000",
-    "timeTracker.isAutoTrackingEnable": "true",
-    "timeTracker.isAutoTrackingTemporaryDisabled": "false",
-    "timeTracker.isManualTrackingEnable": "false",
-    "timeTracker.isPaused": "false",
-    "timeTracker.isPostAfterCommitEnabled": "false",
-    "timeTracker.isPostedScheduled": "true",
-    "timeTracker.isRunning": "false",
-    "timeTracker.isScheduledEnabled": "false",
-    "timeTracker.isWhenProjectClosedEnabled": "false",
-    "timeTracker.issueId": "Default",
-    "timeTracker.issueIdReadable": "Default",
-    "timeTracker.pausedTime": "0",
-    "timeTracker.query": "",
-    "timeTracker.recordedTime": "0",
-    "timeTracker.scheduledPeriod": "19:00:0",
-    "timeTracker.startTime": "0",
-    "timeTracker.timeInMills": "0",
-    "timeTracker.type": "Development",
-    "ts.external.directory.path": "C:\\Users\\dwpulsip\\AppData\\Local\\JetBrains\\Toolbox\\apps\\IDEA-U\\ch-0\\223.8617.56\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultPlantUmlFileTemplate&quot;: &quot;UML Component&quot;,
+    &quot;Project.color&quot;: &quot;144a0c&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;19.6.0&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;18.13.0&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/dwpulsip/IdeaProjects/sabr/api/usecases/Ships&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;timeTracker.activityTracker&quot;: &quot;null&quot;,
+    &quot;timeTracker.comment&quot;: &quot;&quot;,
+    &quot;timeTracker.inactivityPeriodInMills&quot;: &quot;600000&quot;,
+    &quot;timeTracker.isAutoTrackingEnable&quot;: &quot;true&quot;,
+    &quot;timeTracker.isAutoTrackingTemporaryDisabled&quot;: &quot;false&quot;,
+    &quot;timeTracker.isManualTrackingEnable&quot;: &quot;false&quot;,
+    &quot;timeTracker.isPaused&quot;: &quot;false&quot;,
+    &quot;timeTracker.isPostAfterCommitEnabled&quot;: &quot;false&quot;,
+    &quot;timeTracker.isPostedScheduled&quot;: &quot;true&quot;,
+    &quot;timeTracker.isRunning&quot;: &quot;false&quot;,
+    &quot;timeTracker.isScheduledEnabled&quot;: &quot;false&quot;,
+    &quot;timeTracker.isWhenProjectClosedEnabled&quot;: &quot;false&quot;,
+    &quot;timeTracker.issueId&quot;: &quot;Default&quot;,
+    &quot;timeTracker.issueIdReadable&quot;: &quot;Default&quot;,
+    &quot;timeTracker.pausedTime&quot;: &quot;0&quot;,
+    &quot;timeTracker.query&quot;: &quot;&quot;,
+    &quot;timeTracker.recordedTime&quot;: &quot;0&quot;,
+    &quot;timeTracker.scheduledPeriod&quot;: &quot;19:00:0&quot;,
+    &quot;timeTracker.startTime&quot;: &quot;0&quot;,
+    &quot;timeTracker.timeInMills&quot;: &quot;0&quot;,
+    &quot;timeTracker.type&quot;: &quot;Development&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\dwpulsip\\AppData\\Local\\JetBrains\\Toolbox\\apps\\IDEA-U\\ch-0\\223.8617.56\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\dwpulsip\IdeaProjects\sabr\api\usecases\Ships" />
+      <recent name="C:\Users\dwpulsip\IdeaProjects\sabr\projects\AISSimulator" />
       <recent name="C:\Users\dwpulsip\IdeaProjects\sabr\assets\js\sabr" />
       <recent name="C:\Users\dwpulsip\IdeaProjects\sabr\api\DistributedInformationManagementLayer\SentientAgentBundleManager\usecases\ManageSABR" />
-      <recent name="C:\Users\dwpulsip\IdeaProjects\sabr\projects\AISSimulator" />
       <recent name="C:\Users\dwpulsip\IdeaProjects\sabr\api\interface\bundle" />
-      <recent name="C:\Users\dwpulsip\IdeaProjects\sabr\projects\AISSimulator\AISCollision" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\dwpulsip\IdeaProjects\sabr\api\usecases\Ships" />
       <recent name="C:\Users\dwpulsip\IdeaProjects\sabr\projects\AISSimulator\AISShip" />
       <recent name="C:\Users\dwpulsip\IdeaProjects\sabr\api\SecurityAspect\EdgeSecurityController\deploy\.buildDir\sabr_sa_esc\local\api" />
       <recent name="C:\Users\dwpulsip\IdeaProjects\sabr\api\SecurityAspect\KeyManager" />
       <recent name="C:\Users\dwpulsip\IdeaProjects\sabr\api\SecurityAspect\EdgeSecurityController\deploy\controller" />
-      <recent name="C:\Users\dwpulsip\IdeaProjects\sabr\api\interface\bundle" />
     </key>
   </component>
   <component name="RunManager" selected="npm.build">
@@ -399,7 +484,12 @@
       <workItem from="1676034954065" duration="23820000" />
       <workItem from="1676124402554" duration="695000" />
       <workItem from="1676126383619" duration="5804000" />
-      <workItem from="1676140861244" duration="37500000" />
+      <workItem from="1676140861244" duration="43175000" />
+      <workItem from="1676299983116" duration="9100000" />
+      <workItem from="1676344644451" duration="1174000" />
+      <workItem from="1676353158045" duration="332000" />
+      <workItem from="1676353551575" duration="638000" />
+      <workItem from="1676354229429" duration="867000" />
     </task>
     <task id="LOCAL-00001" summary="Updates to documentation and fixes to the deployment model.">
       <created>1653779220207</created>
@@ -548,12 +638,15 @@
       <option name="project" value="LOCAL" />
       <updated>1676139265090</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
-    <servers>
-      <YouTrack url="https://yolydev.youtrack.cloud">
-        <username>random</username>
-      </YouTrack>
-    </servers>
+    <task id="LOCAL-00022" summary="Updates to documentation and fixes to the deployment model.">
+      <created>1676263499803</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1676263499803</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
+    <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />

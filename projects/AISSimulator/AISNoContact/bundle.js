@@ -15,7 +15,7 @@ module.exports = {
             outputs: ['AISNoContact'],
             fn: (data, props) => {
                 _calculateNoContact(data.message);
-                return { data: {message: null}, properties: props };
+                return {data: {message: null}, properties: props};
             }
         }
     },
@@ -34,44 +34,47 @@ function _calculateNoContact(aisItem) {
     if (!_ships) {
         _ships = {};
     }
-    if(!_checker) {
+    if (!_checker) {
         return;
     }
     if (!_ships.hasOwnProperty(aisItem.MMSI)) {
         let timeOutID = setTimeout(_sendNoContact, _checker.timeout, aisItem);
         _ships[aisItem.MMSI] = {
-            lastTime: new Date(),
             timeout: timeOutID,
-            MMSI: aisItem.MMSI,
-            VesselName: aisItem.VesselName,
-            IMO: aisItem.IMO,
-            CallSign: aisItem.CallSign,
-            VesselType: aisItem.VesselType,
-            Length: aisItem.Length,
-            Width: aisItem.Width,
-            Draft: aisItem.Draft,
-            Cargo: aisItem.Cargo,
-            TransceiverClass: aisItem.TransceiverClass,
-            location: [{
-                BaseDateTime: aisItem.BaseDateTime,
-                LAT: aisItem.LAT,
-                LONG: aisItem.LONG,
-                SOG: aisItem.SOG,
-                COG: aisItem.COG,
-                Heading: aisItem.Heading,
-                Status: aisItem.Status,
-            }]
+            data: {
+                lastTime: new Date(),
+                timeout: timeOutID,
+                MMSI: aisItem.MMSI,
+                VesselName: aisItem.VesselName,
+                IMO: aisItem.IMO,
+                CallSign: aisItem.CallSign,
+                VesselType: aisItem.VesselType,
+                Length: aisItem.Length,
+                Width: aisItem.Width,
+                Draft: aisItem.Draft,
+                Cargo: aisItem.Cargo,
+                TransceiverClass: aisItem.TransceiverClass,
+                location: [{
+                    BaseDateTime: aisItem.BaseDateTime,
+                    LAT: aisItem.LAT,
+                    LONG: aisItem.LONG,
+                    SOG: aisItem.SOG,
+                    COG: aisItem.COG,
+                    Heading: aisItem.Heading,
+                    Status: aisItem.Status,
+                }]
+            }
         };
     } else {
         clearTimeout(_ships[aisItem.MMSI].timeout);
-        let timeOutID = setTimeout(_sendNoContact,_checker.timeout, aisItem);
+        let timeOutID = setTimeout(_sendNoContact, _checker.timeout, _ships[aisItem.MMSI].data);
         _ships[aisItem.MMSI].timeout = timeOutID;
         _ships[aisItem.MMSI].lastTime = new Date();
     }
 }
 
 function _sendNoContact(message) {
-    if(!_checker.bundle) {
+    if (!_checker.bundle) {
         return;
     }
     for (let oname in _checker.bundle.outputs) {
