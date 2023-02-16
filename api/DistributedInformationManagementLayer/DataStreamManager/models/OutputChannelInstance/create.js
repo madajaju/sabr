@@ -24,10 +24,11 @@ module.exports = {
             topic: topicName,
             discoveryServers: [pulsarHost],
             producerAccessMode: Producer.ACCESS_MODES.SHARED,
-            _producerName: sabrName,
+            producerName: sabrName,
             logLevel: logLevel.ERROR
         });
         obj.producer = producer;
+        global.producers[sabrName] = obj;
         return obj;
     }
 

@@ -21,14 +21,15 @@ module.exports = {
         let pulsarHost = ailtire.config.pulsarHost;
         let subscriptionName = inputs.bundle.parent.name + '-' + inputs.parent.name + 'Subscription';
         let sabrName = inputs.bundle.name + '-' + inputs.name + '-Consumer';
-        let consumer = new Consumer({
+        let consumer =
+            new Consumer({
             topic: topicName,
             discoveryServers: [pulsarHost],
             subscription: subscriptionName,
             subType: Consumer.SUB_TYPES.FAILOVER,
             consumerName: sabrName,
             receiveQueueSize: 1000,
-            logLevel: logLevel.DEBUG,
+            logLevel: logLevel.ERROR,
         });
         obj.consumer = consumer;
         return obj;

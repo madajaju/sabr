@@ -5,118 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e7f16371-c89d-4dad-98c0-026728aac0e5" name="Changes" comment="Updates to documentation and fixes to the deployment model.">
-      <change afterPath="$PROJECT_DIR$/api/interface/sabundle/build.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/usecases/Ships/USVOne.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/usecases/Ships/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projects/AISSimulator/AISUSV/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projects/AISSimulator/AISUSV/bundle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projects/AISSimulator/AISUSV/policies.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/kotlinc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/plantuml.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/plantuml.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sabr.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sabr.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp/build" beforeDir="false" afterPath="$PROJECT_DIR$/.tmp/build" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.tmp/create" beforeDir="false" afterPath="$PROJECT_DIR$/.tmp/create" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.tmp/deploy" beforeDir="false" afterPath="$PROJECT_DIR$/.tmp/deploy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ApplicationManagementLayer/CapabilityManager/usecases/UpdateCapability/AddSABRstotheCapability.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/CapabilityManager/usecases/UpdateCapability/AddSABRstotheCapability.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ApplicationManagementLayer/deploy/deploy.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ApplicationManagementLayer/deploy/deploy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/CommonPhysicalLayer/deploy/services.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/CommonPhysicalLayer/deploy/services.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/deploy/build.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/deploy/build.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/deploy/deploy.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/deploy/deploy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/deploy/services-local.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/deploy/services-local.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/deploy/services.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/deploy/services.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/deploy/deploy.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/deploy/deploy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/deploy/services-test1.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/deploy/services-test1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/deploy/services.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/deploy/services.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/usecases/ManageSABR/AISNoContact.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/usecases/Ships/AISNoContact.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/usecases/ManageSABR/AISOne.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/usecases/Ships/AISOne.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/usecases/ManageSABR/AISSABR.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/usecases/Ships/AISSABR.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/IdentityAspect/deploy/build.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/IdentityAspect/deploy/build.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/IdentityAspect/deploy/deploy.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/IdentityAspect/deploy/deploy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/IdentityAspect/deploy/services.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/IdentityAspect/deploy/services.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/IdentityAspect/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/IdentityAspect/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/SecurityAspect/deploy/build.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/SecurityAspect/deploy/build.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/SecurityAspect/deploy/deploy.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/SecurityAspect/deploy/deploy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/SecurityAspect/deploy/services.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/SecurityAspect/deploy/services.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ServiceManagementLayer/ServiceOrchestrator/deploy/build.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ServiceManagementLayer/ServiceOrchestrator/deploy/build.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ServiceManagementLayer/ServiceOrchestrator/deploy/deploy.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ServiceManagementLayer/ServiceOrchestrator/deploy/deploy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ServiceManagementLayer/ServiceOrchestrator/deploy/services.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ServiceManagementLayer/ServiceOrchestrator/deploy/services.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ServiceManagementLayer/deploy/build.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ServiceManagementLayer/deploy/build.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ServiceManagementLayer/deploy/deploy.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ServiceManagementLayer/deploy/deploy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/ServiceManagementLayer/deploy/services.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/ServiceManagementLayer/deploy/services.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/SoftwareDefinedInfrastructure/deploy/build.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/SoftwareDefinedInfrastructure/deploy/build.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/SoftwareDefinedInfrastructure/deploy/deploy.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/SoftwareDefinedInfrastructure/deploy/deploy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/SoftwareDefinedInfrastructure/deploy/services.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/SoftwareDefinedInfrastructure/deploy/services.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/3d-force-graph.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/3d-force-graph.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/Graph.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/Graph.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/Graph2D.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/Graph2D.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/Graph3D.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/Graph3D.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/Graph3DLogical.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/Graph3DLogical.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/aframe.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/aframe.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/A3DGraph.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/A3DGraph.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AAction.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AActivity.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AActivity.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AActor.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AActor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AAttribute.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AAttribute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AEnvironment.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AEnvironment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AFlowCondition.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AFlowCondition.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AHandler.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AHandler.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AImage.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AImage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AInterface.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AInterface.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/models/InputChannelInstance/create.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/models/InputChannelInstance/create.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/models/OutputChannelInstance/create.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/models/OutputChannelInstance/create.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AMainWindow.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AMainWindow.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AModel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/ANetwork.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/ANetwork.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/APackage.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/APackage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AScenario.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AScenario.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AService.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AStack.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AStack.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AState.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AState.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AStateCondition.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AStateCondition.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AStateNet.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AStateNet.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/ASwimlane.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/ASwimlane.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AText.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AText.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AUsecase.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AUsecase.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AVolume.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AVolume.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AWorkFlow.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AWorkFlow.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/HUD/AEventHUD.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/HUD/AEventHUD.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/HUD/ASelectedHUD.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/HUD/ASelectedHUD.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/ailtire/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/bidi.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/bidi.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/ckeditor.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ckeditor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/d3-force-3d.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/d3-force-3d.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/d3-octree.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/d3-octree.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/d3.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/d3.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/displacement-shader.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/displacement-shader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/forceInACube.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/forceInACube.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/forceOnPlane.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/forceOnPlane.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/jquery.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/less.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/less.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/js/sabr/SShip.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/sabr/SShip.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/sdf-shader.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/sdf-shader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/socket.io.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/socket.io.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/text-bitmap.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/text-bitmap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/three-bmfont-text-bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/three-bmfont-text-bundle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/three-mesh-ui.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/three-mesh-ui.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/three.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/three.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/three.module.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/three.module.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/troika-three-text.esm.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/troika-three-text.esm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/troika-three-text.umd.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/troika-three-text.umd.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/troika-three-utils.esm.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/troika-three-utils.esm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/troika-worker-utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/troika-worker-utils.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/w2ui.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/w2ui.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/webgl-sdf-generator.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/webgl-sdf-generator.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/w2ui.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/w2ui.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deploy/services.js" beforeDir="false" afterPath="$PROJECT_DIR$/deploy/services.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/AISSimulator/AISNoContact/bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/projects/AISSimulator/AISNoContact/bundle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/AISSimulator/AISShip/bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/projects/AISSimulator/AISShip/bundle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/AISSimulator/AISViewer/bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/projects/AISSimulator/AISViewer/bundle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sabr.iml" beforeDir="false" afterPath="$PROJECT_DIR$/sabr.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/layouts/default.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/layouts/default.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/sabr/SStream.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/sabr/SStream.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/.tmp/create.js" beforeDir="false" afterPath="$PROJECT_DIR$/bin/.tmp/create.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/build" beforeDir="false" afterPath="$PROJECT_DIR$/bin/build" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/init" beforeDir="false" afterPath="$PROJECT_DIR$/bin/init" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/lib/subcommander.js" beforeDir="false" afterPath="$PROJECT_DIR$/bin/lib/subcommander.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/sabr" beforeDir="false" afterPath="$PROJECT_DIR$/bin/sabr" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/unpack" beforeDir="false" afterPath="$PROJECT_DIR$/bin/unpack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,9 +44,13 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/api/ApplicationManagementLayer/CapabilityManager/models/Capability/index.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/node_modules/pulsar-flex/src/consumer/index.js" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="PackageJsonUpdateNotifier">
+    <dismissed value="$PROJECT_DIR$/package.json" />
   </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
@@ -220,7 +128,7 @@
     <configuration name="build" type="NodeJSConfigurationType" application-parameters="--dir projects/SABR1" path-to-js-file="bin/build" working-dir="$PROJECT_DIR$">
       <method v="2" />
     </configuration>
-    <configuration name="Build Sabr1" type="docker-deploy" factoryName="dockerfile" server-name="Docker">
+    <configuration name="Build Sabr1" type="docker-deploy" factoryName="dockerfile">
       <deployment type="dockerfile">
         <settings>
           <option name="imageTag" value="sabr1" />
@@ -358,7 +266,7 @@
       </scripts>
       <node-interpreter value="project" />
       <envs>
-        <env name="PULSAR_HOST" value="dwpulsip-mobl1" />
+        <env name="PULSAR_HOST" value="localhost:6650" />
         <env name="AILTIRE_PORT" value="80" />
       </envs>
       <method v="2" />
@@ -490,6 +398,10 @@
       <workItem from="1676353158045" duration="332000" />
       <workItem from="1676353551575" duration="638000" />
       <workItem from="1676354229429" duration="867000" />
+      <workItem from="1676439229468" duration="2750000" />
+      <workItem from="1676471750591" duration="1066000" />
+      <workItem from="1676488692429" duration="594000" />
+      <workItem from="1676565411408" duration="190000" />
     </task>
     <task id="LOCAL-00001" summary="Updates to documentation and fixes to the deployment model.">
       <created>1653779220207</created>
@@ -710,169 +622,14 @@
           <option name="timeStamp" value="28" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/node_modules/ailtire/src/Proxy/ObjectProxy.js</url>
-          <line>407</line>
-          <option name="timeStamp" value="30" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/node_modules/ailtire/interface/environment/list.js</url>
-          <line>14</line>
-          <option name="timeStamp" value="88" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/node_modules/ailtire/interface/environment/get.js</url>
-          <line>8</line>
-          <option name="timeStamp" value="91" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/node_modules/ailtire/interface/env/list.js</url>
-          <line>20</line>
-          <option name="timeStamp" value="96" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/node_modules/ailtire/src/Proxy/StateNetProxy.js</url>
-          <line>107</line>
-          <option name="timeStamp" value="112" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/api/ApplicationManagementLayer/CapabilityManager/models/CapabilityInstance/deploy.js</url>
-          <line>51</line>
-          <option name="timeStamp" value="129" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/api/ApplicationManagementLayer/CapabilityManager/models/CapabilityInstance/deploy.js</url>
-          <line>47</line>
-          <option name="timeStamp" value="130" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/api/ServiceManagementLayer/ServiceOrchestrator/models/ProcessProvisioner/deploy.js</url>
-          <line>23</line>
-          <option name="timeStamp" value="131" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/models/OutputChannelInstance/deploy.js</url>
-          <line>31</line>
-          <option name="timeStamp" value="160" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/models/DataStreamInstance/deploy.js</url>
-          <line>22</line>
-          <option name="timeStamp" value="179" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/models/SABundleInstance/deploy.js</url>
-          <line>95</line>
-          <option name="timeStamp" value="190" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/interface/channel/deployed.js</url>
-          <line>30</line>
-          <option name="timeStamp" value="218" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/templates/bundle1.js</url>
-          <line>20</line>
-          <option name="timeStamp" value="258" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/node_modules/pulsar-flex/src/client/services/lookup.js</url>
-          <line>39</line>
-          <option name="timeStamp" value="287" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/models/DataChannel/build.js</url>
-          <line>16</line>
-          <option name="timeStamp" value="306" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/api/interface/bundle/build.js</url>
-          <line>52</line>
-          <option name="timeStamp" value="323" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/api/interface/bundle/build.js</url>
-          <line>85</line>
-          <option name="timeStamp" value="326" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/api/interface/bundle/build.js</url>
-          <line>186</line>
-          <option name="timeStamp" value="335" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/api/interface/bundle/build.js</url>
-          <line>175</line>
-          <option name="timeStamp" value="339" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/api/interface/bundle/build.js</url>
-          <line>182</line>
-          <option name="timeStamp" value="341" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/api/interface/bundle/build.js</url>
-          <line>181</line>
-          <option name="timeStamp" value="345" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/node_modules/ailtire/interface/environment/list.js</url>
-          <line>16</line>
-          <option name="timeStamp" value="350" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/api/SecurityAspect/EdgeSecurityController/interface/bundle/deploy.js</url>
-          <line>72</line>
-          <option name="timeStamp" value="363" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/api/SecurityAspect/EdgeSecurityController/interface/bundle/deploy.js</url>
-          <line>78</line>
-          <option name="timeStamp" value="364" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/api/SecurityAspect/EdgeSecurityController/deploy/.buildDir/sabr_sa_esc/local/api/EdgeSecurityController/interface/key/store.js</url>
-          <line>48</line>
-          <option name="timeStamp" value="377" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/api/SecurityAspect/EdgeSecurityController/deploy/.buildDir/sabr_sa_esc/local/interface/key/store.js</url>
-          <line>53</line>
-          <option name="timeStamp" value="378" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/api/SecurityAspect/EdgeSecurityController/deploy/.buildDir/sabr_sa_esc/local/interface/bundle/deploy.js</url>
-          <line>68</line>
-          <option name="timeStamp" value="379" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
           <url>vmscript://vm:861</url>
           <line>16</line>
           <option name="timeStamp" value="391" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/models/ChannelCreationPolicy/create.js</url>
-          <line>23</line>
-          <option name="timeStamp" value="398" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/models/SABundle/deploy.js</url>
-          <line>35</line>
-          <option name="timeStamp" value="399" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/interface/policy/create.js</url>
-          <line>27</line>
-          <option name="timeStamp" value="400" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/models/OutputChannelInstance/create.js</url>
-          <line>19</line>
-          <option name="timeStamp" value="412" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/handlers/sabundleinstance.enabled.js</url>
-          <line>8</line>
-          <option name="timeStamp" value="414" />
+          <url>file://$PROJECT_DIR$/api/interface/pulsar/streams.js</url>
+          <line>30</line>
+          <option name="timeStamp" value="424" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -187,18 +187,18 @@ export default class SShip {
         let ship = new SShip(data);
         switch (event) {
             case 'ship.found':
-                let point2 = {x: data.location.LAT * 10, y: data.location.LONG * 10, z: ship.z + 0.01};
-                let point1 = {x: ship.x, y: ship.y, z: ship.z};
+                let point1 = {x: data.location.LAT * 10, y: data.location.LONG * 10, z: ship.z + 0.5};
+                let point2 = {x: ship.x, y: ship.y, z: ship.z};
                 let lineObj = ship.getLine(point1, point2, "#00ff00");
                 window.graph.addObject(lineObj);
                 ship.location = data.location;
-                ship.setShipPosition(point2);
+                ship.setShipPosition(point1);
                 if(_selected && _selected.MMSI === ship.MMSI) {
                     _selected.showDetail();
                 }
                 break;
             case 'ship.moved':
-                let point3 = {x: data.location.LAT * 10, y: data.location.LONG * 10, z: ship.z + 0.01};
+                let point3 = {x: data.location.LAT * 10, y: data.location.LONG * 10, z: ship.z + 0.5};
                 let point4 = {x: ship.x, y: ship.y, z: ship.z};
                 let lineObj2 = ship.getLine(point3, point4, "#cccccc");
                 window.graph.addObject(lineObj2);

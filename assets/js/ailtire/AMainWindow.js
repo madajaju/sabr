@@ -75,6 +75,8 @@ export default class AMainWindow {
         image: AImage.handle,
         workflow: AWorkFlow.handle,
         ship: SShip.handleView,
+        channel: SChannel.handle,
+        stream: SStream.handle,
     }
 
     static initialize(pconfig) {
@@ -281,6 +283,7 @@ export default class AMainWindow {
                     {id: 'deployments', text: 'Deployment View', group: true, expanded: false, nodes: []},
                     {id: 'process', text: 'Process View', group: true, expanded: false, nodes: []},
                     {id: 'ships', text: 'Ships', group: true, expanded: true, nodes: []},
+                    {id: 'pulsar', text: 'Pulsar', group: true, expanded: true, nodes: []},
                 ],
                 onExpand: (event) => {
                     if (event.object.id === 'logical') {
@@ -305,6 +308,8 @@ export default class AMainWindow {
                     } else if(event.target === 'ships') {
                         SShip.showAllGraph('new');
                         AMainWindow.currentView = "ship";
+                    } else if (event.object.id === 'pulsar') {
+                        SStream.getAll({ fn: SStream.handleList});
                     }
 
                 },
@@ -340,6 +345,8 @@ export default class AMainWindow {
                     } else if(event.target === 'ships') {
                         SShip.showAllGraph('new');
                         AMainWindow.currentView = "ship";
+                    } else if (event.object.id === 'pulsar') {
+                        SStream.getAll({ fn: SStream.handleList});
                     }
                 },
                 onClick: function (event) {
@@ -351,7 +358,7 @@ export default class AMainWindow {
                         $.ajax({
                             url: event.object.link,
                             success: (results) => {
-                                AMainWindow.handlers[event.object.view](results);
+                                AMainWindow.handlers[event.object.view](results, event.object);
                             },
                             error: (req, text, err) => {
                                 console.log(text);
@@ -403,6 +410,7 @@ export default class AMainWindow {
         AComponent.showList('sidebar', 'libraries');
         AImage.showList('sidebar', 'images');
         AWorkFlow.showList( 'sidebar', 'process');
+        SStream.showList('sidebar', 'pulsar');
     }
 
     static setupEventWatcher(config) {

@@ -264,15 +264,17 @@ export default class SStream {
            data.nodes[name] = node;
            data.links.push({source:stream.id, target:name, value: 5, width:5});
         }
+
         for(let i in channel.results.publishers) {
             let publisher = channel.results.publishers[i];
-            let name = publisher.sabr._associations.bundle._attributes.name;
+            /*let name = publisher.sabr._associations.bundle._attributes.name;
             name = name.split(/\-/).shift();
             let node = {
                 id: name,
                 name: name,
                 view: SSabr.view3D,
             }
+             */
             data.nodes[name] = node;
             let pname = publisher.producerName;
             let pid = publisher.sabr._attributes.id;
