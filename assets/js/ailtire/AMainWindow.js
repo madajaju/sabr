@@ -310,6 +310,7 @@ export default class AMainWindow {
                         AMainWindow.currentView = "ship";
                     } else if (event.object.id === 'pulsar') {
                         SStream.getAll({ fn: SStream.handleList});
+                        AMainWindow.currentView = "pulsar";
                     }
 
                 },

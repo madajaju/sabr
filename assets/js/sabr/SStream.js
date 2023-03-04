@@ -85,6 +85,7 @@ export default class SStream {
 
     static handleList(result, id) {
         window.graph.clearObjects();
+        window.graph.setData({}, []);
         SStream.showAllGraph(result, "new");
     }
 
@@ -203,6 +204,7 @@ export default class SStream {
     static showAllGraph(streams, mode) {
         if(mode !== "add") {
             window.graph.clearObjects();
+            window.graph.setData({}, []);
         }
         for(let i in streams) {
             SStream.viewDeep3D(streams[i], "add");
@@ -252,45 +254,51 @@ export default class SStream {
             });
         }
     }
+
     static viewOther3D(channel, stream, mode) {
         let data = {nodes: {}, links: []};
-        for(let sname in channel.results.subscriptions) {
-           let name = sname.split(/\-/).shift();
-           let node = {
-               id: name,
-               name: name,
-               view: SSabr.view3D,
-           }
-           data.nodes[name] = node;
-           data.links.push({source:stream.id, target:name, value: 5, width:5});
-        }
-
-        for(let i in channel.results.publishers) {
-            let publisher = channel.results.publishers[i];
-            /*let name = publisher.sabr._associations.bundle._attributes.name;
-            name = name.split(/\-/).shift();
+        for (let sname in channel.results.subscriptions) {
+            let name = sname.split(/\-/).shift();
             let node = {
                 id: name,
                 name: name,
                 view: SSabr.view3D,
             }
-             */
             data.nodes[name] = node;
+            data.links.push({source:channel.id, target:name, value: 30, width:5});
+        }
+
+        for (let i in channel.results.publishers) {
+            let publisher = channel.results.publishers[i];
             let pname = publisher.producerName;
-            let pid = publisher.sabr._attributes.id;
+            let pid = pname
             let pnode = {
                 id: pid,
                 name: pname,
                 view: SProducer.view3D,
-                rbox: {
-                    parent: node.id,
-                    x:{min: 30, max: 30},
-                    y:{min:-30, max: 30},
-                    z:{min:-30, max: 30},
-                },
+
             }
             data.nodes[pname] = pnode;
-            data.links.push({target:stream.id, source:name, value: 5, width:5});
+            if (publisher.sabr) {
+                let name = publisher.sabr._associations.bundle._attributes.name;
+                name = name.split(/\-/).shift();
+                let node = {
+                    id: name,
+                    name: name,
+                    view: SSabr.view3D,
+                }
+
+                data.nodes[name] = node;
+                data.nodes[pname].rbox = {
+                    parent: node.id,
+                    x: {min: 30, max: 30},
+                    y: {min: -30, max: 30},
+                    z: {min: -30, max: 30},
+                };
+                data.links.push({target: channel.id, source: name, value: 30, width: 5});
+            } else {
+                data.links.push({target: channel.id, source: pname, value: 30, width: 5});
+            }
         }
         if (mode === 'add') {
             window.graph.addData(data.nodes, data.links, {links: {single: true}});

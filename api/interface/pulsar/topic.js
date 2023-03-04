@@ -31,6 +31,7 @@ module.exports = {
             const response = await get('', {});
             for(let i in response.publishers) {
                 let producer = response.publishers[i];
+                console.log("ProducerName:", producer.producerName);
                 if(global.producers && global.producers.hasOwnProperty(producer.producerName)) {
                     producer.sabr = global.producers[producer.producerName];
                 }

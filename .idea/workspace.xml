@@ -5,22 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e7f16371-c89d-4dad-98c0-026728aac0e5" name="Changes" comment="Updates to documentation and fixes to the deployment model.">
+      <change afterPath="$PROJECT_DIR$/.tmp/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projects/AISSimulator/AISShip/ship.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.tmp/build" beforeDir="false" afterPath="$PROJECT_DIR$/.tmp/build" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp/build.js" beforeDir="false" afterPath="$PROJECT_DIR$/.tmp/build.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.tmp/create" beforeDir="false" afterPath="$PROJECT_DIR$/.tmp/create" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.tmp/deploy" beforeDir="false" afterPath="$PROJECT_DIR$/.tmp/deploy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/models/InputChannelInstance/create.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/models/InputChannelInstance/create.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/models/OutputChannelInstance/create.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/models/OutputChannelInstance/create.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/interface/pulsar/topic.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/interface/pulsar/topic.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/js/ailtire/AMainWindow.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ailtire/AMainWindow.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/sabr/SShip.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/sabr/SShip.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/js/sabr/SStream.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/sabr/SStream.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/.tmp/create.js" beforeDir="false" afterPath="$PROJECT_DIR$/bin/.tmp/create.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/build" beforeDir="false" afterPath="$PROJECT_DIR$/bin/build" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/init" beforeDir="false" afterPath="$PROJECT_DIR$/bin/init" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/lib/subcommander.js" beforeDir="false" afterPath="$PROJECT_DIR$/bin/lib/subcommander.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/sabr" beforeDir="false" afterPath="$PROJECT_DIR$/bin/sabr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/unpack" beforeDir="false" afterPath="$PROJECT_DIR$/bin/unpack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +39,6 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/api/ApplicationManagementLayer/CapabilityManager/models/Capability/index.js" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/node_modules/pulsar-flex/src/consumer/index.js" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -74,8 +68,8 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
-    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;19.6.0&quot;,
-    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;18.13.0&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;16.19.1&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;16.18.12&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/dwpulsip/IdeaProjects/sabr/api/usecases/Ships&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -126,6 +120,12 @@
   </component>
   <component name="RunManager" selected="npm.build">
     <configuration name="build" type="NodeJSConfigurationType" application-parameters="--dir projects/SABR1" path-to-js-file="bin/build" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <configuration name="start" type="NodeJSConfigurationType" node-parameters="--inspect" path-to-js-file="index.js" working-dir="$PROJECT_DIR$">
+      <envs>
+        <env name="AILTIRE_PORT" value="80" />
+      </envs>
       <method v="2" />
     </configuration>
     <configuration name="Build Sabr1" type="docker-deploy" factoryName="dockerfile">
@@ -277,6 +277,7 @@
       <item itemvalue="Docker.sabr_pulsar" />
       <item itemvalue="Docker.Docker Image (1)" />
       <item itemvalue="Docker.Docker Image" />
+      <item itemvalue="Node.js.start" />
       <item itemvalue="Node.js.build" />
       <item itemvalue="npm.start" />
       <item itemvalue="npm.sabr1" />
@@ -286,8 +287,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Docker.sabr_pulsar" />
         <item itemvalue="npm.build" />
+        <item itemvalue="Docker.sabr_pulsar" />
         <item itemvalue="Docker.Docker Image (1)" />
         <item itemvalue="npm.deploy-pulsar" />
         <item itemvalue="Docker.Docker Image" />
@@ -402,6 +403,13 @@
       <workItem from="1676471750591" duration="1066000" />
       <workItem from="1676488692429" duration="594000" />
       <workItem from="1676565411408" duration="190000" />
+      <workItem from="1676648016467" duration="427000" />
+      <workItem from="1676649196007" duration="594000" />
+      <workItem from="1676650954017" duration="223000" />
+      <workItem from="1676653184262" duration="223000" />
+      <workItem from="1676653455897" duration="870000" />
+      <workItem from="1676659186346" duration="4019000" />
+      <workItem from="1677930916109" duration="590000" />
     </task>
     <task id="LOCAL-00001" summary="Updates to documentation and fixes to the deployment model.">
       <created>1653779220207</created>
@@ -612,7 +620,7 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$USER_HOME$/AppData/Roaming/npm/node_modules/ailtire/src/Services/Build.js</url>
+          <url>file://$PROJECT_DIR$/../AppData/Roaming/npm/node_modules/ailtire/src/Services/Build.js</url>
           <line>29</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
@@ -627,9 +635,14 @@
           <option name="timeStamp" value="391" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/api/interface/pulsar/topics.js</url>
+          <line>24</line>
+          <option name="timeStamp" value="392" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/api/interface/pulsar/streams.js</url>
           <line>30</line>
-          <option name="timeStamp" value="424" />
+          <option name="timeStamp" value="393" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
