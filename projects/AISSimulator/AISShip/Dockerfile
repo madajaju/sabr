@@ -17,5 +17,8 @@ ENV SABR_POLICIES=./policies.js
 ENV SABR_PROVISION_URL=localhost/web
 ENV SABR_SERVICE_ID=ServiceInstance0
 ENV PULSAR_HOST=172.30.32.1:6650
+ENV SABR_PARAMETERS="sourceFile=./ship.csv"
+
+
 
 CMD [ "node", "server.js" ]

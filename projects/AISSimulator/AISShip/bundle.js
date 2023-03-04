@@ -17,6 +17,7 @@ module.exports = {
     },
     applications: {
         simulator: (bundle, parameters) => {
+            console.log("Parameters:", parameters);
             let filename = path.resolve(parameters.sourceFile);
             let items = [];
             if (fs.existsSync(filename)) {
