@@ -3,7 +3,7 @@ const bent = require('bent');
 const program = require('commander');
 const YAML = require('yamljs');
 const fs = require('fs');
-global.ailtire = { config: require('/home/madajaju/work/sabr/bin/lib/../../.ailtire.js') };
+global.ailtire = { config: require('/home/madajaju/sabr/bin/lib/../../.ailtire.js') };
 program.description('Deploy the bundle')
 	.option('--sabr <string>', 'The name of the SABR')
 	.option('--policies <string>', 'The name of the policies to use in the deployment. Comma separated')

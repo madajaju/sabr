@@ -24,14 +24,14 @@ module.exports = {
             topic: topicName,
             discoveryServers: [pulsarHost],
             producerAccessMode: Producer.ACCESS_MODES.SHARED,
-            producerName: sabrName,
             logLevel: logLevel.ERROR
         });
         obj.producer = producer;
-        if(!global.producers) {
+        if(!global.hasOwnProperty('producers')) {
             global.producers = {};
         }
-        global.producers[sabrName] = obj;
+        global.producers[producer.producerName] = obj;
+        console.log("Adding Producer:", global.producers);
         return obj;
     }
 
