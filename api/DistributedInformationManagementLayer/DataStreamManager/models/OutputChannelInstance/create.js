@@ -28,6 +28,9 @@ module.exports = {
             logLevel: logLevel.ERROR
         });
         obj.producer = producer;
+        if(!global.producers) {
+            global.producers = {};
+        }
         global.producers[sabrName] = obj;
         return obj;
     }

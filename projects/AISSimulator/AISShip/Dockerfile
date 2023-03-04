@@ -8,6 +8,7 @@ WORKDIR /usr/src/app
 # where available (npm@5+)
 COPY bundle.js ./bundle.js
 COPY policies.js ./policies.js
+COPY ship.csv ./ship.csv
 
 ENV AILTIRE_PORT=3000
 ENV SABR_DEF=./bundle.js

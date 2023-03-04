@@ -7,7 +7,7 @@
     "start": "node index.js",
     "build": "ailtire app build --env local --repo madajaju",
     "build-esc": "ailtire package build --name EdgeSecurityController --env local",
-    "build-sabr-service": "ailtire package build --name 'SentientAgentBundleManager' --env local",
+    "build-sabr-service": "ailtire package build --name SentientAgentBundleManager --env local",
     "build-all": "ailtire app build --env local --repo madajaju --recursive true",
     "deploy": "ailtire app install --env local --repo madajaju",
     "deploy-pulsar": "docker run -it -p 6650:6650 -p 8080:8080 madajaju/sabr_pulsar",
