@@ -3,7 +3,7 @@ const bent = require('bent');
 const program = require('commander');
 const YAML = require('yamljs');
 const fs = require('fs');
-global.ailtire = { config: require('/home/madajaju/work/sabr/bin/lib/../../.ailtire.js') };
+global.ailtire = { config: require('/home/madajaju/sabr/bin/lib/../../.ailtire.js') };
 program.description('create entity')
 	.option('--file <file>', 'file with the definition');
 program.parse(process.argv);
