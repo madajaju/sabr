@@ -1,84 +1,212 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="5673be3b-e5f5-4481-94c4-34ef7ead44c3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/deploy/pulsar/conf/standalone.conf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projects/AISSimulator/buildShips.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projects/AISSimulator/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="e7f16371-c89d-4dad-98c0-026728aac0e5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/projects/AISSimulator/data/3660489.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projects/AISSimulator/data/3660524.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projects/AISSimulator/data/507027.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projects/AISSimulator/data/737255.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_4_2023_3_39_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_4_2023_3_39_AM__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp/build" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp/build.js" beforeDir="false" afterPath="$PROJECT_DIR$/.tmp/build.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp/create" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp/create.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp/deploy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp/docs.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tmp/test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/deploy/pulsar/conf/standalone2.conf" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/deploy/pulsar/conf/standalone2.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/models/OutputChannelInstance/create.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/DataStreamManager/models/OutputChannelInstance/create.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/deploy/.buildDir/sabr_builder/local/deploy/sabr/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/deploy/.buildDir/sabr_builder/local/deploy/sabr/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/deploy/.buildDir/sabr_builder/local/sabr/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/deploy/.buildDir/sabr_builder/local/sabr/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/deploy/.buildDir/sabr_registry/local/deploy/sabr/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/deploy/.buildDir/sabr_registry/local/deploy/sabr/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/deploy/.buildDir/sabr_registry/local/sabr/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/deploy/.buildDir/sabr_registry/local/sabr/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/deploy/.buildDir/sabr_service/local" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/deploy/.buildDir/sabr_service/local" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/deploy/.buildDir/web/local/deploy/sabr/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/deploy/.buildDir/web/local/deploy/sabr/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/deploy/.buildDir/web/local/sabr/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/DistributedInformationManagementLayer/SentientAgentBundleManager/deploy/.buildDir/web/local/sabr/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/AISSimulator/AISAgg/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/projects/AISSimulator/AISAgg/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/AISSimulator/AISCollision/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/projects/AISSimulator/AISCollision/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/AISSimulator/AISNoContact/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/projects/AISSimulator/AISNoContact/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/AISSimulator/AISShip/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/projects/AISSimulator/AISShip/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/AISSimulator/AISUSV/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/projects/AISSimulator/AISUSV/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/AISSimulator/AISViewer/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/projects/AISSimulator/AISViewer/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp/app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tmp/build.js" beforeDir="false" />
     </list>
-    <list id="f46fd5f1-419c-4888-ae0b-859283f19671" name="Changes by dwpulsip" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="UML Sequence" />
+        <option value="UML Component" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="GoLibraries">
+    <option name="indexEntireGoPath" value="true" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/index.js" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/node_modules/ailtire/src/Services/BuildEngine.js" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/package.json" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/node_modules/ailtire/bin/ailtire" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/node_modules/ailtire/bin/lib/subcommander.js" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/node_modules/ailtire/src/Server/index.js" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/.ailtire.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/api/ApplicationManagementLayer/CapabilityManager/models/Capability/index.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/node_modules/pulsar-flex/src/consumer/index.js" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="213bG4kEP9sZSmkUwovEoY78O9m" />
+  <component name="PackageJsonUpdateNotifier">
+    <dismissed value="$PROJECT_DIR$/package.json" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectId" id="25IOxEnzEeinbRRRwgWcN0aDn3E" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/projects/AISSimulator" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
-  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultPlantUmlFileTemplate&quot;: &quot;UML Component&quot;,
+    &quot;Project.color&quot;: &quot;144a0c&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;19.6.0&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;18.13.0&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/dwpulsip/IdeaProjects/sabr/api/usecases/Ships&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;timeTracker.activityTracker&quot;: &quot;null&quot;,
+    &quot;timeTracker.comment&quot;: &quot;&quot;,
+    &quot;timeTracker.inactivityPeriodInMills&quot;: &quot;600000&quot;,
+    &quot;timeTracker.isAutoTrackingEnable&quot;: &quot;true&quot;,
+    &quot;timeTracker.isAutoTrackingTemporaryDisabled&quot;: &quot;false&quot;,
+    &quot;timeTracker.isManualTrackingEnable&quot;: &quot;false&quot;,
+    &quot;timeTracker.isPaused&quot;: &quot;false&quot;,
+    &quot;timeTracker.isPostAfterCommitEnabled&quot;: &quot;false&quot;,
+    &quot;timeTracker.isPostedScheduled&quot;: &quot;true&quot;,
+    &quot;timeTracker.isRunning&quot;: &quot;false&quot;,
+    &quot;timeTracker.isScheduledEnabled&quot;: &quot;false&quot;,
+    &quot;timeTracker.isWhenProjectClosedEnabled&quot;: &quot;false&quot;,
+    &quot;timeTracker.issueId&quot;: &quot;Default&quot;,
+    &quot;timeTracker.issueIdReadable&quot;: &quot;Default&quot;,
+    &quot;timeTracker.pausedTime&quot;: &quot;0&quot;,
+    &quot;timeTracker.query&quot;: &quot;&quot;,
+    &quot;timeTracker.recordedTime&quot;: &quot;0&quot;,
+    &quot;timeTracker.scheduledPeriod&quot;: &quot;19:00:0&quot;,
+    &quot;timeTracker.startTime&quot;: &quot;0&quot;,
+    &quot;timeTracker.timeInMills&quot;: &quot;0&quot;,
+    &quot;timeTracker.type&quot;: &quot;Development&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\dwpulsip\\AppData\\Local\\JetBrains\\Toolbox\\apps\\IDEA-U\\ch-0\\223.8617.56\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/projects/AISSimulator" />
+      <recent name="C:\Users\dwpulsip\IdeaProjects\sabr\api\usecases\Ships" />
+      <recent name="C:\Users\dwpulsip\IdeaProjects\sabr\projects\AISSimulator" />
+      <recent name="C:\Users\dwpulsip\IdeaProjects\sabr\assets\js\sabr" />
+      <recent name="C:\Users\dwpulsip\IdeaProjects\sabr\api\DistributedInformationManagementLayer\SentientAgentBundleManager\usecases\ManageSABR" />
+      <recent name="C:\Users\dwpulsip\IdeaProjects\sabr\api\interface\bundle" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\dwpulsip\IdeaProjects\sabr\api\usecases\Ships" />
+      <recent name="C:\Users\dwpulsip\IdeaProjects\sabr\projects\AISSimulator\AISShip" />
+      <recent name="C:\Users\dwpulsip\IdeaProjects\sabr\api\SecurityAspect\EdgeSecurityController\deploy\.buildDir\sabr_sa_esc\local\api" />
+      <recent name="C:\Users\dwpulsip\IdeaProjects\sabr\api\SecurityAspect\KeyManager" />
+      <recent name="C:\Users\dwpulsip\IdeaProjects\sabr\api\SecurityAspect\EdgeSecurityController\deploy\controller" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.build-all">
-    <configuration name="build-all" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/projects/AISSimulator/package.json" />
+  <component name="RunManager" selected="npm.build">
+    <configuration name="build" type="NodeJSConfigurationType" application-parameters="--dir projects/SABR1" path-to-js-file="bin/build" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <configuration name="Build Sabr1" type="docker-deploy" factoryName="dockerfile">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="imageTag" value="sabr1" />
+          <option name="containerName" value="" />
+          <option name="sourceFilePath" value="projects/SABR1/Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="Docker Image (1)" type="docker-deploy" factoryName="docker-image" temporary="true" server-name="Docker">
+      <deployment type="docker-image">
+        <settings>
+          <option name="imageTag" value="madajaju/sabr_pulsar:standalone" />
+          <option name="containerName" value="" />
+          <option name="portBindings">
+            <list>
+              <DockerPortBindingImpl>
+                <option name="containerPort" value="6650" />
+                <option name="hostPort" value="6650" />
+              </DockerPortBindingImpl>
+              <DockerPortBindingImpl>
+                <option name="containerPort" value="8080" />
+                <option name="hostPort" value="8080" />
+              </DockerPortBindingImpl>
+            </list>
+          </option>
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="Docker Image" type="docker-deploy" factoryName="docker-image" temporary="true" server-name="Docker">
+      <deployment type="docker-image">
+        <settings>
+          <option name="imageTag" value="sabr_sa_esc:latest" />
+          <option name="containerName" value="sabr_sa_test" />
+          <option name="portBindings">
+            <list>
+              <DockerPortBindingImpl>
+                <option name="containerPort" value="3000" />
+                <option name="hostPort" value="3000" />
+              </DockerPortBindingImpl>
+            </list>
+          </option>
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-image" temporary="true">
+      <deployment type="docker-image">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="doc/Dockerfile-jekyll" type="docker-deploy" factoryName="dockerfile">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="sourceFilePath" value="deploy/doc/Dockerfile-jekyll" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="sabr_pulsar" type="docker-deploy" factoryName="docker-image" temporary="true" server-name="Docker">
+      <deployment type="docker-image">
+        <settings>
+          <option name="imageTag" value="madajaju/sabr_pulsar:standalone" />
+          <option name="containerName" value="" />
+          <option name="portBindings">
+            <list>
+              <DockerPortBindingImpl>
+                <option name="containerPort" value="8080" />
+                <option name="hostPort" value="8080" />
+              </DockerPortBindingImpl>
+              <DockerPortBindingImpl>
+                <option name="containerPort" value="6650" />
+                <option name="hostPort" value="6650" />
+              </DockerPortBindingImpl>
+            </list>
+          </option>
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="build-sabr-service" type="js.build_tools.npm" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
-        <script value="build-all" />
+        <script value="build-sabr-service" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -90,8 +218,35 @@
       <scripts>
         <script value="build" />
       </scripts>
-      <node-interpreter value="$USER_HOME$/.nvm/versions/node/v19.7.0/bin/node" />
+      <node-interpreter value="project" />
       <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="deploy-pulsar" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="deploy-pulsar" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="sabr1" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs>
+        <env name="AILTIRE_PORT" value="80" />
+        <env name="SABR_NAME" value="SABR1" />
+        <env name="SABR_POLICIES" value="./templates/policies.js" />
+        <env name="SABR_DEF" value="./templates/bundle1.js" />
+        <env name="SABR_PROVISION_URL" value="localhost/web" />
+        <env name="PULSAR_HOST" value="dwpulsip-mobl1:6650" />
+      </envs>
       <method v="2" />
     </configuration>
     <configuration name="start" type="js.build_tools.npm" nameIsGenerated="true">
@@ -100,86 +255,382 @@
       <scripts>
         <script value="start" />
       </scripts>
-      <node-interpreter value="$USER_HOME$/.nvm/versions/node/v19.7.0/bin/node" />
+      <node-interpreter value="project" />
       <envs>
-        <env name="AILTIRE_HOST" value="192.168.50.249" />
-        <env name="AILTIRE_PORT" value="3000" />
-        <env name="PULSAR_HOST" value="tocan:6650" />
-        <env name="PULSAR_ADMIN" value="tocan:8080" />
+        <env name="PULSAR_HOST" value="localhost:6650" />
+        <env name="AILTIRE_PORT" value="80" />
       </envs>
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Docker.Build Sabr1" />
+      <item itemvalue="Docker.doc/Dockerfile-jekyll" />
+      <item itemvalue="Docker.sabr_pulsar" />
+      <item itemvalue="Docker.Docker Image (1)" />
+      <item itemvalue="Docker.Docker Image" />
+      <item itemvalue="Node.js.build" />
       <item itemvalue="npm.start" />
+      <item itemvalue="npm.sabr1" />
+      <item itemvalue="npm.build-sabr-service" />
+      <item itemvalue="npm.deploy-pulsar" />
       <item itemvalue="npm.build" />
-      <item itemvalue="npm.build-all" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.build-all" />
+        <item itemvalue="Docker.sabr_pulsar" />
         <item itemvalue="npm.build" />
+        <item itemvalue="Docker.Docker Image (1)" />
+        <item itemvalue="npm.deploy-pulsar" />
+        <item itemvalue="Docker.Docker Image" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="5673be3b-e5f5-4481-94c4-34ef7ead44c3" name="Changes" comment="" />
-      <created>1637172618771</created>
+      <changelist id="e7f16371-c89d-4dad-98c0-026728aac0e5" name="Changes" comment="" />
+      <created>1645211378545</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1637172618771</updated>
-      <workItem from="1637172620188" duration="3077000" />
-      <workItem from="1637176105280" duration="1664000" />
-      <workItem from="1641336530512" duration="34000" />
-      <workItem from="1641336600095" duration="129000" />
-      <workItem from="1641337353999" duration="35000" />
-      <workItem from="1641337432135" duration="22000" />
-      <workItem from="1677946183926" duration="324000" />
-      <workItem from="1677946560568" duration="4782000" />
-      <workItem from="1678029835607" duration="2215000" />
+      <updated>1661018313089</updated>
+      <workItem from="1645211379852" duration="7844000" />
+      <workItem from="1645392415795" duration="1291000" />
+      <workItem from="1647045320931" duration="753000" />
+      <workItem from="1647500651703" duration="387000" />
+      <workItem from="1647649597469" duration="32000" />
+      <workItem from="1649205061268" duration="2191000" />
+      <workItem from="1649710051145" duration="2565000" />
+      <workItem from="1650169229479" duration="2942000" />
+      <workItem from="1650297225057" duration="19000" />
+      <workItem from="1651022889656" duration="5468000" />
+      <workItem from="1651511449464" duration="8381000" />
+      <workItem from="1652202549886" duration="606000" />
+      <workItem from="1652324500104" duration="595000" />
+      <workItem from="1652409010109" duration="1265000" />
+      <workItem from="1652720296338" duration="4068000" />
+      <workItem from="1653004903631" duration="3100000" />
+      <workItem from="1653341561237" duration="13730000" />
+      <workItem from="1653511161701" duration="6305000" />
+      <workItem from="1653659353923" duration="36290000" />
+      <workItem from="1653964075573" duration="3654000" />
+      <workItem from="1654615492899" duration="7652000" />
+      <workItem from="1655154445446" duration="17683000" />
+      <workItem from="1655748477113" duration="38658000" />
+      <workItem from="1656456513910" duration="9474000" />
+      <workItem from="1656519679374" duration="76000" />
+      <workItem from="1656519944141" duration="599000" />
+      <workItem from="1657264483572" duration="501000" />
+      <workItem from="1657265170787" duration="266000" />
+      <workItem from="1657829243493" duration="18595000" />
+      <workItem from="1659132026203" duration="607000" />
+      <workItem from="1659462788668" duration="5051000" />
+      <workItem from="1660084992145" duration="8513000" />
+      <workItem from="1660714142004" duration="593000" />
+      <workItem from="1660767155411" duration="90000" />
+      <workItem from="1660767346270" duration="98000" />
+      <workItem from="1660767485638" duration="172000" />
+      <workItem from="1660768146992" duration="70000" />
+      <workItem from="1660768255144" duration="1941000" />
+      <workItem from="1661018313724" duration="47000" />
+      <workItem from="1661018875652" duration="1006000" />
+      <workItem from="1661176541027" duration="18640000" />
+      <workItem from="1661343896470" duration="148736000" />
+      <workItem from="1662436781173" duration="18539000" />
+      <workItem from="1662504473112" duration="37849000" />
+      <workItem from="1662988149565" duration="91608000" />
+      <workItem from="1664213117386" duration="24686000" />
+      <workItem from="1664306506571" duration="12479000" />
+      <workItem from="1664374859424" duration="12209000" />
+      <workItem from="1664764526651" duration="20000" />
+      <workItem from="1665170292875" duration="5164000" />
+      <workItem from="1665407105017" duration="572000" />
+      <workItem from="1665410372933" duration="26356000" />
+      <workItem from="1665491279248" duration="11640000" />
+      <workItem from="1665535640775" duration="1953000" />
+      <workItem from="1665537701806" duration="11146000" />
+      <workItem from="1665589438710" duration="23277000" />
+      <workItem from="1665844925492" duration="30642000" />
+      <workItem from="1666284732049" duration="4131000" />
+      <workItem from="1666616843373" duration="3416000" />
+      <workItem from="1666705942068" duration="9814000" />
+      <workItem from="1666788441582" duration="16646000" />
+      <workItem from="1666897928692" duration="12141000" />
+      <workItem from="1666973133823" duration="2763000" />
+      <workItem from="1667221034222" duration="1548000" />
+      <workItem from="1667224924340" duration="1974000" />
+      <workItem from="1667247801462" duration="30783000" />
+      <workItem from="1667875521465" duration="29950000" />
+      <workItem from="1668440022726" duration="3765000" />
+      <workItem from="1668795060882" duration="1601000" />
+      <workItem from="1669919492570" duration="134000" />
+      <workItem from="1669919654957" duration="4330000" />
+      <workItem from="1670344775007" duration="128000" />
+      <workItem from="1670344952976" duration="1483000" />
+      <workItem from="1670347719353" duration="1438000" />
+      <workItem from="1670541606183" duration="4384000" />
+      <workItem from="1671132316532" duration="6096000" />
+      <workItem from="1671471505076" duration="985000" />
+      <workItem from="1671643453960" duration="4084000" />
+      <workItem from="1671675030657" duration="20797000" />
+      <workItem from="1672782305020" duration="18000" />
+      <workItem from="1672855230589" duration="3146000" />
+      <workItem from="1674532050828" duration="4712000" />
+      <workItem from="1675962757930" duration="7802000" />
+      <workItem from="1675978601164" duration="4255000" />
+      <workItem from="1675987636045" duration="810000" />
+      <workItem from="1675990073068" duration="5903000" />
+      <workItem from="1676003805241" duration="1075000" />
+      <workItem from="1676034954065" duration="23820000" />
+      <workItem from="1676124402554" duration="695000" />
+      <workItem from="1676126383619" duration="5804000" />
+      <workItem from="1676140861244" duration="43175000" />
+      <workItem from="1676299983116" duration="9100000" />
+      <workItem from="1676344644451" duration="1174000" />
+      <workItem from="1676353158045" duration="332000" />
+      <workItem from="1676353551575" duration="638000" />
+      <workItem from="1676354229429" duration="867000" />
+      <workItem from="1676439229468" duration="2750000" />
+      <workItem from="1676471750591" duration="1066000" />
+      <workItem from="1676488692429" duration="594000" />
+      <workItem from="1676565411408" duration="190000" />
     </task>
+    <task id="LOCAL-00001" summary="Updates to documentation and fixes to the deployment model.">
+      <created>1653779220207</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1653779220207</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Updates to documentation and fixes to the deployment model.">
+      <created>1653779737495</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1653779737495</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Updates to documentation and fixes to the deployment model.">
+      <created>1653780009461</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1653780009461</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Updates to documentation and fixes to the deployment model.">
+      <created>1653831747157</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1653831747157</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Updates to documentation and fixes to the deployment model.">
+      <created>1657895812326</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1657895812326</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Updates to documentation and fixes to the deployment model.">
+      <created>1657897726550</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1657897726550</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Updates to documentation and fixes to the deployment model.">
+      <created>1660772722256</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1660772722256</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Updates to documentation and fixes to the deployment model.">
+      <created>1663174067028</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1663174067029</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Updates to documentation and fixes to the deployment model.">
+      <created>1663190046406</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1663190046406</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Updates to documentation and fixes to the deployment model.">
+      <created>1663190359509</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1663190359509</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Updates to documentation and fixes to the deployment model.">
+      <created>1663190528999</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1663190528999</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Updates to documentation and fixes to the deployment model.">
+      <created>1663190804964</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1663190804964</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Updates to documentation and fixes to the deployment model.">
+      <created>1663191066606</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1663191066606</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Updates to documentation and fixes to the deployment model.">
+      <created>1663191185149</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1663191185149</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Updates to documentation and fixes to the deployment model.">
+      <created>1663210823530</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1663210823530</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Updates to documentation and fixes to the deployment model.">
+      <created>1663210951065</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1663210951065</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Updates to documentation and fixes to the deployment model.">
+      <created>1663212452994</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1663212452994</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Updates to documentation and fixes to the deployment model.">
+      <created>1663212620462</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1663212620462</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Updates to documentation and fixes to the deployment model.">
+      <created>1667883845057</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1667883845057</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Updates to documentation and fixes to the deployment model.">
+      <created>1676126718687</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1676126718687</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Updates to documentation and fixes to the deployment model.">
+      <created>1676139265090</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1676139265090</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Updates to documentation and fixes to the deployment model.">
+      <created>1676263499803</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1676263499803</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Updates to documentation and fixes to the deployment model." />
+    <option name="LAST_COMMIT_MESSAGE" value="Updates to documentation and fixes to the deployment model." />
+  </component>
+  <component name="VgoProject">
+    <integration-enabled>false</integration-enabled>
+    <settings-migrated>true</settings-migrated>
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/node_modules/ailtire/src/Server/index.js</url>
-          <line>171</line>
-          <option name="timeStamp" value="1" />
+          <url>file://$USER_HOME$/AppData/Roaming/npm/node_modules/ailtire/src/Services/Build.js</url>
+          <line>29</line>
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/node_modules/ailtire/src/Server/index.js</url>
-          <line>253</line>
-          <option name="timeStamp" value="4" />
+          <url>file://$PROJECT_DIR$/.tmp/sabundle</url>
+          <line>8</line>
+          <option name="timeStamp" value="28" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/node_modules/ailtire/bin/lib/subcommander.js</url>
-          <line>44</line>
-          <option name="timeStamp" value="12" />
+          <url>vmscript://vm:861</url>
+          <line>16</line>
+          <option name="timeStamp" value="391" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/node_modules/ailtire/src/Services/BuildEngine.js</url>
-          <line>148</line>
-          <option name="timeStamp" value="15" />
+          <url>file://$PROJECT_DIR$/api/interface/pulsar/streams.js</url>
+          <line>30</line>
+          <option name="timeStamp" value="424" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="js.build_tools.npm">
+        <watch expression="e.stack" />
+        <watch expression="e.stack" />
+        <watch expression="jscript" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
