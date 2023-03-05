@@ -2,14 +2,13 @@
 
 const program = require('commander');
 
-const action = require('/mnt/c/Users/dwpulsip/AppData/Roaming/npm/node_modules/ailtire/src/interface/app/build.js');
-const ActionHandler = require('/mnt/c/Users/dwpulsip/AppData/Roaming/npm/node_modules/ailtire/src/Server/Action.js');
-global.ailtire = { config: require('/mnt/c/Users/dwpulsip/AppData/Roaming/npm/node_modules/ailtire/bin/lib/../../.ailtire.js') };
+const action = require('/home/madajaju/work/sabr/node_modules/ailtire/src/interface/package/build.js');
+const ActionHandler = require('/home/madajaju/work/sabr/node_modules/ailtire/src/Server/Action.js');
+global.ailtire = { config: require('/home/madajaju/work/sabr/node_modules/ailtire/bin/lib/../../.ailtire.js') };
 program
 	.requiredOption('--env <string>', 'Environment to Build')
-	.option('--name <string>', 'Name of the Build')
-	.option('--repo <string>', 'undefined')
-	.option('--recursive <boolean>', 'undefined');
+	.requiredOption('--name <string>', 'Name Package to build')
+	.option('--recursive <boolean>', 'Rescurse to all sub packages');
 program.parse(process.argv);
 let results = ActionHandler.execute(action,program.opts(), {});
 console.log(results);

@@ -26,8 +26,44 @@
     <option name="openedFilesInfos">
       <list>
         <OpenedFileInfo>
-          <option name="caretOffset" value="0" />
+          <option name="caretOffset" value="431" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/projects/AISSimulator/AISShip/Dockerfile" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="725" />
           <option name="fileUrl" value="file://$PROJECT_DIR$/package.json" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="395" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/projects/AISSimulator/AISAgg/Dockerfile" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="477" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/projects/AISSimulator/AISNoContact/Dockerfile" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="553" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/projects/AISSimulator/AISUSV/Dockerfile" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="553" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/projects/AISSimulator/AISViewer/Dockerfile" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="0" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/projects/AISSimulator/AISViewer/bundle.js" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="536" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/projects/AISSimulator/AISCollision/Dockerfile" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="1935" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/projects/AISSimulator/package.json" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="0" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/projects/AISSimulator/buildShips.js" />
         </OpenedFileInfo>
       </list>
     </option>

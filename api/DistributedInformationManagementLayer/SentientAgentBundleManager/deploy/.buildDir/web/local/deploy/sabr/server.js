@@ -70,6 +70,7 @@ server.listen({
                 parameters[key] = value;
             });
         }
-        sabr.deploy({policies: policies,parameters: parameters});
+        console.log("SABR Parameters:", parameters);
+        sabr.deploy({policies: policies, parameters: parameters});
     }
 });

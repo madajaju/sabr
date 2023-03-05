@@ -24,7 +24,7 @@ module.exports = {
             topic: topicName,
             discoveryServers: [pulsarHost],
             producerAccessMode: Producer.ACCESS_MODES.SHARED,
-            logLevel: logLevel.ERROR
+            logLevel: logLevel.INFO
         });
         obj.producer = producer;
         if(!global.hasOwnProperty('producers')) {

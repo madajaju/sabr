@@ -10,7 +10,7 @@
     "build-sabr-service": "ailtire package build --name SentientAgentBundleManager --env local",
     "build-all": "ailtire app build --env local --repo madajaju --recursive true",
     "deploy": "ailtire app install --env local --repo madajaju",
-    "deploy-pulsar": "docker run -it -p 6650:6650 -p 8080:8080 madajaju/sabr_pulsar",
+    "deploy-pulsar": "docker run -it -p 6650:6650 -p 8080:8080 --network sabr_network --hostname pulsar madajaju/sabr_pulsar:standalone",
     "test": "npm run lint && npm run custom-tests && echo 'Done.'",
     "doc": "ailtire app docs",
     "lint": "eslint . --max-warnings=0 --report-unused-disable-directives && echo '✔  Your .js files look good.'",
