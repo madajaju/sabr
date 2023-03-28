@@ -21,7 +21,7 @@ module.exports = {
 
     exits: {},
 
-    fn: (obj, inputs) => {
+    fn: async (obj, inputs) => {
         // For each Stream in the Bundle create a streaminstance.
         // Pass the policies to the stream so appropriate channels are created.
         // Create a SABundleInstance with all of the StreamInstances attached.
@@ -33,8 +33,9 @@ module.exports = {
         let numi = obj.instances.length;
         let instance = new SABundleInstance({name:obj.name + '-' + numi, parent: obj});
         obj.addToInstances(instance);
-        instance.deploy({policies: obj.policies, parameters: inputs.parameters});
-        console.log("\n\n\n\nDone");
-        return instance;
+	console.log("Deploing Bundle Instance", instance.name);
+        await instance.deploy({policies: obj.policies, parameters: inputs.parameters});
+        console.log("SABundle Deploy Complete");
+        return new Promise((resolve, reject) => {resolve(instance);});
     }
 };

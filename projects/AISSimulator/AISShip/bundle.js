@@ -57,21 +57,26 @@ module.exports = {
         }
     },
 }
+let index = 0;
 
 function transmit(sortedTransmit, current, bundle) {
     if(sortedTransmit.length > 0 ) {
         const next = sortedTransmit.pop();
         const difference = current.BaseDateTime - next.BaseDateTime;
         // Set the time delay for speed up in simulation.
-        const timedelay = Math.abs(difference) / 50 || 1;
+        // const timedelay = Math.abs(difference) / 50 || 1;
+	const timedelay = 0; // Run immediately
         sendMessage(bundle, current);
         setTimeout(transmit, timedelay, sortedTransmit, next, bundle);
         return 1;
     } else {
+	process.exit(0);
         return 0;
     }
 }
 function sendMessage(bundle, message) {
+	index++;
+	if(index % 1000 === 0) { console.log(index); }
     for (let oname in bundle.outputs) {
         let output = bundle.outputs[oname];
         if (output) {

@@ -17,7 +17,7 @@ module.exports = {
         obj.bunde = inputs.bundle;
 
         // Remove the suffix of the name so the same topic is used for in and out.
-        let topicName = obj.name.replace(/\//g, '-').replace(/\.in$/, '');
+        let topicName = "persistent://public/default/" + obj.name.replace(/\//g, '-').replace(/\.in$/, '');
         let pulsarHost = ailtire.config.pulsarHost;
         let subscriptionName = inputs.bundle.parent.name + '-' + inputs.parent.name + 'Subscription';
         let sabrName = inputs.bundle.name + '-' + inputs.name + '-Consumer';

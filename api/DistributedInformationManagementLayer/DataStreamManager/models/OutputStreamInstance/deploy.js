@@ -23,7 +23,6 @@ module.exports = {
             let task = obj.channels[i].deploy();
             tasks.push(task);
         }
-        await Promise.all(tasks);
-        return;
+        return await Promise.all(tasks);
     }
 };

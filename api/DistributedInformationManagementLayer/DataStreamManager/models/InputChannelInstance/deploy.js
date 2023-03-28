@@ -13,9 +13,9 @@ module.exports = {
         let consumer = obj.consumer;
 
         // Need to wait for the consumer before calling run.
+	let retval = undefined;
         try {
             await consumer.subscribe();
-            console.log("Subscribed:", obj.name);
             await consumer.run({
                 onMessage: async ({ack, message, properties, redeliveryCount}) => {
                     await ack(); // Default is individual ack
@@ -31,6 +31,6 @@ module.exports = {
             // obj.message = `Error Creating Consumer for channel:${obj.name}, ${e}`;
             obj.failed({message: `Error Creating Consumer for channel:${obj.name}, ${e}`});
         }
-        return obj;
+        return Promise.resolve(1);
     }
 };

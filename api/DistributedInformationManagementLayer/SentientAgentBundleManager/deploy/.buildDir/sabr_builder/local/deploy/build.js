@@ -1,35 +1,36 @@
 
 module.exports = {
     web: {
-        dir: '.',
+        dir: 'web',
         cmd: 'node web/server.js',
-        file: 'web/Dockerfile',
+        file: 'Dockerfile',
         tag: 'sabr_diml_sabm_web',
         env: {
         }
     },
     sabr_service: {
-        dir: '../../../..',
+        dir: 'sabr',
         cmd: 'node server.js',
-        file: 'sabr/Dockerfile',
+        file: 'Dockerfile',
         tag: 'sabr_service',
+	packages: [ "DistributedInformationManagementLayer", "ServiceManagementLayer", "ApplicationManagementLayer" ],
         env: {
 
         }
     },
     sabr_registry: {
-        dir: '.',
+        dir: 'registry',
         cmd: 'registry',
-        file: 'registry/Dockerfile',
+        file: 'Dockerfile',
         tag: 'sabr_registry',
         env: {
 
         }
     },
     sabr_builder: {
-        dir: '.',
+        dir: 'builder',
         cmd: 'entrypoint.sh',
-        file: 'builder/Dockerfile',
+        file: 'Dockerfile',
         tag: 'sabr_builder',
         env: {
 

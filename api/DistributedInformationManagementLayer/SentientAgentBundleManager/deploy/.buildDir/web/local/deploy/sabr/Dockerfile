@@ -12,6 +12,5 @@ COPY package*.json ./
 RUN npm install
 
 COPY . .
-COPY api/DistributedInformationManagementLayer/SentientAgentBundleManager/deploy/sabr/server.js ./server.js
 
 CMD [ "node", "server.js" ]

@@ -16,10 +16,9 @@ module.exports = {
         obj.name = inputs.name;
         // Remove the .out before allocating the topic name.
         // This provides the channel instances to be unique for out and in.
-        let topicName = obj.name.replace(/\//g,'-').replace(/\.out$/,'');
+        let topicName = "persistent://public/default/" + obj.name.replace(/\//g, '-').replace(/\.out$/, '');
         let pulsarHost = ailtire.config.pulsarHost;
         let sabrName = obj.name;
-
         let producer = new Producer({
             topic: topicName,
             discoveryServers: [pulsarHost],
@@ -31,7 +30,6 @@ module.exports = {
             global.producers = {};
         }
         global.producers[producer.producerName] = obj;
-        console.log("Adding Producer:", global.producers);
         return obj;
     }
 

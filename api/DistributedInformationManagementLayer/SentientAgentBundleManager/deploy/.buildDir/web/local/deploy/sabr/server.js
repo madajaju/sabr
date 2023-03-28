@@ -71,6 +71,7 @@ server.listen({
             });
         }
         console.log("SABR Parameters:", parameters);
-        sabr.deploy({policies: policies, parameters: parameters});
+        await sabr.deploy({policies: policies, parameters: parameters});
+	console.log("Done calling sabr.deploy in server.js");
     }
 });

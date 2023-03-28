@@ -12,13 +12,13 @@ module.exports = {
     fn: async function (obj, inputs) {
         // inputs contains the obj for the this method.
         let producer = obj.producer;
-        console.log("Deploy Output Channel", obj.name, obj.state);
         if(obj.state !== "Deploying") {
             console.log("Already deploying");
             return;
         }
         try {
             await producer.create();
+
             obj.producerName = producer._producerName;
             obj.deployed();
             if(obj.queue) {
@@ -26,12 +26,13 @@ module.exports = {
                    obj.send(obj.queue.pop());
                 }
             }
-            return 1;
+
+	    return Promise.resolve(1);
         }
         catch(e) {
             console.error("Error Creating Producer:", e);
             obj.failed(`Error Creating Producer for channel:${obj.name}, ${e}`);
+	    
         }
-        return 1;
     }
 };

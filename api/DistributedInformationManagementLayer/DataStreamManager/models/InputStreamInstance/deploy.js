@@ -20,10 +20,8 @@ module.exports = {
         // inputs contains the obj for this method.
         let tasks = [];
         for(let i in obj.channels) {
-            let task = obj.channels[i].deploy();
-            tasks.push(task);
+            obj.channels[i].deploy();
         }
-        await Promise.all(tasks);
-        return;
+        return Promise.resolve(1);
     }
 };

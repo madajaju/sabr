@@ -32,14 +32,12 @@ module.exports = {
         let parent = obj.parent;
         for (let i in parent.inputs) {
             let stream = parent.inputs[i];
-            console.log("Input Stream provision:", stream.id);
             let sinstance = stream.provision({policies:inputs.policies, direction:'In', bundle:obj});
             obj.addToInputs(sinstance);
             inStreams[stream.name] = sinstance;
         }
         for (let i in parent.outputs) {
             let stream = parent.outputs[i];
-            console.log("Output Stream provision:", stream.id);
             let sinstance = stream.provision({policies:inputs.policies, direction:'Out', bundle:obj});
             obj.addToOutputs(sinstance);
             outStreams[stream.name] = sinstance;
@@ -52,7 +50,6 @@ module.exports = {
         // Deploy the Transforms
         for(let i in parent.transforms) {
             let trans = parent.transforms[i];
-            console.log("Transform:", trans.id );
             let tinstance = new DataTransformInstance({name: trans.name, version: "0.0.1", fn: trans.fn });
             for(let i in trans.inputs) {
                 let sname = trans.inputs[i].name;
@@ -75,21 +72,20 @@ module.exports = {
             obj.addToTransforms(tinstance);
         }
         // Set up the admin stream
+	let atasks = [];
         try {
-            obj.adminInStream.deploy();
-            obj.adminOutStream.deploy();
+            atasks.push(obj.adminInStream.deploy());
+            atasks.push(obj.adminOutStream.deploy());
             // Deploy the learning stream
-            obj.learningInStream.deploy();
-            obj.learningOutStream.deploy();
+            atasks.push(obj.learningInStream.deploy());
+            atasks.push(obj.learningOutStream.deploy());
             // Now deploy the output streams
             for (let i in obj.outputs) {
-                console.log("Deploy output Stream:", obj.outputs[i].id);
-                obj.outputs[i].deploy();
+                atasks.push(obj.outputs[i].deploy());
             }
             // Now the input streams.
             for (let i in obj.inputs) {
-                console.log("Deploy input Stream:", obj.inputs[i].id);
-                obj.inputs[i].deploy();
+                atasks.push(obj.inputs[i].deploy());
             }
         }
         catch(e) {
@@ -97,21 +93,20 @@ module.exports = {
         }
         // Cannot start the application until everything has been set up and the response made. This should be event
         // driven.
-        setTimeout(_startApplications, 5000, parent, obj, inputs.parameters);
-        console.log("\n\n\n\n\n\nInstance Deployed\n\n\n\n\n\n");
-        return obj;
+	let retval = await Promise.all(atasks);
+	_startApplications(parent, obj, inputs.parameters);
+
+        return retval;
     }
 };
 
 function _startApplications(parent, obj, parameters) {
 
     let apps = parent.applications;
-    console.log("Start the Applications:", apps);
+    console.log("Start the Applications:");
     for(let aname in apps) {
-        console.log("Start Application", aname);
         let app = apps[aname];
         let fn = app.fn;
-        console.log("Calling Application, ", aname);
         fn(obj, parameters);
     }
 }

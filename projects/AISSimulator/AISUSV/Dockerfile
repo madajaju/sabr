@@ -6,8 +6,7 @@ WORKDIR /usr/src/app
 # Install app dependencies
 # A wildcard is used to ensure both package.json AND package-lock.json are copied
 # where available (npm@5+)
-COPY bundle.js ./bundle.js
-COPY policies.js ./policies.js
+COPY . .
 
 ENV AILTIRE_PORT=3000
 ENV SABR_DEF=./bundle.js
@@ -17,6 +16,5 @@ ENV SABR_PROVISION_URL=localhost/web
 ENV SABR_SERVICE_ID=AISUSV
 ENV PULSAR_HOST=pulsar:6650
 ENV PULSAR_ADMIN=pulsar:8080
-ENV PULSAR_HOST=172.30.32.1:6650
 
 CMD [ "node", "server.js" ]

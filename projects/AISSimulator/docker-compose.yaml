@@ -1,0 +1,27 @@
+version: "3.7"
+services:
+  pulsar:
+    image: madajaju/sabr_pulsar:standalone
+    ports:
+      - 6650:6650
+      - 8080:8080
+    deploy:
+      replicas: 1
+    networks:
+      sibling:
+        aliases:
+        - pulsar
+  ship1:
+    image: aisship1
+    environment:
+      - AILTIRE_STACKNAME={{.Service.Name}}-{{.Task.Slot}}
+      - AILTIRE_SERVICENAME=doc
+      - AILTIRE_PARENT=${AILTIRE_APPNAME}
+      - AILTIRE_PARENTHOST=admin
+      - AILTIRE_APPNAME=${AILTIRE_APPNAME}
+    networks:
+      sibling:
+networks:
+  sibling:
+    driver: overlay
+
