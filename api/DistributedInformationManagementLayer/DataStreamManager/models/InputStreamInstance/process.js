@@ -42,6 +42,9 @@ module.exports = {
             }
         }
         inputs.properties = myProps;
+	inputs.properties.inputStream = obj.name.replace(/\..*$/,'');
+	inputs.properties.inputChannel = inputs.channel.name.replace(".in", "");
+
         // inputs.properties = JSON.parse(inputs.properties);
         inputs.data = JSON.parse(inputs.data);
         if(inputs.data) {

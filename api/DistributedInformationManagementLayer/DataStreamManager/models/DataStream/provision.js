@@ -29,11 +29,11 @@ module.exports = {
         let numinstances = obj.instances.length
         let instance = undefined;
         if(inputs.direction === 'In') {
-            instance = new InputStreamInstance({name: obj.name + numinstances, bundle:inputs.bundle});
+            instance = new InputStreamInstance({name: obj.name + '.' + numinstances, bundle:inputs.bundle});
             obj.addToInstances(instance);
             instance.parent = obj;
         } else if(inputs.direction === 'Out') {
-            instance = new OutputStreamInstance({name: obj.name + numinstances, bundle:inputs.bundle});
+            instance = new OutputStreamInstance({name: obj.name + '.' + numinstances, bundle:inputs.bundle});
             obj.addToInstances(instance);
             instance.parent = obj;
         }

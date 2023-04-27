@@ -3,7 +3,7 @@ let _ships = {};
 module.exports = {
     name: 'agg',
     outputs: {
-        AISAggregate: {},
+        AISAgg: {},
     },
     inputs: {
         AISShip: {},
@@ -11,7 +11,7 @@ module.exports = {
     transforms: {
         aggregator: {
             inputs: ['AISShip'],
-            outputs: ['AISAggregate'],
+            outputs: ['AISAgg'],
             fn: (data, props) => {
                 let newMessage = _timeCompress(data.message);
                 if(newMessage) {
@@ -51,6 +51,8 @@ function _timeCompress(aisItem) {
                 Status: aisItem.Status,
             }]
         };
+	// send the message along
+	return aisItem;
     } else {
         let locations = _ships[aisItem.MMSI].location;
         let lastLocation = locations.slice(-1)[0];
@@ -64,21 +66,10 @@ function _timeCompress(aisItem) {
                 Heading: aisItem.Heading,
                 Status: aisItem.Status,
             });
-            return {
-                MMSI: aisItem.MMSI,
-                VesselName: aisItem.VesselName,
-                IMO: aisItem.IMO,
-                CallSign: aisItem.CallSign,
-                VesselType: aisItem.VesselType,
-                Length: aisItem.Length,
-                Width: aisItem.Width,
-                Draft: aisItem.Draft,
-                Cargo: aisItem.Cargo,
-                TransceiverClass: aisItem.TransceiverClass,
-                location: locations.slice(-1)[0]
-            };
+            return aisItem;
         } else {
-            return undefined;
+	    // Don't send because the ship has not moved.
+            return null;
         }
     }
 }

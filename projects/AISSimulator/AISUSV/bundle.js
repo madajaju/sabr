@@ -15,7 +15,7 @@ module.exports = {
             inputs: [],
             outputs: ["AISUSV", "AISShip" ],
             fn: (data, props) => {
-                return {data: {message: data.message}, properties: props};
+                return null;
             }
         }
     },
@@ -109,7 +109,9 @@ function transmit(sortedTransmit, current, bundle) {
         // const timedelay = Math.abs(difference) / 50 || 1;
 	const timedelay = 0;
 	// send the ais data
-        sendMessage(bundle, 'AISShip', _items[current].ais);
+	if(_items[current].ais) {
+		sendMessage(bundle, 'AISShip', _items[current].ais);
+	}
 	// send each of the hits.
 	for(let i in _items[current].hits) {
 		sendMessage(bundle, 'AISUSV', _items[current].hits[i]);
@@ -125,10 +127,13 @@ function transmit(sortedTransmit, current, bundle) {
 
 function sendMessage(bundle, datastream, message) {
 	index++;
-	if(index % 100 === 0) { console.log(index); }
+	if(index % 1000 === 0) { console.log(index); }
    for (let oname in bundle.outputs) {
 	let output = bundle.outputs[oname];
         if (output && output.name.includes(datastream)) {
+		if(datastream === 'AISShip') {
+		console.log("Send Message:", datastream, message);
+}
             output.send({data: {message: message}, properties: {parent: 'USV Simulator'}});
         }
     }

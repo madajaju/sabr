@@ -2,9 +2,9 @@
 
 const program = require('commander');
 
-const action = require('/home/madajaju/work/sabr/node_modules/ailtire/src/interface/package/build.js');
-const ActionHandler = require('/home/madajaju/work/sabr/node_modules/ailtire/src/Server/Action.js');
-global.ailtire = { config: require('/home/madajaju/work/sabr/node_modules/ailtire/bin/lib/../../.ailtire.js') };
+const action = require('/root/work/sabr/node_modules/ailtire/src/interface/package/build.js');
+const ActionHandler = require('/root/work/sabr/node_modules/ailtire/src/Server/Action.js');
+global.ailtire = { config: require('/root/work/sabr/node_modules/ailtire/bin/lib/../../.ailtire.js') };
 program
 	.requiredOption('--env <string>', 'Environment to Build')
 	.requiredOption('--name <string>', 'Name Package to build')
