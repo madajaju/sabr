@@ -8,7 +8,7 @@
     "build-aisagg": "cd AISAgg && docker build -t aisagg -f Dockerfile .",
     "build-aiscollision": "cd AISCollision && docker build -t aiscollision -f Dockerfile .",
     "build-aisnocontact": "cd AISNoContact && docker build -t aisnocontact -f Dockerfile .",
-    "build-aisship": "node buildShips.js --all --groups 1000 --dir /home/madajaju/work/AIS_Simulator/ships",
+    "build-aisship": "node buildShips.js --all --groups 1000 --dir /mnt/sabr/AIS_Simulator/ships",
     "build-aisusv": "cd AISUSV && docker build -t aisusv -f Dockerfile .",
     "build-aistrack": "cd AISTrackChecker && docker build -t aistrack -f Dockerfile .",
     "build-usvtrack": "cd USVTrackChecker && docker build -t usvtrack -f Dockerfile .",
