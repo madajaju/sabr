@@ -29,7 +29,12 @@ for(let i in ships) {
 	fs.writeFileSync("AISShip/ship.csv", str, {flag:"a+"});
 	if(index % group === 0) {
 		console.log("Building:", index);
-	    let proc = spawn('docker', ['build', '-t', `aisship${index}`, '-f', 'Dockerfile', '.' ], {
+	    let proc = spawn('docker', ['build', '-t', `madajaju/aisship${index}`, '-f', 'Dockerfile', '.' ], {
+            cwd: 'AISShip',
+            stdio: [process.stdin, process.stdout, process.stderr],
+            env: process.env
+		});
+	    proc = spawn('docker', ['push', `madajaju/aisship${index}` ], {
             cwd: 'AISShip',
             stdio: [process.stdin, process.stdout, process.stderr],
             env: process.env

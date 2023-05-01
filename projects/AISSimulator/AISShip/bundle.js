@@ -1,6 +1,9 @@
 const fs = require('fs');
 const path = require('path');
 
+let _batchMessages = [];
+const _startTime = new Date();
+
 module.exports = {
     name: 'ship',
     outputs: {
@@ -60,6 +63,7 @@ module.exports = {
 let index = 0;
 
 function transmit(sortedTransmit, current, bundle) {
+/*
     if(sortedTransmit.length > 0 ) {
         const next = sortedTransmit.pop();
         const difference = current.BaseDateTime - next.BaseDateTime;
@@ -70,10 +74,47 @@ function transmit(sortedTransmit, current, bundle) {
         setTimeout(transmit, timedelay, sortedTransmit, next, bundle);
         return 1;
     } else {
+	let duration = _startTime - new Date();
+	console.log("Duration:", duration / 1000, "s");
 	process.exit(0);
         return 0;
     }
+*/
+
+   let next = null; 
+   let flag = true; 
+   while(sortedTransmit.length > 0 && flag) {
+      next = sortedTransmit.pop();
+      flag = sendMessage(bundle,next);
+   }
+   if(sortedTransmit.length > 0) {
+        setTimeout(transmit, 0, sortedTransmit, next, bundle);
+   } else {
+      let duration = Math.abs(_startTime - new Date());
+      console.log("Duration:", duration / 1000, "s");
+      process.exit(0);
+      return 0;
+   }                
 }
+function sendMessage(bundle, message) {
+	index++;
+	if(index % 1000 === 0) { 
+            console.log(index); 
+            _batchMessages.push({payload: {message:message}, properties: {parent: 'Ship Simulator'}});
+	    for (let oname in bundle.outputs) {
+		let output = bundle.outputs[oname];
+		if (output) {
+		    output.sendBatch({data: _batchMessages});
+		}
+            }
+            _batchMessages = [];
+            return false;
+        } else {
+           _batchMessages.push({payload: {message:message}, properties: {parent: 'Ship Simulator'}});
+            return true;
+	}
+}
+/*
 function sendMessage(bundle, message) {
 	index++;
 	if(index % 1000 === 0) { console.log(index); }
@@ -84,3 +125,4 @@ function sendMessage(bundle, message) {
         }
     }
 }
+*/
