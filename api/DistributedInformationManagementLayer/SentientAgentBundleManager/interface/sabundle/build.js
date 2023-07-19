@@ -1,3 +1,13 @@
+/*
+ * Copyright 2023 Intel Corporation.
+ * This software and the related documents are Intel copyrighted materials, and your use of them is governed by
+ * the express license under which they were provided to you (License). Unless the License provides otherwise,
+ * you may not use, modify, copy, publish, distribute, disclose or transmit this software or the related documents
+ * without  Intel's prior written permission. This software and the related documents are provided as is, with no
+ * express or implied warranties, other than those that are expressly stated in the License.
+ *
+ */
+
 const path = require('path');
 
 module.exports = {
@@ -29,12 +39,10 @@ module.exports = {
         // inputs contains the obj for the this method.
         let bundle = SABundle.find(inputs.name);
         let id = inputs.id || bundle.name;
-        if(bundle) {
-            let build = bundle.build({buildID:id});
-            env.res.json({id: build.id});
-            return;
+        if(!bundle) {
+            throw new Error({type:'notFound', inputs:inputs});
         }
-        env.res.json({status: "Error"})
-        return;
+        let build = bundle.build({buildID:id});
+        return {id:build.id};
     }
 };

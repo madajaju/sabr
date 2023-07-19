@@ -1,4 +1,12 @@
-// https://github.com/vasturiano/d3-force-3d v3.0.3 Copyright 2022 Vasco Asturiano
+/*
+ * Copyright 2023 Intel Corporation.
+ * This software and the related documents are Intel copyrighted materials, and your use of them is governed by
+ * the express license under which they were provided to you (License). Unless the License provides otherwise,
+ * you may not use, modify, copy, publish, distribute, disclose or transmit this software or the related documents
+ * without  Intel's prior written permission. This software and the related documents are provided as is, with no
+ * express or implied warranties, other than those that are expressly stated in the License.
+ *
+ */
 (function (global, factory) {
 typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('d3-binarytree'), require('d3-quadtree'), require('d3-octree'), require('d3-dispatch'), require('d3-timer')) :
 typeof define === 'function' && define.amd ? define(['exports', 'd3-binarytree', 'd3-quadtree', 'd3-octree', 'd3-dispatch', 'd3-timer'], factory) :

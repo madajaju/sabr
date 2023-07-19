@@ -1,3 +1,13 @@
+/*
+ * Copyright 2023 Intel Corporation.
+ * This software and the related documents are Intel copyrighted materials, and your use of them is governed by
+ * the express license under which they were provided to you (License). Unless the License provides otherwise,
+ * you may not use, modify, copy, publish, distribute, disclose or transmit this software or the related documents
+ * without  Intel's prior written permission. This software and the related documents are provided as is, with no
+ * express or implied warranties, other than those that are expressly stated in the License.
+ *
+ */
+
 let _ships = {};
 
 module.exports = {
@@ -14,7 +24,7 @@ module.exports = {
             outputs: ['AISAgg'],
             fn: (data, props) => {
                 let newMessage = _timeCompress(data.message);
-                if(newMessage) {
+                if (newMessage) {
                     return {data: {message: newMessage}, properties: props};
                 } else {
                     return null;
@@ -51,8 +61,8 @@ function _timeCompress(aisItem) {
                 Status: aisItem.Status,
             }]
         };
-	// send the message along
-	return aisItem;
+        // send the message along
+        return aisItem;
     } else {
         let locations = _ships[aisItem.MMSI].location;
         let lastLocation = locations.slice(-1)[0];
@@ -68,7 +78,7 @@ function _timeCompress(aisItem) {
             });
             return aisItem;
         } else {
-	    // Don't send because the ship has not moved.
+            // Don't send because the ship has not moved.
             return null;
         }
     }

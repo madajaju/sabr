@@ -1,3 +1,13 @@
+/*
+ * Copyright 2023 Intel Corporation.
+ * This software and the related documents are Intel copyrighted materials, and your use of them is governed by
+ * the express license under which they were provided to you (License). Unless the License provides otherwise,
+ * you may not use, modify, copy, publish, distribute, disclose or transmit this software or the related documents
+ * without  Intel's prior written permission. This software and the related documents are provided as is, with no
+ * express or implied warranties, other than those that are expressly stated in the License.
+ *
+ */
+
 (function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.AFRAME = f()}})(function(){var define,module,exports;return (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
 function anArray(r){return r.BYTES_PER_ELEMENT&&"[object ArrayBuffer]"===str.call(r.buffer)||Array.isArray(r)}var str=Object.prototype.toString;module.exports=anArray;
 },{}],2:[function(require,module,exports){
@@ -44148,7 +44158,7 @@ module.exports = function createTextGeometry (opt) {
 class TextGeometry extends THREE.BufferGeometry {
   constructor (opt) {
     super()
-    
+
     if (typeof opt === 'string') {
       opt = { text: opt }
     }

@@ -30,7 +30,9 @@
     "remove-ais": "docker service rm --force aisagg aiscollision aisnocontact aisship aisusv aisviewer aistrack",
     "destroy-ais": "npm run kill-ais && npm run remove-ais",
     "destroy-sabrs": "docker service rm aisagg aisnocontact aistrack aisvessel usvtrack",
-    "create-network": "docker network create --attachable --driver overlay sabr_network"
+    "create-network": "docker network create --attachable --driver overlay sabr_network",
+    "gather-stats": "node gather-stats.js",
+    "run-tests": "npm run deploy-pulsar && sleep 10 && npm run deploy-sabrs && npm run deploy-aisship && npm run deploy-aisusv && npm run gather-stats"
   },
   "keywords": [],
   "author": "",

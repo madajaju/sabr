@@ -1,4 +1,14 @@
 
+/*
+ * Copyright 2023 Intel Corporation.
+ * This software and the related documents are Intel copyrighted materials, and your use of them is governed by
+ * the express license under which they were provided to you (License). Unless the License provides otherwise,
+ * you may not use, modify, copy, publish, distribute, disclose or transmit this software or the related documents
+ * without  Intel's prior written permission. This software and the related documents are provided as is, with no
+ * express or implied warranties, other than those that are expressly stated in the License.
+ *
+ */
+
 class SecureVault {
     static definition = {
         name: 'SecureVault',
@@ -11,31 +21,24 @@ class SecureVault {
             }
         },
         associations: {
-            encryptKey: {
-                type: 'SecurityKey',
+            seed: {
+                type: "Seed",
                 cardinality: 1,
                 composition: true,
                 owner: true,
             },
-            decryptKey: {
-                type: 'SecurityKey',
+            enclave: {
+                type: "WorkingEnclave",
                 cardinality: 1,
-                composition: true,
+                composition: false,
                 owner: true,
             },
-            iv: {
-                description: 'Init Vector of the cipher',
-                type: 'SecurityKey',
-                cardinality: 1,
-                composition: true,
-                owner: true,
-            },
-            store: {
-                type: 'KeyStore',
+            vault: {
+                type: 'EncryptedVault',
                 cardinality: 1,
                 composition: true,
                 owner: true
-            }
+            },
         },
         view: {
             color: "#ffaaaa",

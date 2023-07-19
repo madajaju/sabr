@@ -1,6 +1,6 @@
 {
   "name": "sabr",
-  "version": "0.1.6",
+  "version": "0.1.5",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -22,7 +22,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "ailtire": "^0.7.2",
+    "ailtire": "^0.8.0",
     "fstream": "^1.0.12",
     "pulsar-flex": "latest",
     "tar": "^6.1.11",

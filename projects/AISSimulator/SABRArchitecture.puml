@@ -1,0 +1,40 @@
+@startuml
+
+node AISAgg #salmon
+node AISShip #pink
+node AISUSV #pink
+node AISTrackCheck #salmon
+node AISCollision #salmon
+node AISNoContact #salmon
+node AISVesselCheck #salmon
+node AISViewer #lightgreen
+node USVTrackCheck #salmon
+
+queue AISShipStream #lightblue
+queue AISAggStream #lightblue
+queue AISWatcherStream #lightblue
+queue AISUSVStream #lightblue
+
+AISAgg --> AISAggStream
+AISShip --> AISShipStream
+AISShipStream --> AISAgg
+AISAggStream --> AISTrackCheck
+AISAggStream --> AISCollision
+AISShipStream --> AISNoContact
+AISAggStream --> AISVesselCheck
+AISTrackCheck --> AISWatcherStream
+AISNoContact --> AISWatcherStream
+AISVesselCheck --> AISWatcherStream
+AISWatcherStream --> AISViewer
+AISUSVStream --> USVTrackCheck
+AISAggStream --> USVTrackCheck
+AISUSV --> AISUSVStream
+AISUSV --> AISShipStream
+AISUSVStream --> AISTrackCheck
+AISUSVStream --> AISVesselCheck
+AISCollision --> AISWatcherStream
+USVTrackCheck --> AISWatcherStream
+AISAggStream --> AISViewer #blue
+AISUSVStream --> AISViewer #blue
+
+@enduml

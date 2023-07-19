@@ -1,3 +1,13 @@
+/*
+ * Copyright 2023 Intel Corporation.
+ * This software and the related documents are Intel copyrighted materials, and your use of them is governed by
+ * the express license under which they were provided to you (License). Unless the License provides otherwise,
+ * you may not use, modify, copy, publish, distribute, disclose or transmit this software or the related documents
+ * without  Intel's prior written permission. This software and the related documents are provided as is, with no
+ * express or implied warranties, other than those that are expressly stated in the License.
+ *
+ */
+
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('three'), require('troika-worker-utils'), require('webgl-sdf-generator'), require('bidi-js'), require('troika-three-utils')) :
   typeof define === 'function' && define.amd ? define(['exports', 'three', 'troika-worker-utils', 'webgl-sdf-generator', 'bidi-js', 'troika-three-utils'], factory) :
@@ -788,8 +798,8 @@
 
   /*!
   Custom bundle of woff2otf (https://github.com/arty-name/woff2otf) with fflate
-  (https://github.com/101arrowz/fflate) for use in Troika text rendering. 
-  Original licenses apply: 
+  (https://github.com/101arrowz/fflate) for use in Troika text rendering.
+  Original licenses apply:
   - fflate: https://github.com/101arrowz/fflate/blob/master/LICENSE (MIT)
   - woff2otf.js: https://github.com/arty-name/woff2otf/blob/master/woff2otf.js (Apache2)
   */

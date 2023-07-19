@@ -1,0 +1,49 @@
+@startuml
+partition "ITOperations" {
+(*) --> ===F1===
+}
+
+partition "Common Physical Layer" #bbbbbb {
+===F1=== --> "Provision Hardware"
+}
+
+partition "DevOps Engineer" {
+===F1=== --> "Start Build"
+}
+partition "Security Manager" #pink {
+"Provision Hardware" --> "Generate Hardware Keys"
+}
+partition "Common Physical Layer" #bbbbbb {
+"Generate Hardware Keys" --> "Deploy Attested Hardware"
+}
+partition "Security Manager" {
+"Deploy Attested Hardware" --> "Register Entity"
+}
+partition "DevOps Pipeline" #00aaff {
+"Deploy Attested Hardware" --> "Deploy SABR Release"
+}
+partition "DevOps Pipeline" #00aaff {
+"Start Build" --> "Build SABR"
+}
+partition "Security Manager" pink {
+"Build SABR" --> "Generate Attestation Keys"
+}
+partition "DevOps Pipeline" #00aaff {
+"Generate Attestation Keys" --> "Provision SABR"
+}
+partition "DevOps Pipeline" #00aaff {
+"Provision SABR" --> "Attest SABR"
+}
+partition "DevOps Pipeline" #00aaff {
+"Attest SABR" --> if "Attestation match" then
+}
+partition "DevOps Pipeline" #00aaff {
+else
+--> [true] "Deploy SABR Release"
+}
+partition "DevOps Pipeline" #00aaff {
+else
+--> [false] "Failed Deployment"
+}
+
+@enduml

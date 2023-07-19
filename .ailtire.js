@@ -74,7 +74,10 @@ module.exports = {
         },
         "/aml/cm/capability/build": {
             "name": "/aml/cm/capability/build",
-            "inputs": {"name": {"description": "name of the capability", "type": "string", "required": true}},
+            "inputs": {
+                "name": {"description": "name of the capability", "type": "string", "required": false},
+                "id": {"description": "id of the capability", "type": "string", "required": false}
+            },
             "friendlyName": "build",
             "description": "Build a Capability"
         },
@@ -123,6 +126,12 @@ module.exports = {
             "friendlyName": "update",
             "description": "Description of the action"
         },
+        "/aml/dsom/data/create": {
+            "name": "/aml/dsom/data/create",
+            "inputs": {"attr1": {"description": "Description for the parameter", "type": "string", "required": false}},
+            "friendlyName": "create",
+            "description": "Description of the action"
+        },
         "/diml/dsm/channel/deployed": {
             "name": "/diml/dsm/channel/deployed",
             "inputs": {"channel": {"description": "Channel name", "type": "string", "required": true}},
@@ -155,7 +164,7 @@ module.exports = {
                     "required": true
                 }
             },
-            "friendlyName": "createAnddeploy",
+            "friendlyName": "createAndDeploy",
             "description": "Create and deploy the bundle"
         },
         "/diml/sabm/bundle/deploy": {
@@ -168,13 +177,19 @@ module.exports = {
                     "required": true
                 },
                 "parameters": {
-                    "description": "Command Separate list of parameters name=value,...",
+                    "description": "Parameters used for the instance deployment",
                     "type": "string",
                     "required": false
                 }
             },
             "friendlyName": "deploy",
             "description": "Deploy the bundle"
+        },
+        "/diml/sabm/policy/create": {
+            "name": "/diml/sabm/policy/create",
+            "inputs": {"file": {"description": "Description for the parameter", "type": "file", "required": false}},
+            "friendlyName": "create",
+            "description": "Description of the action"
         },
         "/diml/sabm/sabundle/build": {
             "name": "/diml/sabm/sabundle/build",
@@ -203,35 +218,19 @@ module.exports = {
             "friendlyName": "list",
             "description": "Description of the action"
         },
-        "/aimodel/list": {
-            "name": "/aimodel/list",
-            "inputs": {},
-            "friendlyName": "list",
-            "description": "List of model objects"
-        },
-        "/capability/list": {
-            "name": "/capability/list",
-            "inputs": {},
-            "friendlyName": "list",
-            "description": "List of model objects"
-        },
-        "/diml/sabm/policy/create": {
-            "name": "/diml/sabm/policy/create",
+        "/bundle/build": {
+            "name": "/bundle/build",
             "inputs": {
-                "file": {
-                    "description": "File containing the policies for use on the SABRs",
-                    "type": "file",
-                    "required": true
-                }
+                "dir": {"description": "Directory to perform the build.", "type": "string", "required": true},
+                "recurse": {
+                    "description": "Recursive build from the directory down.",
+                    "type": "boolean",
+                    "required": false
+                },
+                "output": {"description": "Output file for the bundle.", "type": "string", "required": false}
             },
-            "friendlyName": "create",
-            "description": "Create policies based on the file for the SABRs"
-        },
-        "/policy/list": {
-            "name": "/policy/list",
-            "inputs": {"attr1": {"description": "Description for the parameter", "type": "string", "required": false}},
-            "friendlyName": "list",
-            "description": "Description of the action"
+            "friendlyName": "build",
+            "description": "Build a SAB bundle for the directory specified."
         },
         "/pulsar/streams": {
             "name": "/pulsar/streams",
@@ -242,7 +241,7 @@ module.exports = {
                     "required": true
                 }
             },
-            "friendlyName": "topic",
+            "friendlyName": "streams",
             "description": "Return the topics in the pulsar configuration"
         },
         "/pulsar/topic": {
@@ -263,17 +262,41 @@ module.exports = {
             "friendlyName": "topics",
             "description": "Return the topics in the pulsar configuration"
         },
-        "/security/list": {
-            "name": "/security/list",
-            "inputs": {},
-            "friendlyName": "list",
-            "description": "List the security profiles."
-        },
-        "/security/manage": {
-            "name": "/security/manage",
+        "/sabundle/build": {
+            "name": "/sabundle/build",
             "inputs": {"attr1": {"description": "Description for the parameter", "type": "string", "required": false}},
-            "friendlyName": "manage",
+            "friendlyName": "build",
             "description": "Description of the action"
+        },
+        "/sa/esc/bundle/deploy": {
+            "name": "/sa/esc/bundle/deploy",
+            "inputs": {
+                "name": {"description": "Name of the bundle to deploy", "type": "string", "required": true},
+                "version": {"description": "Version of the bundle", "type": "string", "required": true},
+                "target": {"description": "Target Devices to deploy the bundle.", "type": "string", "required": true}
+            },
+            "friendlyName": "deploy",
+            "description": "Deploy a SAB bundle that is passed in."
+        },
+        "/sa/esc/key/store": {
+            "name": "/sa/esc/key/store",
+            "inputs": {
+                "target": {"description": "Directory to perform the build.", "type": "string", "required": true},
+                "bundle": {
+                    "description": "Recursive build from the directory down.",
+                    "type": "string",
+                    "required": false
+                },
+                "version": {"description": "Version of the bundle encrypted.", "type": true},
+                "key": {
+                    "description": "Key to be used for the unbundling of the SAB build.",
+                    "type": "string",
+                    "required": true
+                },
+                "iv": {"description": "IV of the Key for the decryption.", "type": "string", "required": true}
+            },
+            "friendlyName": "store",
+            "description": "Store a Key for the bundle decryption"
         },
         "/sml/so/service/ready": {
             "name": "/sml/so/service/ready",
@@ -667,6 +690,12 @@ module.exports = {
             "friendlyName": "create",
             "description": "create entity"
         },
+        "/capability/list": {
+            "name": "/capability/list",
+            "inputs": {},
+            "friendlyName": "list",
+            "description": "List of model objects"
+        },
         "/capability/destory": {
             "name": "/capability/destory",
             "inputs": {},
@@ -751,6 +780,7 @@ module.exports = {
                     "description": "Owner of the instance is the capability.",
                     "required": false
                 },
+                "provisioner": {"type": "object", "description": "Provisioner of the Instance", "required": false},
                 "id": {"type": "string", "description": "ID of the item to update", "required": false}
             },
             "friendlyName": "update",
@@ -768,6 +798,12 @@ module.exports = {
             "friendlyName": "create",
             "description": "Create object of the class type"
         },
+        "/aimodel/list": {
+            "name": "/aimodel/list",
+            "inputs": {},
+            "friendlyName": "list",
+            "description": "List of model objects"
+        },
         "/aimodel/destory": {
             "name": "/aimodel/destory",
             "inputs": {},
@@ -784,6 +820,158 @@ module.exports = {
             "name": "/aimodel/update",
             "inputs": {
                 "name": {"type": "string", "description": "Name of the item to update", "required": false},
+                "id": {"type": "string", "description": "ID of the item to update", "required": false}
+            },
+            "friendlyName": "update",
+            "description": "Update entity"
+        },
+        "/channelactivationitem/new": {
+            "name": "/channelactivationitem/new",
+            "inputs": {},
+            "friendlyName": "new",
+            "description": "New called for web interface"
+        },
+        "/channelactivationitem/create": {
+            "name": "/channelactivationitem/create",
+            "inputs": {},
+            "friendlyName": "create",
+            "description": "Create object of the class type"
+        },
+        "/channelactivationitem/list": {
+            "name": "/channelactivationitem/list",
+            "inputs": {},
+            "friendlyName": "list",
+            "description": "List of model objects"
+        },
+        "/channelactivationitem/destory": {
+            "name": "/channelactivationitem/destory",
+            "inputs": {},
+            "friendlyName": "new",
+            "description": "New called for web interface"
+        },
+        "/channelactivationitem": {
+            "name": "/channelactivationitem",
+            "inputs": {},
+            "friendlyName": "new",
+            "description": "New called for web interface"
+        },
+        "/channelactivationitem/update": {
+            "name": "/channelactivationitem/update",
+            "inputs": {
+                "name": {"type": "string", "description": "Name of the item to update", "required": false},
+                "priority": {"type": "number", "description": "prioritization number", "required": false},
+                "activated": {"type": "boolean", "description": "channel is activated", "required": false},
+                "channel": {"type": "object", "required": false},
+                "parent": {"type": "object", "required": false},
+                "id": {"type": "string", "description": "ID of the item to update", "required": false}
+            },
+            "friendlyName": "update",
+            "description": "Update entity"
+        },
+        "/channelactivationpolicy/new": {
+            "name": "/channelactivationpolicy/new",
+            "inputs": {},
+            "friendlyName": "new",
+            "description": "New called for web interface"
+        },
+        "/channelactivationpolicy/create": {
+            "name": "/channelactivationpolicy/create",
+            "inputs": {},
+            "friendlyName": "create",
+            "description": "Create object of the class type"
+        },
+        "/channelactivationpolicy/list": {
+            "name": "/channelactivationpolicy/list",
+            "inputs": {},
+            "friendlyName": "list",
+            "description": "List of model objects"
+        },
+        "/channelactivationpolicy/destory": {
+            "name": "/channelactivationpolicy/destory",
+            "inputs": {},
+            "friendlyName": "new",
+            "description": "New called for web interface"
+        },
+        "/channelactivationpolicy/addchannels": {
+            "name": "/channelactivationpolicy/addchannels",
+            "inputs": {},
+            "friendlyName": "addChannels",
+            "description": "Add items to the object"
+        },
+        "/channelactivationpolicy": {
+            "name": "/channelactivationpolicy",
+            "inputs": {},
+            "friendlyName": "new",
+            "description": "New called for web interface"
+        },
+        "/channelactivationpolicy/update": {
+            "name": "/channelactivationpolicy/update",
+            "inputs": {
+                "name": {"type": "string", "description": "Name of the item to update", "required": false},
+                "id": {"type": "string", "description": "ID of the item to update", "required": false}
+            },
+            "friendlyName": "update",
+            "description": "Update entity"
+        },
+        "/channelcreationpolicy/new": {
+            "name": "/channelcreationpolicy/new",
+            "inputs": {},
+            "friendlyName": "new",
+            "description": "New called for web interface"
+        },
+        "/channelcreationpolicy/create": {
+            "name": "/channelcreationpolicy/create",
+            "inputs": {
+                "name": {"description": "name of the ChannelCreationPolicy", "type": "string", "required": true},
+                "file": {"description": "file with the definition", "type": "file", "required": false}
+            },
+            "friendlyName": "create",
+            "description": "create entity"
+        },
+        "/channelcreationpolicy/list": {
+            "name": "/channelcreationpolicy/list",
+            "inputs": {},
+            "friendlyName": "list",
+            "description": "List of model objects"
+        },
+        "/channelcreationpolicy/destory": {
+            "name": "/channelcreationpolicy/destory",
+            "inputs": {},
+            "friendlyName": "new",
+            "description": "New called for web interface"
+        },
+        "/channelcreationpolicy/addstream": {
+            "name": "/channelcreationpolicy/addstream",
+            "inputs": {},
+            "friendlyName": "addStream",
+            "description": "Add items to the object"
+        },
+        "/channelcreationpolicy/addchannels": {
+            "name": "/channelcreationpolicy/addchannels",
+            "inputs": {},
+            "friendlyName": "addChannels",
+            "description": "Add items to the object"
+        },
+        "/channelcreationpolicy": {
+            "name": "/channelcreationpolicy",
+            "inputs": {},
+            "friendlyName": "new",
+            "description": "New called for web interface"
+        },
+        "/channelcreationpolicy/update": {
+            "name": "/channelcreationpolicy/update",
+            "inputs": {
+                "name": {"type": "string", "description": "Name of the item to update", "required": false},
+                "post": {
+                    "type": "object",
+                    "description": "This is the transform to run after all of the transformation and before sending out.",
+                    "required": false
+                },
+                "pre": {
+                    "type": "object",
+                    "description": "This is the transform to run after all of the transformation and before sending out.",
+                    "required": false
+                },
                 "id": {"type": "string", "description": "ID of the item to update", "required": false}
             },
             "friendlyName": "update",
@@ -842,6 +1030,8 @@ module.exports = {
                     "required": false
                 },
                 "stream": {"type": "object", "description": "This is the owning stream", "required": false},
+                "encryptionKey": {"type": "object", "description": "Encryption Key for the channel", "required": false},
+                "decryptionKey": {"type": "object", "description": "Decryption Key for the channel", "required": false},
                 "id": {"type": "string", "description": "ID of the item to update", "required": false}
             },
             "friendlyName": "update",
@@ -982,6 +1172,16 @@ module.exports = {
             "name": "/datastream/update",
             "inputs": {
                 "name": {"type": "string", "description": "Name of the item to update", "required": false},
+                "encryptionKey": {
+                    "type": "object",
+                    "description": "This is the encryption key for the data stream",
+                    "required": false
+                },
+                "decryptionKey": {
+                    "type": "object",
+                    "description": "This is the decryption key for the data stream",
+                    "required": false
+                },
                 "id": {"type": "string", "description": "ID of the item to update", "required": false}
             },
             "friendlyName": "update",
@@ -1354,62 +1554,146 @@ module.exports = {
             "friendlyName": "update",
             "description": "Update entity"
         },
-        "/streampolicy/new": {
-            "name": "/streampolicy/new",
+        "/admindatastream/new": {
+            "name": "/admindatastream/new",
             "inputs": {},
             "friendlyName": "new",
             "description": "New called for web interface"
         },
-        "/diml/sabm/policy/create": {
-            "name": "/diml/sabm/policy/create",
+        "/admindatastream/create": {
+            "name": "/admindatastream/create",
             "inputs": {
+                "name": {"description": "name of the SAB AdminTransform", "type": "string", "required": true},
                 "file": {"description": "file with the definition", "type": "file", "required": false}
             },
             "friendlyName": "create",
             "description": "create entity"
         },
-        "/streampolicy/list": {
-            "name": "/streampolicy/list",
+        "/admindatastream/list": {
+            "name": "/admindatastream/list",
             "inputs": {},
             "friendlyName": "list",
             "description": "List of model objects"
         },
-        "/streampolicy/destory": {
-            "name": "/streampolicy/destory",
+        "/admindatastream/destory": {
+            "name": "/admindatastream/destory",
             "inputs": {},
             "friendlyName": "new",
             "description": "New called for web interface"
         },
-        "/streampolicy/addstream": {
-            "name": "/streampolicy/addstream",
+        "/admindatastream/addpolicies": {
+            "name": "/admindatastream/addpolicies",
             "inputs": {},
-            "friendlyName": "addStream",
+            "friendlyName": "addPolicies",
             "description": "Add items to the object"
         },
-        "/streampolicy/addchannels": {
-            "name": "/streampolicy/addchannels",
+        "/admindatastream/addchannels": {
+            "name": "/admindatastream/addchannels",
             "inputs": {},
             "friendlyName": "addChannels",
             "description": "Add items to the object"
         },
-        "/streampolicy": {
-            "name": "/streampolicy",
+        "/admindatastream/addinstances": {
+            "name": "/admindatastream/addinstances",
+            "inputs": {},
+            "friendlyName": "addInstances",
+            "description": "Add items to the object"
+        },
+        "/admindatastream/addtransforms": {
+            "name": "/admindatastream/addtransforms",
+            "inputs": {},
+            "friendlyName": "addTransforms",
+            "description": "Add items to the object"
+        },
+        "/admindatastream/addconsumers": {
+            "name": "/admindatastream/addconsumers",
+            "inputs": {},
+            "friendlyName": "addConsumers",
+            "description": "Add items to the object"
+        },
+        "/admindatastream/addproducers": {
+            "name": "/admindatastream/addproducers",
+            "inputs": {},
+            "friendlyName": "addProducers",
+            "description": "Add items to the object"
+        },
+        "/admindatastream": {
+            "name": "/admindatastream",
             "inputs": {},
             "friendlyName": "new",
             "description": "New called for web interface"
         },
-        "/streampolicy/update": {
-            "name": "/streampolicy/update",
+        "/admindatastream/update": {
+            "name": "/admindatastream/update",
             "inputs": {
                 "name": {"type": "string", "description": "Name of the item to update", "required": false},
-                "post": {
+                "encryptionKey": {
                     "type": "object",
-                    "description": "This is the transform to run after all of the transformation and before sending out.",
+                    "description": "This is the encryption key for the data stream",
                     "required": false
                 },
-                "pre": {
+                "decryptionKey": {
                     "type": "object",
-                    "description": "This is the transform to run after all of the transformation and before sending out.",
+                    "description": "This is the decryption key for the data stream",
+                    "required": false
+                },
+                "id": {"type": "string", "description": "ID of the item to update", "required": false}
+            },
+            "friendlyName": "update",
+            "description": "Update entity"
+        },
+        "/admintransform/new": {
+            "name": "/admintransform/new",
+            "inputs": {},
+            "friendlyName": "new",
+            "description": "New called for web interface"
+        },
+        "/admintransform/create": {
+            "name": "/admintransform/create",
+            "inputs": {
+                "name": {"description": "name of the SAB AdminTransform", "type": "string", "required": true},
+                "file": {"description": "file with the definition", "type": "file", "required": false}
+            },
+            "friendlyName": "create",
+            "description": "create entity"
+        },
+        "/admintransform/list": {
+            "name": "/admintransform/list",
+            "inputs": {},
+            "friendlyName": "list",
+            "description": "List of model objects"
+        },
+        "/admintransform/destory": {
+            "name": "/admintransform/destory",
+            "inputs": {},
+            "friendlyName": "new",
+            "description": "New called for web interface"
+        },
+        "/admintransform/addinputs": {
+            "name": "/admintransform/addinputs",
+            "inputs": {},
+            "friendlyName": "addInputs",
+            "description": "Add items to the object"
+        },
+        "/admintransform/addoutputs": {
+            "name": "/admintransform/addoutputs",
+            "inputs": {},
+            "friendlyName": "addOutputs",
+            "description": "Add items to the object"
+        },
+        "/admintransform": {
+            "name": "/admintransform",
+            "inputs": {},
+            "friendlyName": "new",
+            "description": "New called for web interface"
+        },
+        "/admintransform/update": {
+            "name": "/admintransform/update",
+            "inputs": {
+                "name": {"type": "string", "description": "Name of the item to update", "required": false},
+                "fn": {
+                    "type": "json",
+                    "description": "Function to run. This should have two parameters. (data,channel)",
                     "required": false
                 },
                 "id": {"type": "string", "description": "ID of the item to update", "required": false}
@@ -1599,6 +1883,24 @@ module.exports = {
             "friendlyName": "addInstances",
             "description": "Add items to the object"
         },
+        "/sabundle/addpolicies": {
+            "name": "/sabundle/addpolicies",
+            "inputs": {},
+            "friendlyName": "addPolicies",
+            "description": "Add items to the object"
+        },
+        "/sabundle/addbuilds": {
+            "name": "/sabundle/addbuilds",
+            "inputs": {},
+            "friendlyName": "addBuilds",
+            "description": "Add items to the object"
+        },
+        "/sabundle/addimages": {
+            "name": "/sabundle/addimages",
+            "inputs": {},
+            "friendlyName": "addImages",
+            "description": "Add items to the object"
+        },
         "/sabundle": {
             "name": "/sabundle",
             "inputs": {},
@@ -1610,14 +1912,9 @@ module.exports = {
             "inputs": {
                 "name": {"type": "string", "description": "Name of the item to update", "required": false},
                 "version": {"type": "string", "description": "Version of the SABundle", "required": false},
-                "learningInput": {
+                "learningStream": {
                     "type": "object",
-                    "description": "Learning Corpus Input Stream receives updates to the aimodel",
-                    "required": false
-                },
-                "learningOutput": {
-                    "type": "object",
-                    "description": "Learning Corpus Output Stream receives updates to the aimodel",
+                    "description": "Learning Corpus Stream receives updates and sends out updates to the aimodel",
                     "required": false
                 },
                 "adminStream": {
@@ -1625,12 +1922,51 @@ module.exports = {
                     "description": "Administration Stream to handle registration of SABRS to Capabilities",
                     "required": false
                 },
-                "admoutStream": {
-                    "type": "object",
-                    "description": "Administration Stream to handle registration of SABRS and Capabilities",
-                    "required": false
-                },
                 "secureVault": {"type": "object", "required": false},
+                "id": {"type": "string", "description": "ID of the item to update", "required": false}
+            },
+            "friendlyName": "update",
+            "description": "Update entity"
+        },
+        "/sabundlebuild/new": {
+            "name": "/sabundlebuild/new",
+            "inputs": {},
+            "friendlyName": "new",
+            "description": "New called for web interface"
+        },
+        "/sabundlebuild/create": {
+            "name": "/sabundlebuild/create",
+            "inputs": {},
+            "friendlyName": "create",
+            "description": "Create object of the class type"
+        },
+        "/sabundlebuild/list": {
+            "name": "/sabundlebuild/list",
+            "inputs": {},
+            "friendlyName": "list",
+            "description": "List of model objects"
+        },
+        "/sabundlebuild/destory": {
+            "name": "/sabundlebuild/destory",
+            "inputs": {},
+            "friendlyName": "new",
+            "description": "New called for web interface"
+        },
+        "/sabundlebuild": {
+            "name": "/sabundlebuild",
+            "inputs": {},
+            "friendlyName": "new",
+            "description": "New called for web interface"
+        },
+        "/sabundlebuild/update": {
+            "name": "/sabundlebuild/update",
+            "inputs": {
+                "name": {"type": "string", "description": "Name of the item to update", "required": false},
+                "version": {"type": "string", "description": "Version of the SABundle Build", "required": false},
+                "encryptedData": {"type": "string", "description": "Encrypted Data for the Bundle.", "required": false},
+                "encryptKey": {"type": "object", "required": false},
+                "decryptKey": {"type": "object", "required": false},
+                "iv": {"type": "object", "description": "Init Vector of the cipher", "required": false},
                 "id": {"type": "string", "description": "ID of the item to update", "required": false}
             },
             "friendlyName": "update",
@@ -1706,24 +2042,24 @@ module.exports = {
                     "required": false
                 },
                 "parent": {"type": "object", "description": "Parent of the SAB Instance", "required": false},
-                "learningInput": {
+                "learningInStream": {
                     "type": "object",
                     "description": "Learning Corpus Input Stream receives updates to the aimodel",
                     "required": false
                 },
-                "learningOutput": {
-                    "type": "object",
-                    "description": "Learning Corpus Output Stream receives updates to the aimodel",
-                    "required": false
-                },
-                "adminStream": {
+                "adminInStream": {
                     "type": "object",
                     "description": "Administration Stream to handle registration of SABRS to Capabilities",
                     "required": false
                 },
-                "admoutStream": {
+                "learningOutStream": {
                     "type": "object",
-                    "description": "Administration Stream to handle registration of SABRS and Capabilities",
+                    "description": "Learning Corpus Input Stream receives updates to the aimodel",
+                    "required": false
+                },
+                "adminOutStream": {
+                    "type": "object",
+                    "description": "Administration Stream to handle registration of SABRS to Capabilities",
                     "required": false
                 },
                 "id": {"type": "string", "description": "ID of the item to update", "required": false}
@@ -1771,6 +2107,11 @@ module.exports = {
             "name": "/keystore/update",
             "inputs": {
                 "name": {"type": "string", "description": "Name of the item to update", "required": false},
+                "encryptedData": {
+                    "type": "string",
+                    "description": "This is the encrypted representation of the key store.",
+                    "required": false
+                },
                 "id": {"type": "string", "description": "ID of the item to update", "required": false}
             },
             "friendlyName": "update",
@@ -1810,8 +2151,10 @@ module.exports = {
             "name": "/securevault/update",
             "inputs": {
                 "name": {"type": "string", "description": "Name of the item to update", "required": false},
-                "key": {"type": "object", "required": false},
-                "vault": {"type": "object", "required": false},
+                "encryptKey": {"type": "object", "required": false},
+                "decryptKey": {"type": "object", "required": false},
+                "iv": {"type": "object", "description": "Init Vector of the cipher", "required": false},
+                "store": {"type": "object", "required": false},
                 "id": {"type": "string", "description": "ID of the item to update", "required": false}
             },
             "friendlyName": "update",
@@ -1852,6 +2195,7 @@ module.exports = {
             "inputs": {
                 "name": {"type": "string", "description": "Name of the item to update", "required": false},
                 "value": {"type": "string", "description": "Value of the security key.", "required": false},
+                "iv": {"type": "string", "description": "IV of the Security Key.", "required": false},
                 "id": {"type": "string", "description": "ID of the item to update", "required": false}
             },
             "friendlyName": "update",
@@ -2054,6 +2398,28 @@ module.exports = {
             "friendlyName": "list",
             "description": "List the Deployment"
         },
+        "/implementation/filestructure": {
+            "name": "/implementation/filestructure",
+            "inputs": {
+                "name": {"description": "The name of the scenario", "type": "string", "required": true},
+                "model": {"description": "The name of the model", "type": "string", "required": false},
+                "package": {"description": "The name of the package", "type": "string", "required": false}
+            },
+            "friendlyName": "create",
+            "description": "Create a Method in a Model"
+        },
+        "/implementation/image": {
+            "name": "/implementation/image",
+            "inputs": {"name": {"description": "The name of the component", "type": "string", "required": false}},
+            "friendlyName": "image",
+            "description": "Get images from deployments"
+        },
+        "/implementation/thirdparty": {
+            "name": "/implementation/thirdparty",
+            "inputs": {"name": {"description": "The name of the component", "type": "string", "required": false}},
+            "friendlyName": "thirdparty",
+            "description": "Get thridparty components"
+        },
         "/model/document": {
             "name": "/model/document",
             "inputs": {
@@ -2163,17 +2529,23 @@ module.exports = {
             "friendlyName": "set",
             "description": "Set an UseCase documentation"
         },
-        "sabr/aimodel/list": {
-            "name": "sabr/aimodel/list",
-            "inputs": {"attr1": {"description": "Description for the parameter", "type": "string", "required": false}},
-            "friendlyName": "list",
-            "description": "Description of the action"
+        "/workflow/get": {
+            "name": "/workflow/get",
+            "inputs": {"id": {"description": "The id of the workflow", "type": "string", "required": true}},
+            "friendlyName": "get",
+            "description": "Get a Workflow"
         },
-        "sabr/capability/list": {
-            "name": "sabr/capability/list",
-            "inputs": {"attr1": {"description": "Description for the parameter", "type": "string", "required": false}},
+        "/workflow/list": {
+            "name": "/workflow/list",
+            "inputs": {},
             "friendlyName": "list",
-            "description": "Description of the action"
+            "description": "List the Workflows"
+        },
+        "sabr/bundle/build": {
+            "name": "sabr/bundle/build",
+            "inputs": {},
+            "friendlyName": "build",
+            "description": "Build a SAB bundle for the directory specified."
         },
         "sabr/deploy/show": {
             "name": "sabr/deploy/show",
@@ -2181,16 +2553,10 @@ module.exports = {
             "friendlyName": "show",
             "description": "Show the main deployment page."
         },
-        "sabr/policy/list": {
-            "name": "sabr/policy/list",
-            "inputs": {},
-            "friendlyName": "list",
-            "description": "Description of the action"
-        },
         "sabr/pulsar/streams": {
             "name": "sabr/pulsar/streams",
             "inputs": {},
-            "friendlyName": "topic",
+            "friendlyName": "streams",
             "description": "Return the topics in the pulsar configuration"
         },
         "sabr/pulsar/topic": {
@@ -2205,16 +2571,10 @@ module.exports = {
             "friendlyName": "topics",
             "description": "Return the topics in the pulsar configuration"
         },
-        "sabr/security/list": {
-            "name": "sabr/security/list",
+        "sabr/sabundle/build": {
+            "name": "sabr/sabundle/build",
             "inputs": {},
-            "friendlyName": "list",
-            "description": "List the security profiles."
-        },
-        "sabr/security/manage": {
-            "name": "sabr/security/manage",
-            "inputs": {},
-            "friendlyName": "manage",
+            "friendlyName": "build",
             "description": "Description of the action"
         }
     }

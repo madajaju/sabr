@@ -1,3 +1,13 @@
+/*
+ * Copyright 2023 Intel Corporation.
+ * This software and the related documents are Intel copyrighted materials, and your use of them is governed by
+ * the express license under which they were provided to you (License). Unless the License provides otherwise,
+ * you may not use, modify, copy, publish, distribute, disclose or transmit this software or the related documents
+ * without  Intel's prior written permission. This software and the related documents are provided as is, with no
+ * express or implied warranties, other than those that are expressly stated in the License.
+ *
+ */
+
 const _ships = {};
 const _checker = {};
 const _TOOLONG = 20 * 60 * 1000; // 20 minutes
@@ -53,7 +63,7 @@ function _calculateNoContact(aisItem) {
 	let ship = _ships[aisItem.MMSI].data;
 	let newTime = new Date(aisItem.BaseDateTime);
 	let oldTime = new Date(ship.BaseDateTime);
-	
+
 	if(Math.abs(newTime - oldTime) > _TOOLONG) {
 		_ships[aisItem.MMSI].data.BaseDateTime = aisItem.BaseDateTime;
 		_sendNoContact(aisItem);

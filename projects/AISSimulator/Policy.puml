@@ -1,0 +1,14 @@
+@startuml
+
+package Stream {
+    class realtime {
+        Raw data on the stream
+    }
+    class summary {
+        Generate cummulative summary every 60 minutes
+    }
+    class historical {
+        Generate statistical model every 15 minutes
+    }
+}
+@enduml

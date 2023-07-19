@@ -1,0 +1,18 @@
+@startuml
+start
+fork
+:Attest Hardware;
+:Provision Hardware;
+fork again
+:Build SABR;
+end fork
+:Deploy SABR;
+:Register SABR;
+:Provision SABR;
+fork
+:Encrypt Data;
+fork again
+:Decrypt Data;
+end fork
+end
+@enduml
