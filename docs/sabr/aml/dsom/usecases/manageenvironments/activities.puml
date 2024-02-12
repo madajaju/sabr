@@ -3,9 +3,9 @@
 
 usecase "Manage Environments" as ManageEnvironments #yellow
 
-Actor "Actor" as Actor
+Actor "DevOps Engineer" as DevOpsEngineer
 
-Actor --> ManageEnvironments
+DevOpsEngineer --> ManageEnvironments
 
 
 

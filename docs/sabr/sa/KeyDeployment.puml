@@ -1,0 +1,107 @@
+@startuml
+
+node headquarters {
+node DevSecOps {
+
+}
+Node SecurityManager {
+}
+}
+
+node DroneNode {
+    component AISSABR {
+        component AISStream.key {
+        }
+        component AISHealth.key {
+        }
+    }
+    component USVSABR {
+    }
+    node UpdateController {
+            component SecureComms
+            component UpdaterA
+            component internalSecurityEngineG
+    }
+    node Pulsar1 {
+    }
+}
+
+node AEPEdge {
+component AISAGG {
+        component AISStream.keyA {
+        }
+        component AISHealth.keyA {
+        }
+        node UpdateControllerAEP
+}
+component AISNoContact {
+
+}
+component AISGhost {
+}
+
+component AISPhatom {
+}
+
+component AISBadTrack {
+
+}
+
+node Pulsar {
+}
+
+}
+Node PulsarPubSubHub {
+    node AISStream {
+        component key
+        component realtime
+        component historical
+        component summary
+    }
+    node AISHealth {
+            component key1
+            component realtime1
+            component historical1
+            component summary1
+        }
+}
+
+
+DevSecOps --> UpdateControllerAEP : 1. UpdateAvailable
+UpdateControllerAEP --> SecurityManager : 2. sendLocalSealKey(Public)
+UpdateControllerAEP --> DevSecOps : 3. getEncryptedContainer
+UpdateControllerAEP <- UpdateController: 3. UpdateAvailable
+UpdateController -> UpdateControllerAEP: 4. getAttestionKeys
+UpdaterA -> UpdateControllerAEP : 3. getContainer
+
+
+
+@enduml
+
+SecurityManager --> UpdateController : sealUpdater
+SecureComms -> UpdaterA
+SecurityManager <--> SecureComms  : attestation
+UpdaterA --> internalSecurityEngineG : sealSABR
+UpdateController --> AISStream.key
+UpdateController --> AISHealth.key
+SecurityManager --> AISStream.keyA
+SecurityManager --> AISHealth.keyA
+AISSABR --> AISStream
+AISStream --> AISAGG
+DevSecOps --> AISAGG
+@enduml
+
+1. Software Validation
+1.1 Validation and Verification of the SABR on the Device.
+1.2 Public Key on the edge device
+1.3 Private Key in the SABR
+1.4 Verify the SABR on the Edge Device
+
+2. Protect the Confidentialaity of the SABR
+
+
+3. Communication Protection Post Design
+
+
+4. State Data at Rest
+

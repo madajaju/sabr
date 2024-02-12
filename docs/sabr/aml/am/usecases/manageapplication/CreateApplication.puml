@@ -17,7 +17,7 @@ box Service Orchestrator #aaffaa
 
 "ApplicationDeveloper" -> am: Create Application
 
-    am -> "provisioner": create (name: hello,file: ./templates/application.yml)
+    am -> "provisioner": create (name: hello,file: ./templates/application.js)
 
     "provisioner" --/ EventBus: application.create
 

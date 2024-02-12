@@ -30,10 +30,10 @@ Data Transformation taking inputs and producing to outputs.
 
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
+| post | 1 | ChannelCreationPolicy |  |  | This is the transform to run after all of the transformation and before sending out. |
+| pre | 1 | ChannelCreationPolicy |  |  | This is the transform to run after all of the transformation and before sending out. |
 | transforms | n | DataStream |  |  | This is the transformation that is called on data arriving to the Data Stream. |
 | transforms | n | InputChannelInstance |  |  | Transformations to process when data arrives in this channel. |
-| post | 1 | StreamPolicy |  |  | This is the transform to run after all of the transformation and before sending out. |
-| pre | 1 | StreamPolicy |  |  | This is the transform to run after all of the transformation and before sending out. |
 | transforms | n | AdminDataStream |  |  | This is the transformation that is called on data arriving to the Data Stream. |
 | transforms | n | SABundle |  |  | Data Transformations run on input data send to output data. |
 

@@ -16,10 +16,5 @@ Model o--> "n" SecurityKey : keys
 
 
 
-    rectangle "SecureVault" as SecureVault #lightgreen {
-    }
-    
-        SecureVault   *--> "1" Model : "store"
-    
 
 @enduml

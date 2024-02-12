@@ -3,20 +3,20 @@ left to right direction
 
 
 state "sa" as sa #pink {
-state "esc" as saesc #lightblue {
+state "esc" as saesc #ffcccc {
 }
 }
 
 
-state "saesc" as pstatename #lightblue {
+state "saesc" as pstatename #ffcccc {
     state "Custom Function" as escfunction {
     }
 }
 
         state "sa" as sa #pink {
-state "esc" as saesc #lightblue {
-state "bundle" as saescbundle #lightblue {
-state "deploy" as saescbundledeploy #lightblue {
+state "esc" as saesc #ffcccc {
+state "bundle" as saescbundle #ffcccc {
+state "deploy" as saescbundledeploy #ffcccc {
 }
 }
 }
@@ -24,9 +24,9 @@ state "deploy" as saescbundledeploy #lightblue {
 
 
         state "sa" as sa #pink {
-state "esc" as saesc #lightblue {
-state "key" as saesckey #lightblue {
-state "store" as saesckeystore #lightblue {
+state "esc" as saesc #ffcccc {
+state "key" as saesckey #ffcccc {
+state "store" as saesckeystore #ffcccc {
 }
 }
 }

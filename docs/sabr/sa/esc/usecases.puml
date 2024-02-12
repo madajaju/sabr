@@ -3,7 +3,7 @@
 left to right direction
 
 
-rectangle "Edge Security Controller" #lightblue {
+rectangle "Edge Security Controller" #ffcccc {
 }
 
 

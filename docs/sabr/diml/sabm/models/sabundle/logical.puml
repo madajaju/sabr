@@ -71,10 +71,10 @@ rectangle "SecureVault" as SecureVault #lightblue {
 Model *--> "1" SecureVault : secureVault
 
 
-rectangle "StreamPolicy" as StreamPolicy #lightblue {
+rectangle "ChannelCreationPolicy" as ChannelCreationPolicy #lightblue {
 }
 
-Model o--> "n" StreamPolicy : policies
+Model o--> "n" ChannelCreationPolicy : policies
 
 
 rectangle "SABundleBuild" as SABundleBuild #lightblue {

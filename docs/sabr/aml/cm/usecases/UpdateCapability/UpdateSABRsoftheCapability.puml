@@ -17,7 +17,7 @@ box Capability Manager #00aaff
 
 "DevOpsEngineer" -> cm: Update SABRs of the Capability
 
-    cm -> "capability": create (name: myUpdateCap7,file: ./templates/capability.js)
+    cm -> "capability": create (name: UpdateCap7,file: ./templates/capability.js)
 
     "capability" --/ EventBus: capability.create
 

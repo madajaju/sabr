@@ -31,7 +31,7 @@ Sentient Agent Bundle consists of the definition of the services, data streams, 
 | aimodels | n | AIModel | false | false |  |
 | instances | n | SABundleInstance | false | true |  |
 | secureVault | 1 | SecureVault | true | true |  |
-| policies | n | StreamPolicy |  |  | Policies to apply to the SABR when the instance is launched. This should build the channels for the data streams. |
+| policies | n | ChannelCreationPolicy |  |  | Policies to apply to the SABR when the instance is launched. This should build the channels for the data streams. |
 | builds | n | SABundleBuild |  |  | Builds for the SABundle. A SABundleBuild encrypts the bundle and gets it ready for deployment. |
 | images | n | Image |  |  | Images attached to the bundle |
 
@@ -124,9 +124,9 @@ Create a Sentient Agent Bundle
 
 
 
-* REST - sabundle/deploy?policies=ref
-* bin - sabundle deploy --policies ref
-* js - sabundle.deploy({ policies:ref })
+* REST - sabundle/deploy?policies=ref&amp;parameters=json
+* bin - sabundle deploy --policies ref --parameters json
+* js - sabundle.deploy({ policies:ref,parameters:json })
 
 #### Description
 Deploy a SABundle
@@ -136,6 +136,7 @@ Deploy a SABundle
 | Name | Type | Required | Description |
 |---|---|---|---|
 | policies | ref |true | Policies to use for deploying the Bundle. |
+| parameters | json |false | Parameters for the Instance |
 
 
 

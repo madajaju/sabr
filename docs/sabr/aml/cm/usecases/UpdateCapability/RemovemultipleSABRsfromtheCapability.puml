@@ -17,7 +17,7 @@ box Capability Manager #00aaff
 
 "DevOpsEngineer" -> cm: Remove multiple SABRs from the Capability
 
-    cm -> "capability": create (name: myUpdateCap3,file: ./templates/capability.js)
+    cm -> "capability": create (name: UpdateCap3,file: ./templates/capability.js)
 
     "capability" --/ EventBus: capability.create
 

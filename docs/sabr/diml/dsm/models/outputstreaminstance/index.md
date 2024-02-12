@@ -63,6 +63,7 @@ The following diagram is the state net for this class.
 * [deploy() - Deploy a Data Stream Instance](#action-deploy)
 * [provision() - Provision a Data Stream Instance which will create channel instances for deployment.](#action-provision)
 * [send() - Send data to the Data Stream Instance](#action-send)
+* [sendBatch() - SendBatch data to the Data Stream Instance](#action-sendBatch)
 
 
 <h2>Method Details</h2>
@@ -124,6 +125,26 @@ Send data to the Data Stream Instance
 |---|---|---|---|
 | data | json |true | Data to send to the data stream |
 | properties | json |true | Properties of the data being sent. |
+
+
+
+
+### Action outputstreaminstance sendBatch
+
+
+
+* REST - outputstreaminstance/sendBatch?data=json
+* bin - outputstreaminstance sendBatch --data json
+* js - outputstreaminstance.sendBatch({ data:json })
+
+#### Description
+SendBatch data to the Data Stream Instance
+
+#### Parameters
+
+| Name | Type | Required | Description |
+|---|---|---|---|
+| data | json |true | Data to send to the data stream |
 
 
 

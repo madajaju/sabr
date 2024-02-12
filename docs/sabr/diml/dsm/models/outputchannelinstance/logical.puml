@@ -11,6 +11,7 @@ class "OutputChannelInstance" as Model {
  create()
  deploy()
  send()
+ sendBatch()
  failed()
  
 }

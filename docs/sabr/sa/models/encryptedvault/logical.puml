@@ -1,0 +1,24 @@
+@startuml
+
+class "EncryptedVault" as Model {
+ string encryptedDate
+
+ encrypt()
+ 
+}
+
+rectangle "SecurityKey" as SecurityKey #lightblue {
+}
+
+Model *--> "n" SecurityKey : streams
+
+
+
+
+    rectangle "SecureVault" as SecureVault #lightgreen {
+    }
+    
+        SecureVault   *--> "1" Model : "vault"
+    
+
+@enduml

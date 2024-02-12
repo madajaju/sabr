@@ -15,7 +15,7 @@ the container images for the deployment of the solution.
 
 * [sabr_aml_cm_web](image-sabr_aml_cm_web)
 
-* [a_d_web](image-a_d_web)
+* [devops](image-devops)
 
 * [sabr_aml_lc_web](image-sabr_aml_lc_web)
 
@@ -37,7 +37,7 @@ the container images for the deployment of the solution.
 
 * [sabr_sa_web](image-sabr_sa_web)
 
-* [ss_esc_controller](image-ss_esc_controller)
+* [sabr_sa_esc](image-sabr_sa_esc)
 
 * [sa_km_registry](image-sa_km_registry)
 
@@ -46,8 +46,6 @@ the container images for the deployment of the solution.
 * [sabr_sml_so_web](image-sabr_sml_so_web)
 
 * [sabr_sdi_web](image-sabr_sdi_web)
-
-* [sabr_web](image-sabr_web)
 
 * [sabr_pulsar:standalone](image-sabr_pulsar--standalone)
 

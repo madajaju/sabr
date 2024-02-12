@@ -41,7 +41,7 @@ Build the sentient agent bundle including the security vault, streams, transform
 ![Scenario BuildSAB](./BuildSAB.png)
 
 #### Steps
-1. [sabundle create --name mySABR1 --file ./templates/bundle1.js](#action-sabundle create)
+1. [bundle create --name mySABR1 --file ./templates/bundle1.js](#action-bundle create)
 1. [diml sabm sabundle build --name mySABR1](#action-diml sabm sabundle build)
 
 #### Actors
@@ -57,10 +57,10 @@ Create SABR in the system.
 ![Scenario CreateSABR](./CreateSABR.png)
 
 #### Steps
-1. [sabundle create --name mySABR1 --file ./templates/bundle1.js](#action-sabundle create)
-1. [sabundle create --name mySABR2 --file ./templates/bundle2.js](#action-sabundle create)
-1. [sabundle create --name mySABR3 --file ./templates/bundle3.js](#action-sabundle create)
-1. [sabundle create --name mySABR4 --file ./templates/bundle4.js](#action-sabundle create)
+1. [bundle create --name mySABR1 --file ./templates/bundle1.js](#action-bundle create)
+1. [bundle create --name mySABR2 --file ./templates/bundle2.js](#action-bundle create)
+1. [bundle create --name mySABR3 --file ./templates/bundle3.js](#action-bundle create)
+1. [bundle create --name mySABR4 --file ./templates/bundle4.js](#action-bundle create)
 
 #### Actors
 
@@ -75,7 +75,7 @@ Deploy SABR in the system.
 ![Scenario DeploySABR](./DeploySABR.png)
 
 #### Steps
-1. [sabundle create --name mySABR1 --file ./templates/bundle1.js](#action-sabundle create)
+1. [bundle create --name mySABR1 --file ./templates/bundle1.js](#action-bundle create)
 1. [streampolicy create --name historical --file ./templates/policy1.js](#action-streampolicy create)
 1. [streampolicy create --name summary --file ./templates/policy2.js](#action-streampolicy create)
 1. [streampolicy create --name realtime --file ./templates/policy3.js](#action-streampolicy create)
@@ -94,7 +94,7 @@ Deploy SABR with policies.
 ![Scenario DeploySABRtwo](./DeploySABRtwo.png)
 
 #### Steps
-1. [sabundle create --name mySABR2 --file ./templates/bundle2.js](#action-sabundle create)
+1. [bundle create --name mySABR2 --file ./templates/bundle2.js](#action-bundle create)
 1. [streampolicy create --name historical --file ./templates/policy1.js](#action-streampolicy create)
 1. [streampolicy create --name summary --file ./templates/policy2.js](#action-streampolicy create)
 1. [streampolicy create --name realtime --file ./templates/policy3.js](#action-streampolicy create)
@@ -113,7 +113,7 @@ Deploy SABR with multiple policies and complex SABR.
 ![Scenario DeploySABRthree](./DeploySABRthree.png)
 
 #### Steps
-1. [sabundle create --name mySABR3 --file ./templates/bundle3.js](#action-sabundle create)
+1. [bundle create --name mySABR3 --file ./templates/bundle3.js](#action-bundle create)
 1. [streampolicy create --name historical --file ./templates/policy1.js](#action-streampolicy create)
 1. [streampolicy create --name summary --file ./templates/policy2.js](#action-streampolicy create)
 1. [streampolicy create --name realtime --file ./templates/policy3.js](#action-streampolicy create)
@@ -132,7 +132,7 @@ Deploy SABR with three policies and complex transformations.
 ![Scenario DeploySABRfour](./DeploySABRfour.png)
 
 #### Steps
-1. [sabundle create --name mySABR3 --file ./templates/bundle3.js](#action-sabundle create)
+1. [bundle create --name mySABR3 --file ./templates/bundle3.js](#action-bundle create)
 1. [streampolicy create --name historical --file ./templates/policy1.js](#action-streampolicy create)
 1. [streampolicy create --name summary --file ./templates/policy2.js](#action-streampolicy create)
 1. [streampolicy create --name realtime --file ./templates/policy3.js](#action-streampolicy create)

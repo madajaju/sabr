@@ -13,7 +13,7 @@ parent stack and child stack relationships.
 * [sabr_aml_am](environment--sabr-aml-am-local)
 * [sabr_aml_cm](environment--sabr-aml-cm-local)
 * [sabr_aml](environment--sabr-aml-local)
-* [a_d](environment--sabr-aml-dsom-local)
+* [devops](environment--sabr-aml-dsom-local)
 * [sabr_aml_lc](environment--sabr-aml-lc-local)
 * [sabr_cpl](environment--sabr-cpl-local)
 * [sabr_diml_dsm](environment--sabr-diml-dsm-local)

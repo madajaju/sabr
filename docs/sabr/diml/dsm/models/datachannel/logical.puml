@@ -14,10 +14,10 @@ rectangle "Service" as Service #lightblue {
 Model o--> "1" Service : transformService
 
 
-rectangle "StreamPolicy" as StreamPolicy #lightblue {
+rectangle "ChannelCreationPolicy" as ChannelCreationPolicy #lightblue {
 }
 
-Model o--> "n" StreamPolicy : policy
+Model o--> "n" ChannelCreationPolicy : policy
 
 
 rectangle "DataChannelInstance" as DataChannelInstance #lightblue {
@@ -46,6 +46,16 @@ Model o--> "1" SecurityKey : decryptionKey
 
 
 
+    rectangle "ChannelActivationItem" as ChannelActivationItem #lightgreen {
+    }
+    
+        ChannelActivationItem   o--> "1" Model : "channel"
+    
+    rectangle "ChannelCreationPolicy" as ChannelCreationPolicy #lightgreen {
+    }
+    
+        ChannelCreationPolicy   o--> "n" Model : "channels"
+    
     rectangle "DataChannelInstance" as DataChannelInstance #lightgreen {
     }
     
@@ -65,11 +75,6 @@ Model o--> "1" SecurityKey : decryptionKey
     }
     
         OutputChannelInstance   o--> "1" Model : "design"
-    
-    rectangle "StreamPolicy" as StreamPolicy #lightgreen {
-    }
-    
-        StreamPolicy   o--> "n" Model : "channels"
     
     rectangle "AdminDataStream" as AdminDataStream #lightgreen {
     }

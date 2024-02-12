@@ -15,6 +15,14 @@ state "amlam" as pstatename #00aaff {
 
         state "aml" as aml #00aaff {
 state "am" as amlam #00aaff {
+state "application create" as amlamapplicationcreate #00aaff {
+}
+}
+}
+
+
+        state "aml" as aml #00aaff {
+state "am" as amlam #00aaff {
 state "application" as amlamapplication #00aaff {
 state "create" as amlamapplicationcreate #00aaff {
 }
@@ -114,7 +122,7 @@ state "deployed" as amlamserviceinstancedeployed #00aaff {
 }
 }
 
-        
+
     state "aml" as aml #00aaff {
 state "am" as amlam #00aaff {
 state "service" as amlamservice #00aaff {
@@ -125,7 +133,7 @@ state "provision" as amlamserviceprovision #00aaff {
 }
 
     amlamserviceinstancedeployed ---> amlamserviceprovision
-  
+
 
         state "aml" as aml #00aaff {
 state "am" as amlam #00aaff {
@@ -136,7 +144,7 @@ state "killed" as amlamserviceinstancekilled #00aaff {
 }
 }
 
-        
+
     state "aml" as aml #00aaff {
 state "am" as amlam #00aaff {
 state "Function" as amlamfunction #00aaff {
@@ -145,16 +153,16 @@ state "Function" as amlamfunction #00aaff {
 }
 
     amlamserviceinstancekilled ---> amlamfunction
-  
 
 
-    
-    
-        
-       
-    
-    
-        
-       
+
+
+
+
+
+
+
+
+
 
 @enduml

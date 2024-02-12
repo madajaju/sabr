@@ -4,6 +4,15 @@ left to right direction
 
     package "sabr" as sabr {
 package "aml" as sabraml {
+ component "am" as sabramlam
+ interface "application create" as sabramlamapplicationcreate
+sabramlam -- sabramlamapplicationcreate
+}
+}
+
+    
+    package "sabr" as sabr {
+package "aml" as sabraml {
 package "am" as sabramlam #00aaff {
  component "application" as sabramlamapplication
  interface "create" as sabramlamapplicationcreate
@@ -127,6 +136,7 @@ hexagon "serviceinstance.killed" as serviceinstancekilled
     
     sabramlamapplicationupdate <-- DevOpsEngineerManageApplicationUpdateApplication
     
+
 
 
 

@@ -15,7 +15,13 @@ REST ()-- i
 Web ()-- i
 
 package "DevSecOpsManager" #00aaff {
+        class "Environment" {
+                 string attr1
+                    }
+                Environment o--> "1" ModelName : assoc1
+            
     
+
 }
 
 

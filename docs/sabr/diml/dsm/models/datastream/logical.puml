@@ -9,10 +9,10 @@ class "DataStream" as Model {
  
 }
 
-rectangle "StreamPolicy" as StreamPolicy #lightblue {
+rectangle "ChannelCreationPolicy" as ChannelCreationPolicy #lightblue {
 }
 
-Model o--> "n" StreamPolicy : policies
+Model o--> "n" ChannelCreationPolicy : policies
 
 
 rectangle "DataChannel" as DataChannel #lightblue {
@@ -59,6 +59,11 @@ Model o--> "1" SecurityKey : decryptionKey
 
 
 
+    rectangle "ChannelCreationPolicy" as ChannelCreationPolicy #lightgreen {
+    }
+    
+        ChannelCreationPolicy   o--> "n" Model : "stream"
+    
     rectangle "DataChannel" as DataChannel #lightgreen {
     }
     
@@ -78,11 +83,6 @@ Model o--> "1" SecurityKey : decryptionKey
     }
     
         OutputStreamInstance   o--> "1" Model : "parent"
-    
-    rectangle "StreamPolicy" as StreamPolicy #lightgreen {
-    }
-    
-        StreamPolicy   o--> "n" Model : "stream"
     
     rectangle "AdminTransform" as AdminTransform #lightgreen {
     }

@@ -22,6 +22,12 @@ rectangle "Capability Manager" as cm #00aaff {
 
 }
 
+rectangle "DevSecOpsManager" as dsom #00aaff {
+        usecase "Manage Environments" as ManageEnvironments
+    DevOpsEngineer --> ManageEnvironments
+
+}
+
 rectangle "Sentient Agent Bundle Manager" as sabm #ffcc88 {
         usecase "Manage SABR" as ManageSABR
     DevOpsEngineer --> ManageSABR
@@ -31,6 +37,8 @@ rectangle "Sentient Agent Bundle Manager" as sabm #ffcc88 {
 rectangle "Sentient Agent Bundle Resources" as sabr #bbaaff {
         usecase "Manage Capabilities" as ManageCapabilities
     DevOpsEngineer --> ManageCapabilities
+    usecase "Ships" as Ships
+    DevOpsEngineer --> Ships
 
 }
 

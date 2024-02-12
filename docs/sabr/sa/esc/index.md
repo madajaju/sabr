@@ -8,7 +8,7 @@ grand_parent: Package Sentient Agent Bundle Resources
 
 # Edge Security Controller
 
-Edge Security Controller is a package that contains...
+Edge Security Controller runs on every devices in the sabr ecosystem. It is responsible for decrypting SABs and deploying SABRs in the data mesh.
 
 
 
@@ -139,15 +139,6 @@ Services in the prod environment
 The Edge Security Controller subsystem provides the following activities and flows that help satisfy the use
 cases and scenarios of the subsystem.
 
-
-### Messages Handled
-
-The Edge Security Controller subsystem is an event driven architecture and handle several events. The following
-events are handled by this subsystem. Please note that this subsystem is not the only subsystem that handles
-these events.
-
-| Message | Action | Description |
-| --- | --- | --- |
 
 
 

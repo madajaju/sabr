@@ -1,0 +1,36 @@
+@startuml
+
+
+usecase "Ships" as Ships #yellow
+
+Actor "DevOps Engineer" as DevOpsEngineer
+
+DevOpsEngineer --> Ships
+
+
+
+usecase "AISNoContact" as AISNoContact #lightgrey
+
+Ships --> AISNoContact
+
+usecase "AISOne" as AISOne #lightgrey
+
+Ships --> AISOne
+
+usecase "AISSABR" as AISSABR #lightgrey
+
+Ships --> AISSABR
+
+usecase "USVOne" as USVOne #lightgrey
+
+Ships --> USVOne
+
+
+
+
+
+
+
+
+
+@enduml

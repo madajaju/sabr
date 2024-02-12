@@ -21,6 +21,16 @@ Model o--> "n" DataStream : outputs
 
 
 
+    rectangle "ChannelCreationPolicy" as ChannelCreationPolicy #lightgreen {
+    }
+    
+        ChannelCreationPolicy   o--> "1" Model : "post"
+    
+    rectangle "ChannelCreationPolicy" as ChannelCreationPolicy #lightgreen {
+    }
+    
+        ChannelCreationPolicy   o--> "1" Model : "pre"
+    
     rectangle "DataStream" as DataStream #lightgreen {
     }
     
@@ -30,16 +40,6 @@ Model o--> "n" DataStream : outputs
     }
     
         InputChannelInstance   o--> "n" Model : "transforms"
-    
-    rectangle "StreamPolicy" as StreamPolicy #lightgreen {
-    }
-    
-        StreamPolicy   o--> "1" Model : "post"
-    
-    rectangle "StreamPolicy" as StreamPolicy #lightgreen {
-    }
-    
-        StreamPolicy   o--> "1" Model : "pre"
     
     rectangle "AdminDataStream" as AdminDataStream #lightgreen {
     }

@@ -77,9 +77,9 @@ The following diagram is the state net for this class.
 
 
 
-* REST - sabundleinstance/deploy?policies=ref
-* bin - sabundleinstance deploy --policies ref
-* js - sabundleinstance.deploy({ policies:ref })
+* REST - sabundleinstance/deploy?policies=ref&amp;parameters=json
+* bin - sabundleinstance deploy --policies ref --parameters json
+* js - sabundleinstance.deploy({ policies:ref,parameters:json })
 
 #### Description
 Deploy a a SABundleInstance
@@ -89,6 +89,7 @@ Deploy a a SABundleInstance
 | Name | Type | Required | Description |
 |---|---|---|---|
 | policies | ref |true | Policies to use for deploying the Bundle. |
+| parameters | json |false | Parameters for the Instance |
 
 
 

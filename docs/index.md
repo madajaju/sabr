@@ -372,6 +372,7 @@ of a centralized organizational structure of the actors of the system.
 * [Manage Security](usecase-ManageSecurity) - Manage Security use case includes attestation of devices and services; prevention, detection, and remediation of cyber threats; and encryption and hash key management.
 * [Provide Digital Assistance](usecase-ProvideDigitalAssistance) - Provide Digital Assistance use cases provides curated and decision making information to the tactical operator. This could include suggestions to perform work, alerts to changing conditions, or automation of repetitive tasks.
 * [Provide Mission Insight](usecase-ProvideMissionInsight) - Provide Mission Insight use cases analyses the data on the edge and in the data center to provide insight to business and mission problems through data analytics techniques
+* [Ships](usecase-Ships) - Simulate Ships
 
 ![UseCase](./usecases.png)
 

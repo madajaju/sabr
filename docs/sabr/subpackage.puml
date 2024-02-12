@@ -6,10 +6,17 @@ package "Sentient Agent Bundle Resources" #bbaaff {
 
     interface "Sentient Agent Bundle Resources" as i {
     
+            /sabr/streampolicy create()
+            /sabr/application/create()
             /sabr/bundle/build()
+            /sabr/bundle/create()
+            /sabr/capability/create()
+            /sabr/environment/create()
             /sabr/pulsar/streams()
             /sabr/pulsar/topic()
             /sabr/pulsar/topics()
+            /sabr/sabundle/build()
+            /sabr/streampolicy/create()
     
     }
 }

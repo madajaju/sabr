@@ -4,7 +4,7 @@ left to right direction
 
     package "sabr" as sabr {
 package "sa" as sabrsa {
-package "esc" as sabrsaesc #lightblue {
+package "esc" as sabrsaesc #ffcccc {
  component "bundle" as sabrsaescbundle
  interface "deploy" as sabrsaescbundledeploy
 sabrsaescbundle -- sabrsaescbundledeploy
@@ -12,10 +12,10 @@ sabrsaescbundle -- sabrsaescbundledeploy
 }
 }
 
-
+    
     package "sabr" as sabr {
 package "sa" as sabrsa {
-package "esc" as sabrsaesc #lightblue {
+package "esc" as sabrsaesc #ffcccc {
  component "key" as sabrsaesckey
  interface "store" as sabrsaesckeystore
 sabrsaesckey -- sabrsaesckeystore
@@ -23,6 +23,7 @@ sabrsaesckey -- sabrsaesckeystore
 }
 }
 
+    
 
 
 

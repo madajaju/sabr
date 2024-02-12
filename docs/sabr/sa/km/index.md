@@ -142,15 +142,6 @@ The Key Manager subsystem provides the following activities and flows that help 
 cases and scenarios of the subsystem.
 
 
-### Messages Handled
-
-The Key Manager subsystem is an event driven architecture and handle several events. The following
-events are handled by this subsystem. Please note that this subsystem is not the only subsystem that handles
-these events.
-
-| Message | Action | Description |
-| --- | --- | --- |
-
 
 
 ### Messages Sent

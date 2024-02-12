@@ -11,6 +11,7 @@ nav_order: 9
 * [SABR Deployment Process](workflow-SABR Deployment Process)
 * [Attest SABR to Device](workflow-Attest SABR to Device)
 * [Security Key Generation Process](workflow-Security Key Generation Process)
+* [Security Workflow](workflow-Security Workflow)
 * [Device Provision Process](workflow-Device Provision Process)
 
     

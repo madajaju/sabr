@@ -16,8 +16,10 @@ Responsible for the management of the automation of the delivery of applications
 * [Deploy Capability](usecase-DeployCapability)
 * [Remove Capability](usecase-RemoveCapability)
 * [Update Capability](usecase-UpdateCapability)
+* [Manage Environments](usecase-ManageEnvironments)
 * [Manage SABR](usecase-ManageSABR)
 * [Manage Capabilities](usecase-ManageCapabilities)
+* [Ships](usecase-Ships)
 
 
 ![Use Case Diagram](./UseCase.png)
@@ -30,5 +32,7 @@ TBD
 * [ sabr aml cm capability deploy](action--sabr-aml-cm-capability-deploy) - Deploy a capability into the ecosystem. This should deploy all of the SABRs in the capability or attach to currently running SABRs in the defined capabiility.
 * [ sabr aml cm capability remove](action--sabr-aml-cm-capability-remove) - Remove Capability allows a DevOps Engineer to remove a capability from the ecosystem. This will remove all SABRs controlled and managed by the capability. It will not remove SABRs that are used by other Capabilties.
 * [ sabr aml cm capability update](action--sabr-aml-cm-capability-update) - Update Capability allows a DevOps Engineer to update a capability in the ecosystem. This might include updating configurations, updating SABRs, removing SABRs, or adding SABRs to and existing capability.
+* [ sabr aml dsom data govern](action--sabr-aml-dsom-data-govern) - Manage Environments is the description
 * [ sabr diml sabm sabundle list](action--sabr-diml-sabm-sabundle-list) - Manage SABR allows the devops engineers to create,deploy, updated and destroy SABRs in the system.
 * [ sabr capability list](action--sabr-capability-list) - Manage Capabilities use cases gives DevOps Engineers and IT Operations the ability to deploy and manage new capabilities in the system. A capability can be a set of workflows or applications that when working together provide value to the tactical operator.
+* [ sabr sabundle list](action--sabr-sabundle-list) - Simulate Ships

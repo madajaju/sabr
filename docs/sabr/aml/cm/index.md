@@ -317,9 +317,9 @@ Test a Capability
 
 
 
-* REST - /sabr/aml/cm/capability/update?attr1=string
-* bin -  sabr aml cm capability update --attr1 string
-* js - .sabr.aml.cm.capability.update({ attr1:string })
+* REST - /sabr/aml/cm/capability/update?capability=string&amp;file=file
+* bin -  sabr aml cm capability update --capability string --file file
+* js - .sabr.aml.cm.capability.update({ capability:string,file:file })
 
 #### Description
 Description of the action
@@ -328,7 +328,8 @@ Description of the action
 
 | Name | Type | Required | Description |
 |---|---|---|---|
-| attr1 | string |false | Description for the parameter |
+| capability | string |true | Name or ID of the capability to update |
+| file | file |false | File contains the updates for the capability |
 
 
 

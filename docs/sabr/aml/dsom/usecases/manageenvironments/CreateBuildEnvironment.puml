@@ -1,6 +1,6 @@
 @startuml
 
-actor "Actor"
+actor "DevOpsEngineer"
 
 
 entity EventBus
@@ -10,16 +10,16 @@ box DevSecOpsManager #00aaff
 end box
 
 
+box Service Orchestrator #aaffaa
+            participant provisioner
+    end box
 
-"Actor" -> dsom: Create Build Environment
 
-    dsom -> "dsom": list (name: hello,file: ./templates/world.yml)
+"DevOpsEngineer" -> dsom: Create Build Environment
 
-    "dsom" --/ EventBus: data.list
+    dsom -> "provisioner": create (name: build,file: ./templates/environment.js)
 
-    dsom -> "dsom": list (name: hello,file: ./templates/world.yml)
-
-    "dsom" --/ EventBus: data.list
+    "provisioner" --/ EventBus: environment.create
 
 
 

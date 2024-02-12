@@ -2,7 +2,7 @@
 
 
 
-package "Edge Security Controller" #lightblue {
+package "Edge Security Controller" #ffcccc {
 
     interface "Edge Security Controller" as i {
     
@@ -22,7 +22,7 @@ i -down- CLI
 i -down- REST
 WebSocket -left- i: events >
 
-package "Edge Security Controller" #lightblue {
+package "Edge Security Controller" #ffcccc {
 
 
 }

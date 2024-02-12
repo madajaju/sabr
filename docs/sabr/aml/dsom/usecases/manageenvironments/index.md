@@ -11,7 +11,7 @@ Manage Environments is the description
 
 ## Actors
 
-* [Actor](actor-actor)
+* [DevOps Engineer](actor-devops)
 
 
 
@@ -36,12 +36,11 @@ Create Build Environment is the description
 ![Scenario CreateBuildEnvironment](./CreateBuildEnvironment.png)
 
 #### Steps
-1. [data list --name hello --file ./templates/world.yml](#action-data-list)
-1. [data list --name hello --file ./templates/world.yml](#action-data-list)
+1. [environment create --name build --file ./templates/environment.js](#action-environment create)
 
 #### Actors
 
-* [Actor](actor-actor)
+* [DevOps Engineer](actor-devops)
 
 
 

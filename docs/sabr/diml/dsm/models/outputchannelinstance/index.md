@@ -56,6 +56,7 @@ The following diagram is the state net for this class.
 * [create() - Create a Output Channel Instance](#action-create)
 * [deploy() - Deploy the output channel instance](#action-deploy)
 * [send() - Send data to the Data Stream Instance](#action-send)
+* [sendBatch() - Send data to the Data Stream Instance](#action-sendBatch)
 * [failed() - Deployment Failed on the Data Channel Instance.](#action-failed)
 
 
@@ -112,6 +113,26 @@ Send data to the Data Stream Instance
 |---|---|---|---|
 | data | json |true | Data to send to the data stream |
 | properties | json |true | Properties of the data being sent. |
+
+
+
+
+### Action outputchannelinstance sendBatch
+
+
+
+* REST - outputchannelinstance/sendBatch?data=json
+* bin - outputchannelinstance sendBatch --data json
+* js - outputchannelinstance.sendBatch({ data:json })
+
+#### Description
+Send data to the Data Stream Instance
+
+#### Parameters
+
+| Name | Type | Required | Description |
+|---|---|---|---|
+| data | json |true | Data to send to the data stream |
 
 
 

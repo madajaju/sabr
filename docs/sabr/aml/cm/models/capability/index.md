@@ -20,7 +20,7 @@ Capabilities are deployed across multiple assets in the ecosystem. They consist 
 
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
-| policies | n | StreamPolicy |  |  | Policies to apply to the bundles when they are deployed. |
+| policies | n | ChannelCreationPolicy |  |  | Policies to apply to the bundles when they are deployed. |
 | bundles | n | SABundle | false | false | SABR Bundles that make up the Capabilities. |
 | instances | n | CapabilityInstance | true | true | This is a instance of capability running in the ecosystem. |
 

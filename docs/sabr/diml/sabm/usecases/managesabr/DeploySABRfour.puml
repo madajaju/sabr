@@ -10,32 +10,30 @@ box Sentient Agent Bundle Manager #ffcc88
 end box
 
 
-box Sentient Agent Bundle Manager #ffcc88
-            participant sabundle
+box Sentient Agent Bundle Resources #bbaaff
     end box
 
-box Data Stream Manager #ffcc88
-            participant streampolicy
+box Sentient Agent Bundle Manager #ffcc88
     end box
 
 
 "DevOpsEngineer" -> sabm: Deploy SABR four
 
-    sabm -> "sabundle": create (name: mySABR3,file: ./templates/bundle3.js)
+    sabm -> "sentient agent bundle resources": create (name: mySABR3,file: ./templates/bundle3.js)
 
-    "sabundle" --/ EventBus: sabundle.create
+    "sentient agent bundle resources" --/ EventBus: bundle.create
 
-    sabm -> "streampolicy": create (name: historical,file: ./templates/policy1.js)
+    sabm -> "sentient agent bundle resources": create (name: historical,file: ./templates/policy1.js)
 
-    "streampolicy" --/ EventBus: streampolicy.create
+    "sentient agent bundle resources" --/ EventBus: streampolicy.create
 
-    sabm -> "streampolicy": create (name: summary,file: ./templates/policy2.js)
+    sabm -> "sentient agent bundle resources": create (name: summary,file: ./templates/policy2.js)
 
-    "streampolicy" --/ EventBus: streampolicy.create
+    "sentient agent bundle resources" --/ EventBus: streampolicy.create
 
-    sabm -> "streampolicy": create (name: realtime,file: ./templates/policy3.js)
+    sabm -> "sentient agent bundle resources": create (name: realtime,file: ./templates/policy3.js)
 
-    "streampolicy" --/ EventBus: streampolicy.create
+    "sentient agent bundle resources" --/ EventBus: streampolicy.create
 
     sabm -> "sentient agent bundle manager": deploy (sabr: mySABR3,policies: realtime)
 

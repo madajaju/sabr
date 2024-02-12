@@ -15,7 +15,7 @@ package "Application Manager" #00aaff {
 
 package "Data Stream Manager" #ffcc88 {
     
-        class StreamPolicy {
+        class ChannelCreationPolicy {
         }
     }
 
@@ -63,7 +63,7 @@ package "Capability Manager" #00aaff {
                      release()
                      test()
             }
-                Capability o--> "n" StreamPolicy : policies
+                Capability o--> "n" ChannelCreationPolicy : policies
                         Capability o--> "n" SABundle : bundles
                         Capability *--> "n" CapabilityInstance : instances
             

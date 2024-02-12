@@ -147,4 +147,29 @@ hexagon "sabundleinstance.enabled" as sabundleinstanceenabled
 
 
 
+
+        rectangle "Ships" as Ships #ffffaa {
+            ("AIS No Contact")/ as ApplicationDeveloperShipsAISNoContact
+        }
+    
+    sabrdimlsabmsabundlebuild <-- ApplicationDeveloperShipsAISNoContact
+    
+        rectangle "Ships" as Ships #ffffaa {
+            ("AIS One")/ as ApplicationDeveloperShipsAISOne
+        }
+    
+    sabrdimlsabmsabundlebuild <-- ApplicationDeveloperShipsAISOne
+    
+        rectangle "Ships" as Ships #ffffaa {
+            ("Build AIS SAB")/ as ApplicationDeveloperShipsAISSABR
+        }
+    
+    sabrdimlsabmsabundlebuild <-- ApplicationDeveloperShipsAISSABR
+    
+        rectangle "Ships" as Ships #ffffaa {
+            ("USV One Instance")/ as ApplicationDeveloperShipsUSVOne
+        }
+    
+    sabrdimlsabmsabundlebuild <-- ApplicationDeveloperShipsUSVOne
+    
 @enduml

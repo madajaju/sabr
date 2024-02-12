@@ -1,0 +1,152 @@
+---
+title: Ships
+permalink: usecase-Ships
+parent: UseCases
+---
+# Ships
+
+Simulate Ships
+
+![Activities Diagram](./Activities.png)
+
+## Actors
+
+* [DevOps Engineer](actor-devops)
+
+
+
+
+
+
+
+
+
+
+
+## Detail Scenarios
+
+* [AISNoContact](#scenario-AISNoContact)
+* [AISOne](#scenario-AISOne)
+* [AISSABR](#scenario-AISSABR)
+* [USVOne](#scenario-USVOne)
+
+
+
+### Scenario AIS No Contact
+
+Build the sentient agent bundle including the security vault, streams, transforms, etc..
+
+![Scenario AISNoContact](./AISNoContact.png)
+
+#### Steps
+1. [bundle create --name Ship1 --file ./projects/AISSimulator/AISShip/bundle.js](#action-bundle create)
+1. [bundle create --name NoContact --file ./projects/AISSimulator/AISNoContact/bundle.js](#action-bundle create)
+1. [bundle create --name Agg1 --file ./projects/AISSimulator/AISAgg/bundle.js](#action-bundle create)
+1. [bundle create --name Viewer1 --file ./projects/AISSimulator/AISViewer/bundle.js](#action-bundle create)
+1. [diml sabm policy create --file ./projects/AISSimulator/AISShip/policies.js](#action-diml sabm policy create)
+1. [diml sabm bundle deploy --sabr Viewer1 --policies realtime](#action-diml sabm bundle deploy)
+1. [diml sabm bundle deploy --sabr NoContact --policies realtime --parameters timeout=10000](#action-diml sabm bundle deploy)
+1. [diml sabm bundle deploy --sabr Agg1 --policies realtime](#action-diml sabm bundle deploy)
+1. [diml sabm bundle deploy --sabr Ship1 --policies realtime --parameters sourceFile=../AIS_Simulator/ships/215071000A.csv](#action-diml sabm bundle deploy)
+1. [diml sabm bundle deploy --sabr Ship1 --policies realtime --parameters sourceFile=../AIS_Simulator/ships/215031000A.csv](#action-diml sabm bundle deploy)
+
+#### Actors
+
+* [Application Developer](actor-applicationdeveloper)
+
+
+
+### Scenario AIS One
+
+Build and deploy SABRS for a general area with several ships.
+
+![Scenario AISOne](./AISOne.png)
+
+#### Steps
+1. [bundle create --name Ship1 --file ./projects/AISSimulator/AISShip/bundle.js](#action-bundle create)
+1. [bundle create --name Agg1 --file ./projects/AISSimulator/AISAgg/bundle.js](#action-bundle create)
+1. [bundle create --name Viewer1 --file ./projects/AISSimulator/AISViewer/bundle.js](#action-bundle create)
+1. [diml sabm sabundle build --name Ship1](#action-diml sabm sabundle build)
+1. [diml sabm sabundle build --name Agg1](#action-diml sabm sabundle build)
+1. [diml sabm sabundle build --name Viewer1](#action-diml sabm sabundle build)
+1. [diml sabm policy create --file ./projects/AISSimulator/AISShip/policies.js](#action-diml sabm policy create)
+1. [diml sabm bundle deploy --sabr Viewer1 --policies realtime](#action-diml sabm bundle deploy)
+1. [diml sabm bundle deploy --sabr Agg1 --policies realtime](#action-diml sabm bundle deploy)
+1. [diml sabm bundle deploy --sabr Ship1 --policies realtime --parameters sourceFile=../AIS_Simulator/ships/215071000.csv](#action-diml sabm bundle deploy)
+1. [diml sabm bundle deploy --sabr Ship1 --policies realtime --parameters sourceFile=../AIS_Simulator/ships/215031000.csv](#action-diml sabm bundle deploy)
+1. [diml sabm bundle deploy --sabr Ship1 --policies realtime --parameters sourceFile=../AIS_Simulator/ships/367092720.csv](#action-diml sabm bundle deploy)
+1. [diml sabm bundle deploy --sabr Ship1 --policies realtime --parameters sourceFile=../AIS_Simulator/ships/367182840.csv](#action-diml sabm bundle deploy)
+1. [diml sabm bundle deploy --sabr Ship1 --policies realtime --parameters sourceFile=../AIS_Simulator/ships/367289000.csv](#action-diml sabm bundle deploy)
+1. [diml sabm bundle deploy --sabr Ship1 --policies realtime --parameters sourceFile=../AIS_Simulator/ships/367370780.csv](#action-diml sabm bundle deploy)
+1. [diml sabm bundle deploy --sabr Ship1 --policies realtime --parameters sourceFile=../AIS_Simulator/ships/367425680.csv](#action-diml sabm bundle deploy)
+1. [diml sabm bundle deploy --sabr Ship1 --policies realtime --parameters sourceFile=../AIS_Simulator/ships/367530120.csv](#action-diml sabm bundle deploy)
+1. [diml sabm bundle deploy --sabr Ship1 --policies realtime --parameters sourceFile=../AIS_Simulator/ships/367602610.csv](#action-diml sabm bundle deploy)
+1. [diml sabm bundle deploy --sabr Ship1 --policies realtime --parameters sourceFile=../AIS_Simulator/ships/367611060.csv](#action-diml sabm bundle deploy)
+1. [diml sabm bundle deploy --sabr Ship1 --policies realtime --parameters sourceFile=../AIS_Simulator/ships/368010420.csv](#action-diml sabm bundle deploy)
+1. [diml sabm bundle deploy --sabr Ship1 --policies realtime --parameters sourceFile=../AIS_Simulator/ships/368066140.csv](#action-diml sabm bundle deploy)
+1. [diml sabm bundle deploy --sabr Ship1 --policies realtime --parameters sourceFile=../AIS_Simulator/ships/368132890.csv](#action-diml sabm bundle deploy)
+1. [diml sabm bundle deploy --sabr Ship1 --policies realtime --parameters sourceFile=../AIS_Simulator/ships/368149330.csv](#action-diml sabm bundle deploy)
+1. [diml sabm bundle deploy --sabr Ship1 --policies realtime --parameters sourceFile=../AIS_Simulator/ships/368175820.csv](#action-diml sabm bundle deploy)
+1. [diml sabm bundle deploy --sabr Ship1 --policies realtime --parameters sourceFile=../AIS_Simulator/ships/368184020.csv](#action-diml sabm bundle deploy)
+1. [diml sabm bundle deploy --sabr Ship1 --policies realtime --parameters sourceFile=../AIS_Simulator/ships/368197440.csv](#action-diml sabm bundle deploy)
+1. [diml sabm bundle deploy --sabr Ship1 --policies realtime --parameters sourceFile=../AIS_Simulator/ships/372443000.csv](#action-diml sabm bundle deploy)
+1. [diml sabm bundle deploy --sabr Ship1 --policies realtime --parameters sourceFile=../AIS_Simulator/ships/538002220.csv](#action-diml sabm bundle deploy)
+1. [diml sabm bundle deploy --sabr Ship1 --policies realtime --parameters sourceFile=../AIS_Simulator/ships/538002784.csv](#action-diml sabm bundle deploy)
+1. [diml sabm bundle deploy --sabr Ship1 --policies realtime --parameters sourceFile=../AIS_Simulator/ships/636019418.csv](#action-diml sabm bundle deploy)
+
+#### Actors
+
+* [Application Developer](actor-applicationdeveloper)
+
+
+
+### Scenario Build AIS SAB
+
+Build and SABRs for Ships, No Contact, and Viewer
+
+![Scenario BuildAISSAB](./BuildAISSAB.png)
+
+#### Steps
+1. [bundle create --name Ship1 --file ./projects/AISSimulator/AISShip/bundle.js](#action-bundle create)
+1. [bundle create --name Agg1 --file ./projects/AISSimulator/AISAgg/bundle.js](#action-bundle create)
+1. [bundle create --name NoContact --file ./projects/AISSimulator/AISNoContact/bundle.js](#action-bundle create)
+1. [bundle create --name Viewer1 --file ./projects/AISSimulator/AISViewer/bundle.js](#action-bundle create)
+1. [diml sabm sabundle build --name Ship1](#action-diml sabm sabundle build)
+1. [diml sabm sabundle build --name Agg1](#action-diml sabm sabundle build)
+1. [diml sabm sabundle build --name Viewer1](#action-diml sabm sabundle build)
+1. [diml sabm policy create --file ./projects/AISSimulator/AISShip/policies.js](#action-diml sabm policy create)
+1. [diml sabm bundle deploy --sabr Viewer1 --policies realtime](#action-diml sabm bundle deploy)
+1. [diml sabm bundle deploy --sabr NoContact --policies realtime --parameters timeout=10000](#action-diml sabm bundle deploy)
+1. [diml sabm bundle deploy --sabr Agg1 --policies realtime](#action-diml sabm bundle deploy)
+1. [diml sabm bundle deploy --sabr Ship1 --policies realtime --parameters sourceFile=../AIS_Simulator/ships/215071000A.csv](#action-diml sabm bundle deploy)
+1. [diml sabm bundle deploy --sabr Ship1 --policies realtime --parameters sourceFile=../AIS_Simulator/ships/215031000A.csv](#action-diml sabm bundle deploy)
+
+#### Actors
+
+* [Application Developer](actor-applicationdeveloper)
+
+
+
+### Scenario USV One Instance
+
+Build the sentient agent bundle including the security vault, streams, transforms, etc..
+
+![Scenario USVOneInstance](./USVOneInstance.png)
+
+#### Steps
+1. [bundle create --name Ship1 --file ./projects/AISSimulator/AISShip/bundle.js](#action-bundle create)
+1. [bundle create --name USV --file ./projects/AISSimulator/AISUSV/bundle.js](#action-bundle create)
+1. [bundle create --name Agg1 --file ./projects/AISSimulator/AISAgg/bundle.js](#action-bundle create)
+1. [bundle create --name Viewer1 --file ./projects/AISSimulator/AISViewer/bundle.js](#action-bundle create)
+1. [diml sabm policy create --file ./projects/AISSimulator/AISShip/policies.js](#action-diml sabm policy create)
+1. [diml sabm bundle deploy --sabr Viewer1 --policies realtime](#action-diml sabm bundle deploy)
+1. [diml sabm bundle deploy --sabr Agg1 --policies realtime](#action-diml sabm bundle deploy)
+1. [diml sabm bundle deploy --sabr USV --policies realtime --parameters MMSI=215071000,sourceFiles=../AIS_Simulator/ships/215071000.csv:../AIS_Simulator/ships/367092720.csv:../AIS_Simulator/ships/367182840.csv:../AIS_Simulator/ships/367289000.csv:../AIS_Simulator/ships/367370780.csv:../AIS_Simulator/ships/367425680.csv:../AIS_Simulator/ships/367530120.csv:../AIS_Simulator/ships/367602610.csv:../AIS_Simulator/ships/367611060.csv:../AIS_Simulator/ships/368010420.csv:../AIS_Simulator/ships/368066140.csv:../AIS_Simulator/ships/368132890.csv:../AIS_Simulator/ships/368149330.csv:../AIS_Simulator/ships/368175820.csv:../AIS_Simulator/ships/368184020.csv:../AIS_Simulator/ships/368197440.csv:../AIS_Simulator/ships/372443000.csv:../AIS_Simulator/ships/538002220.csv:../AIS_Simulator/ships/538002784.csv:../AIS_Simulator/ships/636019418.csv](#action-diml sabm bundle deploy)
+
+#### Actors
+
+* [Application Developer](actor-applicationdeveloper)
+
+
+
+

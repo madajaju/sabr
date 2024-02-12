@@ -62,6 +62,9 @@ organize the architecture and make it easier to analyze, understand, design, and
 
 The following are the classes in the data model of the Data Stream Manager subsystem.
 
+* [ChannelActivationItem](class-ChannelActivationItem)
+* [ChannelActivationPolicy](class-ChannelActivationPolicy)
+* [ChannelCreationPolicy](class-ChannelCreationPolicy)
 * [DataChannel](class-DataChannel)
 * [DataChannelInstance](class-DataChannelInstance)
 * [DataStream](class-DataStream)
@@ -70,7 +73,6 @@ The following are the classes in the data model of the Data Stream Manager subsy
 * [InputStreamInstance](class-InputStreamInstance)
 * [OutputChannelInstance](class-OutputChannelInstance)
 * [OutputStreamInstance](class-OutputStreamInstance)
-* [StreamPolicy](class-StreamPolicy)
 
 
 
@@ -172,6 +174,15 @@ these events.
 
 | Event | Description | Emitter |
 |-------|-------------|---------|
+| channelactivationitem.create |  When an object of type ChannelActivationItem is created. | ChannelActivationItem
+| channelactivationitem.destroy |  When an object of type ChannelActivationItem is destroyed. | ChannelActivationItem
+| channelactivationitem.updated |  When an object of type ChannelActivationItem has an attribute or association updated. | ChannelActivationItem
+| channelactivationpolicy.create |  When an object of type ChannelActivationPolicy is created. | ChannelActivationPolicy
+| channelactivationpolicy.destroy |  When an object of type ChannelActivationPolicy is destroyed. | ChannelActivationPolicy
+| channelactivationpolicy.updated |  When an object of type ChannelActivationPolicy has an attribute or association updated. | ChannelActivationPolicy
+| channelcreationpolicy.create |  When an object of type ChannelCreationPolicy is created. | ChannelCreationPolicy
+| channelcreationpolicy.destroy |  When an object of type ChannelCreationPolicy is destroyed. | ChannelCreationPolicy
+| channelcreationpolicy.updated |  When an object of type ChannelCreationPolicy has an attribute or association updated. | ChannelCreationPolicy
 | datachannel.create |  When an object of type DataChannel is created. | DataChannel
 | datachannel.destroy |  When an object of type DataChannel is destroyed. | DataChannel
 | datachannel.updated |  When an object of type DataChannel has an attribute or association updated. | DataChannel
@@ -196,9 +207,6 @@ these events.
 | outputstreaminstance.create |  When an object of type OutputStreamInstance is created. | OutputStreamInstance
 | outputstreaminstance.destroy |  When an object of type OutputStreamInstance is destroyed. | OutputStreamInstance
 | outputstreaminstance.updated |  When an object of type OutputStreamInstance has an attribute or association updated. | OutputStreamInstance
-| streampolicy.create |  When an object of type StreamPolicy is created. | StreamPolicy
-| streampolicy.destroy |  When an object of type StreamPolicy is destroyed. | StreamPolicy
-| streampolicy.updated |  When an object of type StreamPolicy has an attribute or association updated. | StreamPolicy
 
 
 

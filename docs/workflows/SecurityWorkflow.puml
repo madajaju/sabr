@@ -1,0 +1,46 @@
+@startuml
+partition "ITOperations" #ffffcc {
+(*) --> ===F1===
+}
+
+partition "Common Physical Layer" #bbbbbb {
+===F1=== --> "Attest Hardware"
+}
+
+partition "DevOps Engineer" #ffffcc {
+===F1=== --> "Build SABR"
+}
+partition "Security Aspect" pink {
+"Attest Hardware" --> "Generate Hardware Keys"
+}
+partition "Common Physical Layer" #bbbbbb {
+"Generate Hardware Keys" --> "Deploy Attested Hardware"
+}
+partition "Capability Manager" #00aaff {
+"Deploy Attested Hardware" --> "Deploy Capability Release"
+}
+partition "Capability Manager" #00aaff {
+"Build SABR" --> "Build Capability"
+}
+partition "Security Aspect" pink {
+"Build Capability" --> "Generate Attestation Keys"
+}
+partition "Capability Manager" #00aaff {
+"Generate Attestation Keys" --> "Provision Capability"
+}
+partition "Capability Manager" #00aaff {
+"Provision Capability" --> "Attest Capability"
+}
+partition "Capability Manager" #00aaff {
+"Attest Capability" --> if "Attestation match" then
+}
+partition "Capability Manager" #00aaff {
+else
+--> [true] "Deploy Capability Release"
+}
+partition "Capability Manager" #00aaff {
+else
+--> [false] "Failed Deployment"
+}
+
+@enduml

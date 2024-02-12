@@ -20,10 +20,9 @@ The secure vault contains a SecureKey with the decryption keys to the encrypted 
 
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
-| encryptKey | 1 | SecurityKey | true | true |  |
-| decryptKey | 1 | SecurityKey | true | true |  |
-| iv | 1 | SecurityKey | true | true | Init Vector of the cipher |
-| store | 1 | KeyStore | true | true |  |
+| seed | 1 | Seed | true | true |  |
+| enclave | 1 | WorkingEnclave | false | true |  |
+| vault | 1 | EncryptedVault | true | true |  |
 
 
 

@@ -17,7 +17,7 @@ box Capability Manager #00aaff
 
 "DevOpsEngineer" -> cm: Update Policies of the Capability
 
-    cm -> "capability": create (name: myUpdateCap6,file: ./templates/capability.js)
+    cm -> "capability": create (name: UpdateCap6,file: ./templates/capability.js)
 
     "capability" --/ EventBus: capability.create
 

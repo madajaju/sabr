@@ -1,0 +1,29 @@
+@startuml
+
+class "WorkingEnclave" as Model {
+ string deviceUID
+
+ 
+}
+
+rectangle "JWT" as JWT #lightblue {
+}
+
+Model o--> "1" JWT : token
+
+
+rectangle "SecurityKey" as SecurityKey #lightblue {
+}
+
+Model o--> "1" SecurityKey : authenticationKey
+
+
+
+
+    rectangle "SecureVault" as SecureVault #lightgreen {
+    }
+    
+        SecureVault   *--> "1" Model : "enclave"
+    
+
+@enduml

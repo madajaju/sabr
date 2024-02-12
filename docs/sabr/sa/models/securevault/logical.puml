@@ -7,28 +7,22 @@ class "SecureVault" as Model {
  
 }
 
-rectangle "SecurityKey" as SecurityKey #lightblue {
+rectangle "Seed" as Seed #lightblue {
 }
 
-Model *--> "1" SecurityKey : encryptKey
+Model *--> "1" Seed : seed
 
 
-rectangle "SecurityKey" as SecurityKey #lightblue {
+rectangle "WorkingEnclave" as WorkingEnclave #lightblue {
 }
 
-Model *--> "1" SecurityKey : decryptKey
+Model *--> "1" WorkingEnclave : enclave
 
 
-rectangle "SecurityKey" as SecurityKey #lightblue {
+rectangle "EncryptedVault" as EncryptedVault #lightblue {
 }
 
-Model *--> "1" SecurityKey : iv
-
-
-rectangle "KeyStore" as KeyStore #lightblue {
-}
-
-Model *--> "1" KeyStore : store
+Model *--> "1" EncryptedVault : vault
 
 
 

@@ -10,6 +10,15 @@ package "Security Aspect" #pink {
 
     interface "Security Aspect" as i {
     
+            /sabr/sa/securitymanager/authenticate()
+            /sabr/sa/securitymanager/generatestreamkeys()
+            /sabr/sa/securitymanager/getbootstrapkey()
+            /sabr/sa/securitymanager/getregistrationcreds()
+            /sabr/sa/securitymanager/getstreamkeys()
+            /sabr/sa/securitymanager/provisionentity()
+            /sabr/sa/securitymanager/registerentity()
+            /sabr/sa/securitymanager/requestkeys()
+            /sabr/sa/securitymanager/validate()
     
     }
 }

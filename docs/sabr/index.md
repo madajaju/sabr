@@ -350,6 +350,7 @@ that are elaborated in the use case descriptions.
 * [Manage Security](usecase-ManageSecurity)
 * [Provide Digital Assistance](usecase-ProvideDigitalAssistance)
 * [Provide Mission Insight](usecase-ProvideMissionInsight)
+* [Ships](usecase-Ships)
 
 
 ![UseCase Diagram](./usecases.png)
@@ -378,10 +379,17 @@ users interact with the system.
 
 ![Scenario Mappings Diagram](./scenariomapping.png)
 
+* [ sabr streampolicy create](#action--sabr-streampolicy create)
+* [ sabr application create](#action--sabr-application-create)
 * [ sabr bundle build](#action--sabr-bundle-build)
+* [ sabr bundle create](#action--sabr-bundle-create)
+* [ sabr capability create](#action--sabr-capability-create)
+* [ sabr environment create](#action--sabr-environment-create)
 * [ sabr pulsar streams](#action--sabr-pulsar-streams)
 * [ sabr pulsar topic](#action--sabr-pulsar-topic)
 * [ sabr pulsar topics](#action--sabr-pulsar-topics)
+* [ sabr sabundle build](#action--sabr-sabundle-build)
+* [ sabr streampolicy create](#action--sabr-streampolicy-create)
 
 
 ## Logical Artifacts
@@ -530,6 +538,45 @@ The Sentient Agent Bundle Resources subsystem has a well defined interface. This
 command line interface (CLI), REST interface, and Web user interface. This interface is how all other
 subsystems and actors can access the system.
 
+### Action  sabr streampolicy create
+
+
+
+* REST - /sabr/streampolicy create?attr1=string
+* bin -  sabr streampolicy create --attr1 string
+* js - .sabr.streampolicy create({ attr1:string })
+
+#### Description
+Description of the action
+
+#### Parameters
+
+| Name | Type | Required | Description |
+|---|---|---|---|
+| attr1 | string |false | Description for the parameter |
+
+
+
+### Action  sabr application create
+
+
+
+* REST - /sabr/application/create?name=string&amp;file=file
+* bin -  sabr application create --name string --file file
+* js - .sabr.application.create({ name:string,file:file })
+
+#### Description
+Description of the action
+
+#### Parameters
+
+| Name | Type | Required | Description |
+|---|---|---|---|
+| name | string |false | Name of the apaplication to Create |
+| file | file |false | File of the application definition |
+
+
+
 ### Action  sabr bundle build
 
 
@@ -548,6 +595,66 @@ Build a SAB bundle for the directory specified.
 | dir | string |true | Directory to perform the build. |
 | recurse | boolean |false | Recursive build from the directory down. |
 | output | string |false | Output file for the bundle. |
+
+
+
+### Action  sabr bundle create
+
+
+
+* REST - /sabr/bundle/create?name=string&amp;file=file
+* bin -  sabr bundle create --name string --file file
+* js - .sabr.bundle.create({ name:string,file:file })
+
+#### Description
+Description of the action
+
+#### Parameters
+
+| Name | Type | Required | Description |
+|---|---|---|---|
+| name | string |false | Name of the apaplication to Create |
+| file | file |false | File of the application definition |
+
+
+
+### Action  sabr capability create
+
+
+
+* REST - /sabr/capability/create?name=string&amp;file=file
+* bin -  sabr capability create --name string --file file
+* js - .sabr.capability.create({ name:string,file:file })
+
+#### Description
+Create a capability in the system.
+
+#### Parameters
+
+| Name | Type | Required | Description |
+|---|---|---|---|
+| name | string |true | Name of Capability |
+| file | file |true | Filename of the definition |
+
+
+
+### Action  sabr environment create
+
+
+
+* REST - /sabr/environment/create?name=string&amp;file=file
+* bin -  sabr environment create --name string --file file
+* js - .sabr.environment.create({ name:string,file:file })
+
+#### Description
+Create Environment for the system
+
+#### Parameters
+
+| Name | Type | Required | Description |
+|---|---|---|---|
+| name | string |false | Name of the environment to Create |
+| file | file |false | File of the environment definition |
 
 
 
@@ -603,6 +710,45 @@ Return the topics in the pulsar configuration
 #### Parameters
 
 No parameters
+
+
+### Action  sabr sabundle build
+
+
+
+* REST - /sabr/sabundle/build?attr1=string
+* bin -  sabr sabundle build --attr1 string
+* js - .sabr.sabundle.build({ attr1:string })
+
+#### Description
+Description of the action
+
+#### Parameters
+
+| Name | Type | Required | Description |
+|---|---|---|---|
+| attr1 | string |false | Description for the parameter |
+
+
+
+### Action  sabr streampolicy create
+
+
+
+* REST - /sabr/streampolicy/create?name=string&amp;file=file
+* bin -  sabr streampolicy create --name string --file file
+* js - .sabr.streampolicy.create({ name:string,file:file })
+
+#### Description
+Create a stream policy for the system
+
+#### Parameters
+
+| Name | Type | Required | Description |
+|---|---|---|---|
+| name | string |false | Name of the policy to Create |
+| file | file |false | File of the policy definition |
+
 
 
 

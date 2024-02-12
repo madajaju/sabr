@@ -9,6 +9,10 @@ ITOperations --> ManagePolicies
 
 
 
+usecase "CreatePolicy" as CreatePolicy #lightgrey
+
+ManagePolicies --> CreatePolicy
+
 
 
 

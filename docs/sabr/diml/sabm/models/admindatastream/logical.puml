@@ -10,10 +10,10 @@ class "AdminDataStream" as Model {
  
 }
 
-rectangle "StreamPolicy" as StreamPolicy #lightblue {
+rectangle "ChannelCreationPolicy" as ChannelCreationPolicy #lightblue {
 }
 
-Model o--> "n" StreamPolicy : policies
+Model o--> "n" ChannelCreationPolicy : policies
 
 
 rectangle "DataChannel" as DataChannel #lightblue {

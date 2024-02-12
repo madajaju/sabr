@@ -25,6 +25,23 @@ Manage Policies use case includes establishing and managing DDIL environment pol
 
 ## Detail Scenarios
 
+* [CreatePolicy](#scenario-CreatePolicy)
+
+
+
+### Scenario Create Policy
+
+Create policies for the system which include ChannelCreationPolicies and ChannelActivationPolicies
+
+![Scenario CreatePolicy](./CreatePolicy.png)
+
+#### Steps
+1. [streampolicy create --name policy1 --file ./templates/policy1.js](#action-streampolicy create)
+1. [streampolicy create --name policy2 --file ./templates/policy2.js](#action-streampolicy create)
+
+#### Actors
+
+* [DataEngineer](actor-dataengineer)
 
 
 

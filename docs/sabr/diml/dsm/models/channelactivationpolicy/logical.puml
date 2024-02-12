@@ -1,0 +1,23 @@
+@startuml
+
+class "ChannelActivationPolicy" as Model {
+ string name
+
+ 
+}
+
+rectangle "ChannelActivationItem" as ChannelActivationItem #lightblue {
+}
+
+Model *--> "n" ChannelActivationItem : channels
+
+
+
+
+    rectangle "ChannelActivationItem" as ChannelActivationItem #lightgreen {
+    }
+    
+        ChannelActivationItem   o--> "1" Model : "parent"
+    
+
+@enduml

@@ -2,7 +2,7 @@
 
 
 
-package "Edge Security Controller" #lightblue {
+package "Edge Security Controller" #ffcccc {
 
     interface "Edge Security Controller" as i {
             /sabr/sa/esc/bundle/deploy()
@@ -15,7 +15,7 @@ CLI ()-- i
 REST ()-- i
 Web ()-- i
 
-package "Edge Security Controller" #lightblue {
+package "Edge Security Controller" #ffcccc {
     
 }
 

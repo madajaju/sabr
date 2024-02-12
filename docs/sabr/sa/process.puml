@@ -11,6 +11,78 @@ state "sa" as pstatename #pink {
     }
 }
 
+        state "sa" as sa #pink {
+state "securitymanager" as sasecuritymanager #pink {
+state "authenticate" as sasecuritymanagerauthenticate #pink {
+}
+}
+}
+
+
+        state "sa" as sa #pink {
+state "securitymanager" as sasecuritymanager #pink {
+state "generatestreamkeys" as sasecuritymanagergeneratestreamkeys #pink {
+}
+}
+}
+
+
+        state "sa" as sa #pink {
+state "securitymanager" as sasecuritymanager #pink {
+state "getbootstrapkey" as sasecuritymanagergetbootstrapkey #pink {
+}
+}
+}
+
+
+        state "sa" as sa #pink {
+state "securitymanager" as sasecuritymanager #pink {
+state "getregistrationcreds" as sasecuritymanagergetregistrationcreds #pink {
+}
+}
+}
+
+
+        state "sa" as sa #pink {
+state "securitymanager" as sasecuritymanager #pink {
+state "getstreamkeys" as sasecuritymanagergetstreamkeys #pink {
+}
+}
+}
+
+
+        state "sa" as sa #pink {
+state "securitymanager" as sasecuritymanager #pink {
+state "provisionentity" as sasecuritymanagerprovisionentity #pink {
+}
+}
+}
+
+
+        state "sa" as sa #pink {
+state "securitymanager" as sasecuritymanager #pink {
+state "registerentity" as sasecuritymanagerregisterentity #pink {
+}
+}
+}
+
+
+        state "sa" as sa #pink {
+state "securitymanager" as sasecuritymanager #pink {
+state "requestkeys" as sasecuritymanagerrequestkeys #pink {
+}
+}
+}
+
+
+        state "sa" as sa #pink {
+state "securitymanager" as sasecuritymanager #pink {
+state "validate" as sasecuritymanagervalidate #pink {
+}
+}
+}
+
+
 
 
 

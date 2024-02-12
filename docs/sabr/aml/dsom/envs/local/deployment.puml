@@ -8,10 +8,15 @@ boundary parent #black
 
 entity children #blue
 
+rectangle "devops" as devopsStack #00aaff {
+    queue devopsStacksnet #blue [
+        <b><color:white>parent</color></b>
+    ]
+}
 
 
 
-package "a_d" #00aaff {
+package "devops" #00aaff {
     queue parentnet #black [
             <b><color:white>parent</color></b>
     ]
@@ -30,14 +35,23 @@ package "a_d" #00aaff {
     
 
 node "web" as webService
+node "build" as buildService
 
-
-        artifact "a_d_web" as a_d_webimage
+        collections "devops" as devopsimage
+    
+        artifact "jenkins/jenkins:alpine" as jenkins_jenkinsalpineimage
     
 }
 
 webService -[#red]- siblingsnet
-webService .... a_d_webimage
 
+buildService -[#red]- siblingsnet
+webService .... devopsimage
+buildService .... jenkins_jenkinsalpineimage
+
+devopsimage --> devopsStack
+    
+devopsStacksnet --[#black]-- parent
+    
 
 @enduml

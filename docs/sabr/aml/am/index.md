@@ -42,6 +42,7 @@ users interact with the system.
 
 ![Scenario Mappings Diagram](./scenariomapping.png)
 
+* [ sabr aml am application create](#action--sabr-aml-am-application create)
 * [ sabr aml am application create](#action--sabr-aml-am-application-create)
 * [ sabr aml am application destroy](#action--sabr-aml-am-application-destroy)
 * [ sabr aml am application list](#action--sabr-aml-am-application-list)
@@ -203,6 +204,25 @@ these events.
 The Application Manager subsystem has a well defined interface. This interface can be accessed using a
 command line interface (CLI), REST interface, and Web user interface. This interface is how all other
 subsystems and actors can access the system.
+
+### Action  sabr aml am application create
+
+
+
+* REST - /sabr/aml/am/application create?attr1=string
+* bin -  sabr aml am application create --attr1 string
+* js - .sabr.aml.am.application create({ attr1:string })
+
+#### Description
+Description of the action
+
+#### Parameters
+
+| Name | Type | Required | Description |
+|---|---|---|---|
+| attr1 | string |false | Description for the parameter |
+
+
 
 ### Action  sabr aml am application create
 

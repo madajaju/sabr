@@ -1,0 +1,18 @@
+
+@startuml
+
+participant "Developer"
+participant "SecurityManager"
+participant "DevOps"
+participant "SABR1"
+participant "SABR2"
+participant "DataStream1"
+participant "DataStream2"
+
+"Developer" -> SABR1 : deploy
+SABR1 -> SecurityManager :
+SABR1 -> "DataStream1" : publishEncryptedData(data)
+
+"Developer" -> SABR2 : deploy
+SABR2 -> "DataStream1" : consumeDecryptData(data)
+@enduml

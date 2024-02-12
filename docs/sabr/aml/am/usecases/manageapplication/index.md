@@ -39,7 +39,7 @@ Application developers create application that can be deployed in the ecosystem.
 ![Scenario CreateApplication](./CreateApplication.png)
 
 #### Steps
-1. [application create --name hello --file ./templates/application.yml](#action-application-create)
+1. [application create --name hello --file ./templates/application.js](#action-application create)
 
 #### Actors
 

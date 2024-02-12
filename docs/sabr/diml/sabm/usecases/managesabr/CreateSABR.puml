@@ -10,28 +10,27 @@ box Sentient Agent Bundle Manager #ffcc88
 end box
 
 
-box Sentient Agent Bundle Manager #ffcc88
-            participant sabundle
+box Sentient Agent Bundle Resources #bbaaff
     end box
 
 
 "ApplicationDeveloper" -> sabm: Create SABR
 
-    sabm -> "sabundle": create (name: mySABR1,file: ./templates/bundle1.js)
+    sabm -> "sentient agent bundle resources": create (name: mySABR1,file: ./templates/bundle1.js)
 
-    "sabundle" --/ EventBus: sabundle.create
+    "sentient agent bundle resources" --/ EventBus: bundle.create
 
-    sabm -> "sabundle": create (name: mySABR2,file: ./templates/bundle2.js)
+    sabm -> "sentient agent bundle resources": create (name: mySABR2,file: ./templates/bundle2.js)
 
-    "sabundle" --/ EventBus: sabundle.create
+    "sentient agent bundle resources" --/ EventBus: bundle.create
 
-    sabm -> "sabundle": create (name: mySABR3,file: ./templates/bundle3.js)
+    sabm -> "sentient agent bundle resources": create (name: mySABR3,file: ./templates/bundle3.js)
 
-    "sabundle" --/ EventBus: sabundle.create
+    "sentient agent bundle resources" --/ EventBus: bundle.create
 
-    sabm -> "sabundle": create (name: mySABR4,file: ./templates/bundle4.js)
+    sabm -> "sentient agent bundle resources": create (name: mySABR4,file: ./templates/bundle4.js)
 
-    "sabundle" --/ EventBus: sabundle.create
+    "sentient agent bundle resources" --/ EventBus: bundle.create
 
 
 

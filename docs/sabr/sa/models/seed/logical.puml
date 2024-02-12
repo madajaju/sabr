@@ -1,0 +1,34 @@
+@startuml
+
+class "Seed" as Model {
+
+ 
+}
+
+rectangle "Credential" as Credential #lightblue {
+}
+
+Model *--> "1" Credential : registrationCreds
+
+
+rectangle "SecurityKey" as SecurityKey #lightblue {
+}
+
+Model *--> "1" SecurityKey : bootstrap
+
+
+rectangle "SecurityKey" as SecurityKey #lightblue {
+}
+
+Model *--> "1" SecurityKey : uauth
+
+
+
+
+    rectangle "SecureVault" as SecureVault #lightgreen {
+    }
+    
+        SecureVault   *--> "1" Model : "seed"
+    
+
+@enduml

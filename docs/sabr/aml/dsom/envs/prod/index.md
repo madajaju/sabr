@@ -31,7 +31,8 @@ the subsystem's logic.
 
 | Name | Image | Mapping | Ports | Network |
 | --- | --- | --- | --- | --- |
-| web | a_d_web |  |  | siblings |
+| web | devops |  |  | siblings |
+| build | jenkins/jenkins:alpine |  |  | siblings |
 
 
 #### Networks

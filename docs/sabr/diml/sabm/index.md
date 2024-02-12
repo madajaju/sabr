@@ -282,9 +282,9 @@ Create and deploy the bundle
 
 
 
-* REST - /sabr/diml/sabm/bundle/deploy?sabr=string&amp;policies=string
-* bin -  sabr diml sabm bundle deploy --sabr string --policies string
-* js - .sabr.diml.sabm.bundle.deploy({ sabr:string,policies:string })
+* REST - /sabr/diml/sabm/bundle/deploy?sabr=string&amp;policies=string&amp;parameters=string
+* bin -  sabr diml sabm bundle deploy --sabr string --policies string --parameters string
+* js - .sabr.diml.sabm.bundle.deploy({ sabr:string,policies:string,parameters:string })
 
 #### Description
 Deploy the bundle
@@ -295,6 +295,7 @@ Deploy the bundle
 |---|---|---|---|
 | sabr | string |true | The name of the SABR |
 | policies | string |true | The name of the policies to use in the deployment. Comma separated |
+| parameters | string |false | Parameters used for the instance deployment |
 
 
 

@@ -27,7 +27,7 @@ that are elaborated in the use case descriptions.
 The following are the actors of the DevSecOpsManager subsystem. This can include people, other subsystems
 inside the solution and even external subsystems.
 
-* [Actor](actor-actor)
+* [DevOpsEngineer](actor-devops)
 
 
 ![User Interaction](./userinteraction.png)
@@ -63,6 +63,7 @@ organize the architecture and make it easier to analyze, understand, design, and
 
 The following are the classes in the data model of the DevSecOpsManager subsystem.
 
+* [Environment](class-Environment)
 
 
 
@@ -107,7 +108,8 @@ can be found [here](environment--sabr-aml-dsom-local)
 
 Services in the local environment
 
-* web : a_d_web
+* web : devops
+* build : jenkins/jenkins:alpine
 
 
 ### dev
@@ -117,7 +119,8 @@ can be found [here](environment--sabr-aml-dsom-dev)
 
 Services in the dev environment
 
-* web : a_d_web
+* web : devops
+* build : jenkins/jenkins:alpine
 
 
 ### test
@@ -127,7 +130,8 @@ can be found [here](environment--sabr-aml-dsom-test)
 
 Services in the test environment
 
-* web : a_d_web
+* web : devops
+* build : jenkins/jenkins:alpine
 
 
 ### prod
@@ -137,7 +141,8 @@ can be found [here](environment--sabr-aml-dsom-prod)
 
 Services in the prod environment
 
-* web : a_d_web
+* web : devops
+* build : jenkins/jenkins:alpine
 
 
 ## Activities and Flows
@@ -145,21 +150,15 @@ The DevSecOpsManager subsystem provides the following activities and flows that 
 cases and scenarios of the subsystem.
 
 
-### Messages Handled
-
-The DevSecOpsManager subsystem is an event driven architecture and handle several events. The following
-events are handled by this subsystem. Please note that this subsystem is not the only subsystem that handles
-these events.
-
-| Message | Action | Description |
-| --- | --- | --- |
-
 
 
 ### Messages Sent
 
 | Event | Description | Emitter |
 |-------|-------------|---------|
+| environment.create |  When an object of type Environment is created. | Environment
+| environment.destroy |  When an object of type Environment is destroyed. | Environment
+| environment.updated |  When an object of type Environment has an attribute or association updated. | Environment
 
 
 

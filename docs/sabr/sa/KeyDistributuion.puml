@@ -1,0 +1,40 @@
+@startuml
+
+class SecureVault {
+}
+
+class Seed {
+    registrationCreds: Credentials
+    bootstrapKey : SecurityKey
+}
+
+class WorkingEnclave {
+    deviceUID : string
+}
+
+class EncryptedVault {
+}
+
+SecureVault "1" *--> "1" Seed
+SecureVault "1" *--> "1" EncryptedVault
+SecureVault "1" o--> "1" WorkingEnclave
+
+class Credentials {
+    credentials : string
+}
+
+class SecurityKey {
+    key : string
+}
+
+class JWT {
+    header : string
+    payload : string
+    signature : string
+}
+
+WorkingEnclave *--> SecurityKey : authenticationKey
+WorkingEnclave *--> JWT : token
+EncryptedVault *--> SecurityKey : dataStreams
+
+@enduml

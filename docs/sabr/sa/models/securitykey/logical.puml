@@ -5,6 +5,7 @@ class "SecurityKey" as Model {
  string value
  string iv
 
+ generateKey()
  generatePair()
  
 }
@@ -56,25 +57,30 @@ class "SecurityKey" as Model {
     
         SABundleBuild   *--> "1" Model : "iv"
     
+    rectangle "EncryptedVault" as EncryptedVault #lightgreen {
+    }
+    
+        EncryptedVault   *--> "n" Model : "streams"
+    
     rectangle "KeyStore" as KeyStore #lightgreen {
     }
     
         KeyStore   o--> "n" Model : "keys"
     
-    rectangle "SecureVault" as SecureVault #lightgreen {
+    rectangle "Seed" as Seed #lightgreen {
     }
     
-        SecureVault   *--> "1" Model : "encryptKey"
+        Seed   *--> "1" Model : "bootstrap"
     
-    rectangle "SecureVault" as SecureVault #lightgreen {
+    rectangle "Seed" as Seed #lightgreen {
     }
     
-        SecureVault   *--> "1" Model : "decryptKey"
+        Seed   *--> "1" Model : "uauth"
     
-    rectangle "SecureVault" as SecureVault #lightgreen {
+    rectangle "WorkingEnclave" as WorkingEnclave #lightgreen {
     }
     
-        SecureVault   *--> "1" Model : "iv"
+        WorkingEnclave   o--> "1" Model : "authenticationKey"
     
 
 @enduml

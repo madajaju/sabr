@@ -1,0 +1,144 @@
+@startuml
+
+actor "ApplicationDeveloper"
+
+
+entity EventBus
+
+box Sentient Agent Bundle Resources #bbaaff
+    boundary sabr #white
+end box
+
+
+box Sentient Agent Bundle Resources #bbaaff
+    end box
+
+box Sentient Agent Bundle Manager #ffcc88
+    end box
+
+
+"ApplicationDeveloper" -> sabr: AIS One
+
+    sabr -> "sentient agent bundle resources": create (name: Ship1,file: ./projects/AISSimulator/AISShip/bundle.js)
+
+    "sentient agent bundle resources" --/ EventBus: bundle.create
+
+    sabr -> "sentient agent bundle resources": create (name: Agg1,file: ./projects/AISSimulator/AISAgg/bundle.js)
+
+    "sentient agent bundle resources" --/ EventBus: bundle.create
+
+    sabr -> "sentient agent bundle resources": create (name: Viewer1,file: ./projects/AISSimulator/AISViewer/bundle.js)
+
+    "sentient agent bundle resources" --/ EventBus: bundle.create
+
+    sabr -> "sentient agent bundle manager": build (name: Ship1)
+
+    "sentient agent bundle manager" --/ EventBus: sabundle.build
+
+    sabr -> "sentient agent bundle manager": build (name: Agg1)
+
+    "sentient agent bundle manager" --/ EventBus: sabundle.build
+
+    sabr -> "sentient agent bundle manager": build (name: Viewer1)
+
+    "sentient agent bundle manager" --/ EventBus: sabundle.build
+
+    sabr -> "sentient agent bundle manager": create (file: ./projects/AISSimulator/AISShip/policies.js)
+
+    "sentient agent bundle manager" --/ EventBus: policy.create
+
+    sabr -> "sentient agent bundle manager": deploy (sabr: Viewer1,policies: realtime)
+
+    "sentient agent bundle manager" --/ EventBus: bundle.deploy
+
+    sabr -> "sentient agent bundle manager": deploy (sabr: Agg1,policies: realtime)
+
+    "sentient agent bundle manager" --/ EventBus: bundle.deploy
+
+    sabr -> "sentient agent bundle manager": deploy (sabr: Ship1,policies: realtime,parameters: sourceFile=../AIS_Simulator/ships/215071000.csv)
+
+    "sentient agent bundle manager" --/ EventBus: bundle.deploy
+
+    sabr -> "sentient agent bundle manager": deploy (sabr: Ship1,policies: realtime,parameters: sourceFile=../AIS_Simulator/ships/215031000.csv)
+
+    "sentient agent bundle manager" --/ EventBus: bundle.deploy
+
+    sabr -> "sentient agent bundle manager": deploy (sabr: Ship1,policies: realtime,parameters: sourceFile=../AIS_Simulator/ships/367092720.csv)
+
+    "sentient agent bundle manager" --/ EventBus: bundle.deploy
+
+    sabr -> "sentient agent bundle manager": deploy (sabr: Ship1,policies: realtime,parameters: sourceFile=../AIS_Simulator/ships/367182840.csv)
+
+    "sentient agent bundle manager" --/ EventBus: bundle.deploy
+
+    sabr -> "sentient agent bundle manager": deploy (sabr: Ship1,policies: realtime,parameters: sourceFile=../AIS_Simulator/ships/367289000.csv)
+
+    "sentient agent bundle manager" --/ EventBus: bundle.deploy
+
+    sabr -> "sentient agent bundle manager": deploy (sabr: Ship1,policies: realtime,parameters: sourceFile=../AIS_Simulator/ships/367370780.csv)
+
+    "sentient agent bundle manager" --/ EventBus: bundle.deploy
+
+    sabr -> "sentient agent bundle manager": deploy (sabr: Ship1,policies: realtime,parameters: sourceFile=../AIS_Simulator/ships/367425680.csv)
+
+    "sentient agent bundle manager" --/ EventBus: bundle.deploy
+
+    sabr -> "sentient agent bundle manager": deploy (sabr: Ship1,policies: realtime,parameters: sourceFile=../AIS_Simulator/ships/367530120.csv)
+
+    "sentient agent bundle manager" --/ EventBus: bundle.deploy
+
+    sabr -> "sentient agent bundle manager": deploy (sabr: Ship1,policies: realtime,parameters: sourceFile=../AIS_Simulator/ships/367602610.csv)
+
+    "sentient agent bundle manager" --/ EventBus: bundle.deploy
+
+    sabr -> "sentient agent bundle manager": deploy (sabr: Ship1,policies: realtime,parameters: sourceFile=../AIS_Simulator/ships/367611060.csv)
+
+    "sentient agent bundle manager" --/ EventBus: bundle.deploy
+
+    sabr -> "sentient agent bundle manager": deploy (sabr: Ship1,policies: realtime,parameters: sourceFile=../AIS_Simulator/ships/368010420.csv)
+
+    "sentient agent bundle manager" --/ EventBus: bundle.deploy
+
+    sabr -> "sentient agent bundle manager": deploy (sabr: Ship1,policies: realtime,parameters: sourceFile=../AIS_Simulator/ships/368066140.csv)
+
+    "sentient agent bundle manager" --/ EventBus: bundle.deploy
+
+    sabr -> "sentient agent bundle manager": deploy (sabr: Ship1,policies: realtime,parameters: sourceFile=../AIS_Simulator/ships/368132890.csv)
+
+    "sentient agent bundle manager" --/ EventBus: bundle.deploy
+
+    sabr -> "sentient agent bundle manager": deploy (sabr: Ship1,policies: realtime,parameters: sourceFile=../AIS_Simulator/ships/368149330.csv)
+
+    "sentient agent bundle manager" --/ EventBus: bundle.deploy
+
+    sabr -> "sentient agent bundle manager": deploy (sabr: Ship1,policies: realtime,parameters: sourceFile=../AIS_Simulator/ships/368175820.csv)
+
+    "sentient agent bundle manager" --/ EventBus: bundle.deploy
+
+    sabr -> "sentient agent bundle manager": deploy (sabr: Ship1,policies: realtime,parameters: sourceFile=../AIS_Simulator/ships/368184020.csv)
+
+    "sentient agent bundle manager" --/ EventBus: bundle.deploy
+
+    sabr -> "sentient agent bundle manager": deploy (sabr: Ship1,policies: realtime,parameters: sourceFile=../AIS_Simulator/ships/368197440.csv)
+
+    "sentient agent bundle manager" --/ EventBus: bundle.deploy
+
+    sabr -> "sentient agent bundle manager": deploy (sabr: Ship1,policies: realtime,parameters: sourceFile=../AIS_Simulator/ships/372443000.csv)
+
+    "sentient agent bundle manager" --/ EventBus: bundle.deploy
+
+    sabr -> "sentient agent bundle manager": deploy (sabr: Ship1,policies: realtime,parameters: sourceFile=../AIS_Simulator/ships/538002220.csv)
+
+    "sentient agent bundle manager" --/ EventBus: bundle.deploy
+
+    sabr -> "sentient agent bundle manager": deploy (sabr: Ship1,policies: realtime,parameters: sourceFile=../AIS_Simulator/ships/538002784.csv)
+
+    "sentient agent bundle manager" --/ EventBus: bundle.deploy
+
+    sabr -> "sentient agent bundle manager": deploy (sabr: Ship1,policies: realtime,parameters: sourceFile=../AIS_Simulator/ships/636019418.csv)
+
+    "sentient agent bundle manager" --/ EventBus: bundle.deploy
+
+
+
+@enduml

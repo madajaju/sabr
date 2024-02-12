@@ -16,6 +16,7 @@ package "Application Manager" #00aaff {
             ^serviceinstance.deployed
             ^serviceinstance.killed
     
+            /sabr/aml/am/application create()
             /sabr/aml/am/application/create()
             /sabr/aml/am/application/destroy()
             /sabr/aml/am/application/list()

@@ -5,12 +5,36 @@ package "Security Aspect" #pink {
     
         class SecurityKey {
         }
+    
+        class Seed {
+        }
+    
+        class WorkingEnclave {
+        }
+    
+        class EncryptedVault {
+        }
+    
+        class Credential {
+        }
+    
+        class JWT {
+        }
     }
 
 
 package "Security Aspect" #pink {
 
     interface "Security Aspect" as i {
+            /sabr/sa/securitymanager/authenticate()
+            /sabr/sa/securitymanager/generatestreamkeys()
+            /sabr/sa/securitymanager/getbootstrapkey()
+            /sabr/sa/securitymanager/getregistrationcreds()
+            /sabr/sa/securitymanager/getstreamkeys()
+            /sabr/sa/securitymanager/provisionentity()
+            /sabr/sa/securitymanager/registerentity()
+            /sabr/sa/securitymanager/requestkeys()
+            /sabr/sa/securitymanager/validate()
     
     }
 }
@@ -20,7 +44,25 @@ REST ()-- i
 Web ()-- i
 
 package "Security Aspect" #pink {
-        class "KeyStore" {
+        class "Credential" {
+                 string creds
+                    }
+    
+    
+    class "EncryptedVault" {
+                 string encryptedDate
+                             encrypt()
+            }
+                EncryptedVault *--> "n" SecurityKey : streams
+            
+    
+    class "JWT" {
+                 string attr1
+                    }
+                JWT o--> "1" ModelName : assoc1
+            
+    
+    class "KeyStore" {
                  string name
                  string encryptedData
                              encrypt()
@@ -28,13 +70,37 @@ package "Security Aspect" #pink {
                 KeyStore o--> "n" SecurityKey : keys
             
     
+    class "SecureVault" {
+                 string name
+                             encrypt()
+            }
+                SecureVault *--> "1" Seed : seed
+                        SecureVault *--> "1" WorkingEnclave : enclave
+                        SecureVault *--> "1" EncryptedVault : vault
+            
+    
     class "SecurityKey" {
                  string name
                  string value
                  string iv
-                             generatePair()
+                             generateKey()
+                     generatePair()
             }
     
+    
+    class "Seed" {
+                    }
+                Seed *--> "1" Credential : registrationCreds
+                        Seed *--> "1" SecurityKey : bootstrap
+                        Seed *--> "1" SecurityKey : uauth
+            
+    
+    class "WorkingEnclave" {
+                 string deviceUID
+                    }
+                WorkingEnclave o--> "1" JWT : token
+                        WorkingEnclave o--> "1" SecurityKey : authenticationKey
+            
     
 
 }

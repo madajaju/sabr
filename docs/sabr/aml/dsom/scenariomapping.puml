@@ -21,11 +21,12 @@ sabramldsomdata -- sabramldsomdatacreate
 
 
         rectangle "Manage Environments" as ManageEnvironments #ffffaa {
-            ("Create Build Environment")/ as ActorManageEnvironmentsCreateBuildEnvironment
+            ("Create Build Environment")/ as DevOpsEngineerManageEnvironmentsCreateBuildEnvironment
         }
     
-    sabramldsomdatacreate <-- ActorManageEnvironmentsCreateBuildEnvironment
+    sabramldsomdatacreate <-- DevOpsEngineerManageEnvironmentsCreateBuildEnvironment
     
+
 
 
 

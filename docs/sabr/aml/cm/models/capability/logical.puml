@@ -11,10 +11,10 @@ class "Capability" as Model {
  
 }
 
-rectangle "StreamPolicy" as StreamPolicy #lightblue {
+rectangle "ChannelCreationPolicy" as ChannelCreationPolicy #lightblue {
 }
 
-Model o--> "n" StreamPolicy : policies
+Model o--> "n" ChannelCreationPolicy : policies
 
 
 rectangle "SABundle" as SABundle #lightblue {

@@ -38,6 +38,15 @@ users interact with the system.
 
 ![Scenario Mappings Diagram](./scenariomapping.png)
 
+* [ sabr sa securitymanager authenticate](#action--sabr-sa-securitymanager-authenticate)
+* [ sabr sa securitymanager generatestreamkeys](#action--sabr-sa-securitymanager-generatestreamkeys)
+* [ sabr sa securitymanager getbootstrapkey](#action--sabr-sa-securitymanager-getbootstrapkey)
+* [ sabr sa securitymanager getregistrationcreds](#action--sabr-sa-securitymanager-getregistrationcreds)
+* [ sabr sa securitymanager getstreamkeys](#action--sabr-sa-securitymanager-getstreamkeys)
+* [ sabr sa securitymanager provisionentity](#action--sabr-sa-securitymanager-provisionentity)
+* [ sabr sa securitymanager registerentity](#action--sabr-sa-securitymanager-registerentity)
+* [ sabr sa securitymanager requestkeys](#action--sabr-sa-securitymanager-requestkeys)
+* [ sabr sa securitymanager validate](#action--sabr-sa-securitymanager-validate)
 
 
 ## Logical Artifacts
@@ -62,8 +71,14 @@ organize the architecture and make it easier to analyze, understand, design, and
 
 The following are the classes in the data model of the Security Aspect subsystem.
 
+* [Credential](class-Credential)
+* [EncryptedVault](class-EncryptedVault)
+* [JWT](class-JWT)
 * [KeyStore](class-KeyStore)
+* [SecureVault](class-SecureVault)
 * [SecurityKey](class-SecurityKey)
+* [Seed](class-Seed)
+* [WorkingEnclave](class-WorkingEnclave)
 
 
 
@@ -140,12 +155,30 @@ cases and scenarios of the subsystem.
 
 | Event | Description | Emitter |
 |-------|-------------|---------|
+| credential.create |  When an object of type Credential is created. | Credential
+| credential.destroy |  When an object of type Credential is destroyed. | Credential
+| credential.updated |  When an object of type Credential has an attribute or association updated. | Credential
+| encryptedvault.create |  When an object of type EncryptedVault is created. | EncryptedVault
+| encryptedvault.destroy |  When an object of type EncryptedVault is destroyed. | EncryptedVault
+| encryptedvault.updated |  When an object of type EncryptedVault has an attribute or association updated. | EncryptedVault
+| jwt.create |  When an object of type JWT is created. | JWT
+| jwt.destroy |  When an object of type JWT is destroyed. | JWT
+| jwt.updated |  When an object of type JWT has an attribute or association updated. | JWT
 | keystore.create |  When an object of type KeyStore is created. | KeyStore
 | keystore.destroy |  When an object of type KeyStore is destroyed. | KeyStore
 | keystore.updated |  When an object of type KeyStore has an attribute or association updated. | KeyStore
+| securevault.create |  When an object of type SecureVault is created. | SecureVault
+| securevault.destroy |  When an object of type SecureVault is destroyed. | SecureVault
+| securevault.updated |  When an object of type SecureVault has an attribute or association updated. | SecureVault
 | securitykey.create |  When an object of type SecurityKey is created. | SecurityKey
 | securitykey.destroy |  When an object of type SecurityKey is destroyed. | SecurityKey
 | securitykey.updated |  When an object of type SecurityKey has an attribute or association updated. | SecurityKey
+| seed.create |  When an object of type Seed is created. | Seed
+| seed.destroy |  When an object of type Seed is destroyed. | Seed
+| seed.updated |  When an object of type Seed has an attribute or association updated. | Seed
+| workingenclave.create |  When an object of type WorkingEnclave is created. | WorkingEnclave
+| workingenclave.destroy |  When an object of type WorkingEnclave is destroyed. | WorkingEnclave
+| workingenclave.updated |  When an object of type WorkingEnclave has an attribute or association updated. | WorkingEnclave
 
 
 
@@ -153,5 +186,179 @@ cases and scenarios of the subsystem.
 The Security Aspect subsystem has a well defined interface. This interface can be accessed using a
 command line interface (CLI), REST interface, and Web user interface. This interface is how all other
 subsystems and actors can access the system.
+
+### Action  sabr sa securitymanager authenticate
+
+
+
+* REST - /sabr/sa/securitymanager/authenticate?deviceUID=string
+* bin -  sabr sa securitymanager authenticate --deviceUID string
+* js - .sabr.sa.securitymanager.authenticate({ deviceUID:string })
+
+#### Description
+Provision a Security Entity
+
+#### Parameters
+
+| Name | Type | Required | Description |
+|---|---|---|---|
+| deviceUID | string |true | DeviceUID of the SABR that is being authenticated |
+
+
+
+### Action  sabr sa securitymanager generatestreamkeys
+
+
+
+* REST - /sabr/sa/securitymanager/generatestreamkeys?name=string
+* bin -  sabr sa securitymanager generatestreamkeys --name string
+* js - .sabr.sa.securitymanager.generatestreamkeys({ name:string })
+
+#### Description
+Generate the Data Stream Encryption Keys
+
+#### Parameters
+
+| Name | Type | Required | Description |
+|---|---|---|---|
+| name | string |true | Name of the Data Stream |
+
+
+
+### Action  sabr sa securitymanager getbootstrapkey
+
+
+
+* REST - /sabr/sa/securitymanager/getbootstrapkey?name=string
+* bin -  sabr sa securitymanager getbootstrapkey --name string
+* js - .sabr.sa.securitymanager.getbootstrapkey({ name:string })
+
+#### Description
+Deploy a SAB bundle that is passed in.
+
+#### Parameters
+
+| Name | Type | Required | Description |
+|---|---|---|---|
+| name | string |true | Name of the SABR to get Registration Creds |
+
+
+
+### Action  sabr sa securitymanager getregistrationcreds
+
+
+
+* REST - /sabr/sa/securitymanager/getregistrationcreds?name=string
+* bin -  sabr sa securitymanager getregistrationcreds --name string
+* js - .sabr.sa.securitymanager.getregistrationcreds({ name:string })
+
+#### Description
+Deploy a SAB bundle that is passed in.
+
+#### Parameters
+
+| Name | Type | Required | Description |
+|---|---|---|---|
+| name | string |true | Name of the SABR to get Registration Creds |
+
+
+
+### Action  sabr sa securitymanager getstreamkeys
+
+
+
+* REST - /sabr/sa/securitymanager/getstreamkeys?name=string
+* bin -  sabr sa securitymanager getstreamkeys --name string
+* js - .sabr.sa.securitymanager.getstreamkeys({ name:string })
+
+#### Description
+Get the Data Stream Encryption Keys
+
+#### Parameters
+
+| Name | Type | Required | Description |
+|---|---|---|---|
+| name | string |true | Name of the Data Stream |
+
+
+
+### Action  sabr sa securitymanager provisionentity
+
+
+
+* REST - /sabr/sa/securitymanager/provisionentity?name=string&amp;uauth=string
+* bin -  sabr sa securitymanager provisionentity --name string --uauth string
+* js - .sabr.sa.securitymanager.provisionentity({ name:string,uauth:string })
+
+#### Description
+Provision a Security Entity
+
+#### Parameters
+
+| Name | Type | Required | Description |
+|---|---|---|---|
+| name | string |true | Name of the SABR to register to start receiving security keys |
+| uauth | string |true | Unique Authentication Key of the Entity |
+
+
+
+### Action  sabr sa securitymanager registerentity
+
+
+
+* REST - /sabr/sa/securitymanager/registerentity?name=string
+* bin -  sabr sa securitymanager registerentity --name string
+* js - .sabr.sa.securitymanager.registerentity({ name:string })
+
+#### Description
+Register a Security Entity
+
+#### Parameters
+
+| Name | Type | Required | Description |
+|---|---|---|---|
+| name | string |true | Name of the SABR to register to start receiving security keys |
+
+
+
+### Action  sabr sa securitymanager requestkeys
+
+
+
+* REST - /sabr/sa/securitymanager/requestkeys?JWT=json&amp;streamID=string&amp;timeRange=string
+* bin -  sabr sa securitymanager requestkeys --JWT json --streamID string --timeRange string
+* js - .sabr.sa.securitymanager.requestkeys({ JWT:json,streamID:string,timeRange:string })
+
+#### Description
+Provision a Security Entity
+
+#### Parameters
+
+| Name | Type | Required | Description |
+|---|---|---|---|
+| JWT | json |true | JWT for the entity that is requesting a group of rotating keys |
+| streamID | string |true | DataStream id to retrieve the keys |
+| timeRange | string |true | Range of time to retrieve the keys via the secure channel |
+
+
+
+### Action  sabr sa securitymanager validate
+
+
+
+* REST - /sabr/sa/securitymanager/validate?JWT=json
+* bin -  sabr sa securitymanager validate --JWT json
+* js - .sabr.sa.securitymanager.validate({ JWT:json })
+
+#### Description
+Provision a Security Entity
+
+#### Parameters
+
+| Name | Type | Required | Description |
+|---|---|---|---|
+| JWT | json |true | Validate the JWT |
+
+
 
 

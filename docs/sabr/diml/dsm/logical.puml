@@ -1,6 +1,45 @@
 @startuml
 
 
+package "Data Stream Manager" #ffcc88 {
+    
+        class DataChannel {
+        }
+    
+        class ChannelActivationPolicy {
+        }
+    
+        class ChannelActivationItem {
+        }
+    
+        class DataStream {
+        }
+    
+        class ChannelCreationPolicy {
+        }
+    
+        class DataChannelInstance {
+        }
+    
+        class DataStreamInstance {
+        }
+    }
+
+package "Sentient Agent Bundle Manager" #ffcc88 {
+    
+        class DataTransform {
+        }
+    
+        class SABundleInstance {
+        }
+    
+        class SABundle {
+        }
+    
+        class DataTransformInstance {
+        }
+    }
+
 package "Application Manager" #00aaff {
     
         class Service {
@@ -10,42 +49,9 @@ package "Application Manager" #00aaff {
         }
     }
 
-package "Data Stream Manager" #ffcc88 {
-    
-        class StreamPolicy {
-        }
-    
-        class DataChannelInstance {
-        }
-    
-        class DataStream {
-        }
-    
-        class DataChannel {
-        }
-    
-        class DataStreamInstance {
-        }
-    }
-
 package "Security Aspect" #pink {
     
         class SecurityKey {
-        }
-    }
-
-package "Sentient Agent Bundle Manager" #ffcc88 {
-    
-        class SABundleInstance {
-        }
-    
-        class DataTransform {
-        }
-    
-        class SABundle {
-        }
-    
-        class DataTransformInstance {
         }
     }
 
@@ -64,13 +70,38 @@ REST ()-- i
 Web ()-- i
 
 package "Data Stream Manager" #ffcc88 {
-        class "DataChannel" {
+        class "ChannelActivationItem" {
+                 string name
+                 number priority
+                 boolean activated
+                    }
+                ChannelActivationItem o--> "1" DataChannel : channel
+                        ChannelActivationItem o--> "1" ChannelActivationPolicy : parent
+            
+    
+    class "ChannelActivationPolicy" {
+                 string name
+                    }
+                ChannelActivationPolicy *--> "n" ChannelActivationItem : channels
+            
+    
+    class "ChannelCreationPolicy" {
+                 string name
+                             create()
+            }
+                ChannelCreationPolicy o--> "1" DataTransform : post
+                        ChannelCreationPolicy o--> "1" DataTransform : pre
+                        ChannelCreationPolicy o--> "n" DataStream : stream
+                        ChannelCreationPolicy o--> "n" DataChannel : channels
+            
+    
+    class "DataChannel" {
                  string name
                  string direction
                              build()
             }
                 DataChannel o--> "1" Service : transformService
-                        DataChannel o--> "n" StreamPolicy : policy
+                        DataChannel o--> "n" ChannelCreationPolicy : policy
                         DataChannel o--> "n" DataChannelInstance : instances
                         DataChannel o--> "1" DataStream : stream
                         DataChannel o--> "1" SecurityKey : encryptionKey
@@ -96,7 +127,7 @@ package "Data Stream Manager" #ffcc88 {
                      build()
                      provision()
             }
-                DataStream o--> "n" StreamPolicy : policies
+                DataStream o--> "n" ChannelCreationPolicy : policies
                         DataStream *--> "n" DataChannel : channels
                         DataStream *--> "n" DataStreamInstance : instances
                         DataStream o--> "n" DataTransform : transforms
@@ -163,6 +194,7 @@ package "Data Stream Manager" #ffcc88 {
                              create()
                      deploy()
                      send()
+                     sendBatch()
                      failed()
             }
                 OutputChannelInstance o--> "1" DataChannel : design
@@ -180,6 +212,7 @@ package "Data Stream Manager" #ffcc88 {
                              deploy()
                      provision()
                      send()
+                     sendBatch()
             }
                 OutputStreamInstance o--> "1" DataStream : parent
                         OutputStreamInstance o--> "1" SABundleInstance : bundle
@@ -189,16 +222,6 @@ package "Data Stream Manager" #ffcc88 {
             
     
         DataStreamInstance <|-- OutputStreamInstance
-    
-    class "StreamPolicy" {
-                 string name
-                             create()
-            }
-                StreamPolicy o--> "1" DataTransform : post
-                        StreamPolicy o--> "1" DataTransform : pre
-                        StreamPolicy o--> "n" DataStream : stream
-                        StreamPolicy o--> "n" DataChannel : channels
-            
     
 
 }

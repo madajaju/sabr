@@ -1,0 +1,55 @@
+@startuml
+participant "Developer"
+participant "SecurityManager" #pink
+participant "DevOps Pipeline" as DevOps #00aaff
+participant "Capability Manager" as CM #lightgreen
+participant "SABR1" #lightgreen
+participant "SABR2" #lightgreen
+participant "DataStream1" #lightgreen
+participant "DataStream2" #lightgreen
+
+Developer -> DevOps : BuildSABR
+activate DevOps
+DevOps -> CM : build(SABR1)
+alt SABR1 does not exists
+activate CM
+CM -> SABR1 ** : create
+end
+CM -> SecurityManager : getRegistrationCreds(SABR1)
+CM -> SABR1 : storeRegistrationCreds(creds)
+CM -> SecurityManager : getBootstrapKey
+CM -> SABR1 : storeKey(bootstrapKey)
+
+SABR1 -> SecurityManager : registerEntity(SABR1)
+SecurityManager --/ SABR1 : deviceUID
+SABR1 -> SABR1 : createUniqueAuthenticationKey
+SABR1 -/ SecurityManager: provision
+
+== Authenticate to Pulsar ==
+
+SABR1 -> SecurityManager : authenticate
+SecurityManager --/ SABR1 : JWT
+SABR1 -> Pulsar : authenticate(JWT)
+Pulsar -> SecurityManager : validate(JWT)
+
+== Encrypt Data ==
+
+SABR1 -> SecurityManager : requestKeysDataStreamKeys(JWT,StreamID, timeRange)
+SABR1 -> SABR1 : storeKeys
+SABR1 -> SABR1 : createEnvelopeKey Data encryption key, Key Encryption Key KeyID
+SABR -> SABR1 : encryptData
+SABR -> SABR1 : CreateNewMessage(encryptedData, keyID)
+SABR1 -> SABR1 : encryptData(key)
+SABR1 -/ Pulsar : publish(JWT, message, keyID)
+
+== Decrypt Data ==
+
+SABR2 -/ Pulsar : consume(JWT,DataStreamID)
+SABR2 -> SABR2 : haveKeyID
+alt do not have key
+SABR2 -> SecurityManager: getKeysDataStreamKeys(JWT, StreamID, timeRange)
+SABR2 -> SABR2 : storeKeys
+end
+SABR2 -> SABR2 : decrypt(key)
+
+@enduml

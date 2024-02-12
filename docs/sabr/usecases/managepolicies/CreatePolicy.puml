@@ -1,0 +1,29 @@
+@startuml
+
+actor "DataEngineer"
+
+
+entity EventBus
+
+box Sentient Agent Bundle Resources #bbaaff
+    boundary sabr #white
+end box
+
+
+box Sentient Agent Bundle Resources #bbaaff
+    end box
+
+
+"DataEngineer" -> sabr: Create Policy
+
+    sabr -> "sentient agent bundle resources": create (name: policy1,file: ./templates/policy1.js)
+
+    "sentient agent bundle resources" --/ EventBus: streampolicy.create
+
+    sabr -> "sentient agent bundle resources": create (name: policy2,file: ./templates/policy2.js)
+
+    "sentient agent bundle resources" --/ EventBus: streampolicy.create
+
+
+
+@enduml

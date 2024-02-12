@@ -1,19 +1,19 @@
 @startuml
 
 
-package "Application Manager" #00aaff {
-
-}
-
 package "Data Stream Manager" #ffcc88 {
 
 }
 
-package "Security Aspect" #pink {
+package "Sentient Agent Bundle Manager" #ffcc88 {
 
 }
 
-package "Sentient Agent Bundle Manager" #ffcc88 {
+package "Application Manager" #00aaff {
+
+}
+
+package "Security Aspect" #pink {
 
 }
 

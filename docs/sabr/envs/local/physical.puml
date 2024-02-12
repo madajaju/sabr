@@ -15,10 +15,6 @@ package "Sentient Agent Bundle Resources" #bbaaff {
       REST --> sabr_container
 
   
-    file "sabr_web" as sabr_web_container
-    REST --> sabr_web_container
-    socket ---> sabr_web_container
-  
     file "sabr_pulsar" as sabr_pulsar_container
     REST --> sabr_pulsar_container
     socket ---> sabr_pulsar_container
@@ -35,9 +31,6 @@ package "Sentient Agent Bundle Resources" #bbaaff {
     sabr_container --> sabrimage
 
   
-      artifact "sabr_web" as sabr_web
-      sabr_web_container --> sabr_web
-    
       artifact "sabr_pulsar:standalone" as sabr_pulsar_standalone
       sabr_pulsar_container --> sabr_pulsar_standalone
     

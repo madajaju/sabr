@@ -1,0 +1,35 @@
+@startuml
+
+
+
+state ChannelActivationPolicy #ffcc88 {
+
+    state Init #ffcc88 {
+    }
+
+    state Enabled #ffcc88 {
+    }
+
+    state Disable #ffcc88 {
+    }
+
+    state Active #ffcc88 {
+    }
+
+
+
+
+Init -[#black]--> Enabled : create
+
+Enabled -[#black]--> Active : activate
+
+Enabled -[#black]--> Disable : disable
+
+Disable -[#black]--> Enabled : enable
+
+Active -[#black]--> Enabled : deactivate
+
+}
+
+
+@enduml

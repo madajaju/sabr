@@ -9,8 +9,36 @@ state "sentient agent bundle resources" as pstatename #bbaaff {
     }
 }
 
+        state "streampolicy create" as streampolicycreate #bbaaff {
+}
+
+
+        state "application" as application #bbaaff {
+state "create" as applicationcreate #bbaaff {
+}
+}
+
+
         state "bundle" as bundle #bbaaff {
 state "build" as bundlebuild #bbaaff {
+}
+}
+
+
+        state "bundle" as bundle #bbaaff {
+state "create" as bundlecreate #bbaaff {
+}
+}
+
+
+        state "capability" as capability #bbaaff {
+state "create" as capabilitycreate #bbaaff {
+}
+}
+
+
+        state "environment" as environment #bbaaff {
+state "create" as environmentcreate #bbaaff {
 }
 }
 
@@ -29,6 +57,18 @@ state "topic" as pulsartopic #bbaaff {
 
         state "pulsar" as pulsar #bbaaff {
 state "topics" as pulsartopics #bbaaff {
+}
+}
+
+
+        state "sabundle" as sabundle #bbaaff {
+state "build" as sabundlebuild #bbaaff {
+}
+}
+
+
+        state "streampolicy" as streampolicy #bbaaff {
+state "create" as streampolicycreate #bbaaff {
 }
 }
 

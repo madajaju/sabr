@@ -3,7 +3,7 @@
 
 package "Data Stream Manager" #ffcc88 {
     
-        class StreamPolicy {
+        class ChannelCreationPolicy {
         }
     
         class DataChannel {
@@ -95,7 +95,7 @@ package "Sentient Agent Bundle Manager" #ffcc88 {
                      addKeysToStore()
                      build()
             }
-                AdminDataStream o--> "n" StreamPolicy : policies
+                AdminDataStream o--> "n" ChannelCreationPolicy : policies
                         AdminDataStream *--> "n" DataChannel : channels
                         AdminDataStream *--> "n" DataStreamInstance : instances
                         AdminDataStream o--> "n" DataTransform : transforms
@@ -155,7 +155,7 @@ package "Sentient Agent Bundle Manager" #ffcc88 {
                         SABundle o--> "n" AIModel : aimodels
                         SABundle *--> "n" SABundleInstance : instances
                         SABundle *--> "1" SecureVault : secureVault
-                        SABundle o--> "n" StreamPolicy : policies
+                        SABundle o--> "n" ChannelCreationPolicy : policies
                         SABundle o--> "n" SABundleBuild : builds
                         SABundle o--> "n" Image : images
             

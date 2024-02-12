@@ -20,7 +20,7 @@ A Data stream defines where I am getting data from or pushing data.
 
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
-| policies | n | StreamPolicy | false | false | This is the collection policies that apply to the stream when the stream is created. |
+| policies | n | ChannelCreationPolicy | false | false | This is the collection policies that apply to the stream when the stream is created. |
 | channels | n | DataChannel | true | true | This is the collection of channel that are attached to this data stream |
 | instances | n | DataStreamInstance | false | true | This is the collection of deployed data streams in the system of this specific data stream. |
 | transforms | n | DataTransform |  |  | This is the transformation that is called on data arriving to the Data Stream. |

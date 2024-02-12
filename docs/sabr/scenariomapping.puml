@@ -2,10 +2,43 @@
 left to right direction
 
 
+     component "sabr" as sabr
+ interface "streampolicy create" as sabrstreampolicycreate
+sabr -- sabrstreampolicycreate
+
+    
+    package "sabr" as sabr #bbaaff {
+ component "application" as sabrapplication
+ interface "create" as sabrapplicationcreate
+sabrapplication -- sabrapplicationcreate
+}
+
+    
     package "sabr" as sabr #bbaaff {
  component "bundle" as sabrbundle
  interface "build" as sabrbundlebuild
 sabrbundle -- sabrbundlebuild
+}
+
+    
+    package "sabr" as sabr #bbaaff {
+ component "bundle" as sabrbundle
+ interface "create" as sabrbundlecreate
+sabrbundle -- sabrbundlecreate
+}
+
+    
+    package "sabr" as sabr #bbaaff {
+ component "capability" as sabrcapability
+ interface "create" as sabrcapabilitycreate
+sabrcapability -- sabrcapabilitycreate
+}
+
+    
+    package "sabr" as sabr #bbaaff {
+ component "environment" as sabrenvironment
+ interface "create" as sabrenvironmentcreate
+sabrenvironment -- sabrenvironmentcreate
 }
 
     
@@ -30,18 +63,75 @@ sabrpulsar -- sabrpulsartopics
 }
 
     
+    package "sabr" as sabr #bbaaff {
+ component "sabundle" as sabrsabundle
+ interface "build" as sabrsabundlebuild
+sabrsabundle -- sabrsabundlebuild
+}
+
+    
+    package "sabr" as sabr #bbaaff {
+ component "streampolicy" as sabrstreampolicy
+ interface "create" as sabrstreampolicycreate
+sabrstreampolicy -- sabrstreampolicycreate
+}
+
+    
 
 
 
 
+        rectangle "Develop Capability" as DevelopCapability #ffffaa {
+            ("Create Capability")/ as DevOpsEngineerDevelopCapabilityCreateCapability
+        }
+    
+    sabrcapabilitycreate <-- DevOpsEngineerDevelopCapabilityCreateCapability
+    
 
 
 
 
+        rectangle "Manage SABR" as ManageSABR #ffffaa {
+            ("Build SAB")/ as ApplicationDeveloperManageSABRBuildSAB
+        }
+    
+    sabrsabundlebuild <-- ApplicationDeveloperManageSABRBuildSAB
+    
+
+
+
+        rectangle "Manage Policies" as ManagePolicies #ffffaa {
+            ("Create Policy")/ as DataEngineerManagePoliciesCreatePolicy
+        }
+    
+    sabrstreampolicycreate <-- DataEngineerManagePoliciesCreatePolicy
+    
 
 
 
 
-
-
+        rectangle "Ships" as Ships #ffffaa {
+            ("AIS No Contact")/ as ApplicationDeveloperShipsAISNoContact
+        }
+    
+    sabrsabundlebuild <-- ApplicationDeveloperShipsAISNoContact
+    
+        rectangle "Ships" as Ships #ffffaa {
+            ("AIS One")/ as ApplicationDeveloperShipsAISOne
+        }
+    
+    sabrsabundlebuild <-- ApplicationDeveloperShipsAISOne
+    
+        rectangle "Ships" as Ships #ffffaa {
+            ("Build AIS SAB")/ as ApplicationDeveloperShipsAISSABR
+        }
+    
+    sabrsabundlebuild <-- ApplicationDeveloperShipsAISSABR
+    
+        rectangle "Ships" as Ships #ffffaa {
+            ("USV One Instance")/ as ApplicationDeveloperShipsUSVOne
+        }
+    
+    sabrsabundlebuild <-- ApplicationDeveloperShipsUSVOne
+    
 @enduml

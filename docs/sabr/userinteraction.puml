@@ -34,6 +34,10 @@ devops -> "Sentient Agent Bundle Resources": Manage Capabilities
 "Sentient Agent Bundle Resources" -> bin: capability list
 bin -> REST: capability/list
 
+devops -> "Sentient Agent Bundle Resources": Ships
+"Sentient Agent Bundle Resources" -> bin: sabundle list
+bin -> REST: sabundle/list
+
 itops -> "Sentient Agent Bundle Resources": Manage Capabilities
 "Sentient Agent Bundle Resources" -> bin: capability list
 bin -> REST: capability/list

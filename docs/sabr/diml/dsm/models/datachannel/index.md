@@ -22,7 +22,7 @@ This represents one channel in the data stream with specific rules for the chann
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
 | transformService | 1 | Service |  |  | This is the transformation service for the channel. It will summarize the data, give historical data, give all of the data as a passthru, or any other data transformation needed for the individual channel based on the policy applied to the data stream |
-| policy | n | StreamPolicy |  |  | This policy is the policy that will create an instance of the data channel attached to a data stream. The policy defines how the channel is created and what transformation service to use when publishing or consuming information on the channel. |
+| policy | n | ChannelCreationPolicy |  |  | This policy is the policy that will create an instance of the data channel attached to a data stream. The policy defines how the channel is created and what transformation service to use when publishing or consuming information on the channel. |
 | instances | n | DataChannelInstance |  |  | This is a collection of all of the instances of the data channel running in the system. |
 | stream | 1 | DataStream |  |  | This is the owning stream |
 | encryptionKey | 1 | SecurityKey |  |  | Encryption Key for the channel |
@@ -34,11 +34,12 @@ This represents one channel in the data stream with specific rules for the chann
 
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
+| channel | 1 | ChannelActivationItem | false | false |  |
+| channels | n | ChannelCreationPolicy | false | false | This collection of channels that are used to create channel instances when the stream is created. |
 | design | 1 | DataChannelInstance |  |  | Parent of the channel Instance. This is the definition of the channel. |
 | channels | n | DataStream | true | true | This is the collection of channel that are attached to this data stream |
 | design | 1 | InputChannelInstance |  |  | Parent of the channel Instance. This is the definition of the channel. |
 | design | 1 | OutputChannelInstance |  |  | Parent of the channel Instance. This is the definition of the channel. |
-| channels | n | StreamPolicy | false | false | This collection of channels that are used to create channel instances when the stream is created. |
 | channels | n | AdminDataStream | true | true | This is the collection of channel that are attached to this data stream |
 
 
