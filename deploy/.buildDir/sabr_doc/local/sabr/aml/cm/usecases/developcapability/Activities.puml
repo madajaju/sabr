@@ -1,0 +1,40 @@
+@startuml
+
+
+usecase "Develop Capability" as DevelopCapability #yellow
+
+Actor "Application Developer" as ApplicationDeveloper
+
+ApplicationDeveloper --> DevelopCapability
+
+
+
+usecase "BuildCapability" as BuildCapability #lightgrey
+
+DevelopCapability --> BuildCapability
+
+usecase "CreateCapability" as CreateCapability #lightgrey
+
+DevelopCapability --> CreateCapability
+
+usecase "ReleaseCapability" as ReleaseCapability #lightgrey
+
+DevelopCapability --> ReleaseCapability
+
+usecase "TestCapability" as TestCapability #lightgrey
+
+DevelopCapability --> TestCapability
+
+
+
+usecase "Manage Capabilities" as ManageCapabilities #lightyellow
+
+DevelopCapability <-- ManageCapabilities : extends
+
+
+
+
+
+
+
+@enduml

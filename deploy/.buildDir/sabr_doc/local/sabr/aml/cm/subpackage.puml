@@ -1,0 +1,62 @@
+@startuml
+
+
+package "Sentient Agent Bundle Manager" #ffcc88 {
+
+}
+
+package "Application Manager" #00aaff {
+
+}
+
+package "Data Stream Manager" #ffcc88 {
+
+}
+
+package "Capability Manager" #00aaff {
+
+}
+
+package "Service Orchestrator" #aaffaa {
+
+}
+
+
+package "Capability Manager" #00aaff {
+
+    interface "Capability Manager" as i {
+
+            /sabr/aml/cm/capability/build()
+            /sabr/aml/cm/capability/create()
+            /sabr/aml/cm/capability/deploy()
+            /sabr/aml/cm/capability/list()
+            /sabr/aml/cm/capability/release()
+            /sabr/aml/cm/capability/remove()
+            /sabr/aml/cm/capability/test()
+            /sabr/aml/cm/capability/update()
+
+    }
+}
+
+circle REST
+circle Web
+circle CLI
+circle WebSocket
+
+i -down- Web
+i -down- CLI
+i -down- REST
+WebSocket -left- i: events >
+
+package "Capability Manager" #00aaff {
+
+
+}
+
+
+    "Sentient Agent Bundle Manager" <-- "Capability Manager"
+
+    "Application Manager" <-- "Capability Manager"
+
+
+@enduml

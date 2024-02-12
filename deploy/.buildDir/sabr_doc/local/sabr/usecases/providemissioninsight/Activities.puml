@@ -1,0 +1,20 @@
+@startuml
+
+
+usecase "Provide Mission Insight" as ProvideMissionInsight #yellow
+
+Actor "Tactical Operator" as TacticalOperator
+
+TacticalOperator --> ProvideMissionInsight
+
+
+
+
+
+
+
+
+
+
+
+@enduml

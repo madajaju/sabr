@@ -1,0 +1,44 @@
+@startuml
+
+
+package "Security Aspect" #pink {
+
+        class SecurityKey {
+        }
+    }
+
+
+package "Security Aspect" #pink {
+
+    interface "Security Aspect" as i {
+
+    }
+}
+
+CLI ()-- i
+REST ()-- i
+Web ()-- i
+
+package "Security Aspect" #pink {
+        class "KeyStore" {
+                 string name
+                 string encryptedData
+                             encrypt()
+            }
+                KeyStore o--> "n" SecurityKey : keys
+
+
+    class "SecurityKey" {
+                 string name
+                 string value
+                 string iv
+                             generatePair()
+            }
+
+
+
+}
+
+
+
+@enduml

@@ -1,0 +1,17 @@
+@startuml
+partition "SecurityAspect" pink {
+(*) --> "Generate RSA Key Pair"
+}
+partition "SecurityAspect" pink {
+"Generate RSA Key Pair" --> ===F2===
+}
+
+partition "SecurityAspect" pink {
+===F2=== --> "Store Public Key"
+}
+
+partition "SecurityAspect" pink {
+===F2=== --> "Store Private Key"
+}
+
+@enduml

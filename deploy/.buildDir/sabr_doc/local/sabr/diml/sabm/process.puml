@@ -1,0 +1,158 @@
+@startuml
+left to right direction
+
+
+state "diml" as diml #ffcc88 {
+state "sabm" as dimlsabm #ffcc88 {
+}
+}
+
+
+state "dimlsabm" as pstatename #ffcc88 {
+    state "Custom Function" as sabmfunction {
+    }
+}
+
+        state "diml" as diml #ffcc88 {
+state "sabm" as dimlsabm #ffcc88 {
+state "connect" as dimlsabmconnect #ffcc88 {
+}
+}
+}
+
+
+        state "diml" as diml #ffcc88 {
+state "sabm" as dimlsabm #ffcc88 {
+state "bundle" as dimlsabmbundle #ffcc88 {
+state "createanddeploy" as dimlsabmbundlecreateanddeploy #ffcc88 {
+}
+}
+}
+}
+
+
+        state "diml" as diml #ffcc88 {
+state "sabm" as dimlsabm #ffcc88 {
+state "bundle" as dimlsabmbundle #ffcc88 {
+state "deploy" as dimlsabmbundledeploy #ffcc88 {
+}
+}
+}
+}
+
+
+        state "diml" as diml #ffcc88 {
+state "sabm" as dimlsabm #ffcc88 {
+state "policy" as dimlsabmpolicy #ffcc88 {
+state "create" as dimlsabmpolicycreate #ffcc88 {
+}
+}
+}
+}
+
+
+        state "diml" as diml #ffcc88 {
+state "sabm" as dimlsabm #ffcc88 {
+state "sabundle" as dimlsabmsabundle #ffcc88 {
+state "build" as dimlsabmsabundlebuild #ffcc88 {
+}
+}
+}
+}
+
+
+        state "diml" as diml #ffcc88 {
+state "sabm" as dimlsabm #ffcc88 {
+state "sabundle" as dimlsabmsabundle #ffcc88 {
+state "create" as dimlsabmsabundlecreate #ffcc88 {
+}
+}
+}
+}
+
+
+        state "diml" as diml #ffcc88 {
+state "sabm" as dimlsabm #ffcc88 {
+state "sabundle" as dimlsabmsabundle #ffcc88 {
+state "deploy" as dimlsabmsabundledeploy #ffcc88 {
+}
+}
+}
+}
+
+
+        state "diml" as diml #ffcc88 {
+state "sabm" as dimlsabm #ffcc88 {
+state "sabundle" as dimlsabmsabundle #ffcc88 {
+state "list" as dimlsabmsabundlelist #ffcc88 {
+}
+}
+}
+}
+
+
+
+
+        state "diml" as diml #ffcc88 {
+state "sabm" as dimlsabm #ffcc88 {
+state "SABundleInstance" as dimlsabmsabundleinstance #ffcc88 {
+state "created" as dimlsabmsabundleinstancecreated #ffcc88 {
+}
+}
+}
+}
+
+
+    state "diml" as diml #ffcc88 {
+state "sabm" as dimlsabm #ffcc88 {
+state "Function" as dimlsabmfunction #ffcc88 {
+}
+}
+}
+
+    dimlsabmsabundleinstancecreated ---> dimlsabmfunction
+
+
+        state "diml" as diml #ffcc88 {
+state "sabm" as dimlsabm #ffcc88 {
+state "SABundleInstance" as dimlsabmsabundleinstance #ffcc88 {
+state "deployed" as dimlsabmsabundleinstancedeployed #ffcc88 {
+}
+}
+}
+}
+
+
+
+    dimlsabmsabundleinstancedeployed ---> dimlsabmfunction
+
+
+        state "diml" as diml #ffcc88 {
+state "sabm" as dimlsabm #ffcc88 {
+state "SABundleInstance" as dimlsabmsabundleinstance #ffcc88 {
+state "enabled" as dimlsabmsabundleinstanceenabled #ffcc88 {
+}
+}
+}
+}
+
+
+
+    dimlsabmsabundleinstanceenabled ---> dimlsabmfunction
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@enduml

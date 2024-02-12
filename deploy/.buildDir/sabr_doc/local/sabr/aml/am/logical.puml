@@ -1,0 +1,140 @@
+@startuml
+
+
+package "Service Orchestrator" #aaffaa {
+    }
+
+package "Application Manager" #00aaff {
+
+        class Stack {
+        }
+
+        class ApplicationInstance {
+        }
+
+        class Application {
+        }
+
+        class Service {
+        }
+
+        class ServiceInstance {
+        }
+
+        class StackInstance {
+        }
+    }
+
+
+package "Application Manager" #00aaff {
+
+    interface "Application Manager" as i {
+            /sabr/aml/am/application/create()
+            /sabr/aml/am/application/destroy()
+            /sabr/aml/am/application/list()
+            /sabr/aml/am/application/update()
+            /sabr/aml/am/service/deployed()
+            /sabr/aml/am/service/kill()
+            /sabr/aml/am/service/provision()
+            /sabr/aml/am/service/stderr()
+            /sabr/aml/am/service/stdout()
+
+    }
+}
+
+CLI ()-- i
+REST ()-- i
+Web ()-- i
+
+package "Application Manager" #00aaff {
+        class "Application" {
+                 string name
+                 string version
+                 ref fn
+                    }
+                Application *--> "n" Stack : stacks
+                        Application *--> "n" ApplicationInstance : instances
+
+
+    class "ApplicationInstance" {
+                 string name
+                 string status
+                 string message
+                    }
+                ApplicationInstance o--> "1" Application : app
+
+
+    class "Service" {
+                 string name
+                 string command
+                 string version
+                 json ports
+                 json expose
+                 json parameters
+                 json environment
+                 ref provisionScript
+                    }
+                Service o--> "1" Stack : stack
+                        Service o--> "n" Service : children
+                        Service o--> "1" Service : parent
+                        Service *--> "n" ServiceInstance : instances
+
+
+    class "ServiceInstance" {
+                 string name
+                 string pid
+                 string url
+                 string stdout
+                 string stderr
+                             launched()
+                     provision()
+            }
+                ServiceInstance o--> "1" Service : parent
+                        ServiceInstance o--> "1" StackInstance : stack
+
+
+    class "Stack" {
+                 string name
+                 string command
+                 string version
+                 json ports
+                 json expose
+                 json parameters
+                 json environment
+                 ref provisionScript
+                    }
+                Stack *--> "n" Service : services
+                        Stack *--> "n" StackInstance : instances
+                        Stack o--> "1" Application : app
+                        Stack o--> "1" Stack : stack
+                        Stack o--> "n" Service : children
+                        Stack o--> "1" Service : parent
+
+
+        Service <|-- Stack
+
+    class "StackInstance" {
+                 string name
+                 string stdout
+                 string stderr
+                 string pid
+                 string url
+                             launched()
+                     provision()
+            }
+                StackInstance o--> "1" ApplicationInstance : app
+                        StackInstance o--> "1" Stack : stack
+                        StackInstance *--> "n" ServiceInstance : services
+                        StackInstance o--> "1" Service : parent
+
+
+        ServiceInstance <|-- StackInstance
+
+
+}
+
+
+    "Application Manager" --> "Service Orchestrator"
+
+
+@enduml

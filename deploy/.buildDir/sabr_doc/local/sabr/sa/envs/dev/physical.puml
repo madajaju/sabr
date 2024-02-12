@@ -1,0 +1,39 @@
+@startuml
+  interface CLI
+  interface Web
+  interface WebSocket
+package "Security Aspect" #pink {
+  component express as REST
+  component socket.io as socket
+  folder bin #ffffff {
+    component " sabr sa" as binName
+  }
+  binName --> REST
+
+  folder deploy #ffffff {
+      file "node server.js\n" as sabr_sa_container
+      REST --> sabr_sa_container
+
+
+    file "web" as web_container
+    REST --> web_container
+    socket ---> web_container
+
+  }
+  folder images #ffffff {
+    collections "sabr_sa" as sabr_saimage
+    artifact "ailtire:swarm" as ailtireswarm
+    sabr_saimage <|-- ailtireswarm
+    sabr_sa_container --> sabr_saimage
+
+
+      artifact "sabr_sa_web" as sabr_sa_web
+      web_container --> sabr_sa_web
+
+  }
+}
+CLI " sabr sa" -- binName
+Web "/sabr/sa" - REST
+WebSocket ".sabr.sa" -- socket
+
+@enduml

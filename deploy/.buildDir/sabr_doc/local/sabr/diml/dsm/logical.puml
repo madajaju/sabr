@@ -1,0 +1,208 @@
+@startuml
+
+
+package "Application Manager" #00aaff {
+
+        class Service {
+        }
+
+        class ServiceInstance {
+        }
+    }
+
+package "Data Stream Manager" #ffcc88 {
+
+        class StreamPolicy {
+        }
+
+        class DataChannelInstance {
+        }
+
+        class DataStream {
+        }
+
+        class DataChannel {
+        }
+
+        class DataStreamInstance {
+        }
+    }
+
+package "Security Aspect" #pink {
+
+        class SecurityKey {
+        }
+    }
+
+package "Sentient Agent Bundle Manager" #ffcc88 {
+
+        class SABundleInstance {
+        }
+
+        class DataTransform {
+        }
+
+        class SABundle {
+        }
+
+        class DataTransformInstance {
+        }
+    }
+
+
+package "Data Stream Manager" #ffcc88 {
+
+    interface "Data Stream Manager" as i {
+            /sabr/diml/dsm/channel/deployed()
+            /sabr/diml/dsm/stream/deployed()
+
+    }
+}
+
+CLI ()-- i
+REST ()-- i
+Web ()-- i
+
+package "Data Stream Manager" #ffcc88 {
+        class "DataChannel" {
+                 string name
+                 string direction
+                             build()
+            }
+                DataChannel o--> "1" Service : transformService
+                        DataChannel o--> "n" StreamPolicy : policy
+                        DataChannel o--> "n" DataChannelInstance : instances
+                        DataChannel o--> "1" DataStream : stream
+                        DataChannel o--> "1" SecurityKey : encryptionKey
+                        DataChannel o--> "1" SecurityKey : decryptionKey
+
+
+    class "DataChannelInstance" {
+                 string name
+                 string direction
+                 string message
+                             create()
+                     failed()
+            }
+                DataChannelInstance o--> "1" DataChannel : design
+                        DataChannelInstance o--> "1" DataStreamInstance : stream
+                        DataChannelInstance o--> "n" ServiceInstance : transformInstance
+                        DataChannelInstance o--> "1" SABundleInstance : bundle
+
+
+    class "DataStream" {
+                 string name
+                             addKeysToStore()
+                     build()
+                     provision()
+            }
+                DataStream o--> "n" StreamPolicy : policies
+                        DataStream *--> "n" DataChannel : channels
+                        DataStream *--> "n" DataStreamInstance : instances
+                        DataStream o--> "n" DataTransform : transforms
+                        DataStream o--> "n" SABundle : consumers
+                        DataStream o--> "n" SABundle : producers
+                        DataStream o--> "1" SecurityKey : encryptionKey
+                        DataStream o--> "1" SecurityKey : decryptionKey
+
+
+    class "DataStreamInstance" {
+                 string name
+                 string direction
+                             deploy()
+            }
+                DataStreamInstance o--> "1" DataStream : parent
+                        DataStreamInstance o--> "1" SABundleInstance : bundle
+                        DataStreamInstance *--> "n" DataChannelInstance : channels
+                        DataStreamInstance o--> "n" DataChannelInstance : policies
+                        DataStreamInstance o--> "n" DataTransformInstance : transforms
+
+
+    class "InputChannelInstance" {
+                 ref consumer
+                 string name
+                 string direction
+                 string message
+                             create()
+                     deploy()
+                     failed()
+            }
+                InputChannelInstance o--> "n" DataTransform : transforms
+                        InputChannelInstance o--> "1" DataChannel : design
+                        InputChannelInstance o--> "1" DataStreamInstance : stream
+                        InputChannelInstance o--> "n" ServiceInstance : transformInstance
+                        InputChannelInstance o--> "1" SABundleInstance : bundle
+
+
+        DataChannelInstance <|-- InputChannelInstance
+
+    class "InputStreamInstance" {
+                 ref consumer
+                 string name
+                 string direction
+                             deploy()
+                     process()
+                     provision()
+            }
+                InputStreamInstance o--> "1" DataStream : parent
+                        InputStreamInstance o--> "1" SABundleInstance : bundle
+                        InputStreamInstance *--> "n" DataChannelInstance : channels
+                        InputStreamInstance o--> "n" DataChannelInstance : policies
+                        InputStreamInstance o--> "n" DataTransformInstance : transforms
+
+
+        DataStreamInstance <|-- InputStreamInstance
+
+    class "OutputChannelInstance" {
+                 ref producer
+                 ref queue
+                 string producerName
+                 string name
+                 string direction
+                 string message
+                             create()
+                     deploy()
+                     send()
+                     failed()
+            }
+                OutputChannelInstance o--> "1" DataChannel : design
+                        OutputChannelInstance o--> "1" DataStreamInstance : stream
+                        OutputChannelInstance o--> "n" ServiceInstance : transformInstance
+                        OutputChannelInstance o--> "1" SABundleInstance : bundle
+
+
+        DataChannelInstance <|-- OutputChannelInstance
+
+    class "OutputStreamInstance" {
+                 ref producer
+                 string name
+                 string direction
+                             deploy()
+                     provision()
+                     send()
+            }
+                OutputStreamInstance o--> "1" DataStream : parent
+                        OutputStreamInstance o--> "1" SABundleInstance : bundle
+                        OutputStreamInstance *--> "n" DataChannelInstance : channels
+                        OutputStreamInstance o--> "n" DataChannelInstance : policies
+                        OutputStreamInstance o--> "n" DataTransformInstance : transforms
+
+
+        DataStreamInstance <|-- OutputStreamInstance
+
+    class "StreamPolicy" {
+                 string name
+                             create()
+            }
+                StreamPolicy o--> "1" DataTransform : post
+                        StreamPolicy o--> "1" DataTransform : pre
+                        StreamPolicy o--> "n" DataStream : stream
+                        StreamPolicy o--> "n" DataChannel : channels
+
+
+
+}
+
+
+
+@enduml

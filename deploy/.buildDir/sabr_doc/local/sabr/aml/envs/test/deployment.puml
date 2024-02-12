@@ -1,0 +1,73 @@
+@startuml
+
+left to right direction
+
+
+boundary parent #black
+
+
+entity children #blue
+
+rectangle "sabr_aml_am" as sabr_aml_amStack #00aaff {
+    queue sabr_aml_amStacksnet #blue [
+        <b><color:white>parent</color></b>
+    ]
+}
+rectangle "sabr_aml_cm" as sabr_aml_cmStack #00aaff {
+    queue sabr_aml_cmStacksnet #blue [
+        <b><color:white>parent</color></b>
+    ]
+}
+rectangle "sabr_aml_lc" as sabr_aml_lcStack #00aaff {
+    queue sabr_aml_lcStacksnet #blue [
+        <b><color:white>parent</color></b>
+    ]
+}
+
+
+
+package "sabr_aml" #00aaff {
+    queue parentnet #black [
+            <b><color:white>parent</color></b>
+    ]
+
+    parentnet -[#black]- parent
+
+    queue childrennet #blue [
+            <b><color:white>children</color></b>
+    ]
+
+    childrennet -[#blue]- children
+
+    queue siblingsnet #red [
+            <b><color:white>siblings</color></b>
+    ]
+
+
+node "am" as amService
+node "cm" as cmService
+node "lc" as lcService
+
+        collections "sabr_aml_am" as sabr_aml_amimage
+            collections "sabr_aml_cm" as sabr_aml_cmimage
+            collections "sabr_aml_lc" as sabr_aml_lcimage
+
+}
+
+amService -[#blue]- childrennet
+
+cmService -[#blue]- childrennet
+
+lcService -[#blue]- childrennet
+amService .... sabr_aml_amimage
+cmService .... sabr_aml_cmimage
+lcService .... sabr_aml_lcimage
+
+sabr_aml_amimage --> sabr_aml_amStack
+
+sabr_aml_cmimage --> sabr_aml_cmStack
+
+sabr_aml_lcimage --> sabr_aml_lcStack
+
+
+@enduml

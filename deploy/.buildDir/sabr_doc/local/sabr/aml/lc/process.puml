@@ -1,0 +1,20 @@
+@startuml
+left to right direction
+
+
+state "aml" as aml #00aaff {
+state "lc" as amllc #00aaff {
+}
+}
+
+
+state "amllc" as pstatename #00aaff {
+    state "Custom Function" as lcfunction {
+    }
+}
+
+
+
+
+
+@enduml

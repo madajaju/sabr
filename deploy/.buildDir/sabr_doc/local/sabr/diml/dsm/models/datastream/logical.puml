@@ -1,0 +1,128 @@
+@startuml
+
+class "DataStream" as Model {
+ string name
+
+ addKeysToStore()
+ build()
+ provision()
+
+}
+
+rectangle "StreamPolicy" as StreamPolicy #lightblue {
+}
+
+Model o--> "n" StreamPolicy : policies
+
+
+rectangle "DataChannel" as DataChannel #lightblue {
+}
+
+Model *--> "n" DataChannel : channels
+
+
+rectangle "DataStreamInstance" as DataStreamInstance #lightblue {
+}
+
+Model *--> "n" DataStreamInstance : instances
+
+
+rectangle "DataTransform" as DataTransform #lightblue {
+}
+
+Model o--> "n" DataTransform : transforms
+
+
+rectangle "SABundle" as SABundle #lightblue {
+}
+
+Model o--> "n" SABundle : consumers
+
+
+rectangle "SABundle" as SABundle #lightblue {
+}
+
+Model o--> "n" SABundle : producers
+
+
+rectangle "SecurityKey" as SecurityKey #lightblue {
+}
+
+Model o--> "1" SecurityKey : encryptionKey
+
+
+rectangle "SecurityKey" as SecurityKey #lightblue {
+}
+
+Model o--> "1" SecurityKey : decryptionKey
+
+
+
+
+    rectangle "DataChannel" as DataChannel #lightgreen {
+    }
+
+        DataChannel   o--> "1" Model : "stream"
+
+    rectangle "DataStreamInstance" as DataStreamInstance #lightgreen {
+    }
+
+        DataStreamInstance   o--> "1" Model : "parent"
+
+    rectangle "InputStreamInstance" as InputStreamInstance #lightgreen {
+    }
+
+        InputStreamInstance   o--> "1" Model : "parent"
+
+    rectangle "OutputStreamInstance" as OutputStreamInstance #lightgreen {
+    }
+
+        OutputStreamInstance   o--> "1" Model : "parent"
+
+    rectangle "StreamPolicy" as StreamPolicy #lightgreen {
+    }
+
+        StreamPolicy   o--> "n" Model : "stream"
+
+    rectangle "AdminTransform" as AdminTransform #lightgreen {
+    }
+
+        AdminTransform   o--> "n" Model : "inputs"
+
+    rectangle "AdminTransform" as AdminTransform #lightgreen {
+    }
+
+        AdminTransform   o--> "n" Model : "outputs"
+
+    rectangle "DataTransform" as DataTransform #lightgreen {
+    }
+
+        DataTransform   o--> "n" Model : "inputs"
+
+    rectangle "DataTransform" as DataTransform #lightgreen {
+    }
+
+        DataTransform   o--> "n" Model : "outputs"
+
+    rectangle "SABundle" as SABundle #lightgreen {
+    }
+
+        SABundle   o--> "n" Model : "inputs"
+
+    rectangle "SABundle" as SABundle #lightgreen {
+    }
+
+        SABundle   o--> "n" Model : "outputs"
+
+    rectangle "SABundle" as SABundle #lightgreen {
+    }
+
+        SABundle   o--> "1" Model : "learningStream"
+
+    rectangle "SABundle" as SABundle #lightgreen {
+    }
+
+        SABundle   o--> "1" Model : "adminStream"
+
+
+@enduml

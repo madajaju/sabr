@@ -1,0 +1,25 @@
+@startuml
+
+class "KeyStore" as Model {
+ string name
+ string encryptedData
+
+ encrypt()
+
+}
+
+rectangle "SecurityKey" as SecurityKey #lightblue {
+}
+
+Model o--> "n" SecurityKey : keys
+
+
+
+
+    rectangle "SecureVault" as SecureVault #lightgreen {
+    }
+
+        SecureVault   *--> "1" Model : "store"
+
+
+@enduml

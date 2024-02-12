@@ -1,0 +1,53 @@
+@startuml
+  interface CLI
+  interface Web
+  interface WebSocket
+package "Sentient Agent Bundle Resources" #bbaaff {
+  component express as REST
+  component socket.io as socket
+  folder bin #ffffff {
+    component " sabr" as binName
+  }
+  binName --> REST
+
+  folder deploy #ffffff {
+      file "node server.js\n" as sabr_container
+      REST --> sabr_container
+
+
+    file "sabr_web" as sabr_web_container
+    REST --> sabr_web_container
+    socket ---> sabr_web_container
+
+    file "sabr_pulsar" as sabr_pulsar_container
+    REST --> sabr_pulsar_container
+    socket ---> sabr_pulsar_container
+
+    file "sabr_doc" as sabr_doc_container
+    REST --> sabr_doc_container
+    socket ---> sabr_doc_container
+
+  }
+  folder images #ffffff {
+    collections "sabr" as sabrimage
+    artifact "ailtire:swarm" as ailtireswarm
+    sabrimage <|-- ailtireswarm
+    sabr_container --> sabrimage
+
+
+      artifact "sabr_web" as sabr_web
+      sabr_web_container --> sabr_web
+
+      artifact "sabr_pulsar:standalone" as sabr_pulsar_standalone
+      sabr_pulsar_container --> sabr_pulsar_standalone
+
+      artifact "sabr_doc" as sabr_doc
+      sabr_doc_container --> sabr_doc
+
+  }
+}
+CLI " sabr" -- binName
+Web "/sabr" - REST
+WebSocket ".sabr" -- socket
+
+@enduml

@@ -1,0 +1,22 @@
+@startuml
+
+
+
+package "Common Physical Layer" #bbbbbb {
+
+    interface "Common Physical Layer" as i {
+
+    }
+}
+
+CLI ()-- i
+REST ()-- i
+Web ()-- i
+
+package "Common Physical Layer" #bbbbbb {
+
+}
+
+
+
+@enduml

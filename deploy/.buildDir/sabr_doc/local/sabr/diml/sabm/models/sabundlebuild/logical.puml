@@ -1,0 +1,38 @@
+@startuml
+
+class "SABundleBuild" as Model {
+ string name
+ string version
+ string encryptedData
+
+ encrypt()
+
+}
+
+rectangle "SecurityKey" as SecurityKey #lightblue {
+}
+
+Model *--> "1" SecurityKey : encryptKey
+
+
+rectangle "SecurityKey" as SecurityKey #lightblue {
+}
+
+Model *--> "1" SecurityKey : decryptKey
+
+
+rectangle "SecurityKey" as SecurityKey #lightblue {
+}
+
+Model *--> "1" SecurityKey : iv
+
+
+
+
+    rectangle "SABundle" as SABundle #lightgreen {
+    }
+
+        SABundle   o--> "n" Model : "builds"
+
+
+@enduml

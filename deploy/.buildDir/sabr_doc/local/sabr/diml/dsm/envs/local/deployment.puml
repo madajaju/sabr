@@ -1,0 +1,57 @@
+@startuml
+
+left to right direction
+
+
+boundary parent #blue
+
+
+entity pulsar #black
+
+entity children #red
+
+rectangle "sabr_diml_dsm" as sabr_diml_dsmStack #ffcc88 {
+    queue sabr_diml_dsmStacksnet #red [
+        <b><color:white>parent</color></b>
+    ]
+}
+
+
+
+package "sabr_diml_dsm" #ffcc88 {
+    queue pulsarnet #black [
+            <b><color:white>pulsar</color></b>
+    ]
+
+    pulsarnet -[#black]- pulsar
+
+    queue parentnet #blue [
+            <b><color:white>parent</color></b>
+    ]
+
+    parentnet -[#blue]- parent
+
+    queue childrennet #red [
+            <b><color:white>children</color></b>
+    ]
+
+    childrennet -[#red]- children
+
+    queue siblingsnet #orange [
+            <b><color:white>siblings</color></b>
+    ]
+
+
+node "pulsar" as pulsarService
+
+        collections "sabr_diml_dsm:standalone" as sabr_diml_dsmstandaloneimage
+
+}
+pulsarService .... sabr_diml_dsmstandaloneimage
+
+sabr_diml_dsmstandaloneimage --> sabr_diml_dsmStack
+
+sabr_diml_dsmStacksnet --[#blue]-- parent
+
+
+@enduml

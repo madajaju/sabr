@@ -1,0 +1,25 @@
+@startuml
+
+
+actor "ApplicationDeveloper" as applicationdeveloper
+
+actor "DevOpsEngineer" as devops
+
+
+
+
+applicationdeveloper -> "Application Manager": Integrate Learning
+"Application Manager" -> bin: application list
+bin -> REST: application/list
+
+applicationdeveloper -> "Application Manager": Manage Application
+"Application Manager" -> bin: application list
+bin -> REST: application/list
+
+devops -> "Application Manager": Manage Application
+"Application Manager" -> bin: application list
+bin -> REST: application/list
+
+
+
+@enduml

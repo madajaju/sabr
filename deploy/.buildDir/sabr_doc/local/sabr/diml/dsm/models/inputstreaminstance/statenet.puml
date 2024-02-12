@@ -1,0 +1,48 @@
+@startuml
+
+
+
+state InputStreamInstance #ffcc88 {
+
+    state Init #ffcc88 {
+    }
+
+    state Created #ffcc88 {
+    }
+
+    state Provisioned #ffcc88 {
+    }
+
+    state Deploying #ffcc88 {
+    }
+
+    state Enabled #ffcc88 {
+    }
+
+    state Disabled #ffcc88 {
+    }
+
+
+
+
+Init -[#black]--> Created : create
+
+Created -[#black]--> Provisioned : provision
+
+Provisioned -[#black]--> Deploying : deploy
+
+Deploying -[#black]--> Enabled : deployed
+
+Enabled -[#black]--> Disabled : disable
+
+Enabled -[#black]--> Enabled : send
+
+Disabled -[#black]--> Enabled : enable
+
+}
+
+
+ Enabled -[#black]--> Null
+
+
+@enduml

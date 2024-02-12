@@ -1,0 +1,70 @@
+@startuml
+
+class "ServiceInstance" as Model {
+ string name
+ string pid
+ string url
+ string stdout
+ string stderr
+
+ launched()
+ provision()
+
+}
+
+rectangle "Service" as Service #lightblue {
+}
+
+Model o--> "1" Service : parent
+
+
+rectangle "StackInstance" as StackInstance #lightblue {
+}
+
+Model o--> "1" StackInstance : stack
+
+
+
+
+    rectangle "Service" as Service #lightgreen {
+    }
+
+        Service   *--> "n" Model : "instances"
+
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+
+        StackInstance   *--> "n" Model : "services"
+
+    rectangle "DataChannelInstance" as DataChannelInstance #lightgreen {
+    }
+
+        DataChannelInstance   o--> "n" Model : "transformInstance"
+
+    rectangle "InputChannelInstance" as InputChannelInstance #lightgreen {
+    }
+
+        InputChannelInstance   o--> "n" Model : "transformInstance"
+
+    rectangle "OutputChannelInstance" as OutputChannelInstance #lightgreen {
+    }
+
+        OutputChannelInstance   o--> "n" Model : "transformInstance"
+
+    rectangle "DockerProvisioner" as DockerProvisioner #lightgreen {
+    }
+
+        DockerProvisioner   o--> "n" Model : "services"
+
+    rectangle "ProcessProvisioner" as ProcessProvisioner #lightgreen {
+    }
+
+        ProcessProvisioner   o--> "n" Model : "services"
+
+    rectangle "Provisioner" as Provisioner #lightgreen {
+    }
+
+        Provisioner   o--> "n" Model : "services"
+
+
+@enduml

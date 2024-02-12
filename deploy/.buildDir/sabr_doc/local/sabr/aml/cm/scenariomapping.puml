@@ -1,0 +1,191 @@
+@startuml
+left to right direction
+
+
+    package "sabr" as sabr {
+package "aml" as sabraml {
+package "cm" as sabramlcm #00aaff {
+ component "capability" as sabramlcmcapability
+ interface "build" as sabramlcmcapabilitybuild
+sabramlcmcapability -- sabramlcmcapabilitybuild
+}
+}
+}
+
+
+    package "sabr" as sabr {
+package "aml" as sabraml {
+package "cm" as sabramlcm #00aaff {
+ component "capability" as sabramlcmcapability
+ interface "create" as sabramlcmcapabilitycreate
+sabramlcmcapability -- sabramlcmcapabilitycreate
+}
+}
+}
+
+
+    package "sabr" as sabr {
+package "aml" as sabraml {
+package "cm" as sabramlcm #00aaff {
+ component "capability" as sabramlcmcapability
+ interface "deploy" as sabramlcmcapabilitydeploy
+sabramlcmcapability -- sabramlcmcapabilitydeploy
+}
+}
+}
+
+
+    package "sabr" as sabr {
+package "aml" as sabraml {
+package "cm" as sabramlcm #00aaff {
+ component "capability" as sabramlcmcapability
+ interface "list" as sabramlcmcapabilitylist
+sabramlcmcapability -- sabramlcmcapabilitylist
+}
+}
+}
+
+
+    package "sabr" as sabr {
+package "aml" as sabraml {
+package "cm" as sabramlcm #00aaff {
+ component "capability" as sabramlcmcapability
+ interface "release" as sabramlcmcapabilityrelease
+sabramlcmcapability -- sabramlcmcapabilityrelease
+}
+}
+}
+
+
+    package "sabr" as sabr {
+package "aml" as sabraml {
+package "cm" as sabramlcm #00aaff {
+ component "capability" as sabramlcmcapability
+ interface "remove" as sabramlcmcapabilityremove
+sabramlcmcapability -- sabramlcmcapabilityremove
+}
+}
+}
+
+
+    package "sabr" as sabr {
+package "aml" as sabraml {
+package "cm" as sabramlcm #00aaff {
+ component "capability" as sabramlcmcapability
+ interface "test" as sabramlcmcapabilitytest
+sabramlcmcapability -- sabramlcmcapabilitytest
+}
+}
+}
+
+
+    package "sabr" as sabr {
+package "aml" as sabraml {
+package "cm" as sabramlcm #00aaff {
+ component "capability" as sabramlcmcapability
+ interface "update" as sabramlcmcapabilityupdate
+sabramlcmcapability -- sabramlcmcapabilityupdate
+}
+}
+}
+
+
+
+
+
+        rectangle "Deploy Capability" as DeployCapability #ffffaa {
+            ("Deploy Capability Release")/ as DevOpsEngineerDeployCapabilityDeployCapabilityRelease
+        }
+
+    sabramlcmcapabilitydeploy <-- DevOpsEngineerDeployCapabilityDeployCapabilityRelease
+
+
+        rectangle "Develop Capability" as DevelopCapability #ffffaa {
+            ("Build Capability")/ as DevOpsEngineerDevelopCapabilityBuildCapability
+        }
+
+    sabramlcmcapabilitybuild <-- DevOpsEngineerDevelopCapabilityBuildCapability
+
+        rectangle "Develop Capability" as DevelopCapability #ffffaa {
+            ("Create Capability")/ as DevOpsEngineerDevelopCapabilityCreateCapability
+        }
+
+    sabramlcmcapabilitycreate <-- DevOpsEngineerDevelopCapabilityCreateCapability
+
+        rectangle "Develop Capability" as DevelopCapability #ffffaa {
+            ("Release Capability")/ as DevOpsEngineerDevelopCapabilityReleaseCapability
+        }
+
+    sabramlcmcapabilityrelease <-- DevOpsEngineerDevelopCapabilityReleaseCapability
+
+        rectangle "Develop Capability" as DevelopCapability #ffffaa {
+            ("Test Capability")/ as DevOpsEngineerDevelopCapabilityTestCapability
+        }
+
+    sabramlcmcapabilitytest <-- DevOpsEngineerDevelopCapabilityTestCapability
+
+
+
+        rectangle "Update Capability" as UpdateCapability #ffffaa {
+            ("Add a SABR to the Capability")/ as DevOpsEngineerUpdateCapabilityAddaSABRtotheCapability
+        }
+
+    sabramlcmcapabilityupdate <-- DevOpsEngineerUpdateCapabilityAddaSABRtotheCapability
+
+        rectangle "Update Capability" as UpdateCapability #ffffaa {
+            ("Add SABRs to the Capability")/ as ApplicationDeveloperUpdateCapabilityAddSABRstotheCapability
+        }
+
+    sabramlcmcapabilityupdate <-- ApplicationDeveloperUpdateCapabilityAddSABRstotheCapability
+
+        rectangle "Update Capability" as UpdateCapability #ffffaa {
+            ("Add SABRs to the Capability")/ as DevOpsEngineerUpdateCapabilityAddSABRstotheCapability
+        }
+
+    sabramlcmcapabilityupdate <-- DevOpsEngineerUpdateCapabilityAddSABRstotheCapability
+
+        rectangle "Update Capability" as UpdateCapability #ffffaa {
+            ("Remove a SABR from the Capability")/ as DevOpsEngineerUpdateCapabilityRemoveaSABRfromtheCapability
+        }
+
+    sabramlcmcapabilityupdate <-- DevOpsEngineerUpdateCapabilityRemoveaSABRfromtheCapability
+
+        rectangle "Update Capability" as UpdateCapability #ffffaa {
+            ("Remove a SABR from the Capability")/ as ApplicationDeveloperUpdateCapabilityRemoveaSABRfromtheCapability
+        }
+
+    sabramlcmcapabilityupdate <-- ApplicationDeveloperUpdateCapabilityRemoveaSABRfromtheCapability
+
+        rectangle "Update Capability" as UpdateCapability #ffffaa {
+            ("Remove multiple SABRs from the Capability")/ as DevOpsEngineerUpdateCapabilityRemovemultipleSABRsfromtheCapability
+        }
+
+    sabramlcmcapabilityupdate <-- DevOpsEngineerUpdateCapabilityRemovemultipleSABRsfromtheCapability
+
+        rectangle "Update Capability" as UpdateCapability #ffffaa {
+            ("Update Configuration of the Capability")/ as DevOpsEngineerUpdateCapabilityUpdateConfigurationoftheCapability
+        }
+
+    sabramlcmcapabilityupdate <-- DevOpsEngineerUpdateCapabilityUpdateConfigurationoftheCapability
+
+        rectangle "Update Capability" as UpdateCapability #ffffaa {
+            ("Update Policies of the Capability")/ as DevOpsEngineerUpdateCapabilityUpdatePoliciesoftheCapability
+        }
+
+    sabramlcmcapabilityupdate <-- DevOpsEngineerUpdateCapabilityUpdatePoliciesoftheCapability
+
+        rectangle "Update Capability" as UpdateCapability #ffffaa {
+            ("Update SABRs of the Capability")/ as DevOpsEngineerUpdateCapabilityUpdateSABRsoftheCapability
+        }
+
+    sabramlcmcapabilityupdate <-- DevOpsEngineerUpdateCapabilityUpdateSABRsoftheCapability
+
+
+
+
+
+
+
+
+
+@enduml

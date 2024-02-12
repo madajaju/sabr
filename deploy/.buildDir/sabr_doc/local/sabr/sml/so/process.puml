@@ -1,0 +1,30 @@
+@startuml
+left to right direction
+
+
+state "sml" as sml #lightgreen {
+state "so" as smlso #aaffaa {
+}
+}
+
+
+state "smlso" as pstatename #aaffaa {
+    state "Custom Function" as sofunction {
+    }
+}
+
+        state "sml" as sml #lightgreen {
+state "so" as smlso #aaffaa {
+state "service" as smlsoservice #aaffaa {
+state "ready" as smlsoserviceready #aaffaa {
+}
+}
+}
+}
+
+
+
+
+
+
+@enduml

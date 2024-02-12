@@ -1,0 +1,48 @@
+@startuml
+
+class "InputChannelInstance" as Model {
+ ref consumer
+ string name
+ string direction
+ string message
+
+ create()
+ deploy()
+ failed()
+
+}
+
+rectangle "DataTransform" as DataTransform #lightblue {
+}
+
+Model o--> "n" DataTransform : transforms
+
+
+rectangle "DataChannel" as DataChannel #lightblue {
+}
+
+Model o--> "1" DataChannel : design
+
+
+rectangle "DataStreamInstance" as DataStreamInstance #lightblue {
+}
+
+Model o--> "1" DataStreamInstance : stream
+
+
+rectangle "ServiceInstance" as ServiceInstance #lightblue {
+}
+
+Model o--> "n" ServiceInstance : transformInstance
+
+
+rectangle "SABundleInstance" as SABundleInstance #lightblue {
+}
+
+Model o--> "1" SABundleInstance : bundle
+
+
+
+
+
+@enduml

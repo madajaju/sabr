@@ -1,0 +1,57 @@
+@startuml
+
+
+
+state ServiceInstance #00aaff {
+
+    state Init #00aaff {
+    }
+
+    state Created #00aaff {
+    }
+
+    state Deploying #00aaff {
+    }
+
+    state Deployed #00aaff {
+    }
+
+    state Provisioning #00aaff {
+    }
+
+    state Failed #00aaff {
+    }
+
+    state Ready #00aaff {
+    }
+
+    state Killed #00aaff {
+    }
+
+
+
+
+Init -[#black]--> Created : create
+
+Created -[#black]--> Deploying : launched
+
+Deploying -[#black]--> Deployed : deployed
+
+Deployed -[#black]--> Provisioning : provision
+
+Provisioning -[#black]--> Ready : provisioned
+
+Provisioning -[#black]--> Failed : failed
+
+Ready -[#black]--> Killed : kill
+
+}
+
+
+ Deployed -[#black]--> Null
+
+
+ Killed -[#black]--> Null
+
+
+@enduml

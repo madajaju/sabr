@@ -1,0 +1,39 @@
+@startuml
+  interface CLI
+  interface Web
+  interface WebSocket
+package "Edge Security Controller" #lightblue {
+  component express as REST
+  component socket.io as socket
+  folder bin #ffffff {
+    component " sabr sa esc" as binName
+  }
+  binName --> REST
+
+  folder deploy #ffffff {
+      file "node server.js\n" as sa_esc_container
+      REST --> sa_esc_container
+
+
+    file "sa_esc" as sa_esc_container
+    REST --> sa_esc_container
+    socket ---> sa_esc_container
+
+  }
+  folder images #ffffff {
+    collections "sa_esc" as sa_escimage
+    artifact "ailtire:swarm" as ailtireswarm
+    sa_escimage <|-- ailtireswarm
+    sa_esc_container --> sa_escimage
+
+
+      artifact "ss_esc_controller" as ss_esc_controller
+      sa_esc_container --> ss_esc_controller
+
+  }
+}
+CLI " sabr sa esc" -- binName
+Web "/sabr/sa/esc" - REST
+WebSocket ".sabr.sa.esc" -- socket
+
+@enduml

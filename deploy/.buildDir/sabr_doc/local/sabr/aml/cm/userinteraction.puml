@@ -1,0 +1,29 @@
+@startuml
+
+
+actor "DevOpsEngineer" as devops
+
+actor "ApplicationDeveloper" as applicationdeveloper
+
+
+
+
+devops -> "Capability Manager": Deploy Capability
+"Capability Manager" -> bin: capability deploy
+bin -> REST: capability/deploy
+
+devops -> "Capability Manager": Remove Capability
+"Capability Manager" -> bin: capability remove
+bin -> REST: capability/remove
+
+devops -> "Capability Manager": Update Capability
+"Capability Manager" -> bin: capability update
+bin -> REST: capability/update
+
+applicationdeveloper -> "Capability Manager": Develop Capability
+"Capability Manager" -> bin: capability show
+bin -> REST: capability/show
+
+
+
+@enduml

@@ -1,0 +1,39 @@
+@startuml
+  interface CLI
+  interface Web
+  interface WebSocket
+package "Common Physical Layer" #bbbbbb {
+  component express as REST
+  component socket.io as socket
+  folder bin #ffffff {
+    component " sabr cpl" as binName
+  }
+  binName --> REST
+
+  folder deploy #ffffff {
+      file "node server.js\n" as sabr_cpl_container
+      REST --> sabr_cpl_container
+
+
+    file "web" as web_container
+    REST --> web_container
+    socket ---> web_container
+
+  }
+  folder images #ffffff {
+    collections "sabr_cpl" as sabr_cplimage
+    artifact "ailtire:swarm" as ailtireswarm
+    sabr_cplimage <|-- ailtireswarm
+    sabr_cpl_container --> sabr_cplimage
+
+
+      artifact "sabr_cpl_web" as sabr_cpl_web
+      web_container --> sabr_cpl_web
+
+  }
+}
+CLI " sabr cpl" -- binName
+Web "/sabr/cpl" - REST
+WebSocket ".sabr.cpl" -- socket
+
+@enduml

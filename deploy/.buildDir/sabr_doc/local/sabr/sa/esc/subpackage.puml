@@ -1,0 +1,32 @@
+@startuml
+
+
+
+package "Edge Security Controller" #lightblue {
+
+    interface "Edge Security Controller" as i {
+
+            /sabr/sa/esc/bundle/deploy()
+            /sabr/sa/esc/key/store()
+
+    }
+}
+
+circle REST
+circle Web
+circle CLI
+circle WebSocket
+
+i -down- Web
+i -down- CLI
+i -down- REST
+WebSocket -left- i: events >
+
+package "Edge Security Controller" #lightblue {
+
+
+}
+
+
+
+@enduml

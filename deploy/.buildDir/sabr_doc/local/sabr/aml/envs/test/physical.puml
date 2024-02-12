@@ -1,0 +1,32 @@
+@startuml
+  interface CLI
+  interface Web
+  interface WebSocket
+package "Application Management Layer" #00aaff {
+  component express as REST
+  component socket.io as socket
+  folder bin #ffffff {
+    component " sabr aml" as binName
+  }
+  binName --> REST
+
+  folder deploy #ffffff {
+      file "node server.js\n" as sabr_aml_container
+      REST --> sabr_aml_container
+
+
+  }
+  folder images #ffffff {
+    collections "sabr_aml" as sabr_amlimage
+    artifact "ailtire:swarm" as ailtireswarm
+    sabr_amlimage <|-- ailtireswarm
+    sabr_aml_container --> sabr_amlimage
+
+
+  }
+}
+CLI " sabr aml" -- binName
+Web "/sabr/aml" - REST
+WebSocket ".sabr.aml" -- socket
+
+@enduml

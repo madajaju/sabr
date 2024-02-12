@@ -1,0 +1,41 @@
+@startuml
+
+class "Application" as Model {
+ string name
+ string version
+ ref fn
+
+
+}
+
+rectangle "Stack" as Stack #lightblue {
+}
+
+Model *--> "n" Stack : stacks
+
+
+rectangle "ApplicationInstance" as ApplicationInstance #lightblue {
+}
+
+Model *--> "n" ApplicationInstance : instances
+
+
+
+
+    rectangle "ApplicationInstance" as ApplicationInstance #lightgreen {
+    }
+
+        ApplicationInstance   o--> "1" Model : "app"
+
+    rectangle "Stack" as Stack #lightgreen {
+    }
+
+        Stack   o--> "1" Model : "app"
+
+    rectangle "SABundle" as SABundle #lightgreen {
+    }
+
+        SABundle   o--> "n" Model : "applications"
+
+
+@enduml

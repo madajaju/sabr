@@ -1,0 +1,27 @@
+@startuml
+
+class "AdminTransform" as Model {
+ string name
+ json fn
+
+ create()
+ process()
+
+}
+
+rectangle "DataStream" as DataStream #lightblue {
+}
+
+Model o--> "n" DataStream : inputs
+
+
+rectangle "DataStream" as DataStream #lightblue {
+}
+
+Model o--> "n" DataStream : outputs
+
+
+
+
+
+@enduml

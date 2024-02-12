@@ -1,0 +1,55 @@
+@startuml
+
+left to right direction
+
+
+boundary parent #black
+
+
+entity children #blue
+
+rectangle "sabr_sml_so" as sabr_sml_soStack #aaffaa {
+    queue sabr_sml_soStacksnet #blue [
+        <b><color:white>parent</color></b>
+    ]
+}
+
+
+
+package "sabr_sml" #lightgreen {
+    queue parentnet #black [
+            <b><color:white>parent</color></b>
+    ]
+
+    parentnet -[#black]- parent
+
+    queue childrennet #blue [
+            <b><color:white>children</color></b>
+    ]
+
+    childrennet -[#blue]- children
+
+    queue siblingsnet #red [
+            <b><color:white>siblings</color></b>
+    ]
+
+
+node "sabr_sml_web" as sabr_sml_webService
+node "sabr_sml_so" as sabr_sml_soService
+
+
+        artifact "sabr_sml_web" as sabr_sml_webimage
+            collections "sabr_sml_so" as sabr_sml_soimage
+
+}
+
+sabr_sml_webService -[#red]- siblingsnet
+
+sabr_sml_soService -[#blue]- childrennet
+sabr_sml_webService .... sabr_sml_webimage
+sabr_sml_soService .... sabr_sml_soimage
+
+sabr_sml_soimage --> sabr_sml_soStack
+
+
+@enduml

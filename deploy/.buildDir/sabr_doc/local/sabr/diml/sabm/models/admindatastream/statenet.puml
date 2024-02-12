@@ -1,0 +1,13 @@
+@startuml
+
+
+
+state AdminDataStream #ffcc88 {
+
+
+
+
+}
+
+
+@enduml

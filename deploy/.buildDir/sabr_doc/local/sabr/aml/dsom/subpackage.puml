@@ -1,0 +1,31 @@
+@startuml
+
+
+
+package "DevSecOpsManager" #00aaff {
+
+    interface "DevSecOpsManager" as i {
+
+            /sabr/aml/dsom/data/create()
+
+    }
+}
+
+circle REST
+circle Web
+circle CLI
+circle WebSocket
+
+i -down- Web
+i -down- CLI
+i -down- REST
+WebSocket -left- i: events >
+
+package "DevSecOpsManager" #00aaff {
+
+
+}
+
+
+
+@enduml

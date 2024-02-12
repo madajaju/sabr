@@ -1,0 +1,42 @@
+@startuml
+
+
+package "Distributed Information Management Layer" #ffcc88 {
+    }
+
+package "Service Management Layer" #lightgreen {
+    }
+
+package "Security Aspect" #pink {
+    }
+
+package "Identity Aspect" #ffbbbb {
+    }
+
+
+package "Application Management Layer" #00aaff {
+
+    interface "Application Management Layer" as i {
+
+    }
+}
+
+CLI ()-- i
+REST ()-- i
+Web ()-- i
+
+package "Application Management Layer" #00aaff {
+
+}
+
+
+    "Application Management Layer" --> "Distributed Information Management Layer"
+
+    "Application Management Layer" --> "Service Management Layer"
+
+    "Application Management Layer" --> "Security Aspect"
+
+    "Application Management Layer" --> "Identity Aspect"
+
+
+@enduml

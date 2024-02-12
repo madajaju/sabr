@@ -1,0 +1,39 @@
+@startuml
+  interface CLI
+  interface Web
+  interface WebSocket
+package "Service Orchestrator" #aaffaa {
+  component express as REST
+  component socket.io as socket
+  folder bin #ffffff {
+    component " sabr sml so" as binName
+  }
+  binName --> REST
+
+  folder deploy #ffffff {
+      file "node server.js\n" as sabr_sml_so_container
+      REST --> sabr_sml_so_container
+
+
+    file "web" as web_container
+    REST --> web_container
+    socket ---> web_container
+
+  }
+  folder images #ffffff {
+    collections "sabr_sml_so" as sabr_sml_soimage
+    artifact "ailtire:swarm" as ailtireswarm
+    sabr_sml_soimage <|-- ailtireswarm
+    sabr_sml_so_container --> sabr_sml_soimage
+
+
+      artifact "sabr_sml_so_web" as sabr_sml_so_web
+      web_container --> sabr_sml_so_web
+
+  }
+}
+CLI " sabr sml so" -- binName
+Web "/sabr/sml/so" - REST
+WebSocket ".sabr.sml.so" -- socket
+
+@enduml

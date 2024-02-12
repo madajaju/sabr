@@ -1,0 +1,22 @@
+@startuml
+
+
+
+package "Identity Aspect" #ffbbbb {
+
+    interface "Identity Aspect" as i {
+
+    }
+}
+
+CLI ()-- i
+REST ()-- i
+Web ()-- i
+
+package "Identity Aspect" #ffbbbb {
+
+}
+
+
+
+@enduml

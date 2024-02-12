@@ -1,0 +1,18 @@
+@startuml
+left to right direction
+
+
+state "ia" as ia #ffbbbb {
+}
+
+
+state "ia" as pstatename #ffbbbb {
+    state "Custom Function" as iafunction {
+    }
+}
+
+
+
+
+
+@enduml
