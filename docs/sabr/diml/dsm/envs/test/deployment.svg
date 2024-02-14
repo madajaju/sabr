@@ -1,1 +1,70 @@
-<?xml version="1.0" encoding="us-ascii" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="585px" preserveAspectRatio="none" style="width:900px;height:585px;background:#FFFFFF;" version="1.1" viewBox="0 0 900 585" width="900px" zoomAndPan="magnify"><defs/><g><!--cluster sabr_diml_dsmStack--><g id="cluster_sabr_diml_dsmStack"><rect fill="#FFCC88" height="115" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:1.0;" width="121" x="569" y="276"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="105" x="577" y="292.5332">sabr_diml_dsm</text></g><!--cluster sabr_diml_dsm--><g id="cluster_sabr_diml_dsm"><path d="M8.5,6 L114.5,6 A3.75,3.75 0 0 1 117,8.5 L124,29.6094 L534.5,29.6094 A2.5,2.5 0 0 1 537,32.1094 L537,355.5 A2.5,2.5 0 0 1 534.5,358 L8.5,358 A2.5,2.5 0 0 1 6,355.5 L6,8.5 A2.5,2.5 0 0 1 8.5,6 " fill="#FFCC88" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="6" x2="124" y1="29.6094" y2="29.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="105" x="10" y="22.5332">sabr_diml_dsm</text></g><!--entity sabr_diml_dsmStacksnet--><g id="elem_sabr_diml_dsmStacksnet"><path d="M601,320 L657,320 C662,320 662,333.8047 662,333.8047 C662,333.8047 662,347.6094 657,347.6094 L601,347.6094 C596,347.6094 596,333.8047 596,333.8047 C596,333.8047 596,320 601,320 " fill="#FF0000" style="stroke:#181818;stroke-width:0.5;"/><path d="M657,320 C652,320 652,333.8047 652,333.8047 C652,347.6094 657,347.6094 657,347.6094 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="46" x="601" y="339.5332">parent</text></g><!--entity pulsarnet--><g id="elem_pulsarnet"><path d="M34.5,125 L88.5,125 C93.5,125 93.5,138.8047 93.5,138.8047 C93.5,138.8047 93.5,152.6094 88.5,152.6094 L34.5,152.6094 C29.5,152.6094 29.5,138.8047 29.5,138.8047 C29.5,138.8047 29.5,125 34.5,125 " fill="#000000" style="stroke:#181818;stroke-width:0.5;"/><path d="M88.5,125 C83.5,125 83.5,138.8047 83.5,138.8047 C83.5,152.6094 88.5,152.6094 88.5,152.6094 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="44" x="34.5" y="144.5332">pulsar</text></g><!--entity parentnet--><g id="elem_parentnet"><path d="M33.5,188 L89.5,188 C94.5,188 94.5,201.8047 94.5,201.8047 C94.5,201.8047 94.5,215.6094 89.5,215.6094 L33.5,215.6094 C28.5,215.6094 28.5,201.8047 28.5,201.8047 C28.5,201.8047 28.5,188 33.5,188 " fill="#0000FF" style="stroke:#181818;stroke-width:0.5;"/><path d="M89.5,188 C84.5,188 84.5,201.8047 84.5,201.8047 C84.5,215.6094 89.5,215.6094 89.5,215.6094 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="46" x="33.5" y="207.5332">parent</text></g><!--entity childrennet--><g id="elem_childrennet"><path d="M27.5,314 L95.5,314 C100.5,314 100.5,327.8047 100.5,327.8047 C100.5,327.8047 100.5,341.6094 95.5,341.6094 L27.5,341.6094 C22.5,341.6094 22.5,327.8047 22.5,327.8047 C22.5,327.8047 22.5,314 27.5,314 " fill="#FF0000" style="stroke:#181818;stroke-width:0.5;"/><path d="M95.5,314 C90.5,314 90.5,327.8047 90.5,327.8047 C90.5,341.6094 95.5,341.6094 95.5,341.6094 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="58" x="27.5" y="333.5332">children</text></g><!--entity siblingsnet--><g id="elem_siblingsnet"><path d="M29,251 L94,251 C99,251 99,264.8047 99,264.8047 C99,264.8047 99,278.6094 94,278.6094 L29,278.6094 C24,278.6094 24,264.8047 24,264.8047 C24,264.8047 24,251 29,251 " fill="#FFA500" style="stroke:#181818;stroke-width:0.5;"/><path d="M94,251 C89,251 89,264.8047 89,264.8047 C89,278.6094 94,278.6094 94,278.6094 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="55" x="29" y="270.5332">siblings</text></g><!--entity pulsarService--><g id="elem_pulsarService"><polygon fill="#F1F1F1" points="22,52,32,42,101,42,101,79.6094,91,89.6094,22,89.6094,22,52" style="stroke:#181818;stroke-width:0.5;"/><line style="stroke:#181818;stroke-width:0.5;" x1="91" x2="101" y1="52" y2="42"/><line style="stroke:#181818;stroke-width:0.5;" x1="22" x2="91" y1="52" y2="52"/><line style="stroke:#181818;stroke-width:0.5;" x1="91" x2="91" y1="52" y2="89.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="39" x="37" y="76.5332">pulsar</text></g><!--entity sabr_diml_dsmstandaloneimage--><g id="elem_sabr_diml_dsmstandaloneimage"><rect fill="#F1F1F1" height="33.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="185" x="336" y="180"/><rect fill="#F1F1F1" height="33.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="185" x="332" y="176"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="169" x="340" y="198.5332">sabr_diml_dsm:standalone</text></g><!--entity parent--><g id="elem_parent"><path d="M852,421 L852,445 M852,433 L869,433 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><ellipse cx="881" cy="433" fill="#0000FF" rx="12" ry="12" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="41" x="852" y="463.5332">parent</text></g><!--entity pulsar--><g id="elem_pulsar"><ellipse cx="186" cy="390" fill="#000000" rx="12" ry="12" style="stroke:#181818;stroke-width:0.5;"/><line style="stroke:#181818;stroke-width:0.5;" x1="174" x2="198" y1="404" y2="404"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="39" x="166.5" y="420.5332">pulsar</text></g><!--entity children--><g id="elem_children"><ellipse cx="186" cy="546" fill="#FF0000" rx="12" ry="12" style="stroke:#181818;stroke-width:0.5;"/><line style="stroke:#181818;stroke-width:0.5;" x1="174" x2="198" y1="560" y2="560"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="50" x="161" y="576.5332">children</text></g><!--link pulsarnet to pulsar--><g id="link_pulsarnet_pulsar"><path d="M84.56,153.16 C90.58,157.91 96.63,163.63 101,170 C150.59,242.34 125.3,277.89 161,358 C163.35,363.27 166.21,368.73 169.12,373.87 " fill="none" id="pulsarnet-pulsar" style="stroke:#000000;stroke-width:1.0;"/></g><!--link parentnet to parent--><g id="link_parentnet_parent"><path d="M84.68,216.09 C90.7,220.83 96.72,226.57 101,233 C154.28,313.12 94.18,371.77 161,441 C196.72,478.01 219.56,477 271,477 C271,477 271,477 727,477 C770.62,477 819.62,461.75 847.89,451.38 " fill="none" id="parentnet-parent" style="stroke:#0000FF;stroke-width:1.0;"/></g><!--link childrennet to children--><g id="link_childrennet_children"><path d="M70.16,342.2 C90.43,379.76 145.67,482.12 171.43,529.86 " fill="none" id="childrennet-children" style="stroke:#FF0000;stroke-width:1.0;"/></g><!--link pulsarService to sabr_diml_dsmstandaloneimage--><g id="link_pulsarService_sabr_diml_dsmstandaloneimage"><path d="M101,79.68 C166.05,102.8 297.84,149.63 371.89,175.95 " fill="none" id="pulsarService-sabr_diml_dsmstandaloneimage" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/></g><!--link sabr_diml_dsmstandaloneimage to sabr_diml_dsmStack--><g id="link_sabr_diml_dsmstandaloneimage_sabr_diml_dsmStack"><path d="M436.18,214.09 C453.26,249.42 494.7,324.96 553,364 C556.46,366.3175 560.1819,368.3523 564.0515,370.139 C565.0189,370.5857 565.9955,371.0168 566.9796,371.433 C567.4716,371.6411 567.9655,371.8454 568.4611,372.0461 C568.5849,372.0963 563.1392,369.915 563.2633,369.9647 " fill="none" id="sabr_diml_dsmstandaloneimage-to-sabr_diml_dsmStack" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="568.833,372.1959,561.9659,365.1359,564.1916,370.3366,558.991,372.5622,568.833,372.1959" style="stroke:#181818;stroke-width:1.0;"/></g><!--link sabr_diml_dsmStacksnet to parent--><g id="link_sabr_diml_dsmStacksnet_parent"><path d="M662.37,339.69 C676.08,342.6 692.07,346.67 706,352 C759.15,372.33 816.51,406.6 847.8,426.47 " fill="none" id="sabr_diml_dsmStacksnet-parent" style="stroke:#0000FF;stroke-width:1.0;"/></g><!--SRC=[XPFFZi8W4CRlFCL4prslnZHz2O_660hJIXR11RgRpSPttocqrZzOEP3sO_X-33DeR0842qwrnm1IEHH1MSCOgsrd97U_SEOEJO1bhJiadRvL8BNJdhjUvUBpgegZqfB2OUbGCjQxSTDgX8NdjJj8TT87wKyBu1xkb6qW6rWsZH3hDVmneF7LOOUPC6ymH03iObm_ohegXTNMRNwEAc2L3bskebQLgxgAeNjseHJOcLnu-tog73yb6f4nrnje5Xp3C-1-ZjDaMEoIvRuOn2beOCSi1ZRzlq6_odb2N_qYkiEU7BL7ybZ8p5Ndq6Fu7FpMal1aIlHHVEHxLMjbsbHgwwY9tcK_xdXr16Qif8gdYuuDc3wtwBwLeCuUZMcxJg_0FpJ8nbCtIwwjmUSEdjRKYNehGI_i3W8VDEQtiRbLA8egyo0IwyL3AQwblg_rFm00]--></g></svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="226px" preserveAspectRatio="none" style="width:275px;height:226px;background:#000000;" version="1.1" viewBox="0 0 275 226" width="275px" zoomAndPan="magnify"><defs/><g><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="140" x="5" y="19.5332">Dot Executable: null</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="173" x="5" y="37.1426">No dot executable found</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="258" x="5" y="54.752">Cannot find Graphviz. You should try</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="0" x="9" y="72.3613"/><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="71" x="5" y="89.9707">@startuml</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="50" x="5" y="107.5801">testdot</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="66" x="5" y="125.1895">@enduml</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="0" x="9" y="142.7988"/><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="15" x="9" y="160.4082">or</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="0" x="9" y="178.0176"/><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="201" x="5" y="195.627">java -jar plantuml.jar -testdot</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="0" x="9" y="213.2363"/><!--
+@startuml
+
+left to right direction
+
+
+boundary parent #blue
+
+
+entity pulsar #black
+
+entity children #red
+
+rectangle "sabr_diml_dsm" as sabr_diml_dsmStack #ffcc88 {
+    queue sabr_diml_dsmStacksnet #red [
+        <b><color:white>parent</color></b>
+    ]
+}
+
+
+
+package "sabr_diml_dsm" #ffcc88 {
+    queue pulsarnet #black [
+            <b><color:white>pulsar</color></b>
+    ]
+    
+    pulsarnet -[#black]- pulsar
+    
+    queue parentnet #blue [
+            <b><color:white>parent</color></b>
+    ]
+    
+    parentnet -[#blue]- parent
+    
+    queue childrennet #red [
+            <b><color:white>children</color></b>
+    ]
+    
+    childrennet -[#red]- children
+    
+    queue siblingsnet #orange [
+            <b><color:white>siblings</color></b>
+    ]
+    
+
+node "pulsar" as pulsarService
+
+        collections "sabr_diml_dsm:standalone" as sabr_diml_dsmstandaloneimage
+    
+}
+pulsarService .... sabr_diml_dsmstandaloneimage
+
+sabr_diml_dsmstandaloneimage - -> sabr_diml_dsmStack
+    
+sabr_diml_dsmStacksnet - -[#blue]- - parent
+    
+
+@enduml
+
+PlantUML version 1.2019.05(Sat Apr 20 09:45:36 PDT 2019)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 17.0.7+8-LTS-224
+Operating System: Windows 11
+OS Version: 10.0
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>

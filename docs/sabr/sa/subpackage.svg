@@ -1,1 +1,62 @@
-<?xml version="1.0" encoding="us-ascii" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="381px" preserveAspectRatio="none" style="width:824px;height:381px;background:#FFFFFF;" version="1.1" viewBox="0 0 824 381" width="824px" zoomAndPan="magnify"><defs/><g><!--cluster Security Aspect--><g id="cluster_Security Aspect"><path d="M8.5,6 L118.5,6 A3.75,3.75 0 0 1 121,8.5 L128,29.6094 L699.5,29.6094 A2.5,2.5 0 0 1 702,32.1094 L702,261.5 A2.5,2.5 0 0 1 699.5,264 L8.5,264 A2.5,2.5 0 0 1 6,261.5 L6,8.5 A2.5,2.5 0 0 1 8.5,6 " fill="#FFC0CB" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="6" x2="128" y1="29.6094" y2="29.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="109" x="10" y="22.5332">Security Aspect</text></g><!--class i--><g id="elem_i"><rect codeLine="10" fill="#F1F1F1" height="206.4844" id="i" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="315" x="370.5" y="42"/><ellipse cx="474.75" cy="58" fill="#B4A7E5" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M475.7031,54.6406 L475.7031,61.2969 L477.4219,61.2969 Q478.0313,61.2969 478.2969,61.5313 Q478.5625,61.7656 478.5625,62.1563 Q478.5625,62.5313 478.2969,62.7656 Q478.0313,63 477.4219,63 L472.2813,63 Q471.6719,63 471.4063,62.7656 Q471.1406,62.5313 471.1406,62.1406 Q471.1406,61.7656 471.4063,61.5313 Q471.6719,61.2969 472.2813,61.2969 L474,61.2969 L474,54.6406 L472.2813,54.6406 Q471.6719,54.6406 471.4063,54.4063 Q471.1406,54.1719 471.1406,53.7813 Q471.1406,53.4063 471.4063,53.1719 Q471.6719,52.9375 472.2813,52.9375 L477.4219,52.9375 Q478.0313,52.9375 478.2969,53.1719 Q478.5625,53.4063 478.5625,53.7813 Q478.5625,54.1719 478.2969,54.4063 Q478.0313,54.6406 477.4219,54.6406 L475.7031,54.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="98" x="495.25" y="63.7285">Security Aspect</text><line style="stroke:#181818;stroke-width:0.5;" x1="371.5" x2="684.5" y1="74" y2="74"/><line style="stroke:#181818;stroke-width:0.5;" x1="371.5" x2="684.5" y1="82" y2="82"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="252" x="376.5" y="100.5332">/sabr/sa/securitymanager/authenticate()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="303" x="376.5" y="118.1426">/sabr/sa/securitymanager/generatestreamkeys()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="276" x="376.5" y="135.752">/sabr/sa/securitymanager/getbootstrapkey()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="300" x="376.5" y="153.3613">/sabr/sa/securitymanager/getregistrationcreds()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="266" x="376.5" y="170.9707">/sabr/sa/securitymanager/getstreamkeys()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="265" x="376.5" y="188.5801">/sabr/sa/securitymanager/provisionentity()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="256" x="376.5" y="206.1895">/sabr/sa/securitymanager/registerentity()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="251" x="376.5" y="223.7988">/sabr/sa/securitymanager/requestkeys()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="223" x="376.5" y="241.4082">/sabr/sa/securitymanager/validate()</text></g><!--entity Edge Security Controller--><g id="elem_Edge Security Controller"><rect fill="#FFFFFF" height="37.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="174" x="161" y="126"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="154" x="171" y="150.5332">Edge Security Controller</text></g><!--entity Key Manager--><g id="elem_Key Manager"><rect fill="#FFFFFF" height="37.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="104" x="22" y="126"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="84" x="32" y="150.5332">Key Manager</text></g><!--entity REST--><g id="elem_REST"><ellipse cx="439" cy="341" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="37" x="420.5" y="372.5332">REST</text></g><!--entity Web--><g id="elem_Web"><ellipse cx="528" cy="341" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="29" x="513.5" y="372.5332">Web</text></g><!--entity CLI--><g id="elem_CLI"><ellipse cx="617" cy="341" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="21" x="606.5" y="372.5332">CLI</text></g><!--entity WebSocket--><g id="elem_WebSocket"><ellipse cx="781" cy="145" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="72" x="745" y="176.5332">WebSocket</text></g><!--link i to Web--><g id="link_i_Web"><path codeLine="30" d="M528,248.11 C528,282.8 528,316.61 528,331.74 " fill="none" id="i-Web" style="stroke:#181818;stroke-width:1.0;"/></g><!--link i to CLI--><g id="link_i_CLI"><path codeLine="31" d="M574.85,248.11 C590.76,282.8 606.27,316.61 613.21,331.74 " fill="none" id="i-CLI" style="stroke:#181818;stroke-width:1.0;"/></g><!--link i to REST--><g id="link_i_REST"><path codeLine="32" d="M481.15,248.11 C465.24,282.8 449.73,316.61 442.79,331.74 " fill="none" id="i-REST" style="stroke:#181818;stroke-width:1.0;"/></g><!--link i to WebSocket--><g id="link_i_WebSocket"><path codeLine="33" d="M685.71,145 C722.98,145 756.4,145 771.88,145 " fill="none" id="i-WebSocket" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#000000" points="702.75,133.1758,711.7951,136.1147,711.7951,130.2369,702.75,133.1758" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="37" x="716.75" y="138.4951">events</text></g><!--SRC=[bPDDJyCm343l-HNMkC2Xwfq34ffsG8mBG-ASfLvdjKk2utMgqFuxRaSBav1eSx3YwhtQ-OhMLRP4M6pG7PcaXSSKqSa2RYBv2ZwDEHjZulyOw20lo3lh_W9j0bAkm_emZ3pPBMl8qxTni5vBSMwFiaSlvApWxTqqfqIFh7mIHdkei4tJJTc682hQgDuCZR6aJXCAtZ4MSqhExpDoQ2XfgMvhP7AVboQHvreVHztBEVqrjgRYvyJwSExka2DsDSBhQlCspDznEqoNwwTVNpV1LIZ646H5EFci9yUaOyUa_z-eG5RZJZAWUy16rvhWOTBbDQovzQMMNwmAPKTq6Rnmg6janKzx4bJ-V2KyOmilb-LVCztB-G80]--></g></svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="226px" preserveAspectRatio="none" style="width:275px;height:226px;background:#000000;" version="1.1" viewBox="0 0 275 226" width="275px" zoomAndPan="magnify"><defs/><g><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="140" x="5" y="19.5332">Dot Executable: null</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="173" x="5" y="37.1426">No dot executable found</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="258" x="5" y="54.752">Cannot find Graphviz. You should try</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="0" x="9" y="72.3613"/><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="71" x="5" y="89.9707">@startuml</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="50" x="5" y="107.5801">testdot</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="66" x="5" y="125.1895">@enduml</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="0" x="9" y="142.7988"/><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="15" x="9" y="160.4082">or</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="0" x="9" y="178.0176"/><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="201" x="5" y="195.627">java -jar plantuml.jar -testdot</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="0" x="9" y="213.2363"/><!--
+@startuml
+
+
+package "Security Aspect" #pink {
+
+}
+
+
+package "Security Aspect" #pink {
+
+    interface "Security Aspect" as i {
+    
+            /sabr/sa/securitymanager/authenticate()
+            /sabr/sa/securitymanager/generatestreamkeys()
+            /sabr/sa/securitymanager/getbootstrapkey()
+            /sabr/sa/securitymanager/getregistrationcreds()
+            /sabr/sa/securitymanager/getstreamkeys()
+            /sabr/sa/securitymanager/provisionentity()
+            /sabr/sa/securitymanager/registerentity()
+            /sabr/sa/securitymanager/requestkeys()
+            /sabr/sa/securitymanager/validate()
+    
+    }
+}
+
+circle REST
+circle Web
+circle CLI
+circle WebSocket
+
+i -down- Web
+i -down- CLI
+i -down- REST
+WebSocket -left- i: events >
+
+package "Security Aspect" #pink {
+
+
+rectangle "Edge Security Controller" #white {
+}
+
+rectangle "Key Manager" #white {
+}
+
+}
+
+
+
+@enduml
+
+PlantUML version 1.2019.05(Sat Apr 20 09:45:36 PDT 2019)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 17.0.7+8-LTS-224
+Operating System: Windows 11
+OS Version: 10.0
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>

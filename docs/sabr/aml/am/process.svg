@@ -1,1 +1,181 @@
-<?xml version="1.0" encoding="us-ascii" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="965px" preserveAspectRatio="none" style="width:334px;height:965px;background:#FFFFFF;" version="1.1" viewBox="0 0 334 965" width="334px" zoomAndPan="magnify"><defs/><g><path d="M19.5,142.5 L308.5,142.5 A12.5,12.5 0 0 1 321,155 L321,170.1094 L7,170.1094 L7,155 A12.5,12.5 0 0 1 19.5,142.5 " fill="#00AAFF" style="stroke:#00AAFF;stroke-width:1.0;"/><rect fill="none" height="817.2188" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="314" x="7" y="142.5"/><line style="stroke:#181818;stroke-width:0.5;" x1="7" x2="321" y1="170.1094" y2="170.1094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="22" x="153" y="162.0332">aml</text><path d="M31.5,182.1094 L299.5,182.1094 A12.5,12.5 0 0 1 312,194.6094 L312,209.7188 L19,209.7188 L19,194.6094 A12.5,12.5 0 0 1 31.5,182.1094 " fill="#00AAFF" style="stroke:#00AAFF;stroke-width:1.0;"/><rect fill="none" height="767.6094" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="293" x="19" y="182.1094"/><line style="stroke:#181818;stroke-width:0.5;" x1="19" x2="312" y1="209.7188" y2="209.7188"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="19" x="156" y="201.6426">am</text><!--cluster amlamservice--><g id="cluster_amlamservice"><path d="M205.5,221.7188 L290.5,221.7188 A12.5,12.5 0 0 1 303,234.2188 L303,244.3281 L193,244.3281 L193,234.2188 A12.5,12.5 0 0 1 205.5,221.7188 " fill="#00AAFF" style="stroke:#00AAFF;stroke-width:1.0;"/><rect fill="none" height="374" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="110" x="193" y="221.7188"/><line style="stroke:#181818;stroke-width:0.5;" x1="193" x2="303" y1="244.3281" y2="244.3281"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="45" x="225.5" y="240.252">service</text></g><!--cluster amlamserviceinstance--><g id="cluster_amlamserviceinstance"><path d="M43.5,449.7188 L134.5,449.7188 A12.5,12.5 0 0 1 147,462.2188 L147,472.3281 L31,472.3281 L31,462.2188 A12.5,12.5 0 0 1 43.5,449.7188 " fill="#00AAFF" style="stroke:#00AAFF;stroke-width:1.0;"/><rect fill="none" height="170" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="116" x="31" y="449.7188"/><line style="stroke:#181818;stroke-width:0.5;" x1="31" x2="147" y1="472.3281" y2="472.3281"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="100" x="39" y="468.252">ServiceInstance</text></g><g id="aml.amlam.amlamservice.amlamservicedeployed"><rect fill="#00AAFF" height="50" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="78" x="209" y="257.7188"/><line style="stroke:#181818;stroke-width:0.5;" x1="209" x2="287" y1="285.3281" y2="285.3281"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="58" x="219" y="277.252">deployed</text></g><g id="aml.amlam.amlamservice.amlamservicekill"><rect fill="#00AAFF" height="50" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="50" x="223" y="325.7188"/><line style="stroke:#181818;stroke-width:0.5;" x1="223" x2="273" y1="353.3281" y2="353.3281"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="16" x="240" y="345.252">kill</text></g><g id="aml.amlam.amlamservice.amlamserviceprovision"><rect fill="#00AAFF" height="50" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="77" x="209.5" y="393.7188"/><line style="stroke:#181818;stroke-width:0.5;" x1="209.5" x2="286.5" y1="421.3281" y2="421.3281"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="57" x="219.5" y="413.252">provision</text></g><g id="aml.amlam.amlamservice.amlamservicestderr"><rect fill="#00AAFF" height="50" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="57" x="219.5" y="461.7188"/><line style="stroke:#181818;stroke-width:0.5;" x1="219.5" x2="276.5" y1="489.3281" y2="489.3281"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="37" x="229.5" y="481.252">stderr</text></g><g id="aml.amlam.amlamservice.amlamservicestdout"><rect fill="#00AAFF" height="50" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="59" x="218.5" y="529.7188"/><line style="stroke:#181818;stroke-width:0.5;" x1="218.5" x2="277.5" y1="557.3281" y2="557.3281"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="39" x="228.5" y="549.252">stdout</text></g><g id="aml.amlam.amlamserviceinstance.amlamserviceinstancedeployed"><rect fill="#00AAFF" height="50" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="78" x="50" y="485.7188"/><line style="stroke:#181818;stroke-width:0.5;" x1="50" x2="128" y1="513.3281" y2="513.3281"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="58" x="60" y="505.252">deployed</text></g><g id="aml.amlam.amlamserviceinstance.amlamserviceinstancekilled"><rect fill="#00AAFF" height="50" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="52" x="63" y="553.7188"/><line style="stroke:#181818;stroke-width:0.5;" x1="63" x2="115" y1="581.3281" y2="581.3281"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="32" x="73" y="573.252">killed</text></g><g id="aml.amlam.amlamapplicationcreate"><rect fill="#00AAFF" height="50" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="60" x="59" y="889.7188"/><line style="stroke:#181818;stroke-width:0.5;" x1="59" x2="119" y1="917.3281" y2="917.3281"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="40" x="69" y="909.252">create</text></g><path d="M57.5,635.7188 L120.5,635.7188 A12.5,12.5 0 0 1 133,648.2188 L133,663.3281 L45,663.3281 L45,648.2188 A12.5,12.5 0 0 1 57.5,635.7188 " fill="#00AAFF" style="stroke:#00AAFF;stroke-width:1.0;"/><rect fill="none" height="235.6094" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="88" x="45" y="635.7188"/><line style="stroke:#181818;stroke-width:0.5;" x1="45" x2="133" y1="663.3281" y2="663.3281"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="68" x="55" y="655.252">application</text><g id="aml.amlam.amlamapplication.amlamapplicationdestroy"><rect fill="#00AAFF" height="50" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="67" x="57" y="811.3281"/><line style="stroke:#181818;stroke-width:0.5;" x1="57" x2="124" y1="838.9375" y2="838.9375"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="47" x="67" y="830.8613">destroy</text></g><g id="aml.amlam.amlamapplication.amlamapplicationlist"><rect fill="#00AAFF" height="50" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="50" x="65.5" y="743.3281"/><line style="stroke:#181818;stroke-width:0.5;" x1="65.5" x2="115.5" y1="770.9375" y2="770.9375"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="17" x="82" y="762.8613">list</text></g><g id="aml.amlam.amlamapplication.amlamapplicationupdate"><rect fill="#00AAFF" height="50" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="64" x="58.5" y="675.3281"/><line style="stroke:#181818;stroke-width:0.5;" x1="58.5" x2="122.5" y1="702.9375" y2="702.9375"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="44" x="68.5" y="694.8613">update</text></g><g id="aml.amlam.amlamfunction"><rect fill="#00AAFF" height="50" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="75" x="210.5" y="611.7188"/><line style="stroke:#181818;stroke-width:0.5;" x1="210.5" x2="285.5" y1="639.3281" y2="639.3281"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="55" x="220.5" y="631.252">Function</text></g><!--link amlamserviceinstancedeployed to amlamserviceprovision--><g id="link_amlamserviceinstancedeployed_amlamserviceprovision"><path d="M128.12,486.8888 C145.38,476.2388 166.1,463.6588 185,452.7188 C192.86,448.1688 196.1053,446.305 204.2153,441.835 " fill="none" id="amlamserviceinstancedeployed-to-amlamserviceprovision" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="209.47,438.9388,199.6571,439.78,205.0911,441.3523,203.5188,446.7862,209.47,438.9388" style="stroke:#181818;stroke-width:1.0;"/></g><!--link amlamserviceinstancekilled to amlamfunction--><g id="link_amlamserviceinstancekilled_amlamfunction"><path d="M115.22,588.0387 C140.97,597.5487 175.5619,610.3293 204.7919,621.1293 " fill="none" id="amlamserviceinstancekilled-to-amlamfunction" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="210.42,623.2088,203.3642,616.3374,205.7299,621.4758,200.5915,623.8416,210.42,623.2088" style="stroke:#181818;stroke-width:1.0;"/></g><path d="M102.5,7 L225.5,7 A12.5,12.5 0 0 1 238,19.5 L238,34.6094 L90,34.6094 L90,19.5 A12.5,12.5 0 0 1 102.5,7 " fill="#00AAFF" style="stroke:#00AAFF;stroke-width:1.0;"/><rect fill="none" height="99.6094" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="148" x="90" y="7"/><line style="stroke:#181818;stroke-width:0.5;" x1="90" x2="238" y1="34.6094" y2="34.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="41" x="143.5" y="26.5332">amlam</text><g id="pstatename.amfunction"><rect fill="#F1F1F1" height="50" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="127" x="102" y="46.6094"/><line style="stroke:#181818;stroke-width:0.5;" x1="102" x2="229" y1="74.2188" y2="74.2188"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="107" x="112" y="66.1426">Custom Function</text></g><!--SRC=[rPR1QiGW48RlUOfXUmxi4_HIAFJS9v34j5AZefE5PUcxL-FOs8sxPMb3hJa4v_yTF-COb7n0G0rMlBmYzCBo3eLMJTCuPCXXnqQv0-R0l-5klsTi6E2qY4bZOwQ- -oTFG3OpHnGRUUO5tyZvC3dK8pnEQcQWr0DroJld1ce_O4ogCL9qR9wWizp75dUcHUbiYM6Hcv0K4TOZRkVzQ-AUExJwM7IJLXsp50wBrY1KHpkP_b9DH6bZOiVjGNGP00LAjM2aFl9-PKr2DQHlGigLBGIh8JHM7uJxKYNa_LIgONNOSsjNnXYkYL9FMABquIBbRt8-nzcUbE-h0gyWuOPJbOPyUxh-GTq6pAjhQzlslfokacqAVuyhcnJb3RVex8ubislMwevpwMiJvFAjKuecQny0]--></g></svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="138px" preserveAspectRatio="none" style="width:443px;height:138px;background:#000000;" version="1.1" viewBox="0 0 443 138" width="443px" zoomAndPan="magnify"><defs/><g><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="209" x="5" y="19.5332">[From process.puml (line 18) ]</text><line style="stroke: #33FF02; stroke-width: 1.0;" x1="5" x2="441" y1="27.6094" y2="27.6094"/><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="160" x="5" y="47.1426">... (skipping 14 lines) ...</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="0" x="9" y="64.752"/><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="188" x="37" y="82.3613">state "aml" as aml #00aaff {</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="204" x="5" y="99.9707">state "am" as amlam #00aaff {</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="436" x="5" y="117.5801">state "application create" as amlamapplication create #00aaff {</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="0" x="9" y="135.1895"/><text fill="#FF0000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="95" x="9" y="135.1895">Syntax Error?</text><!--
+@startuml
+left to right direction
+
+
+state "aml" as aml #00aaff {
+state "am" as amlam #00aaff {
+}
+}
+
+
+state "amlam" as pstatename #00aaff {
+    state "Custom Function" as amfunction {
+    }
+}
+
+        state "aml" as aml #00aaff {
+state "am" as amlam #00aaff {
+state "application create" as amlamapplication create #00aaff {
+}
+}
+}
+
+
+        state "aml" as aml #00aaff {
+state "am" as amlam #00aaff {
+state "application" as amlamapplication #00aaff {
+state "create" as amlamapplicationcreate #00aaff {
+}
+}
+}
+}
+
+
+        state "aml" as aml #00aaff {
+state "am" as amlam #00aaff {
+state "application" as amlamapplication #00aaff {
+state "destroy" as amlamapplicationdestroy #00aaff {
+}
+}
+}
+}
+
+
+        state "aml" as aml #00aaff {
+state "am" as amlam #00aaff {
+state "application" as amlamapplication #00aaff {
+state "list" as amlamapplicationlist #00aaff {
+}
+}
+}
+}
+
+
+        state "aml" as aml #00aaff {
+state "am" as amlam #00aaff {
+state "application" as amlamapplication #00aaff {
+state "update" as amlamapplicationupdate #00aaff {
+}
+}
+}
+}
+
+
+        state "aml" as aml #00aaff {
+state "am" as amlam #00aaff {
+state "service" as amlamservice #00aaff {
+state "deployed" as amlamservicedeployed #00aaff {
+}
+}
+}
+}
+
+
+        state "aml" as aml #00aaff {
+state "am" as amlam #00aaff {
+state "service" as amlamservice #00aaff {
+state "kill" as amlamservicekill #00aaff {
+}
+}
+}
+}
+
+
+        state "aml" as aml #00aaff {
+state "am" as amlam #00aaff {
+state "service" as amlamservice #00aaff {
+state "provision" as amlamserviceprovision #00aaff {
+}
+}
+}
+}
+
+
+        state "aml" as aml #00aaff {
+state "am" as amlam #00aaff {
+state "service" as amlamservice #00aaff {
+state "stderr" as amlamservicestderr #00aaff {
+}
+}
+}
+}
+
+
+        state "aml" as aml #00aaff {
+state "am" as amlam #00aaff {
+state "service" as amlamservice #00aaff {
+state "stdout" as amlamservicestdout #00aaff {
+}
+}
+}
+}
+
+
+
+
+        state "aml" as aml #00aaff {
+state "am" as amlam #00aaff {
+state "ServiceInstance" as amlamserviceinstance #00aaff {
+state "deployed" as amlamserviceinstancedeployed #00aaff {
+}
+}
+}
+}
+
+        
+    state "aml" as aml #00aaff {
+state "am" as amlam #00aaff {
+state "service" as amlamservice #00aaff {
+state "provision" as amlamserviceprovision #00aaff {
+}
+}
+}
+}
+
+    amlamserviceinstancedeployed - - -> amlamserviceprovision
+  
+
+        state "aml" as aml #00aaff {
+state "am" as amlam #00aaff {
+state "ServiceInstance" as amlamserviceinstance #00aaff {
+state "killed" as amlamserviceinstancekilled #00aaff {
+}
+}
+}
+}
+
+        
+    state "aml" as aml #00aaff {
+state "am" as amlam #00aaff {
+state "Function" as amlamfunction #00aaff {
+}
+}
+}
+
+    amlamserviceinstancekilled - - -> amlamfunction
+  
+
+
+    
+    
+        
+       
+    
+    
+        
+       
+
+@enduml
+
+PlantUML version 1.2019.05(Sat Apr 20 09:45:36 PDT 2019)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 17.0.7+8-LTS-224
+Operating System: Windows 11
+OS Version: 10.0
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>

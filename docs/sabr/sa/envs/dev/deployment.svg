@@ -1,1 +1,56 @@
-<?xml version="1.0" encoding="us-ascii" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="388px" preserveAspectRatio="none" style="width:539px;height:388px;background:#FFFFFF;" version="1.1" viewBox="0 0 539 388" width="539px" zoomAndPan="magnify"><defs/><g><!--cluster sabr_sa--><g id="cluster_sabr_sa"><path d="M8.5,6 L64.5,6 A3.75,3.75 0 0 1 67,8.5 L74,29.6094 L529.5,29.6094 A2.5,2.5 0 0 1 532,32.1094 L532,229.5 A2.5,2.5 0 0 1 529.5,232 L8.5,232 A2.5,2.5 0 0 1 6,229.5 L6,8.5 A2.5,2.5 0 0 1 8.5,6 " fill="#FFC0CB" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="6" x2="74" y1="29.6094" y2="29.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="55" x="10" y="22.5332">sabr_sa</text></g><!--entity parentnet--><g id="elem_parentnet"><path d="M56,125 L112,125 C117,125 117,138.8047 117,138.8047 C117,138.8047 117,152.6094 112,152.6094 L56,152.6094 C51,152.6094 51,138.8047 51,138.8047 C51,138.8047 51,125 56,125 " fill="#000000" style="stroke:#181818;stroke-width:0.5;"/><path d="M112,125 C107,125 107,138.8047 107,138.8047 C107,152.6094 112,152.6094 112,152.6094 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="46" x="56" y="144.5332">parent</text></g><!--entity childrennet--><g id="elem_childrennet"><path d="M50,188 L118,188 C123,188 123,201.8047 123,201.8047 C123,201.8047 123,215.6094 118,215.6094 L50,215.6094 C45,215.6094 45,201.8047 45,201.8047 C45,201.8047 45,188 50,188 " fill="#0000FF" style="stroke:#181818;stroke-width:0.5;"/><path d="M118,188 C113,188 113,201.8047 113,201.8047 C113,215.6094 118,215.6094 118,215.6094 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="58" x="50" y="207.5332">children</text></g><!--entity siblingsnet--><g id="elem_siblingsnet"><path d="M211,101 L276,101 C281,101 281,114.8047 281,114.8047 C281,114.8047 281,128.6094 276,128.6094 L211,128.6094 C206,128.6094 206,114.8047 206,114.8047 C206,114.8047 206,101 211,101 " fill="#FF0000" style="stroke:#181818;stroke-width:0.5;"/><path d="M276,101 C271,101 271,114.8047 271,114.8047 C271,128.6094 276,128.6094 276,128.6094 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="55" x="211" y="120.5332">siblings</text></g><!--entity sabr_sa_webService--><g id="elem_sabr_sa_webService"><polygon fill="#F1F1F1" points="22,52,32,42,146,42,146,79.6094,136,89.6094,22,89.6094,22,52" style="stroke:#181818;stroke-width:0.5;"/><line style="stroke:#181818;stroke-width:0.5;" x1="136" x2="146" y1="52" y2="42"/><line style="stroke:#181818;stroke-width:0.5;" x1="22" x2="136" y1="52" y2="52"/><line style="stroke:#181818;stroke-width:0.5;" x1="136" x2="136" y1="52" y2="89.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="84" x="37" y="76.5332">sabr_sa_web</text></g><!--entity sabr_sa_webimage--><g id="elem_sabr_sa_webimage"><rect fill="#F1F1F1" height="40.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="114" x="402" y="44.5"/><polygon fill="#F1F1F1" points="499,49.5,499,63.5,511,63.5,511,55.5,505,49.5,499,49.5" style="stroke:#181818;stroke-width:0.5;"/><line style="stroke:#181818;stroke-width:0.5;" x1="505" x2="505" y1="49.5" y2="55.5"/><line style="stroke:#181818;stroke-width:0.5;" x1="511" x2="505" y1="55.5" y2="55.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="84" x="412" y="72.0332">sabr_sa_web</text></g><!--entity parent--><g id="elem_parent"><path d="M223,252 L223,276 M223,264 L240,264 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><ellipse cx="252" cy="264" fill="#000000" rx="12" ry="12" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="41" x="223" y="294.5332">parent</text></g><!--entity children--><g id="elem_children"><ellipse cx="243.5" cy="349" fill="#0000FF" rx="12" ry="12" style="stroke:#181818;stroke-width:0.5;"/><line style="stroke:#181818;stroke-width:0.5;" x1="231.5" x2="255.5" y1="363" y2="363"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="50" x="218.5" y="379.5332">children</text></g><!--link parentnet to parent--><g id="link_parentnet_parent"><path d="M117.27,152.79 C126.92,157.59 137.26,163.44 146,170 C154.3,176.23 193.92,219.37 219.74,247.8 " fill="none" id="parentnet-parent" style="stroke:#000000;stroke-width:1.0;"/></g><!--link childrennet to children--><g id="link_childrennet_children"><path d="M99.25,216.12 C126.29,242.89 185.27,301.31 218.5,334.23 " fill="none" id="childrennet-children" style="stroke:#0000FF;stroke-width:1.0;"/></g><!--link sabr_sa_webService to siblingsnet--><g id="link_sabr_sa_webService_siblingsnet"><path d="M146.34,85.08 C166.38,91.32 188,98.05 205.66,103.54 " fill="none" id="sabr_sa_webService-siblingsnet" style="stroke:#FF0000;stroke-width:1.0;"/></g><!--link sabr_sa_webService to sabr_sa_webimage--><g id="link_sabr_sa_webService_sabr_sa_webimage"><path d="M146.18,65.84 C217.17,65.65 333.26,65.33 401.98,65.15 " fill="none" id="sabr_sa_webService-sabr_sa_webimage" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/></g><!--SRC=[XL59RiCm3Bph5OHpJdCl37-Yno08j30s4LTojIG8Ylwzj6p1HjEwF10WEPePYZrU8aG7djekWY6FEfApGWZbaZNIFs2G7cs4dUgbllA02ueFq1trXYVZ8A4OOs20R16g89K_1rd1RY1xXKy171y94yvi5WiX7FEmHAsQMhlU-TTxHn6R2LuVSg-f3wh9y5FEEIs4- -D4UThFpGKqQHVBipftjiKBVaj-pPaD96Jzqltf893goROXE_1e_Z5Gu7yP4DQPvRlFTrGLo02h-WtzZVHudg8XVQIBr77p6Rtp7IUDBo6U-SPLsJvlkjheDzmBnpEn-0O0]--></g></svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="226px" preserveAspectRatio="none" style="width:275px;height:226px;background:#000000;" version="1.1" viewBox="0 0 275 226" width="275px" zoomAndPan="magnify"><defs/><g><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="140" x="5" y="19.5332">Dot Executable: null</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="173" x="5" y="37.1426">No dot executable found</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="258" x="5" y="54.752">Cannot find Graphviz. You should try</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="0" x="9" y="72.3613"/><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="71" x="5" y="89.9707">@startuml</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="50" x="5" y="107.5801">testdot</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="66" x="5" y="125.1895">@enduml</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="0" x="9" y="142.7988"/><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="15" x="9" y="160.4082">or</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="0" x="9" y="178.0176"/><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="201" x="5" y="195.627">java -jar plantuml.jar -testdot</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="0" x="9" y="213.2363"/><!--
+@startuml
+
+left to right direction
+
+
+boundary parent #black
+
+
+entity children #blue
+
+
+
+
+package "sabr_sa" #pink {
+    queue parentnet #black [
+            <b><color:white>parent</color></b>
+    ]
+    
+    parentnet -[#black]- parent
+    
+    queue childrennet #blue [
+            <b><color:white>children</color></b>
+    ]
+    
+    childrennet -[#blue]- children
+    
+    queue siblingsnet #red [
+            <b><color:white>siblings</color></b>
+    ]
+    
+
+node "sabr_sa_web" as sabr_sa_webService
+
+
+        artifact "sabr_sa_web" as sabr_sa_webimage
+    
+}
+
+sabr_sa_webService -[#red]- siblingsnet
+sabr_sa_webService .... sabr_sa_webimage
+
+
+@enduml
+
+PlantUML version 1.2019.05(Sat Apr 20 09:45:36 PDT 2019)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 17.0.7+8-LTS-224
+Operating System: Windows 11
+OS Version: 10.0
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>

@@ -1,1 +1,59 @@
-<?xml version="1.0" encoding="us-ascii" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="875px" preserveAspectRatio="none" style="width:303px;height:875px;background:#FFFFFF;" version="1.1" viewBox="0 0 303 875" width="303px" zoomAndPan="magnify"><defs/><g><!--cluster InputChannelInstance--><g id="cluster_InputChannelInstance"><path d="M19.5,7 L217.5,7 A12.5,12.5 0 0 1 230,19.5 L230,29.6094 L7,29.6094 L7,19.5 A12.5,12.5 0 0 1 19.5,7 " fill="#FFCC88" style="stroke:#FFCC88;stroke-width:1.0;"/><rect fill="none" height="862" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="223" x="7" y="7"/><line style="stroke:#181818;stroke-width:0.5;" x1="7" x2="230" y1="29.6094" y2="29.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="137" x="50" y="25.5332">InputChannelInstance</text></g><g id="InputChannelInstance.Init"><rect fill="#FFCC88" height="50" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="50" x="93" y="43"/><line style="stroke:#181818;stroke-width:0.5;" x1="93" x2="143" y1="70.6094" y2="70.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="18" x="109" y="62.5332">Init</text></g><g id="InputChannelInstance.Created"><rect fill="#FFCC88" height="50" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="71" x="82.5" y="233"/><line style="stroke:#181818;stroke-width:0.5;" x1="82.5" x2="153.5" y1="260.6094" y2="260.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="51" x="92.5" y="252.5332">Created</text></g><g id="InputChannelInstance.Deploying"><rect fill="#FFCC88" height="50" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="83" x="76.5" y="423"/><line style="stroke:#181818;stroke-width:0.5;" x1="76.5" x2="159.5" y1="450.6094" y2="450.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="63" x="86.5" y="442.5332">Deploying</text></g><g id="InputChannelInstance.Enabled"><rect fill="#FFCC88" height="50" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="72" x="35" y="613"/><line style="stroke:#181818;stroke-width:0.5;" x1="35" x2="107" y1="640.6094" y2="640.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="52" x="45" y="632.5332">Enabled</text></g><g id="InputChannelInstance.Disabled"><rect fill="#FFCC88" height="50" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="75" x="134.5" y="803"/><line style="stroke:#181818;stroke-width:0.5;" x1="134.5" x2="209.5" y1="830.6094" y2="830.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="55" x="144.5" y="822.5332">Disabled</text></g><g id="InputChannelInstance.Failed"><rect fill="#FFCC88" height="50" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="59" x="152.5" y="613"/><line style="stroke:#181818;stroke-width:0.5;" x1="152.5" x2="211.5" y1="640.6094" y2="640.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="39" x="162.5" y="632.5332">Failed</text></g><g id="Null"><rect fill="#F1F1F1" height="50" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="50" x="246" y="803"/><line style="stroke:#181818;stroke-width:0.5;" x1="246" x2="296" y1="830.6094" y2="830.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="23" x="259.5" y="822.5332">Null</text></g><!--link Init to Created--><g id="link_Init_Created"><path d="M118,93.19 C118,129.29 118,190.86 118,226.9 " fill="none" id="Init-to-Created" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="118,232.9,122,223.9,118,227.9,114,223.9,118,232.9" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="36" x="119" y="168.4951">create</text></g><!--link Created to Deploying--><g id="link_Created_Deploying"><path d="M118,283.19 C118,319.29 118,380.86 118,416.9 " fill="none" id="Created-to-Deploying" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="118,422.9,122,413.9,118,417.9,114,413.9,118,422.9" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="38" x="119" y="358.4951">deploy</text></g><!--link Deploying to Enabled--><g id="link_Deploying_Enabled"><path d="M106.91,473.05 C99.62,489.8 90.46,512.85 85,534 C78.14,560.56 75.0092,585.9125 73.1792,606.9825 " fill="none" id="Deploying-to-Enabled" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="72.66,612.96,77.4237,604.3399,73.0926,607.9788,69.4538,603.6476,72.66,612.96" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="52" x="86" y="548.4951">deployed</text></g><!--link Deploying to Failed--><g id="link_Deploying_Failed"><path d="M126.24,473.19 C138.52,509.29 159.5963,571.1802 171.8663,607.2202 " fill="none" id="Deploying-to-Failed" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="173.8,612.9,174.686,603.0911,172.1886,608.1668,167.1128,605.6694,173.8,612.9" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="30" x="153" y="548.4951">failed</text></g><!--link Enabled to Disabled--><g id="link_Enabled_Disabled"><path d="M70.59,663.19 C71.16,684.92 74.38,717.15 87,742 C99.19,766.01 116.0662,783.5522 134.3962,798.8722 " fill="none" id="Enabled-to-Disabled" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="139,802.72,134.6595,793.8792,135.1635,799.5135,129.5292,800.0175,139,802.72" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="41" x="88" y="738.4951">disable</text></g><!--link Disabled to Enabled--><g id="link_Disabled_Enabled"><path d="M165.23,802.85 C158.73,781.43 147.87,749.65 134,724 C122.12,702.03 108.8737,684.0584 95.5137,667.6884 " fill="none" id="Disabled-to-Enabled" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="91.72,663.04,94.3116,672.5418,94.8814,666.9137,100.5095,667.4835,91.72,663.04" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="38" x="143" y="738.4951">enable</text></g><!--link Enabled to Null--><g id="link_Enabled_Null"><path d="M107.12,660.93 C131.82,676.83 164.57,699.72 190,724 C215.5,748.35 236.4026,776.0383 251.6126,797.9883 " fill="none" id="Enabled-to-Null" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="255.03,802.92,253.1918,793.2442,252.1822,798.8103,246.6162,797.8007,255.03,802.92" style="stroke:#000000;stroke-width:1.0;"/></g><!--SRC=[XP0z3eCm38Ltdy8ICpjYw49RYQKNg3g4ODgeaOkQCA2gTsy8f834JvOy-NrvjcEii8GvrutD7eAPTCx62fQ4KLL9cIJu0K1tp40gEt4wuplripUvgzn2ZbJhLwlulWMTM1Hw9qUPNUOir2BXZjyalaQ55l9vY-F3V_OKfLS0eJB3nlbJBBq666ipD6mHG2fNqM7I52il0CBRUU-miqlifGiCjPNMn3tNVGpWOkobqTgPFm00]--></g></svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="226px" preserveAspectRatio="none" style="width:275px;height:226px;background:#000000;" version="1.1" viewBox="0 0 275 226" width="275px" zoomAndPan="magnify"><defs/><g><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="140" x="5" y="19.5332">Dot Executable: null</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="173" x="5" y="37.1426">No dot executable found</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="258" x="5" y="54.752">Cannot find Graphviz. You should try</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="0" x="9" y="72.3613"/><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="71" x="5" y="89.9707">@startuml</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="50" x="5" y="107.5801">testdot</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="66" x="5" y="125.1895">@enduml</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="0" x="9" y="142.7988"/><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="15" x="9" y="160.4082">or</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="0" x="9" y="178.0176"/><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="201" x="5" y="195.627">java -jar plantuml.jar -testdot</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="0" x="9" y="213.2363"/><!--
+@startuml
+
+
+
+state InputChannelInstance #ffcc88 {
+
+    state Init #ffcc88 {
+    }
+
+    state Created #ffcc88 {
+    }
+
+    state Deploying #ffcc88 {
+    }
+
+    state Enabled #ffcc88 {
+    }
+
+    state Disabled #ffcc88 {
+    }
+
+    state Failed #ffcc88 {
+    }
+
+
+
+
+Init -[#black]- -> Created : create
+
+Created -[#black]- -> Deploying : deploy
+
+Deploying -[#black]- -> Enabled : deployed
+
+Deploying -[#black]- -> Failed : failed
+
+Enabled -[#black]- -> Disabled : disable
+
+Disabled -[#black]- -> Enabled : enable
+
+}
+
+ 
+ Enabled -[#black]- -> Null
+ 
+
+@enduml
+
+PlantUML version 1.2019.05(Sat Apr 20 09:45:36 PDT 2019)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 17.0.7+8-LTS-224
+Operating System: Windows 11
+OS Version: 10.0
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>

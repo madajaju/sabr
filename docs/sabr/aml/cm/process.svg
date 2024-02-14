@@ -1,1 +1,113 @@
-<?xml version="1.0" encoding="us-ascii" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="823px" preserveAspectRatio="none" style="width:168px;height:823px;background:#FFFFFF;" version="1.1" viewBox="0 0 168 823" width="168px" zoomAndPan="magnify"><defs/><g><path d="M28.5,142.5 L133.5,142.5 A12.5,12.5 0 0 1 146,155 L146,170.1094 L16,170.1094 L16,155 A12.5,12.5 0 0 1 28.5,142.5 " fill="#00AAFF" style="stroke:#00AAFF;stroke-width:1.0;"/><rect fill="none" height="674.8281" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="130" x="16" y="142.5"/><line style="stroke:#181818;stroke-width:0.5;" x1="16" x2="146" y1="170.1094" y2="170.1094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="22" x="70" y="162.0332">aml</text><path d="M40.5,182.1094 L124.5,182.1094 A12.5,12.5 0 0 1 137,194.6094 L137,209.7188 L28,209.7188 L28,194.6094 A12.5,12.5 0 0 1 40.5,182.1094 " fill="#00AAFF" style="stroke:#00AAFF;stroke-width:1.0;"/><rect fill="none" height="625.2188" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="109" x="28" y="182.1094"/><line style="stroke:#181818;stroke-width:0.5;" x1="28" x2="137" y1="209.7188" y2="209.7188"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="18" x="73.5" y="201.6426">cm</text><path d="M52.5,221.7188 L115.5,221.7188 A12.5,12.5 0 0 1 128,234.2188 L128,249.3281 L40,249.3281 L40,234.2188 A12.5,12.5 0 0 1 52.5,221.7188 " fill="#00AAFF" style="stroke:#00AAFF;stroke-width:1.0;"/><rect fill="none" height="575.6094" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="88" x="40" y="221.7188"/><line style="stroke:#181818;stroke-width:0.5;" x1="40" x2="128" y1="249.3281" y2="249.3281"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="59" x="54.5" y="241.252">capability</text><g id="aml.amlcm.amlcmcapability.amlcmcapabilitybuild"><rect fill="#00AAFF" height="50" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="50" x="60.5" y="737.3281"/><line style="stroke:#181818;stroke-width:0.5;" x1="60.5" x2="110.5" y1="764.9375" y2="764.9375"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="30" x="70.5" y="756.8613">build</text></g><g id="aml.amlcm.amlcmcapability.amlcmcapabilitycreate"><rect fill="#00AAFF" height="50" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="60" x="55.5" y="669.3281"/><line style="stroke:#181818;stroke-width:0.5;" x1="55.5" x2="115.5" y1="696.9375" y2="696.9375"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="40" x="65.5" y="688.8613">create</text></g><g id="aml.amlcm.amlcmcapability.amlcmcapabilitydeploy"><rect fill="#00AAFF" height="50" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="62" x="54.5" y="601.3281"/><line style="stroke:#181818;stroke-width:0.5;" x1="54.5" x2="116.5" y1="628.9375" y2="628.9375"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="42" x="64.5" y="620.8613">deploy</text></g><g id="aml.amlcm.amlcmcapability.amlcmcapabilitylist"><rect fill="#00AAFF" height="50" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="50" x="60.5" y="533.3281"/><line style="stroke:#181818;stroke-width:0.5;" x1="60.5" x2="110.5" y1="560.9375" y2="560.9375"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="17" x="77" y="552.8613">list</text></g><g id="aml.amlcm.amlcmcapability.amlcmcapabilityrelease"><rect fill="#00AAFF" height="50" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="67" x="52" y="465.3281"/><line style="stroke:#181818;stroke-width:0.5;" x1="52" x2="119" y1="492.9375" y2="492.9375"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="47" x="62" y="484.8613">release</text></g><g id="aml.amlcm.amlcmcapability.amlcmcapabilityremove"><rect fill="#00AAFF" height="50" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="67" x="52" y="397.3281"/><line style="stroke:#181818;stroke-width:0.5;" x1="52" x2="119" y1="424.9375" y2="424.9375"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="47" x="62" y="416.8613">remove</text></g><g id="aml.amlcm.amlcmcapability.amlcmcapabilitytest"><rect fill="#00AAFF" height="50" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="50" x="60.5" y="329.3281"/><line style="stroke:#181818;stroke-width:0.5;" x1="60.5" x2="110.5" y1="356.9375" y2="356.9375"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="23" x="74" y="348.8613">test</text></g><g id="aml.amlcm.amlcmcapability.amlcmcapabilityupdate"><rect fill="#00AAFF" height="50" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="64" x="53.5" y="261.3281"/><line style="stroke:#181818;stroke-width:0.5;" x1="53.5" x2="117.5" y1="288.9375" y2="288.9375"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="44" x="63.5" y="280.8613">update</text></g><path d="M19.5,7 L142.5,7 A12.5,12.5 0 0 1 155,19.5 L155,34.6094 L7,34.6094 L7,19.5 A12.5,12.5 0 0 1 19.5,7 " fill="#00AAFF" style="stroke:#00AAFF;stroke-width:1.0;"/><rect fill="none" height="99.6094" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="148" x="7" y="7"/><line style="stroke:#181818;stroke-width:0.5;" x1="7" x2="155" y1="34.6094" y2="34.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="40" x="61" y="26.5332">amlcm</text><g id="pstatename.cmfunction"><rect fill="#F1F1F1" height="50" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="127" x="19" y="46.6094"/><line style="stroke:#181818;stroke-width:0.5;" x1="19" x2="146" y1="74.2188" y2="74.2188"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="107" x="29" y="66.1426">Custom Function</text></g><!--SRC=[pPH12iCW44NtESMGNY1tAFGU4vsqWiOGnq8flNkD6X9Qi-gYZWjn_bCU8ceQ6DZ2hAut1gbc4gpis3IDOsI25erk0Hs46KvTXpWCy5n3OTPCc5tw2cD_GCQcs1dHq8w5K9ayUyVMmCMFqI7k4MR8oyp6io7N3uvhYXFsIYj-RDJM- -PxhxGieJ7uk8Dq3_-J5JE5kSIcf39TIPEsHJObbUbgvRX4BltAL6VIXAxu4d9KdR2nzmFV9QbCbwdy59P-PQf-aWT_GagAkg7U]--></g></svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="226px" preserveAspectRatio="none" style="width:275px;height:226px;background:#000000;" version="1.1" viewBox="0 0 275 226" width="275px" zoomAndPan="magnify"><defs/><g><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="140" x="5" y="19.5332">Dot Executable: null</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="173" x="5" y="37.1426">No dot executable found</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="258" x="5" y="54.752">Cannot find Graphviz. You should try</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="0" x="9" y="72.3613"/><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="71" x="5" y="89.9707">@startuml</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="50" x="5" y="107.5801">testdot</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="66" x="5" y="125.1895">@enduml</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="0" x="9" y="142.7988"/><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="15" x="9" y="160.4082">or</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="0" x="9" y="178.0176"/><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="201" x="5" y="195.627">java -jar plantuml.jar -testdot</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="0" x="9" y="213.2363"/><!--
+@startuml
+left to right direction
+
+
+state "aml" as aml #00aaff {
+state "cm" as amlcm #00aaff {
+}
+}
+
+
+state "amlcm" as pstatename #00aaff {
+    state "Custom Function" as cmfunction {
+    }
+}
+
+        state "aml" as aml #00aaff {
+state "cm" as amlcm #00aaff {
+state "capability" as amlcmcapability #00aaff {
+state "build" as amlcmcapabilitybuild #00aaff {
+}
+}
+}
+}
+
+
+        state "aml" as aml #00aaff {
+state "cm" as amlcm #00aaff {
+state "capability" as amlcmcapability #00aaff {
+state "create" as amlcmcapabilitycreate #00aaff {
+}
+}
+}
+}
+
+
+        state "aml" as aml #00aaff {
+state "cm" as amlcm #00aaff {
+state "capability" as amlcmcapability #00aaff {
+state "deploy" as amlcmcapabilitydeploy #00aaff {
+}
+}
+}
+}
+
+
+        state "aml" as aml #00aaff {
+state "cm" as amlcm #00aaff {
+state "capability" as amlcmcapability #00aaff {
+state "list" as amlcmcapabilitylist #00aaff {
+}
+}
+}
+}
+
+
+        state "aml" as aml #00aaff {
+state "cm" as amlcm #00aaff {
+state "capability" as amlcmcapability #00aaff {
+state "release" as amlcmcapabilityrelease #00aaff {
+}
+}
+}
+}
+
+
+        state "aml" as aml #00aaff {
+state "cm" as amlcm #00aaff {
+state "capability" as amlcmcapability #00aaff {
+state "remove" as amlcmcapabilityremove #00aaff {
+}
+}
+}
+}
+
+
+        state "aml" as aml #00aaff {
+state "cm" as amlcm #00aaff {
+state "capability" as amlcmcapability #00aaff {
+state "test" as amlcmcapabilitytest #00aaff {
+}
+}
+}
+}
+
+
+        state "aml" as aml #00aaff {
+state "cm" as amlcm #00aaff {
+state "capability" as amlcmcapability #00aaff {
+state "update" as amlcmcapabilityupdate #00aaff {
+}
+}
+}
+}
+
+
+
+
+
+
+@enduml
+
+PlantUML version 1.2019.05(Sat Apr 20 09:45:36 PDT 2019)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 17.0.7+8-LTS-224
+Operating System: Windows 11
+OS Version: 10.0
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>

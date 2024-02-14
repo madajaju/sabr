@@ -1,1 +1,65 @@
-<?xml version="1.0" encoding="us-ascii" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="326px" preserveAspectRatio="none" style="width:2064px;height:326px;background:#FFFFFF;" version="1.1" viewBox="0 0 2064 326" width="2064px" zoomAndPan="magnify"><defs/><g><g id="elem_UpdateCapability"><ellipse cx="1054.6819" cy="162.6364" fill="#FFFF00" rx="78.6819" ry="18.1364" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="111" x="997.5947" y="166.8083">Update Capability</text></g><!--entity DevOpsEngineer--><g id="elem_DevOpsEngineer"><ellipse cx="1054.5" cy="14" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><path d="M1054.5,22 L1054.5,49 M1041.5,30 L1067.5,30 M1054.5,49 L1041.5,64 M1054.5,49 L1067.5,64 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="112" x="998.5" y="80.0332">DevOps Engineer</text></g><g id="elem_AddaSABRtotheCapability"><ellipse cx="107.3975" cy="289.6795" fill="#D3D3D3" rx="101.3975" ry="22.6795" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="164" x="25.3975" y="293.408">AddaSABRtotheCapability</text></g><g id="elem_AddSABRstotheCapability"><ellipse cx="345.4506" cy="289.5901" fill="#D3D3D3" rx="100.9506" ry="22.5901" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="163" x="263.9506" y="293.3186">AddSABRstotheCapability</text></g><g id="elem_RemoveaSABRfromtheCapability"><ellipse cx="602.5183" cy="289.6037" fill="#D3D3D3" rx="121.0183" ry="26.6037" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="207" x="499.0183" y="293.3322">RemoveaSABRfromtheCapability</text></g><g id="elem_RemovemultipleSABRsfromtheCapability"><ellipse cx="901.5966" cy="289.5193" fill="#D3D3D3" rx="143.0966" ry="31.0193" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="254" x="774.5966" y="293.2478">RemovemultipleSABRsfromtheCapability</text></g><g id="elem_UpdateConfigurationoftheCapability"><ellipse cx="1208.4447" cy="289.6889" fill="#D3D3D3" rx="128.9447" ry="28.1889" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="224" x="1096.4447" y="293.4175">UpdateConfigurationoftheCapability</text></g><g id="elem_UpdatePoliciesoftheCapability"><ellipse cx="1484.304" cy="289.2608" fill="#D3D3D3" rx="111.804" ry="24.7608" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="187" x="1390.804" y="292.9893">UpdatePoliciesoftheCapability</text></g><g id="elem_UpdateSABRsoftheCapability"><ellipse cx="1741.4781" cy="289.3956" fill="#D3D3D3" rx="109.9781" ry="24.3956" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="183" x="1649.9781" y="293.1241">UpdateSABRsoftheCapability</text></g><g id="elem_ManageCapabilities"><ellipse cx="1972.6926" cy="289.5385" fill="#FFFFE0" rx="85.6926" ry="19.5385" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="128" x="1908.6926" y="293.267">Manage Capabilities</text></g><!--link DevOpsEngineer to UpdateCapability--><g id="link_DevOpsEngineer_UpdateCapability"><path d="M1054.5,83.8 C1054.5,104.26 1054.5,122.43 1054.5,138.31 " fill="none" id="DevOpsEngineer-to-UpdateCapability" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="1054.5,144.31,1058.5,135.31,1054.5,139.31,1050.5,135.31,1054.5,144.31" style="stroke:#181818;stroke-width:1.0;"/></g><!--link UpdateCapability to AddaSABRtotheCapability--><g id="link_UpdateCapability_AddaSABRtotheCapability"><path d="M980.32,168.49 C834.8,179.06 502.08,207.06 226.5,258.5 C207.55,262.04 192.9343,265.3389 174.4443,270.0489 " fill="none" id="UpdateCapability-to-AddaSABRtotheCapability" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="168.63,271.53,178.3389,273.1846,173.4753,270.2958,176.3641,265.4321,168.63,271.53" style="stroke:#181818;stroke-width:1.0;"/></g><!--link UpdateCapability to AddSABRstotheCapability--><g id="link_UpdateCapability_AddSABRstotheCapability"><path d="M988.12,172.19 C878.39,187 652.52,219.36 463.5,258.5 C445.18,262.29 431.2434,265.5652 413.2334,270.1652 " fill="none" id="UpdateCapability-to-AddSABRstotheCapability" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="407.42,271.65,417.1299,273.2984,412.2645,270.4127,415.1502,265.5472,407.42,271.65" style="stroke:#181818;stroke-width:1.0;"/></g><!--link UpdateCapability to RemoveaSABRfromtheCapability--><g id="link_UpdateCapability_RemoveaSABRfromtheCapability"><path d="M1006.56,176.76 C927.38,198.66 774.5729,240.9107 681.3529,266.6907 " fill="none" id="UpdateCapability-to-RemoveaSABRfromtheCapability" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="675.57,268.29,685.3106,269.7464,680.3891,266.9573,683.1782,262.0358,675.57,268.29" style="stroke:#181818;stroke-width:1.0;"/></g><!--link UpdateCapability to RemovemultipleSABRsfromtheCapability--><g id="link_UpdateCapability_RemovemultipleSABRsfromtheCapability"><path d="M1034.18,180.1 C1009.47,200.29 971.9765,230.9239 941.8165,255.5639 " fill="none" id="UpdateCapability-to-RemovemultipleSABRsfromtheCapability" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="937.17,259.36,946.6704,256.7636,941.0421,256.1966,941.609,250.5682,937.17,259.36" style="stroke:#181818;stroke-width:1.0;"/></g><!--link UpdateCapability to UpdateConfigurationoftheCapability--><g id="link_UpdateCapability_UpdateConfigurationoftheCapability"><path d="M1074.95,180.1 C1100.8,201.08 1140.9613,233.679 1171.4813,258.449 " fill="none" id="UpdateCapability-to-UpdateConfigurationoftheCapability" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="1176.14,262.23,1171.6726,253.4526,1172.2577,259.0791,1166.6312,259.6643,1176.14,262.23" style="stroke:#181818;stroke-width:1.0;"/></g><!--link UpdateCapability to UpdatePoliciesoftheCapability--><g id="link_UpdateCapability_UpdatePoliciesoftheCapability"><path d="M1101.34,177.12 C1178.06,199.42 1324.9985,242.1352 1412.6885,267.6252 " fill="none" id="UpdateCapability-to-UpdatePoliciesoftheCapability" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="1418.45,269.3,1410.9242,262.9468,1413.6487,267.9044,1408.6912,270.6288,1418.45,269.3" style="stroke:#181818;stroke-width:1.0;"/></g><!--link UpdateCapability to UpdateSABRsoftheCapability--><g id="link_UpdateCapability_UpdateSABRsoftheCapability"><path d="M1118.57,173.01 C1222.88,188.78 1435.71,222.26 1614.5,258.5 C1632.6,262.17 1646.1996,265.1654 1664.2996,269.4254 " fill="none" id="UpdateCapability-to-UpdateSABRsoftheCapability" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="1670.14,270.8,1662.2958,264.8445,1665.273,269.6545,1660.463,272.6317,1670.14,270.8" style="stroke:#181818;stroke-width:1.0;"/></g><!--reverse link UpdateCapability to ManageCapabilities--><g id="link_UpdateCapability_ManageCapabilities"><path d="M1135.3067,168.4199 C1279.6367,178.0599 1600.04,203.95 1869.5,258.5 C1888.12,262.27 1908.25,267.8 1925.74,273.08 " fill="none" id="UpdateCapability-backto-ManageCapabilities" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="1129.32,168.02,1138.0334,172.6109,1134.3089,168.3532,1138.5666,164.6287,1129.32,168.02" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="46" x="1693.5" y="224.9951">extends</text></g><!--SRC=[ZPHBReGm44JtFaMBMNE1A8f4FiieqKGvW0EDfoLZ8zjCChSFOmO5uWzuHtLNrPCbF5YikKKeFlk6EuGdtlClakGk1N0Ba_edmk62KkflnghQQGF5CvxVUWilIf12DDuqQRF4sFeRol8Xo6NZ6MQKgcduH_LuTDgTy1zGOWO7IUBaXC4nAe2-DYQCwzhhWatKncQxQcF6HUqHEtr6pzOQtONTkOLjW9mxeEW6wQYNw95pDFd5lLJvb0NTBKEhbiHWk2EjT1koRQzjasrd15plMb9DQDD8YOszD0bx0EBlCKqH6-z5Y7bNF-qhLrmiteyHrrTF-bA-LSuFIL1wNvOnrntWZqFLM3QTNm00]--></g></svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="226px" preserveAspectRatio="none" style="width:275px;height:226px;background:#000000;" version="1.1" viewBox="0 0 275 226" width="275px" zoomAndPan="magnify"><defs/><g><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="140" x="5" y="19.5332">Dot Executable: null</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="173" x="5" y="37.1426">No dot executable found</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="258" x="5" y="54.752">Cannot find Graphviz. You should try</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="0" x="9" y="72.3613"/><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="71" x="5" y="89.9707">@startuml</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="50" x="5" y="107.5801">testdot</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="66" x="5" y="125.1895">@enduml</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="0" x="9" y="142.7988"/><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="15" x="9" y="160.4082">or</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="0" x="9" y="178.0176"/><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="201" x="5" y="195.627">java -jar plantuml.jar -testdot</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="0" x="9" y="213.2363"/><!--
+@startuml
+
+
+usecase "Update Capability" as UpdateCapability #yellow
+
+Actor "DevOps Engineer" as DevOpsEngineer
+
+DevOpsEngineer - -> UpdateCapability
+
+
+
+usecase "AddaSABRtotheCapability" as AddaSABRtotheCapability #lightgrey
+
+UpdateCapability - -> AddaSABRtotheCapability
+
+usecase "AddSABRstotheCapability" as AddSABRstotheCapability #lightgrey
+
+UpdateCapability - -> AddSABRstotheCapability
+
+usecase "RemoveaSABRfromtheCapability" as RemoveaSABRfromtheCapability #lightgrey
+
+UpdateCapability - -> RemoveaSABRfromtheCapability
+
+usecase "RemovemultipleSABRsfromtheCapability" as RemovemultipleSABRsfromtheCapability #lightgrey
+
+UpdateCapability - -> RemovemultipleSABRsfromtheCapability
+
+usecase "UpdateConfigurationoftheCapability" as UpdateConfigurationoftheCapability #lightgrey
+
+UpdateCapability - -> UpdateConfigurationoftheCapability
+
+usecase "UpdatePoliciesoftheCapability" as UpdatePoliciesoftheCapability #lightgrey
+
+UpdateCapability - -> UpdatePoliciesoftheCapability
+
+usecase "UpdateSABRsoftheCapability" as UpdateSABRsoftheCapability #lightgrey
+
+UpdateCapability - -> UpdateSABRsoftheCapability
+
+
+
+usecase "Manage Capabilities" as ManageCapabilities #lightyellow
+
+UpdateCapability <- - ManageCapabilities : extends
+
+
+
+
+
+
+
+@enduml
+
+PlantUML version 1.2019.05(Sat Apr 20 09:45:36 PDT 2019)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 17.0.7+8-LTS-224
+Operating System: Windows 11
+OS Version: 10.0
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>

@@ -1,1 +1,68 @@
-<?xml version="1.0" encoding="us-ascii" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="1065px" preserveAspectRatio="none" style="width:379px;height:1065px;background:#FFFFFF;" version="1.1" viewBox="0 0 379 1065" width="379px" zoomAndPan="magnify"><defs/><g><!--cluster SABundleInstance--><g id="cluster_SABundleInstance"><path d="M19.5,7 L251.5,7 A12.5,12.5 0 0 1 264,19.5 L264,29.6094 L7,29.6094 L7,19.5 A12.5,12.5 0 0 1 19.5,7 " fill="#FFCC88" style="stroke:#FFCC88;stroke-width:1.0;"/><rect fill="none" height="1052" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="257" x="7" y="7"/><line style="stroke:#181818;stroke-width:0.5;" x1="7" x2="264" y1="29.6094" y2="29.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="115" x="78" y="25.5332">SABundleInstance</text></g><g id="SABundleInstance.Init"><rect fill="#FFCC88" height="50" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="50" x="166" y="43"/><line style="stroke:#181818;stroke-width:0.5;" x1="166" x2="216" y1="70.6094" y2="70.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="18" x="182" y="62.5332">Init</text></g><g id="SABundleInstance.Created"><rect fill="#FFCC88" height="50" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="71" x="155.5" y="233"/><line style="stroke:#181818;stroke-width:0.5;" x1="155.5" x2="226.5" y1="260.6094" y2="260.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="51" x="165.5" y="252.5332">Created</text></g><g id="SABundleInstance.Deploying"><rect fill="#FFCC88" height="50" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="83" x="104.5" y="423"/><line style="stroke:#181818;stroke-width:0.5;" x1="104.5" x2="187.5" y1="450.6094" y2="450.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="63" x="114.5" y="442.5332">Deploying</text></g><g id="SABundleInstance.Running"><rect fill="#FFCC88" height="50" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="73" x="50.5" y="613"/><line style="stroke:#181818;stroke-width:0.5;" x1="50.5" x2="123.5" y1="640.6094" y2="640.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="53" x="60.5" y="632.5332">Running</text></g><g id="SABundleInstance.Enabled"><rect fill="#FFCC88" height="50" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="72" x="169" y="803"/><line style="stroke:#181818;stroke-width:0.5;" x1="169" x2="241" y1="830.6094" y2="830.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="52" x="179" y="822.5332">Enabled</text></g><g id="SABundleInstance.Disabled"><rect fill="#FFCC88" height="50" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="75" x="57.5" y="993"/><line style="stroke:#181818;stroke-width:0.5;" x1="57.5" x2="132.5" y1="1020.6094" y2="1020.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="55" x="67.5" y="1012.5332">Disabled</text></g><g id="Null"><rect fill="#F1F1F1" height="50" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="50" x="314" y="993"/><line style="stroke:#181818;stroke-width:0.5;" x1="314" x2="364" y1="1020.6094" y2="1020.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="23" x="327.5" y="1012.5332">Null</text></g><!--link Init to Created--><g id="link_Init_Created"><path d="M191,93.19 C191,129.29 191,190.86 191,226.9 " fill="none" id="Init-to-Created" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="191,232.9,195,223.9,191,227.9,187,223.9,191,232.9" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="36" x="192" y="168.4951">create</text></g><!--link Created to Deploying--><g id="link_Created_Deploying"><path d="M156.97,283.16 C138.71,298.3 117.96,319.55 108,344 C97.14,370.66 108.9456,396.7388 123.2156,417.7188 " fill="none" id="Created-to-Deploying" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="126.59,422.68,124.8358,412.9886,123.778,418.5457,118.2209,417.4879,126.59,422.68" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="38" x="109" y="358.4951">deploy</text></g><!--link Created to Deploying--><g id="link_Created_Deploying"><path d="M185.21,283.19 C176.57,319.29 161.7972,381.025 153.1672,417.065 " fill="none" id="Created-to-Deploying-1" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="151.77,422.9,157.7559,415.0789,152.9344,418.0375,149.9758,413.2159,151.77,422.9" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="55" x="170" y="358.4951">deploying</text></g><!--link Deploying to Enabled--><g id="link_Deploying_Enabled"><path d="M153.81,473.33 C158.99,490.21 165.63,513.3 170,534 C190.81,632.49 199.8994,746.4227 203.1894,796.8527 " fill="none" id="Deploying-to-Enabled" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="203.58,802.84,206.9856,793.5987,203.2545,797.8506,199.0026,794.1195,203.58,802.84" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="52" x="191" y="643.4951">deployed</text></g><!--link Deploying to Running--><g id="link_Deploying_Running"><path d="M138.41,473.19 C127.08,509.29 107.678,571.1357 96.358,607.1757 " fill="none" id="Deploying-to-Running" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="94.56,612.9,101.0731,605.5122,96.0583,608.1298,93.4408,603.1149,94.56,612.9" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="42" x="119" y="548.4951">running</text></g><!--link Running to Enabled--><g id="link_Running_Enabled"><path d="M102.18,663.19 C124.84,699.29 164.0604,761.778 186.6804,797.818 " fill="none" id="Running-to-Enabled" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="189.87,802.9,188.4735,793.1506,187.212,798.665,181.6976,797.4035,189.87,802.9" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="38" x="150" y="738.4951">enable</text></g><!--link Running to Disabled--><g id="link_Running_Disabled"><path d="M86.29,663.31 C84.77,717.12 81.21,850.39 80,962 C79.89,972.29 80.5448,977.5748 83.5048,987.0148 " fill="none" id="Running-to-Disabled" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="85.3,992.74,86.424,982.9555,83.804,987.969,78.7905,985.3491,85.3,992.74" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="41" x="83" y="833.4951">disable</text></g><!--link Enabled to Disabled--><g id="link_Enabled_Disabled"><path d="M190.84,853.19 C169.72,889.29 133.2204,951.6815 112.1304,987.7215 " fill="none" id="Enabled-to-Disabled" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="109.1,992.9,117.0979,987.1525,111.6253,988.5846,110.1932,983.112,109.1,992.9" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="41" x="154" y="928.4951">disable</text></g><!--link Disabled to Enabled--><g id="link_Disabled_Enabled"><path d="M90.17,992.71 C87.08,970.9 85.66,938.63 98,914 C113.03,883.98 138.9498,864.1903 163.7598,849.8003 " fill="none" id="Disabled-to-Enabled" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="168.95,846.79,159.1579,847.8454,164.6249,849.2986,163.1716,854.7656,168.95,846.79" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="38" x="99" y="928.4951">enable</text></g><!--link Created to Null--><g id="link_Created_Null"><path d="M226.76,261.6 C279.51,267.61 372,287.35 372,352 C372,352 372,352 372,924 C372,948.5 364.368,969.2758 355.278,987.5858 " fill="none" id="Created-to-Null" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="352.61,992.96,360.1948,986.6774,354.8333,988.4815,353.0292,983.1201,352.61,992.96" style="stroke:#000000;stroke-width:1.0;"/></g><!--link Enabled to Null--><g id="link_Enabled_Null"><path d="M222.24,853.19 C247.97,889.29 292.6473,951.9742 318.3373,988.0142 " fill="none" id="Enabled-to-Null" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="321.82,992.9,319.8532,983.2495,318.9178,988.8285,313.3388,987.8931,321.82,992.9" style="stroke:#000000;stroke-width:1.0;"/></g><!--SRC=[ZP4z3y8W48Rt-nMNE7TlEfZuDNHnqD4uKA2caPocqC4O_xkKIZ-IKcJXpVi-SDoX3JCIpvjjGqB9dBHXn2MkofBpDCKt0Dgb7PLJPKP96tp6-QwMTXDBo5u-rUDLqMq9EZL44UH0h52HKfKEC7QvLfBBgb2Ctwz9ikuVdo5t2i0x4sne84FXzD-WrG23FQ5zFvwL8eZwwMHOTmh0Mu4hfLC1h1-JBTr907yq2lPUf7BxCO2pSpesIhKXu6pLN_m5]--></g></svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="226px" preserveAspectRatio="none" style="width:275px;height:226px;background:#000000;" version="1.1" viewBox="0 0 275 226" width="275px" zoomAndPan="magnify"><defs/><g><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="140" x="5" y="19.5332">Dot Executable: null</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="173" x="5" y="37.1426">No dot executable found</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="258" x="5" y="54.752">Cannot find Graphviz. You should try</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="0" x="9" y="72.3613"/><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="71" x="5" y="89.9707">@startuml</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="50" x="5" y="107.5801">testdot</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="66" x="5" y="125.1895">@enduml</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="0" x="9" y="142.7988"/><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="15" x="9" y="160.4082">or</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="0" x="9" y="178.0176"/><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="201" x="5" y="195.627">java -jar plantuml.jar -testdot</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="0" x="9" y="213.2363"/><!--
+@startuml
+
+
+
+state SABundleInstance #ffcc88 {
+
+    state Init #ffcc88 {
+    }
+
+    state Created #ffcc88 {
+    }
+
+    state Deploying #ffcc88 {
+    }
+
+    state Running #ffcc88 {
+    }
+
+    state Enabled #ffcc88 {
+    }
+
+    state Disabled #ffcc88 {
+    }
+
+
+
+
+Init -[#black]- -> Created : create
+
+Created -[#black]- -> Deploying : deploy
+
+Created -[#black]- -> Deploying : deploying
+
+Deploying -[#black]- -> Enabled : deployed
+
+Deploying -[#black]- -> Running : running
+
+Running -[#black]- -> Enabled : enable
+
+Running -[#black]- -> Disabled : disable
+
+Enabled -[#black]- -> Disabled : disable
+
+Disabled -[#black]- -> Enabled : enable
+
+}
+
+ 
+ Created -[#black]- -> Null
+ 
+ 
+ Enabled -[#black]- -> Null
+ 
+
+@enduml
+
+PlantUML version 1.2019.05(Sat Apr 20 09:45:36 PDT 2019)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 17.0.7+8-LTS-224
+Operating System: Windows 11
+OS Version: 10.0
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>

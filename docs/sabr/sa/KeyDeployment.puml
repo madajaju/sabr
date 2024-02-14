@@ -1,4 +1,6 @@
+
 @startuml
+'https://plantuml.com/activity-diagram-beta
 
 node headquarters {
 node DevSecOps {
@@ -89,8 +91,10 @@ SecurityManager --> AISHealth.keyA
 AISSABR --> AISStream
 AISStream --> AISAGG
 DevSecOps --> AISAGG
-@enduml
 
+@startuml
+
+@enduml
 1. Software Validation
 1.1 Validation and Verification of the SABR on the Device.
 1.2 Public Key on the edge device

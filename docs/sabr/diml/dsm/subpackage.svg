@@ -1,1 +1,65 @@
-<?xml version="1.0" encoding="us-ascii" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="329px" preserveAspectRatio="none" style="width:1005px;height:329px;background:#FFFFFF;" version="1.1" viewBox="0 0 1005 329" width="1005px" zoomAndPan="magnify"><defs/><g><!--cluster Data Stream Manager--><g id="cluster_Data Stream Manager"><path d="M8.5,6 L159.5,6 A3.75,3.75 0 0 1 162,8.5 L169,29.6094 L265.5,29.6094 A2.5,2.5 0 0 1 268,32.1094 L268,209.5 A2.5,2.5 0 0 1 265.5,212 L8.5,212 A2.5,2.5 0 0 1 6,209.5 L6,8.5 A2.5,2.5 0 0 1 8.5,6 " fill="#FFCC88" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="6" x2="169" y1="29.6094" y2="29.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="150" x="10" y="22.5332">Data Stream Manager</text></g><!--class i--><g id="elem_i"><rect codeLine="22" fill="#F1F1F1" height="153.6563" id="i" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="229" x="22.5" y="42"/><ellipse cx="63.15" cy="58" fill="#B4A7E5" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M64.1031,54.6406 L64.1031,61.2969 L65.8219,61.2969 Q66.4313,61.2969 66.6969,61.5313 Q66.9625,61.7656 66.9625,62.1563 Q66.9625,62.5313 66.6969,62.7656 Q66.4313,63 65.8219,63 L60.6813,63 Q60.0719,63 59.8063,62.7656 Q59.5406,62.5313 59.5406,62.1406 Q59.5406,61.7656 59.8063,61.5313 Q60.0719,61.2969 60.6813,61.2969 L62.4,61.2969 L62.4,54.6406 L60.6813,54.6406 Q60.0719,54.6406 59.8063,54.4063 Q59.5406,54.1719 59.5406,53.7813 Q59.5406,53.4063 59.8063,53.1719 Q60.0719,52.9375 60.6813,52.9375 L65.8219,52.9375 Q66.4313,52.9375 66.6969,53.1719 Q66.9625,53.4063 66.9625,53.7813 Q66.9625,54.1719 66.6969,54.4063 Q66.4313,54.6406 65.8219,54.6406 L64.1031,54.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="140" x="82.85" y="63.7285">Data Stream Manager</text><line style="stroke:#181818;stroke-width:0.5;" x1="23.5" x2="250.5" y1="74" y2="74"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="194" x="28.5" y="92.5332">^inputchannelinstance.enabled</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="187" x="28.5" y="110.1426">^inputstreaminstance.enabled</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="203" x="28.5" y="127.752">^outputchannelinstance.enabled</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="196" x="28.5" y="145.3613">^outputstreaminstance.enabled</text><line style="stroke:#181818;stroke-width:0.5;" x1="23.5" x2="250.5" y1="152.4375" y2="152.4375"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="217" x="28.5" y="170.9707">/sabr/diml/dsm/channel/deployed()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="210" x="28.5" y="188.5801">/sabr/diml/dsm/stream/deployed()</text></g><path d="M393.5,91.5 L618.5,91.5 A3.75,3.75 0 0 1 621,94 L628,115.1094 L632.5,115.1094 A2.5,2.5 0 0 1 635,117.6094 L635,144.2188 A2.5,2.5 0 0 1 632.5,146.7188 L393.5,146.7188 A2.5,2.5 0 0 1 391,144.2188 L391,94 A2.5,2.5 0 0 1 393.5,91.5 " fill="#FFCC88" style="stroke:#181818;stroke-width:0.5;"/><line style="stroke:#181818;stroke-width:0.5;" x1="391" x2="628" y1="115.1094" y2="115.1094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="224" x="395" y="108.0332">Sentient Agent Bundle Manager</text><path d="M672.5,91.5 L817.5,91.5 A3.75,3.75 0 0 1 820,94 L827,115.1094 L831.5,115.1094 A2.5,2.5 0 0 1 834,117.6094 L834,144.2188 A2.5,2.5 0 0 1 831.5,146.7188 L672.5,146.7188 A2.5,2.5 0 0 1 670,144.2188 L670,94 A2.5,2.5 0 0 1 672.5,91.5 " fill="#00AAFF" style="stroke:#181818;stroke-width:0.5;"/><line style="stroke:#181818;stroke-width:0.5;" x1="670" x2="827" y1="115.1094" y2="115.1094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="144" x="674" y="108.0332">Application Manager</text><path d="M872,91.5 L982,91.5 A3.75,3.75 0 0 1 984.5,94 L991.5,115.1094 L996,115.1094 A2.5,2.5 0 0 1 998.5,117.6094 L998.5,144.2188 A2.5,2.5 0 0 1 996,146.7188 L872,146.7188 A2.5,2.5 0 0 1 869.5,144.2188 L869.5,94 A2.5,2.5 0 0 1 872,91.5 " fill="#FFC0CB" style="stroke:#181818;stroke-width:0.5;"/><line style="stroke:#181818;stroke-width:0.5;" x1="869.5" x2="991.5" y1="115.1094" y2="115.1094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="109" x="873.5" y="108.0332">Security Aspect</text><!--entity REST--><g id="elem_REST"><ellipse cx="48" cy="289" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="37" x="29.5" y="320.5332">REST</text></g><!--entity Web--><g id="elem_Web"><ellipse cx="137" cy="289" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="29" x="122.5" y="320.5332">Web</text></g><!--entity CLI--><g id="elem_CLI"><ellipse cx="226" cy="289" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="21" x="215.5" y="320.5332">CLI</text></g><!--entity WebSocket--><g id="elem_WebSocket"><ellipse cx="347" cy="119" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="72" x="311" y="150.5332">WebSocket</text></g><!--link i to Web--><g id="link_i_Web"><path codeLine="39" d="M137,196.14 C137,229.47 137,264.48 137,279.9 " fill="none" id="i-Web" style="stroke:#181818;stroke-width:1.0;"/></g><!--link i to CLI--><g id="link_i_CLI"><path codeLine="40" d="M177.33,196.14 C194.99,229.47 213.54,264.48 221.71,279.9 " fill="none" id="i-CLI" style="stroke:#181818;stroke-width:1.0;"/></g><!--link i to REST--><g id="link_i_REST"><path codeLine="41" d="M96.67,196.14 C79.01,229.47 60.46,264.48 52.29,279.9 " fill="none" id="i-REST" style="stroke:#181818;stroke-width:1.0;"/></g><!--link i to WebSocket--><g id="link_i_WebSocket"><path codeLine="42" d="M251.52,119 C287.42,119 321.82,119 337.75,119 " fill="none" id="i-WebSocket" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#000000" points="268.75,107.1758,277.7951,110.1147,277.7951,104.2369,268.75,107.1758" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="37" x="282.75" y="112.4951">events</text></g><!--SRC=[bP9DJyCm38Rl_HNMkC2XTCU90rBvE231XI9nGt8JTrXDtQX9GHFQVoVjrbA-Eh0KoxOUluuIMrGbhWaML-WHCjyGLd274chD0ewAGgdL2jwYQ1j5Tc0p4i_XGBhk_4Khsj31hjHQmmezrp9Xbql4elW-GRKD-msapfBoWRCivPxwm0vT6eAnU6eALB_Xw8032nDxOh6jLyyeGeR5UHH5foIO6z8_aAwNd0VhrlzLSuVEY7x24uTvasYkJA9TbUmd99gigJUaZq_cwDsGht3ljjrJAsvK-Dhxw-nXY1yf7yBBsvj9DQjLIJwA669TlqhSasFIiMFIwuqj41igV0ny1lGI5ih1-J_-kD-8Tm00]--></g></svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="226px" preserveAspectRatio="none" style="width:275px;height:226px;background:#000000;" version="1.1" viewBox="0 0 275 226" width="275px" zoomAndPan="magnify"><defs/><g><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="140" x="5" y="19.5332">Dot Executable: null</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="173" x="5" y="37.1426">No dot executable found</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="258" x="5" y="54.752">Cannot find Graphviz. You should try</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="0" x="9" y="72.3613"/><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="71" x="5" y="89.9707">@startuml</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="50" x="5" y="107.5801">testdot</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="66" x="5" y="125.1895">@enduml</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="0" x="9" y="142.7988"/><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="15" x="9" y="160.4082">or</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="0" x="9" y="178.0176"/><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="201" x="5" y="195.627">java -jar plantuml.jar -testdot</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="0" x="9" y="213.2363"/><!--
+@startuml
+
+
+package "Data Stream Manager" #ffcc88 {
+
+}
+
+package "Sentient Agent Bundle Manager" #ffcc88 {
+
+}
+
+package "Application Manager" #00aaff {
+
+}
+
+package "Security Aspect" #pink {
+
+}
+
+
+package "Data Stream Manager" #ffcc88 {
+
+    interface "Data Stream Manager" as i {
+            ^inputchannelinstance.enabled
+            ^inputstreaminstance.enabled
+            ^outputchannelinstance.enabled
+            ^outputstreaminstance.enabled
+    
+            /sabr/diml/dsm/channel/deployed()
+            /sabr/diml/dsm/stream/deployed()
+    
+    }
+}
+
+circle REST
+circle Web
+circle CLI
+circle WebSocket
+
+i -down- Web
+i -down- CLI
+i -down- REST
+WebSocket -left- i: events >
+
+package "Data Stream Manager" #ffcc88 {
+
+
+}
+
+
+
+@enduml
+
+PlantUML version 1.2019.05(Sat Apr 20 09:45:36 PDT 2019)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 17.0.7+8-LTS-224
+Operating System: Windows 11
+OS Version: 10.0
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>

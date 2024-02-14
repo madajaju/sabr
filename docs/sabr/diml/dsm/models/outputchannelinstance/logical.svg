@@ -1,1 +1,59 @@
-<?xml version="1.0" encoding="us-ascii" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="370px" preserveAspectRatio="none" style="width:625px;height:370px;background:#FFFFFF;" version="1.1" viewBox="0 0 625 370" width="625px" zoomAndPan="magnify"><defs/><g><!--entity DataChannel--><g id="elem_DataChannel"><rect fill="#ADD8E6" height="37.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="103" x="7" y="327"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="83" x="17" y="351.5332">DataChannel</text></g><!--entity DataStreamInstance--><g id="elem_DataStreamInstance"><rect fill="#ADD8E6" height="37.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="148" x="145.5" y="327"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="128" x="155.5" y="351.5332">DataStreamInstance</text></g><!--entity ServiceInstance--><g id="elem_ServiceInstance"><rect fill="#ADD8E6" height="37.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="120" x="328.5" y="327"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="100" x="338.5" y="351.5332">ServiceInstance</text></g><!--entity SABundleInstance--><g id="elem_SABundleInstance"><rect fill="#ADD8E6" height="37.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="135" x="484" y="327"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="115" x="494" y="351.5332">SABundleInstance</text></g><!--class Model--><g id="elem_Model"><rect codeLine="2" fill="#F1F1F1" height="241.7031" id="Model" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="181" x="213" y="7"/><ellipse cx="228" cy="23" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M230.7656,18.875 Q230.9219,18.6563 231.1094,18.5469 Q231.2969,18.4375 231.5156,18.4375 Q231.8906,18.4375 232.125,18.6953 Q232.3594,18.9531 232.3594,19.5625 L232.3594,21.0156 Q232.3594,21.625 232.125,21.8906 Q231.8906,22.1563 231.5156,22.1563 Q231.1719,22.1563 230.9688,21.9531 Q230.7656,21.7656 230.6563,21.25 Q230.6094,20.8906 230.4219,20.7031 Q230.0938,20.3281 229.4844,20.1094 Q228.875,19.8906 228.25,19.8906 Q227.4844,19.8906 226.8516,20.2188 Q226.2188,20.5469 225.7266,21.2969 Q225.2344,22.0469 225.2344,23.0781 L225.2344,24.1719 Q225.2344,25.4063 226.125,26.2266 Q227.0156,27.0469 228.6094,27.0469 Q229.5469,27.0469 230.2031,26.7969 Q230.5938,26.6406 231.0156,26.2031 Q231.2813,25.9375 231.4297,25.8594 Q231.5781,25.7813 231.7813,25.7813 Q232.1094,25.7813 232.3672,26.0391 Q232.625,26.2969 232.625,26.6406 Q232.625,26.9844 232.2813,27.3906 Q231.7813,27.9688 230.9844,28.2969 Q229.9063,28.75 228.6094,28.75 Q227.0938,28.75 225.8906,28.125 Q224.9063,27.625 224.2188,26.5547 Q223.5313,25.4844 223.5313,24.2031 L223.5313,23.0469 Q223.5313,21.7188 224.1484,20.5703 Q224.7656,19.4219 225.8594,18.8047 Q226.9531,18.1875 228.1875,18.1875 Q228.9219,18.1875 229.5703,18.3516 Q230.2188,18.5156 230.7656,18.875 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="149" x="242" y="28.7285">OutputChannelInstance</text><line style="stroke:#181818;stroke-width:0.5;" x1="214" x2="393" y1="39" y2="39"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="78" x="219" y="57.5332">ref producer</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="61" x="219" y="75.1426">ref queue</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="132" x="219" y="92.752">string producerName</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="74" x="219" y="110.3613">string name</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="93" x="219" y="127.9707">string direction</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="96" x="219" y="145.5801">string message</text><line style="stroke:#181818;stroke-width:0.5;" x1="214" x2="393" y1="152.6563" y2="152.6563"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="50" x="219" y="171.1895">create()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="52" x="219" y="188.7988">deploy()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="41" x="219" y="206.4082">send()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="77" x="219" y="224.0176">sendBatch()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="44" x="219" y="241.627">failed()</text></g><!--link Model to DataChannel--><g id="link_Model_DataChannel"><path codeLine="21" d="M203.9682,216.7552 C155.4382,259.5352 113.2209,296.7624 83.7709,322.7224 " fill="none" id="Model-DataChannel" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="212.97,208.82,205.824,209.787,203.9682,216.7552,211.1142,215.7882,212.97,208.82" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="79.27,326.69,88.6665,323.7393,83.0208,323.3837,83.3764,317.738,79.27,326.69" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="38" x="132.5" y="293.4951">design</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="77.3431" y="316.2718">1</text></g><!--link Model to DataStreamInstance--><g id="link_Model_DataStreamInstance"><path codeLine="27" d="M252.4829,260.185 C240.6329,290.675 235.7953,303.0982 228.7853,321.1182 " fill="none" id="Model-DataStreamInstance" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="256.83,249,250.9282,253.1435,252.4829,260.185,258.3848,256.0415,256.83,249" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="226.61,326.71,233.6008,319.7725,228.4227,322.0502,226.1451,316.8721,226.61,326.71" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="40" x="245.5" y="293.4951">stream</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="220.6704" y="316.2977">1</text></g><!--link Model to ServiceInstance--><g id="link_Model_ServiceInstance"><path codeLine="33" d="M355.1147,260.1663 C367.1147,290.6563 372.0132,303.1066 379.1032,321.1266 " fill="none" id="Model-ServiceInstance" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="350.72,249,349.1953,256.0481,355.1147,260.1663,356.6395,253.1182,350.72,249" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="381.3,326.71,381.7271,316.8704,379.4693,322.0572,374.2826,319.7995,381.3,326.71" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="103" x="369.5" y="293.4951">transformInstance</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="371.1569" y="316.2977">n</text></g><!--link Model to SABundleInstance--><g id="link_Model_SABundleInstance"><path codeLine="39" d="M403.6184,211.6784 C431.8084,235.3584 453.6,254.12 481.5,279 C499.2,294.78 514.476,309.2003 528.426,322.6203 " fill="none" id="Model-SABundleInstance" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="394.43,203.96,396.4514,210.882,403.6184,211.6784,401.597,204.7564,394.43,203.96" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="532.75,326.78,529.0372,317.6578,529.1467,323.3136,523.4909,323.4231,532.75,326.78" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="38" x="501.5" y="293.4951">bundle</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="518.9359" y="316.0526">1</text></g><!--SRC=[ZP2nJiGm38RtF8KL5XXkOEs0nC7200pt1Bx4RIEbJaaS98HuTveUb6ig0LaIVx7z-xVnc1BevonZbhiUcSa_S19aGnemmMEmvE5TGQGMnXXiDXHFqKkcJ0gIHCVTylU4mm_ayy2wI4PSu8KCb19sf1IOI2XqUQN0qkZ3MtabOljzxr5CNu8MdQSPgm-bIaFapXFeUnJyCZ0FVXR3XNTTBqUVQN8obPrCXTtk1lIrNgKsqm39TQmspGyopJYibhF5_v6gAfgoZGci5GyKNvsXbLp5VjLYlKblG29oQaDSn2lDstrcwolH2lxbS9FVm746gfnF]--></g></svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="226px" preserveAspectRatio="none" style="width:275px;height:226px;background:#000000;" version="1.1" viewBox="0 0 275 226" width="275px" zoomAndPan="magnify"><defs/><g><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="140" x="5" y="19.5332">Dot Executable: null</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="173" x="5" y="37.1426">No dot executable found</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="258" x="5" y="54.752">Cannot find Graphviz. You should try</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="0" x="9" y="72.3613"/><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="71" x="5" y="89.9707">@startuml</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="50" x="5" y="107.5801">testdot</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="66" x="5" y="125.1895">@enduml</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="0" x="9" y="142.7988"/><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="15" x="9" y="160.4082">or</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="0" x="9" y="178.0176"/><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="201" x="5" y="195.627">java -jar plantuml.jar -testdot</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="0" x="9" y="213.2363"/><!--
+@startuml
+
+class "OutputChannelInstance" as Model {
+ ref producer
+ ref queue
+ string producerName
+ string name
+ string direction
+ string message
+
+ create()
+ deploy()
+ send()
+ sendBatch()
+ failed()
+ 
+}
+
+rectangle "DataChannel" as DataChannel #lightblue {
+}
+
+Model o- -> "1" DataChannel : design
+
+
+rectangle "DataStreamInstance" as DataStreamInstance #lightblue {
+}
+
+Model o- -> "1" DataStreamInstance : stream
+
+
+rectangle "ServiceInstance" as ServiceInstance #lightblue {
+}
+
+Model o- -> "n" ServiceInstance : transformInstance
+
+
+rectangle "SABundleInstance" as SABundleInstance #lightblue {
+}
+
+Model o- -> "1" SABundleInstance : bundle
+
+
+
+
+
+@enduml
+
+PlantUML version 1.2019.05(Sat Apr 20 09:45:36 PDT 2019)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 17.0.7+8-LTS-224
+Operating System: Windows 11
+OS Version: 10.0
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>

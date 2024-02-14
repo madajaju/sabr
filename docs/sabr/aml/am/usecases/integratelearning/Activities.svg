@@ -1,1 +1,37 @@
-<?xml version="1.0" encoding="us-ascii" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="310px" preserveAspectRatio="none" style="width:213px;height:310px;background:#FFFFFF;" version="1.1" viewBox="0 0 213 310" width="213px" zoomAndPan="magnify"><defs/><g><g id="elem_IntegrateLearning"><ellipse cx="107.1887" cy="163.0377" fill="#FFFF00" rx="80.6887" ry="18.5377" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="116" x="48.5015" y="166.9661">Integrate Learning</text></g><!--entity ApplicationDeveloper--><g id="elem_ApplicationDeveloper"><ellipse cx="107" cy="14" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><path d="M107,22 L107,49 M94,30 L120,30 M107,49 L94,64 M107,49 L120,64 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="138" x="38" y="80.0332">Application Developer</text></g><g id="elem_ProvideDigitalAssistance"><ellipse cx="106.9506" cy="282.0901" fill="#FFFFE0" rx="100.9506" ry="22.5901" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="163" x="25.4506" y="285.8186">Provide Digital Assistance</text></g><!--link ApplicationDeveloper to IntegrateLearning--><g id="link_ApplicationDeveloper_IntegrateLearning"><path d="M107,83.65 C107,104.09 107,122.29 107,138.33 " fill="none" id="ApplicationDeveloper-to-IntegrateLearning" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="107,144.33,111,135.33,107,139.33,103,135.33,107,144.33" style="stroke:#181818;stroke-width:1.0;"/></g><!--reverse link IntegrateLearning to ProvideDigitalAssistance--><g id="link_IntegrateLearning_ProvideDigitalAssistance"><path d="M107,187.52 C107,208.3 107,236.95 107,259.38 " fill="none" id="IntegrateLearning-backto-ProvideDigitalAssistance" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="107,181.52,103,190.52,107,186.52,111,190.52,107,181.52" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="46" x="108" y="225.9951">extends</text></g><!--SRC=[TOz12i8m44NtESNGhdC14Q7GZU32Ampf40T24ZBJQc-lnBOArLd-n-F_6OKS2a5pZag-e19S24law1j0WIrUKsXd2Y7TZUcSfW9DbtDWXyefGayJXPIfLFUBRE2b_KZ1sjE-ojGRruNNaYOU27hsh1YW4s5HZ8vgsu8N-e7G1lOtNLVl7pfQ-ry-03sKuY3lCUO9]--></g></svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="226px" preserveAspectRatio="none" style="width:275px;height:226px;background:#000000;" version="1.1" viewBox="0 0 275 226" width="275px" zoomAndPan="magnify"><defs/><g><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="140" x="5" y="19.5332">Dot Executable: null</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="173" x="5" y="37.1426">No dot executable found</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="258" x="5" y="54.752">Cannot find Graphviz. You should try</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="0" x="9" y="72.3613"/><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="71" x="5" y="89.9707">@startuml</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="50" x="5" y="107.5801">testdot</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="66" x="5" y="125.1895">@enduml</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="0" x="9" y="142.7988"/><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="15" x="9" y="160.4082">or</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="0" x="9" y="178.0176"/><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="201" x="5" y="195.627">java -jar plantuml.jar -testdot</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="0" x="9" y="213.2363"/><!--
+@startuml
+
+
+usecase "Integrate Learning" as IntegrateLearning #yellow
+
+Actor "Application Developer" as ApplicationDeveloper
+
+ApplicationDeveloper - -> IntegrateLearning
+
+
+
+
+
+usecase "Provide Digital Assistance" as ProvideDigitalAssistance #lightyellow
+
+IntegrateLearning <- - ProvideDigitalAssistance : extends
+
+
+
+
+
+
+
+@enduml
+
+PlantUML version 1.2019.05(Sat Apr 20 09:45:36 PDT 2019)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 17.0.7+8-LTS-224
+Operating System: Windows 11
+OS Version: 10.0
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>

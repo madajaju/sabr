@@ -1,1 +1,51 @@
-<?xml version="1.0" encoding="us-ascii" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="246px" preserveAspectRatio="none" style="width:406px;height:246px;background:#FFFFFF;" version="1.1" viewBox="0 0 406 246" width="406px" zoomAndPan="magnify"><defs/><g><!--entity SABundleInstance--><g id="elem_SABundleInstance"><rect fill="#ADD8E6" height="37.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="135" x="139.5" y="203"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="115" x="149.5" y="227.5332">SABundleInstance</text></g><!--entity Capability--><g id="elem_Capability"><rect fill="#90EE90" height="37.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="82" x="7" y="203"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="62" x="17" y="227.5332">Capability</text></g><!--entity Provisioner--><g id="elem_Provisioner"><rect fill="#ADD8E6" height="37.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="91" x="309.5" y="203"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="71" x="319.5" y="227.5332">Provisioner</text></g><!--class Model--><g id="elem_Model"><rect codeLine="2" fill="#F1F1F1" height="118.4375" id="Model" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="147" x="84.5" y="7"/><ellipse cx="99.5" cy="23" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M102.2656,18.875 Q102.4219,18.6563 102.6094,18.5469 Q102.7969,18.4375 103.0156,18.4375 Q103.3906,18.4375 103.625,18.6953 Q103.8594,18.9531 103.8594,19.5625 L103.8594,21.0156 Q103.8594,21.625 103.625,21.8906 Q103.3906,22.1563 103.0156,22.1563 Q102.6719,22.1563 102.4688,21.9531 Q102.2656,21.7656 102.1563,21.25 Q102.1094,20.8906 101.9219,20.7031 Q101.5938,20.3281 100.9844,20.1094 Q100.375,19.8906 99.75,19.8906 Q98.9844,19.8906 98.3516,20.2188 Q97.7188,20.5469 97.2266,21.2969 Q96.7344,22.0469 96.7344,23.0781 L96.7344,24.1719 Q96.7344,25.4063 97.625,26.2266 Q98.5156,27.0469 100.1094,27.0469 Q101.0469,27.0469 101.7031,26.7969 Q102.0938,26.6406 102.5156,26.2031 Q102.7813,25.9375 102.9297,25.8594 Q103.0781,25.7813 103.2813,25.7813 Q103.6094,25.7813 103.8672,26.0391 Q104.125,26.2969 104.125,26.6406 Q104.125,26.9844 103.7813,27.3906 Q103.2813,27.9688 102.4844,28.2969 Q101.4063,28.75 100.1094,28.75 Q98.5938,28.75 97.3906,28.125 Q96.4063,27.625 95.7188,26.5547 Q95.0313,25.4844 95.0313,24.2031 L95.0313,23.0469 Q95.0313,21.7188 95.6484,20.5703 Q96.2656,19.4219 97.3594,18.8047 Q98.4531,18.1875 99.6875,18.1875 Q100.4219,18.1875 101.0703,18.3516 Q101.7188,18.5156 102.2656,18.875 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="115" x="113.5" y="28.7285">CapabilityInstance</text><line style="stroke:#181818;stroke-width:0.5;" x1="85.5" x2="230.5" y1="39" y2="39"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="74" x="90.5" y="57.5332">string name</text><line style="stroke:#181818;stroke-width:0.5;" x1="85.5" x2="230.5" y1="64.6094" y2="64.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="52" x="90.5" y="83.1426">deploy()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="26" x="90.5" y="100.752">kill()</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="54" x="90.5" y="118.3613">update()</text></g><!--link Model to SABundleInstance--><g id="link_Model_SABundleInstance"><path codeLine="14" d="M180.1615,136.6541 C188.9515,164.2541 193.3629,178.1218 199.4229,197.1918 " fill="none" id="Model-SABundleInstance" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="176.52,125.22,174.5294,132.1509,180.1615,136.6541,182.1521,129.7232,176.52,125.22" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="201.24,202.91,202.3265,193.1213,199.7257,198.1448,194.7022,195.5441,201.24,202.91" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="45" x="192" y="169.4951">bundles</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="191.4041" y="192.2225">n</text></g><!--link Model to Capability--><g id="link_Model_Capability"><path codeLine="20" d="M74.1674,106.9646 C52.7274,120.6146 41.99,132.21 30,155 C22.04,170.14 25.8877,183.8459 33.2677,197.5659 " fill="none" id="Model-Capability" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="84.29,100.52,77.0805,100.3681,74.1674,106.9646,81.3769,107.1165,84.29,100.52" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="36.11,202.85,35.3693,193.029,33.7414,198.4466,28.3238,196.8188,36.11,202.85" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="34" x="31" y="169.4951">owner</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="24.3968" y="192.1441">1</text></g><!--link Capability to Model--><g id="link_Capability_Model"><path codeLine="34" d="M67.8944,193.1449 C81.5144,174.0749 93.2131,157.7028 112.9231,130.1028 " fill="none" id="Capability-Model" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="60.92,202.91,67.6622,200.3522,67.8944,193.1449,61.1521,195.7026,60.92,202.91" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="116.41,125.22,107.9244,130.2195,113.5042,129.289,114.4348,134.8688,116.41,125.22" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="56" x="94" y="169.4951">instances</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="103.9147" y="146.9023">n</text></g><!--link Model to Provisioner--><g id="link_Model_Provisioner"><path codeLine="26" d="M241.0932,131.9517 C276.4932,159.6317 302.3129,179.8148 326.9129,199.0448 " fill="none" id="Model-Provisioner" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="231.64,124.56,233.9027,131.4069,241.0932,131.9517,238.8305,125.1048,231.64,124.56" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="331.64,202.74,327.0128,194.0458,327.7008,199.6607,322.0859,200.3486,331.64,202.74" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="61" x="292" y="169.4951">provisioner</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="316.4141" y="192.0004">1</text></g><!--SRC=[bL51QiCm4BplAmRbaXPooDM7GDjJ3u52NY3RYokwbOmaDuIGlqUI4sotqD8vhBIhqOnsrOWE0Uf5zxesOkBfrOQeRSCAEc3lMXQS2I5wOpjO_Sb4QBaNTre_43wCI5w7ljMHyuukH9wRfD49GnsUdWVR2YzalnUn4jEznre6JcP9OFHrcyqEoggV_0frAGHQc4rT59if_TLWg-RC2kvesI-5txpxCi6uT52KP_bVqdDgXNxAA0C9_sYWyyms_qV2fSGICcPSuF4-kV4n5PIvZIweyTeL]--></g></svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="226px" preserveAspectRatio="none" style="width:275px;height:226px;background:#000000;" version="1.1" viewBox="0 0 275 226" width="275px" zoomAndPan="magnify"><defs/><g><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="140" x="5" y="19.5332">Dot Executable: null</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="173" x="5" y="37.1426">No dot executable found</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="258" x="5" y="54.752">Cannot find Graphviz. You should try</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="0" x="9" y="72.3613"/><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="71" x="5" y="89.9707">@startuml</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="50" x="5" y="107.5801">testdot</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="66" x="5" y="125.1895">@enduml</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="0" x="9" y="142.7988"/><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="15" x="9" y="160.4082">or</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="0" x="9" y="178.0176"/><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="201" x="5" y="195.627">java -jar plantuml.jar -testdot</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="0" x="9" y="213.2363"/><!--
+@startuml
+
+class "CapabilityInstance" as Model {
+ string name
+
+ deploy()
+ kill()
+ update()
+ 
+}
+
+rectangle "SABundleInstance" as SABundleInstance #lightblue {
+}
+
+Model o- -> "n" SABundleInstance : bundles
+
+
+rectangle "Capability" as Capability #lightblue {
+}
+
+Model o- -> "1" Capability : owner
+
+
+rectangle "Provisioner" as Provisioner #lightblue {
+}
+
+Model o- -> "1" Provisioner : provisioner
+
+
+
+
+    rectangle "Capability" as Capability #lightgreen {
+    }
+    
+        Capability   *- -> "n" Model : "instances"
+    
+
+@enduml
+
+PlantUML version 1.2019.05(Sat Apr 20 09:45:36 PDT 2019)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 17.0.7+8-LTS-224
+Operating System: Windows 11
+OS Version: 10.0
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>

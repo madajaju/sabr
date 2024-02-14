@@ -3,86 +3,86 @@ left to right direction
 
 
     package "sabr" as sabr {
-package "sa" as sabrsa #ffaaaa {
+package "sa" as sabrsa pink {
  component "securitymanager" as sabrsasecuritymanager
  interface "authenticate" as sabrsasecuritymanagerauthenticate
 sabrsasecuritymanager -- sabrsasecuritymanagerauthenticate
 }
 }
 
-
+    
     package "sabr" as sabr {
-package "sa" as sabrsa #ffaaaa {
+package "sa" as sabrsa pink {
  component "securitymanager" as sabrsasecuritymanager
  interface "generatestreamkeys" as sabrsasecuritymanagergeneratestreamkeys
 sabrsasecuritymanager -- sabrsasecuritymanagergeneratestreamkeys
 }
 }
 
-
+    
     package "sabr" as sabr {
-package "sa" as sabrsa #ffaaaa {
+package "sa" as sabrsa pink {
  component "securitymanager" as sabrsasecuritymanager
  interface "getbootstrapkey" as sabrsasecuritymanagergetbootstrapkey
 sabrsasecuritymanager -- sabrsasecuritymanagergetbootstrapkey
 }
 }
 
-
+    
     package "sabr" as sabr {
-package "sa" as sabrsa #ffaaaa {
+package "sa" as sabrsa pink {
  component "securitymanager" as sabrsasecuritymanager
  interface "getregistrationcreds" as sabrsasecuritymanagergetregistrationcreds
 sabrsasecuritymanager -- sabrsasecuritymanagergetregistrationcreds
 }
 }
 
-
+    
     package "sabr" as sabr {
-package "sa" as sabrsa #ffaaaa {
+package "sa" as sabrsa pink {
  component "securitymanager" as sabrsasecuritymanager
  interface "getstreamkeys" as sabrsasecuritymanagergetstreamkeys
 sabrsasecuritymanager -- sabrsasecuritymanagergetstreamkeys
 }
 }
 
-
+    
     package "sabr" as sabr {
-package "sa" as sabrsa #ffaaaa {
+package "sa" as sabrsa pink {
  component "securitymanager" as sabrsasecuritymanager
  interface "provisionentity" as sabrsasecuritymanagerprovisionentity
 sabrsasecuritymanager -- sabrsasecuritymanagerprovisionentity
 }
 }
 
-
+    
     package "sabr" as sabr {
-package "sa" as sabrsa #ffaaaa {
+package "sa" as sabrsa pink {
  component "securitymanager" as sabrsasecuritymanager
  interface "registerentity" as sabrsasecuritymanagerregisterentity
 sabrsasecuritymanager -- sabrsasecuritymanagerregisterentity
 }
 }
 
-
+    
     package "sabr" as sabr {
-package "sa" as sabrsa #ffaaaa {
+package "sa" as sabrsa pink {
  component "securitymanager" as sabrsasecuritymanager
  interface "requestkeys" as sabrsasecuritymanagerrequestkeys
 sabrsasecuritymanager -- sabrsasecuritymanagerrequestkeys
 }
 }
 
-
+    
     package "sabr" as sabr {
-package "sa" as sabrsa #ffaaaa {
+package "sa" as sabrsa pink {
  component "securitymanager" as sabrsasecuritymanager
  interface "validate" as sabrsasecuritymanagervalidate
 sabrsasecuritymanager -- sabrsasecuritymanagervalidate
 }
 }
 
-
+    
 
 
 
