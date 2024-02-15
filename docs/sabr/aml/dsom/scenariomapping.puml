@@ -4,10 +4,77 @@ left to right direction
 
     package "sabr" as sabr {
 package "aml" as sabraml {
+ component "dsom" as sabramldsom
+ interface "build create" as sabramldsombuildcreate
+sabramldsom -- sabramldsombuildcreate
+}
+}
+
+    
+    package "sabr" as sabr {
+package "aml" as sabraml {
+ component "dsom" as sabramldsom
+ interface "build launch" as sabramldsombuildlaunch
+sabramldsom -- sabramldsombuildlaunch
+}
+}
+
+    
+    package "sabr" as sabr {
+package "aml" as sabraml {
+ component "dsom" as sabramldsom
+ interface "build list" as sabramldsombuildlist
+sabramldsom -- sabramldsombuildlist
+}
+}
+
+    
+    package "sabr" as sabr {
+package "aml" as sabraml {
+ component "dsom" as sabramldsom
+ interface "build monitor" as sabramldsombuildmonitor
+sabramldsom -- sabramldsombuildmonitor
+}
+}
+
+    
+    package "sabr" as sabr {
+package "aml" as sabraml {
+ component "dsom" as sabramldsom
+ interface "build restart" as sabramldsombuildrestart
+sabramldsom -- sabramldsombuildrestart
+}
+}
+
+    
+    package "sabr" as sabr {
+package "aml" as sabraml {
 package "dsom" as sabramldsom #00aaff {
- component "data" as sabramldsomdata
- interface "create" as sabramldsomdatacreate
-sabramldsomdata -- sabramldsomdatacreate
+ component "build" as sabramldsombuild
+ interface "cancel" as sabramldsombuildcancel
+sabramldsombuild -- sabramldsombuildcancel
+}
+}
+}
+
+    
+    package "sabr" as sabr {
+package "aml" as sabraml {
+package "dsom" as sabramldsom #00aaff {
+ component "environment" as sabramldsomenvironment
+ interface "create" as sabramldsomenvironmentcreate
+sabramldsomenvironment -- sabramldsomenvironmentcreate
+}
+}
+}
+
+    
+    package "sabr" as sabr {
+package "aml" as sabraml {
+package "dsom" as sabramldsom #00aaff {
+ component "environment" as sabramldsomenvironment
+ interface "update" as sabramldsomenvironmentupdate
+sabramldsomenvironment -- sabramldsomenvironmentupdate
 }
 }
 }
@@ -19,12 +86,55 @@ sabramldsomdata -- sabramldsomdatacreate
 
 
 
+
+        rectangle "Manage Builds" as ManageBuilds #ffffaa {
+            ("Cancel Build")/ as DevOpsEngineerManageBuildsCancelBuild
+        }
+    
+    sabramldsombuildcancel <-- DevOpsEngineerManageBuildsCancelBuild
+    
+        rectangle "Manage Builds" as ManageBuilds #ffffaa {
+            ("Create Build")/ as DevSecOpsManagerManageBuildsCreateBuild
+        }
+    
+    sabramldsombuildcreate <-- DevSecOpsManagerManageBuildsCreateBuild
+    
+        rectangle "Manage Builds" as ManageBuilds #ffffaa {
+            ("Launch Build")/ as ActorManageBuildsLaunchBuild
+        }
+    
+    sabramldsombuildlaunch <-- ActorManageBuildsLaunchBuild
+    
+        rectangle "Manage Builds" as ManageBuilds #ffffaa {
+            ("List Builds")/ as DevSecOpsManagerManageBuildsListBuilds
+        }
+    
+    sabramldsombuildlist <-- DevSecOpsManagerManageBuildsListBuilds
+    
+        rectangle "Manage Builds" as ManageBuilds #ffffaa {
+            ("Monitor Build")/ as DevSecOpsManagerManageBuildsMonitorBuild
+        }
+    
+    sabramldsombuildmonitor <-- DevSecOpsManagerManageBuildsMonitorBuild
+    
+        rectangle "Manage Builds" as ManageBuilds #ffffaa {
+            ("Restart Build")/ as DevSecOpsManagerManageBuildsRestartBuild
+        }
+    
+    sabramldsombuildrestart <-- DevSecOpsManagerManageBuildsRestartBuild
+    
 
         rectangle "Manage Environments" as ManageEnvironments #ffffaa {
             ("Create Build Environment")/ as DevOpsEngineerManageEnvironmentsCreateBuildEnvironment
         }
     
-    sabramldsomdatacreate <-- DevOpsEngineerManageEnvironmentsCreateBuildEnvironment
+    sabramldsomenvironmentcreate <-- DevOpsEngineerManageEnvironmentsCreateBuildEnvironment
+    
+        rectangle "Manage Environments" as ManageEnvironments #ffffaa {
+            ("Update Build Environment")/ as DevOpsEngineerManageEnvironmentsUpdateBuildEnvironment
+        }
+    
+    sabramldsomenvironmentupdate <-- DevOpsEngineerManageEnvironmentsUpdateBuildEnvironment
     
 
 

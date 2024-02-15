@@ -871,7 +871,7 @@ that are elaborated in the use case descriptions.
 * [Ships](usecase-Ships)
 
 
-![UseCase Diagram](./usecases.png)
+![UseCase Diagram](./usecases.svg)
 
 ## Users
 
@@ -887,7 +887,7 @@ inside the solution and even external subsystems.
 * [TacticalOperator](actor-tacticaloperator)
 
 
-![User Interaction](./userinteraction.png)
+![User Interaction](./userinteraction.svg)
 
 ## Interface
 
@@ -895,9 +895,12 @@ The subsystem has a REST, CLI, WebSocket, and Web interface. Use Cases and Scena
 of the interfaces to perform the work that needs to be completed. The following  diagram shows how
 users interact with the system.
 
-![Scenario Mappings Diagram](./scenariomapping.png)
+![Scenario Mappings Diagram](./scenariomapping.svg)
 
+* [ sabr streampolicy activate](#action--sabr-streampolicy activate)
 * [ sabr streampolicy create](#action--sabr-streampolicy create)
+* [ sabr streampolicy deactivate](#action--sabr-streampolicy deactivate)
+* [ sabr streampolicy update](#action--sabr-streampolicy update)
 * [ sabr application create](#action--sabr-application-create)
 * [ sabr bundle build](#action--sabr-bundle-build)
 * [ sabr bundle create](#action--sabr-bundle-create)
@@ -915,7 +918,7 @@ users interact with the system.
 The Data Model for the  Sentient Agent Bundle Resources subsystem shows how the different objects and classes of object interact
 and their structure.
 
-![Sub Package Diagram](./subpackage.png)
+![Sub Package Diagram](./subpackage.svg)
 
 ### Sub Packages
 
@@ -931,7 +934,7 @@ organize the architecture and make it easier to analyze, understand, design, and
 * [Software Defined Infrastructure](package--sabr-sdi)
 
 
-![Logical Diagram](./logical.png)
+![Logical Diagram](./logical.svg)
 
 ### Classes
 
@@ -1056,6 +1059,25 @@ The Sentient Agent Bundle Resources subsystem has a well defined interface. This
 command line interface (CLI), REST interface, and Web user interface. This interface is how all other
 subsystems and actors can access the system.
 
+### Action  sabr streampolicy activate
+
+
+
+* REST - /sabr/streampolicy activate?attr1=string
+* bin -  sabr streampolicy activate --attr1 string
+* js - .sabr.streampolicy activate({ attr1:string })
+
+#### Description
+Description of the action
+
+#### Parameters
+
+| Name | Type | Required | Description |
+|---|---|---|---|
+| attr1 | string |false | Description for the parameter |
+
+
+
 ### Action  sabr streampolicy create
 
 
@@ -1063,6 +1085,44 @@ subsystems and actors can access the system.
 * REST - /sabr/streampolicy create?attr1=string
 * bin -  sabr streampolicy create --attr1 string
 * js - .sabr.streampolicy create({ attr1:string })
+
+#### Description
+Description of the action
+
+#### Parameters
+
+| Name | Type | Required | Description |
+|---|---|---|---|
+| attr1 | string |false | Description for the parameter |
+
+
+
+### Action  sabr streampolicy deactivate
+
+
+
+* REST - /sabr/streampolicy deactivate?attr1=string
+* bin -  sabr streampolicy deactivate --attr1 string
+* js - .sabr.streampolicy deactivate({ attr1:string })
+
+#### Description
+Description of the action
+
+#### Parameters
+
+| Name | Type | Required | Description |
+|---|---|---|---|
+| attr1 | string |false | Description for the parameter |
+
+
+
+### Action  sabr streampolicy update
+
+
+
+* REST - /sabr/streampolicy update?attr1=string
+* bin -  sabr streampolicy update --attr1 string
+* js - .sabr.streampolicy update({ attr1:string })
 
 #### Description
 Description of the action

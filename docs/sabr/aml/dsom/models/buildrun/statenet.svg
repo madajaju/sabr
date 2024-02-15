@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="550px" preserveAspectRatio="none" style="width:329px;height:550px;" version="1.1" viewBox="0 0 329 550" width="329px" zoomAndPan="magnify"><defs><filter height="300%" id="f1jfia4pnp0pn9" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><rect fill="#00AAFF" filter="url(#f1jfia4pnp0pn9)" height="531.6094" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="311" x="6" y="8"/><rect fill="#FFFFFF" height="498" rx="12.5" ry="12.5" style="stroke: #FFFFFF; stroke-width: 1.0;" width="305" x="9" y="38.6094"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="6" x2="317" y1="35.6094" y2="35.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="57" x="133" y="27.5332">BuildRun</text><rect fill="#00AAFF" filter="url(#f1jfia4pnp0pn9)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="50" x="140" y="48.6094"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="140" x2="190" y1="76.2188" y2="76.2188"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="18" x="156" y="68.1426">Init</text><rect fill="#00AAFF" filter="url(#f1jfia4pnp0pn9)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="87" x="121.5" y="190.6094"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="121.5" x2="208.5" y1="218.2188" y2="218.2188"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="67" x="131.5" y="210.1426">Scheduled</text><rect fill="#00AAFF" filter="url(#f1jfia4pnp0pn9)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="73" x="128.5" y="332.6094"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="128.5" x2="201.5" y1="360.2188" y2="360.2188"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="53" x="138.5" y="352.1426">Running</text><rect fill="#00AAFF" filter="url(#f1jfia4pnp0pn9)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="88" x="17" y="474.6094"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="17" x2="105" y1="502.2188" y2="502.2188"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="68" x="27" y="494.1426">Completed</text><rect fill="#00AAFF" filter="url(#f1jfia4pnp0pn9)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="83" x="123.5" y="474.6094"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="123.5" x2="206.5" y1="502.2188" y2="502.2188"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="63" x="133.5" y="494.1426">Cancelled</text><rect fill="#00AAFF" filter="url(#f1jfia4pnp0pn9)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="59" x="224.5" y="474.6094"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="224.5" x2="283.5" y1="502.2188" y2="502.2188"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="39" x="234.5" y="494.1426">Failed</text><!--link Init to Scheduled--><path d="M165,98.6764 C165,122.6164 165,159.3894 165,185.0824 " fill="none" id="Init-Scheduled" style="stroke: #000000; stroke-width: 1.0;"/><polygon fill="#000000" points="165,190.3884,169,181.3884,165,185.3884,161,181.3884,165,190.3884" style="stroke: #000000; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="36" x="166" y="150.1045">create</text><!--link Scheduled to Running--><path d="M165,240.6764 C165,264.6164 165,301.3894 165,327.0824 " fill="none" id="Scheduled-Running" style="stroke: #000000; stroke-width: 1.0;"/><polygon fill="#000000" points="165,332.3884,169,323.3884,165,327.3884,161,323.3884,165,332.3884" style="stroke: #000000; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="18" x="166" y="292.1045">run</text><!--link Running to Completed--><path d="M144.312,382.8554 C135.109,393.8904 124.279,407.2274 115,419.6094 C102.7062,436.0146 89.7174,454.9599 79.5601,470.1847 " fill="none" id="Running-Completed" style="stroke: #000000; stroke-width: 1.0;"/><polygon fill="#000000" points="76.7732,474.3751,85.088,469.0964,79.5422,470.2118,78.4268,464.666,76.7732,474.3751" style="stroke: #000000; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="44" x="116" y="434.1045">finished</text><!--link Running to Cancelled--><path d="M165,382.6764 C165,406.6164 165,443.3899 165,469.0824 " fill="none" id="Running-Cancelled" style="stroke: #000000; stroke-width: 1.0;"/><polygon fill="#000000" points="165,474.3881,169,465.3881,165,469.3881,161,465.3881,165,474.3881" style="stroke: #000000; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="38" x="166" y="434.1045">cancel</text><!--link Running to Failed--><path d="M183.38,382.8274 C191.513,393.8574 201.021,407.1974 209,419.6094 C219.443,435.8535 230.182,454.6144 238.549,469.7765 " fill="none" id="Running-Failed" style="stroke: #000000; stroke-width: 1.0;"/><polygon fill="#000000" points="241.067,474.3596,240.24,464.5455,238.6598,469.9772,233.2282,468.397,241.067,474.3596" style="stroke: #000000; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="30" x="221" y="434.1045">failed</text><!--
+@startuml
+
+
+
+state BuildRun #00aaff {
+
+    state Init #00aaff {
+    }
+
+    state Scheduled #00aaff {
+    }
+
+    state Running #00aaff {
+    }
+
+    state Completed #00aaff {
+    }
+
+    state Cancelled #00aaff {
+    }
+
+    state Failed #00aaff {
+    }
+
+
+
+
+Init -[#black]- -> Scheduled : create
+
+Scheduled -[#black]- -> Running : run
+
+Running -[#black]- -> Completed : finished
+
+Running -[#black]- -> Cancelled : cancel
+
+Running -[#black]- -> Failed : failed
+
+}
+
+
+@enduml
+
+PlantUML version 1.2019.05(Sat Apr 20 09:45:36 PDT 2019)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) Client VM
+Java Version: 1.8.0_271-b09
+Operating System: Windows 10
+OS Version: 10.0
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>

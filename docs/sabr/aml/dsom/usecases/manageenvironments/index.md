@@ -26,6 +26,7 @@ Manage Environments is the description
 ## Detail Scenarios
 
 * [CreateBuildEnvironment](#scenario-CreateBuildEnvironment)
+* [UpdateBuildEnvironment](#scenario-UpdateBuildEnvironment)
 
 
 
@@ -37,6 +38,21 @@ Create Build Environment is the description
 
 #### Steps
 1. [environment create --name build --file ./templates/environment.js](#action-environment create)
+
+#### Actors
+
+* [DevOps Engineer](actor-devops)
+
+
+
+### Scenario Update Build Environment
+
+Update Build Environment is the description
+
+![Scenario UpdateBuildEnvironment](./UpdateBuildEnvironment.png)
+
+#### Steps
+1. [environment update --name build --file ./templates/environment.js](#action-environment update)
 
 #### Actors
 

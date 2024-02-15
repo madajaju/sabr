@@ -3,8 +3,23 @@ left to right direction
 
 
      component "sabr" as sabr
+ interface "streampolicy activate" as sabrstreampolicyactivate
+sabr -- sabrstreampolicyactivate
+
+    
+     component "sabr" as sabr
  interface "streampolicy create" as sabrstreampolicycreate
 sabr -- sabrstreampolicycreate
+
+    
+     component "sabr" as sabr
+ interface "streampolicy deactivate" as sabrstreampolicydeactivate
+sabr -- sabrstreampolicydeactivate
+
+    
+     component "sabr" as sabr
+ interface "streampolicy update" as sabrstreampolicyupdate
+sabr -- sabrstreampolicyupdate
 
     
     package "sabr" as sabr #bbaaff {
@@ -91,6 +106,13 @@ sabrstreampolicy -- sabrstreampolicycreate
 
 
 
+        rectangle "Manage Environments" as ManageEnvironments #ffffaa {
+            ("Create Build Environment")/ as DevOpsEngineerManageEnvironmentsCreateBuildEnvironment
+        }
+    
+    sabrenvironmentcreate <-- DevOpsEngineerManageEnvironmentsCreateBuildEnvironment
+    
+
         rectangle "Manage SABR" as ManageSABR #ffffaa {
             ("Build SAB")/ as ApplicationDeveloperManageSABRBuildSAB
         }
@@ -101,10 +123,40 @@ sabrstreampolicy -- sabrstreampolicycreate
 
 
         rectangle "Manage Policies" as ManagePolicies #ffffaa {
+            ("ActivatePolicy")/ as DataEngineerManagePoliciesActivatePolicy
+        }
+    
+    sabrstreampolicyactivate <-- DataEngineerManagePoliciesActivatePolicy
+    
+        rectangle "Manage Policies" as ManagePolicies #ffffaa {
+            ("Create Channel Activation Policy")/ as DataEngineerManagePoliciesCreateChannelActivationPolicy
+        }
+    
+    sabrstreampolicycreate <-- DataEngineerManagePoliciesCreateChannelActivationPolicy
+    
+        rectangle "Manage Policies" as ManagePolicies #ffffaa {
+            ("Create Channel Creation Policy")/ as DataEngineerManagePoliciesCreateChannelCreationPolicy
+        }
+    
+    sabrstreampolicycreate <-- DataEngineerManagePoliciesCreateChannelCreationPolicy
+    
+        rectangle "Manage Policies" as ManagePolicies #ffffaa {
             ("Create Policy")/ as DataEngineerManagePoliciesCreatePolicy
         }
     
     sabrstreampolicycreate <-- DataEngineerManagePoliciesCreatePolicy
+    
+        rectangle "Manage Policies" as ManagePolicies #ffffaa {
+            ("Deactivate Policy")/ as DataEngineerManagePoliciesDeactivatePolicy
+        }
+    
+    sabrstreampolicydeactivate <-- DataEngineerManagePoliciesDeactivatePolicy
+    
+        rectangle "Manage Policies" as ManagePolicies #ffffaa {
+            ("Update Channel Policy")/ as DataEngineerManagePoliciesUpdateChannelPolicy
+        }
+    
+    sabrstreampolicyupdate <-- DataEngineerManagePoliciesUpdateChannelPolicy
     
 
 

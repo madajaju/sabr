@@ -1,0 +1,30 @@
+@startuml
+
+actor "Actor"
+
+
+entity EventBus
+
+box DevSecOpsManager #00aaff
+    boundary dsom #white
+end box
+
+
+box Service Orchestrator #aaffaa
+            participant provisioner
+    end box
+
+
+"Actor" -> dsom: Launch Build
+
+    dsom -> "provisioner": create (name: hello,file: ./templates/build.yml)
+
+    "provisioner" --/ EventBus: build.create
+
+    dsom -> "dsom": launch (name: hello,parameter1: State1,parameter2: State2)
+
+    "dsom" --/ EventBus: build.launch
+
+
+
+@enduml

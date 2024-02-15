@@ -1,15 +1,21 @@
 @startuml
 
 class "Environment" as Model {
- string attr1
+ string name
 
  
 }
 
-rectangle "ModelName" as ModelName #lightblue {
+rectangle "Build" as Build #lightblue {
 }
 
-Model o--> "1" ModelName : assoc1
+Model o--> "n" Build : builds
+
+
+rectangle "BuildRun" as BuildRun #lightblue {
+}
+
+Model o--> "n" BuildRun : runs
 
 
 

@@ -1,0 +1,44 @@
+@startuml
+
+
+usecase "Manage Builds" as ManageBuilds #yellow
+
+Actor "Actor" as Actor
+
+Actor --> ManageBuilds
+
+
+
+usecase "CancelBuild" as CancelBuild #lightgrey
+
+ManageBuilds --> CancelBuild
+
+usecase "CreateBuild" as CreateBuild #lightgrey
+
+ManageBuilds --> CreateBuild
+
+usecase "LaunchBuild" as LaunchBuild #lightgrey
+
+ManageBuilds --> LaunchBuild
+
+usecase "ListBuilds" as ListBuilds #lightgrey
+
+ManageBuilds --> ListBuilds
+
+usecase "MonitorBuild" as MonitorBuild #lightgrey
+
+ManageBuilds --> MonitorBuild
+
+usecase "RestartBuild" as RestartBuild #lightgrey
+
+ManageBuilds --> RestartBuild
+
+
+
+
+
+
+
+
+
+@enduml

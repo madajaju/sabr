@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="210px" preserveAspectRatio="none" style="width:98px;height:210px;" version="1.1" viewBox="0 0 98 210" width="98px" zoomAndPan="magnify"><defs><filter height="300%" id="f1b35jc0afjfa5" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--entity BuildRun--><rect fill="#90EE90" filter="url(#f1b35jc0afjfa5)" height="37.6094" style="stroke: #000000; stroke-width: 1.5;" width="77" x="8" y="8"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="57" x="18" y="32.5332">BuildRun</text><!--class Model--><rect fill="#FEFECE" filter="url(#f1b35jc0afjfa5)" height="75.6719" id="Model" style="stroke: #A80036; stroke-width: 1.5;" width="81" x="6" y="124"/><ellipse cx="21" cy="140" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M23.7656,135.875 Q23.9219,135.6563 24.1094,135.5469 Q24.2969,135.4375 24.5156,135.4375 Q24.8906,135.4375 25.125,135.6953 Q25.3594,135.9531 25.3594,136.5625 L25.3594,138.0156 Q25.3594,138.625 25.125,138.8906 Q24.8906,139.1563 24.5156,139.1563 Q24.1719,139.1563 23.9688,138.9531 Q23.7656,138.7656 23.6563,138.25 Q23.6094,137.8906 23.4219,137.7031 Q23.0938,137.3281 22.4844,137.1094 Q21.875,136.8906 21.25,136.8906 Q20.4844,136.8906 19.8516,137.2188 Q19.2188,137.5469 18.7266,138.2969 Q18.2344,139.0469 18.2344,140.0781 L18.2344,141.1719 Q18.2344,142.4063 19.125,143.2266 Q20.0156,144.0469 21.6094,144.0469 Q22.5469,144.0469 23.2031,143.7969 Q23.5938,143.6406 24.0156,143.2031 Q24.2813,142.9375 24.4297,142.8594 Q24.5781,142.7813 24.7813,142.7813 Q25.1094,142.7813 25.3672,143.0391 Q25.625,143.2969 25.625,143.6406 Q25.625,143.9844 25.2813,144.3906 Q24.7813,144.9688 23.9844,145.2969 Q22.9063,145.75 21.6094,145.75 Q20.0938,145.75 18.8906,145.125 Q17.9063,144.625 17.2188,143.5547 Q16.5313,142.4844 16.5313,141.2031 L16.5313,140.0469 Q16.5313,138.7188 17.1484,137.5703 Q17.7656,136.4219 18.8594,135.8047 Q19.9531,135.1875 21.1875,135.1875 Q21.9219,135.1875 22.5703,135.3516 Q23.2188,135.5156 23.7656,135.875 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="49" x="35" y="144.9102">BuildLog</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="7" x2="86" y1="156" y2="156"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="56" x="12" y="171.4189">string name</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="60" x="12" y="185.2549">string output</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="7" x2="86" y1="191.6719" y2="191.6719"/><!--link BuildRun to Model--><path d="M46.5,59.457 C46.5,74.784 46.5,93.587 46.5,110.8286 " fill="none" id="BuildRun-Model" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="46.5,123.9245,50.5,114.9245,46.5,118.9245,42.5,114.9245,46.5,123.9245" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="46.5" x2="46.5001" y1="118.9245" y2="110.9245"/><polygon fill="#A80036" points="46.5,46.214,42.5,52.214,46.5,58.214,50.5,52.214,46.5,46.214" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="24" x="47.5" y="90.4951">logs</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="38.8766" y="113.273">n</text><!--
+@startuml
+
+class "BuildLog" as Model {
+ string name
+ string output
+
+ 
+}
+
+
+
+    rectangle "BuildRun" as BuildRun #lightgreen {
+    }
+    
+        BuildRun   *- -> "n" Model : "logs"
+    
+
+@enduml
+
+PlantUML version 1.2019.05(Sat Apr 20 09:45:36 PDT 2019)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) Client VM
+Java Version: 1.8.0_271-b09
+Operating System: Windows 10
+OS Version: 10.0
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>

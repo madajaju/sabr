@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="226px" preserveAspectRatio="none" style="width:275px;height:226px;background:#000000;" version="1.1" viewBox="0 0 275 226" width="275px" zoomAndPan="magnify"><defs/><g><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="140" x="5" y="19.5332">Dot Executable: null</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="173" x="5" y="37.1426">No dot executable found</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="258" x="5" y="54.752">Cannot find Graphviz. You should try</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="0" x="9" y="72.3613"/><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="71" x="5" y="89.9707">@startuml</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="50" x="5" y="107.5801">testdot</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="66" x="5" y="125.1895">@enduml</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="0" x="9" y="142.7988"/><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="15" x="9" y="160.4082">or</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="0" x="9" y="178.0176"/><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="201" x="5" y="195.627">java -jar plantuml.jar -testdot</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="0" x="9" y="213.2363"/><!--
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="305px" preserveAspectRatio="none" style="width:1182px;height:305px;" version="1.1" viewBox="0 0 1182 305" width="1182px" zoomAndPan="magnify"><defs><filter height="300%" id="fkjcm7izvfhtx" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><ellipse cx="630.2518" cy="169.5504" fill="#FFFF00" filter="url(#fkjcm7izvfhtx)" rx="70.7518" ry="16.5504" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="103" x="578.7518" y="174.8551">Manage Policies</text><!--entity ITOperations--><ellipse cx="630.5" cy="18" fill="#FEFECE" filter="url(#fkjcm7izvfhtx)" rx="8" ry="8" style="stroke: #A80036; stroke-width: 2.0;"/><path d="M630.5,26 L630.5,53 M617.5,34 L643.5,34 M630.5,53 L617.5,68 M630.5,53 L643.5,68 " fill="none" filter="url(#fkjcm7izvfhtx)" style="stroke: #A80036; stroke-width: 2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="86" x="587.5" y="89.5332">IT Operations</text><ellipse cx="70.5183" cy="270.4517" fill="#D3D3D3" filter="url(#fkjcm7izvfhtx)" rx="64.5183" ry="15.4517" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="87" x="27.0183" y="275.7564">ActivatePolicy</text><ellipse cx="279.5226" cy="270.3045" fill="#D3D3D3" filter="url(#fkjcm7izvfhtx)" rx="109.5226" ry="24.3045" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="194" x="182.5226" y="275.6092">CreateChannelActivationPolicy</text><ellipse cx="530.3456" cy="270.6691" fill="#D3D3D3" filter="url(#fkjcm7izvfhtx)" rx="106.3456" ry="23.6691" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="187" x="436.8456" y="275.9738">CreateChannelCreationPolicy</text><ellipse cx="731.5685" cy="270.4517" fill="#D3D3D3" filter="url(#fkjcm7izvfhtx)" rx="59.5685" ry="15.4517" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="80" x="691.5685" y="275.7564">CreatePolicy</text><ellipse cx="897.6327" cy="270.6265" fill="#D3D3D3" filter="url(#fkjcm7izvfhtx)" rx="71.1327" ry="16.6265" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="104" x="845.6327" y="275.9312">DeactivatePolicy</text><ellipse cx="1087.5873" cy="270.6175" fill="#D3D3D3" filter="url(#fkjcm7izvfhtx)" rx="83.5873" ry="19.1175" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="135" x="1020.0873" y="275.9221">UpdateChannelPolicy</text><!--link ITOperations to ManagePolicies--><path d="M630.5,93.079 C630.5,111.565 630.5,132.516 630.5,147.637 " fill="none" id="ITOperations-ManagePolicies" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="630.5,152.929,634.5,143.929,630.5,147.929,626.5,143.929,630.5,152.929" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ManagePolicies to ActivatePolicy--><path d="M568.93,177.774 C477.464,189.131 300.562,213.2199 152.5,246 C139.48,248.8825 125.474,252.6448 112.787,256.3112 " fill="none" id="ManagePolicies-ActivatePolicy" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="107.809,257.7639,117.569,259.0837,112.609,256.3638,115.3289,251.4038,107.809,257.7639" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ManagePolicies to CreateChannelActivationPolicy--><path d="M587.461,182.639 C528.466,199.2787 421.73,229.3837 350.725,249.411 " fill="none" id="ManagePolicies-CreateChannelActivationPolicy" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="345.675,250.8352,355.4228,252.2422,350.4873,249.4781,353.2514,244.5425,345.675,250.8352" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ManagePolicies to CreateChannelCreationPolicy--><path d="M614.875,185.969 C599.322,201.3657 575.17,225.2769 556.684,243.5778 " fill="none" id="ManagePolicies-CreateChannelCreationPolicy" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="553.067,247.159,562.2773,243.6705,556.6206,243.6416,556.6495,237.9848,553.067,247.159" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ManagePolicies to CreatePolicy--><path d="M646.281,185.969 C664.486,203.813 694.357,233.0929 713.465,251.8222 " fill="none" id="ManagePolicies-CreatePolicy" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="717.136,255.4209,713.5087,246.2643,713.5653,251.9209,707.9087,251.9775,717.136,255.4209" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ManagePolicies to DeactivatePolicy--><path d="M666.509,183.852 C716.013,202.2071 804.843,235.144 856.733,254.384 " fill="none" id="ManagePolicies-DeactivatePolicy" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="861.636,256.2022,854.5884,249.3224,856.948,254.4637,851.8067,256.8233,861.636,256.2022" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ManagePolicies to UpdateChannelPolicy--><path d="M681.563,181.001 C750.755,195.3053 878.108,221.8987 986.5,246 C999.455,248.8805 1013.32,252.0506 1026.5,255.1047 " fill="none" id="ManagePolicies-UpdateChannelPolicy" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="1031.71,256.3139,1023.8452,250.3856,1026.8391,255.1852,1022.0394,258.1791,1031.71,256.3139" style="stroke: #A80036; stroke-width: 1.0;"/><!--
 @startuml
 
 
@@ -10,9 +10,29 @@ ITOperations - -> ManagePolicies
 
 
 
+usecase "ActivatePolicy" as ActivatePolicy #lightgrey
+
+ManagePolicies - -> ActivatePolicy
+
+usecase "CreateChannelActivationPolicy" as CreateChannelActivationPolicy #lightgrey
+
+ManagePolicies - -> CreateChannelActivationPolicy
+
+usecase "CreateChannelCreationPolicy" as CreateChannelCreationPolicy #lightgrey
+
+ManagePolicies - -> CreateChannelCreationPolicy
+
 usecase "CreatePolicy" as CreatePolicy #lightgrey
 
 ManagePolicies - -> CreatePolicy
+
+usecase "DeactivatePolicy" as DeactivatePolicy #lightgrey
+
+ManagePolicies - -> DeactivatePolicy
+
+usecase "UpdateChannelPolicy" as UpdateChannelPolicy #lightgrey
+
+ManagePolicies - -> UpdateChannelPolicy
 
 
 
@@ -27,9 +47,9 @@ ManagePolicies - -> CreatePolicy
 PlantUML version 1.2019.05(Sat Apr 20 09:45:36 PDT 2019)
 (GPL source distribution)
 Java Runtime: Java(TM) SE Runtime Environment
-JVM: Java HotSpot(TM) 64-Bit Server VM
-Java Version: 17.0.7+8-LTS-224
-Operating System: Windows 11
+JVM: Java HotSpot(TM) Client VM
+Java Version: 1.8.0_271-b09
+Operating System: Windows 10
 OS Version: 10.0
 Default Encoding: Cp1252
 Language: en

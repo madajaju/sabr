@@ -1,0 +1,26 @@
+@startuml
+
+actor "DevOpsEngineer"
+
+
+entity EventBus
+
+box DevSecOpsManager #00aaff
+    boundary dsom #white
+end box
+
+
+box DevSecOpsManager #00aaff
+            participant environment
+    end box
+
+
+"DevOpsEngineer" -> dsom: Update Build Environment
+
+    dsom -> "environment": update (name: build,file: ./templates/environment.js)
+
+    "environment" --/ EventBus: environment.update
+
+
+
+@enduml

@@ -1,0 +1,209 @@
+## Zero Trust Security
+
+In order to secure the network of data streams a security vault is included in the SAB that contains keys, and hashes to
+establish root of trust between the SABR and the hardware it is running, the consumers of data streams and the producers
+of data streams.
+
+![SABR Secuirty](./SABRSecurity.png)
+
+There are four areas of that must be protected inorder to establish a zero trust architecture of data streams.
+
+1. Prevent SABRs from running on untrusted edge devices. This prevents a bad actor from aqcuiring a SABR container and
+   running it on their own hardware.
+2. Prevent untrusted/spoofed SABRs from running on trusted hardware. This prevents bad actors from deploying SABRs into
+   a protected ecosystem, causing havoc or stealing information.
+3. Prevent publishing of untrusted data onto a data stream. All data stream data is encrypted with appropriate shared
+   encryption keys and hashes.
+4. Prevent receiving untrusted data from a data stream. Shared and private decryption keys and hashes are available to
+   decrypt input data streams.
+5. Prevent bad actors from listening into data streams. All data streams are encrypted. All decryption and encryption
+   keys specific to the data stream definitions in the bundle are contained in the secret vault which is encrypted.
+6. Authorization and access to the data streams is timebase and must be re-attested after the timeout.
+
+The security keys contains two sections and encryption secret vault and an unencrypted security key section. When a SABR
+is deployed to edge hardware the security keys in the unencrypted section are used to validate and decrypt the bundle
+including the encrypted secret vault which should be stored in protected memory, not permenately on the device. The keys
+and hashes stored in the encrypted secret vault decrypt and encrypt the input and output data streams.
+
+## Secure cross domain Data
+
+![Secure Systems](./multiplesecuritydomains.png)
+
+Secure cross-domain data refers to the methods and protocols used to ensure the safety and privacy of data as it is
+transferred and accessed across different security domains. Implementing effective security measures becomes vital in
+the contemporary data-oriented world, where data breaches and vulnerabilities can lead to significant losses.
+
+Each data stream within a system like Semi-Autonomous Bi-Directional Replicator (SABR) is distinctly isolated. It
+features unique attestation and encryption keys, offering an extra layer of security. This means that even if multiple
+data streams are being used by the same SABR, each maintains its unique security attributes.
+
+Attestation keys help confirm the data's authenticity, ensuring that the data has not been tampered with during its
+transmission. Likewise, encryption keys help secure the data by converting it into a form readable only by authorized
+entities possessing the corresponding decryption keys.
+
+Secure enclaves, like Intel's Software Guard Extensions (SGX), are crucial when deploying cross-domain SABR solutions.
+These enclaves provide a protected area of a processor where code and data can be safe from disclosure or modification.
+This additional security layer is especially important for higher-security data streams and transformations, where data
+integrity and privacy is paramount.
+
+Securing cross-domain data involves several components, including unique attestation and encryption keys for each data
+stream and the use of secure enclaves for additional protection. With such mechanisms in place, it's possible to enhance
+data security, integrity, and privacy in a cross-domain environment.
+
+## Data-centric Security
+
+![Data Centric security](./datacentricsecurity.png)
+
+Data-centric security involves implementing strategies and measures that focus primarily on safeguarding the data
+itself, rather than the networks, servers, or devices that store the data.
+
+In the context of edge computing, many edge devices are often not physically secure from potential unauthorized users (
+referred to as "prying eyes"). These devices are usually spread across various locations and may lack the robust
+security infrastructure available in centralized data centers, making them vulnerable to security threats.
+
+To counteract this, data-centric security protects the data during its entire lifecycle - at rest, in transit, and while
+in use. Protecting data in use refers to implementing security controls to safeguard data while it's being processed or
+manipulated, which gives an extra level of security to the data and its processing algorithms.
+
+For instance, it may involve using techniques like encryption, tokenization, or anonymization to obfuscate data,
+rendering it unreadable or meaningless to unauthorized users, should they gain access.
+
+Utilizing this approach, even if an unauthorized user gains access to the device or network, the data remains secure.
+This ensures that even in the face of possible breaches or threats, the integrity and confidentiality of the data are
+maintained, which is especially crucial when handling sensitive information.
+
+Data-centric security plays a pivotal role in today's data-driven world, providing robust protection mechanisms that
+keep data secure regardless of where it resides or how it's being used.
+
+![Data Secure Enclave](./secureenclaves.png)
+
+Sometimes, it is necessary to protect data even during its execution or processing, not just when it is at rest (stored)
+or in transit. In these instances, the use of Secure Enclaves is recommended.
+
+A Secure Enclave refers to a secure area within a processor. This protected portion of the processor safeguards code and
+data from disclosure or modification. It forms an isolated execution environment, literally an 'enclave', within the
+software, adding an extra layer of security.
+
+By operating in its own isolated environment, a Secure Enclave ensures that the data being processed is safe from
+outside interference, even from high privilege processes in the system. This is valuable in cases where sensitive data
+or algorithms might be subject to attacks aimed at reading or altering the data during its execution.
+
+One popular implementation of Secure Enclaves is Intel's Software Guard Extensions (SGX). Intel SGX allows developers to
+partition their code and data into private regions of memory, called enclaves, which are designed to be more secure.
+
+Overall, the use of Secure Enclaves significantly increases the security of data while it is in use, offering protection
+during execution and ensuring the integrity and confidentiality of the data being processed.
+
+## ABAC Integration
+
+![ABAC](./abac.png)
+
+Attribute-Based Access Control, or ABAC, is a powerful and flexible access control methodology that uses attributes
+associated with users, resources, and environmental factors to define access control policies.
+
+ABAC, when integrated into a system like Semi-Autonomous Bi-Directional Replicator (SABR), provides access control to
+application data. This access is tied to data streams and channels, effectively managing how data is accessed in complex
+environments.
+
+By leveraging ABAC, access to data becomes primarily a function of attributes tied to the user. Users must first
+authenticate themselves to the applications they use to access the data streams and channels. This ensures that only
+authenticated users can access the data.
+
+In addition, this access control model can be associated with the type of channel involved. This means access is not
+merely an all-or-nothing deal, but instead can be fine-tuned based on specific factors. Each user can be granted or
+denied access to the respective channels based on their attributes as determined by ABAC policies.
+
+Attestation, in this context, refers to the process of verifying a user's credentials or attributes. When a user is
+attested to a channel, their access is granted based on these verified credentials.
+
+Access control, under the ABAC model, can be applied and managed at a fine-grained level, down to individual data
+streams or channels. This means that access permissions can be different for each stream or channel, adding nuanced
+control and increased security.
+
+Therefore, by integrating ABAC, the system gains a flexible and sophisticated access control mechanism that can adjust
+to different users and different requirements, offering significant advantages in terms of data security and management.
+
+## ICAM
+
+![ICAM](./icam.png)
+
+ICAM (Identity, Credential, and Access Management) is a framework for managing digital identities, authenticating users
+and devices, and controlling access to resources. It is a crucial aspect of securing resources and managing access in
+distributed systems.
+
+The mentioned text outlines a process involving SABR (Semi-Autonomous Bi Directional Replicator) and ICAM. Following are
+the steps in the procedure:
+
+1. **SABR attests against a Device**: Attestation in this context refers to the process of validating a device's
+   identity and integrity. SABR establishes trust with the device through an attestation process, ensuring the device is
+   what it claims to be.
+1. **Decryption Key Generated**: A decryption key is generated using a seed and keys from a secure vault. The secure
+   vault is a protective environment for storing sensitive data, such as keys and credentials. The seed is a unique
+   value or set of values used as an input for the key generation process.
+1. **Decrypt the SABR Encrypted Blob**: The generated decryption key is used to decrypt a 'blob' of data encrypted by
+   SABR. A 'blob' or Binary Large OBject refers to a collection of binary data stored as a single entity. This could
+   contain various types of data, including files, multimedia objects, or even software.
+1. **Deploy SABR Service Stack**: The decrypted data blob likely contains information or components necessary for
+   deploying or configuring the SABR service stack - a collection of services that work together to enable SABR's
+   functionality.
+1. **Attest Each Input and Output data streams to the SABR**: Each of the input and output data streams going into and
+   coming from the SABR service are attested. This means their identities and integrities are validated, ensuring
+   trustworthy communication and data transfer.
+1. **Generate Encryption and Decryption keys from seed and hashes in the secure vault**: Further encryption and
+   decryption keys are generated, again using seeds and hashes stored securely in the vault. These keys are essential
+   for maintaining secure communication and data transfer in the system, allowing data to be encrypted and decrypted as
+   needed for secure processing and transfer.
+
+With these steps, ICAM ensures the secure workings of SABR, validating identities, managing access, and maintaining the
+confidentiality, integrity, and availability of the data it handles.
+
+![ICAM Rotate](./icam2.png)
+
+1. **Admin Stream allows Federated Key Manager to send new key/seeds to the SABRs.**
+
+The Admin Stream appears to be a secure communication channel specifically used for management tasks. Here it's being
+used to distribute new cryptographic keys or seeds, generated by the Federated Key Manager, to the SABR (Semi-Autonomous
+Bi-Directional Replicator) devices. A Federated Key Manager suggests a system where keys are managed and used across
+multiple trusted entities, or 'federations'.
+
+2. **New key/seeds are distributed to the secure vault to be used by the encryption and decryption engines in the
+   Channel Manager**
+
+The new keys or seeds, once sent to the SABRs via the Admin Stream, are stored in a secure vault. The term 'secure
+vault' typically refers to a secure storage system where sensitive data such as cryptographic keys are kept. These keys
+will be used by the encryption and decryption engines running in the Channel Manager. It indicates that the Channel
+Manager has components or systems responsible for encrypting and decrypting data, most likely to provide secure
+communication channels.
+
+3. **Old keys are kept to handle encrypted data with older keys.**
+
+This means that even when new keys or seeds are distributed and start being used, old ones are still kept for some time.
+This can be necessary to decrypt data that was encrypted with those old keys.
+
+4. **Temporal data shifts are possible because of DDIL environments and asynchronous data delivery.**
+
+Temporal data shifts refer to changes in data over time. A DDIL (Distributed Dynamic Information Logistics) environment,
+which involves the distribution and management of data in a dynamic and distributed manner, can lead to these shifts. It
+means your data's state could change over time due to its nature (i.e., dynamic) and how it's handled (asynchronously
+delivered), which is not simultaneously or in real-time. For instance, a piece of data might arrive later or get updated
+after it was initially received and processed.
+
+## Continuous Authorization to Operate.
+
+![continuous](./ctao.png)
+
+"SABRs are monitored through the Admin Stream through telemetry." This statement indicates that SABR instances are
+undergoing continuous monitoring through telemetry data transmitted via an Admin Stream. Telemetry involves the process
+of recording and transmitting data from remote or inaccessible points to IT systems for monitoring.
+
+"The DevSecOps process ensures that SABRS are encrypted before deployment." Here, it's indicated that SABRs are
+encrypted before their deployment as part of the DevSecOps process pathway. This step is crucial in enhancing security
+measures to protect data integrity and confidentiality.
+
+"SABR Dashboard and “Admin Stream” give visibility into SABR and device health." In this sentence, it's revealed that
+the health status of SABR and devices can be monitored in real-time through the SABR Dashboard and Admin Stream. This
+enhances proactive actions to mitigate any potential threats or issues.
+
+"Integration with a Risk Management Framework." Lastly, the integration with a Risk Management Framework implies that
+risks are systematically identified, analyzed, evaluated, and treated. It provides a structured approach to managing
+uncertainty and making the best possible risk decisions.

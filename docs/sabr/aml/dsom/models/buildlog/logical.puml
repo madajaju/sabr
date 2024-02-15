@@ -1,0 +1,18 @@
+@startuml
+
+class "BuildLog" as Model {
+ string name
+ string output
+
+ 
+}
+
+
+
+    rectangle "BuildRun" as BuildRun #lightgreen {
+    }
+    
+        BuildRun   *--> "n" Model : "logs"
+    
+
+@enduml

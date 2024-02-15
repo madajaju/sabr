@@ -1,0 +1,33 @@
+@startuml
+
+actor "DataEngineer"
+
+
+entity EventBus
+
+box Sentient Agent Bundle Resources #bbaaff
+    boundary sabr #white
+end box
+
+
+box Sentient Agent Bundle Resources #bbaaff
+    end box
+
+
+"DataEngineer" -> sabr: Deactivate Policy
+
+    sabr -> "sentient agent bundle resources": create (name: policy1,file: ./templates/policy1.js)
+
+    "sentient agent bundle resources" --/ EventBus: streampolicy.create
+
+    sabr -> "sabr": activate` (name: policy2)
+
+    "sabr" --/ EventBus: streampolicy.activate`
+
+    sabr -> "sabr": deactivate` (name: policy2)
+
+    "sabr" --/ EventBus: streampolicy.deactivate`
+
+
+
+@enduml

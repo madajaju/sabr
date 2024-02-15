@@ -1,0 +1,28 @@
+@startuml
+
+class "Build" as Model {
+ string name
+
+ 
+}
+
+rectangle "BuildInstance" as BuildInstance #lightblue {
+}
+
+Model *--> "n" BuildInstance : versions
+
+
+
+
+    rectangle "BuildInstance" as BuildInstance #lightgreen {
+    }
+    
+        BuildInstance   o--> "1" Model : "build"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "n" Model : "builds"
+    
+
+@enduml

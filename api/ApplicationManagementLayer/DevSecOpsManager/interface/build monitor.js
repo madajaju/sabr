@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-    friendlyName: 'create',
+    friendlyName: 'build monitor',
     description: 'Description of the action',
     static: true, // True is for Class methods. False is for object based.
     inputs: {

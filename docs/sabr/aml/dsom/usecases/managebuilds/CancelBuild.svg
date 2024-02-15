@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="370px" preserveAspectRatio="none" style="width:730px;height:370px;" version="1.1" viewBox="0 0 730 370" width="730px" zoomAndPan="magnify"><defs><filter height="300%" id="f8jdpcytqh03b" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><rect fill="#00AAFF" height="355.9766" style="stroke: #A80036; stroke-width: 1.0;" width="138" x="229.5" y="4"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="128" x="232.5" y="17.4951">DevSecOpsManager</text><rect fill="#AAFFAA" height="355.9766" style="stroke: #A80036; stroke-width: 1.0;" width="140" x="579" y="4"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="130" x="582" y="17.4951">Service Orchestrator</text><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="65" x2="65" y1="87.6094" y2="272.3672"/><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="165" x2="165" y1="87.6094" y2="272.3672"/><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="298" x2="298" y1="87.6094" y2="272.3672"/><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="649" x2="649" y1="87.6094" y2="272.3672"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="108" x="8" y="84.5332">DevOpsEngineer</text><ellipse cx="65" cy="13" fill="#FEFECE" filter="url(#f8jdpcytqh03b)" rx="8" ry="8" style="stroke: #A80036; stroke-width: 2.0;"/><path d="M65,21 L65,48 M52,29 L78,29 M65,48 L52,63 M65,48 L78,63 " fill="none" filter="url(#f8jdpcytqh03b)" style="stroke: #A80036; stroke-width: 2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="108" x="8" y="285.9004">DevOpsEngineer</text><ellipse cx="65" cy="298.9766" fill="#FEFECE" filter="url(#f8jdpcytqh03b)" rx="8" ry="8" style="stroke: #A80036; stroke-width: 2.0;"/><path d="M65,306.9766 L65,333.9766 M52,314.9766 L78,314.9766 M65,333.9766 L52,348.9766 M65,333.9766 L78,348.9766 " fill="none" filter="url(#f8jdpcytqh03b)" style="stroke: #A80036; stroke-width: 2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="60" x="132" y="84.5332">EventBus</text><ellipse cx="165" cy="54" fill="#FEFECE" filter="url(#f8jdpcytqh03b)" rx="12" ry="12" style="stroke: #A80036; stroke-width: 2.0;"/><line style="stroke: #A80036; stroke-width: 2.0;" x1="153" x2="177" y1="68" y2="68"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="60" x="132" y="285.9004">EventBus</text><ellipse cx="165" cy="304.9766" fill="#FEFECE" filter="url(#f8jdpcytqh03b)" rx="12" ry="12" style="stroke: #A80036; stroke-width: 2.0;"/><line style="stroke: #A80036; stroke-width: 2.0;" x1="153" x2="177" y1="318.9766" y2="318.9766"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="34" x="278.5" y="84.5332">dsom</text><path d="M278,42 L278,66 M278,54 L295,54 " fill="none" filter="url(#f8jdpcytqh03b)" style="stroke: #A80036; stroke-width: 2.0;"/><ellipse cx="307" cy="54" fill="#FFFFFF" filter="url(#f8jdpcytqh03b)" rx="12" ry="12" style="stroke: #A80036; stroke-width: 2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="34" x="278.5" y="285.9004">dsom</text><path d="M278,292.9766 L278,316.9766 M278,304.9766 L295,304.9766 " fill="none" filter="url(#f8jdpcytqh03b)" style="stroke: #A80036; stroke-width: 2.0;"/><ellipse cx="307" cy="304.9766" fill="#FFFFFF" filter="url(#f8jdpcytqh03b)" rx="12" ry="12" style="stroke: #A80036; stroke-width: 2.0;"/><rect fill="#FEFECE" filter="url(#f8jdpcytqh03b)" height="31.6094" style="stroke: #A80036; stroke-width: 1.5;" width="84" x="605" y="51"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="70" x="612" y="72.5332">provisioner</text><rect fill="#FEFECE" filter="url(#f8jdpcytqh03b)" height="31.6094" style="stroke: #A80036; stroke-width: 1.5;" width="84" x="605" y="271.3672"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="70" x="612" y="292.9004">provisioner</text><polygon fill="#A80036" points="286.5,115.9609,296.5,119.9609,286.5,123.9609,290.5,119.9609" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="65" x2="292.5" y1="119.9609" y2="119.9609"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="73" x="72" y="115.1045">Cancel Build</text><polygon fill="#A80036" points="637,146.3125,647,150.3125,637,154.3125,641,150.3125" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="298.5" x2="643" y1="150.3125" y2="150.3125"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="264" x="305.5" y="145.4561">create (name: hello,file: ./templates/build.yml)</text><polygon fill="#A80036" points="176,181.6641,166,181.6641,176,185.6641" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 2.0,2.0;" x1="165" x2="648" y1="180.6641" y2="180.6641"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="67" x="182" y="175.8076">build.create</text><line style="stroke: #A80036; stroke-width: 1.0;" x1="298.5" x2="340.5" y1="211.0156" y2="211.0156"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="340.5" x2="340.5" y1="211.0156" y2="224.0156"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="299.5" x2="340.5" y1="224.0156" y2="224.0156"/><polygon fill="#A80036" points="309.5,220.0156,299.5,224.0156,309.5,228.0156,305.5,224.0156" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="117" x="305.5" y="206.1592">cancel (name: hello)</text><polygon fill="#A80036" points="176,255.3672,166,255.3672,176,259.3672" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 2.0,2.0;" x1="165" x2="297.5" y1="254.3672" y2="254.3672"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="69" x="182" y="249.5107">build.cancel</text><!--
+@startuml
+
+actor "DevOpsEngineer"
+
+
+entity EventBus
+
+box DevSecOpsManager #00aaff
+    boundary dsom #white
+end box
+
+
+box Service Orchestrator #aaffaa
+            participant provisioner
+    end box
+
+
+"DevOpsEngineer" -> dsom: Cancel Build
+
+    dsom -> "provisioner": create (name: hello,file: ./templates/build.yml)
+
+    "provisioner" - -/ EventBus: build.create
+
+    dsom -> "dsom": cancel (name: hello)
+
+    "dsom" - -/ EventBus: build.cancel
+
+
+
+@enduml
+
+PlantUML version 1.2019.05(Sat Apr 20 09:45:36 PDT 2019)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) Client VM
+Java Version: 1.8.0_271-b09
+Operating System: Windows 10
+OS Version: 10.0
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>

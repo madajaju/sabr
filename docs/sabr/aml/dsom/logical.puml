@@ -1,11 +1,33 @@
 @startuml
 
 
+package "DevSecOpsManager" #00aaff {
+    
+        class BuildInstance {
+        }
+    
+        class Build {
+        }
+    
+        class BuildRun {
+        }
+    
+        class BuildLog {
+        }
+    }
+
 
 package "DevSecOpsManager" #00aaff {
 
     interface "DevSecOpsManager" as i {
-            /sabr/aml/dsom/data/create()
+            /sabr/aml/dsom/build create()
+            /sabr/aml/dsom/build launch()
+            /sabr/aml/dsom/build list()
+            /sabr/aml/dsom/build monitor()
+            /sabr/aml/dsom/build restart()
+            /sabr/aml/dsom/build/cancel()
+            /sabr/aml/dsom/environment/create()
+            /sabr/aml/dsom/environment/update()
     
     }
 }
@@ -15,10 +37,39 @@ REST ()-- i
 Web ()-- i
 
 package "DevSecOpsManager" #00aaff {
-        class "Environment" {
-                 string attr1
+        class "Build" {
+                 string name
                     }
-                Environment o--> "1" ModelName : assoc1
+                Build *--> "n" BuildInstance : versions
+            
+    
+    class "BuildInstance" {
+                 string version
+                    }
+                BuildInstance o--> "1" Build : build
+                        BuildInstance *--> "n" BuildRun : runs
+            
+    
+    class "BuildLog" {
+                 string name
+                 string output
+                    }
+    
+    
+    class "BuildRun" {
+                 string name
+                 date startTime
+                 date endTime
+                    }
+                BuildRun o--> "1" BuildInstance : build
+                        BuildRun *--> "n" BuildLog : logs
+            
+    
+    class "Environment" {
+                 string name
+                    }
+                Environment o--> "n" Build : builds
+                        Environment o--> "n" BuildRun : runs
             
     
 

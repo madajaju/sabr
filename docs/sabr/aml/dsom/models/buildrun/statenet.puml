@@ -1,0 +1,41 @@
+@startuml
+
+
+
+state BuildRun #00aaff {
+
+    state Init #00aaff {
+    }
+
+    state Scheduled #00aaff {
+    }
+
+    state Running #00aaff {
+    }
+
+    state Completed #00aaff {
+    }
+
+    state Cancelled #00aaff {
+    }
+
+    state Failed #00aaff {
+    }
+
+
+
+
+Init -[#black]--> Scheduled : create
+
+Scheduled -[#black]--> Running : run
+
+Running -[#black]--> Completed : finished
+
+Running -[#black]--> Cancelled : cancel
+
+Running -[#black]--> Failed : failed
+
+}
+
+
+@enduml

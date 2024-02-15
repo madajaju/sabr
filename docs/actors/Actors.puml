@@ -16,6 +16,8 @@ Actor "Data Steward" as DataSteward
 
 Actor "DevOps Engineer" as DevOpsEngineer
 
+Actor "DevSecOpsManager" as DevSecOpsManager
+
 Actor "IT Operations" as ITOperations
 
 Actor "Security Operator" as SecurityOperator
@@ -25,15 +27,27 @@ Actor "Tactical Operator" as TacticalOperator
 
 
 rectangle "Application Management Layer" as aml  #00aaff {
+        usecase "Manage Builds" as ManageBuilds
+    
+        Actor ---> ManageBuilds
+        
+    usecase "Manage Environments" as ManageEnvironments
+    
+        DevOpsEngineer ---> ManageEnvironments
+        
+
+}
+
+rectangle "Application Management Layer" as aml  #00aaff {
         usecase "Integrate Learning" as IntegrateLearning
     
-        ApplicationDeveloper ---> IntegrateLearning
+        ApplicationDeveloper --> IntegrateLearning
         
     usecase "Manage Application" as ManageApplication
     
-        DevOpsEngineer ---> ManageApplication
+        DevOpsEngineer --> ManageApplication
         
-        ApplicationDeveloper ---> ManageApplication
+        ApplicationDeveloper --> ManageApplication
         
 
 }
@@ -41,19 +55,19 @@ rectangle "Application Management Layer" as aml  #00aaff {
 rectangle "Application Management Layer" as aml  #00aaff {
         usecase "Develop Capability" as DevelopCapability
     
-        ApplicationDeveloper --> DevelopCapability
+        ApplicationDeveloper ---> DevelopCapability
         
     usecase "Deploy Capability" as DeployCapability
     
-        DevOpsEngineer --> DeployCapability
+        DevOpsEngineer ---> DeployCapability
         
     usecase "Remove Capability" as RemoveCapability
     
-        DevOpsEngineer --> RemoveCapability
+        DevOpsEngineer ---> RemoveCapability
         
     usecase "Update Capability" as UpdateCapability
     
-        DevOpsEngineer --> UpdateCapability
+        DevOpsEngineer ---> UpdateCapability
         
 
 }
@@ -61,45 +75,37 @@ rectangle "Application Management Layer" as aml  #00aaff {
 rectangle "Sentient Agent Bundle Resources" as sabr  #bbaaff {
         usecase "Manage AI Model" as ManageAIModel
     
-        DataEngineer ---> ManageAIModel
+        DataEngineer --> ManageAIModel
         
-        DataScientist ---> ManageAIModel
+        DataScientist --> ManageAIModel
         
-        DataAnalyst ---> ManageAIModel
+        DataAnalyst --> ManageAIModel
         
     usecase "Manage Capabilities" as ManageCapabilities
     
-        DevOpsEngineer ---> ManageCapabilities
+        DevOpsEngineer --> ManageCapabilities
         
-        ITOperations ---> ManageCapabilities
+        ITOperations --> ManageCapabilities
         
     usecase "Ships" as Ships
     
-        DevOpsEngineer ---> Ships
+        DevOpsEngineer --> Ships
         
     usecase "Manage Policies" as ManagePolicies
     
-        ITOperations ---> ManagePolicies
+        ITOperations --> ManagePolicies
         
     usecase "Manage Security" as ManageSecurity
     
-        SecurityOperator ---> ManageSecurity
+        SecurityOperator --> ManageSecurity
         
     usecase "Provide Digital Assistance" as ProvideDigitalAssistance
     
-        TacticalOperator ---> ProvideDigitalAssistance
+        TacticalOperator --> ProvideDigitalAssistance
         
     usecase "Provide Mission Insight" as ProvideMissionInsight
     
-        TacticalOperator ---> ProvideMissionInsight
-        
-
-}
-
-rectangle "Application Management Layer" as aml  #00aaff {
-        usecase "Manage Environments" as ManageEnvironments
-    
-        DevOpsEngineer --> ManageEnvironments
+        TacticalOperator --> ProvideMissionInsight
         
 
 }

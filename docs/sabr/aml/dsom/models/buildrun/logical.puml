@@ -1,0 +1,36 @@
+@startuml
+
+class "BuildRun" as Model {
+ string name
+ date startTime
+ date endTime
+
+ 
+}
+
+rectangle "BuildInstance" as BuildInstance #lightblue {
+}
+
+Model o--> "1" BuildInstance : build
+
+
+rectangle "BuildLog" as BuildLog #lightblue {
+}
+
+Model *--> "n" BuildLog : logs
+
+
+
+
+    rectangle "BuildInstance" as BuildInstance #lightgreen {
+    }
+    
+        BuildInstance   *--> "n" Model : "runs"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "n" Model : "runs"
+    
+
+@enduml

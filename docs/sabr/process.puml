@@ -9,7 +9,19 @@ state "sentient agent bundle resources" as pstatename #bbaaff {
     }
 }
 
+        state "streampolicy activate" as streampolicy activate #bbaaff {
+}
+
+
         state "streampolicy create" as streampolicy create #bbaaff {
+}
+
+
+        state "streampolicy deactivate" as streampolicy deactivate #bbaaff {
+}
+
+
+        state "streampolicy update" as streampolicy update #bbaaff {
 }
 
 

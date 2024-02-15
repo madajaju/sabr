@@ -1,0 +1,30 @@
+@startuml
+
+actor "DevOpsEngineer"
+
+
+entity EventBus
+
+box DevSecOpsManager #00aaff
+    boundary dsom #white
+end box
+
+
+box Service Orchestrator #aaffaa
+            participant provisioner
+    end box
+
+
+"DevOpsEngineer" -> dsom: Cancel Build
+
+    dsom -> "provisioner": create (name: hello,file: ./templates/build.yml)
+
+    "provisioner" --/ EventBus: build.create
+
+    dsom -> "dsom": cancel (name: hello)
+
+    "dsom" --/ EventBus: build.cancel
+
+
+
+@enduml

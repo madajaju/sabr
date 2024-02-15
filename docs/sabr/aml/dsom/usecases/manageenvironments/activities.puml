@@ -13,6 +13,10 @@ usecase "CreateBuildEnvironment" as CreateBuildEnvironment #lightgrey
 
 ManageEnvironments --> CreateBuildEnvironment
 
+usecase "UpdateBuildEnvironment" as UpdateBuildEnvironment #lightgrey
+
+ManageEnvironments --> UpdateBuildEnvironment
+
 
 
 

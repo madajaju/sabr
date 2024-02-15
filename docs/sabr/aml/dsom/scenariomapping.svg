@@ -1,14 +1,81 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="138px" preserveAspectRatio="none" style="width:735px;height:138px;background:#000000;" version="1.1" viewBox="0 0 735 138" width="735px" zoomAndPan="magnify"><defs/><g><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="273" x="5" y="19.5332">[From scenariomapping.puml (line 24) ]</text><line style="stroke: #33FF02; stroke-width: 1.0;" x1="5" x2="733" y1="27.6094" y2="27.6094"/><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="160" x="5" y="47.1426">... (skipping 20 lines) ...</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="0" x="9" y="64.752"/><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="0" x="9" y="82.3613"/><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="478" x="37" y="99.9707">rectangle "Manage Environments" as ManageEnvironments #ffffaa {</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="680" x="53" y="117.5801">("Create Build Environment")/ as DevOpsEngineerManageEnvironmentsCreateBuildEnvironment</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="0" x="9" y="135.1895"/><text fill="#FF0000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="95" x="9" y="135.1895">Syntax Error?</text><!--
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="138px" preserveAspectRatio="none" style="width:499px;height:138px;background:#000000;" version="1.1" viewBox="0 0 499 138" width="499px" zoomAndPan="magnify"><defs/><g><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="273" x="5" y="19.5332">[From scenariomapping.puml (line 91) ]</text><line style="stroke: #33FF02; stroke-width: 1.0;" x1="5" x2="497" y1="27.6094" y2="27.6094"/><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="160" x="5" y="47.1426">... (skipping 87 lines) ...</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="0" x="9" y="64.752"/><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="0" x="9" y="82.3613"/><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="370" x="37" y="99.9707">rectangle "Manage Builds" as ManageBuilds #ffffaa {</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="444" x="53" y="117.5801">("Cancel Build")/ as DevOpsEngineerManageBuildsCancelBuild</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="0" x="9" y="135.1895"/><text fill="#FF0000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="95" x="9" y="135.1895">Syntax Error?</text><!--
 @startuml
 left to right direction
 
 
     package "sabr" as sabr {
 package "aml" as sabraml {
+ component "dsom" as sabramldsom
+ interface "build create" as sabramldsombuildcreate
+sabramldsom - - sabramldsombuildcreate
+}
+}
+
+    
+    package "sabr" as sabr {
+package "aml" as sabraml {
+ component "dsom" as sabramldsom
+ interface "build launch" as sabramldsombuildlaunch
+sabramldsom - - sabramldsombuildlaunch
+}
+}
+
+    
+    package "sabr" as sabr {
+package "aml" as sabraml {
+ component "dsom" as sabramldsom
+ interface "build list" as sabramldsombuildlist
+sabramldsom - - sabramldsombuildlist
+}
+}
+
+    
+    package "sabr" as sabr {
+package "aml" as sabraml {
+ component "dsom" as sabramldsom
+ interface "build monitor" as sabramldsombuildmonitor
+sabramldsom - - sabramldsombuildmonitor
+}
+}
+
+    
+    package "sabr" as sabr {
+package "aml" as sabraml {
+ component "dsom" as sabramldsom
+ interface "build restart" as sabramldsombuildrestart
+sabramldsom - - sabramldsombuildrestart
+}
+}
+
+    
+    package "sabr" as sabr {
+package "aml" as sabraml {
 package "dsom" as sabramldsom #00aaff {
- component "data" as sabramldsomdata
- interface "create" as sabramldsomdatacreate
-sabramldsomdata - - sabramldsomdatacreate
+ component "build" as sabramldsombuild
+ interface "cancel" as sabramldsombuildcancel
+sabramldsombuild - - sabramldsombuildcancel
+}
+}
+}
+
+    
+    package "sabr" as sabr {
+package "aml" as sabraml {
+package "dsom" as sabramldsom #00aaff {
+ component "environment" as sabramldsomenvironment
+ interface "create" as sabramldsomenvironmentcreate
+sabramldsomenvironment - - sabramldsomenvironmentcreate
+}
+}
+}
+
+    
+    package "sabr" as sabr {
+package "aml" as sabraml {
+package "dsom" as sabramldsom #00aaff {
+ component "environment" as sabramldsomenvironment
+ interface "update" as sabramldsomenvironmentupdate
+sabramldsomenvironment - - sabramldsomenvironmentupdate
 }
 }
 }
@@ -20,12 +87,55 @@ sabramldsomdata - - sabramldsomdatacreate
 
 
 
+
+        rectangle "Manage Builds" as ManageBuilds #ffffaa {
+            ("Cancel Build")/ as DevOpsEngineerManageBuildsCancelBuild
+        }
+    
+    sabramldsombuildcancel <- - DevOpsEngineerManageBuildsCancelBuild
+    
+        rectangle "Manage Builds" as ManageBuilds #ffffaa {
+            ("Create Build")/ as DevSecOpsManagerManageBuildsCreateBuild
+        }
+    
+    sabramldsombuildcreate <- - DevSecOpsManagerManageBuildsCreateBuild
+    
+        rectangle "Manage Builds" as ManageBuilds #ffffaa {
+            ("Launch Build")/ as ActorManageBuildsLaunchBuild
+        }
+    
+    sabramldsombuildlaunch <- - ActorManageBuildsLaunchBuild
+    
+        rectangle "Manage Builds" as ManageBuilds #ffffaa {
+            ("List Builds")/ as DevSecOpsManagerManageBuildsListBuilds
+        }
+    
+    sabramldsombuildlist <- - DevSecOpsManagerManageBuildsListBuilds
+    
+        rectangle "Manage Builds" as ManageBuilds #ffffaa {
+            ("Monitor Build")/ as DevSecOpsManagerManageBuildsMonitorBuild
+        }
+    
+    sabramldsombuildmonitor <- - DevSecOpsManagerManageBuildsMonitorBuild
+    
+        rectangle "Manage Builds" as ManageBuilds #ffffaa {
+            ("Restart Build")/ as DevSecOpsManagerManageBuildsRestartBuild
+        }
+    
+    sabramldsombuildrestart <- - DevSecOpsManagerManageBuildsRestartBuild
+    
 
         rectangle "Manage Environments" as ManageEnvironments #ffffaa {
             ("Create Build Environment")/ as DevOpsEngineerManageEnvironmentsCreateBuildEnvironment
         }
     
-    sabramldsomdatacreate <- - DevOpsEngineerManageEnvironmentsCreateBuildEnvironment
+    sabramldsomenvironmentcreate <- - DevOpsEngineerManageEnvironmentsCreateBuildEnvironment
+    
+        rectangle "Manage Environments" as ManageEnvironments #ffffaa {
+            ("Update Build Environment")/ as DevOpsEngineerManageEnvironmentsUpdateBuildEnvironment
+        }
+    
+    sabramldsomenvironmentupdate <- - DevOpsEngineerManageEnvironmentsUpdateBuildEnvironment
     
 
 
@@ -40,9 +150,9 @@ sabramldsomdata - - sabramldsomdatacreate
 PlantUML version 1.2019.05(Sat Apr 20 09:45:36 PDT 2019)
 (GPL source distribution)
 Java Runtime: Java(TM) SE Runtime Environment
-JVM: Java HotSpot(TM) 64-Bit Server VM
-Java Version: 17.0.7+8-LTS-224
-Operating System: Windows 11
+JVM: Java HotSpot(TM) Client VM
+Java Version: 1.8.0_271-b09
+Operating System: Windows 10
 OS Version: 10.0
 Default Encoding: Cp1252
 Language: en

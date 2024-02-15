@@ -1,0 +1,22 @@
+@startuml
+
+actor "DevSecOpsManager"
+
+
+entity EventBus
+
+box DevSecOpsManager #00aaff
+    boundary dsom #white
+end box
+
+
+
+"DevSecOpsManager" -> dsom: Restart Build
+
+    dsom -> "dsom": restart (name: hello1,parameter1: StateA,parameter2: StateB)
+
+    "dsom" --/ EventBus: build.restart
+
+
+
+@enduml

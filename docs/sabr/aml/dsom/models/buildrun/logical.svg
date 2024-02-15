@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="340px" preserveAspectRatio="none" style="width:255px;height:340px;" version="1.1" viewBox="0 0 255 340" width="255px" zoomAndPan="magnify"><defs><filter height="300%" id="f1awk6pzx2ddfw" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--entity BuildInstance--><rect fill="#90EE90" filter="url(#f1awk6pzx2ddfw)" height="37.6094" style="stroke: #000000; stroke-width: 1.5;" width="104" x="6" y="8"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="84" x="16" y="32.5332">BuildInstance</text><!--entity BuildLog--><rect fill="#ADD8E6" filter="url(#f1awk6pzx2ddfw)" height="37.6094" style="stroke: #000000; stroke-width: 1.5;" width="75" x="87.5" y="292"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="55" x="97.5" y="316.5332">BuildLog</text><!--entity Environment--><rect fill="#90EE90" filter="url(#f1awk6pzx2ddfw)" height="37.6094" style="stroke: #000000; stroke-width: 1.5;" width="99" x="145.5" y="8"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="79" x="155.5" y="32.5332">Environment</text><!--class Model--><rect fill="#FEFECE" filter="url(#f1awk6pzx2ddfw)" height="89.5078" id="Model" style="stroke: #A80036; stroke-width: 1.5;" width="83" x="83.5" y="124"/><ellipse cx="98.5" cy="140" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M101.2656,135.875 Q101.4219,135.6563 101.6094,135.5469 Q101.7969,135.4375 102.0156,135.4375 Q102.3906,135.4375 102.625,135.6953 Q102.8594,135.9531 102.8594,136.5625 L102.8594,138.0156 Q102.8594,138.625 102.625,138.8906 Q102.3906,139.1563 102.0156,139.1563 Q101.6719,139.1563 101.4688,138.9531 Q101.2656,138.7656 101.1563,138.25 Q101.1094,137.8906 100.9219,137.7031 Q100.5938,137.3281 99.9844,137.1094 Q99.375,136.8906 98.75,136.8906 Q97.9844,136.8906 97.3516,137.2188 Q96.7188,137.5469 96.2266,138.2969 Q95.7344,139.0469 95.7344,140.0781 L95.7344,141.1719 Q95.7344,142.4063 96.625,143.2266 Q97.5156,144.0469 99.1094,144.0469 Q100.0469,144.0469 100.7031,143.7969 Q101.0938,143.6406 101.5156,143.2031 Q101.7813,142.9375 101.9297,142.8594 Q102.0781,142.7813 102.2813,142.7813 Q102.6094,142.7813 102.8672,143.0391 Q103.125,143.2969 103.125,143.6406 Q103.125,143.9844 102.7813,144.3906 Q102.2813,144.9688 101.4844,145.2969 Q100.4063,145.75 99.1094,145.75 Q97.5938,145.75 96.3906,145.125 Q95.4063,144.625 94.7188,143.5547 Q94.0313,142.4844 94.0313,141.2031 L94.0313,140.0469 Q94.0313,138.7188 94.6484,137.5703 Q95.2656,136.4219 96.3594,135.8047 Q97.4531,135.1875 98.6875,135.1875 Q99.4219,135.1875 100.0703,135.3516 Q100.7188,135.5156 101.2656,135.875 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="51" x="112.5" y="144.9102">BuildRun</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="84.5" x2="165.5" y1="156" y2="156"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="56" x="89.5" y="171.4189">string name</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="68" x="89.5" y="185.2549">date startTime</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="64" x="89.5" y="199.0908">date endTime</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="84.5" x2="165.5" y1="205.5078" y2="205.5078"/><!--link Model to BuildInstance--><path d="M102.5026,111.766 C97.3556,99.829 91.7104,87.396 86,76 C83.0232,70.059 79.6215,63.841 76.2389,57.924 " fill="none" id="Model-BuildInstance" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="69.4648,46.388,70.5729,56.1743,71.9967,50.6996,77.4714,52.1234,69.4648,46.388" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="71.9967" x2="76.0477" y1="50.6996" y2="57.598"/><polygon fill="#FFFFFF" points="107.668,123.96,109.0112,116.8751,102.9879,112.9103,101.6447,119.9952,107.668,123.96" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="27" x="96" y="90.4951">build</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="64.5058" y="66.9964">1</text><!--link BuildInstance to Model--><path d="M48.5861,59.003 C46.7015,70.365 46.4858,83.102 51,94 C56.2163,106.593 64.7306,118.161 74.162,128.222 " fill="none" id="BuildInstance-Model" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="83.4077,137.392,79.8343,128.2143,79.8576,133.8711,74.2008,133.8944,83.4077,137.392" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="79.8576" x2="74.1773" y1="133.8711" y2="128.2375"/><polygon fill="#A80036" points="51.5067,46.042,46.2858,51.0162,48.8693,57.7486,54.0902,52.7744,51.5067,46.042" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="25" x="52" y="90.4951">runs</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="68.3756" y="127.9071">n</text><!--link Model to BuildLog--><path d="M125,227.603 C125,245.1082 125,263.6816 125,278.7545 " fill="none" id="Model-BuildLog" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="125,291.9841,129,282.9841,125,286.9841,121,282.9841,125,291.9841" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="125" x2="125" y1="286.9841" y2="278.9841"/><polygon fill="#A80036" points="125,214.297,121,220.297,125,226.297,129,220.297,125,214.297" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="24" x="126" y="258.4951">logs</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="116.8844" y="280.9862">n</text><!--link Environment to Model--><path d="M180.168,57.664 C172.241,73.518 162.218,93.563 152.897,112.205 " fill="none" id="Environment-Model" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="147.056,123.887,154.6583,117.6256,149.2918,119.4148,147.5027,114.0483,147.056,123.887" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="149.2918" x2="152.8705" y1="119.4148" y2="112.2595"/><polygon fill="#FFFFFF" points="185.992,46.016,179.7312,49.594,180.626,56.7494,186.8868,53.1714,185.992,46.016" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="25" x="172" y="90.4951">runs</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="143.0134" y="112.9845">n</text><!--
+@startuml
+
+class "BuildRun" as Model {
+ string name
+ date startTime
+ date endTime
+
+ 
+}
+
+rectangle "BuildInstance" as BuildInstance #lightblue {
+}
+
+Model o- -> "1" BuildInstance : build
+
+
+rectangle "BuildLog" as BuildLog #lightblue {
+}
+
+Model *- -> "n" BuildLog : logs
+
+
+
+
+    rectangle "BuildInstance" as BuildInstance #lightgreen {
+    }
+    
+        BuildInstance   *- -> "n" Model : "runs"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o- -> "n" Model : "runs"
+    
+
+@enduml
+
+PlantUML version 1.2019.05(Sat Apr 20 09:45:36 PDT 2019)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) Client VM
+Java Version: 1.8.0_271-b09
+Operating System: Windows 10
+OS Version: 10.0
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>

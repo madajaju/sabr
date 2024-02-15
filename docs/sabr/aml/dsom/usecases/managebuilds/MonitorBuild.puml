@@ -1,0 +1,22 @@
+@startuml
+
+actor "DevSecOpsManager"
+
+
+entity EventBus
+
+box DevSecOpsManager #00aaff
+    boundary dsom #white
+end box
+
+
+
+"DevSecOpsManager" -> dsom: Monitor Build
+
+    dsom -> "dsom": monitor ()
+
+    "dsom" --/ EventBus: build.monitor
+
+
+
+@enduml

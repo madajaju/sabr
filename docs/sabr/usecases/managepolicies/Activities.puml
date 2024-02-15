@@ -9,9 +9,29 @@ ITOperations --> ManagePolicies
 
 
 
+usecase "ActivatePolicy" as ActivatePolicy #lightgrey
+
+ManagePolicies --> ActivatePolicy
+
+usecase "CreateChannelActivationPolicy" as CreateChannelActivationPolicy #lightgrey
+
+ManagePolicies --> CreateChannelActivationPolicy
+
+usecase "CreateChannelCreationPolicy" as CreateChannelCreationPolicy #lightgrey
+
+ManagePolicies --> CreateChannelCreationPolicy
+
 usecase "CreatePolicy" as CreatePolicy #lightgrey
 
 ManagePolicies --> CreatePolicy
+
+usecase "DeactivatePolicy" as DeactivatePolicy #lightgrey
+
+ManagePolicies --> DeactivatePolicy
+
+usecase "UpdateChannelPolicy" as UpdateChannelPolicy #lightgrey
+
+ManagePolicies --> UpdateChannelPolicy
 
 
 

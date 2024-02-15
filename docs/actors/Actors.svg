@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="226px" preserveAspectRatio="none" style="width:275px;height:226px;background:#000000;" version="1.1" viewBox="0 0 275 226" width="275px" zoomAndPan="magnify"><defs/><g><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="140" x="5" y="19.5332">Dot Executable: null</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="173" x="5" y="37.1426">No dot executable found</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="258" x="5" y="54.752">Cannot find Graphviz. You should try</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="0" x="9" y="72.3613"/><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="71" x="5" y="89.9707">@startuml</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="50" x="5" y="107.5801">testdot</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="66" x="5" y="125.1895">@enduml</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="0" x="9" y="142.7988"/><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="15" x="9" y="160.4082">or</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="0" x="9" y="178.0176"/><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="201" x="5" y="195.627">java -jar plantuml.jar -testdot</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="0" x="9" y="213.2363"/><!--
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="1615px" preserveAspectRatio="none" style="width:796px;height:1615px;" version="1.1" viewBox="0 0 796 1615" width="796px" zoomAndPan="magnify"><defs><filter height="300%" id="f1ptihdkoe5ztv" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--cluster aml--><rect fill="#00AAFF" filter="url(#f1ptihdkoe5ztv)" height="580" style="stroke: #000000; stroke-width: 1.5;" width="315" x="470" y="293.5"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="215" x="478" y="310.0332">Application Management Layer</text><!--cluster sabr--><rect fill="#BBAAFF" filter="url(#f1ptihdkoe5ztv)" height="516" style="stroke: #000000; stroke-width: 1.5;" width="254" x="188" y="963.5"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="238" x="196" y="980.0332">Sentient Agent Bundle Resources</text><!--cluster diml--><rect fill="#FFCC88" filter="url(#f1ptihdkoe5ztv)" height="84" style="stroke: #000000; stroke-width: 1.5;" width="315" x="469.5" y="897.5"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="299" x="477.5" y="914.0332">Distributed Information Management Layer</text><ellipse cx="627.0337" cy="345.3067" fill="#FEFECE" filter="url(#f1ptihdkoe5ztv)" rx="67.0337" ry="15.8067" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="93" x="580.5337" y="350.6114">Manage Builds</text><ellipse cx="627.1163" cy="837.6233" fill="#FEFECE" filter="url(#f1ptihdkoe5ztv)" rx="86.1163" ry="19.6233" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="141" x="556.6163" y="842.9279">Manage Environments</text><ellipse cx="626.8153" cy="414.5631" fill="#FEFECE" filter="url(#f1ptihdkoe5ztv)" rx="75.8153" ry="17.5631" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="116" x="568.8153" y="419.8677">Integrate Learning</text><ellipse cx="627.0399" cy="555.708" fill="#FEFECE" filter="url(#f1ptihdkoe5ztv)" rx="79.0399" ry="18.208" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="124" x="565.0399" y="561.0127">Manage Application</text><ellipse cx="627.1143" cy="484.7229" fill="#FEFECE" filter="url(#f1ptihdkoe5ztv)" rx="76.6143" ry="17.7229" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="118" x="568.1143" y="490.0275">Develop Capability</text><ellipse cx="626.949" cy="625.5898" fill="#FEFECE" filter="url(#f1ptihdkoe5ztv)" rx="73.449" ry="17.0898" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="110" x="571.949" y="630.8945">Deploy Capability</text><ellipse cx="627.1143" cy="695.7229" fill="#FEFECE" filter="url(#f1ptihdkoe5ztv)" rx="76.6143" ry="17.7229" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="118" x="568.1143" y="701.0275">Remove Capability</text><ellipse cx="626.8401" cy="765.668" fill="#FEFECE" filter="url(#f1ptihdkoe5ztv)" rx="73.8401" ry="17.168" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="111" x="571.3401" y="770.9727">Update Capability</text><ellipse cx="314.5594" cy="1223.5119" fill="#FEFECE" filter="url(#f1ptihdkoe5ztv)" rx="73.0594" ry="17.0119" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="109" x="260.0594" y="1228.8166">Manage AI Model</text><ellipse cx="314.6792" cy="1084.5358" fill="#FEFECE" filter="url(#f1ptihdkoe5ztv)" rx="80.6792" ry="18.5358" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="128" x="250.6792" y="1089.8405">Manage Capabilities</text><ellipse cx="314.7487" cy="1015.4517" fill="#FEFECE" filter="url(#f1ptihdkoe5ztv)" rx="27.7487" ry="15.4517" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="35" x="297.2487" y="1020.7564">Ships</text><ellipse cx="314.2518" cy="1154.5504" fill="#FEFECE" filter="url(#f1ptihdkoe5ztv)" rx="70.7518" ry="16.5504" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="103" x="262.7518" y="1159.8551">Manage Policies</text><ellipse cx="314.3989" cy="1292.2798" fill="#FEFECE" filter="url(#f1ptihdkoe5ztv)" rx="71.8989" ry="16.7798" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="106" x="261.3989" y="1297.5845">Manage Security</text><ellipse cx="314.63" cy="1441.526" fill="#FEFECE" filter="url(#f1ptihdkoe5ztv)" rx="95.63" ry="21.526" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="163" x="233.13" y="1446.8307">Provide Digital Assistance</text><ellipse cx="314.3923" cy="1364.3785" fill="#FEFECE" filter="url(#f1ptihdkoe5ztv)" rx="87.3923" ry="19.8785" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="144" x="242.3923" y="1369.6832">Provide Mission Insight</text><ellipse cx="627.1715" cy="949.7343" fill="#FEFECE" filter="url(#f1ptihdkoe5ztv)" rx="66.6715" ry="15.7343" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="92" x="581.1715" y="955.039">Manage SABR</text><!--entity Actor--><ellipse cx="75" cy="258" fill="#FEFECE" filter="url(#f1ptihdkoe5ztv)" rx="8" ry="8" style="stroke: #A80036; stroke-width: 2.0;"/><path d="M75,266 L75,293 M62,274 L88,274 M75,293 L62,308 M75,293 L88,308 " fill="none" filter="url(#f1ptihdkoe5ztv)" style="stroke: #A80036; stroke-width: 2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="33" x="58.5" y="329.5332">Actor</text><!--entity ApplicationDeveloper--><ellipse cx="75" cy="400" fill="#FEFECE" filter="url(#f1ptihdkoe5ztv)" rx="8" ry="8" style="stroke: #A80036; stroke-width: 2.0;"/><path d="M75,408 L75,435 M62,416 L88,416 M75,435 L62,450 M75,435 L88,450 " fill="none" filter="url(#f1ptihdkoe5ztv)" style="stroke: #A80036; stroke-width: 2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="138" x="6" y="471.5332">Application Developer</text><!--entity DataAnalyst--><ellipse cx="75" cy="1170" fill="#FEFECE" filter="url(#f1ptihdkoe5ztv)" rx="8" ry="8" style="stroke: #A80036; stroke-width: 2.0;"/><path d="M75,1178 L75,1205 M62,1186 L88,1186 M75,1205 L62,1220 M75,1205 L88,1220 " fill="none" filter="url(#f1ptihdkoe5ztv)" style="stroke: #A80036; stroke-width: 2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="80" x="35" y="1241.5332">Data Analyst</text><!--entity DataEngineer--><ellipse cx="75" cy="1290" fill="#FEFECE" filter="url(#f1ptihdkoe5ztv)" rx="8" ry="8" style="stroke: #A80036; stroke-width: 2.0;"/><path d="M75,1298 L75,1325 M62,1306 L88,1306 M75,1325 L62,1340 M75,1325 L88,1340 " fill="none" filter="url(#f1ptihdkoe5ztv)" style="stroke: #A80036; stroke-width: 2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="87" x="31.5" y="1361.5332">DataEngineer</text><!--entity DataScientist--><ellipse cx="75" cy="1050" fill="#FEFECE" filter="url(#f1ptihdkoe5ztv)" rx="8" ry="8" style="stroke: #A80036; stroke-width: 2.0;"/><path d="M75,1058 L75,1085 M62,1066 L88,1066 M75,1085 L62,1100 M75,1085 L88,1100 " fill="none" filter="url(#f1ptihdkoe5ztv)" style="stroke: #A80036; stroke-width: 2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="87" x="31.5" y="1121.5332">Data Scientist</text><!--entity DataSteward--><ellipse cx="75" cy="138" fill="#FEFECE" filter="url(#f1ptihdkoe5ztv)" rx="8" ry="8" style="stroke: #A80036; stroke-width: 2.0;"/><path d="M75,146 L75,173 M62,154 L88,154 M75,173 L62,188 M75,173 L88,188 " fill="none" filter="url(#f1ptihdkoe5ztv)" style="stroke: #A80036; stroke-width: 2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="85" x="32.5" y="209.5332">Data Steward</text><!--entity DevOpsEngineer--><ellipse cx="75" cy="790" fill="#FEFECE" filter="url(#f1ptihdkoe5ztv)" rx="8" ry="8" style="stroke: #A80036; stroke-width: 2.0;"/><path d="M75,798 L75,825 M62,806 L88,806 M75,825 L62,840 M75,825 L88,840 " fill="none" filter="url(#f1ptihdkoe5ztv)" style="stroke: #A80036; stroke-width: 2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="112" x="19" y="861.5332">DevOps Engineer</text><!--entity DevSecOpsManager--><ellipse cx="75" cy="18" fill="#FEFECE" filter="url(#f1ptihdkoe5ztv)" rx="8" ry="8" style="stroke: #A80036; stroke-width: 2.0;"/><path d="M75,26 L75,53 M62,34 L88,34 M75,53 L62,68 M75,53 L88,68 " fill="none" filter="url(#f1ptihdkoe5ztv)" style="stroke: #A80036; stroke-width: 2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="131" x="9.5" y="89.5332">DevSecOpsManager</text><!--entity ITOperations--><ellipse cx="75" cy="930" fill="#FEFECE" filter="url(#f1ptihdkoe5ztv)" rx="8" ry="8" style="stroke: #A80036; stroke-width: 2.0;"/><path d="M75,938 L75,965 M62,946 L88,946 M75,965 L62,980 M75,965 L88,980 " fill="none" filter="url(#f1ptihdkoe5ztv)" style="stroke: #A80036; stroke-width: 2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="86" x="32" y="1001.5332">IT Operations</text><!--entity SecurityOperator--><ellipse cx="75" cy="1410" fill="#FEFECE" filter="url(#f1ptihdkoe5ztv)" rx="8" ry="8" style="stroke: #A80036; stroke-width: 2.0;"/><path d="M75,1418 L75,1445 M62,1426 L88,1426 M75,1445 L62,1460 M75,1445 L88,1460 " fill="none" filter="url(#f1ptihdkoe5ztv)" style="stroke: #A80036; stroke-width: 2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="112" x="19" y="1481.5332">Security Operator</text><!--entity TacticalOperator--><ellipse cx="75" cy="1530" fill="#FEFECE" filter="url(#f1ptihdkoe5ztv)" rx="8" ry="8" style="stroke: #A80036; stroke-width: 2.0;"/><path d="M75,1538 L75,1565 M62,1546 L88,1546 M75,1565 L62,1580 M75,1565 L88,1580 " fill="none" filter="url(#f1ptihdkoe5ztv)" style="stroke: #A80036; stroke-width: 2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="110" x="20" y="1601.5332">Tactical Operator</text><!--link Actor to ManageBuilds--><path d="M91.5745,292.06 C159.51,298.85 432.199,326.12 559.684,338.87 " fill="none" id="Actor-ManageBuilds" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="564.9,339.39,556.3427,334.5143,559.9248,338.8925,555.5467,342.4746,564.9,339.39" style="stroke: #A80036; stroke-width: 1.0;"/><!--link DevOpsEngineer to ManageEnvironments--><path d="M131,824 C225.899,826.588 421.242,831.916 536.122,835.049 " fill="none" id="DevOpsEngineer-ManageEnvironments" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="541.192,835.187,532.3039,830.9442,536.1938,835.0513,532.0868,838.9413,541.192,835.187" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ApplicationDeveloper to IntegrateLearning--><path d="M144.081,412.95 C155.961,410.27 168.27,407.94 180,406.5 C310.187,390.47 463.34,399.16 552.079,406.87 " fill="none" id="ApplicationDeveloper-IntegrateLearning" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="557.305,407.33,548.6913,402.5546,552.3243,406.8906,547.9883,410.5236,557.305,407.33" style="stroke: #A80036; stroke-width: 1.0;"/><!--link DevOpsEngineer to ManageApplication--><path d="M90.1407,779.706 C105.7063,739.475 134.706,680.755 180,648.5 C288.553,571.2 447.406,555.36 543.329,553.57 " fill="none" id="DevOpsEngineer-ManageApplication" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="548.417,553.49,539.3531,549.6371,543.4177,553.5714,539.4833,557.636,548.417,553.49" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ApplicationDeveloper to ManageApplication--><path d="M144.062,463.07 C155.889,467.68 168.187,472.04 180,475.5 C307.633,512.86 461.19,535.77 550.774,547.01 " fill="none" id="ApplicationDeveloper-ManageApplication" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="555.786,547.64,547.3488,542.5593,550.8243,547.0226,546.361,550.4981,555.786,547.64" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ApplicationDeveloper to DevelopCapability--><path d="M144.269,438.95 C247.775,448.74 443.693,467.26 551.032,477.41 " fill="none" id="ApplicationDeveloper-DevelopCapability" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="556.076,477.89,547.4938,473.0582,551.0983,477.418,546.7386,481.0225,556.076,477.89" style="stroke: #A80036; stroke-width: 1.0;"/><!--link DevOpsEngineer to DeployCapability--><path d="M106.517,779.954 C125.177,757.07 150.998,730.367 180,714.5 C297.61,650.155 455.404,632.013 548.342,627.09 " fill="none" id="DevOpsEngineer-DeployCapability" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="553.543,626.825,544.3512,623.2878,548.5495,627.0792,544.758,631.2775,553.543,626.825" style="stroke: #A80036; stroke-width: 1.0;"/><!--link DevOpsEngineer to RemoveCapability--><path d="M131.045,790.493 C146.476,782.625 163.541,774.915 180,769.5 C305.31,728.27 458.322,709.281 548.648,701.101 " fill="none" id="DevOpsEngineer-RemoveCapability" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="553.703,700.648,544.3823,697.4662,548.7229,701.0937,545.0954,705.4344,553.703,700.648" style="stroke: #A80036; stroke-width: 1.0;"/><!--link DevOpsEngineer to UpdateCapability--><path d="M131.022,815.351 C146.825,813.371 164.087,811.279 180,809.5 C311.159,794.835 464.312,780.287 552.732,772.139 " fill="none" id="DevOpsEngineer-UpdateCapability" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="557.938,771.66,548.6091,768.5023,552.9591,772.1186,549.3428,776.4686,557.938,771.66" style="stroke: #A80036; stroke-width: 1.0;"/><!--link DataEngineer to ManageAIModel--><path d="M118.727,1292.25 C136.946,1280.417 158.85,1267.543 180,1258.5 C203.036,1248.651 229.526,1241.008 252.805,1235.413 " fill="none" id="DataEngineer-ManageAIModel" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="257.721,1234.25,248.0418,1232.43,252.8554,1235.4014,249.884,1240.215,257.721,1234.25" style="stroke: #A80036; stroke-width: 1.0;"/><!--link DataScientist to ManageAIModel--><path d="M118.838,1118.148 C127.443,1125.897 136.224,1134.252 144,1142.5 C161.808,1161.39 158.307,1174.239 180,1188.5 C199.265,1201.165 222.908,1209.254 244.917,1214.418 " fill="none" id="DataScientist-ManageAIModel" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="249.88,1215.54,241.9839,1209.6535,245.0031,1214.4372,240.2194,1217.4565,249.88,1215.54" style="stroke: #A80036; stroke-width: 1.0;"/><!--link DataAnalyst to ManageAIModel--><path d="M115.218,1205.968 C149.275,1208.979 199.484,1213.419 240.854,1217.077 " fill="none" id="DataAnalyst-ManageAIModel" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="245.854,1217.519,237.2423,1212.74,240.8735,1217.0775,236.536,1220.7087,245.854,1217.519" style="stroke: #A80036; stroke-width: 1.0;"/><!--link DevOpsEngineer to ManageCapabilities--><path d="M118.453,865.116 C127.994,876.522 137.272,889.357 144,902.5 C174.453,961.991 133.257,1000.734 180,1048.5 C194.162,1062.972 213.485,1071.816 233.031,1077.168 " fill="none" id="DevOpsEngineer-ManageCapabilities" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="238.002,1078.455,230.2916,1072.3273,233.1615,1077.202,228.2868,1080.072,238.002,1078.455" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ITOperations to ManageCapabilities--><path d="M118.01,1000.335 C140.68,1020.113 166.68,1041.613 180,1048.5 C200.221,1058.955 223.779,1066.604 245.428,1072.091 " fill="none" id="ITOperations-ManageCapabilities" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="250.304,1073.299,242.5307,1067.2512,245.4509,1072.0961,240.606,1075.0162,250.304,1073.299" style="stroke: #A80036; stroke-width: 1.0;"/><!--link DevOpsEngineer to Ships--><path d="M113.927,865.395 C123.967,877.209 134.616,890.171 144,902.5 C161.246,925.159 158.189,937.193 180,955.5 C211.186,981.675 255.632,998.589 284.522,1007.581 " fill="none" id="DevOpsEngineer-Ships" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="289.374,1009.063,281.9345,1002.609,284.592,1007.6028,279.5982,1010.2603,289.374,1009.063" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ITOperations to ManagePolicies--><path d="M118.145,993.843 C127.582,1002.346 136.889,1012.104 144,1022.5 C170.198,1060.799 145.549,1089.416 180,1120.5 C196.756,1135.619 219.298,1144.211 241.084,1149.035 " fill="none" id="ITOperations-ManagePolicies" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="246.011,1150.066,238.0212,1144.3072,241.117,1149.0418,236.3825,1152.1376,246.011,1150.066" style="stroke: #A80036; stroke-width: 1.0;"/><!--link SecurityOperator to ManageSecurity--><path d="M127.574,1399.692 C133.342,1394.129 138.95,1388.332 144,1382.5 C163.125,1360.415 156.287,1344.566 180,1327.5 C198.623,1314.098 221.992,1305.825 243.952,1300.719 " fill="none" id="SecurityOperator-ManageSecurity" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="248.908,1299.614,239.2536,1297.6667,244.0276,1300.7012,240.9931,1305.4753,248.908,1299.614" style="stroke: #A80036; stroke-width: 1.0;"/><!--link TacticalOperator to ProvideDigitalAssistance--><path d="M130.19,1534.8918 C172.551,1513.3097 230.661,1483.704 270.013,1463.656 " fill="none" id="TacticalOperator-ProvideDigitalAssistance" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="274.717,1461.259,264.882,1461.7816,270.2621,1463.5293,268.5145,1468.9094,274.717,1461.259" style="stroke: #A80036; stroke-width: 1.0;"/><!--link TacticalOperator to ProvideMissionInsight--><path d="M129.987,1519.7095 C135.128,1514.266 139.931,1508.4909 144,1502.5 C170.543,1463.426 145.479,1434.742 180,1402.5 C194.085,1389.344 212.4,1380.7 230.927,1375.032 " fill="none" id="TacticalOperator-ProvideMissionInsight" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="236.155,1373.511,226.3957,1372.1856,231.3542,1374.9084,228.6315,1379.8669,236.155,1373.511" style="stroke: #A80036; stroke-width: 1.0;"/><!--link DevOpsEngineer to ManageSABR--><path d="M131,835.2 C237.349,859.757 469.843,913.442 573.873,937.463 " fill="none" id="DevOpsEngineer-ManageSABR" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="579.031,938.654,571.161,932.7325,574.1591,937.5296,569.362,940.5276,579.031,938.654" style="stroke: #A80036; stroke-width: 1.0;"/><!--
 @startuml
 
 left to right direction
@@ -17,6 +17,8 @@ Actor "Data Steward" as DataSteward
 
 Actor "DevOps Engineer" as DevOpsEngineer
 
+Actor "DevSecOpsManager" as DevSecOpsManager
+
 Actor "IT Operations" as ITOperations
 
 Actor "Security Operator" as SecurityOperator
@@ -26,15 +28,27 @@ Actor "Tactical Operator" as TacticalOperator
 
 
 rectangle "Application Management Layer" as aml  #00aaff {
+        usecase "Manage Builds" as ManageBuilds
+    
+        Actor - - -> ManageBuilds
+        
+    usecase "Manage Environments" as ManageEnvironments
+    
+        DevOpsEngineer - - -> ManageEnvironments
+        
+
+}
+
+rectangle "Application Management Layer" as aml  #00aaff {
         usecase "Integrate Learning" as IntegrateLearning
     
-        ApplicationDeveloper - - -> IntegrateLearning
+        ApplicationDeveloper - -> IntegrateLearning
         
     usecase "Manage Application" as ManageApplication
     
-        DevOpsEngineer - - -> ManageApplication
+        DevOpsEngineer - -> ManageApplication
         
-        ApplicationDeveloper - - -> ManageApplication
+        ApplicationDeveloper - -> ManageApplication
         
 
 }
@@ -42,19 +56,19 @@ rectangle "Application Management Layer" as aml  #00aaff {
 rectangle "Application Management Layer" as aml  #00aaff {
         usecase "Develop Capability" as DevelopCapability
     
-        ApplicationDeveloper - -> DevelopCapability
+        ApplicationDeveloper - - -> DevelopCapability
         
     usecase "Deploy Capability" as DeployCapability
     
-        DevOpsEngineer - -> DeployCapability
+        DevOpsEngineer - - -> DeployCapability
         
     usecase "Remove Capability" as RemoveCapability
     
-        DevOpsEngineer - -> RemoveCapability
+        DevOpsEngineer - - -> RemoveCapability
         
     usecase "Update Capability" as UpdateCapability
     
-        DevOpsEngineer - -> UpdateCapability
+        DevOpsEngineer - - -> UpdateCapability
         
 
 }
@@ -62,45 +76,37 @@ rectangle "Application Management Layer" as aml  #00aaff {
 rectangle "Sentient Agent Bundle Resources" as sabr  #bbaaff {
         usecase "Manage AI Model" as ManageAIModel
     
-        DataEngineer - - -> ManageAIModel
+        DataEngineer - -> ManageAIModel
         
-        DataScientist - - -> ManageAIModel
+        DataScientist - -> ManageAIModel
         
-        DataAnalyst - - -> ManageAIModel
+        DataAnalyst - -> ManageAIModel
         
     usecase "Manage Capabilities" as ManageCapabilities
     
-        DevOpsEngineer - - -> ManageCapabilities
+        DevOpsEngineer - -> ManageCapabilities
         
-        ITOperations - - -> ManageCapabilities
+        ITOperations - -> ManageCapabilities
         
     usecase "Ships" as Ships
     
-        DevOpsEngineer - - -> Ships
+        DevOpsEngineer - -> Ships
         
     usecase "Manage Policies" as ManagePolicies
     
-        ITOperations - - -> ManagePolicies
+        ITOperations - -> ManagePolicies
         
     usecase "Manage Security" as ManageSecurity
     
-        SecurityOperator - - -> ManageSecurity
+        SecurityOperator - -> ManageSecurity
         
     usecase "Provide Digital Assistance" as ProvideDigitalAssistance
     
-        TacticalOperator - - -> ProvideDigitalAssistance
+        TacticalOperator - -> ProvideDigitalAssistance
         
     usecase "Provide Mission Insight" as ProvideMissionInsight
     
-        TacticalOperator - - -> ProvideMissionInsight
-        
-
-}
-
-rectangle "Application Management Layer" as aml  #00aaff {
-        usecase "Manage Environments" as ManageEnvironments
-    
-        DevOpsEngineer - -> ManageEnvironments
+        TacticalOperator - -> ProvideMissionInsight
         
 
 }
@@ -119,9 +125,9 @@ rectangle "Distributed Information Management Layer" as diml  #ffcc88 {
 PlantUML version 1.2019.05(Sat Apr 20 09:45:36 PDT 2019)
 (GPL source distribution)
 Java Runtime: Java(TM) SE Runtime Environment
-JVM: Java HotSpot(TM) 64-Bit Server VM
-Java Version: 17.0.7+8-LTS-224
-Operating System: Windows 11
+JVM: Java HotSpot(TM) Client VM
+Java Version: 1.8.0_271-b09
+Operating System: Windows 10
 OS Version: 10.0
 Default Encoding: Cp1252
 Language: en

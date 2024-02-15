@@ -4,7 +4,7 @@ title: TOC
 permalink: toc
 nav_order: 8
 ---
-Version 0.1.5 
+Version 0.2.0 
 
 ## sabr Overview
 * [sabr](./sabr/index.md)
@@ -19,6 +19,7 @@ Version 0.1.5
 * [DataScientist](actor-datascientist)
 * [DataSteward](actor-datasteward)
 * [DevOpsEngineer](actor-devops)
+* [DevSecOpsManager](actor-devsecopsmanager)
 * [ITOperations](actor-itops)
 * [SecurityOperator](actor-secops)
 * [TacticalOperator](actor-tacticaloperator)
@@ -38,11 +39,24 @@ Version 0.1.5
   * [Create Application](usecase-ManageApplication#CreateApplication)
   * [Destroy Application](usecase-ManageApplication#DestroyApplication)
   * [Update Application](usecase-ManageApplication#UpdateApplication)
+* [Manage Builds](usecase-ManageBuilds)
+  * [Cancel Build](usecase-ManageBuilds#CancelBuild)
+  * [Create Build](usecase-ManageBuilds#CreateBuild)
+  * [Launch Build](usecase-ManageBuilds#LaunchBuild)
+  * [List Builds](usecase-ManageBuilds#ListBuilds)
+  * [Monitor Build](usecase-ManageBuilds#MonitorBuild)
+  * [Restart Build](usecase-ManageBuilds#RestartBuild)
 * [Manage Capabilities](usecase-ManageCapabilities)
 * [Manage Environments](usecase-ManageEnvironments)
   * [Create Build Environment](usecase-ManageEnvironments#CreateBuildEnvironment)
+  * [Update Build Environment](usecase-ManageEnvironments#UpdateBuildEnvironment)
 * [Manage Policies](usecase-ManagePolicies)
+  * [ActivatePolicy](usecase-ManagePolicies#ActivatePolicy)
+  * [Create Channel Activation Policy](usecase-ManagePolicies#CreateChannelActivationPolicy)
+  * [Create Channel Creation Policy](usecase-ManagePolicies#CreateChannelCreationPolicy)
   * [Create Policy](usecase-ManagePolicies#CreatePolicy)
+  * [Deactivate Policy](usecase-ManagePolicies#DeactivatePolicy)
+  * [Update Channel Policy](usecase-ManagePolicies#UpdateChannelPolicy)
 * [Manage SABR](usecase-ManageSABR)
   * [Build SAB](usecase-ManageSABR#BuildSAB)
   * [Create SABR](usecase-ManageSABR#CreateSABR)
@@ -95,6 +109,10 @@ Version 0.1.5
 * [AdminTransform](class-AdminTransform)
 * [Application](class-Application)
 * [ApplicationInstance](class-ApplicationInstance)
+* [Build](class-Build)
+* [BuildInstance](class-BuildInstance)
+* [BuildLog](class-BuildLog)
+* [BuildRun](class-BuildRun)
 * [Capability](class-Capability)
 * [CapabilityInstance](class-CapabilityInstance)
 * [ChannelActivationItem](class-ChannelActivationItem)

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="103px" preserveAspectRatio="none" style="width:149px;height:103px;" version="1.1" viewBox="0 0 149 103" width="149px" zoomAndPan="magnify"><defs><filter height="300%" id="fnf8i01jb7dje" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--entity DevSecOpsManager--><ellipse cx="71.5" cy="18" fill="#FEFECE" filter="url(#fnf8i01jb7dje)" rx="8" ry="8" style="stroke: #A80036; stroke-width: 2.0;"/><path d="M71.5,26 L71.5,53 M58.5,34 L84.5,34 M71.5,53 L58.5,68 M71.5,53 L84.5,68 " fill="none" filter="url(#fnf8i01jb7dje)" style="stroke: #A80036; stroke-width: 2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="131" x="6" y="89.5332">DevSecOpsManager</text><!--
+@startuml
+
+left to right direction
+
+
+Actor "DevSecOpsManager" as DevSecOpsManager
+
+
+
+@enduml
+
+PlantUML version 1.2019.05(Sat Apr 20 09:45:36 PDT 2019)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) Client VM
+Java Version: 1.8.0_271-b09
+Operating System: Windows 10
+OS Version: 10.0
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>

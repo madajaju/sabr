@@ -1,0 +1,26 @@
+@startuml
+
+actor "DevSecOpsManager"
+
+
+entity EventBus
+
+box DevSecOpsManager #00aaff
+    boundary dsom #white
+end box
+
+
+box Service Orchestrator #aaffaa
+            participant provisioner
+    end box
+
+
+"DevSecOpsManager" -> dsom: List Builds
+
+    dsom -> "provisioner": list ()
+
+    "provisioner" --/ EventBus: build.list
+
+
+
+@enduml

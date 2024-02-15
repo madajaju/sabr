@@ -1,14 +1,20 @@
 @startuml
 
 
+actor "Actor" as actor
+
 actor "DevOpsEngineer" as devops
 
 
 
 
-devops -> "DevSecOpsManager": Manage Environments
+actor -> "DevSecOpsManager": Manage Builds
 "DevSecOpsManager" -> bin: data govern
 bin -> REST: data/govern
+
+devops -> "DevSecOpsManager": Manage Environments
+"DevSecOpsManager" -> bin: build govern
+bin -> REST: build/govern
 
 
 

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="357px" preserveAspectRatio="none" style="width:855px;height:357px;" version="1.1" viewBox="0 0 855 357" width="855px" zoomAndPan="magnify"><defs><filter height="300%" id="f13g73hqtk1tjx" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><rect fill="#BBAAFF" height="342.9766" style="stroke: #A80036; stroke-width: 1.0;" width="222" x="239" y="4"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="212" x="242" y="17.4951">Sentient Agent Bundle Resources</text><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="54" x2="54" y1="87.6094" y2="259.3672"/><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="144" x2="144" y1="87.6094" y2="259.3672"/><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="349.5" x2="349.5" y1="87.6094" y2="259.3672"/><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="737.5" x2="737.5" y1="87.6094" y2="259.3672"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="87" x="8" y="84.5332">DataEngineer</text><ellipse cx="54.5" cy="13" fill="#FEFECE" filter="url(#f13g73hqtk1tjx)" rx="8" ry="8" style="stroke: #A80036; stroke-width: 2.0;"/><path d="M54.5,21 L54.5,48 M41.5,29 L67.5,29 M54.5,48 L41.5,63 M54.5,48 L67.5,63 " fill="none" filter="url(#f13g73hqtk1tjx)" style="stroke: #A80036; stroke-width: 2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="87" x="8" y="272.9004">DataEngineer</text><ellipse cx="54.5" cy="285.9766" fill="#FEFECE" filter="url(#f13g73hqtk1tjx)" rx="8" ry="8" style="stroke: #A80036; stroke-width: 2.0;"/><path d="M54.5,293.9766 L54.5,320.9766 M41.5,301.9766 L67.5,301.9766 M54.5,320.9766 L41.5,335.9766 M54.5,320.9766 L67.5,335.9766 " fill="none" filter="url(#f13g73hqtk1tjx)" style="stroke: #A80036; stroke-width: 2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="60" x="111" y="84.5332">EventBus</text><ellipse cx="144" cy="54" fill="#FEFECE" filter="url(#f13g73hqtk1tjx)" rx="12" ry="12" style="stroke: #A80036; stroke-width: 2.0;"/><line style="stroke: #A80036; stroke-width: 2.0;" x1="132" x2="156" y1="68" y2="68"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="60" x="111" y="272.9004">EventBus</text><ellipse cx="144" cy="291.9766" fill="#FEFECE" filter="url(#f13g73hqtk1tjx)" rx="12" ry="12" style="stroke: #A80036; stroke-width: 2.0;"/><line style="stroke: #A80036; stroke-width: 2.0;" x1="132" x2="156" y1="305.9766" y2="305.9766"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="28" x="333" y="84.5332">sabr</text><path d="M329.5,42 L329.5,66 M329.5,54 L346.5,54 " fill="none" filter="url(#f13g73hqtk1tjx)" style="stroke: #A80036; stroke-width: 2.0;"/><ellipse cx="358.5" cy="54" fill="#FFFFFF" filter="url(#f13g73hqtk1tjx)" rx="12" ry="12" style="stroke: #A80036; stroke-width: 2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="28" x="333" y="272.9004">sabr</text><path d="M329.5,279.9766 L329.5,303.9766 M329.5,291.9766 L346.5,291.9766 " fill="none" filter="url(#f13g73hqtk1tjx)" style="stroke: #A80036; stroke-width: 2.0;"/><ellipse cx="358.5" cy="291.9766" fill="#FFFFFF" filter="url(#f13g73hqtk1tjx)" rx="12" ry="12" style="stroke: #A80036; stroke-width: 2.0;"/><rect fill="#FEFECE" filter="url(#f13g73hqtk1tjx)" height="31.6094" style="stroke: #A80036; stroke-width: 1.5;" width="218" x="626.5" y="51"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="204" x="633.5" y="72.5332">sentient agent bundle resources</text><rect fill="#FEFECE" filter="url(#f13g73hqtk1tjx)" height="31.6094" style="stroke: #A80036; stroke-width: 1.5;" width="218" x="626.5" y="258.3672"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="204" x="633.5" y="279.9004">sentient agent bundle resources</text><polygon fill="#A80036" points="338,115.9609,348,119.9609,338,123.9609,342,119.9609" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="54.5" x2="344" y1="119.9609" y2="119.9609"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="189" x="61.5" y="115.1045">Create Channel Activation Policy</text><polygon fill="#A80036" points="725.5,146.3125,735.5,150.3125,725.5,154.3125,729.5,150.3125" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="350" x2="731.5" y1="150.3125" y2="150.3125"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="281" x="357" y="145.4561">create (name: policy1,file: ./templates/policy1.js)</text><polygon fill="#A80036" points="155,181.6641,145,181.6641,155,185.6641" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 2.0,2.0;" x1="144" x2="736.5" y1="180.6641" y2="180.6641"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="114" x="161" y="175.8076">streampolicy.create</text><polygon fill="#A80036" points="725.5,207.0156,735.5,211.0156,725.5,215.0156,729.5,211.0156" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="350" x2="731.5" y1="211.0156" y2="211.0156"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="281" x="357" y="206.1592">create (name: policy2,file: ./templates/policy2.js)</text><polygon fill="#A80036" points="155,242.3672,145,242.3672,155,246.3672" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 2.0,2.0;" x1="144" x2="736.5" y1="241.3672" y2="241.3672"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="114" x="161" y="236.5107">streampolicy.create</text><!--
+@startuml
+
+actor "DataEngineer"
+
+
+entity EventBus
+
+box Sentient Agent Bundle Resources #bbaaff
+    boundary sabr #white
+end box
+
+
+box Sentient Agent Bundle Resources #bbaaff
+    end box
+
+
+"DataEngineer" -> sabr: Create Channel Activation Policy
+
+    sabr -> "sentient agent bundle resources": create (name: policy1,file: ./templates/policy1.js)
+
+    "sentient agent bundle resources" - -/ EventBus: streampolicy.create
+
+    sabr -> "sentient agent bundle resources": create (name: policy2,file: ./templates/policy2.js)
+
+    "sentient agent bundle resources" - -/ EventBus: streampolicy.create
+
+
+
+@enduml
+
+PlantUML version 1.2019.05(Sat Apr 20 09:45:36 PDT 2019)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) Client VM
+Java Version: 1.8.0_271-b09
+Operating System: Windows 10
+OS Version: 10.0
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>

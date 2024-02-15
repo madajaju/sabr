@@ -17,20 +17,22 @@ DevSecOpsManager is a package that contains...
 The following are the use cases of the DevSecOpsManager subsystem. Each use case has primary and secondary scenarios
 that are elaborated in the use case descriptions.
 
+* [Manage Builds](usecase-ManageBuilds)
 * [Manage Environments](usecase-ManageEnvironments)
 
 
-![UseCase Diagram](./usecases.png)
+![UseCase Diagram](./usecases.svg)
 
 ## Users
 
 The following are the actors of the DevSecOpsManager subsystem. This can include people, other subsystems
 inside the solution and even external subsystems.
 
+* [Actor](actor-actor)
 * [DevOpsEngineer](actor-devops)
 
 
-![User Interaction](./userinteraction.png)
+![User Interaction](./userinteraction.svg)
 
 ## Interface
 
@@ -38,9 +40,16 @@ The subsystem has a REST, CLI, WebSocket, and Web interface. Use Cases and Scena
 of the interfaces to perform the work that needs to be completed. The following  diagram shows how
 users interact with the system.
 
-![Scenario Mappings Diagram](./scenariomapping.png)
+![Scenario Mappings Diagram](./scenariomapping.svg)
 
-* [ sabr aml dsom data create](#action--sabr-aml-dsom-data-create)
+* [ sabr aml dsom build create](#action--sabr-aml-dsom-build create)
+* [ sabr aml dsom build launch](#action--sabr-aml-dsom-build launch)
+* [ sabr aml dsom build list](#action--sabr-aml-dsom-build list)
+* [ sabr aml dsom build monitor](#action--sabr-aml-dsom-build monitor)
+* [ sabr aml dsom build restart](#action--sabr-aml-dsom-build restart)
+* [ sabr aml dsom build cancel](#action--sabr-aml-dsom-build-cancel)
+* [ sabr aml dsom environment create](#action--sabr-aml-dsom-environment-create)
+* [ sabr aml dsom environment update](#action--sabr-aml-dsom-environment-update)
 
 
 ## Logical Artifacts
@@ -48,7 +57,7 @@ users interact with the system.
 The Data Model for the  DevSecOpsManager subsystem shows how the different objects and classes of object interact
 and their structure.
 
-![Sub Package Diagram](./subpackage.png)
+![Sub Package Diagram](./subpackage.svg)
 
 ### Sub Packages
 
@@ -57,12 +66,16 @@ organize the architecture and make it easier to analyze, understand, design, and
 
 
 
-![Logical Diagram](./logical.png)
+![Logical Diagram](./logical.svg)
 
 ### Classes
 
 The following are the classes in the data model of the DevSecOpsManager subsystem.
 
+* [Build](class-Build)
+* [BuildInstance](class-BuildInstance)
+* [BuildLog](class-BuildLog)
+* [BuildRun](class-BuildRun)
 * [Environment](class-Environment)
 
 
@@ -156,6 +169,18 @@ cases and scenarios of the subsystem.
 
 | Event | Description | Emitter |
 |-------|-------------|---------|
+| build.create |  When an object of type Build is created. | Build
+| build.destroy |  When an object of type Build is destroyed. | Build
+| build.updated |  When an object of type Build has an attribute or association updated. | Build
+| buildinstance.create |  When an object of type BuildInstance is created. | BuildInstance
+| buildinstance.destroy |  When an object of type BuildInstance is destroyed. | BuildInstance
+| buildinstance.updated |  When an object of type BuildInstance has an attribute or association updated. | BuildInstance
+| buildlog.create |  When an object of type BuildLog is created. | BuildLog
+| buildlog.destroy |  When an object of type BuildLog is destroyed. | BuildLog
+| buildlog.updated |  When an object of type BuildLog has an attribute or association updated. | BuildLog
+| buildrun.create |  When an object of type BuildRun is created. | BuildRun
+| buildrun.destroy |  When an object of type BuildRun is destroyed. | BuildRun
+| buildrun.updated |  When an object of type BuildRun has an attribute or association updated. | BuildRun
 | environment.create |  When an object of type Environment is created. | Environment
 | environment.destroy |  When an object of type Environment is destroyed. | Environment
 | environment.updated |  When an object of type Environment has an attribute or association updated. | Environment
@@ -167,13 +192,13 @@ The DevSecOpsManager subsystem has a well defined interface. This interface can 
 command line interface (CLI), REST interface, and Web user interface. This interface is how all other
 subsystems and actors can access the system.
 
-### Action  sabr aml dsom data create
+### Action  sabr aml dsom build create
 
 
 
-* REST - /sabr/aml/dsom/data/create?attr1=string
-* bin -  sabr aml dsom data create --attr1 string
-* js - .sabr.aml.dsom.data.create({ attr1:string })
+* REST - /sabr/aml/dsom/build create?attr1=string
+* bin -  sabr aml dsom build create --attr1 string
+* js - .sabr.aml.dsom.build create({ attr1:string })
 
 #### Description
 Description of the action
@@ -183,6 +208,141 @@ Description of the action
 | Name | Type | Required | Description |
 |---|---|---|---|
 | attr1 | string |false | Description for the parameter |
+
+
+
+### Action  sabr aml dsom build launch
+
+
+
+* REST - /sabr/aml/dsom/build launch?attr1=string
+* bin -  sabr aml dsom build launch --attr1 string
+* js - .sabr.aml.dsom.build launch({ attr1:string })
+
+#### Description
+Description of the action
+
+#### Parameters
+
+| Name | Type | Required | Description |
+|---|---|---|---|
+| attr1 | string |false | Description for the parameter |
+
+
+
+### Action  sabr aml dsom build list
+
+
+
+* REST - /sabr/aml/dsom/build list?attr1=string
+* bin -  sabr aml dsom build list --attr1 string
+* js - .sabr.aml.dsom.build list({ attr1:string })
+
+#### Description
+Description of the action
+
+#### Parameters
+
+| Name | Type | Required | Description |
+|---|---|---|---|
+| attr1 | string |false | Description for the parameter |
+
+
+
+### Action  sabr aml dsom build monitor
+
+
+
+* REST - /sabr/aml/dsom/build monitor?attr1=string
+* bin -  sabr aml dsom build monitor --attr1 string
+* js - .sabr.aml.dsom.build monitor({ attr1:string })
+
+#### Description
+Description of the action
+
+#### Parameters
+
+| Name | Type | Required | Description |
+|---|---|---|---|
+| attr1 | string |false | Description for the parameter |
+
+
+
+### Action  sabr aml dsom build restart
+
+
+
+* REST - /sabr/aml/dsom/build restart?attr1=string
+* bin -  sabr aml dsom build restart --attr1 string
+* js - .sabr.aml.dsom.build restart({ attr1:string })
+
+#### Description
+Description of the action
+
+#### Parameters
+
+| Name | Type | Required | Description |
+|---|---|---|---|
+| attr1 | string |false | Description for the parameter |
+
+
+
+### Action  sabr aml dsom build cancel
+
+
+
+* REST - /sabr/aml/dsom/build/cancel?attr1=string
+* bin -  sabr aml dsom build cancel --attr1 string
+* js - .sabr.aml.dsom.build.cancel({ attr1:string })
+
+#### Description
+Description of the action
+
+#### Parameters
+
+| Name | Type | Required | Description |
+|---|---|---|---|
+| attr1 | string |false | Description for the parameter |
+
+
+
+### Action  sabr aml dsom environment create
+
+
+
+* REST - /sabr/aml/dsom/environment/create?name=string&amp;file=file
+* bin -  sabr aml dsom environment create --name string --file file
+* js - .sabr.aml.dsom.environment.create({ name:string,file:file })
+
+#### Description
+Create and environment
+
+#### Parameters
+
+| Name | Type | Required | Description |
+|---|---|---|---|
+| name | string |false | Name of the Environment to Create |
+| file | file |false | File of the environment definition |
+
+
+
+### Action  sabr aml dsom environment update
+
+
+
+* REST - /sabr/aml/dsom/environment/update?name=string&amp;file=file
+* bin -  sabr aml dsom environment update --name string --file file
+* js - .sabr.aml.dsom.environment.update({ name:string,file:file })
+
+#### Description
+Update environment
+
+#### Parameters
+
+| Name | Type | Required | Description |
+|---|---|---|---|
+| name | string |false | Name of the Environment to Update |
+| file | file |false | File of the environment definition |
 
 
 

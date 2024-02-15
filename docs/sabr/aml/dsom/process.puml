@@ -15,8 +15,68 @@ state "amldsom" as pstatename #00aaff {
 
         state "aml" as aml #00aaff {
 state "dsom" as amldsom #00aaff {
-state "data" as amldsomdata #00aaff {
-state "create" as amldsomdatacreate #00aaff {
+state "build create" as amldsombuild create #00aaff {
+}
+}
+}
+
+
+        state "aml" as aml #00aaff {
+state "dsom" as amldsom #00aaff {
+state "build launch" as amldsombuild launch #00aaff {
+}
+}
+}
+
+
+        state "aml" as aml #00aaff {
+state "dsom" as amldsom #00aaff {
+state "build list" as amldsombuild list #00aaff {
+}
+}
+}
+
+
+        state "aml" as aml #00aaff {
+state "dsom" as amldsom #00aaff {
+state "build monitor" as amldsombuild monitor #00aaff {
+}
+}
+}
+
+
+        state "aml" as aml #00aaff {
+state "dsom" as amldsom #00aaff {
+state "build restart" as amldsombuild restart #00aaff {
+}
+}
+}
+
+
+        state "aml" as aml #00aaff {
+state "dsom" as amldsom #00aaff {
+state "build" as amldsombuild #00aaff {
+state "cancel" as amldsombuildcancel #00aaff {
+}
+}
+}
+}
+
+
+        state "aml" as aml #00aaff {
+state "dsom" as amldsom #00aaff {
+state "environment" as amldsomenvironment #00aaff {
+state "create" as amldsomenvironmentcreate #00aaff {
+}
+}
+}
+}
+
+
+        state "aml" as aml #00aaff {
+state "dsom" as amldsom #00aaff {
+state "environment" as amldsomenvironment #00aaff {
+state "update" as amldsomenvironmentupdate #00aaff {
 }
 }
 }

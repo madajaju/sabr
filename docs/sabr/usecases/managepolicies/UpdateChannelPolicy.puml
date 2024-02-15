@@ -1,0 +1,26 @@
+@startuml
+
+actor "DataEngineer"
+
+
+entity EventBus
+
+box Sentient Agent Bundle Resources #bbaaff
+    boundary sabr #white
+end box
+
+
+
+"DataEngineer" -> sabr: Update Channel Policy
+
+    sabr -> "sabr": update (name: policy1,file: ./templates/policy1.js)
+
+    "sabr" --/ EventBus: streampolicy.update
+
+    sabr -> "sabr": update (name: policy2,file: ./templates/policy2.js)
+
+    "sabr" --/ EventBus: streampolicy.update
+
+
+
+@enduml

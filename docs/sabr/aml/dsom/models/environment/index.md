@@ -7,20 +7,21 @@ parent: Classes
 
 # Environment
 
-Description long description
+This is an environment that developers, devops engineers, testers and deployment engineers use to perform there work.
 
 ![Logical Diagram](./logical.png)
 
 ## Attributes
 
-* attr1:string - description long description
+* name:string - Name of the environment
 
 
 ## Associations
 
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
-| assoc1 | 1 | ModelName | false | false |  |
+| builds | n | Build | false | false |  |
+| runs | n | BuildRun | false | false |  |
 
 
 

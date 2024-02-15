@@ -1,11 +1,26 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="138px" preserveAspectRatio="none" style="width:588px;height:138px;background:#000000;" version="1.1" viewBox="0 0 588 138" width="588px" zoomAndPan="magnify"><defs/><g><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="273" x="5" y="19.5332">[From scenariomapping.puml (line 85) ]</text><line style="stroke: #33FF02; stroke-width: 1.0;" x1="5" x2="586" y1="27.6094" y2="27.6094"/><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="160" x="5" y="47.1426">... (skipping 81 lines) ...</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="0" x="9" y="64.752"/><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="0" x="9" y="82.3613"/><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="424" x="37" y="99.9707">rectangle "Develop Capability" as DevelopCapability #ffffaa {</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="533" x="53" y="117.5801">("Create Capability")/ as DevOpsEngineerDevelopCapabilityCreateCapability</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="0" x="9" y="135.1895"/><text fill="#FF0000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="95" x="9" y="135.1895">Syntax Error?</text><!--
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="138px" preserveAspectRatio="none" style="width:588px;height:138px;background:#000000;" version="1.1" viewBox="0 0 588 138" width="588px" zoomAndPan="magnify"><defs/><g><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="281" x="5" y="19.5332">[From scenariomapping.puml (line 100) ]</text><line style="stroke: #33FF02; stroke-width: 1.0;" x1="5" x2="586" y1="27.6094" y2="27.6094"/><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="160" x="5" y="47.1426">... (skipping 96 lines) ...</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="0" x="9" y="64.752"/><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="0" x="9" y="82.3613"/><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="424" x="37" y="99.9707">rectangle "Develop Capability" as DevelopCapability #ffffaa {</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="533" x="53" y="117.5801">("Create Capability")/ as DevOpsEngineerDevelopCapabilityCreateCapability</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="0" x="9" y="135.1895"/><text fill="#FF0000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="95" x="9" y="135.1895">Syntax Error?</text><!--
 @startuml
 left to right direction
 
 
      component "sabr" as sabr
+ interface "streampolicy activate" as sabrstreampolicyactivate
+sabr - - sabrstreampolicyactivate
+
+    
+     component "sabr" as sabr
  interface "streampolicy create" as sabrstreampolicycreate
 sabr - - sabrstreampolicycreate
+
+    
+     component "sabr" as sabr
+ interface "streampolicy deactivate" as sabrstreampolicydeactivate
+sabr - - sabrstreampolicydeactivate
+
+    
+     component "sabr" as sabr
+ interface "streampolicy update" as sabrstreampolicyupdate
+sabr - - sabrstreampolicyupdate
 
     
     package "sabr" as sabr #bbaaff {
@@ -92,6 +107,13 @@ sabrstreampolicy - - sabrstreampolicycreate
 
 
 
+        rectangle "Manage Environments" as ManageEnvironments #ffffaa {
+            ("Create Build Environment")/ as DevOpsEngineerManageEnvironmentsCreateBuildEnvironment
+        }
+    
+    sabrenvironmentcreate <- - DevOpsEngineerManageEnvironmentsCreateBuildEnvironment
+    
+
         rectangle "Manage SABR" as ManageSABR #ffffaa {
             ("Build SAB")/ as ApplicationDeveloperManageSABRBuildSAB
         }
@@ -102,10 +124,40 @@ sabrstreampolicy - - sabrstreampolicycreate
 
 
         rectangle "Manage Policies" as ManagePolicies #ffffaa {
+            ("ActivatePolicy")/ as DataEngineerManagePoliciesActivatePolicy
+        }
+    
+    sabrstreampolicyactivate <- - DataEngineerManagePoliciesActivatePolicy
+    
+        rectangle "Manage Policies" as ManagePolicies #ffffaa {
+            ("Create Channel Activation Policy")/ as DataEngineerManagePoliciesCreateChannelActivationPolicy
+        }
+    
+    sabrstreampolicycreate <- - DataEngineerManagePoliciesCreateChannelActivationPolicy
+    
+        rectangle "Manage Policies" as ManagePolicies #ffffaa {
+            ("Create Channel Creation Policy")/ as DataEngineerManagePoliciesCreateChannelCreationPolicy
+        }
+    
+    sabrstreampolicycreate <- - DataEngineerManagePoliciesCreateChannelCreationPolicy
+    
+        rectangle "Manage Policies" as ManagePolicies #ffffaa {
             ("Create Policy")/ as DataEngineerManagePoliciesCreatePolicy
         }
     
     sabrstreampolicycreate <- - DataEngineerManagePoliciesCreatePolicy
+    
+        rectangle "Manage Policies" as ManagePolicies #ffffaa {
+            ("Deactivate Policy")/ as DataEngineerManagePoliciesDeactivatePolicy
+        }
+    
+    sabrstreampolicydeactivate <- - DataEngineerManagePoliciesDeactivatePolicy
+    
+        rectangle "Manage Policies" as ManagePolicies #ffffaa {
+            ("Update Channel Policy")/ as DataEngineerManagePoliciesUpdateChannelPolicy
+        }
+    
+    sabrstreampolicyupdate <- - DataEngineerManagePoliciesUpdateChannelPolicy
     
 
 
@@ -140,9 +192,9 @@ sabrstreampolicy - - sabrstreampolicycreate
 PlantUML version 1.2019.05(Sat Apr 20 09:45:36 PDT 2019)
 (GPL source distribution)
 Java Runtime: Java(TM) SE Runtime Environment
-JVM: Java HotSpot(TM) 64-Bit Server VM
-Java Version: 17.0.7+8-LTS-224
-Operating System: Windows 11
+JVM: Java HotSpot(TM) Client VM
+Java Version: 1.8.0_271-b09
+Operating System: Windows 10
 OS Version: 10.0
 Default Encoding: Cp1252
 Language: en

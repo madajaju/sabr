@@ -60,7 +60,7 @@ that are elaborated in the use case descriptions.
 * [Manage SABR](usecase-ManageSABR)
 
 
-![UseCase Diagram](./usecases.png)
+![UseCase Diagram](./usecases.svg)
 
 ## Users
 
@@ -70,7 +70,7 @@ inside the solution and even external subsystems.
 * [DevOpsEngineer](actor-devops)
 
 
-![User Interaction](./userinteraction.png)
+![User Interaction](./userinteraction.svg)
 
 ## Interface
 
@@ -78,7 +78,7 @@ The subsystem has a REST, CLI, WebSocket, and Web interface. Use Cases and Scena
 of the interfaces to perform the work that needs to be completed. The following  diagram shows how
 users interact with the system.
 
-![Scenario Mappings Diagram](./scenariomapping.png)
+![Scenario Mappings Diagram](./scenariomapping.svg)
 
 * [ sabr diml sabm connect](#action--sabr-diml-sabm-connect)
 * [ sabr diml sabm bundle createanddeploy](#action--sabr-diml-sabm-bundle-createanddeploy)
@@ -95,7 +95,7 @@ users interact with the system.
 The Data Model for the  Sentient Agent Bundle Manager subsystem shows how the different objects and classes of object interact
 and their structure.
 
-![Sub Package Diagram](./subpackage.png)
+![Sub Package Diagram](./subpackage.svg)
 
 ### Sub Packages
 
@@ -104,7 +104,7 @@ organize the architecture and make it easier to analyze, understand, design, and
 
 
 
-![Logical Diagram](./logical.png)
+![Logical Diagram](./logical.svg)
 
 ### Classes
 

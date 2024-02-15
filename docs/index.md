@@ -873,6 +873,7 @@ primary actors.
 * [DataScientist](actor-datascientist) - Responsible for the architecture and development of data analytic models and solutions. They work closely with the Data engineer to deliver solutions to the Data Analyst.
 * [DataSteward](actor-datasteward) - Responsible for the governance of data in their organization. They implement policies established by the CDO.
 * [DevOpsEngineer](actor-devops) - Responsible for the management of the automation of the delivery of applications and solutions in the organization. Works closesly with the IT Operators
+* [DevSecOpsManager](actor-devsecopsmanager) - Long description
 * [ITOperations](actor-itops) - Responsible for the management of the infrastructure.
 * [SecurityOperator](actor-secops) - The Security Operator is responsible for the implementation of security best practices and management of security operations like security key management, estalbishment of preventive, detectivetive and remediation services.
 * [TacticalOperator](actor-tacticaloperator) - The tactical operator is the end user of the digital assistance given from the AI models processing and developing insight from the data generated in the ecosystem.
