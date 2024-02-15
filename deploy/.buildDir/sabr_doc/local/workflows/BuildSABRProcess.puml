@@ -1,9 +1,0 @@
-@startuml
-partition "SentientAgentBundleManager" #ffcc88 {
-(*) --> "Build SAB"
-}
-partition "SentientAgentBundleManager" #ffcc88 {
-"Create Build Environment" --> "Build SAB"
-}
-
-@enduml
